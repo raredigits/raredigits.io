@@ -152,11 +152,12 @@
         </div>
 </section> -->
 <section>
+    <a name="demo"></a>
     <h2>Experience Rare Digits</h2>
     <p>A renaissance in enterprise software awaits.
     <br>Explore elegance, efficiency, and excellence—encapsulated by yourself:</p>
     <div class="demoRequest">
-        <form action="#" method="post">
+        <form id="my-form" action="https://formspree.io/f/xoqodadn" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             <label for="company">Company:</label>
@@ -165,7 +166,9 @@
             <input type="email" id="email" name="email" required>
             <label for="contact">Contact Number:</label>
             <input type="tel" id="contact" name="contact" required>
-            <input type="submit" value="Request a Demonstration">
+            <button id="my-form-button">Request a Demonstration</button>
+            <!-- <input type="submit" value="Request a Demonstration"> -->
+            <h3 id="my-form-status"></h3>
         </form>
     </div>
 </section>
