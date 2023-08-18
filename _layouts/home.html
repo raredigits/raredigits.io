@@ -1,26 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rare Digits | </title>
+{% include head.html %}
 
-    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
-
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="stylesheet" href="/assets/css/feedback.scss">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&display=swap" rel="stylesheet">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-
-<header>
-    <img class="logo" src="/assets/img/Rare_logo.svg" alt="Rare Digits">
-</header>
+{% include header.html %}
 
 <section class="sectionFirst">
     <div class="helloWorld">
@@ -190,22 +170,6 @@
     </div>
 </section>
 
+{{ content }}
 
-
-
-<footer>
-    <div class="contacts">
-    <span class="slogan">Coding Sences, Building World</span>
-        <p>
-            <strong>Rare Digits DMCC</strong><br>
-            <a href="mailto:hi@raredigits.io">hi@raredigits.io</a><br>
-            Jumeirah Lake Towers,<br>
-            JLT, cluster G,<br>
-            500001, Dubai, UAE
-        </p>
-    </div>
-    <div class="links">
-        <span class="copyright">© 2023 Rare Digits</span><br>
-        <a href="#" class="copyright">Terms of Services</a>
-    </div>
-</footer>
+{% include footer.html %}
