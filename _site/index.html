@@ -9,32 +9,55 @@
     <link rel="icon" type="image/png" href="/assets/img/favicon.png">
 
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/mobile.css">
     <link rel="stylesheet" href="/assets/css/feedback.scss">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <header>
-    <img class="logo" src="/assets/img/Rare_logo.svg" alt="Rare Digits">
-    <a class="booking" href="#demo">Book Demo</a>
+    <img class="logo" src="/assets/img/common/rare_logo_black_full.svg" alt="Rare Digits">
+    <nav>
+        <ul>
+            <li class="close"><a href="javascript:void(0)" onclick="toggleNav()">&times;</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Solutions</a></li>
+            <li><a href="">Pricing</a></li>
+            <li><a href="">Pressroom</a></li>
+            <li><a href="">Contacts</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleNav()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>        
+    </nav>
+    <div class="button" href="#demo">Book Demo</div>
 </header>
 
 <section class="sectionFirst">
     <div class="helloWorld">
-        <h1>Elegance in Software
-        <br>Expertise in Action</h1>
-        <p>Where mastery in software engineering<br>
-        converges with transformative user experience</p>
+        <h1>Elegant Exteriors,<br> Brutal Internal</h1>
+        <p>
+            Software that’s easy to use
+            and powerful under the hood,
+            perfectly blending design
+            with functionality
+        </p>
+        <p>
+            <a href="">Nice to meet you</a> >>
+        </p>
     </div>
 </section>
 <section class="Solutions">
     <h2>Simplicity in Every Solution</h2>
     <div class="solutionsText">
-        Navigate the future of business with <strong>Rare Digits</strong>
+        <p>Navigate the future of business<br>
+            with <strong>Rare Digits</strong></p>
     </div>
     <div class="solutionsWrapper">
         <div class="solution solutionAccount">
@@ -161,18 +184,55 @@
 
 
 <footer>
-    <div class="contacts">
-        <strong>Rare Digits DMCC</strong><br>
-        <a href="mailto:hi@raredigits.io">hi@raredigits.io</a><br>
-        DMCC Business Centre,<br>
-        Jewellery & Gemplex 3<br>
-        115738, Dubai, UAE
+  <div class="footerSence">
+    <div class="copyright">
+      © 2023—2024  Rare Digits<br>
+      Coding Sences, Building Worlds
     </div>
-    <span class="slogan">Coding Sences, Building World</span>
     <div class="links">
-        © 2023 Rare Digits<br>
-        <a href="#" class="copyright">Terms of Use</a>
+      <ul>
+        <li class="bold">SERVICES</li>
+        <li><a href="">Applications</a></li>
+        <li><a href="">Intergations</a></li>
+        <li><a href="">Web & Mobile</a></li>
+        <li><a href="">Web3 Security</a></li>
+        <li><a href="">Tech Stack</a></li>
+      </ul>
     </div>
+    <div class="links">
+      <ul>
+        <li class="bold">SOLUTIONS</li>
+        <li><a href="">Atlas ERP</a></li>
+        <li><a href="">Columbus CRM</a></li>
+        <li><a href="">Cassandra App</a></li>
+        <li><a href="">Fanfare Loyalty</a></li>
+      </ul>
+    </div>
+    <div class="links">
+      <ul>
+        <li class="bold">RARE</li>
+        <li><a href="">About</a></li>
+        <li><a href="">Principles</a></li>
+        <li><a href="">Newsroom</a></li>
+        <li><a href="">Contacts</a></li>
+        <li><a href="">Partnership</a></li>
+      </ul>
+    </div>
+    <div class="links">
+      <ul>
+        <li class="bold">LEGAL STUFF</li>
+        <li><a href="">Privacy Policy</a></li>
+        <li><a href="">Terms of Use</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="contacts">
+      <strong>Rare Digits DMCC</strong><br>
+      DMCC Business Centre,<br>
+      Jewellery & Gemplex&nbsp;3<br>
+      115738, Dubai, UAE<br>
+      <a href="mailto:hi@raredigits.io">hi@raredigits.io</a>
+  </div>
 </footer>
 <script>
     var form = document.getElementById("my-form");
@@ -206,5 +266,6 @@
     }
     form.addEventListener("submit", handleSubmit)
 </script>
+<script src="/assets/js/hamburger.js"></script>
 </body>
 </html>
