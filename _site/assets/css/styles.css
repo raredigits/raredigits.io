@@ -69,6 +69,14 @@ h2 {
     line-height: 36px;
 }
 
+.black {
+    color: #000;
+}
+
+.black:hover {
+    color: #00ff4e;
+}
+
 /* HEADER */
 
 header {
@@ -138,7 +146,7 @@ header .button {
   
 .hamburger div {
     width: 30px;
-    height: 3px;
+    height: 1px;
     background-color: #fff;
     margin: 6px 0;
     transition: 0.4s;
@@ -172,7 +180,8 @@ nav ul .close {
     
 .button:hover {
     background-color: #00ff4e;
-    border: 1px solid #fff;
+    border: 1px solid #00ff4e;
+    padding: 6px 17px 3px;
     color: #000;
 }
     
@@ -194,6 +203,7 @@ section {
     opacity: .96;
     padding: 60px 26px;
     text-align: center;
+    position: relative;
 }
 
 section h1 {
@@ -222,6 +232,22 @@ section p {
     padding: 20px 40px;
 }
 
+.Secret {
+    background-color: #fafafa;
+    color: #000;
+    border-radius: 10px;
+    min-height: 62vh;
+}
+
+.sectionCTA {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    width: 50%;
+    font-size: 1.2em;
+    text-align: right;
+}
+
 .Solutions {
     display: flex;
     flex-flow: column nowrap;
@@ -241,6 +267,18 @@ section p {
     border-radius: 25px;
     padding: 10px 20px;
     font-size: .85em;
+}
+
+.hrDeco {
+    margin-top: 20px;
+    border: none;
+    border-top: 1px solid #00ff4e;
+    height: 0.5px;
+    width: 50%;
+}
+
+.hrBlack {
+    border-top: 1px solid #000;
 }
 
 .solution h3 {
@@ -421,8 +459,8 @@ form input[type="tel"] {
 }
 
 #my-form-button {
-    background-color: #333;
-    color: #fff;
+    background-color: #00ff4e;
+    color: #000;
     padding: 15px 20px;
     border: none;
     cursor: pointer;
@@ -433,7 +471,12 @@ form input[type="tel"] {
 }
 
 #my-form-button:hover {
-    background-color: #666;
+    background-color: #000;
+    font-family: 'Restora';
+    padding: 8px 20px;
+    font-size: 1.2em;
+    color: #00ff4e;
+    border: 2px solid #00ff4e;
 }
 
 #my-form-button:active {
