@@ -42,10 +42,15 @@ body {
     font-display: swap;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: 'Restora', serif;
     font-weight: bold;
     margin: 0;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
 }
 
 a {
@@ -248,6 +253,39 @@ section p {
     text-align: right;
 }
 
+.Services {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.servicesWrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.service {
+    width: 24%;
+    margin-bottom: 20px;
+    background: #fff;
+    color: #000;
+    border-radius: 25px;
+    padding: 10px 30px 20px;
+    text-align: left;
+}
+
+.service h3 {
+    width: 100%;
+    text-align: center;
+}
+
+.service ul {
+    padding: 15px 0 0 20px;
+    margin: 0;
+}
+
 .Solutions {
     display: flex;
     flex-flow: column nowrap;
@@ -279,11 +317,6 @@ section p {
 
 .hrBlack {
     border-top: 1px solid #000;
-}
-
-.solution h3 {
-    font-size: 1.5em;
-    margin: 10px 0;
 }
 
 .solutionAccount {
