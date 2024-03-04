@@ -100,6 +100,14 @@
         bottom: 20px;
     }
 
+    .servicesWrapper {
+        flex-flow: column;
+    }
+
+    .service {
+        width: 100%;
+    }
+
     .solutionsText {
         padding: 0;
         font-size: 1em;
