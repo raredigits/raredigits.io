@@ -156,6 +156,19 @@
         display: none;
     }
 
+    .Pricing {
+        background-image: none;
+    }
+
+    .pricingText {
+        width: 100%;
+        text-align: center;
+    }
+
+    .newsBlock {
+        width: 100%;
+    }
+
     .demoRequest {
         width: 100%;
     }
