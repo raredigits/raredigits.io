@@ -236,7 +236,7 @@ section p {
     background-color: #fafafa;
     color: #000;
     border-radius: 10px;
-    min-height: 62vh;
+    min-height: 75vh;
 }
 
 .sectionCTA {
@@ -347,7 +347,6 @@ section p {
 }
 
 .oneApp {
-    min-height: 80vh;
     position: relative;
 }
 
@@ -359,12 +358,9 @@ section p {
 }
 
 .oneAppPhone {
-    background-image: url(/assets/img/phone.png);
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: contain;
     width: 45%;
     height: 100%;
+    text-align: right;
 }
 
 .oneAppText {
@@ -394,8 +390,6 @@ section p {
 .Apps {
     display: flex;
     flex-flow: column;
-    min-height: 50vh;
-    height: 100%;
     justify-content: space-between;
     padding-bottom: 30px;
 }
