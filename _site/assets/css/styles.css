@@ -235,7 +235,7 @@ section p {
     background-size: cover;
     background-position: left no-repeat;
     position: relative;
-    min-height: 50vh;
+    min-height: 75vh;
 }
 
 .helloWorld {
