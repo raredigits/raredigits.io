@@ -103,14 +103,20 @@ header {
     border-bottom: 4px solid #00ff4e;
 }
 
-.logo {
+.logoImg {
     height: 35px;
     margin: 25px;
+}
+
+.logoLink {
+    cursor: pointer;
+    border-bottom: none;
 }
 
 nav {
     height: 100%;
     width: 50%;
+    min-width: 720px;
 }
 
 nav ul {
@@ -150,10 +156,6 @@ nav ul li:hover, nav ul li:hover a, nav ul li a:hover{
     border: none;
 }
 
-header .button {
-    margin: auto 25px;
-}
-
 .hamburger {
     display: none;
     cursor: pointer;
@@ -179,12 +181,16 @@ nav ul .close {
     padding: 20px;
     font-size: 30px;
     color: white;
-  }
-  
+}
+
+.buttonDemo {
+    width: 10%;
+    text-align: right;
+    padding: 37px 25px 0 0;
+}
 
 .button {
-    display: block;
-    padding: 6px 16px 3px;
+    padding: 10px 36px 7px;
     cursor: pointer;
     font-size: 16px;
     text-decoration: none;
@@ -194,9 +200,9 @@ nav ul .close {
 }
     
 .button:hover {
+    padding: 11px 37px 8px;
     background-color: #00ff4e;
     border: 1px solid #00ff4e;
-    padding: 6px 17px 3px;
     color: #000;
 }
     
@@ -222,9 +228,20 @@ nav ul .close {
 .pageContent h1, 
 .pageContent h2,
 .pageContent h3,
-.pageContent p {
+.pageContent p,
+.pageContent .highlight,
+.pageContent ul,
+.pageContent form,
+.newsroomList {
     margin: auto;
     max-width: 720px;
+}
+
+.sectionTitle {
+    position: relative;
+    top: -50px;
+    font-size: 1.2em;
+    font-weight: 900;
 }
 
 .pageContent h1 {
@@ -235,6 +252,36 @@ nav ul .close {
 .pageContent p {
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+.pageContent a {
+    color: #000;
+}
+
+.pageContent a:hover {
+    background-color: #00ff4e;
+}
+
+.pageContent ul {
+    list-style-type: square;
+}
+
+blockquote {
+    border-left: 3px solid #00ff4e;
+    margin-inline-start: 0;
+    padding-left: 10px;
+}
+
+.newsroomList {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 25px;
+}
+
+.newsroomNewsData {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 0.8em;
 }
 
 /* MAIN */
@@ -261,7 +308,8 @@ section p {
 .sectionFirst {
     background-image: url(/assets/img/mia.png);
     background-size: cover;
-    background-position: left no-repeat;
+    background-position: left;
+    background-repeat: no-repeat;
     position: relative;
     min-height: 75vh;
 }
@@ -310,7 +358,7 @@ section p {
     background: #fff;
     color: #000;
     border-radius: 25px;
-    padding: 10px 30px 20px;
+    padding: 20px 30px;
     text-align: left;
 }
 
@@ -670,4 +718,36 @@ footer a:hover {
     font-size: 14px;
     line-height: 18px;
     text-align: right;
+}
+
+
+/* SPECIAL */
+
+.constructionHeader {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    background: #ffe000;
+    color: #000;
+    padding: 5px 0;
+    border-bottom: 1px solid #000;
+}
+
+.constructionHeader a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+}
+
+.constructionNotice {
+    width: 100%;
+    padding: 20px 50px;
+    text-align: center;
+    background: repeating-linear-gradient(
+    45deg,
+    rgba(240, 240, 240, 0.1),
+    rgba(240, 240, 240, 0.1) 3px,
+    rgba(153, 153, 153, 0.3) 3px,
+    rgba(153, 153, 153, 0.3) 6px
+    );
 }

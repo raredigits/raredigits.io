@@ -4,15 +4,25 @@
     }
 
     header {
-        padding: 10px;
+        padding: 10px 0 0 10px;
     }
 
-    .logo {
-        margin: 10px 5px;
+    .logo,
+    .buttonDemo {
+        width: 40%;
+    }
+
+    .buttonDemo {
+        padding: 18px 0;
     }
 
     nav {
         width: fit-content;
+        min-width: unset;
+    }
+
+    .logoImg {
+        margin: 10px 5px;
     }
 
     .hamburger {
@@ -87,12 +97,14 @@
         padding: 75px 15px 150px;
     }
 
+    .pageContent ul,
     .pageContent ol {
         padding-left: 25px;
     }
 
     .sectionFirst {
         min-height: 62vh;
+        background-position: center;
     }
 
     .helloWorld {

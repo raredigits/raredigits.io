@@ -1,145 +1,100 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-25T11:06:53+04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Rare Digits</title><subtitle>Coding Senses, Building World</subtitle><entry><title type="html">CRM Best Practices 2024</title><link href="http://localhost:4000/insight/CRM-best-practice/" rel="alternate" type="text/html" title="CRM Best Practices 2024" /><published>2024-02-06T12:17:18+04:00</published><updated>2024-02-06T12:17:18+04:00</updated><id>http://localhost:4000/insight/CRM-best-practice</id><content type="html" xml:base="http://localhost:4000/insight/CRM-best-practice/"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-25T17:19:01+04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Rare Digits</title><subtitle>Coding Senses, Building World</subtitle><entry><title type="html">Pardon Our Digital Dust</title><link href="http://localhost:4000/newsroom/Reconstruction/" rel="alternate" type="text/html" title="Pardon Our Digital Dust" /><published>2024-09-02T06:00:00+04:00</published><updated>2024-09-02T06:00:00+04:00</updated><id>http://localhost:4000/newsroom/Reconstruction</id><content type="html" xml:base="http://localhost:4000/newsroom/Reconstruction/"><![CDATA[<h1 id="pardon-our-digital-dust">Pardon Our Digital Dust</h1>
 
-<p>Jekyll requires blog post files to be named according to the following format:</p>
+<p>Dear valued visitors, clients, and accidental internet wanderers,</p>
 
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+<p>We’re embarking on a grand adventure of digital renovation. Think of it as extreme makeover: website edition.</p>
 
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<h2 id="whats-happening">What’s Happening?</h2>
+<p>We’re not just changing the drapes; we’re rebuilding the entire house. Our website is undergoing a major update that would make even the most dramatic home renovation show host gasp in awe.</p>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<h2 id="what-to-expect">What to Expect?</h2>
+<ul>
+  <li>Some parts of our site might decide to take an impromptu vacation. Don’t worry; they’ll come back refreshed and better than ever.</li>
+  <li>Content might play hide and seek. If you can’t find what you’re looking for, it’s not you, it’s us.</li>
+  <li>Occasional digital hiccups may occur. We’re teaching our site new tricks, and sometimes it gets a bit overexcited.</li>
+</ul>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+<h2 id="business-as-usual">Business as Usual?</h2>
+<p>Absolutely! While our digital facade is getting a facelift, our team is still hard at work behind the scenes. We’re still solving problems and turning coffee into code at our usual breakneck speed.</p>
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="insight" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">Rare Digits Report’23</title><link href="http://localhost:4000/about/Report-2023/" rel="alternate" type="text/html" title="Rare Digits Report’23" /><published>2024-01-22T12:17:18+04:00</published><updated>2024-01-22T12:17:18+04:00</updated><id>http://localhost:4000/about/Report-2023</id><content type="html" xml:base="http://localhost:4000/about/Report-2023/"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<h2 id="when-will-it-be-ready">When Will It Be Ready?</h2>
+<p>Soon™ (That’s tech speak for “as quickly as possible, but please don’t hold us to an exact date.”)</p>
 
-<p>Jekyll requires blog post files to be named according to the following format:</p>
+<h2 id="need-to-reach-us">Need to Reach Us?</h2>
+<p>Our <a href="/about/contscts">contact information</a> remains unchanged. Feel free to reach out if you need anything. We’re always here, even if our website is temporarily playing dress-up.</p>
 
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+<p>Thank you for your patience and understanding. We promise the wait will be worth it. In the meantime, why not step away from your screen and enjoy the real world? We hear it has pretty good graphics.</p>
 
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
-
-<p>Jekyll also offers powerful support for code snippets:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
-
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="about" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">Managible B2B Marketing</title><link href="http://localhost:4000/about/Managible-b2b-marketing/" rel="alternate" type="text/html" title="Managible B2B Marketing" /><published>2024-01-08T12:17:18+04:00</published><updated>2024-01-08T12:17:18+04:00</updated><id>http://localhost:4000/about/Managible-b2b-marketing</id><content type="html" xml:base="http://localhost:4000/about/Managible-b2b-marketing/"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-
-<p>Jekyll requires blog post files to be named according to the following format:</p>
-
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
-
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
-
-<p>Jekyll also offers powerful support for code snippets:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
-
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="about" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">DSRV Partnership</title><link href="http://localhost:4000/about/DSRV-Starting/" rel="alternate" type="text/html" title="DSRV Partnership" /><published>2023-12-22T12:17:18+04:00</published><updated>2023-12-22T12:17:18+04:00</updated><id>http://localhost:4000/about/DSRV-Starting</id><content type="html" xml:base="http://localhost:4000/about/DSRV-Starting/"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-
-<p>Jekyll requires blog post files to be named according to the following format:</p>
-
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
-
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
-
-<p>Jekyll also offers powerful support for code snippets:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
-
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="about" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">Interoperability Research for NEON Labs</title><link href="http://localhost:4000/about/NEON-audit/" rel="alternate" type="text/html" title="Interoperability Research for NEON Labs" /><published>2023-12-01T12:17:18+04:00</published><updated>2023-12-01T12:17:18+04:00</updated><id>http://localhost:4000/about/NEON-audit</id><content type="html" xml:base="http://localhost:4000/about/NEON-audit/"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-
-<p>Jekyll requires blog post files to be named according to the following format:</p>
-
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
-
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
-
-<p>Jekyll also offers powerful support for code snippets:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
-
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="about" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">Useful Daily GPT Usecases</title><link href="http://localhost:4000/insight/daily-GPT-usecases/" rel="alternate" type="text/html" title="Useful Daily GPT Usecases" /><published>2023-11-07T12:17:18+04:00</published><updated>2023-11-07T12:17:18+04:00</updated><id>http://localhost:4000/insight/daily-GPT-usecases</id><content type="html" xml:base="http://localhost:4000/insight/daily-GPT-usecases/"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-
-<p>Jekyll requires blog post files to be named according to the following format:</p>
-
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
-
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
-
-<p>Jekyll also offers powerful support for code snippets:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
-
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="insight" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">Distribution Partnership with Universal.com</title><link href="http://localhost:4000/about/Universal-partnership/" rel="alternate" type="text/html" title="Distribution Partnership with Universal.com" /><published>2023-10-23T12:17:18+04:00</published><updated>2023-10-23T12:17:18+04:00</updated><id>http://localhost:4000/about/Universal-partnership</id><content type="html" xml:base="http://localhost:4000/about/Universal-partnership/"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-
-<p>Jekyll requires blog post files to be named according to the following format:</p>
-
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
-
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
-
-<p>Jekyll also offers powerful support for code snippets:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
-
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="about" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">Leverage of Affiliate Programs</title><link href="http://localhost:4000/insight/clients-relations/" rel="alternate" type="text/html" title="Leverage of Affiliate Programs" /><published>2023-09-15T12:17:18+04:00</published><updated>2023-09-15T12:17:18+04:00</updated><id>http://localhost:4000/insight/clients-relations</id><content type="html" xml:base="http://localhost:4000/insight/clients-relations/"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-
-<p>Jekyll requires blog post files to be named according to the following format:</p>
-
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
-
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
-
-<p>Jekyll also offers powerful support for code snippets:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
-
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="insight" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">Rare Digits Landing in Dubai</title><link href="http://localhost:4000/about/UAE-license/" rel="alternate" type="text/html" title="Rare Digits Landing in Dubai" /><published>2023-05-17T12:17:18+04:00</published><updated>2023-05-17T12:17:18+04:00</updated><id>http://localhost:4000/about/UAE-license</id><content type="html" xml:base="http://localhost:4000/about/UAE-license/"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-
-<p>Jekyll requires blog post files to be named according to the following format:</p>
-
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
-
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
-
-<p>Jekyll also offers powerful support for code snippets:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
-
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="about" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry></feed>
+<p>Stay tuned for our digital grand reopening!</p>]]></content><author><name></name></author><category term="kitchen" /><category term="kitchen" /><summary type="html"><![CDATA[Pardon Our Digital Dust]]></summary></entry><entry><title type="html">CRM Best Practices 2024</title><link href="http://localhost:4000/newsroom/CRM-best-practice/" rel="alternate" type="text/html" title="CRM Best Practices 2024" /><published>2024-02-06T12:17:18+04:00</published><updated>2024-02-06T12:17:18+04:00</updated><id>http://localhost:4000/newsroom/CRM-best-practice</id><content type="html" xml:base="http://localhost:4000/newsroom/CRM-best-practice/"><![CDATA[<div class="constructionNotice">
+        <p><span style="font-size: 2em">🚧</span></p>
+        <p>SECTION ON RECONSTRUCTION</p>
+        <p><span style="background-color: #fff">
+            Work on this section is in progress. Everything will be available soon.
+        <p><a href="/newsroom/Reconstruction/">Statement on Reconstruction</a></p>
+        </span></p>
+        <p><span class="material-icons" style="font-size: 2em">construction</span></p>
+  </div>]]></content><author><name></name></author><category term="insight" /><category term="CRM" /><summary type="html"><![CDATA[🚧 SECTION ON RECONSTRUCTION Work on this section is in progress. Everything will be available soon. Statement on Reconstruction construction]]></summary></entry><entry><title type="html">Rare Digits Report’23</title><link href="http://localhost:4000/newsroom/Report-2023/" rel="alternate" type="text/html" title="Rare Digits Report’23" /><published>2024-01-22T12:17:18+04:00</published><updated>2024-01-22T12:17:18+04:00</updated><id>http://localhost:4000/newsroom/Report-2023</id><content type="html" xml:base="http://localhost:4000/newsroom/Report-2023/"><![CDATA[<div class="constructionNotice">
+        <p><span style="font-size: 2em">🚧</span></p>
+        <p>SECTION ON RECONSTRUCTION</p>
+        <p><span style="background-color: #fff">
+            Work on this section is in progress. Everything will be available soon.
+        <p><a href="/newsroom/Reconstruction/">Statement on Reconstruction</a></p>
+        </span></p>
+        <p><span class="material-icons" style="font-size: 2em">construction</span></p>
+  </div>]]></content><author><name></name></author><category term="about" /><category term="report" /><summary type="html"><![CDATA[🚧 SECTION ON RECONSTRUCTION Work on this section is in progress. Everything will be available soon. Statement on Reconstruction construction]]></summary></entry><entry><title type="html">Managible B2B Marketing</title><link href="http://localhost:4000/newsroom/Managible-b2b-marketing/" rel="alternate" type="text/html" title="Managible B2B Marketing" /><published>2024-01-08T12:17:18+04:00</published><updated>2024-01-08T12:17:18+04:00</updated><id>http://localhost:4000/newsroom/Managible-b2b-marketing</id><content type="html" xml:base="http://localhost:4000/newsroom/Managible-b2b-marketing/"><![CDATA[<div class="constructionNotice">
+        <p><span style="font-size: 2em">🚧</span></p>
+        <p>SECTION ON RECONSTRUCTION</p>
+        <p><span style="background-color: #fff">
+            Work on this section is in progress. Everything will be available soon.
+        <p><a href="/newsroom/Reconstruction/">Statement on Reconstruction</a></p>
+        </span></p>
+        <p><span class="material-icons" style="font-size: 2em">construction</span></p>
+  </div>]]></content><author><name></name></author><category term="about" /><category term="sales" /><summary type="html"><![CDATA[🚧 SECTION ON RECONSTRUCTION Work on this section is in progress. Everything will be available soon. Statement on Reconstruction construction]]></summary></entry><entry><title type="html">DSRV Partnership</title><link href="http://localhost:4000/newsroom/DSRV-Starting/" rel="alternate" type="text/html" title="DSRV Partnership" /><published>2023-12-22T12:17:18+04:00</published><updated>2023-12-22T12:17:18+04:00</updated><id>http://localhost:4000/newsroom/DSRV-Starting</id><content type="html" xml:base="http://localhost:4000/newsroom/DSRV-Starting/"><![CDATA[<div class="constructionNotice">
+        <p><span style="font-size: 2em">🚧</span></p>
+        <p>SECTION ON RECONSTRUCTION</p>
+        <p><span style="background-color: #fff">
+            Work on this section is in progress. Everything will be available soon.
+        <p><a href="/newsroom/Reconstruction/">Statement on Reconstruction</a></p>
+        </span></p>
+        <p><span class="material-icons" style="font-size: 2em">construction</span></p>
+  </div>]]></content><author><name></name></author><category term="about" /><category term="clients" /><summary type="html"><![CDATA[🚧 SECTION ON RECONSTRUCTION Work on this section is in progress. Everything will be available soon. Statement on Reconstruction construction]]></summary></entry><entry><title type="html">Interoperability Research for NEON Labs</title><link href="http://localhost:4000/newsroom/NEON-audit/" rel="alternate" type="text/html" title="Interoperability Research for NEON Labs" /><published>2023-12-01T12:17:18+04:00</published><updated>2023-12-01T12:17:18+04:00</updated><id>http://localhost:4000/newsroom/NEON-audit</id><content type="html" xml:base="http://localhost:4000/newsroom/NEON-audit/"><![CDATA[<div class="constructionNotice">
+        <p><span style="font-size: 2em">🚧</span></p>
+        <p>SECTION ON RECONSTRUCTION</p>
+        <p><span style="background-color: #fff">
+            Work on this section is in progress. Everything will be available soon.
+        <p><a href="/newsroom/Reconstruction/">Statement on Reconstruction</a></p>
+        </span></p>
+        <p><span class="material-icons" style="font-size: 2em">construction</span></p>
+  </div>]]></content><author><name></name></author><category term="about" /><category term="portfolio" /><summary type="html"><![CDATA[🚧 SECTION ON RECONSTRUCTION Work on this section is in progress. Everything will be available soon. Statement on Reconstruction construction]]></summary></entry><entry><title type="html">Useful Daily GPT Usecases</title><link href="http://localhost:4000/newsroom/Daily-GPT-usecases/" rel="alternate" type="text/html" title="Useful Daily GPT Usecases" /><published>2023-11-07T12:17:18+04:00</published><updated>2023-11-07T12:17:18+04:00</updated><id>http://localhost:4000/newsroom/Daily-GPT-usecases</id><content type="html" xml:base="http://localhost:4000/newsroom/Daily-GPT-usecases/"><![CDATA[<div class="constructionNotice">
+        <p><span style="font-size: 2em">🚧</span></p>
+        <p>SECTION ON RECONSTRUCTION</p>
+        <p><span style="background-color: #fff">
+            Work on this section is in progress. Everything will be available soon.
+        <p><a href="/newsroom/Reconstruction/">Statement on Reconstruction</a></p>
+        </span></p>
+        <p><span class="material-icons" style="font-size: 2em">construction</span></p>
+  </div>]]></content><author><name></name></author><category term="insight" /><category term="GTD," /><category term="AI" /><summary type="html"><![CDATA[🚧 SECTION ON RECONSTRUCTION Work on this section is in progress. Everything will be available soon. Statement on Reconstruction construction]]></summary></entry><entry><title type="html">Distribution Partnership with Universal.com</title><link href="http://localhost:4000/newsroom/Universal-partnership/" rel="alternate" type="text/html" title="Distribution Partnership with Universal.com" /><published>2023-10-23T12:17:18+04:00</published><updated>2023-10-23T12:17:18+04:00</updated><id>http://localhost:4000/newsroom/Universal-partnership</id><content type="html" xml:base="http://localhost:4000/newsroom/Universal-partnership/"><![CDATA[<div class="constructionNotice">
+        <p><span style="font-size: 2em">🚧</span></p>
+        <p>SECTION ON RECONSTRUCTION</p>
+        <p><span style="background-color: #fff">
+            Work on this section is in progress. Everything will be available soon.
+        <p><a href="/newsroom/Reconstruction/">Statement on Reconstruction</a></p>
+        </span></p>
+        <p><span class="material-icons" style="font-size: 2em">construction</span></p>
+  </div>]]></content><author><name></name></author><category term="about" /><category term="clients" /><summary type="html"><![CDATA[🚧 SECTION ON RECONSTRUCTION Work on this section is in progress. Everything will be available soon. Statement on Reconstruction construction]]></summary></entry><entry><title type="html">Leverage of Affiliate Programs</title><link href="http://localhost:4000/newsroom/Clients-Relations/" rel="alternate" type="text/html" title="Leverage of Affiliate Programs" /><published>2023-09-15T12:17:18+04:00</published><updated>2023-09-15T12:17:18+04:00</updated><id>http://localhost:4000/newsroom/Clients-Relations</id><content type="html" xml:base="http://localhost:4000/newsroom/Clients-Relations/"><![CDATA[<div class="constructionNotice">
+        <p><span style="font-size: 2em">🚧</span></p>
+        <p>SECTION ON RECONSTRUCTION</p>
+        <p><span style="background-color: #fff">
+            Work on this section is in progress. Everything will be available soon.
+        <p><a href="/newsroom/Reconstruction/">Statement on Reconstruction</a></p>
+        </span></p>
+        <p><span class="material-icons" style="font-size: 2em">construction</span></p>
+  </div>]]></content><author><name></name></author><category term="insight" /><category term="CRM" /><summary type="html"><![CDATA[🚧 SECTION ON RECONSTRUCTION Work on this section is in progress. Everything will be available soon. Statement on Reconstruction construction]]></summary></entry><entry><title type="html">Rare Digits Landing in Dubai</title><link href="http://localhost:4000/newsroom/UAE-license/" rel="alternate" type="text/html" title="Rare Digits Landing in Dubai" /><published>2023-05-17T12:17:18+04:00</published><updated>2023-05-17T12:17:18+04:00</updated><id>http://localhost:4000/newsroom/UAE-license</id><content type="html" xml:base="http://localhost:4000/newsroom/UAE-license/"><![CDATA[<div class="constructionNotice">
+        <p><span style="font-size: 2em">🚧</span></p>
+        <p>SECTION ON RECONSTRUCTION</p>
+        <p><span style="background-color: #fff">
+            Work on this section is in progress. Everything will be available soon.
+        <p><a href="/newsroom/Reconstruction/">Statement on Reconstruction</a></p>
+        </span></p>
+        <p><span class="material-icons" style="font-size: 2em">construction</span></p>
+  </div>]]></content><author><name></name></author><category term="about" /><category term="kitchen" /><summary type="html"><![CDATA[🚧 SECTION ON RECONSTRUCTION Work on this section is in progress. Everything will be available soon. Statement on Reconstruction construction]]></summary></entry></feed>

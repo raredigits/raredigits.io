@@ -8,7 +8,7 @@ permalink: /about/
 
 Welcome to the company that turns coffee into code, and code into business solutions. (We're still working on turning code back into coffee. We'll keep you posted.)
 
-Since 2009, we've been quietly revolutionizing software development.While the rest of the world was learning to take selfies and perfecting their emoji usage, we were perfecting algorithms turning SAP-like interfaces into "so easy, why so expencive?"
+Since 2009, we've been quietly revolutionizing software development. While the rest of the world was learning to take selfies and perfecting their emoji usage, we were perfecting algorithms turning SAP-like interfaces into "so easy, why so expencive?"
 
 Our philosophy is simple, much like our interfaces (but unlike the complex problems we solve):
 
