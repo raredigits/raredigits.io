@@ -83,6 +83,14 @@
         line-height: 1em;
     }
 
+    .pageContent {
+        padding: 75px 15px 150px;
+    }
+
+    .pageContent ol {
+        padding-left: 25px;
+    }
+
     .sectionFirst {
         min-height: 62vh;
     }

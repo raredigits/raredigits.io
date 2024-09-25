@@ -99,7 +99,7 @@ header {
     display: flex;
     justify-content: space-between;
     background: #000;
-    margin: 10px auto;
+    margin: 10px auto 0;
     border-bottom: 4px solid #00ff4e;
 }
 
@@ -210,6 +210,34 @@ nav ul .close {
 .bold {
     font-weight: 900;
 }
+
+.pageContent {
+    width: 95%;
+    margin: 0 auto;
+    padding: 75px 25px 150px;
+    background: #fff;
+    color: #000;
+}
+
+.pageContent h1, 
+.pageContent h2,
+.pageContent h3,
+.pageContent p {
+    margin: auto;
+    max-width: 720px;
+}
+
+.pageContent h1 {
+    font-size: 2.5em;
+    padding-bottom: 30px;
+}
+
+.pageContent p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/* MAIN */
 
 section {
     width: 95%;
