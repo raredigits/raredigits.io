@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Pardon Our Digital Dust"
-date:   2024-09-02 10:00:00 +0800
+date:   2024-09-02 10:00:00 +0400
 cover: /assets/img/news/2023/
 tags: kitchen
 categories: kitchen

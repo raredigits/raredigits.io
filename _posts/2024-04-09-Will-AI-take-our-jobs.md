@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "CRM Best Practices 2024"
-date:   2024-02-06 10:00:00 +0400
+title:  "Will AI Take All Our Jobs?"
+date:   2024-03-04 10:00:00 +0400
 cover: /assets/img/news/2023/
-tags: CRM
+tags: AI
 categories: insight
 ---
 

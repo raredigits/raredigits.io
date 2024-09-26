@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "CRM Best Practices 2024"
-date:   2024-02-06 10:00:00 +0400
+title:  "Product Management for IT Infrastructure"
+date:   2024-07-02 10:00:00 +0400
 cover: /assets/img/news/2023/
-tags: CRM
+tags: kitchen
 categories: insight
 ---
 
