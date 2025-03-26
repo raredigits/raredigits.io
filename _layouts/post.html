@@ -1,19 +1,28 @@
 {% include head.html %}
 
-{% include header.html %}
-{% include /special/constructionHeader.html %}
-
-<div class="pageContent">
-    <a class="sectionTitle" href="/newsroom/">Newsroom</a>
-    <h1>{{ page.title }}</h1>
-        <p>{{ page.date | date: "%d.%m.%Y" }}<br>
-        {% if page.tags %}
-            {% for tag in page.tags %}
-                    <span class="list-tag">#{{ tag }}</span>
-            {% endfor %}
-        {% endif %}
-        </p>
-    {{ content }}
+<div class="Column">
+    {% include header.html %}
+    {% include /special/constructionHeader.html %}
+    
+    <main>
+        <div class="Content SiteMaxWidth">
+            <div class="Breadcrumbs">
+                <a href="/newsroom/">Newsroom</a>
+            </div>
+            <h1>{{ page.title }}</h1>
+            <p class="Eyebrow">{{ page.date | date: "%d.%m.%Y" }}
+            {% if page.tags %}
+                {% for tag in page.tags %}
+                        <span class="Tag">#{{ tag }}</span>
+                {% endfor %}
+            {% endif %}
+            </p>
+            <article>
+                {{ content }}
+                {% include /special/pressOffice.html %}
+            </article>
+        </div>
+    </main>
 </div>
 
 {% include footer.html %}

@@ -1,10 +1,15 @@
 {% include head.html %}
 
-{% include header.html %}
-{% include /special/constructionHeader.html %}
-
-<div class="pageContent">
-    {{ content }}
+<div class="Column">
+    {% include header.html %}
+    {% include /special/constructionHeader.html %}
+    
+    <main>
+        <div class="PageOffset"></div>
+        <div class="Content">
+            {{ content }}
+        </div>
+    </main>
 </div>
 
 {% include footer.html %}

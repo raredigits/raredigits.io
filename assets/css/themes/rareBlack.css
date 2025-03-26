@@ -1,0 +1,16 @@
+body.Black {
+  --primary-color: #f1f1f1;
+  --background-color: #000000;
+  --secondary-color: #000000;
+  --text-color: #f1f1f1;
+
+  --header-bg: rgba(0, 0, 0, 0.9);
+  --footer-bg: #333333;
+
+  --header-logo: url('/assets/img/logo/logo_black.svg') no-repeat;
+}
+
+a:hover {
+  color: var(--background-color);
+  background: var(--brand-color);
+}

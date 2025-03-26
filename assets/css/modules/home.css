@@ -1,0 +1,492 @@
+@font-face {
+    font-family: 'Restora';
+    src: url('/assets/font/Restora.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Restora';
+    src: url('/assets/font/RestoraBold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --site-max-width: 1224px;
+}
+
+body {
+    background-image: url('/assets/img/main/home-bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    padding: var(--space-lg) 0 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Restora', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 38px;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 36px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.Content {
+    padding-bottom: 0;
+}
+
+.Content p {
+    max-width: initial;
+}
+
+section {
+    padding: 60px 26px;
+    opacity: .96;
+    text-align: center;
+}
+
+section p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+h2 a:hover {
+    color: var(--primary-color);
+}
+
+.sectionFirst {
+    background-image: url(/assets/img/main/mia.png);
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 75vh;
+}
+
+.helloWorld {
+    position: absolute;
+    width: 45%;
+    text-align: right;
+    right: 0;
+    bottom: 100px;
+    padding: 20px 40px;
+}
+
+.sectionSecret {
+    min-height: 85vh;
+}
+
+.secretVendors {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.secretVendor {
+    display: inline-block;
+    max-width: 90px;
+    height: auto;
+}
+
+.secretVendor img {
+    width: auto;
+}
+
+.secretCTA {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    width: 50%;
+    font-size: 1.2em;
+    text-align: right;
+}
+
+.secretCTA a {
+    color: var(--black);
+}
+
+.sectionServices {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.service {
+    width: 24%;
+    margin-bottom: 20px;
+    background: #fff;
+    color: #000;
+    border-radius: 25px;
+    padding: 20px 30px 35px;
+    text-align: left;
+}
+
+.service h3 {
+    width: 100%;
+    text-align: center;
+}
+
+.solution {
+    min-height: 30vh;
+    background: #666;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: .85em;
+    display: flex;
+    flex-flow: column;
+}
+
+.solutionAccount {
+    width: 30%;
+    background: url(/assets/img/main/sol-account.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #000;
+}
+
+.solutionIntergation {
+    width: 65%;
+    background: url(/assets/img/main/sol-integtration.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: space-between;
+}
+
+.solutionSales {
+    width: 65%;
+    background: url(/assets/img/main/sol-sales.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content:center;
+}
+
+.solutionLogistics {
+    width: 30%;
+    background: url(/assets/img/main/sol-jit.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.solutionConsulting {
+    width: 100%;
+    background: url(/assets/img/main/sol-consulting.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: space-between;
+}
+
+.Apps {
+    padding: 30px 0;
+}
+
+.appStore {
+    width: 100%;
+    height: 60%;
+    padding-top: 30px;
+}
+
+.app {
+    width: 18%;
+    display: flex;
+    flex-flow: column;
+}
+
+.app img {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.app p {
+    font-size: 0.9em;
+}
+
+.app p strong {
+    font-size: 1.4em;
+}
+
+.appStoreText {
+    padding-top: 20px;
+}
+
+.oneApp {
+    position: relative;
+}
+
+.oneAppWrapper {
+    height: 93%;
+}
+
+.oneAppPhone {
+    width: 45%;
+    height: 100%;
+    text-align: right;
+}
+
+.oneAppText {
+    width: 35%;
+    text-align: left;
+    padding: 15% 0 0 60px;
+}
+
+.sleep {
+    display: block;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    text-align: left;
+}
+
+.sleep p {
+    font-size: .8em;
+    line-height: 1em;
+}
+
+.sleep img {
+    margin-top: 8px;
+    height: 40px;
+}
+
+.sectionPricing {
+    background-image: url(/assets/img/main/pricing.png);
+    background-size: 50%;
+    background-position: right;
+    background-repeat: no-repeat;
+    min-height: 550px;
+}
+
+.pricingWrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.pricingText {
+    width: 50%;
+    padding: 5% 20px;
+    text-align: left;
+}
+
+.newsMain {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.newsBlock {
+    width: 32%;
+    text-align: left;
+    padding-bottom: 30px
+}
+
+.newsData {
+    font-size: 0.8em;
+    color: #e6e6e6;
+}
+
+.newsBlock a {
+    font-size: 1.2em;
+}
+
+.sectionContacts {
+    padding-bottom: 30px;
+}
+
+.contactsWrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.contactsLocations {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.demoRequest {
+    width: 60%;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-flow: column;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+}
+
+form input[type="text"], 
+form input[type="email"], 
+form input[type="tel"] {
+    padding: 10px;
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 7px;
+    font-size: 17px;
+}
+
+#my-form-button {
+    margin-top: 10px;
+}
+
+#my-form-button:active {
+    background-color: #000;
+}
+
+.demoRequest img {
+    width: 100%;
+    margin: 0;
+}
+
+.mainRevert {
+    background-color: #fff;
+    color: #000;
+    border-radius: 25px;
+}
+
+.mainRevert a {
+    color: #000;
+}
+
+.hrDeco {
+    margin: 20px auto 0;
+    border: none;
+    border-top: 1px solid #00ff4e;
+    height: 0.5px;
+    width: 50%;
+}
+
+.hrBlack {
+    border-top: 1px solid #000;
+}
+
+@media  (max-width: 768px) {
+    main {
+        padding: var(--space-md) 0;
+    }
+
+    .Content {
+        padding: 0 0 calc(var(--space-lg) * 3);
+    }
+
+    section {
+        padding: 30px 10px;
+        margin: 5px auto 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+        line-height: 25px;
+    }
+
+    h2 {
+        line-height: 1em;
+    }
+
+    .sectionFirst {
+        min-height: 62vh;
+        background-position: center;
+    }
+
+    .helloWorld {
+        width: 100%;
+        font-size: 14px;
+        line-height: 16px;
+        padding: 0 18px;
+        bottom: 10px;
+    }
+
+    .sectionSecret {
+        padding-bottom: 70px;
+    }
+
+    .secretVendors {
+        height: 40px;
+        gap: 10px;
+    }
+
+    .secretVendor img {
+        width: 60px;
+    }
+
+    .secretCTA {
+        right: 5px;
+        bottom: 20px;
+    }
+
+    .service,
+    .solution {
+        width: 100%;
+    }
+
+    .app {
+        width: 48%;
+    }
+
+    .oneAppWrapper {
+        height: fit-content;
+    }
+
+    .oneAppPhone {
+        width: 100%;
+        text-align: center;
+    }
+
+    .oneAppText {
+        width: 100%;
+        text-align: center;
+        padding: 30px 30px 0;
+    }
+
+    .oneAppText ul {
+        text-align: left;
+        padding-left: 40px;
+    }
+
+    .sleep {
+        display: none;
+    }
+
+    .sectionPricing {
+        background-image: none;
+    }
+
+    .pricingText {
+        width: 100%;
+        text-align: center;
+    }
+
+    .newsBlock {
+        width: 100%;
+    }
+
+    .demoRequest {
+        width: 100%;
+    }
+
+}

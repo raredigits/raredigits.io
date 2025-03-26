@@ -1,0 +1,115 @@
+header {
+    background: var(--header-bg);
+    height: var(--header-height);
+    padding: var(--space-sm) var(--space-md);
+    position: fixed;
+    width: 100%;
+    z-index: 1003;
+}
+
+header a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.HeaderLogo {
+    height: 36px;
+    background: var(--header-logo);
+    min-width: 100px;
+    width: var(--logo-width);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+
+.HeaderLogo img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+  
+.GlobalNav {
+    display: flex;
+    align-items: center;
+}
+  
+.GlobalNav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+  
+.GlobalNav a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+  
+.GlobalNav a:hover {
+    color: var(--nav-link-hover);
+}
+
+.Hamburger {
+    display: none;
+    background: none;
+    color: var(--primary-color);
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+    padding: 0;
+    z-index: 1001;
+}
+
+.NoticeStripe {
+    width: var(--site-max-width);
+    margin: var(--header-height) auto 0;
+}
+
+@media (max-width: 768px) {
+    .Hamburger {
+      display: block;
+    }
+
+    .Hamburger .CloseIcon {
+        display: none;
+    }
+
+    .Hamburger.active .MenuIcon {
+        display: none;
+    }
+
+    .Hamburger.active .CloseIcon {
+        display: inline;
+    }
+  
+    .GlobalNav {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 90%;
+        font-size: var(--font-size-lg);
+        background: var(--background-color);
+        padding: calc(var(--header-height) + 2 * var(--space-md)) var(--space-md) var(--space-lg);
+        transition: top 0.3s ease-in-out;
+        box-shadow: var(--shadow-lg);
+        border-radius: 0 0 20px 20px;
+        z-index: 1000;
+    }
+  
+    .GlobalNav.active {
+        top: 0;
+    }
+  
+    .GlobalNav ul {
+        flex-direction: column;
+        gap: 10px;
+        height: 100%;
+    }
+
+    .GlobalNav li::after {
+        content: ' >>';
+        color: var(--secondary-text-color);
+    }
+}

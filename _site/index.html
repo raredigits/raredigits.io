@@ -8,49 +8,52 @@
 
     <link rel="icon" type="image/png" href="/assets/img/favicon.png">
 
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="stylesheet" href="/assets/css/mobile.css">
+    <link rel="stylesheet" href="/assets/css/rare.css">
+    <link rel="stylesheet" href="/assets/css/themes/rareBlack.css">
+    <link rel="stylesheet" href="/assets/css/modules/home.css">
+    <!-- <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/mobile.css"> -->
     <link rel="stylesheet" href="/assets/css/feedback.scss">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
-<header>
-    <div class="logo">
-        <img class="logoImg" src="/assets/img/common/rare_logo_black_full.svg" alt="Rare Digits">
-    </div>
-    <nav>
-        <ul>
-            <li class="close"><a href="javascript:void(0)" onclick="toggleNav()">&times;</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#solutions">Solutions</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#newsroom">Pressroom</a></li>
-            <li><a href="#demo">Contacts</a></li>
-        </ul>
-        <div class="hamburger" onclick="toggleNav()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>        
-    </nav>
-    <div class="buttonDemo">
-        <a class="button" href="https://demo.raredigits.io">Demo</a>
+<body class="Black">
+    <div class="Column">
+        <header>
+    <div class="SiteMaxWidth Row Stretched">
+        <a class="NoDecoration" href="/">
+            <div class="HeaderLogo"></div>
+        </a>
+        <button class="Hamburger NoDecoration" aria-label="Toggle navigation">
+            <span class="material-icons MenuIcon">menu</span>
+            <span class="material-icons CloseIcon">close</span>
+        </button>
+        <nav class="GlobalNav">
+            <ul>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/#solutions">Solutions</a></li>
+                <li><a href="/#pricing">Pricing</a></li>
+                <li><a href="/about/newsroom">Pressroom</a></li>
+                <li><a href="/about/contacts">Contacts</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
-<br>
-<div class="constructionHeader">
-    🚧 <a href="/newsroom/Reconstruction/">Website is Under Construction</a> 🚧
+        <div class="NoticeStripe ConstructionStripeMini">
+    <div class="SiteMaxWidth">
+        🚧 <a href="/newsroom/Reconstruction/">Website is Under Construction</a> 🚧
+    </div>
 </div>
-
+        
+        <main>
+            <div class="Content">
+                <div>
 <section class="sectionFirst">
     <div class="helloWorld">
-        <h1>Elegant Exteriors,<br> Brutal Internal</h1>
+        <h1>Elegant Exteriors,<br />Brutal Internal</h1>
         <p>
             Software that’s easy to use
             and powerful under the hood,
@@ -58,32 +61,61 @@
             with functionality
         </p>
         <p>
-            <a href="/about">Nice to meet you</a> >>
+            <a href="/about">Nice to meet you</a> &gt;&gt;
         </p>
     </div>
 </section>
-<section class="Secret">
-    <h2>Pure Performance, No Excess</h2>
-    <hr class="hrDeco hrBlack">
-    <p>
-        Efficiency is our hallmark at Rare.<br>Solutions that fit the task, with zero fluff.
-    </p>
-    <div class="sectionCTA">
-        <a href="" class="black">Check it out</a> >>
+<section class="sectionSecret mainRevert Column Stretched">
+    <div>
+        <h2>Pure Performance, No Excess</h2>
+        <hr class="hrDeco hrBlack" />
+        <p>
+            Efficiency is our hallmark at Rare.<br />Solutions that fit the task, with zero fluff.
+        </p>
+    </div>
+    <div>
+        <p style="font-size: 1em;">Finally get what you need from:</p>
+        <div class="secretVendors">
+            <img class="secretVendor" src="/assets/img/common/vendors/odoo_logo.svg" />
+            <img class="secretVendor" src="/assets/img/common/vendors/sap_logo.svg" />
+            <img class="secretVendor" src="/assets/img/common/vendors/zoho_logo.svg" />
+        </div>
+    </div>
+    <div class="secretCTA">
+        <a href="" class="black">Check it out</a> &gt;&gt;
     </div>
 </section>
-<section class="Services">
-    <a class="noDecor" name="services"></a><h2>Services</h2>
-    <hr class="hrDeco">
+<section class="sectionServices Column">
+    <a class="NoDecoration" name="services"></a><h2>Services</h2>
+    <hr class="hrDeco" />
     <p>
-        14 years satisfying enterprise’s every need
+        16 years satisfying enterprise’s every need
     </p>
-    <div class="servicesWrapper">
+    <div class="RowMobile Stretched GapMd">
+        <div class="service">
+            <h3>Consulting</h3>
+            <ul>
+                <li>Data Analisys;</li>
+                <li>Enterprise Insights;</li>
+                <li>Best Practices;</li>
+                <li>Security Issues and Vulnerability Prevention;</li>
+                <li>Web3/Internal Tokenomics.</li>
+            </ul>
+        </div>
+        <div class="service">
+            <h3>Support</h3>
+            <ul>
+                <li>Third-Party Apps Customization;</li>
+                <li>Get Help with Custom Software;</li>
+                <li>24/7 Monitoring;</li>
+                <li>Tunable Alert Systems.</li>
+            </ul>
+        </div>
         <div class="service">
             <h3>Development</h3>
             <ul>
-                <li>Websites & Applications;</li>
-                <li>Mobile & Cross-Platform Desktop Applications;</li>
+                <li>Websites &amp; Applications;</li>
+                <li>Mobile &amp; Cross-Platform Desktop Applications;</li>
                 <li>Custom Software;</li>
                 <li>Diverse Systems Integrations;</li>
                 <li>High-Load Architecture Design.</li>
@@ -94,56 +126,41 @@
             <ul>
                 <li>Web3 Applications;</li>
                 <li>Payment Services;</li>
-                <li>Blockchain & Smart Contracts Implementation;</li>
+                <li>Blockchain &amp; Smart Contracts Implementation;</li>
                 <li>Web3 Integrations;</li>
                 <li>Decentralized Architecture Design.</li>
             </ul>
         </div>
-        <div class="service">
-            <h3>Consulting</h3>
-            <ul>
-                <li>Enterprise Insights;</li>
-                <li>Best Practices;</li>
-                <li>Web3 Tokenomics;</li>
-                <li>Security Issues and Vulnerability Prevention.</li>
-            </ul>
-        </div>
-        <div class="service">
-            <h3>Support</h3>
-            <ul>
-                <li>Get Help with Custom Software;</li>
-                <li>Third-Party Apps Customization;</li>
-                <li>24/7 Monitoring;</li>
-                <li>Tunable Alert Systems.</li>
-            </ul>
-        </div>
     </div>
     <div class="servicesText">
-        <p><strong>Technical Stack:</strong><br> NodeJS, Python, React, TypeScript, Solidity, IPFS, Rust, Infura, EtherJS, Web3JS, C#, WPF, Electron, Flutter, Cordova, PassportJS, Auth0, Firebase, PostgreSQL, Redis, MySQL, Memcached, MongoDB, MSSQL</p>
+        <p><strong>Integration Tools for Data Providers:</strong><br /> Odoo, SAP Business One, Zoho, CIN7, Oracle NetSuite, MS Business Central, Acumatica, 1C</p>
+    </div>
+    <div class="servicesText">
+        <p><strong>Technical Stack:</strong><br /> NodeJS, Python, React, TypeScript, Solidity, IPFS, Rust, Infura, EtherJS, Web3JS, C#, WPF, Electron, Flutter, Cordova, PassportJS, Auth0, Firebase, PostgreSQL, Redis, MySQL, Memcached, MongoDB, MSSQL</p>
     </div>
 </section>
-<section class="Solutions">
-    <a class="noDecor" name="solutions"></a>
+<section class="Column">
+    <a class="NoDecoration" name="solutions"></a>
     <h2>Simplicity in Every Solution</h2>
-    <hr class="hrDeco">
+    <hr class="hrDeco" />
     <div class="solutionsText">
-        <p>Navigate the future of business<br>
+        <p>Navigate the future of business<br />
             with <strong>Rare Digits</strong></p>
     </div>
-    <div class="solutionsWrapper">
+    <div class="Flex GapMd">
         <div class="solution solutionAccount">
             <h3>Accounting: Beyond Numbers</h3>
             <p>Discover a zenith of precision and clarity in every financial transaction and report</p>
         </div>
         <div class="solution solutionIntergation">
             <h3>Integration: Harmony Across Platforms</h3>
-            <p>Orchestrate disparate systems,<br>transforming them into a seamless, unified experience</p>
+            <p>Orchestrate disparate systems,<br />transforming them into a seamless, unified experience</p>
         </div>
         <div class="solution solutionSales">
             <h3>Push the Envelope</h3>
         </div>
         <div class="solution solutionLogistics">
-            <h3>Just In Time.<br>
+            <h3>Just In Time.<br />
             Always</h3>
         </div>
         <div class="solution solutionConsulting">
@@ -152,63 +169,63 @@
         </div>
     </div>
 </section>
-<section class="Apps mainRevert">
+<section class="Column mainRevert">
     <h2>Bespoke Applications</h2>
-    <hr class="hrDeco">
+    <hr class="hrDeco" />
     <p>
         Disclose the full story and simplify decision making
     </p>
-    <div class="appStore">
+    <div class="appStore Flex Stretched">
         <div class="app">
-            <img src="/assets/img/app-atlas.png" alt="">
+            <img src="/assets/img/main/app-atlas.png" alt="" />
             <p>
-                <strong><a href="">Atlas ERP</a></strong><br>
+                <strong><a href="">Atlas ERP</a></strong><br />
                 Visualized ERP System
             </p>
         </div>
         <div class="app">
-            <img src="/assets/img/app-columbus.png" alt="">
+            <img src="/assets/img/main/app-columbus.png" alt="" />
             <p>
-                <strong><a href="">Columbus</a></strong><br>
+                <strong><a href="">Columbus</a></strong><br />
                 Automated Sales Navigator
             </p>
         </div>
         <div class="app">
-            <img src="/assets/img/app-forecast.png" alt="">
+            <img src="/assets/img/main/app-forecast.png" alt="" />
             <p>
-                <strong><a href="">Forecast App</a></strong><br>
+                <strong><a href="">Forecast App</a></strong><br />
                 Predictive Analytics
             </p>
         </div>
         <div class="app">
-            <img src="/assets/img/app-fanfare.png" alt="">
+            <img src="/assets/img/main/app-fanfare.png" alt="" />
             <p>
-                <strong><a href="">Fanfare</a></strong><br>
+                <strong><a href="">Fanfare</a></strong><br />
                 Loyalty Management System
             </p>
         </div>
         <div class="app">
-            <img src="/assets/img/app-concierge.png" alt="">
+            <img src="/assets/img/main/app-concierge.png" alt="" />
             <p>
-                <strong><a href="">Concierge App</a></strong><br>
+                <strong><a href="">Concierge App</a></strong><br />
                 Personal GPT Assistant
             </p>
         </div>
     </div>
     <div class="appStoreText">
-        <p>Customized, turnkey apps that epitomize sophistication.<br>Impeccably crafted to resonate with your enterprise’s unique rhythm</p>
+        <p>Customized, turnkey apps that epitomize sophistication.<br />Impeccably crafted to resonate with your enterprise’s unique rhythm</p>
     </div>
 </section>
 <section class="oneApp">
     <h2>One Interface. Infinite Control</h2>
-    <hr class="hrDeco">
+    <hr class="hrDeco" />
     <p>Online data analisys in simple words</p>
-    <div class="oneAppWrapper">
+    <div class="oneAppWrapper Flex">
         <div class="oneAppPhone">
-            <img src="/assets/img/phone.png" alt="">
+            <img src="/assets/img/main/phone.png" alt="" />
         </div>
         <div class="oneAppText">
-            <p><strong>Decades of expertise captured in one sleek interface</strong><br>
+            <p><strong>Decades of expertise captured in one sleek interface</strong><br />
             Empower your enterprise with real-time insights and control, anywhere, anytime.</p>
             <ul>
                 <li>Seamless integration with back-end systems</li>
@@ -220,9 +237,9 @@
     </div>
     <div class="sleep">
         <p>
-            Trained to suit<br>
-            your individual needs<br>
-            <img src="/assets/img/sleep.png" alt="">
+            Trained to suit<br />
+            your individual needs<br />
+            <img src="/assets/img/main/sleep.png" alt="" />
         </p>
     </div>
 </section>
@@ -233,30 +250,30 @@
         <div class="feedback">
         </div>
 </section> -->
-<section class="Pricing">
+<section class="sectionPricing">
     <a class="noDecor" name="pricing"></a>
     <h2>Pricing for Your Happiness</h2>
-    <hr class="hrDeco">
+    <hr class="hrDeco" />
     <p>Customized plans for everyone</p>
     <div class="pricingWrapper">
         <div class="pricingText">
             <h3>The price doesn’t matter.</h3>
-            Because we’re talking only about the client’s profit.<br>
+            Because we’re talking only about the client’s profit.<br />
             The aim is client happiness, achieved by crafting conditions that are inherently advantageous. Here, it’s not about spending money; it’s about investing in well-being. So, the emphasis is on the benefit: the cost is secondary to the inherent advantage.
         </div>
         <div class="pricingImg"></div>
     </div>
 </section>
 <section class="Newsroom">
-    <a class="noDecor" name="newsroom"></a>
-    <h2><a href="/newsroom">Newsroom</a></h2>
-    <hr class="hrDeco">
+    <a class="NoDecoration" name="newsroom"></a>
+    <h2><a class="NoDecoration" href="/newsroom">Newsroom</a></h2>
+    <hr class="hrDeco" />
     <p>Stay up to date with news that matters</p>
     <div class="newsMain">
         
         <div class="newsBlock">
             <div class="newsData">
-                02.09.2024  
+                02.09.2024
                 
                     
                     <span class="list-tag">
@@ -264,13 +281,12 @@
                     </span>
                 
             </div>
-            <!-- Добавляем ссылку на пост через post.url -->
-            <a href="/newsroom/Reconstruction/">Pardon Our Digital Dust</a><br>
+            <a href="/newsroom/Reconstruction/">Pardon Our Digital Dust</a><br />
         </div>
         
         <div class="newsBlock">
             <div class="newsData">
-                31.07.2024  
+                31.07.2024
                 
                     
                     <span class="list-tag">
@@ -278,13 +294,12 @@
                     </span>
                 
             </div>
-            <!-- Добавляем ссылку на пост через post.url -->
-            <a href="/newsroom/Destination-partnership/">Destination Partnership</a><br>
+            <a href="/newsroom/Destination-partnership/">Destination Partnership</a><br />
         </div>
         
         <div class="newsBlock">
             <div class="newsData">
-                02.07.2024  
+                02.07.2024
                 
                     
                     <span class="list-tag">
@@ -292,13 +307,12 @@
                     </span>
                 
             </div>
-            <!-- Добавляем ссылку на пост через post.url -->
-            <a href="/newsroom/Product-management-for-IT-infrastructure/">Product Management for IT Infrastructure</a><br>
+            <a href="/newsroom/Product-management-for-IT-infrastructure/">Product Management for IT Infrastructure</a><br />
         </div>
         
         <div class="newsBlock">
             <div class="newsData">
-                14.06.2024  
+                14.06.2024
                 
                     
                     <span class="list-tag">
@@ -306,13 +320,12 @@
                     </span>
                 
             </div>
-            <!-- Добавляем ссылку на пост через post.url -->
-            <a href="/newsroom/Asiatech-partnership/">Asiatech Partnership</a><br>
+            <a href="/newsroom/Asiatech-partnership/">Asiatech Partnership</a><br />
         </div>
         
         <div class="newsBlock">
             <div class="newsData">
-                04.06.2024  
+                04.06.2024
                 
                     
                     <span class="list-tag">
@@ -320,13 +333,12 @@
                     </span>
                 
             </div>
-            <!-- Добавляем ссылку на пост через post.url -->
-            <a href="/newsroom/Urgently-invest-in-AI/">How to Determine if You Need to Urgently Invest in AI?</a><br>
+            <a href="/newsroom/Urgently-invest-in-AI/">How to Determine if You Need to Urgently Invest in AI?</a><br />
         </div>
         
         <div class="newsBlock">
             <div class="newsData">
-                03.06.2024  
+                03.06.2024
                 
                     
                     <span class="list-tag">
@@ -334,13 +346,12 @@
                     </span>
                 
             </div>
-            <!-- Добавляем ссылку на пост через post.url -->
-            <a href="/newsroom/KGSY-partnership/">Intelligent Technologies Partnership</a><br>
+            <a href="/newsroom/KGSY-partnership/">Intelligent Technologies Partnership</a><br />
         </div>
         
         <div class="newsBlock">
             <div class="newsData">
-                06.05.2024  
+                06.05.2024
                 
                     
                     <span class="list-tag">
@@ -348,13 +359,12 @@
                     </span>
                 
             </div>
-            <!-- Добавляем ссылку на пост через post.url -->
-            <a href="/newsroom/Website-security/">A Few Words About the Security of Your Website</a><br>
+            <a href="/newsroom/Website-security/">A Few Words About the Security of Your Website</a><br />
         </div>
         
         <div class="newsBlock">
             <div class="newsData">
-                21.03.2024  
+                21.03.2024
                 
                     
                     <span class="list-tag">
@@ -362,13 +372,12 @@
                     </span>
                 
             </div>
-            <!-- Добавляем ссылку на пост через post.url -->
-            <a href="/newsroom/Swisotec-partnership/">Swisotec Partnership</a><br>
+            <a href="/newsroom/Swisotec-partnership/">Swisotec Partnership</a><br />
         </div>
         
         <div class="newsBlock">
             <div class="newsData">
-                04.03.2024  
+                04.03.2024
                 
                     
                     <span class="list-tag">
@@ -376,130 +385,116 @@
                     </span>
                 
             </div>
-            <!-- Добавляем ссылку на пост через post.url -->
-            <a href="/newsroom/Will-AI-take-our-jobs/">Will AI Take All Our Jobs?</a><br>
+            <a href="/newsroom/Will-AI-take-our-jobs/">Will AI Take All Our Jobs?</a><br />
         </div>
         
     </div>
 </section>
-<section class="Contacts">
+<section class="sectionContacts">
     <a name="demo"></a>
     <h2>Experience Rare Digits</h2>
-    <hr class="hrDeco">
-    <p>A renaissance in enterprise software awaits.<br>
+    <hr class="hrDeco" />
+    <p>A renaissance in enterprise software awaits.<br />
         Explore elegance, efficiency, and excellence—encapsulated by yourself</p>
     <div class="contactsWrapper">
         <div class="demoRequest">
             <h3>Book a Demo:</h3>
             <form id="my-form" action="https://formspree.io/f/xoqodadn" method="POST">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" required="" />
                 <label for="company">Company:</label>
-                <input type="text" id="company" name="company" required>
+                <input type="text" id="company" name="company" required="" />
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required="" />
                 <label for="contact">Contact Number:</label>
-                <input type="tel" id="contact" name="contact" required>
+                <input type="tel" id="contact" name="contact" required="" />
                 <button id="my-form-button">Request a Demonstration</button>
-                <!-- <input type="submit" value="Request a Demonstration"> -->
                 <h3 id="my-form-status"></h3>
             </form>
             <h3>Meet The Team</h3>
             <p>Our Reps are available at: Dubai, Berlin, Copenhagen, Jakarta, Bali, Tbilisi, Limassol, Porto, Miami or Phuket
             </p>
-            <img src="/assets/img/world-map.png" alt="">
+            <img src="/assets/img/main/world-map.png" alt="" />
         </div>
     </div>
 </section>
+</div>
 
+            </div>
+        </main>
+    </div>
+    
+    <footer>
+  <div class="SiteMaxWidth Column">
+    <div class="Flex GapLg">
+      <div>
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="">Atlas ERP</a></li>
+          <li><a href="">Columbus CRM</a></li>
+          <li><a href="">Forecast App</a></li>
+          <li><a href="">Fanfare Loyalty</a></li>
+          <li><a href="">Concierge GPT</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="">Design</a></li>
+          <li><a href="">Applications</a></li>
+          <li><a href="">Intergations</a></li>
+          <li><a href="">Web & Mobile</a></li>
+          <li><a href="">Web3 Security</a></li>
+          <li><a href="">Tech Stack</a></li>
+          <li><a href="/tools">Rare Tools</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Subscriprions</h3>
+        <ul>
+          <li><a href="">Junior Associate</a></li>
+          <li><a href="">Associate</a></li>
+          <li><a href="">Consigliere</a></li>
+          <li><a href="">Mr. Wolf</a></li>
+          <li><a href="">NED</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Rare</h3>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/about/principles">Principles</a></li>
+          <li><a href="/about/newsroom">Newsroom</a></li>
+          <li><a href="/about/partnership">Partnership</a></li>
+          <li><a href="/about/contacts">Contacts</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Legal Stuff</h3>
+        <ul>
+          <li><a href="">Privacy Policy</a></li>
+          <li><a href="">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
 
-
-
-
-<footer>
-  <div class="footerSence">
-    <div class="copyright">
-      © 2023—2024  Rare Digits<br>
-      Coding Sences, Building Worlds
+    <div class="Row Stretched BorderTop">
+      <div>
+        © 2023—2025  Rare Digits<br>
+        Coding Sences, Building Worlds
+      </div>
+      <div class="Right">
+        Rare Digits Production DMCC<br>
+        DMCC Business Centre,<br>
+        Jewellery & Gemplex&nbsp;3<br>
+        115738, Dubai, UAE<br>
+        <a href="mailto:hi@raredigits.io">hi@raredigits.io</a>
+      </div>
     </div>
-    <div class="links">
-      <ul>
-        <li class="bold">SERVICES</li>
-        <li><a href="">Applications</a></li>
-        <li><a href="">Intergations</a></li>
-        <li><a href="">Web & Mobile</a></li>
-        <li><a href="">Web3 Security</a></li>
-        <li><a href="">Tech Stack</a></li>
-      </ul>
-    </div>
-    <div class="links">
-      <ul>
-        <li class="bold">SOLUTIONS</li>
-        <li><a href="">Atlas ERP</a></li>
-        <li><a href="">Columbus CRM</a></li>
-        <li><a href="">Forecast App</a></li>
-        <li><a href="">Fanfare Loyalty</a></li>
-        <li><a href="">Concierge GPT</a></li>
-      </ul>
-    </div>
-    <div class="links">
-      <ul>
-        <li class="bold">RARE</li>
-        <li><a href="">About</a></li>
-        <li><a href="">Principles</a></li>
-        <li><a href="">Newsroom</a></li>
-        <li><a href="">Contacts</a></li>
-        <li><a href="">Partnership</a></li>
-      </ul>
-    </div>
-    <div class="links">
-      <ul>
-        <li class="bold">LEGAL STUFF</li>
-        <li><a href="">Privacy Policy</a></li>
-        <li><a href="">Terms of Use</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="contacts">
-      <strong>Rare Digits Production DMCC</strong><br>
-      DMCC Business Centre,<br>
-      Jewellery & Gemplex&nbsp;3<br>
-      115738, Dubai, UAE<br>
-      <a href="mailto:hi@raredigits.io">hi@raredigits.io</a>
   </div>
 </footer>
-<script>
-    var form = document.getElementById("my-form");
-    
-    async function handleSubmit(event) {
-      event.preventDefault();
-      var status = document.getElementById("my-form-status");
-      var data = new FormData(event.target);
-      fetch(event.target.action, {
-        method: form.method,
-        body: data,
-        headers: {
-            'Accept': 'application/json'
-        }
-      }).then(response => {
-        if (response.ok) {
-          status.innerHTML = "Thanks for your request! We’ll be in touch ASAP.";
-          form.reset()
-        } else {
-          response.json().then(data => {
-            if (Object.hasOwn(data, 'errors')) {
-              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-            } else {
-              status.innerHTML = "Oops! There was a problem submitting your form"
-            }
-          })
-        }
-      }).catch(error => {
-        status.innerHTML = "Oops! There was a problem submitting your form"
-      });
-    }
-    form.addEventListener("submit", handleSubmit)
-</script>
+
 <script src="/assets/js/hamburger.js"></script>
+
+
 </body>
-</html>
