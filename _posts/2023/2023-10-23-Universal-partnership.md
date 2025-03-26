@@ -6,4 +6,4 @@ categories: about
 tags: clients
 ---
 
-{% include /special/constructionNotice.html %}
+<div class="Space">{% include /special/ConstructionNotice.html %}</div>

@@ -218,7 +218,7 @@ title: Coding Sences, Building Worlds
 </section>
 <section class="Newsroom">
     <a class="NoDecoration" name="newsroom"></a>
-    <h2><a class="NoDecoration" href="/newsroom">Newsroom</a></h2>
+    <h2><a class="NoDecoration" href="/about/newsroom">Newsroom</a></h2>
     <hr class="hrDeco">
     <p>Stay up to date with news that matters</p>
     <div class="newsMain">
