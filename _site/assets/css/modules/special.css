@@ -7,20 +7,20 @@
 }
 
 .ConstructionStripeMini a,
-.ConstructionNotice a {
+.constructionNotice a {
     color: #000;
     text-decoration: none;
     border-bottom: 1px solid #000;
 }
 
 .ConstructionStripeMini a:hover,
-.ConstructionNotice a:hover {
+.constructionNotice a:hover {
     border-bottom: none;
     background: none;
     border-bottom: 1px solid var(--brand-color);
 }
 
-.ConstructionNotice {
+.constructionNotice {
     width: 100%;
     padding: 20px 50px;
     text-align: center;
@@ -33,6 +33,6 @@
     );
 }
 
-.ConstructionNotice.ConstructionNotice p  {
+.constructionNotice.constructionNotice p  {
     max-width: none;
 }

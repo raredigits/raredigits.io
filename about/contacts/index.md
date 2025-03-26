@@ -45,7 +45,7 @@ Choose your preferred locale, and we&#146;ll arrange a&nbsp;meeting faster than 
 
 Not a&nbsp;fan of&nbsp;geographical constraints? Our demo booking form transcends space and time. Well, mostly time zones.
 
-<div class="Space">{% include /special/ConstructionNotice.html %}</div>
+<div class="Space">{% include /special/constructionNotice.html %}</div>
 
 Remember, whether you&#146;re reaching out from the bustling streets of&nbsp;Tokyo or&nbsp;the quiet corners of&nbsp;Timbuktu, we&#146;re just a&nbsp;quantum entanglement away.
 

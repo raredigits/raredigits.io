@@ -6,4 +6,4 @@ categories: about
 tags: portfolio
 ---
 
-<div class="Space">{% include /special/ConstructionNotice.html %}</div>
+<div class="Space">{% include /special/constructionNotice.html %}</div>
