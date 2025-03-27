@@ -71,6 +71,10 @@ p img {
     max-width: var(--content);
 }
 
+.Content h3 {
+    margin-top: var(--space-md);
+}
+
 .Space {
     padding: var(--space-sm) 0;
 }

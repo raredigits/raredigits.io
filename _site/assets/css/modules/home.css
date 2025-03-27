@@ -72,6 +72,10 @@ h2 a:hover {
     color: var(--primary-color);
 }
 
+.subheader {
+    padding-bottom: var(--space-lg);
+}
+
 .sectionFirst {
     background-image: url(/assets/img/main/mia.png);
     background-size: cover;

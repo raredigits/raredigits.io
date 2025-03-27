@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-03-27T11:18:19+04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Rare Digits</title><subtitle>Coding Senses, Building World</subtitle><entry><title type="html">Introducing Watchtower v.0.1</title><link href="http://localhost:4000/newsroom/Introducing-Whatchtower/" rel="alternate" type="text/html" title="Introducing Watchtower v.0.1" /><published>2024-11-18T10:00:00+04:00</published><updated>2024-11-18T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Introducing-Whatchtower</id><content type="html" xml:base="http://localhost:4000/newsroom/Introducing-Whatchtower/"><![CDATA[<p><img src="/assets/img/newsroom/2025/watchtower.jpg" alt="" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-03-27T15:40:19+04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Rare Digits</title><subtitle>Coding Senses, Building World</subtitle><entry><title type="html">Introducing Watchtower v.0.1</title><link href="http://localhost:4000/newsroom/Introducing-Whatchtower/" rel="alternate" type="text/html" title="Introducing Watchtower v.0.1" /><published>2025-02-03T10:00:00+04:00</published><updated>2025-02-03T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Introducing-Whatchtower</id><content type="html" xml:base="http://localhost:4000/newsroom/Introducing-Whatchtower/"><![CDATA[<p><img src="/assets/img/newsroom/2025/watchtower.jpg" alt="" /></p>
 
 <h2 id="follow-the-money-across-the-web3-wilderness">Follow the Money Across the Web3 Wilderness</h2>
 
@@ -44,7 +44,180 @@
 
 <p>Watchtower brings clarity to this chaos. Because making informed decisions requires actual information, not just Discord rumors and Twitter speculation.</p>
 
-<p>Visit the <a href="/tools/web3/watchtower">product page</a> to learn more or to start tracking where the digital money goes when it thinks nobody’s watching.</p>]]></content><author><name></name></author><category term="about" /><category term="kitchen" /><category term="release" /><category term="web3" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Introducing Corsair HQ</title><link href="http://localhost:4000/newsroom/Introducing-Corsair-HQ/" rel="alternate" type="text/html" title="Introducing Corsair HQ" /><published>2024-11-18T10:00:00+04:00</published><updated>2024-11-18T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Introducing-Corsair-HQ</id><content type="html" xml:base="http://localhost:4000/newsroom/Introducing-Corsair-HQ/"><![CDATA[<div class="Space"><div class="constructionNotice">
+<p>Visit the <a href="/tools/web3/watchtower">product page</a> to learn more or to start tracking where the digital money goes when it thinks nobody’s watching.</p>]]></content><author><name></name></author><category term="about" /><category term="kitchen" /><category term="release" /><category term="web3" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Big Checks vs. Frequent Buyers</title><link href="http://localhost:4000/newsroom/Big-checks-vs-frequent/" rel="alternate" type="text/html" title="Big Checks vs. Frequent Buyers" /><published>2025-01-20T10:00:00+04:00</published><updated>2025-01-20T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Big-checks-vs-frequent</id><content type="html" xml:base="http://localhost:4000/newsroom/Big-checks-vs-frequent/"><![CDATA[<p>The eternal business question: should you court the whale clients who write enormous checks twice a year, or cultivate a school of minnows who pay smaller amounts but with clockwork regularity?</p>
+
+<p>If consultants have told you “it depends,” they’re not being evasive—they’re being honest. But “it depends” without explaining what it depends on is about as useful as a chocolate teapot.</p>
+
+<h2 id="the-real-deciding-factor-your-business-capacity">The Real Deciding Factor: Your Business Capacity</h2>
+
+<p>The answer to this client strategy question isn’t found in generic best practices or industry benchmarks. It lives in the honest assessment of your business capacity and scalability.</p>
+
+<h2 id="the-whale-strategy-big-checks-big-stakes">The Whale Strategy: Big Checks, Big Stakes</h2>
+
+<p><strong>Advantages:</strong></p>
+<ul>
+  <li>Lower client acquisition costs (convince one client instead of fifty)</li>
+  <li>Streamlined operations (serve fewer masters)</li>
+  <li>Potentially higher prestige and stronger case studies</li>
+  <li>Fewer invoices to chase and relationships to manage</li>
+</ul>
+
+<p><strong>The Hidden Capacity Questions:</strong></p>
+<ul>
+  <li>Can your business survive if 1-2 clients have payment delays?</li>
+  <li>Do you have the operational depth to handle a major client crisis?</li>
+  <li>What happens if your key relationship manager quits mid-project?</li>
+  <li>Can your cash flow handle the feast-or-famine payment cycles?</li>
+</ul>
+
+<p>The whale strategy works beautifully when your business has financial reserves to weather gaps between large payments and enough organizational redundancy to prevent any single employee’s departure from threatening client relationships.</p>
+
+<h2 id="the-minnow-strategy-volume-and-consistency">The Minnow Strategy: Volume and Consistency</h2>
+
+<p><strong>Advantages:</strong></p>
+<ul>
+  <li>More predictable revenue streams</li>
+  <li>Lower catastrophic risk if any single client leaves</li>
+  <li>Broader market feedback on your offerings</li>
+  <li>Higher valuation multiples (investors love diversified revenue)</li>
+</ul>
+
+<p><strong>The Hidden Capacity Questions:</strong></p>
+<ul>
+  <li>Can your support systems scale to handle hundreds of clients?</li>
+  <li>Does your onboarding process work without white-glove treatment?</li>
+  <li>Will your margins survive when support costs multiply?</li>
+  <li>Can you automate enough to prevent administrative collapse?</li>
+</ul>
+
+<p>The minnow strategy thrives when your business has highly systematized operations, exceptional automation, and the ability to scale support without linearly increasing costs.</p>
+
+<h2 id="the-existential-capacity-question">The Existential Capacity Question</h2>
+
+<p>The fundamental question isn’t which client type is “better”—it’s whether your business is built to handle the specific challenges each type presents.</p>
+
+<p>A boutique creative agency with six employees pursuing enterprise clients without financial reserves is a heart attack waiting to happen. A SaaS platform pursuing small businesses without automated support systems is preparing to drown in tickets.</p>
+
+<h2 id="the-risk-spectrum">The Risk Spectrum</h2>
+
+<p>Every business exists somewhere on this risk spectrum:</p>
+
+<p><strong>Whale Dependency</strong> → <strong>Balanced Portfolio</strong> → <strong>Support Overwhelm</strong></p>
+
+<p>Moving left risks catastrophic client loss. Moving right risks operational collapse. The sweet spot depends entirely on your capacity to handle each type of risk.</p>
+
+<h2 id="your-practical-next-steps">Your Practical Next Steps</h2>
+
+<ol>
+  <li>
+    <p><strong>Audit your operational breaking points:</strong> What would break first if you doubled your client count? What would break first if your largest client doubled their demands?</p>
+  </li>
+  <li>
+    <p><strong>Calculate your true client servicing costs:</strong> Many businesses discover their “best” clients are actually unprofitable when all service costs are properly allocated.</p>
+  </li>
+  <li>
+    <p><strong>Map your cash runway against client concentration:</strong> How many months could you operate if your largest client disappeared? If the answer makes you nervous, diversification isn’t optional.</p>
+  </li>
+  <li>
+    <p><strong>Assess your automation maturity:</strong> If your business requires high-touch human intervention for routine client needs, the minnow strategy will crush your margins.</p>
+  </li>
+</ol>
+
+<h2 id="the-uncomfortable-truth">The Uncomfortable Truth</h2>
+
+<p>The clients you should prioritize are the ones your business is actually built to serve profitably. This may not match your aspirations or industry norms, but it will match financial reality.</p>
+
+<p>If your business lacks the capacity reserves to handle whale-sized client demands or the operational efficiency to service a minnow school profitably, the solution isn’t a different client strategy—it’s a fundamental business redesign.</p>
+
+<p>The best client mix isn’t the one that sounds most impressive at industry conferences. It’s the one that allows you to sleep at night while your bank account grows.</p>]]></content><author><name></name></author><category term="insight" /><category term="core" /><summary type="html"><![CDATA[The eternal business question: should you court the whale clients who write enormous checks twice a year, or cultivate a school of minnows who pay smaller amounts but with clockwork regularity?]]></summary></entry><entry><title type="html">How Lending Assessment Practices Can Revolutionize Auto Repair Shop’s Cash Flow</title><link href="http://localhost:4000/newsroom/Lending-Scoring-Practice/" rel="alternate" type="text/html" title="How Lending Assessment Practices Can Revolutionize Auto Repair Shop’s Cash Flow" /><published>2025-01-13T10:00:00+04:00</published><updated>2025-01-13T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Lending-Scoring-Practice</id><content type="html" xml:base="http://localhost:4000/newsroom/Lending-Scoring-Practice/"><![CDATA[<p>Ever wondered why banks sleep soundly while your auto repair shop suffers from payment anxiety? Simple: they’ve mastered the dark art of predicting who will actually pay. Good news—you can steal their techniques.</p>
+
+<p><img src="/assets/img/newsroom/2025/auto_mechanic.jpg" alt="" />
+<cite>“Is this even going to be paid for?”</cite></p>
+
+<h2 id="the-problem-schrödingers-payment">The Problem: Schrödinger’s Payment</h2>
+
+<p>You’ve got six vehicles in your service bay. Parts ordered, labor scheduled, but the critical question remains: will all these customers pay promptly when the work is done? Until they do, each invoice exists in a quantum state of both “definitely getting paid” and “absolutely hopeless.”</p>
+
+<p>This uncertainty isn’t just annoying—it’s financially dangerous. It leads to:</p>
+<ul>
+  <li>Cash flow forecasts with the accuracy of a carnival fortune teller</li>
+  <li>Inventory decisions based on hope rather than data</li>
+  <li>Stress levels that would concern medical professionals</li>
+</ul>
+
+<h2 id="banking-wisdom-for-grease-monkeys">Banking Wisdom for Grease Monkeys</h2>
+
+<p>Lenders have solved this problem through systematic risk assessment. Here’s how to adapt their approach for your repair shop:</p>
+
+<h3 id="1-basic-payment-history-scoring">1. Basic Payment History Scoring</h3>
+
+<p>Start simple: create a three-tier classification system for existing customers:</p>
+<ul>
+  <li><strong>Green</strong>: Pays promptly, never disputes charges (your financial angels)</li>
+  <li><strong>Yellow</strong>: Pays eventually, sometimes negotiates after work is done</li>
+  <li><strong>Red</strong>: History of disputes, delayed payments, or mysterious disappearances</li>
+</ul>
+
+<p>For new customers, begin with yellow and adjust based on behavior.</p>
+
+<h3 id="2-pre-work-qualification">2. Pre-Work Qualification</h3>
+
+<p>Before significant repairs, implement these lending-inspired techniques:</p>
+<ul>
+  <li><strong>Deposit requirements</strong>: Scale based on job size and customer history</li>
+  <li><strong>Credit card pre-authorization</strong>: The automotive equivalent of a credit check</li>
+  <li><strong>Payment plan documentation</strong>: For larger repairs, establish terms before work begins</li>
+</ul>
+
+<h3 id="3-external-signals-assessment">3. External Signals Assessment</h3>
+
+<p>Banks look beyond direct history. You can too:</p>
+<ul>
+  <li><strong>Vehicle value vs. repair cost ratio</strong>: If the repair exceeds 60% of vehicle value, payment risk increases dramatically</li>
+  <li><strong>Customer stability indicators</strong>: Local homeowners with steady jobs are statistically more likely to pay than temporary residents</li>
+  <li><strong>Communication patterns</strong>: Customers who are difficult to reach or vague about details represent higher risk</li>
+</ul>
+
+<h2 id="implementation-a-simple-scoring-system">Implementation: A Simple Scoring System</h2>
+
+<p>Create a basic 10-point system where customers start at 5 points. Add or subtract based on:</p>
+<ul>
+  <li>Prior payment history (+3/-3)</li>
+  <li>Deposit provided (+2)</li>
+  <li>Repair-to-vehicle value ratio (-1 for every 20% above 50%)</li>
+  <li>Local property owner (+1)</li>
+  <li>Communication clarity (+1/-1)</li>
+</ul>
+
+<p>8-10 points = Green (96% payment probability)
+5-7 points = Yellow (82% payment probability)
+1-4 points = Red (60% payment probability)</p>
+
+<h2 id="strategic-responses-to-scores">Strategic Responses to Scores</h2>
+
+<p>Different risk levels require different approaches:</p>
+<ul>
+  <li><strong>Green</strong>: Standard payment terms, priority scheduling</li>
+  <li><strong>Yellow</strong>: Deposits required, clear payment terms documentation</li>
+  <li><strong>Red</strong>: Higher deposits, phased approval for work, pre-authorized payments</li>
+</ul>
+
+<h2 id="the-financial-impact">The Financial Impact</h2>
+
+<p>By implementing even a basic version of this system, you can:</p>
+<ul>
+  <li>Predict cash flow with significantly improved accuracy</li>
+  <li>Make informed inventory and staffing decisions</li>
+  <li>Identify which jobs actually contribute to profitability</li>
+</ul>
+
+<h2 id="the-bottom-line">The Bottom Line</h2>
+
+<p>Banks don’t extend credit based on good feelings or optimism—they use systems. Your auto shop deserves the same protection. Because while fixing engines might be your passion, getting paid should be a certainty.</p>
+
+<p>Remember: hope is not a financial strategy. Systematic payment prediction is.</p>
+
+<p>Try to use <a href="/tools/corsair">Corsair HQ</a> to evaluate posibilities of forecasting.</p>]]></content><author><name></name></author><category term="insight" /><category term="finance" /><category term="forecast" /><summary type="html"><![CDATA[Ever wondered why banks sleep soundly while your auto repair shop suffers from payment anxiety? Simple: they’ve mastered the dark art of predicting who will actually pay. Good news—you can steal their techniques.]]></summary></entry><entry><title type="html">Introducing Corsair HQ</title><link href="http://localhost:4000/newsroom/Introducing-Corsair-HQ/" rel="alternate" type="text/html" title="Introducing Corsair HQ" /><published>2024-11-18T10:00:00+04:00</published><updated>2024-11-18T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Introducing-Corsair-HQ</id><content type="html" xml:base="http://localhost:4000/newsroom/Introducing-Corsair-HQ/"><![CDATA[<div class="Space"><div class="constructionNotice">
     <p>
         <span style="font-size: 2em">🚧</span>
     </p>
@@ -209,38 +382,6 @@
 <p>So before panicking that you’re falling behind in the great AI race, remember: the tortoise who carefully evaluates technology based on business fundamentals often outperforms the hare frantically chasing every new digital shiny object.</p>
 
 <p>And if someone insists you need an urgent, company-wide AI strategy immediately? Ask them to have their recommendation double-checked by ChatGPT and see how confident they remain in the results.</p>]]></content><author><name></name></author><category term="insight" /><category term="AI" /><category term="automate" /><summary type="html"><![CDATA[You Don’t]]></summary></entry><entry><title type="html">Intelligent Technologies Partnership</title><link href="http://localhost:4000/newsroom/KGSY-partnership/" rel="alternate" type="text/html" title="Intelligent Technologies Partnership" /><published>2024-06-03T10:00:00+04:00</published><updated>2024-06-03T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/KGSY-partnership</id><content type="html" xml:base="http://localhost:4000/newsroom/KGSY-partnership/"><![CDATA[<div class="constructionNotice">
-    <p>
-        <span style="font-size: 2em">🚧</span>
-    </p>
-    <p><strong>SECTION ON RECONSTRUCTION</strong></p>
-    <p>
-        <span style="background-color: #fff">
-        Work on this section is in progress. Everything will be available soon.
-        </span>
-    </p>
-    <p>
-        <a href="/newsroom/Reconstruction/">Statement on Reconstruction</a>
-    </p>
-    <p>
-        <span class="material-icons" style="font-size: 2em">construction</span>
-    </p>
-  </div>]]></content><author><name></name></author><category term="about" /><category term="partnership" /><summary type="html"><![CDATA[🚧 SECTION ON RECONSTRUCTION Work on this section is in progress. Everything will be available soon. Statement on Reconstruction construction]]></summary></entry><entry><title type="html">A Few Words About the Security of Your Website</title><link href="http://localhost:4000/newsroom/Website-security/" rel="alternate" type="text/html" title="A Few Words About the Security of Your Website" /><published>2024-05-06T10:00:00+04:00</published><updated>2024-05-06T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Website-security</id><content type="html" xml:base="http://localhost:4000/newsroom/Website-security/"><![CDATA[<div class="constructionNotice">
-    <p>
-        <span style="font-size: 2em">🚧</span>
-    </p>
-    <p><strong>SECTION ON RECONSTRUCTION</strong></p>
-    <p>
-        <span style="background-color: #fff">
-        Work on this section is in progress. Everything will be available soon.
-        </span>
-    </p>
-    <p>
-        <a href="/newsroom/Reconstruction/">Statement on Reconstruction</a>
-    </p>
-    <p>
-        <span class="material-icons" style="font-size: 2em">construction</span>
-    </p>
-  </div>]]></content><author><name></name></author><category term="insight" /><category term="security" /><summary type="html"><![CDATA[🚧 SECTION ON RECONSTRUCTION Work on this section is in progress. Everything will be available soon. Statement on Reconstruction construction]]></summary></entry><entry><title type="html">Swisotec Partnership</title><link href="http://localhost:4000/newsroom/Swisotec-partnership/" rel="alternate" type="text/html" title="Swisotec Partnership" /><published>2024-03-21T10:00:00+04:00</published><updated>2024-03-21T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Swisotec-partnership</id><content type="html" xml:base="http://localhost:4000/newsroom/Swisotec-partnership/"><![CDATA[<div class="constructionNotice">
     <p>
         <span style="font-size: 2em">🚧</span>
     </p>

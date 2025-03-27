@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Introducing Watchtower v.0.1"
-date:   2024-11-18 10:00:00 +0400
+date:   2025-02-03 10:00:00 +0400
 cover: /assets/img/news/2023/
 categories: about
 tags: kitchen release web3

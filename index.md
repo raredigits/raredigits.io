@@ -40,7 +40,7 @@ title: Coding Sences, Building Worlds
 <section class="sectionServices Column">
     <a class=NoDecoration name="services"></a><h2>Services</h2>
     <hr class="hrDeco">
-    <p>
+    <p class="subheader">
         16 years satisfying enterprise’s every need
     </p>
     <div class="RowMobile Stretched GapMd">
@@ -96,7 +96,7 @@ title: Coding Sences, Building Worlds
     <h2>Simplicity in Every Solution</h2>
     <hr class="hrDeco">
     <div class="solutionsText">
-        <p>Navigate the future of business<br>
+        <p class="subheader">Navigate the future of business<br>
             with <strong>Rare Digits</strong></p>
     </div>
     <div class="Flex GapMd">
@@ -171,7 +171,7 @@ title: Coding Sences, Building Worlds
 <section class="oneApp">
     <h2>One Interface. Infinite Control</h2>
     <hr class="hrDeco">
-    <p>Online data analisys in simple words</p>
+    <p class="subheader">Online data analisys in simple words</p>
     <div class="oneAppWrapper Flex">
         <div class="oneAppPhone">
             <img src="/assets/img/main/phone.png" alt="">
@@ -220,7 +220,7 @@ title: Coding Sences, Building Worlds
     <a class="NoDecoration" name="newsroom"></a>
     <h2><a class="NoDecoration" href="/about/newsroom">Newsroom</a></h2>
     <hr class="hrDeco">
-    <p>Stay up to date with news that matters</p>
+    <p class="subheader">Stay up to date with news that matters</p>
     <div class="newsMain">
         {% for post in site.posts limit:9 %}
         <div class="newsBlock">
