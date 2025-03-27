@@ -395,7 +395,7 @@ form input[type="tel"] {
     }
 
     .Content {
-        padding: 0 0 calc(var(--space-lg) * 3);
+        padding: 0;
     }
 
     section {

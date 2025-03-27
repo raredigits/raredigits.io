@@ -90,6 +90,10 @@ p img {
     width: 48%;
 }
 
+.Quarter {
+    width: 25%;
+}
+
 .Card {
     padding: var(--space-sm) var(--space-md);
     background: var(--secondary-color);

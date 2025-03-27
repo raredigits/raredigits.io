@@ -7,6 +7,8 @@ categories: insight
 tags: AI automate
 ---
 
+![](/assets/img/newsroom/2024/invest_in_ai.jpg)
+
 You Don't
 
 There. We've saved you countless hours of reading breathless tech blogs, attending overpriced conferences, and nodding thoughtfully while venture capitalists explain why your perfectly functional business is actually teetering on the edge of obsolescence without AI.

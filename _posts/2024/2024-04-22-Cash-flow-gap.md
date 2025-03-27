@@ -21,6 +21,8 @@ Your business can be fundamentally profitable and still find itself gasping for 
 
 ## The Blindingly Obvious Solution Nobody Uses Properly
 
+![](/assets/img/newsroom/2024/cash-flow-gaps.jpg)
+
 The solution to temporary cash flow gaps has existed for approximately 5,000 years: borrowing money. 
 
 Yet many small business owners treat banks like mysterious and hostile entities rather than what they actually are: businesses that literally exist to solve your cash flow problems (while making a profit, of course).
