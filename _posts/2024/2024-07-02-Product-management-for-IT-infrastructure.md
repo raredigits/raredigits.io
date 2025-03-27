@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Logica Partnership"
-date:   2024-02-12 10:00:00 +0400
+title:  "Product Management for IT Infrastructure"
+date:   2024-07-02 10:00:00 +0400
 cover: /assets/img/news/2023/
-tags: clients
 categories: insight
+tags: automate kitchen
 ---
 
 {% include /special/constructionNotice.html %}

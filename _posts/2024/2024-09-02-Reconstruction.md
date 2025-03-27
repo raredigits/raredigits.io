@@ -3,8 +3,8 @@ layout: post
 title:  "Pardon Our Digital Dust"
 date:   2024-09-02 10:00:00 +0400
 cover: /assets/img/news/2023/
+categories: about
 tags: kitchen
-categories: kitchen
 ---
 
 Sometimes the best investments require a&nbsp;little temporary inconvenience. Like when your favorite neighborhood restaurant closes for renovations and you&#146;re forced to&nbsp;cook at&nbsp;home, discovering that your culinary skills peaked with microwave ramen.

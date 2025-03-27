@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "A Few Words About the Security of Your Website"
-date:   2024-05-06 10:00:00 +0400
+title:  "Will AI Take All Our Jobs?"
+date:   2024-03-04 10:00:00 +0400
 cover: /assets/img/news/2023/
-tags: security
 categories: insight
+tags: AI automate
 ---
 
 {% include /special/constructionNotice.html %}

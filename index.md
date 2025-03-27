@@ -88,7 +88,7 @@ title: Coding Sences, Building Worlds
         <p><strong>Integration Tools for Data Providers:</strong><br> Odoo, SAP Business One, Zoho, CIN7, Oracle NetSuite, MS Business Central, Acumatica, 1C</p>
     </div>
     <div class="servicesText">
-        <p><strong>Technical Stack:</strong><br> NodeJS, Python, React, TypeScript, Solidity, IPFS, Rust, Infura, EtherJS, Web3JS, C#, WPF, Electron, Flutter, Cordova, PassportJS, Auth0, Firebase, PostgreSQL, Redis, MySQL, Memcached, MongoDB, MSSQL</p>
+        <p><strong>Technical Stack:</strong><br> NodeJS, Python, React, TypeScript, Ruby, Solidity, IPFS, Rust, Infura, EtherJS, Web3JS, C#, WPF, Electron, Flutter, Cordova, PassportJS, Auth0, Firebase, PostgreSQL, Redis, MySQL, Memcached, MongoDB, MSSQL</p>
     </div>
 </section>
 <section class="Column">

@@ -3,7 +3,7 @@ layout: post
 title:  "Russian Engineers Choose Sunshine Over Snow"
 date:   2023-05-17 16:17:18 +0800
 categories: about
-tags: kitchen
+tags: blessing
 ---
 
 In what financial analysts are calling "the most predictable migration since birds discovered the concept of winter," Rare Digits has officially secured its operating license as a Software House in the UAE. 

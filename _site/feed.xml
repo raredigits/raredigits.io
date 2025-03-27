@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://raredigits.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://raredigits.io/" rel="alternate" type="text/html" /><updated>2025-03-27T00:48:22+04:00</updated><id>https://raredigits.io/feed.xml</id><title type="html">Rare Digits</title><subtitle>Coding Senses, Building World</subtitle><entry><title type="html">Introducing Corsair HQ</title><link href="https://raredigits.io/newsroom/Introducing-Corsair-HQ/" rel="alternate" type="text/html" title="Introducing Corsair HQ" /><published>2024-11-18T10:00:00+04:00</published><updated>2024-11-18T10:00:00+04:00</updated><id>https://raredigits.io/newsroom/Introducing-Corsair-HQ</id><content type="html" xml:base="https://raredigits.io/newsroom/Introducing-Corsair-HQ/"><![CDATA[<div class="Space"><div class="constructionNotice">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-03-27T11:18:19+04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Rare Digits</title><subtitle>Coding Senses, Building World</subtitle><entry><title type="html">Introducing Watchtower v.0.1</title><link href="http://localhost:4000/newsroom/Introducing-Whatchtower/" rel="alternate" type="text/html" title="Introducing Watchtower v.0.1" /><published>2024-11-18T10:00:00+04:00</published><updated>2024-11-18T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Introducing-Whatchtower</id><content type="html" xml:base="http://localhost:4000/newsroom/Introducing-Whatchtower/"><![CDATA[<p><img src="/assets/img/newsroom/2025/watchtower.jpg" alt="" /></p>
+
+<h2 id="follow-the-money-across-the-web3-wilderness">Follow the Money Across the Web3 Wilderness</h2>
+
+<p>Rare Digits has just launched Watchtower, our new application that monitors liquidity movements between Web3 networks. Think of it as a financial traffic helicopter reporting on capital flows across the increasingly congested blockchain highway system.</p>
+
+<div class="Space"><div class="constructionNotice">
     <p>
         <span style="font-size: 2em">🚧</span>
     </p>
@@ -14,7 +20,47 @@
     <p>
         <span class="material-icons" style="font-size: 2em">construction</span>
     </p>
-  </div></div>]]></content><author><name></name></author><category term="kitchen" /><category term="kitchen" /><summary type="html"><![CDATA[🚧 SECTION ON RECONSTRUCTION Work on this section is in progress. Everything will be available soon. Statement on Reconstruction construction]]></summary></entry><entry><title type="html">Pardon Our Digital Dust</title><link href="https://raredigits.io/newsroom/Reconstruction/" rel="alternate" type="text/html" title="Pardon Our Digital Dust" /><published>2024-09-02T10:00:00+04:00</published><updated>2024-09-02T10:00:00+04:00</updated><id>https://raredigits.io/newsroom/Reconstruction</id><content type="html" xml:base="https://raredigits.io/newsroom/Reconstruction/"><![CDATA[<p>Sometimes the best investments require a little temporary inconvenience. Like when your favorite neighborhood restaurant closes for renovations and you’re forced to cook at home, discovering that your culinary skills peaked with microwave ramen.</p>
+  </div></div>
+
+<h2 id="what-it-does">What It Does</h2>
+
+<p>Watchtower tracks capital movements across blockchain networks, providing developers and investors with real-time intelligence on where the money’s going. Because in the world of Web3, following the liquidity is like tracking migrating wildebeests—it tells you where the ecosystem is heading next.</p>
+
+<h2 id="who-its-for">Who It’s For</h2>
+
+<ul>
+  <li><strong>Developers</strong>: Who need to know which ecosystems are gaining traction</li>
+  <li><strong>Investors</strong>: Looking to spot capital flow trends before they become obvious</li>
+  <li><strong>Anyone</strong>: Who enjoys watching money move around while pretending to work</li>
+</ul>
+
+<h2 id="current-capabilities">Current Capabilities</h2>
+
+<p>The first version supports EVM-compatible networks and Cosmos SDK chains—covering most of the territories where digital money does its nomadic wandering. Like any respectable financial surveillance tool, Watchtower plans to expand its jurisdiction in future updates.</p>
+
+<h2 id="why-this-matters">Why This Matters</h2>
+
+<p>In traditional finance, capital flows are obscured by private banking systems and offshore structures designed by people who consider sunlight a regulatory burden. In Web3, all transactions are public—but scattered across dozens of networks with different standards and interfaces.</p>
+
+<p>Watchtower brings clarity to this chaos. Because making informed decisions requires actual information, not just Discord rumors and Twitter speculation.</p>
+
+<p>Visit the <a href="/tools/web3/watchtower">product page</a> to learn more or to start tracking where the digital money goes when it thinks nobody’s watching.</p>]]></content><author><name></name></author><category term="about" /><category term="kitchen" /><category term="release" /><category term="web3" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Introducing Corsair HQ</title><link href="http://localhost:4000/newsroom/Introducing-Corsair-HQ/" rel="alternate" type="text/html" title="Introducing Corsair HQ" /><published>2024-11-18T10:00:00+04:00</published><updated>2024-11-18T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Introducing-Corsair-HQ</id><content type="html" xml:base="http://localhost:4000/newsroom/Introducing-Corsair-HQ/"><![CDATA[<div class="Space"><div class="constructionNotice">
+    <p>
+        <span style="font-size: 2em">🚧</span>
+    </p>
+    <p><strong>SECTION ON RECONSTRUCTION</strong></p>
+    <p>
+        <span style="background-color: #fff">
+        Work on this section is in progress. Everything will be available soon.
+        </span>
+    </p>
+    <p>
+        <a href="/newsroom/Reconstruction/">Statement on Reconstruction</a>
+    </p>
+    <p>
+        <span class="material-icons" style="font-size: 2em">construction</span>
+    </p>
+  </div></div>]]></content><author><name></name></author><category term="about" /><category term="kitchen" /><category term="release" /><category term="erp" /><summary type="html"><![CDATA[🚧 SECTION ON RECONSTRUCTION Work on this section is in progress. Everything will be available soon. Statement on Reconstruction construction]]></summary></entry><entry><title type="html">Pardon Our Digital Dust</title><link href="http://localhost:4000/newsroom/Reconstruction/" rel="alternate" type="text/html" title="Pardon Our Digital Dust" /><published>2024-09-02T10:00:00+04:00</published><updated>2024-09-02T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Reconstruction</id><content type="html" xml:base="http://localhost:4000/newsroom/Reconstruction/"><![CDATA[<p>Sometimes the best investments require a little temporary inconvenience. Like when your favorite neighborhood restaurant closes for renovations and you’re forced to cook at home, discovering that your culinary skills peaked with microwave ramen.</p>
 
 <h2 id="whats-happening">What’s Happening?</h2>
 <p>The website is currently undergoing maintenance and upgrades. Some features might be temporarily unavailable or behave like a cryptocurrency — there one minute, gone the next. The digital contractors are working diligently behind the scaffolding of code and design.</p>
@@ -52,7 +98,7 @@
 
 <p>Feel free to reach out if you need anything. We’re always here, even if our website is temporarily playing dress-up.</p>
 
-<p>Thank you for your understanding and patience during this upgrade. After all, if financial markets can recover from temporary disruptions, so can websites — usually with better returns on investment.</p>]]></content><author><name></name></author><category term="kitchen" /><category term="kitchen" /><summary type="html"><![CDATA[Sometimes the best investments require a little temporary inconvenience. Like when your favorite neighborhood restaurant closes for renovations and you’re forced to cook at home, discovering that your culinary skills peaked with microwave ramen.]]></summary></entry><entry><title type="html">Destination Partnership</title><link href="https://raredigits.io/newsroom/Destination-partnership/" rel="alternate" type="text/html" title="Destination Partnership" /><published>2024-07-31T10:00:00+04:00</published><updated>2024-07-31T10:00:00+04:00</updated><id>https://raredigits.io/newsroom/Destination-partnership</id><content type="html" xml:base="https://raredigits.io/newsroom/Destination-partnership/"><![CDATA[<div class="constructionNotice">
+<p>Thank you for your understanding and patience during this upgrade. After all, if financial markets can recover from temporary disruptions, so can websites — usually with better returns on investment.</p>]]></content><author><name></name></author><category term="about" /><category term="kitchen" /><summary type="html"><![CDATA[Sometimes the best investments require a little temporary inconvenience. Like when your favorite neighborhood restaurant closes for renovations and you’re forced to cook at home, discovering that your culinary skills peaked with microwave ramen.]]></summary></entry><entry><title type="html">Destination Partnership</title><link href="http://localhost:4000/newsroom/Destination-partnership/" rel="alternate" type="text/html" title="Destination Partnership" /><published>2024-07-31T10:00:00+04:00</published><updated>2024-07-31T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Destination-partnership</id><content type="html" xml:base="http://localhost:4000/newsroom/Destination-partnership/"><![CDATA[<div class="constructionNotice">
     <p>
         <span style="font-size: 2em">🚧</span>
     </p>
@@ -68,7 +114,7 @@
     <p>
         <span class="material-icons" style="font-size: 2em">construction</span>
     </p>
-  </div>]]></content><author><name></name></author><category term="insight" /><category term="clients" /><summary type="html"><![CDATA[🚧 SECTION ON RECONSTRUCTION Work on this section is in progress. Everything will be available soon. Statement on Reconstruction construction]]></summary></entry><entry><title type="html">Product Management for IT Infrastructure</title><link href="https://raredigits.io/newsroom/Product-management-for-IT-infrastructure/" rel="alternate" type="text/html" title="Product Management for IT Infrastructure" /><published>2024-07-02T10:00:00+04:00</published><updated>2024-07-02T10:00:00+04:00</updated><id>https://raredigits.io/newsroom/Product-management-for-IT-infrastructure</id><content type="html" xml:base="https://raredigits.io/newsroom/Product-management-for-IT-infrastructure/"><![CDATA[<div class="constructionNotice">
+  </div>]]></content><author><name></name></author><category term="about" /><category term="partnership" /><summary type="html"><![CDATA[🚧 SECTION ON RECONSTRUCTION Work on this section is in progress. Everything will be available soon. Statement on Reconstruction construction]]></summary></entry><entry><title type="html">Product Management for IT Infrastructure</title><link href="http://localhost:4000/newsroom/Product-management-for-IT-infrastructure/" rel="alternate" type="text/html" title="Product Management for IT Infrastructure" /><published>2024-07-02T10:00:00+04:00</published><updated>2024-07-02T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Product-management-for-IT-infrastructure</id><content type="html" xml:base="http://localhost:4000/newsroom/Product-management-for-IT-infrastructure/"><![CDATA[<div class="constructionNotice">
     <p>
         <span style="font-size: 2em">🚧</span>
     </p>
@@ -84,7 +130,7 @@
     <p>
         <span class="material-icons" style="font-size: 2em">construction</span>
     </p>
-  </div>]]></content><author><name></name></author><category term="insight" /><category term="kitchen" /><summary type="html"><![CDATA[🚧 SECTION ON RECONSTRUCTION Work on this section is in progress. Everything will be available soon. Statement on Reconstruction construction]]></summary></entry><entry><title type="html">Financial Experts Choose Financial Experts</title><link href="https://raredigits.io/newsroom/Asiatech-partnership/" rel="alternate" type="text/html" title="Financial Experts Choose Financial Experts" /><published>2024-06-14T10:00:00+04:00</published><updated>2024-06-14T10:00:00+04:00</updated><id>https://raredigits.io/newsroom/Asiatech-partnership</id><content type="html" xml:base="https://raredigits.io/newsroom/Asiatech-partnership/"><![CDATA[<p>In what might initially seem like unremarkable business news, Rare Digits has signed a contract with Philippine company <a href="https://onlineloanspilipinas.ph/en">Asiatech</a>. But wait—there’s a financial plot twist that deserves your attention.</p>
+  </div>]]></content><author><name></name></author><category term="insight" /><category term="automate" /><category term="kitchen" /><summary type="html"><![CDATA[🚧 SECTION ON RECONSTRUCTION Work on this section is in progress. Everything will be available soon. Statement on Reconstruction construction]]></summary></entry><entry><title type="html">Financial Experts Choose Financial Experts</title><link href="http://localhost:4000/newsroom/Asiatech-partnership/" rel="alternate" type="text/html" title="Financial Experts Choose Financial Experts" /><published>2024-06-14T10:00:00+04:00</published><updated>2024-06-14T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Asiatech-partnership</id><content type="html" xml:base="http://localhost:4000/newsroom/Asiatech-partnership/"><![CDATA[<p>In what might initially seem like unremarkable business news, Rare Digits has signed a contract with Philippine company <a href="https://onlineloanspilipinas.ph/en">Asiatech</a>. But wait—there’s a financial plot twist that deserves your attention.</p>
 
 <h2 id="a-business-love-story">A Business Love Story</h2>
 
@@ -106,7 +152,7 @@
 
 <p>It’s like saying, “If we can prepare a meal that impresses Gordon Ramsay, your company holiday party is in extremely capable hands.”</p>
 
-<p>For businesses looking to understand their financial reality without the usual smoke, mirrors, and incomprehensible spreadsheets—well, you know where to find us. We’ve been vetted by people who professionally vet things for a living.</p>]]></content><author><name></name></author><category term="trust" /><category term="finance" /><category term="clients" /><summary type="html"><![CDATA[In what might initially seem like unremarkable business news, Rare Digits has signed a contract with Philippine company Asiatech. But wait—there’s a financial plot twist that deserves your attention.]]></summary></entry><entry><title type="html">How to Determine if You Need to Urgently Invest in AI?</title><link href="https://raredigits.io/newsroom/Urgently-invest-in-AI/" rel="alternate" type="text/html" title="How to Determine if You Need to Urgently Invest in AI?" /><published>2024-06-04T10:00:00+04:00</published><updated>2024-06-04T10:00:00+04:00</updated><id>https://raredigits.io/newsroom/Urgently-invest-in-AI</id><content type="html" xml:base="https://raredigits.io/newsroom/Urgently-invest-in-AI/"><![CDATA[<p>You Don’t</p>
+<p>For businesses looking to understand their financial reality without the usual smoke, mirrors, and incomprehensible spreadsheets—well, you know where to find us. We’ve been vetted by people who professionally vet things for a living.</p>]]></content><author><name></name></author><category term="about" /><category term="partnership" /><category term="finance" /><category term="blessing" /><summary type="html"><![CDATA[In what might initially seem like unremarkable business news, Rare Digits has signed a contract with Philippine company Asiatech. But wait—there’s a financial plot twist that deserves your attention.]]></summary></entry><entry><title type="html">How to Determine if You Need to Urgently Invest in AI?</title><link href="http://localhost:4000/newsroom/Urgently-invest-in-AI/" rel="alternate" type="text/html" title="How to Determine if You Need to Urgently Invest in AI?" /><published>2024-06-04T10:00:00+04:00</published><updated>2024-06-04T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Urgently-invest-in-AI</id><content type="html" xml:base="http://localhost:4000/newsroom/Urgently-invest-in-AI/"><![CDATA[<p>You Don’t</p>
 
 <p>There. We’ve saved you countless hours of reading breathless tech blogs, attending overpriced conferences, and nodding thoughtfully while venture capitalists explain why your perfectly functional business is actually teetering on the edge of obsolescence without AI.</p>
 
@@ -162,7 +208,7 @@
 
 <p>So before panicking that you’re falling behind in the great AI race, remember: the tortoise who carefully evaluates technology based on business fundamentals often outperforms the hare frantically chasing every new digital shiny object.</p>
 
-<p>And if someone insists you need an urgent, company-wide AI strategy immediately? Ask them to have their recommendation double-checked by ChatGPT and see how confident they remain in the results.</p>]]></content><author><name></name></author><category term="insight" /><category term="AI" /><summary type="html"><![CDATA[You Don’t]]></summary></entry><entry><title type="html">Intelligent Technologies Partnership</title><link href="https://raredigits.io/newsroom/KGSY-partnership/" rel="alternate" type="text/html" title="Intelligent Technologies Partnership" /><published>2024-06-03T10:00:00+04:00</published><updated>2024-06-03T10:00:00+04:00</updated><id>https://raredigits.io/newsroom/KGSY-partnership</id><content type="html" xml:base="https://raredigits.io/newsroom/KGSY-partnership/"><![CDATA[<div class="constructionNotice">
+<p>And if someone insists you need an urgent, company-wide AI strategy immediately? Ask them to have their recommendation double-checked by ChatGPT and see how confident they remain in the results.</p>]]></content><author><name></name></author><category term="insight" /><category term="AI" /><category term="automate" /><summary type="html"><![CDATA[You Don’t]]></summary></entry><entry><title type="html">Intelligent Technologies Partnership</title><link href="http://localhost:4000/newsroom/KGSY-partnership/" rel="alternate" type="text/html" title="Intelligent Technologies Partnership" /><published>2024-06-03T10:00:00+04:00</published><updated>2024-06-03T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/KGSY-partnership</id><content type="html" xml:base="http://localhost:4000/newsroom/KGSY-partnership/"><![CDATA[<div class="constructionNotice">
     <p>
         <span style="font-size: 2em">🚧</span>
     </p>
@@ -178,7 +224,7 @@
     <p>
         <span class="material-icons" style="font-size: 2em">construction</span>
     </p>
-  </div>]]></content><author><name></name></author><category term="insight" /><category term="clients" /><summary type="html"><![CDATA[🚧 SECTION ON RECONSTRUCTION Work on this section is in progress. Everything will be available soon. Statement on Reconstruction construction]]></summary></entry><entry><title type="html">A Few Words About the Security of Your Website</title><link href="https://raredigits.io/newsroom/Website-security/" rel="alternate" type="text/html" title="A Few Words About the Security of Your Website" /><published>2024-05-06T10:00:00+04:00</published><updated>2024-05-06T10:00:00+04:00</updated><id>https://raredigits.io/newsroom/Website-security</id><content type="html" xml:base="https://raredigits.io/newsroom/Website-security/"><![CDATA[<div class="constructionNotice">
+  </div>]]></content><author><name></name></author><category term="about" /><category term="partnership" /><summary type="html"><![CDATA[🚧 SECTION ON RECONSTRUCTION Work on this section is in progress. Everything will be available soon. Statement on Reconstruction construction]]></summary></entry><entry><title type="html">A Few Words About the Security of Your Website</title><link href="http://localhost:4000/newsroom/Website-security/" rel="alternate" type="text/html" title="A Few Words About the Security of Your Website" /><published>2024-05-06T10:00:00+04:00</published><updated>2024-05-06T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Website-security</id><content type="html" xml:base="http://localhost:4000/newsroom/Website-security/"><![CDATA[<div class="constructionNotice">
     <p>
         <span style="font-size: 2em">🚧</span>
     </p>
@@ -194,7 +240,7 @@
     <p>
         <span class="material-icons" style="font-size: 2em">construction</span>
     </p>
-  </div>]]></content><author><name></name></author><category term="insight" /><category term="security" /><summary type="html"><![CDATA[🚧 SECTION ON RECONSTRUCTION Work on this section is in progress. Everything will be available soon. Statement on Reconstruction construction]]></summary></entry><entry><title type="html">Swisotec Partnership</title><link href="https://raredigits.io/newsroom/Swisotec-partnership/" rel="alternate" type="text/html" title="Swisotec Partnership" /><published>2024-03-21T10:00:00+04:00</published><updated>2024-03-21T10:00:00+04:00</updated><id>https://raredigits.io/newsroom/Swisotec-partnership</id><content type="html" xml:base="https://raredigits.io/newsroom/Swisotec-partnership/"><![CDATA[<div class="constructionNotice">
+  </div>]]></content><author><name></name></author><category term="insight" /><category term="security" /><summary type="html"><![CDATA[🚧 SECTION ON RECONSTRUCTION Work on this section is in progress. Everything will be available soon. Statement on Reconstruction construction]]></summary></entry><entry><title type="html">Swisotec Partnership</title><link href="http://localhost:4000/newsroom/Swisotec-partnership/" rel="alternate" type="text/html" title="Swisotec Partnership" /><published>2024-03-21T10:00:00+04:00</published><updated>2024-03-21T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Swisotec-partnership</id><content type="html" xml:base="http://localhost:4000/newsroom/Swisotec-partnership/"><![CDATA[<div class="constructionNotice">
     <p>
         <span style="font-size: 2em">🚧</span>
     </p>
@@ -210,20 +256,4 @@
     <p>
         <span class="material-icons" style="font-size: 2em">construction</span>
     </p>
-  </div>]]></content><author><name></name></author><category term="insight" /><category term="clients" /><summary type="html"><![CDATA[🚧 SECTION ON RECONSTRUCTION Work on this section is in progress. Everything will be available soon. Statement on Reconstruction construction]]></summary></entry><entry><title type="html">Will AI Take All Our Jobs?</title><link href="https://raredigits.io/newsroom/Will-AI-take-our-jobs/" rel="alternate" type="text/html" title="Will AI Take All Our Jobs?" /><published>2024-03-04T10:00:00+04:00</published><updated>2024-03-04T10:00:00+04:00</updated><id>https://raredigits.io/newsroom/Will-AI-take-our-jobs</id><content type="html" xml:base="https://raredigits.io/newsroom/Will-AI-take-our-jobs/"><![CDATA[<div class="constructionNotice">
-    <p>
-        <span style="font-size: 2em">🚧</span>
-    </p>
-    <p><strong>SECTION ON RECONSTRUCTION</strong></p>
-    <p>
-        <span style="background-color: #fff">
-        Work on this section is in progress. Everything will be available soon.
-        </span>
-    </p>
-    <p>
-        <a href="/newsroom/Reconstruction/">Statement on Reconstruction</a>
-    </p>
-    <p>
-        <span class="material-icons" style="font-size: 2em">construction</span>
-    </p>
-  </div>]]></content><author><name></name></author><category term="insight" /><category term="AI" /><summary type="html"><![CDATA[🚧 SECTION ON RECONSTRUCTION Work on this section is in progress. Everything will be available soon. Statement on Reconstruction construction]]></summary></entry></feed>
+  </div>]]></content><author><name></name></author><category term="about" /><category term="partnership" /><summary type="html"><![CDATA[🚧 SECTION ON RECONSTRUCTION Work on this section is in progress. Everything will be available soon. Statement on Reconstruction construction]]></summary></entry></feed>

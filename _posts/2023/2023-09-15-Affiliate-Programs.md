@@ -3,7 +3,7 @@ layout: post
 title:  "Leverage of Affiliate Programs"
 date:   2023-09-15 16:17:18 +0800
 categories: insight
-tags: CRM
+tags: marketing sales
 ---
 
 In the world of finance, "leverage" typically comes with warning labels about margin calls and the potential to lose your yacht. But what if we told you there's a form of business leverage that doesn't require explaining to your spouse why the house is now technically owned by an angry broker in pinstripes?

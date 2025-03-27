@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Rare Tools
+title: Rare Open Source Tools
+permalink: /tools/open-source
 ---
 
 <div class="IllustratedBlock">

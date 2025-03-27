@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "CRM Best Practices 2024"
-date:   2024-02-06 10:00:00 +0400
+title:  "A Few Words About the Security of Your Website"
+date:   2024-05-06 10:00:00 +0400
 cover: /assets/img/news/2023/
-tags: CRM
 categories: insight
+tags: security
 ---
 
 {% include /special/constructionNotice.html %}
