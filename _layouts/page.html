@@ -5,7 +5,11 @@
     {% include /special/constructionHeader.html %}
     
     <main>
-        <div class="PageOffset"></div>
+        <div class="PageOffset">
+            {% if page.offset == "solutions" %}
+                {% include /menu/solutions.html %}
+            {% endif %}
+        </div>
         <div class="Content">
             {{ content }}
         </div>

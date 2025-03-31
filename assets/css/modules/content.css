@@ -206,13 +206,88 @@ button:hover {
     background: var(--brand-dark-color);
 }
 
+.Sidebar {
+    width: 100%;
+    padding: var(--space-lg) var(--space-md) 0 0;
+}
+
+.SidebarHeader {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.SidebarNav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.SidebarNav li {
+    margin-top: var(--space-sm);
+    font-size: 0.9em;
+}
+
+.SidebarNav a {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+}
+
+.SidebarSection {
+    padding-top: var(--space-lg);
+}
+
+.Badge {
+    position: relative;
+    left: -1em;
+}
+
+.Sidebar .material-icons {
+    font-size: 1.2em;
+    position: relative;
+    top: -1px
+}
+
 @media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        padding: 0 var(--space-sm);
+    }
+
     .PageOffset {
-        display: none;
+        width: 100%;
+        max-width: none;
+        overflow-x: scroll;
+        display: flex;
+        flex-flow: row nowrap;
+        padding: var(--space-sm) 0 0;
+    }
+
+    .Sidebar {
+        display: flex;
+        flex-flow: row nowrap;
+        padding: 0 0 var(--space-sm);
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .SidebarHeader, .SidebarNav {
+        display: inline-block;
+    }
+
+    .SidebarNav {
+        overflow-x: scroll;
+    }
+
+    .SidebarNav ul {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .SidebarNav li {
+        margin: 0 var(--space-sm);
+        white-space: nowrap;
     }
 
     .Content {
-        padding: 0 var(--space-md) calc(var(--space-lg) * 3);
+        padding: 0 0 calc(var(--space-lg) * 3) 0;
     }
 
     .Content img {

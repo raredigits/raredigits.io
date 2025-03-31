@@ -1,0 +1,35 @@
+# _data/solutions_menu.yml
+
+items:
+  - title: "Atlas ERP"
+    url: "/tools/atlas"
+
+  - title: "Corsair HQ"
+    url: "/tools/corsair/"
+    
+  - title: "Columbus CRM"
+    url: "/tools/columbus/"
+    
+  - title: "Forecast App"
+    url: "/tools/forecast/"
+    
+  - title: "Fanfare Loyalty"
+    url: "/tools/fanfare/"
+    
+  - title: "Jeeves GPT"
+    url: "/tools/jeeves/"
+
+  - title: "Watchtower"
+    url: "/tools/web3/watchtower/"
+
+  - title: "Open-Source"
+    url: "/tools/open-source/"
+
+featured:
+  - title: "Corsair HQ"
+    url: "/tools/corsair/"
+    badge: '<span class="material-icons">star</span>'
+    
+  - title: "Watchtower"
+    url: "/tools/web3/watchtower/"
+    badge: '<span class="material-icons">new_releases</span>'

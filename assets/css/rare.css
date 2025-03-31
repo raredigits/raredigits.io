@@ -100,6 +100,10 @@
     text-align: left;
   }
 
+  .Bold {
+    font-weight: 700;
+  }
+
   .Bordered {
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
@@ -164,6 +168,10 @@
   .PaddingVerticalLg {
     padding: var(--space-lg) 0;
   }
+
+  .MobileHidden {
+    display: block;
+  }
   
   button {
     border: none;
@@ -188,5 +196,9 @@
 
     .GapMd {
         gap: var(--space-sm);
+    }
+
+    .MobileHidden {
+        display: none;
     }
   }

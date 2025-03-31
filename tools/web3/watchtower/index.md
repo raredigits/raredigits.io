@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Watchtower
-permalink: /tools/web3/watchtower
+offset: solutions
+permalink: /tools/web3/watchtower/
 ---
 
 # Watchtower v.0.1

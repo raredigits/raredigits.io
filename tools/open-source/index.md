@@ -1,8 +1,13 @@
 ---
 layout: page
 title: Rare Open Source Tools
-permalink: /tools/open-source
+offset: solutions
+permalink: /tools/open-source/
 ---
+
+# Pro Bono Contribution
+
+Visit [Rare GitHub Page](https://github.com/raredigits) >>
 
 <div class="IllustratedBlock">
     <div class="IllustratedText">
