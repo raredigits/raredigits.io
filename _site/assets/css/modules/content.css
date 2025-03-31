@@ -2,10 +2,6 @@
     padding-bottom: calc(var(--space-lg) * 5);
 }
 
-.PageOffset {
-    min-width: var(--page-offset);
-}
-
 .Breadcrumbs {
     margin-bottom: var(--space-lg);
 }
@@ -20,7 +16,7 @@ article {
 }
 
 main {
-    padding: var(--space-lg) 0;
+    padding: var(--space-lg) var(--space-md);
     width: 100%;
     max-width: var(--site-max-width);
     margin: 0 auto;
@@ -206,9 +202,17 @@ button:hover {
     background: var(--brand-dark-color);
 }
 
+.PageOffset {
+    min-width: var(--page-offset);
+    position: sticky;
+    padding-top: var(--space-lg);
+    height: 100%;
+    top: 0;
+}
+
 .Sidebar {
-    width: 100%;
     padding: var(--space-lg) var(--space-md) 0 0;
+    background: var(--background-color);
 }
 
 .SidebarHeader {
@@ -253,18 +257,16 @@ button:hover {
     }
 
     .PageOffset {
+        padding-top: 0;
         width: 100%;
         max-width: none;
-        overflow-x: scroll;
-        display: flex;
-        flex-flow: row nowrap;
-        padding: var(--space-sm) 0 0;
+        position: static;
     }
 
     .Sidebar {
         display: flex;
         flex-flow: row nowrap;
-        padding: 0 0 var(--space-sm);
+        padding: var(--space-sm) 0;
         border-bottom: 1px solid var(--border-color);
     }
 

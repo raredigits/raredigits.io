@@ -5,7 +5,7 @@ offset: solutions
 permalink: /tools/corsair/
 ---
 
-# Corsair HQ: The Thing Where You Can Actually See Your Business
+# Corsair HQ
 
 ![](/assets/img/newsroom/2024/corsair.jpg)
 
@@ -24,7 +24,7 @@ Meanwhile, every department head presents reports showing comfortable profitabil
 
 Sound familiar?
 
-## Corsair HQ: Your Data Sherpa
+## Corsair HQ: The Thing Where You Can Actually See Your Business
 
 Corsair HQ performs three services that shouldn't be revolutionary but somehow are:
 
@@ -54,3 +54,5 @@ Corsair HQ works with all major cloud solutions, which is another way of saying 
 If business clarity were a commodity, we'd be accused of insider trading. 
 
 Fortunately, it's not regulated yet.
+
+{% include /special/bookDemo.html %}

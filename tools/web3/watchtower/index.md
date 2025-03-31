@@ -18,3 +18,5 @@ Monitors of liquidity movements between Web3 networks. Think of it as a financia
 ## Capabilities
 
 The first version supports EVM-compatible networks and Cosmos SDK chains—covering most of the territories where digital money does its nomadic wandering. Like any respectable financial surveillance tool, Watchtower plans to expand its jurisdiction in future updates.
+
+{% include /special/bookDemo.html %}
