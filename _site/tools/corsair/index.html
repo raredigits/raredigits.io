@@ -331,7 +331,7 @@
 </footer>
 
 <script src="/assets/js/hamburger.js"></script>
-<div class="cookieNotice">
+<div id="cookie-notice" class="cookieNotice">
     <div class="cookieText">
         <h3>🍪</h3>
         <p class="Bold">Help yourself to&nbsp;some cookies!</p>
@@ -364,17 +364,22 @@
     function eraseCookie(name) {
         createCookie(name,"",-1);
     }
-
-    if(readCookie('cookie-notice-dismissed')=='true') {
-        document.getElementById('cookie-notice').style.display = 'none';
-    } else {
-        document.getElementById('cookie-notice').style.display = 'block';
-    }
-    document.getElementById('cookie-notice-accept').addEventListener("click",function() {
-        createCookie('cookie-notice-dismissed','true',31);
-        document.getElementById('cookie-notice').style.display = 'none';
-        location.reload();
+    
+    // Check if the cookie is already set
+    // If not, show the cookie notice
+    document.addEventListener('DOMContentLoaded', function() {
+        var cookieNotice = document.getElementById('cookie-notice');
+        
+        if(readCookie('cookie-notice-dismissed')=='true') {
+            cookieNotice.style.display = 'none';
+        } else {
+            cookieNotice.style.display = 'block';
+        }
+        
+        document.getElementById('cookie-notice-accept').addEventListener("click", function() {
+            createCookie('cookie-notice-dismissed','true',31);
+            cookieNotice.style.display = 'none';
+        });
     });
-
 </script>
 
