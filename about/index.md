@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Nice to meet you
+offset: about
 permalink: /about/
 ---
 

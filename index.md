@@ -37,6 +37,16 @@ title: Coding Sences, Building Worlds
         <a href="" class="black">Check it out</a> >>
     </div>
 </section>
+<section class="Column CorsairPromo Stretched">
+<div>
+    <h2><a class=NoDecoration href="/tools/corsair/">Corsair HQ</a></h2>
+    <hr class="hrDeco">
+</div>
+<p class="CorsairText">
+    Finally, Even One Eye Is Enough for a <a href="/tools/corsair/">360-Degree View</a>
+</p>
+<div class="NewProductSign"></div>
+</section>
 <section class="sectionServices Column">
     <a class=NoDecoration name="services"></a><h2>Services</h2>
     <hr class="hrDeco">
@@ -129,35 +139,35 @@ title: Coding Sences, Building Worlds
     </p>
     <div class="appStore Flex Stretched">
         <div class="app">
-            <img src="/assets/img/main/app-atlas.png" alt="">
+            <img src="/assets/img/common/apps/app-atlas.png" alt="">
             <p>
                 <strong><a href="">Atlas ERP</a></strong><br>
                 Visualized ERP System
             </p>
         </div>
         <div class="app">
-            <img src="/assets/img/main/app-columbus.png" alt="">
+            <img src="/assets/img/common/apps/app-columbus.png" alt="">
             <p>
                 <strong><a href="">Columbus</a></strong><br>
                 Automated Sales Navigator
             </p>
         </div>
         <div class="app">
-            <img src="/assets/img/main/app-forecast.png" alt="">
+            <img src="/assets/img/common/apps/app-forecast.png" alt="">
             <p>
                 <strong><a href="">Forecast App</a></strong><br>
                 Predictive Analytics
             </p>
         </div>
         <div class="app">
-            <img src="/assets/img/main/app-fanfare.png" alt="">
+            <img src="/assets/img/common/apps/app-fanfare.png" alt="">
             <p>
                 <strong><a href="">Fanfare</a></strong><br>
                 Loyalty Management System
             </p>
         </div>
         <div class="app">
-            <img src="/assets/img/main/app-concierge.png" alt="">
+            <img src="/assets/img/common/apps/app-concierge.png" alt="">
             <p>
                 <strong><a href="">Concierge App</a></strong><br>
                 Personal GPT Assistant

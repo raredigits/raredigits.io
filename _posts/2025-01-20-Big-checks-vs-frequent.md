@@ -11,6 +11,8 @@ The eternal business question: should you court the whale clients who write enor
 
 If consultants have told you "it depends," they're not being evasive—they're being honest. But "it depends" without explaining what it depends on is about as useful as a chocolate teapot.
 
+![](/assets/img/newsroom/2025/big_check.jpg)
+
 ## The Real Deciding Factor: Your Business Capacity
 
 The answer to this client strategy question isn't found in generic best practices or industry benchmarks. It lives in the honest assessment of your business capacity and scalability.

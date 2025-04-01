@@ -9,14 +9,14 @@ permalink: /tools/corsair/
 
 ![](/assets/img/newsroom/2024/corsair.jpg)
 
-## The Modern Executive Workflow: Advanced Tab Management
+## The Problem: Advanced Tab Management
 
 **The fantasy:** running a business means strategic leadership and visionary decision-making.
 
 **The reality:** it's managing seventeen browser tabs while reconciling data that fundamentally disagrees with itself.
 
 ![](/assets/img/illustrations/products/corsair/sap.jpg)
-<cite>Lovely "friendly" "modern" ERP interface, yeah</cite>
+<cite>Lovely "friendly" and "modern" ERP interface, yeah</cite>
 
 **The Problem:** Your ERP system offers a labyrinth of menus containing theoretically useful information, much like how an ancient library contained knowledge—somewhere in there, possibly. Your departmental reports each use creative accounting that would make tax havens nervous, with costs mysteriously migrating between departments like birds seeking warmer climates. Your CRM tracks customer metrics using definitions unrelated to any other system. And your accounting software stubbornly insists on reflecting actual financial reality, making it the least popular system in your technology stack.
 
@@ -41,7 +41,7 @@ Third, it surfaces problems before they become financial cardiac events. The das
 <img src="/assets/img/illustrations/products/corsair/corsair-mobile-3.png">
 
 
-## Why Corsair
+## Why "Corsair"
 
 Traditional marketing would tell you that you need our comprehensive solution to see the full 360-degree picture of your business. The truth is more subversive: with Corsair HQ, you could navigate your entire business with one eye closed. 
 

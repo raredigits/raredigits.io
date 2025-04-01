@@ -1,0 +1,17 @@
+# _data/menu/about.yml
+
+items:
+  - title: "Principles"
+    url: "/about/principles/"
+
+  - title: "Solutions"
+    url: "/tools/"
+
+  - title: "Newsroom"
+    url: "/about/newsroom/"
+    
+  - title: "Parnership"
+    url: "/about/partnership/"
+    
+  - title: "Contacts"
+    url: "/about/contacts/"

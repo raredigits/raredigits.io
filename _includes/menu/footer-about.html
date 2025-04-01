@@ -1,0 +1,10 @@
+<div class="Quarter">
+  <h3>Rare</h3>
+    <ul>
+      {% for item in site.data.menu.about-footer.items %}
+        <li>
+            <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+</div>

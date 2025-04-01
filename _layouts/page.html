@@ -8,6 +8,8 @@
         <div class="PageOffset">
             {% if page.offset == "solutions" %}
                 {% include /menu/solutions.html %}
+            {% elsif page.offset == "about" %}
+                {% include /menu/about.html %}
             {% endif %}
         </div>
         <div class="Content">

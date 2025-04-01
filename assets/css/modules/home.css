@@ -130,6 +130,39 @@ h2 a:hover {
     color: var(--black);
 }
 
+.CorsairPromo {
+    height: 600px;
+    background: url(/assets/img/main/corsair-main.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    position: relative;
+}
+
+.NewProductSign {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+    height: 200px;
+    background: url(/assets/img/main/new-product-sign.svg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.CorsairText {
+    background: #fff;
+    padding: 10px 20px;
+    color: #000;
+    border-radius: 25px;
+    width:  fit-content;
+    margin: 0 auto;
+}
+
+.CorsairText a {
+    color: #000;
+}
+
 .sectionServices {
     display: flex;
     flex-flow: column;
@@ -441,6 +474,14 @@ form input[type="tel"] {
     .secretCTA {
         right: 5px;
         bottom: 20px;
+    }
+
+    .CorsairPromo {
+        background-position: 70% 0;
+    }
+
+    .NewProductSign {
+        top: 20%;
     }
 
     .service,

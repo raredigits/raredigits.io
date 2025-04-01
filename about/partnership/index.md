@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Partnerships
-permalink: /about/partnership
+offset: about
+permalink: /about/partnership/
 ---
 
 # Partnership

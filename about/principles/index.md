@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Partnerships
-permalink: /about/principles
+offset: about
+permalink: /about/principles/
 ---
 
 # Principles

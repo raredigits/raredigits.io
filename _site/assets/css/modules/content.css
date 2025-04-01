@@ -86,6 +86,10 @@ p img {
     width: 48%;
 }
 
+.Third {
+    width: 30%;
+}
+
 .Quarter {
     width: 25%;
 }
@@ -94,6 +98,7 @@ p img {
     padding: var(--space-sm) var(--space-md);
     background: var(--secondary-color);
     border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
 }
 
 .Eyebrow {
@@ -212,7 +217,6 @@ button:hover {
 
 .Sidebar {
     padding: var(--space-lg) var(--space-md) 0 0;
-    background: var(--background-color);
 }
 
 .SidebarHeader {
@@ -248,6 +252,42 @@ button:hover {
     font-size: 1.2em;
     position: relative;
     top: -1px
+}
+
+.AppIcon img {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+}
+
+.VerticalPaddingLg {
+    padding-top: var(--space-lg);
+    padding-bottom: var(--space-lg);
+}
+
+.VerticalPaddingMd {
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-md);
+}
+
+.VerticalPaddingSm {
+    padding-top: var(--space-sm);
+    padding-bottom: var(--space-sm);
+}
+
+.HorizontalPaddingLg {
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+}
+
+.HorizontalPaddingMd {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+}
+
+.HorizontalPaddingSm {
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
 }
 
 @media (max-width: 768px) {

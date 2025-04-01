@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Book your Demo
-permalink: /about/contacts
+offset: about
+permalink: /about/contacts/
 ---
 
 # Get in Touch
