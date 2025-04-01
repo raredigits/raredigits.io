@@ -1,6 +1,12 @@
 # _data/menu/about.yml
 
 items:
+  - title: "The Value"
+    url: "/about/value/"
+
+  - title: "About"
+    url: "/about/"
+
   - title: "Principles"
     url: "/about/principles/"
 
@@ -10,7 +16,7 @@ items:
   - title: "Newsroom"
     url: "/about/newsroom/"
     
-  - title: "Parnership"
+  - title: "Partnership"
     url: "/about/partnership/"
     
   - title: "Contacts"

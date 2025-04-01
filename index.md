@@ -34,7 +34,7 @@ title: Data In, Meaning Out
         </div>
     </div>
     <div class="secretCTA">
-        <a href="" class="black">Check it out</a> >>
+        <a href="/about/value/" class="black">Check it out</a> >>
     </div>
 </section>
 <section class="Column CorsairPromo Stretched">
