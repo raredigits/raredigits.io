@@ -93,3 +93,15 @@
     background: #7b7b7b;
     box-shadow: 0 -1px rgba(255,255,255,.4) inset;
 }
+
+
+@media (max-width: 768px) {
+    .cookieNotice {
+        padding: 15px 5%;
+        width: 90%;
+    }
+    .cookieText h3 {
+        font-size: 2.5em;
+        top: -50px;
+    }
+}
