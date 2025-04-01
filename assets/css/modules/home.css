@@ -389,10 +389,7 @@ form input[type="tel"] {
 
 #my-form-button {
     margin-top: 10px;
-}
-
-#my-form-button:active {
-    background-color: #000;
+    color: var(--background-color);
 }
 
 .demoRequest img {

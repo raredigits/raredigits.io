@@ -36,3 +36,60 @@
 .constructionNotice.constructionNotice p  {
     max-width: none;
 }
+
+.cookieNotice {
+    max-width: var(--site-max-width);
+    display: block;
+    position: fixed; 
+    bottom: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f0f0f0;
+    color: #000;
+    padding: 15px 5%;
+    border: 1px solid #000;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.cookieText {
+    position: relative;
+}
+
+.cookieText h3 {
+    position: absolute;
+    top: -80px;
+    font-size: 3.5em;
+}
+
+.cookieText a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid var(--brand-color);
+}
+
+.cookieButton {
+    position: relative;
+    display: inline-block;
+    padding: 8px 15px;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    color: #000 !important;
+    outline: none;
+    background:#fff;
+    border: 1px solid transparent;
+    border-radius: 35px;
+    font-size: 1em;
+    box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.cookieButton:hover {
+    background: #e1e1e1;
+}
+
+.cookieButton:active {
+    background: #7b7b7b;
+    box-shadow: 0 -1px rgba(255,255,255,.4) inset;
+}

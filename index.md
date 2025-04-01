@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Coding Sences, Building Worlds
+title: Data In, Meaning Out
 ---
 <div>
 <section class="sectionFirst">

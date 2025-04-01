@@ -1,0 +1,8 @@
+# _data/menu/about.yml
+
+items:
+  - title: "Privacy Policy"
+    url: "/legal/privacy/"
+
+  - title: "Terms of Service"
+    url: "/legal/terms/"

@@ -24,21 +24,15 @@
         </ul>
       </div>
       {% include /menu/footer-about.html %}
-      <div class="Quarter">
-        <h3>Legal Stuff</h3>
-        <ul>
-          <li><a href="">Privacy Policy</a></li>
-          <li><a href="">Terms of Use</a></li>
-        </ul>
-      </div>
+      {% include /menu/footer-legal.html %}
     </div>
 
     <div class="Row Stretched BorderTop">
       <div>
-        © 2023—{{ site.time | date: '%Y' }}  Rare Digits<br>
-        Crafting Data, Building Sences
+        © 2023—{{ site.time | date: '%Y' }}  {{ site.title }}<br>
+        {{ site.description }}
         <p>
-          <a href="mailto:hi@raredigits.io">hi@raredigits.io</a>
+          <a href="mailto:{{ site.email }}">{{ site.email }}</a>
         </p>
       </div>
     </div>
@@ -46,4 +40,5 @@
 </footer>
 
 <script src="/assets/js/hamburger.js"></script>
+{% include /special/cookie-consent.html %}
 

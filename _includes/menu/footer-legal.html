@@ -1,0 +1,10 @@
+<div class="Quarter">
+  <h3>Legal Stuff</h3>
+    <ul>
+      {% for item in site.data.menu.legal.items %}
+        <li>
+            <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+</div>

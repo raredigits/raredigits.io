@@ -1,7 +1,8 @@
 title: Rare Digits
 email: hi@raredigits.io
-description: Crafting Data, Building Sences
+description: Data In, Meaning Out
 url: "https://raredigits.io"
+email: "hi@raredigits.io"
 
 plugins:
   - jekyll-feed

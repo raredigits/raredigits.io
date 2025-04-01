@@ -2,7 +2,7 @@
 layout: page
 title: Columbus CRM
 offset: solutions
-permalink: /tools/columbus
+permalink: /tools/columbus/
 ---
 
 # Columbus CRM
