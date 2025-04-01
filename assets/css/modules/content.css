@@ -347,6 +347,14 @@ cite {
         width: 100%;
     }
 
+    .Third {
+        width: 100%;
+    }
+
+    .Quarter {
+        width: 45%;
+    }
+
     .IllustratedBlock {
       flex-direction: column;
       align-items: flex-start;

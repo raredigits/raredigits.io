@@ -10,6 +10,9 @@ tags: kitchen
 Sometimes the best investments require a&nbsp;little temporary inconvenience. Like when your favorite neighborhood restaurant closes for renovations and you&#146;re forced to&nbsp;cook at&nbsp;home, discovering that your culinary skills peaked with microwave ramen.
 
 ## What's Happening?
+
+![](/assets/img/newsroom/2024/digital-dust.jpg)
+
 The website is&nbsp;currently undergoing maintenance and upgrades. Some features might be&nbsp;temporarily unavailable or&nbsp;behave like a&nbsp;cryptocurrency&nbsp;&#151; there one minute, gone the next. The digital contractors are working diligently behind the scaffolding of&nbsp;code and design.
 
 Sometimes you can see this:
