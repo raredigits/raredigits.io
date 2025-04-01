@@ -21,6 +21,8 @@ Corsair HQ addresses the fundamental paradox of modern business: how seventeen b
 
 Unlike traditional business intelligence tools that promise "360-degree visibility" while delivering 360 different metrics that don't connect to each other, Corsair HQ takes a refreshingly subversive approach. The platform filters the data tsunami down to what actually matters, connects information that should have been connected all along, and highlights problems before they become financial cardiac events.
 
+![](/assets/img/illustrations/products/corsair/corsair-mobile-1.png)
+
 For a complete breakdown of how Corsair HQ works and why it was named after privateers who raided valuable treasures while leaving the ballast behind, [visit the product description page](/tools/corsair/).
 
 ## Compatible With Your Existing Expensive Mistakes

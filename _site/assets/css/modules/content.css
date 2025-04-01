@@ -207,6 +207,12 @@ button:hover {
     background: var(--brand-dark-color);
 }
 
+cite {
+    color: var(--secondary-text-color);
+    width: 100%;
+    text-align: right;
+}
+
 .PageOffset {
     min-width: var(--page-offset);
     position: sticky;

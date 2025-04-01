@@ -7,36 +7,38 @@ permalink: /tools/corsair/
 
 # Corsair HQ
 
-![](/assets/img/newsroom/2024/corsair.jpg)
-
-## The Problem: Advanced Tab Management
-
-**The fantasy:** running a business means strategic leadership and visionary decision-making.
-
-**The reality:** it's managing seventeen browser tabs while reconciling data that fundamentally disagrees with itself.
+<div class="Card">
+    <h2>The Problem: Advanced Tab Management</h2>
+    <p><strong>The fantasy:</strong> running a business means strategic leadership and visionary decision-making.</p>
+    <p><strong>The reality:</strong> it's managing seventeen browser tabs while reconciling data that fundamentally disagrees with itself.</p>
+</div>
 
 ![](/assets/img/illustrations/products/corsair/sap.jpg)
-<cite>Lovely "friendly" and "modern" ERP interface, yeah</cite>
 
-**The Problem:** Your ERP system offers a labyrinth of menus containing theoretically useful information, much like how an ancient library contained knowledge—somewhere in there, possibly. Your departmental reports each use creative accounting that would make tax havens nervous, with costs mysteriously migrating between departments like birds seeking warmer climates. Your CRM tracks customer metrics using definitions unrelated to any other system. And your accounting software stubbornly insists on reflecting actual financial reality, making it the least popular system in your technology stack.
+<cite>Lovely "friendly" and "modern" business application interface</cite>
+
+**Current Workflow:** Your ERP system offers a labyrinth of menus containing theoretically useful information, much like how an ancient library contained knowledge—somewhere in there, possibly. Your departmental reports each use creative accounting that would make tax havens nervous, with costs mysteriously migrating between departments like birds seeking warmer climates. Your CRM tracks customer metrics using definitions unrelated to any other system. And your accounting software stubbornly insists on reflecting actual financial reality, making it the least popular system in your technology stack.
 
 Meanwhile, every department head presents reports showing comfortable profitability while your accountant contemplates a career change. This isn't fraud—it's just modern business reporting, where everyone's incentives encourage counting revenue toward their department while defining costs as "corporate overhead" or "someone else's problem."
 
 Sound familiar?
 
-## Corsair HQ: The Thing Where You Can Actually See Your Business
+## The Solution: The Thing Where You Can Actually See Your Business
 
 Corsair HQ performs three services that shouldn't be revolutionary but somehow are:
 
-First, it filters the data firehose down to potable water. Your existing systems generate information with the restraint of a fire hydrant that's been hit by a truck. Corsair applies filters that separate "needs executive attention" from "technically data but practically noise."
+### First, 
+It filters the data firehose down to potable water. Your existing systems generate information with the restraint of a fire hydrant that's been hit by a truck. Corsair applies filters that separate "needs executive attention" from "technically data but practically noise."
 
 <img src="/assets/img/illustrations/products/corsair/corsair-mobile-1.png">
 
-Second, it connects information that should already be connected but isn't. Sales data talks to inventory data, customer acquisition costs connect to lifetime value, and department profitability metrics acknowledge the existence of overhead expenses.
+### Second, 
+It connects information that should already be connected but isn't. Sales data talks to inventory data, customer acquisition costs connect to lifetime value, and department profitability metrics acknowledge the existence of overhead expenses.
 
 <img src="/assets/img/illustrations/products/corsair/corsair-mobile-2.png">
 
-Third, it surfaces problems before they become financial cardiac events. The dashboard doesn't just show where you are; it shows where trouble is brewing, using the radical approach of comparing actual performance to what needs to happen for your business to survive.
+### Third, 
+It surfaces problems before they become financial cardiac events. The dashboard doesn't just show where you are; it shows where trouble is brewing, using the radical approach of comparing actual performance to what needs to happen for your business to survive.
 
 <img src="/assets/img/illustrations/products/corsair/corsair-mobile-3.png">
 
@@ -44,6 +46,8 @@ Third, it surfaces problems before they become financial cardiac events. The das
 ## Why "Corsair"
 
 Traditional marketing would tell you that you need our comprehensive solution to see the full 360-degree picture of your business. The truth is more subversive: with Corsair HQ, you could navigate your entire business with one eye closed. 
+
+![](/assets/img/newsroom/2024/corsair.jpg)
 
 The name "Corsair" isn't accidental – like the privateers of old, we've figured out how to raid your existing data systems and bring back only the valuable treasures, leaving the ballast behind. And like a seasoned captain, you'll find that the simplified view through a spyglass often provides more actionable intelligence than staring at the entire horizon at once.
 
