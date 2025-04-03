@@ -47,7 +47,7 @@ Anything that can be automated should be, if only to free up brainpower for the 
 
 After all, the best business relationships aren't about constantly surprising each other. They're about being exactly as predictable as promised. 
 
-The outcome? Completed projects with predictable results and minimal drama – which, coincidentally, is also how the best cooperations are supposed to work.
+<div class="Highlight">The outcome? Completed projects with predictable results and minimal drama – which, coincidentally, is also how the best cooperations are supposed to work.</div>
 
 
 

@@ -2,7 +2,7 @@
 layout: page
 title: Atlas ERP
 offset: solutions
-permalink: /tools/atlas
+permalink: /tools/atlas/
 ---
 
 # Atlas ERP

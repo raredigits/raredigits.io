@@ -254,6 +254,13 @@ cite {
     left: -1em;
 }
 
+.Highlight {
+    width: var(--content);
+    font-size: 1.2em;
+    border: 4px solid var(--brand-color);
+    padding: var(--space-sm) var(--space-lg);
+}
+
 .Sidebar .material-icons {
     font-size: 1.2em;
     position: relative;

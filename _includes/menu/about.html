@@ -1,5 +1,5 @@
 <div class="Sidebar">
-    <span class="SidebarHeader"><a class="NoDecoration" href="/about/">Backstage</a></span>
+    <span class="SidebarHeader"><a class="NoDecoration" href="/about/">Inputs</a></span>
     <nav class="SidebarNav">
       <ul>
         {% for item in site.data.menu.about.items %}
@@ -12,5 +12,20 @@
           </li>
         {% endfor %}
       </ul>
+
+      {% if site.data.menu.about.featured %}
+        <div class="SidebarSection MobileHidden">
+        <span class="SidebarHeader">Outputs</span>
+        <ul>
+            {% for item in site.data.menu.about.featured %}
+            <li>
+                <a href="{{ item.url | relative_url }}">
+                {{ item.title }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        </div>
+      {% endif %}
     </nav>
   </div>

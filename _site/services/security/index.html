@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rare Digits | Security</title>
+
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+
+    <link rel="stylesheet" href="/assets/css/rare.css">
+    <link rel="stylesheet" href="/assets/css/feedback.scss">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-91KWRG2Y9N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-91KWRG2Y9N');
+</script>
+
+<div class="Column">
+    <header>
+    <div class="SiteMaxWidth Row Stretched">
+        <a class="NoDecoration" href="/">
+            <div class="HeaderLogo"></div>
+        </a>
+        <button class="Hamburger NoDecoration" aria-label="Toggle navigation">
+            <span class="material-icons MenuIcon">menu</span>
+            <span class="material-icons CloseIcon">close</span>
+        </button>
+        <nav class="GlobalNav">
+            <ul>
+                <li><a href="/services/">Services</a></li>
+                <li><a href="/tools/">Solutions</a></li>
+                <li><a href="/#pricing">Pricing</a></li>
+                <li><a href="/about/newsroom/">Pressroom</a></li>
+                <li><a href="/about/contacts/">Contacts</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <div class="NoticeStripe ConstructionStripeMini">
+    <div class="SiteMaxWidth">
+        🚧 <a href="/newsroom/Reconstruction/">Website is Under Construction</a> 🚧
+    </div>
+</div>
+    
+    <main>
+        <div class="PageOffset">
+            
+                <div class="Sidebar">
+    <span class="SidebarHeader"><a href="/services/" class="NoDecoration">Services</a></span>
+    <nav class="SidebarNav">
+      <ul>
+        
+          <li class="">
+            
+              <a href="/services/consulting/">Consulting</a>
+            
+          </li>
+        
+          <li class="">
+            
+              <a href="/services/design/">Design</a>
+            
+          </li>
+        
+          <li class="">
+            
+              <a href="/services/integrations/">Intergations</a>
+            
+          </li>
+        
+          <li class="">
+            
+              <a href="/services/development/">Development</a>
+            
+          </li>
+        
+          <li class="Bold">
+            
+              Security
+            
+          </li>
+        
+          <li class="">
+            
+              <a href="/services/support/">Support</a>
+            
+          </li>
+        
+      </ul>
+    </nav>
+  </div>
+            
+        </div>
+        <div class="Content">
+            <h1 id="beyond-firewalls-and-passwords">Beyond Firewalls and Passwords</h1>
+
+<h2 id="what-security-really-means-at-rare-digits">What Security Really Means at Rare Digits</h2>
+
+<p>When most companies talk about security, they immediately jump to firewalls, intrusion detection, and vulnerability scans. Important? Sure. But at Rare Digits, we see security through a different lens.</p>
+
+<p>For us, true security means <strong>ensuring your business-critical data is available when you need it, performing at the speed you require, and structured in ways that create genuine business value</strong>.</p>
+
+<p><img src="/assets/img/illustrations/rare_security.jpg" alt="" />
+<cite>Rare Security Officer</cite></p>
+
+<h2 id="data-availability-the-security-most-businesses-actually-need">Data Availability: The Security Most Businesses Actually Need</h2>
+
+<p>Let’s be honest—what’s more damaging to your daily operations?</p>
+<ul>
+  <li>A theoretical hacker who might target your system someday</li>
+  <li>Your database crashing during peak business hours because it can’t handle the load</li>
+</ul>
+
+<p>For most of our clients, system availability and performance issues cause far more “security incidents” than actual breaches.</p>
+
+<div class="Highlight">That's why our security services start with ensuring your data is always accessible when you need it.</div>
+
+<h2 id="load-distribution--system-architecture">Load Distribution &amp; System Architecture</h2>
+
+<p>Our security approach begins with smart system architecture that prevents bottlenecks and single points of failure:</p>
+
+<ul>
+  <li><strong>Intelligent read/write separation</strong>: We configure your databases to separate read operations from write operations, dramatically improving performance under high loads</li>
+  <li><strong>Strategic replication</strong>: Creating read replicas in multiple locations to distribute query load and provide failover capabilities</li>
+  <li><strong>Caching layers</strong>: Implementing Redis, Memcached, or custom caching solutions to reduce database hits for frequently accessed data</li>
+  <li><strong>Connection pooling optimization</strong>: Fine-tuning database connections to prevent resource exhaustion during traffic spikes</li>
+</ul>
+
+<h2 id="database-performance-tuning">Database Performance Tuning</h2>
+
+<p>Security through performance isn’t just about architecture—it’s about optimization at every level:</p>
+
+<ul>
+  <li><strong>Query optimization</strong>: Rewriting inefficient queries that cause excessive table scans or temporary table creation</li>
+  <li><strong>Index strategy development</strong>: Building and maintaining the right indexes for your specific workload patterns</li>
+  <li><strong>Table partitioning</strong>: Implementing horizontal or vertical partitioning strategies for large tables to improve query performance</li>
+  <li><strong>Storage engine selection</strong>: Choosing the appropriate storage engines for different tables based on access patterns</li>
+  <li><strong>Regular EXPLAIN analysis</strong>: Proactively identifying query performance issues before they impact production</li>
+</ul>
+
+<h2 id="monitoring--alerting-that-actually-matters">Monitoring &amp; Alerting That Actually Matters</h2>
+
+<p>Forget generic security alerts that cry wolf. Our monitoring focuses on what actually impacts your business:</p>
+
+<ul>
+  <li><strong>Performance anomaly detection</strong>: AI-powered monitoring that learns your normal query patterns and alerts only on meaningful deviations</li>
+  <li><strong>Resource utilization tracking</strong>: Watching memory, CPU, disk I/O, and connection counts with business-context awareness</li>
+  <li><strong>Query performance degradation alerts</strong>: Identifying when specific queries start taking longer than their established baselines</li>
+  <li><strong>Replication lag monitoring</strong>: Ensuring your database replicas stay in sync with configurable thresholds</li>
+</ul>
+
+<h2 id="disaster-recovery-that-works">Disaster Recovery That Works</h2>
+
+<p>Most disaster recovery plans look great on paper but fail when needed. We focus on recovery solutions you can actually count on:</p>
+
+<ul>
+  <li><strong>Point-in-time recovery capabilities</strong>: Configuring and testing transaction log backups that allow restoration to any moment in time</li>
+  <li><strong>Automated failover testing</strong>: Regularly verifying that your failover mechanisms actually work under realistic scenarios</li>
+  <li><strong>Cross-region resilience</strong>: Building systems that can withstand regional outages through strategic geographic distribution</li>
+  <li><strong>Recovery time optimization</strong>: Continuously improving backup and restore procedures to minimize downtime</li>
+</ul>
+
+<h2 id="beyond-traditional-security">Beyond Traditional Security</h2>
+
+<p>Don’t worry—we haven’t forgotten about traditional security measures. We still implement:</p>
+
+<ul>
+  <li><strong>Access control and authentication hardening</strong>: Ensuring only authorized users access your data</li>
+  <li><strong>Encryption at rest and in transit</strong>: Protecting data both when stored and when moving between systems</li>
+  <li><strong>Security patch management</strong>: Keeping your database systems updated against known vulnerabilities</li>
+  <li><strong>Audit logging and compliance</strong>: Maintaining detailed logs for regulatory requirements and forensic needs</li>
+</ul>
+
+<h2 id="what-sets-our-approach-apart">What Sets Our Approach Apart</h2>
+
+<p>Unlike traditional security vendors who sell fear, we sell something much more valuable: peace of mind knowing your data will be there when you need it, performing as expected, and structured to deliver business insights.</p>
+
+<p>Because the most secure database in the world is useless if you can’t access it when you need to make a critical business decision.</p>
+
+<div class="ContentSeparator"></div>
+
+<p>Ready to talk about security that actually matters to your business? <a href="/about/contacts/">Contact our team</a> to discuss how we can help ensure your data is both secure and available when you need it most.*</p>
+
+        </div>
+    </main>
+</div>
+
+<footer>
+  <div class="SiteMaxWidth Column">
+    <div class="Flex GapMd">
+      <div class="Quarter">
+  <h3>Solutions</h3>
+    <ul>
+      
+        <li>
+            <a href="/tools/atlas">Atlas ERP</a>
+        </li>
+      
+        <li>
+            <a href="/tools/corsair/">Corsair HQ</a>
+        </li>
+      
+        <li>
+            <a href="/tools/columbus/">Columbus CRM</a>
+        </li>
+      
+        <li>
+            <a href="/tools/forecast/">Forecast App</a>
+        </li>
+      
+        <li>
+            <a href="/tools/fanfare/">Fanfare Loyalty</a>
+        </li>
+      
+        <li>
+            <a href="/tools/jeeves/">Jeeves GPT</a>
+        </li>
+      
+        <li>
+            <a href="/tools/web3/watchtower/">Watchtower</a>
+        </li>
+      
+        <li>
+            <a href="/tools/open-source/">Open-Source</a>
+        </li>
+      
+    </ul>
+</div>
+      <div class="Quarter">
+  <h3>Services</h3>
+    <ul>
+      
+        <li>
+            <a href="/services/consulting/">Consulting</a>
+        </li>
+      
+        <li>
+            <a href="/services/design/">Design</a>
+        </li>
+      
+        <li>
+            <a href="/services/integrations/">Intergations</a>
+        </li>
+      
+        <li>
+            <a href="/services/development/">Development</a>
+        </li>
+      
+        <li>
+            <a href="/services/security/">Security</a>
+        </li>
+      
+        <li>
+            <a href="/services/support/">Support</a>
+        </li>
+      
+    </ul>
+</div>
+      <div class="Quarter">
+        <h3>Subscriprions</h3>
+        <ul>
+          <li><a href="">Junior Associate</a></li>
+          <li><a href="">Associate</a></li>
+          <li><a href="">Consigliere</a></li>
+          <li><a href="">Mr. Wolf</a></li>
+          <li><a href="">NED</a></li>
+          <li><a href="">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="Quarter">
+  <h3>Rare</h3>
+    <ul>
+      
+        <li>
+            <a href="/about/value/">The Value</a>
+        </li>
+      
+        <li>
+            <a href="/about/">About</a>
+        </li>
+      
+        <li>
+            <a href="/about/principles/">Principles</a>
+        </li>
+      
+        <li>
+            <a href="/about/partnership/">Partnership</a>
+        </li>
+      
+        <li>
+            <a href="/about/newsroom/">Newsroom</a>
+        </li>
+      
+        <li>
+            <a href="/about/contacts/">Contacts</a>
+        </li>
+      
+    </ul>
+</div>
+      <div class="Quarter">
+  <h3>Legal Stuff</h3>
+    <ul>
+      
+        <li>
+            <a href="/legal/privacy/">Privacy Policy</a>
+        </li>
+      
+        <li>
+            <a href="/legal/terms/">Terms of Service</a>
+        </li>
+      
+    </ul>
+</div>
+    </div>
+
+    <div class="Row Stretched BorderTop">
+      <div>
+        © 2023—2025  Rare Digits<br>
+        Data In, Meaning Out
+        <p>
+          <a href="mailto:hi@raredigits.io">hi@raredigits.io</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/hamburger.js"></script>
+<div id="cookie-notice" class="cookieNotice">
+    <div class="cookieText">
+        <h3>🍪</h3>
+        <p class="Bold">Help yourself to&nbsp;some cookies!</p>
+        <p>We're using third party cookies and scripts to improve the functionality of this website. <a href="/legal/privacy">Legal explanation</a> >></p>
+        <div class="Right">
+            <button id="cookie-notice-accept" class="cookieButton">Nice!</button>
+        </div>
+    </div>
+</div>
+<script>
+    function createCookie(name,value,days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+    function eraseCookie(name) {
+        createCookie(name,"",-1);
+    }
+    
+    // Check if the cookie is already set
+    // If not, show the cookie notice
+    document.addEventListener('DOMContentLoaded', function() {
+        var cookieNotice = document.getElementById('cookie-notice');
+        
+        if(readCookie('cookie-notice-dismissed')=='true') {
+            cookieNotice.style.display = 'none';
+        } else {
+            cookieNotice.style.display = 'block';
+        }
+        
+        document.getElementById('cookie-notice-accept').addEventListener("click", function() {
+            createCookie('cookie-notice-dismissed','true',31);
+            cookieNotice.style.display = 'none';
+        });
+    });
+</script>
+

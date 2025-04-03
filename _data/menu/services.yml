@@ -1,0 +1,23 @@
+# _data/menu/services.yml
+
+items:
+  - title: "Consulting"
+    url: "/services/consulting/"
+
+  - title: "Design"
+    url: "/services/design/"
+
+  - title: "Intergations"
+    url: "/services/integrations/"
+  
+  - title: "Development"
+    url: "/services/development/"
+  
+  - title: "Security"
+    url: "/services/security/"
+
+  - title: "Support"
+    url: "/services/support/"
+
+
+

@@ -25,7 +25,7 @@ You're probably here because:
 - Your ERP system has a user manual longer than the Dodd-Frank Act
 - You've built a thriving ecosystem of non-communicating software applications that would make biodiversity researchers proud
 
-If you're running a business, managing one, or directing its IT, and you'd like to see your company's financial reality without the need for three accounting degrees and a shaman—well, that's where we come in.
+<div class="Highlight">If you're running a business, managing one, or directing its IT, and you'd like to see your company's financial reality without the need for three accounting degrees and a shaman—well, that's where we come in.</div>
 
 ## The Experience Section
 
