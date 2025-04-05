@@ -1,17 +1,17 @@
 ---
 layout: page
-title: Partnerships
+title: Principles
 offset: about
 permalink: /about/principles/
 ---
-
-# Principles
 
 A curious thing about business is how much time everyone spends trying to predict them. But the most reliable predictor remains deceptively simple: understanding what matters to the other party.
 
 When you know someone's priorities – what they optimize for, what they'll sacrifice, what they consider non-negotiable – you can predict their behavior with surprising accuracy. 
 
-![](/assets/img/illustrations/principles.jpg)
+<div class="full-width">
+  <img src="/assets/img/illustrations/principles.jpg" />
+</div>
 
 This is also why we're transparent about these principles. Not just as a statement of values (though they are that), but as a practical courtesy. When you understand what drives our decisions, working together becomes less like forecasting market movements and more like calculating compound interest – still involving some variables, but fundamentally predictable.
 
@@ -47,7 +47,7 @@ Anything that can be automated should be, if only to free up brainpower for the 
 
 After all, the best business relationships aren't about constantly surprising each other. They're about being exactly as predictable as promised. 
 
-<div class="Highlight">The outcome? Completed projects with predictable results and minimal drama – which, coincidentally, is also how the best cooperations are supposed to work.</div>
+<div class="highlight">The outcome? Completed projects with predictable results and minimal drama – which, coincidentally, is also how the best cooperations are supposed to work.</div>
 
 
 

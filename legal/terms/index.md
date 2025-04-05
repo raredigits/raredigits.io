@@ -1,11 +1,9 @@
 ---
 layout: page
-title: Terms of Use
+title: 'The "We’re All Adults Here" Agreement'
 offset: legal
 permalink: /legal/terms/
 ---
-
-# The "We're All Adults Here" Agreement
 
 Welcome to the part of our website where we explain the rules of our digital playground.
 
@@ -23,7 +21,7 @@ Like that home renovation project you started three years ago, our website is pe
 
 We strive for 99.9% uptime, but sometimes computers do what computers do—they crash, freeze, or decide to install updates at the most inconvenient moments. 
 
-We cannot and do not guarantee that:
+<div class="highlight">We cannot and do not guarantee that:</div>
 
 - Our service will be available 24/7/365
 - All features will work perfectly every time

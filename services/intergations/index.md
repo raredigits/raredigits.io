@@ -1,11 +1,9 @@
 ---
 layout: page
-title: Integrations
+title: "Working With Whatever You've Got"
 offset: services
 permalink: /services/integrations/
 ---
-
-# Working With Whatever You've Got
 
 ## Your Software Doesn't Matter
 
@@ -18,11 +16,13 @@ Shocking, right? In an industry where vendors typically start conversations with
 The software world is obsessed with integrations. "Does it integrate with Salesforce? Does it integrate with HubSpot? Does it integrate with the obscure industry-specific platform your company adopted in 2007 and now can't escape from?" These questions dominate software discussions as if the ability to automatically push data from one place to another is the pinnacle of technological achievement.
 
 Here's our hot take: 
-<div class="Highlight">the specific integration matters less than what you're trying to learn from the data.</div>
+<div class="highlight">the specific integration matters less than what you're trying to learn from the data.</div>
 
 Here's the truth: some of the most successful businesses we work with rely heavily on spreadsheets. Why? Because spreadsheets are incredibly flexible tools that adapt to how businesses actually work, rather than forcing businesses to adapt to the software.
 
-![](/assets/img/illustrations/rare-integration.jpg)
+<div class="full-width">
+  <img src="/assets/img/illustrations/rare-integration.jpg" />
+</div>
 <cite>Source Data We’re Happy to Deal With</cite>
 
 If your Google Sheet contains the data we need to help you make better decisions, we're perfectly happy to work with it. We'd rather have good data in a simple tool than garbage data in an expensive platform.

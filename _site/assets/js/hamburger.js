@@ -1,18 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.querySelector('.Hamburger');
-  const globalNav = document.querySelector('.GlobalNav');
+  const hamburger = document.querySelector('.hamburger');
+  const navGlobal = document.querySelector('.nav-global');
 
   // Переключение меню
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
-    globalNav.classList.toggle('active');
+    navGlobal.classList.toggle('active');
   });
 
   // Закрытие по клику вне меню
   document.addEventListener('click', (event) => {
-    if (!globalNav.contains(event.target) && !hamburger.contains(event.target)) {
+    if (!navGlobal.contains(event.target) && !hamburger.contains(event.target)) {
       hamburger.classList.remove('active');
-      globalNav.classList.remove('active');
+      navGlobal.classList.remove('active');
     }
   });
 });

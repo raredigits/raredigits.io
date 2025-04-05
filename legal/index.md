@@ -1,11 +1,9 @@
 ---
 layout: page
-title: Legal Stuff
+title: The Legal Approach
 offset: legal
 permalink: /legal/
 ---
-
-# The Legal Approach
 
 ## Simple Strategy: Just Don't Break the Law
 

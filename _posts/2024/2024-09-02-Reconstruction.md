@@ -3,7 +3,7 @@ layout: post
 title:  "Pardon Our Digital Dust"
 date:   2024-09-02 10:00:00 +0400
 cover: /assets/img/news/2023/
-categories: about
+category: Internal Affairs
 tags: kitchen
 ---
 
@@ -11,7 +11,9 @@ Sometimes the best investments require a&nbsp;little temporary inconvenience. Li
 
 ## What's Happening?
 
-![](/assets/img/newsroom/2024/digital-dust.jpg)
+<div class="full-width">
+  <img src="/assets/img/newsroom/2024/digital-dust.jpg" />
+</div>
 
 The website is&nbsp;currently undergoing maintenance and upgrades. Some features might be&nbsp;temporarily unavailable or&nbsp;behave like a&nbsp;cryptocurrency&nbsp;&#151; there one minute, gone the next. The digital contractors are working diligently behind the scaffolding of&nbsp;code and design.
 

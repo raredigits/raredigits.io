@@ -12,7 +12,7 @@ header a {
     text-decoration: none;
 }
 
-.HeaderLogo {
+.header-logo {
     height: 36px;
     background: var(--header-logo);
     min-width: 100px;
@@ -22,34 +22,38 @@ header a {
     background-position: center left;
 }
 
-.HeaderLogo img {
+.header-logo img {
     height: 100%;
     width: auto;
     max-width: 100%;
     object-fit: contain;
 }
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
   
-.GlobalNav {
+.nav-global {
     display: flex;
     align-items: center;
 }
   
-.GlobalNav ul {
-    list-style: none;
+.nav-global ul {
     display: flex;
     gap: 20px;
 }
   
-.GlobalNav a {
+.nav-global a {
     color: var(--primary-color);
     text-decoration: none;
 }
   
-.GlobalNav a:hover {
+.nav-global a:hover {
     color: var(--nav-link-hover);
 }
 
-.Hamburger {
+.hamburger {
     display: none;
     background: none;
     color: var(--primary-color);
@@ -61,29 +65,24 @@ header a {
     z-index: 1001;
 }
 
-.NoticeStripe {
-    width: var(--site-max-width);
-    margin: var(--header-height) auto 0;
-}
-
 @media (max-width: 768px) {
-    .Hamburger {
+    .hamburger {
       display: block;
     }
 
-    .Hamburger .CloseIcon {
+    .hamburger .icon-close {
         display: none;
     }
 
-    .Hamburger.active .MenuIcon {
+    .hamburger.active .icon-menu {
         display: none;
     }
 
-    .Hamburger.active .CloseIcon {
+    .hamburger.active .icon-close {
         display: inline;
     }
   
-    .GlobalNav {
+    .nav-global {
         position: fixed;
         top: -100%;
         left: 0;
@@ -98,17 +97,17 @@ header a {
         z-index: 1000;
     }
   
-    .GlobalNav.active {
+    .nav-global.active {
         top: 0;
     }
   
-    .GlobalNav ul {
+    .nav-global ul {
         flex-direction: column;
         gap: 10px;
         height: 100%;
     }
 
-    .GlobalNav li::after {
+    .nav-global li::after {
         content: ' >>';
         color: var(--secondary-text-color);
     }

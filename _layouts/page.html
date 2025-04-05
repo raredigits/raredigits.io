@@ -5,19 +5,22 @@
     {% include /special/constructionHeader.html %}
     
     <main>
-        <div class="PageOffset">
-            {% if page.offset == "solutions" %}
-                {% include /menu/solutions.html %}
-            {% elsif page.offset == "about" %}
-                {% include /menu/about.html %}
-            {% elsif page.offset == "legal" %}
-                {% include /menu/legal.html %}
-            {% elsif page.offset == "services" %}
-                {% include /menu/services.html %}
-            {% endif %}
-        </div>
-        <div class="Content">
-            {{ content }}
+        <div class="content-wrapper">
+            <aside class="sidebar">
+                {% if page.offset == "solutions" %}
+                    {% include /menu/solutions.html %}
+                {% elsif page.offset == "about" %}
+                    {% include /menu/about.html %}
+                {% elsif page.offset == "legal" %}
+                    {% include /menu/legal.html %}
+                {% elsif page.offset == "services" %}
+                    {% include /menu/services.html %}
+                {% endif %}
+            </aside>
+            {% include title.html %}
+            <section class="page-content">
+                {{ content }}
+            </section>
         </div>
     </main>
 </div>

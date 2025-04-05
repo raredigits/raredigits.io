@@ -1,5 +1,101 @@
-.Content {
+.page-content {
     padding-bottom: calc(var(--space-lg) * 5);
+}
+
+.page-content p,
+.page-content ul {
+    max-width: var(--content);
+}
+
+.page-content p > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.border-bottom {
+    padding-bottom: var(--space-md);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.eyebrow {
+    color: var(--secondary-text-color);
+    font-size: var(--font-size-sm);
+}
+
+.tag {
+    color: var(--secondary-text-color);
+    background: var(--secondary-color);
+    display: inline-block;
+    padding: 1px 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    font-size: var(--font-size-sm);
+    margin-bottom: 3px;
+}
+
+.highlight {
+    width: var(--content);
+    font-size: 1.2em;
+    border: 4px solid var(--brand-color);
+    padding: var(--space-sm) var(--space-lg);
+    margin-top: var(--space-md);
+}
+
+.wide-background {
+    position: relative;
+    background: var(--secondary-color);
+    width: 100vw;
+    left: calc(50% - var(--sidebar)); 
+    margin-left:  calc(-50vw + calc(var(--space-lg) + var(--space-md)));
+    margin-right: calc(-50vw + calc(var(--space-lg) + var(--space-md)));
+    padding: 0 var(--space-md);
+}
+
+.wide-background-content {
+    margin-left: calc(var(--sidebar) + var(--space-md)); 
+    padding: var(--space-lg) 0;
+}
+
+.height-70vh {
+    height: 70vh;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+
+
+/* SIDEBAR */
+
+.sidebar-header {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.sidebar-nav ul {
+    padding: 0;
+}
+
+.sidebar-nav li {
+    margin-top: var(--space-sm);
+    font-size: 0.9em;
+}
+
+.sidebar-section {
+    padding-top: var(--space-lg);
+}
+
+.sidebar .material-icons {
+    font-size: 1.2em;
+    position: relative;
+    top: -1px;
+}
+
+.sidebar-badge {
+    position: relative;
+    left: -1em;
 }
 
 .Breadcrumbs {
@@ -14,18 +110,8 @@
 article {
     padding: var(--space-lg) 0;
 }
-
-main {
-    padding: var(--space-lg) var(--space-md);
-    width: 100%;
-    max-width: var(--site-max-width);
-    margin: 0 auto;
-    display: flex;
-}
   
 section {
-    width: 100%;
-    background: var(--secondary-color);
     position: relative;
     margin-bottom: var(--space-lg);
 }
@@ -61,11 +147,7 @@ img {
     width: 100%;
 }
 
-.Content p,
-.Content ul,
-p img {
-    max-width: var(--content);
-}
+
 
 .Content h3 {
     margin-top: var(--space-md);
@@ -213,60 +295,6 @@ cite {
     text-align: right;
 }
 
-.PageOffset {
-    min-width: var(--page-offset);
-    position: sticky;
-    padding-top: var(--space-lg);
-    height: 100%;
-    top: 0;
-}
-
-.Sidebar {
-    padding: var(--space-lg) var(--space-md) 0 0;
-}
-
-.SidebarHeader {
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-.SidebarNav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.SidebarNav li {
-    margin-top: var(--space-sm);
-    font-size: 0.9em;
-}
-
-.SidebarNav a {
-    color: var(--secondary-text-color);
-    text-decoration: none;
-}
-
-.SidebarSection {
-    padding-top: var(--space-lg);
-}
-
-.Badge {
-    position: relative;
-    left: -1em;
-}
-
-.Highlight {
-    width: var(--content);
-    font-size: 1.2em;
-    border: 4px solid var(--brand-color);
-    padding: var(--space-sm) var(--space-lg);
-}
-
-.Sidebar .material-icons {
-    font-size: 1.2em;
-    position: relative;
-    top: -1px
-}
-
 .AppIcon img {
     width: 100%;
     max-width: 100px;
@@ -304,9 +332,14 @@ cite {
 }
 
 @media (max-width: 768px) {
-    main {
-        flex-direction: column;
-        padding: 0 var(--space-sm);
+    .highlight {
+        width: 100%;
+        padding: var(--space-sm) var(--space-md);
+        margin-left: calc(-1 * var(--space-sm));
+    }
+
+    .wide-background-content {
+        margin-left: var(--space-md);
     }
 
     .PageOffset {
@@ -343,10 +376,6 @@ cite {
 
     .Content {
         padding: 0 0 calc(var(--space-lg) * 3) 0;
-    }
-
-    .Content img {
-        width: 100%;
     }
 
     .TwoColumns .Card {

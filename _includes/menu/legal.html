@@ -1,16 +1,15 @@
-<div class="Sidebar">
-    <span class="SidebarHeader"><a href="/legal/" class="NoDecoration">Legal Stuff</a></span>
-    <nav class="SidebarNav">
-      <ul>
-        {% for item in site.data.menu.legal.items %}
-          <li class="{% if page.url == item.url %}Bold{% endif %}">
-            {% if page.url == item.url %}
-              {{ item.title }}
-            {% else %}
-              <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
-    </nav>
-  </div>
+<span class="sidebar-header">
+  <a href="/legal/" class="no-decoration">Legal Stuff</a></span>
+<nav class="sidebar-nav no-scrollbar">
+  <ul>
+    {% for item in site.data.menu.legal.items %}
+      <li class="{% if page.url == item.url %}bold{% endif %}">
+        {% if page.url == item.url %}
+          {{ item.title }}
+        {% else %}
+          <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

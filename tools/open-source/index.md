@@ -1,11 +1,9 @@
 ---
 layout: page
-title: Rare Open Source Tools
+title: Pro Bono Contribution
 offset: solutions
 permalink: /tools/open-source/
 ---
-
-# Pro Bono Contribution
 
 Visit [Rare GitHub Page](https://github.com/raredigits) >>
 

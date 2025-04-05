@@ -5,8 +5,6 @@ offset: about
 permalink: /about/contacts/
 ---
 
-# Get in Touch
-
 Welcome to&nbsp;our virtual reception.   
 We&nbsp;promise our response times are faster than light (in&nbsp;a&nbsp;vacuum of&nbsp;bureaucracy).
 
@@ -23,7 +21,9 @@ Jewellery & Gemplex 3,<br>
 
 Wish to&nbsp;witness our elegance and brutality in&nbsp;person? Our ambassadors of&nbsp;innovation are strategically placed around the globe, much like a&nbsp;very sophisticated game of&nbsp;Risk:
 
-![](/assets/img/illustrations/world_map_contacts.jpg)
+<div class="full-width">
+  <img src="/assets/img/illustrations/world_map_contacts.jpg" />
+</div>
 
 <div class="List ListTwoColumns">
    <ul>

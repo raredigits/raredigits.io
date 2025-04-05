@@ -5,8 +5,6 @@ offset: legal
 permalink: /legal/privacy/
 ---
 
-# Privacy Policy
-
 ## Yes, We Use Cookies
 
 This is where we're legally obligated to tell you about those little digital breadcrumbs called "cookies" that follow you around the internet. But instead of drowning you in legalese that nobody reads, let's have an honest conversation.

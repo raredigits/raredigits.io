@@ -37,9 +37,10 @@ title: Data In, Meaning Out
         <a href="/about/value/" class="black">Check it out</a> >>
     </div>
 </section>
+
 <section class="Column CorsairPromo Stretched">
 <div>
-    <h2><a class=NoDecoration href="/tools/corsair/">Corsair HQ</a></h2>
+    <h2><a class="no-decoration" href="/tools/corsair/">Corsair HQ</a></h2>
     <hr class="hrDeco">
 </div>
 <p class="CorsairText">
@@ -47,8 +48,10 @@ title: Data In, Meaning Out
 </p>
 <div class="NewProductSign"></div>
 </section>
-<section class="sectionServices Column">
-    <a class=NoDecoration name="services"></a><h2>Services</h2>
+
+<section class="sectionServices Column bg-black">
+    <a class="no-decoration" name="services"></a>
+    <h2><a href="/services/" class="no-decoration">Data In, Meaning Out</a></h2>
     <hr class="hrDeco">
     <p class="subheader">
         16 years satisfying enterprise’s every need
@@ -101,9 +104,10 @@ title: Data In, Meaning Out
         <p><strong>Technical Stack:</strong><br> NodeJS, Python, React, TypeScript, Ruby, Solidity, IPFS, Rust, Infura, EtherJS, Web3JS, C#, WPF, Electron, Flutter, Cordova, PassportJS, Auth0, Firebase, PostgreSQL, Redis, MySQL, Memcached, MongoDB, MSSQL</p>
     </div>
 </section>
-<section class="Column">
-    <a class="NoDecoration" name="solutions"></a>
-    <h2>Simplicity in Every Solution</h2>
+
+<section class="Column bg-black">
+    <a class="no-decoration" name="solutions"></a>
+    <h2><a href="/solutions/" class="no-decoration">Simplicity in Every Solution</a></h2>
     <hr class="hrDeco">
     <div class="solutionsText">
         <p class="subheader">Navigate the future of business<br>
@@ -131,6 +135,7 @@ title: Data In, Meaning Out
         </div>
     </div>
 </section>
+
 <section class="Column mainRevert">
     <h2>Bespoke Applications</h2>
     <hr class="hrDeco">
@@ -141,35 +146,35 @@ title: Data In, Meaning Out
         <div class="app">
             <img src="/assets/img/common/apps/app-atlas.png" alt="">
             <p>
-                <strong><a href="">Atlas ERP</a></strong><br>
+                <strong><a href="/solutions/atlas/">Atlas ERP</a></strong><br>
                 Visualized ERP System
             </p>
         </div>
         <div class="app">
             <img src="/assets/img/common/apps/app-columbus.png" alt="">
             <p>
-                <strong><a href="">Columbus</a></strong><br>
+                <strong><a href="/solutions/columbus/">Columbus</a></strong><br>
                 Automated Sales Navigator
             </p>
         </div>
         <div class="app">
             <img src="/assets/img/common/apps/app-forecast.png" alt="">
             <p>
-                <strong><a href="">Forecast App</a></strong><br>
+                <strong><a href="/solutions/forecast/">Forecast App</a></strong><br>
                 Predictive Analytics
             </p>
         </div>
         <div class="app">
             <img src="/assets/img/common/apps/app-fanfare.png" alt="">
             <p>
-                <strong><a href="">Fanfare</a></strong><br>
+                <strong><a href="/solutions/fanfare/">Fanfare</a></strong><br>
                 Loyalty Management System
             </p>
         </div>
         <div class="app">
             <img src="/assets/img/common/apps/app-concierge.png" alt="">
             <p>
-                <strong><a href="">Concierge App</a></strong><br>
+                <strong><a href="/solutions/jeeves/">Concierge App</a></strong><br>
                 Personal GPT Assistant
             </p>
         </div>
@@ -178,7 +183,8 @@ title: Data In, Meaning Out
         <p>Customized, turnkey apps that epitomize sophistication.<br>Impeccably crafted to resonate with your enterprise’s unique rhythm</p>
     </div>
 </section>
-<section class="oneApp">
+
+<section class="oneApp bg-black">
     <h2>One Interface. Infinite Control</h2>
     <hr class="hrDeco">
     <p class="subheader">Online data analisys in simple words</p>
@@ -212,7 +218,7 @@ title: Data In, Meaning Out
         <div class="feedback">
         </div>
 </section> -->
-<section class="sectionPricing">
+<section class="sectionPricing bg-black">
     <a class="noDecor" name="pricing"></a>
     <h2>Pricing for Your Happiness</h2>
     <hr class="hrDeco">
@@ -226,9 +232,10 @@ title: Data In, Meaning Out
         <div class="pricingImg"></div>
     </div>
 </section>
-<section class="Newsroom">
-    <a class="NoDecoration" name="newsroom"></a>
-    <h2><a class="NoDecoration" href="/about/newsroom">Newsroom</a></h2>
+
+<section class="Newsroom bg-black">
+    <a class="no-decoration" name="newsroom"></a>
+    <h2><a class="no-decoration" href="/about/newsroom">Newsroom</a></h2>
     <hr class="hrDeco">
     <p class="subheader">Stay up to date with news that matters</p>
     <div class="newsMain">
@@ -248,7 +255,8 @@ title: Data In, Meaning Out
         {% endfor %}
     </div>
 </section>
-<section class="sectionContacts">
+
+<section class="sectionContacts bg-black">
     <a name="demo"></a>
     <h2>Experience Rare Digits</h2>
     <hr class="hrDeco">

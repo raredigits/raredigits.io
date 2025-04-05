@@ -5,22 +5,32 @@
     {% include /special/constructionHeader.html %}
     
     <main>
-        <div class="Content SiteMaxWidth">
-            <div class="Breadcrumbs">
-                <a href="/about/newsroom/">Newsroom</a>
-            </div>
-            <h1>{{ page.title }}</h1>
-            <p class="Eyebrow">{{ page.date | date: "%d.%m.%Y" }}
-            {% if page.tags %}
-                {% for tag in page.tags %}
-                        <span class="Tag">#{{ tag }}</span>
-                {% endfor %}
-            {% endif %}
-            </p>
-            <article>
+        <div class="content-wrapper">
+            <aside class="sidebar">
+                <span class="uppercase bold">
+                    <a class="no-decoration" href="/about/newsroom/">Newsroom</a>
+                </span>
+                <p class="eyebrow">
+                    {% if page.category %}
+                        {{ page.category }}<br>
+                    {% endif %}
+                    {% if page.date %}
+                    {{ page.date | date: "%B %d, %Y" }}<br>
+                    {% endif %}
+                </p>
+                <p>
+                    {% if page.tags %}
+                        {% for tag in page.tags %}
+                        <span class="tag">#{{ tag }}</span>
+                        {% endfor %}
+                    {% endif %}
+                </p>
+            </aside>
+            {% include title.html %}
+            <section class="page-content">
                 {{ content }}
                 {% include /special/pressOffice.html %}
-            </article>
+            </section>
         </div>
     </main>
 </div>

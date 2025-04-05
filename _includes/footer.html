@@ -1,9 +1,9 @@
 <footer>
-  <div class="SiteMaxWidth Column">
-    <div class="Flex GapMd">
+  <div class="site-max-width column">
+    <div class="grid-columns-md">
       {% include /menu/footer-solutions.html %}
       {% include /menu/footer-services.html %}
-      <div class="Quarter">
+      <div>
         <h3>Subscriprions</h3>
         <ul>
           <li><a href="">Junior Associate</a></li>
@@ -20,11 +20,12 @@
 
     <div class="Row Stretched BorderTop">
       <div>
-        © 2023—{{ site.time | date: '%Y' }}  {{ site.title }}<br>
-        {{ site.description }}
-        <p>
+        <p>{{ site.description }}:<br>
           <a href="mailto:{{ site.email }}">{{ site.email }}</a>
         </p>
+      </div>
+      <div class="right">
+        <p>© 2023—{{ site.time | date: '%Y' }}  {{ site.title }}</p>
       </div>
     </div>
   </div>

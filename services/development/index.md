@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Development
+title: Custom Development
 offset: services
 permalink: /services/development/
 ---
 
-# Custom Development
+# 
 
 ## When You Need Something That Doesn't Exist Yet
 
@@ -17,7 +17,9 @@ That's when we roll up our sleeves and build it ourselves.
 
 Custom software development often falls victim to overengineering—building complex architectures and flexibility that you'll never actually use. It's like commissioning a custom Swiss Army knife with 200 tools when you really just need a good hammer.
 
-![](/assets/img/illustrations/rare-development.jpg)
+<div class="full-width">
+  <img src="/assets/img/illustrations/rare-development.jpg" />
+</div>
 
 This all points to an industry dirty secret: custom projects are notorious for running over time, over budget, and under expectations. Clients enter with optimism and exit with battle scars, wondering how a "six-month project" turned into a two-year odyssey.
 

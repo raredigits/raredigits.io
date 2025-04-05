@@ -1,20 +1,20 @@
 ---
 layout: page
-title: Rare Value
+title: Value That Matters
 offset: about
 permalink: /about/value/
 ---
-
-# Value That Matters
 
 Let's cut to the chase—business software should do more than exist on your servers. 
 
 At Rare Digits, we firmly believe nobody wakes up excited to purchase another software license. What they're actually buying is a solution to a problem.
 
 Our value proposition is refreshingly simple: 
-<div class="Highlight">we turn your mountain of confusing data into a crystal-clear neatly assembled peices of actionable insights.</div>
+<div class="highlight">we turn your mountain of confusing data into a crystal-clear neatly assembled peices of actionable insights.</div>
 
-![](/assets/img/illustrations/value.jpg)
+<div class="full-width">
+  <img src="/assets/img/illustrations/value.jpg" />
+</div>
 
 ## Beyond Data Collection
 

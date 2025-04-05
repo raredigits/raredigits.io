@@ -1,11 +1,10 @@
 ---
 layout: page
-title: Security
+title: Beyond Firewalls and Passwords
 offset: services
 permalink: /services/security/
 ---
 
-# Beyond Firewalls and Passwords
 
 ## What Security Really Means at Rare Digits
 
@@ -13,7 +12,9 @@ When most companies talk about security, they immediately jump to firewalls, int
 
 For us, true security means **ensuring your business-critical data is available when you need it, performing at the speed you require, and structured in ways that create genuine business value**.
 
-![](/assets/img/illustrations/rare_security.jpg)
+<div class="full-width">
+  <img src="/assets/img/illustrations/rare_security.jpg" />
+</div>
 <cite>Rare Security Officer</cite>
 
 ## Data Availability: The Security Most Businesses Actually Need
@@ -24,7 +25,7 @@ Let's be honest—what's more damaging to your daily operations?
 
 For most of our clients, system availability and performance issues cause far more "security incidents" than actual breaches. 
 
-<div class="Highlight">That's why our security services start with ensuring your data is always accessible when you need it.</div>
+<div class="highlight">That's why our security services start with ensuring your data is always accessible when you need it.</div>
 
 ## Load Distribution & System Architecture
 

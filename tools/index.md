@@ -1,11 +1,9 @@
 ---
 layout: page
-title: Rare Solutions
+title: Rare Contributions
 offset: solutions
 permalink: /tools/
 ---
-
-# Rare Solutions
 
 Here are the tools and approaches we've developed while helping businesses stop leaking money in creative ways. Our methods work. Not because we say so (everyone says that), but because we've been profitably applying them to our own business since 2009.
 

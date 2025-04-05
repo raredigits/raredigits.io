@@ -2,9 +2,8 @@
 layout: page
 title: Fanfare
 offset: solutions
+remark: 'Current version: v.1.0.5'
 permalink: /tools/fanfare/
 ---
-
-# Fanfare Loyalty
 
 <div class="Space">{% include /special/constructionNotice.html %}</div>

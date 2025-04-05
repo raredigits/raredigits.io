@@ -1,11 +1,9 @@
 ---
 layout: page
-title: Support
+title: No Chatbots, No Scripts, No Excuses
 offset: services
 permalink: /services/support/
 ---
-
-# No Chatbots, No Scripts, No Excuses
 
 ## Support Shouldn't Be Necessary
 
@@ -25,11 +23,13 @@ When you need help, you don't want to:
 
 Our radical approach? 
 
-<div class="Highlight">When you contact support, you connect directly with our technical directors—the same people who oversee the development of our solutions. They understand the problem because they built them.</div>
+<div class="highlight">When you contact support, you connect directly with our technical directors—the same people who oversee the development of our solutions. They understand the problem because they built them.</div>
 
 ## Technical Directors as Your First Line of Support
 
-![](/assets/img/illustrations/rare_support.jpg)
+<div class="full-width">
+  <img src="/assets/img/illustrations/rare_support.jpg" />
+</div>
 <cite>Rare Support Frontline</cite>
 
 Yes, you read that correctly. Your support requests go straight to our technical leadership. Why?

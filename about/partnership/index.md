@@ -5,17 +5,18 @@ offset: about
 permalink: /about/partnership/
 ---
 
-# Partnership
 One of the great ironies of business is that everyone talks about getting to the top, but almost no one wants to discuss what's at the bottom. This is odd because, as it turns out, the bottom parts tend to be quite important. Burj Khalifa would be considerably less impressive if its first few floors were made of papier-mâché and optimistic thinking, right?
 
-![Human Pyramid](/assets/img/illustrations/human_pyramid.jpg)
+<div class="full-width">
+  <img src="/assets/img/illustrations/human_pyramid.jpg" />
+</div>
 
 ## Building Pyramid
 A curious thing about financial leverage is that everyone talks about it like it's potentially dangerous, yet everyone uses it anyway. Banks are essentially leverage machines. Venture capitalists enthusiastically apply it. Even your mortgage is just leverage wearing casual Friday clothes.
 
 The same principle applies to sales. You could theoretically sell everything yourself, one conversation at a time, like a financial advisor explaining diversification to each client individually. Or you could do what actually works: 
 
-<div class="Highlight">build a growing network of professional agents who can explain your product while you sleep, which is the sales equivalent of making your leverage work for you.</div>
+<div class="highlight">build a growing network of professional agents who can explain your product while you sleep, which is the sales equivalent of making your leverage work for you.</div>
 
 ## Referal Program
 Referrals follow similar mathematics. There's an old saying that "the giving hand will not become empty," which sounds like mystical wisdom but is actually just good business arithmetic. When you share profits with people who bring you customers, everyone's balance sheet tends to improve. Strange how that works: revolutionary in theory, effective in practice.

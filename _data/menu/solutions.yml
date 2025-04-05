@@ -2,7 +2,7 @@
 
 items:
   - title: "Atlas ERP"
-    url: "/tools/atlas"
+    url: "/tools/atlas/"
 
   - title: "Corsair HQ"
     url: "/tools/corsair/"

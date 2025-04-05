@@ -1,3 +1,8 @@
+.NoticeStripe {
+    width: var(--site-max-width);
+    margin: var(--header-height) auto 0;
+}
+
 .ConstructionStripeMini {
     width: 100%;
     background: var(--yellow);
@@ -58,7 +63,7 @@
 
 .cookieText h3 {
     position: absolute;
-    top: -65px;
+    top: -80px;
     font-size: 3.5em;
 }
 

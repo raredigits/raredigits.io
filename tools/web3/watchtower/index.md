@@ -2,12 +2,13 @@
 layout: page
 title: Watchtower
 offset: solutions
+remark: 'Current version: v.0.1.2'
 permalink: /tools/web3/watchtower/
 ---
 
-# Watchtower v.0.1
-
-![](/assets/img/newsroom/2025/watchtower.jpg)
+<div class="full-width">
+  <img src="/assets/img/newsroom/2025/watchtower.jpg" />
+</div>
 
 ## Follow the Money Across the Web3 Wilderness
 

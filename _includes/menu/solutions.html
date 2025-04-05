@@ -1,37 +1,37 @@
-<div class="Sidebar">
-    <span class="SidebarHeader"><a class="NoDecoration" href="/tools/">Solutions</a></span>
-    <nav class="SidebarNav">
-      <ul>
-        {% for item in site.data.menu.solutions.items %}
-          <li class="{% if page.url == item.url %}Bold{% endif %}">
-            {% if page.url == item.url %}
-              {{ item.title }}
-            {% else %}
-              <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
+<span class="sidebar-header">
+  <a class="no-decoration" href="/tools/">Solutions</a>
+</span>
+<nav class="sidebar-nav no-scrollbar">
+  <ul>
+    {% for item in site.data.menu.solutions.items %}
+      <li class="{% if page.url == item.url %}bold{% endif %}">
+        {% if page.url == item.url %}
+          {{ item.title }}
+        {% else %}
+          <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
 
-      {% if site.data.menu.solutions.featured %}
-        <div class="SidebarSection MobileHidden">
-        <span class="SidebarHeader">Featured</span>
-        <ul>
-            {% for item in site.data.menu.solutions.featured %}
-            <li class="{% if item.badge %}Badge{% endif %}">
-                {% if item.badge %}{{ item.badge }}{% endif %}
-                <a href="{{ item.url | relative_url }}">
-                {{ item.title }}
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
-        </div>
-      {% endif %}
-        
-      <div class="SidebarSection MobileHidden">
-          <p>Need help?<br>
-          <a href="{{ site.baseurl }}/about/contacts">Let's chat!</a></p>
-      </div>
-    </nav>
+  {% if site.data.menu.solutions.featured %}
+    <div class="sidebar-section mobile-hidden">
+    <span class="sidebar-header">Featured</span>
+    <ul>
+        {% for item in site.data.menu.solutions.featured %}
+        <li class="{% if item.badge %}sidebar-badge{% endif %}">
+            {% if item.badge %}{{ item.badge }}{% endif %}
+            <a href="{{ item.url | relative_url }}">
+            {{ item.title }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    </div>
+  {% endif %}
+    
+  <div class="sidebar-section mobile-hidden">
+      <p>Need help?<br>
+      <a href="{{ site.baseurl }}/about/contacts">Let's chat!</a></p>
   </div>
+</nav>

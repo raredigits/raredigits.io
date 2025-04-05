@@ -5,15 +5,15 @@ offset: services
 permalink: /services/consulting/
 ---
 
-# The Same Problems, the Same Solutions, Just Different Names
-
 ## Your Business is Unique (Kind of)
 
 Every business believes it's fundamentally different from all others. You have your special sauce, your unique market position, your one-of-a-kind challenges that no one else could possibly understand.
 
 And to some extent, you're absolutely right. Your business is unique in many ways.
 
-![](/assets/img/illustrations/rare-consulting.jpg)
+<div class="full-width">
+  <img src="/assets/img/illustrations/rare-consulting.jpg" />
+</div>
 <cite>Rare Consulting Session</cite>
 
 But here's the uncomfortable truth most consultants won't tell you: beneath all those unique characteristics, businesses face remarkably similar problems. 
@@ -31,7 +31,7 @@ That's it. That's the big secret that most consulting firms will charge you six 
 
 Different industries use different terminology, but the core issues remain the same. A "conversion optimization challenge" in e-commerce is functionally identical to a "sales pipeline efficiency problem" in B2B software. 
 
-<div class="Highlight">It's all about improving the ratio between input and output.</div>
+<div class="highlight">It's all about improving the ratio between input and output.</div>
 
 ## You Already Know Where the Problems Are
 
