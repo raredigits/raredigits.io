@@ -107,7 +107,7 @@ title: Data In, Meaning Out
 
 <section class="Column bg-black">
     <a class="no-decoration" name="solutions"></a>
-    <h2><a href="/solutions/" class="no-decoration">Simplicity in Every Solution</a></h2>
+    <h2><a href="/tools/" class="no-decoration">Simplicity in Every Solution</a></h2>
     <hr class="hrDeco">
     <div class="solutionsText">
         <p class="subheader">Navigate the future of business<br>
@@ -146,35 +146,35 @@ title: Data In, Meaning Out
         <div class="app">
             <img src="/assets/img/common/apps/app-atlas.png" alt="">
             <p>
-                <strong><a href="/solutions/atlas/">Atlas ERP</a></strong><br>
+                <strong><a href="/tools/atlas/">Atlas ERP</a></strong><br>
                 Visualized ERP System
             </p>
         </div>
         <div class="app">
             <img src="/assets/img/common/apps/app-columbus.png" alt="">
             <p>
-                <strong><a href="/solutions/columbus/">Columbus</a></strong><br>
+                <strong><a href="/tools/columbus/">Columbus</a></strong><br>
                 Automated Sales Navigator
             </p>
         </div>
         <div class="app">
             <img src="/assets/img/common/apps/app-forecast.png" alt="">
             <p>
-                <strong><a href="/solutions/forecast/">Forecast App</a></strong><br>
+                <strong><a href="/tools/forecast/">Forecast App</a></strong><br>
                 Predictive Analytics
             </p>
         </div>
         <div class="app">
             <img src="/assets/img/common/apps/app-fanfare.png" alt="">
             <p>
-                <strong><a href="/solutions/fanfare/">Fanfare</a></strong><br>
+                <strong><a href="/tools/fanfare/">Fanfare</a></strong><br>
                 Loyalty Management System
             </p>
         </div>
         <div class="app">
             <img src="/assets/img/common/apps/app-concierge.png" alt="">
             <p>
-                <strong><a href="/solutions/jeeves/">Concierge App</a></strong><br>
+                <strong><a href="/tools/jeeves/">Concierge App</a></strong><br>
                 Personal GPT Assistant
             </p>
         </div>

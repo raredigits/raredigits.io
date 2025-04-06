@@ -3,10 +3,13 @@ layout: post
 title:  "Introducing Watchtower v.0.1"
 date:   2025-02-03 10:00:00 +0400
 cover: /assets/img/news/2023/
-categories: about
-tags: kitchen release web3
+category: Release
+tags: kitchen web3
 ---
-![](/assets/img/newsroom/2025/watchtower.jpg)
+
+<div class="full-width">
+  <img src="assets/img/newsroom/2025/watchtower.jpg" />
+</div>
 
 ## Follow the Money Across the Web3 Wilderness
 

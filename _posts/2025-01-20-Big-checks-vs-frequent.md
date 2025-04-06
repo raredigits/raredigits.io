@@ -3,15 +3,17 @@ layout: post
 title:  "Big Checks vs. Frequent Buyers"
 date:   2025-01-20 10:00:00 +0400
 cover: /assets/img/news/2023/
-categories: insight
-tags: core
+category: Insights
+tags: business
 ---
 
 The eternal business question: should you court the whale clients who write enormous checks twice a year, or cultivate a school of minnows who pay smaller amounts but with clockwork regularity?
 
 If consultants have told you "it depends," they're not being evasive—they're being honest. But "it depends" without explaining what it depends on is about as useful as a chocolate teapot.
 
-![](/assets/img/newsroom/2025/big_check.jpg)
+<div class="full-width">
+  <img src="/assets/img/newsroom/2025/big_check.jpg" />
+</div>
 
 ## The Real Deciding Factor: Your Business Capacity
 

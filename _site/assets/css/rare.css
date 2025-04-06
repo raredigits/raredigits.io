@@ -23,7 +23,7 @@
     --yellow: #ffe000;
 
     --card-border: 1px solid #ddd;
-    --border-color: #ddd;
+    --border-color: #000;
     --border-radius: 6px;
   
     --primary-font: 'PT Sans', sans-serif;
@@ -32,6 +32,7 @@
     --font-size-sm: 14px;
     --font-size-lg: 28px;
   
+    --space-xs: 4px;
     --space-sm: 8px;
     --space-md: 16px;
     --space-lg: 32px;
@@ -93,7 +94,7 @@
     position: sticky;
     height: 100%;
     top: var(--header-height);
-    flex: 1 1 var(--sidebar);
+    width: var(--sidebar);
     order: 2;
     z-index: 1000;
   }
@@ -101,6 +102,7 @@
   .page-title {
     flex: 1 1 100%;
     order: 1;
+    padding: var(--space-md) 0;
   }
 
   .page-content {
@@ -334,11 +336,13 @@
 
     .sidebar {
       width: 100%;
-      position: static;
+      position: sticky;
       display: flex;
       flex-flow: row nowrap;
+      align-items: flex-end;
       gap: var(--space-md);
-      padding-bottom: var(--space-sm);
+      background: var(--header-bg);
+      padding: var(--space-sm) 0;
       border-bottom: 1px solid var(--border-color);
       order: 1;
     }

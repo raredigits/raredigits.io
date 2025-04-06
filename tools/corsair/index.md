@@ -27,29 +27,31 @@ Sound familiar?
 Corsair HQ performs three services that shouldn't be revolutionary but somehow are:
 
 <div class="wide-background">
-  <div class="site-max-width">
-      <div class="wide-background-content row overflow-x gap-space no-scrollbar">
-        <div class="column stretched">
-            <div>
-                <h3>First,</h3>
-                <p>It filters the data firehose down to potable water. Your existing systems generate information with the restraint of a fire hydrant that's been hit by a truck. Corsair applies filters that separate "needs executive attention" from "technically data but practically noise."</p>
+  <div class="wide-background-wrapper">
+      <div class="scroll-container">
+          <div class="wide-background-content row gap-lg no-scrollbar overflow-x">
+            <div class="column stretched">
+                <div>
+                    <h3>First,</h3>
+                    <p>It filters the data firehose down to potable water.</p><p>Your existing systems generate information with the restraint of a fire hydrant that's been hit by a truck. Corsair applies filters that separate "needs executive attention" from "technically data but practically noise."</p>
+                </div>
+                <img class="height-70vh" src="/assets/img/illustrations/products/corsair/corsair-mobile-1.png">
             </div>
-            <img class="height-70vh" src="/assets/img/illustrations/products/corsair/corsair-mobile-1.png">
-        </div>
-        <div class="column stretched">
-            <div>
-                <h3>Second,</h3>
-                <p>It connects information that should already be connected but isn't. Sales data talks to inventory data, customer acquisition costs connect to lifetime value, and department profitability metrics acknowledge the existence of overhead expenses.</p>
+            <div class="column stretched">
+                <div>
+                    <h3>Second,</h3>
+                    <p>It connects information that should already be connected but isn't.</p><p>Sales data talks to inventory data, customer acquisition costs connect to lifetime value, and department profitability metrics acknowledge the existence of overhead expenses.</p>
+                </div>
+                <img class="height-70vh" src="/assets/img/illustrations/products/corsair/corsair-mobile-2.png">
             </div>
-            <img class="height-70vh" src="/assets/img/illustrations/products/corsair/corsair-mobile-2.png">
-        </div>
-        <div class="column stretched">
-            <div>
-                <h3>Third,</h3>
-                <p>It surfaces problems before they become financial cardiac events. The dashboard doesn't just show where you are; it shows where trouble is brewing, using the radical approach of comparing actual performance to what needs to happen for your business to survive.</p>
-            </div>
-            <img class="height-70vh" src="/assets/img/illustrations/products/corsair/corsair-mobile-3.png">
-        </div>
+            <div class="column stretched">
+                <div>
+                    <h3>Third,</h3>
+                    <p>It surfaces problems before they become financial cardiac events.</p><p>The dashboard doesn't just show where you are; it shows where trouble is brewing, using the radical approach of comparing actual performance to what needs to happen for your business to survive.</p>
+                </div>
+                <img class="height-70vh" src="/assets/img/illustrations/products/corsair/corsair-mobile-3.png">
+            </div> 
+          </div>
       </div>
   </div>
 </div>

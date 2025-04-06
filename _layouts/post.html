@@ -7,17 +7,15 @@
     <main>
         <div class="content-wrapper">
             <aside class="sidebar">
-                <span class="uppercase bold">
+                <div class="sidebar-header">
                     <a class="no-decoration" href="/about/newsroom/">Newsroom</a>
-                </span>
-                <p class="eyebrow">
+                </div>
                     {% if page.category %}
-                        {{ page.category }}<br>
+                        <div class="eyebrow">{{ page.category }}</div>
                     {% endif %}
                     {% if page.date %}
-                    {{ page.date | date: "%B %d, %Y" }}<br>
+                        <div class="eyebrow">{{ page.date | date: "%B %d, %Y" }}</div>
                     {% endif %}
-                </p>
                 <p>
                     {% if page.tags %}
                         {% for tag in page.tags %}
