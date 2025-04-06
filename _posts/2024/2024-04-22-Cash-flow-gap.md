@@ -2,8 +2,8 @@
 layout: post
 title:  "Cash Flow Gaps Solution"
 date:   2024-04-22 10:00:00 +0400
-cover: /assets/img/news/2023/
-categories: insight
+cover: /assets/img/newsroom/2024/cash-flow-gaps.jpg
+category: Insights
 tags: finance
 ---
 
@@ -21,9 +21,11 @@ Your business can be fundamentally profitable and still find itself gasping for 
 
 ## The Blindingly Obvious Solution Nobody Uses Properly
 
-![](/assets/img/newsroom/2024/cash-flow-gaps.jpg)
+The solution to temporary cash flow gaps has existed for approximately 5,000 years: borrowing money.
 
-The solution to temporary cash flow gaps has existed for approximately 5,000 years: borrowing money. 
+<div class="full-width">
+  <img src="{{ page.cover }}" />
+</div>
 
 Yet many small business owners treat banks like mysterious and hostile entities rather than what they actually are: businesses that literally exist to solve your cash flow problems (while making a profit, of course).
 
@@ -54,7 +56,7 @@ Try this thought experiment: Imagine raising your prices by the 5-7% that would 
 
 Cash flow problems don't kill healthy businesses. They kill fragile businesses with insufficient margins to absorb normal financial friction.
 
-## Your Action Plan (Because Articles Without Action Plans Are Just Complaints)
+## Your Action Plan
 
 1. **Check your business credit score today.** Not tomorrow, not next week. Today.
 2. **Open a small business line of credit while you don't need it.** The best time to secure financing is when your financials look strong.

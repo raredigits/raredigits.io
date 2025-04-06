@@ -51,6 +51,7 @@ nav ul {
 .nav-global a {
     color: var(--primary-color);
     text-decoration: none;
+    border: none;
 }
   
 .nav-global a:hover {

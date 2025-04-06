@@ -4,7 +4,7 @@ title:  "Big Checks vs. Frequent Buyers"
 date:   2025-01-20 10:00:00 +0400
 cover: /assets/img/news/2023/
 category: Insights
-tags: business
+tags: business core
 ---
 
 The eternal business question: should you court the whale clients who write enormous checks twice a year, or cultivate a school of minnows who pay smaller amounts but with clockwork regularity?

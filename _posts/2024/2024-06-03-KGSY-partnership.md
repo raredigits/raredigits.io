@@ -2,16 +2,18 @@
 layout: post
 title:  "When Intelligent Meets Rare"
 date:   2024-06-03 10:00:00 +0400
-cover: /assets/img/news/2023/
-categories: about
+cover: /assets/img/newsroom/2024/chineese.jpg
+category: Expansion
 tags: partnership
 ---
-
-![](/assets/img/newsroom/2024/chineese.jpg)
 
 ## Chinese Manufacturing Giant Selects Rare Digits
 
 We're excited to announce that [Intelligent Technologies](https://www.chinakgsy.com), the Chinese industrial powerhouse moving an impressive 50,000 tons of product annually, has chosen Rare Digits to revolutionize their data management systems.
+
+<div class="full-width">
+  <img src="{{ page.cover }}" />
+</div>
 
 ## Smart Choice for Massive Operations
 
@@ -31,7 +33,8 @@ With volumes this substantial, efficiency isn't just desirable—it's essential 
 
 In manufacturing, efficiency on the factory floor must be matched by efficiency in the boardroom. When decision-makers at Intelligent Technologies evaluated potential data partners, they weren't looking for flashy presentations—they were seeking tangible results.
 
-Their selection of Rare Digits confirms our approach: when your business operates at industrial scale, your data management needs to be equally robust.
+Their selection of Rare Digits confirms our approach: 
+<div class="highlight">when your business operates at industrial scale, your data management needs to be equally robust.</div>
 
 ## Data In, Meaning Out (Across Continents)
 

@@ -3,13 +3,17 @@ layout: post
 title:  "How Lending Assessment Practices Can Revolutionize Auto Repair Shop's Cash Flow"
 date:   2025-01-13 10:00:00 +0400
 cover: /assets/img/news/2023/
-categories: insight
+category: Insights
 tags: finance forecast
 ---
 
-Ever wondered why banks sleep soundly while your auto repair shop suffers from payment anxiety? Simple: they've mastered the dark art of predicting who will actually pay. Good news—you can steal their techniques.
+Ever wondered why banks sleep soundly while your auto repair shop suffers from payment anxiety? Simple: they've mastered the dark art of predicting who will actually pay. 
 
-![](/assets/img/newsroom/2025/auto_mechanic.jpg)
+Good news—you can steal their techniques.
+
+<div class="full-width">
+  <img src="/assets/img/newsroom/2025/auto_mechanic.jpg" />
+</div>
 <cite>"Is this even going to be paid for?"</cite>
 
 ## The Problem: Schrödinger's Payment
@@ -81,4 +85,4 @@ Banks don't extend credit based on good feelings or optimism—they use systems.
 
 Remember: hope is not a financial strategy. Systematic payment prediction is.
 
-Try to use [Corsair HQ](/tools/corsair) to evaluate posibilities of forecasting.
+Try to use [Forecast App](/tools/forecast/) to evaluate posibilities of forecasting.

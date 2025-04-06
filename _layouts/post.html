@@ -16,13 +16,13 @@
                     {% if page.date %}
                         <div class="eyebrow">{{ page.date | date: "%B %d, %Y" }}</div>
                     {% endif %}
-                <p>
+                <div class="sidebar-section mobile-hidden">
                     {% if page.tags %}
                         {% for tag in page.tags %}
-                        <span class="tag">#{{ tag }}</span>
+                        <span class="tag">{{ tag }}</span>
                         {% endfor %}
                     {% endif %}
-                </p>
+                </div>
             </aside>
             {% include title.html %}
             <section class="page-content">

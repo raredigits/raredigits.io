@@ -2,9 +2,9 @@
 layout: post
 title:  "A Few Words About the Security of Your Website"
 date:   2024-05-06 10:00:00 +0400
-cover: /assets/img/news/2023/
-categories: insight
-tags: security
+cover: /assets/img/newsroom/2024/digital_security.jpg
+category: Insights
+tags: security web
 ---
 
 ## The Uncomfortable Truth Most Security Companies Won't Tell You
@@ -17,8 +17,9 @@ But that would be marketing dishonesty, and we prefer a different approach: the 
 
 Here's the reality most security companies don't want you to know: unless you're running a major financial institution, government agency, or storing particularly juicy data, hackers probably aren't specifically targeting you.
 
-![](/assets/img/newsroom/2024/digital_security.jpg)
-
+<div class="full-width">
+  <img src="{{ page.cover }}" />
+</div>
 <cite>Working day of your digital security officer</cite>
 
 Most website owners face the digital equivalent of opportunistic pickpockets—automated bots scanning for common vulnerabilities—not Ocean's Eleven-style master criminals planning elaborate heists against your specific site.

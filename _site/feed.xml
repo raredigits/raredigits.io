@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-04-06T18:14:31+04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Rare Digits</title><subtitle>Data In, Meaning Out</subtitle><entry><title type="html">Introducing Watchtower v.0.1</title><link href="http://localhost:4000/newsroom/Introducing-Whatchtower/" rel="alternate" type="text/html" title="Introducing Watchtower v.0.1" /><published>2025-02-03T10:00:00+04:00</published><updated>2025-02-03T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Introducing-Whatchtower</id><content type="html" xml:base="http://localhost:4000/newsroom/Introducing-Whatchtower/"><![CDATA[<div class="full-width">
-  <img src="assets/img/newsroom/2025/watchtower.jpg" />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-04-07T00:59:40+04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Rare Digits</title><subtitle>Data In, Meaning Out</subtitle><entry><title type="html">Introducing Watchtower v.0.1</title><link href="http://localhost:4000/newsroom/Introducing-Whatchtower/" rel="alternate" type="text/html" title="Introducing Watchtower v.0.1" /><published>2025-02-03T10:00:00+04:00</published><updated>2025-02-03T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Introducing-Whatchtower</id><content type="html" xml:base="http://localhost:4000/newsroom/Introducing-Whatchtower/"><![CDATA[<div class="full-width">
+  <img src="/assets/img/newsroom/2025/watchtower.jpg" />
 </div>
 
 <h2 id="follow-the-money-across-the-web3-wilderness">Follow the Money Across the Web3 Wilderness</h2>
@@ -135,10 +135,14 @@
 
 <p>If your business lacks the capacity reserves to handle whale-sized client demands or the operational efficiency to service a minnow school profitably, the solution isn’t a different client strategy—it’s a fundamental business redesign.</p>
 
-<p>The best client mix isn’t the one that sounds most impressive at industry conferences. It’s the one that allows you to sleep at night while your bank account grows.</p>]]></content><author><name></name></author><category term="Insights" /><category term="business" /><summary type="html"><![CDATA[The eternal business question: should you court the whale clients who write enormous checks twice a year, or cultivate a school of minnows who pay smaller amounts but with clockwork regularity?]]></summary></entry><entry><title type="html">How Lending Assessment Practices Can Revolutionize Auto Repair Shop’s Cash Flow</title><link href="http://localhost:4000/newsroom/Lending-Scoring-Practice/" rel="alternate" type="text/html" title="How Lending Assessment Practices Can Revolutionize Auto Repair Shop’s Cash Flow" /><published>2025-01-13T10:00:00+04:00</published><updated>2025-01-13T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Lending-Scoring-Practice</id><content type="html" xml:base="http://localhost:4000/newsroom/Lending-Scoring-Practice/"><![CDATA[<p>Ever wondered why banks sleep soundly while your auto repair shop suffers from payment anxiety? Simple: they’ve mastered the dark art of predicting who will actually pay. Good news—you can steal their techniques.</p>
+<p>The best client mix isn’t the one that sounds most impressive at industry conferences. It’s the one that allows you to sleep at night while your bank account grows.</p>]]></content><author><name></name></author><category term="Insights" /><category term="business" /><category term="core" /><summary type="html"><![CDATA[The eternal business question: should you court the whale clients who write enormous checks twice a year, or cultivate a school of minnows who pay smaller amounts but with clockwork regularity?]]></summary></entry><entry><title type="html">How Lending Assessment Practices Can Revolutionize Auto Repair Shop’s Cash Flow</title><link href="http://localhost:4000/newsroom/Lending-Scoring-Practice/" rel="alternate" type="text/html" title="How Lending Assessment Practices Can Revolutionize Auto Repair Shop’s Cash Flow" /><published>2025-01-13T10:00:00+04:00</published><updated>2025-01-13T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Lending-Scoring-Practice</id><content type="html" xml:base="http://localhost:4000/newsroom/Lending-Scoring-Practice/"><![CDATA[<p>Ever wondered why banks sleep soundly while your auto repair shop suffers from payment anxiety? Simple: they’ve mastered the dark art of predicting who will actually pay.</p>
 
-<p><img src="/assets/img/newsroom/2025/auto_mechanic.jpg" alt="" />
-<cite>“Is this even going to be paid for?”</cite></p>
+<p>Good news—you can steal their techniques.</p>
+
+<div class="full-width">
+  <img src="/assets/img/newsroom/2025/auto_mechanic.jpg" />
+</div>
+<p><cite>“Is this even going to be paid for?”</cite></p>
 
 <h2 id="the-problem-schrödingers-payment">The Problem: Schrödinger’s Payment</h2>
 
@@ -223,7 +227,9 @@
 
 <p>Remember: hope is not a financial strategy. Systematic payment prediction is.</p>
 
-<p>Try to use <a href="/tools/corsair">Corsair HQ</a> to evaluate posibilities of forecasting.</p>]]></content><author><name></name></author><category term="insight" /><category term="finance" /><category term="forecast" /><summary type="html"><![CDATA[Ever wondered why banks sleep soundly while your auto repair shop suffers from payment anxiety? Simple: they’ve mastered the dark art of predicting who will actually pay. Good news—you can steal their techniques.]]></summary></entry><entry><title type="html">Introducing Corsair HQ</title><link href="http://localhost:4000/newsroom/Introducing-Corsair-HQ/" rel="alternate" type="text/html" title="Introducing Corsair HQ" /><published>2024-11-18T10:00:00+04:00</published><updated>2024-11-18T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Introducing-Corsair-HQ</id><content type="html" xml:base="http://localhost:4000/newsroom/Introducing-Corsair-HQ/"><![CDATA[<p><img src="/assets/img/newsroom/2024/corsair.jpg" alt="" /></p>
+<p>Try to use <a href="/tools/forecast/">Forecast App</a> to evaluate posibilities of forecasting.</p>]]></content><author><name></name></author><category term="Insights" /><category term="finance" /><category term="forecast" /><summary type="html"><![CDATA[Ever wondered why banks sleep soundly while your auto repair shop suffers from payment anxiety? Simple: they’ve mastered the dark art of predicting who will actually pay.]]></summary></entry><entry><title type="html">Introducing Corsair HQ</title><link href="http://localhost:4000/newsroom/Introducing-Corsair-HQ/" rel="alternate" type="text/html" title="Introducing Corsair HQ" /><published>2024-11-18T10:00:00+04:00</published><updated>2024-11-18T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Introducing-Corsair-HQ</id><content type="html" xml:base="http://localhost:4000/newsroom/Introducing-Corsair-HQ/"><![CDATA[<div class="full-width">
+  <img src="/assets/img/newsroom/2024/corsair.jpg" />
+</div>
 
 <p>In what financial analysts are calling “the least unnecessary software launch of the decade,” Rare Digits has released <a href="/tools/corsair/">Corsair HQ</a>, a revolutionary executive intelligence platform designed for business leaders who are tired of pretending they understand their own company’s reports.</p>
 
@@ -251,7 +257,7 @@
 
 <p>Corsair HQ is available immediately for businesses that have grown tired of the “throw more dashboards at the problem” approach to financial visibility. For more information or to schedule a demonstration where we show you what your business is actually doing rather than what your department heads say it’s doing, contact the Rare Digits team today.</p>
 
-<p>Remember: in the world of business intelligence, the ability to see clearly with one eye is worth more than being blind with two.</p>]]></content><author><name></name></author><category term="about" /><category term="kitchen" /><category term="release" /><category term="erp" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Pardon Our Digital Dust</title><link href="http://localhost:4000/newsroom/Reconstruction/" rel="alternate" type="text/html" title="Pardon Our Digital Dust" /><published>2024-09-02T10:00:00+04:00</published><updated>2024-09-02T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Reconstruction</id><content type="html" xml:base="http://localhost:4000/newsroom/Reconstruction/"><![CDATA[<p>Sometimes the best investments require a little temporary inconvenience. Like when your favorite neighborhood restaurant closes for renovations and you’re forced to cook at home, discovering that your culinary skills peaked with microwave ramen.</p>
+<p>Remember: in the world of business intelligence, the ability to see clearly with one eye is worth more than being blind with two.</p>]]></content><author><name></name></author><category term="Release" /><category term="kitchen" /><category term="erp" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Pardon Our Digital Dust</title><link href="http://localhost:4000/newsroom/Reconstruction/" rel="alternate" type="text/html" title="Pardon Our Digital Dust" /><published>2024-09-02T10:00:00+04:00</published><updated>2024-09-02T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Reconstruction</id><content type="html" xml:base="http://localhost:4000/newsroom/Reconstruction/"><![CDATA[<p>Sometimes the best investments require a little temporary inconvenience. Like when your favorite neighborhood restaurant closes for renovations and you’re forced to cook at home, discovering that your culinary skills peaked with microwave ramen.</p>
 
 <h2 id="whats-happening">What’s Happening?</h2>
 
@@ -296,9 +302,11 @@
 
 <p>Thank you for your understanding and patience during this upgrade. After all, if financial markets can recover from temporary disruptions, so can websites — usually with better returns on investment.</p>]]></content><author><name></name></author><category term="Internal Affairs" /><category term="kitchen" /><summary type="html"><![CDATA[Sometimes the best investments require a little temporary inconvenience. Like when your favorite neighborhood restaurant closes for renovations and you’re forced to cook at home, discovering that your culinary skills peaked with microwave ramen.]]></summary></entry><entry><title type="html">Rare Digits Now Officially Managing the Future</title><link href="http://localhost:4000/newsroom/Destination-partnership/" rel="alternate" type="text/html" title="Rare Digits Now Officially Managing the Future" /><published>2024-07-31T10:00:00+04:00</published><updated>2024-07-31T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Destination-partnership</id><content type="html" xml:base="http://localhost:4000/newsroom/Destination-partnership/"><![CDATA[<h2 id="technically-speaking">(Technically Speaking)</h2>
 
-<p><img src="/assets/img/newsroom/2024/destination.jpg" alt="" /></p>
-
 <p>We’re excited to announce that Rare Digits has formed a strategic partnership with <a href="https://www.destination-future.com">Destination Future</a>, the multi-national technology provider operating across three countries and specializing in Smart Networks, High-Performance Computing, Automation, and IoT solutions.</p>
+
+<div class="full-width">
+  <img src="/assets/img/newsroom/2024/destination.jpg" />
+</div>
 
 <h2 id="from-data-to-destiny">From Data to Destiny</h2>
 
@@ -326,9 +334,9 @@
 
 <p>And that’s exactly what we deliver.</p>
 
-<hr />
-
-<p><em>Note: While we’re technically managing systems that shape the future, Rare Digits cannot be held responsible for paradoxes, timeline disruptions, or butterfly effects. We’re working on a dashboard for those too, but it’s still in beta.</em></p>]]></content><author><name></name></author><category term="about" /><category term="partnership" /><summary type="html"><![CDATA[(Technically Speaking)]]></summary></entry><entry><title type="html">Product Management for IT Infrastructure</title><link href="http://localhost:4000/newsroom/Product-management-for-IT-infrastructure/" rel="alternate" type="text/html" title="Product Management for IT Infrastructure" /><published>2024-07-02T10:00:00+04:00</published><updated>2024-07-02T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Product-management-for-IT-infrastructure</id><content type="html" xml:base="http://localhost:4000/newsroom/Product-management-for-IT-infrastructure/"><![CDATA[<div class="constructionNotice">
+<blockquote>
+  <p>Note: While we’re technically managing systems that shape the future, Rare Digits cannot be held responsible for paradoxes, timeline disruptions, or butterfly effects. We’re working on a dashboard for those too, but it’s still in beta.</p>
+</blockquote>]]></content><author><name></name></author><category term="Expansion" /><category term="partnership" /><summary type="html"><![CDATA[(Technically Speaking)]]></summary></entry><entry><title type="html">Product Management for IT Infrastructure</title><link href="http://localhost:4000/newsroom/Product-management-for-IT-infrastructure/" rel="alternate" type="text/html" title="Product Management for IT Infrastructure" /><published>2024-07-02T10:00:00+04:00</published><updated>2024-07-02T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Product-management-for-IT-infrastructure</id><content type="html" xml:base="http://localhost:4000/newsroom/Product-management-for-IT-infrastructure/"><![CDATA[<div class="constructionNotice">
     <p>
         <span style="font-size: 2em">🚧</span>
     </p>
@@ -348,7 +356,9 @@
 
 <h2 id="a-business-love-story">A Business Love Story</h2>
 
-<p><img src="/assets/img/newsroom/2024/asiatech.jpg" alt="" /></p>
+<div class="full-width">
+  <img src="/assets/img/newsroom/2024/asiatech.jpg" />
+</div>
 
 <p>Asiatech isn’t just any company looking to optimize their operations. They’re a financial services provider specializing in online consumer lending—you know, the people who professionally decide who gets money, how much, and under what conditions. In other words, they’re in the business of making numbers work harder than a caffeine-addicted accountant during tax season.</p>
 
@@ -368,9 +378,7 @@
 
 <p>It’s like saying, “If we can prepare a meal that impresses Gordon Ramsay, your company holiday party is in extremely capable hands.”</p>
 
-<p>For businesses looking to understand their financial reality without the usual smoke, mirrors, and incomprehensible spreadsheets—well, you know where to find us. We’ve been vetted by people who professionally vet things for a living.</p>]]></content><author><name></name></author><category term="about" /><category term="partnership" /><category term="finance" /><category term="blessing" /><summary type="html"><![CDATA[In what might initially seem like unremarkable business news, Rare Digits has signed a contract with Philippine company Asiatech. But wait—there’s a financial plot twist that deserves your attention.]]></summary></entry><entry><title type="html">How to Determine if You Need to Urgently Invest in AI?</title><link href="http://localhost:4000/newsroom/Urgently-invest-in-AI/" rel="alternate" type="text/html" title="How to Determine if You Need to Urgently Invest in AI?" /><published>2024-06-04T10:00:00+04:00</published><updated>2024-06-04T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Urgently-invest-in-AI</id><content type="html" xml:base="http://localhost:4000/newsroom/Urgently-invest-in-AI/"><![CDATA[<p><img src="/assets/img/newsroom/2024/invest_in_ai.jpg" alt="" /></p>
-
-<p>You Don’t</p>
+<p>For businesses looking to understand their financial reality without the usual smoke, mirrors, and incomprehensible spreadsheets—well, you know where to find us. We’ve been vetted by people who professionally vet things for a living.</p>]]></content><author><name></name></author><category term="Expansion" /><category term="partnership" /><category term="finance" /><category term="blessing" /><summary type="html"><![CDATA[In what might initially seem like unremarkable business news, Rare Digits has signed a contract with Philippine company Asiatech. But wait—there’s a financial plot twist that deserves your attention.]]></summary></entry><entry><title type="html">How to Determine if You Need to Urgently Invest in AI?</title><link href="http://localhost:4000/newsroom/Urgently-invest-in-AI/" rel="alternate" type="text/html" title="How to Determine if You Need to Urgently Invest in AI?" /><published>2024-06-04T10:00:00+04:00</published><updated>2024-06-04T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Urgently-invest-in-AI</id><content type="html" xml:base="http://localhost:4000/newsroom/Urgently-invest-in-AI/"><![CDATA[<h2 id="you-dont">You Don’t</h2>
 
 <p>There. We’ve saved you countless hours of reading breathless tech blogs, attending overpriced conferences, and nodding thoughtfully while venture capitalists explain why your perfectly functional business is actually teetering on the edge of obsolescence without AI.</p>
 
@@ -378,13 +386,19 @@
 
 <h2 id="ai-is-the-new-paris-fashion-week">AI Is the New Paris Fashion Week</h2>
 
+<div class="full-width">
+  <img src="/assets/img/newsroom/2024/invest_in_ai.jpg" />
+</div>
+
 <p>Artificial Intelligence in its current form is remarkably similar to the latest haute couture trend strutting down Parisian runways. It might be genuinely innovative. It could potentially look spectacular on the right business. It’s definitely getting all the media attention and investor champagne toasts.</p>
 
 <p>But is it absolutely necessary for your business to adopt it immediately? About as necessary as your accounting department needs transparent plastic trousers and neon feather epaulets.</p>
 
 <p>Some AI applications are genuinely useful. Others are elaborate solutions frantically searching for problems. The difference lies not in how sophisticated the technology is, but in whether it solves an actual business need that can’t be addressed through simpler, more established means.</p>
 
-<p>Remember when every company suddenly needed a blockchain strategy? How’s that working out for the average mid-market business? Exactly.</p>
+<div class="highlight">Remember when every company suddenly needed a blockchain strategy? </div>
+
+<p>How’s that working out for the average mid-market business? Exactly.</p>
 
 <h2 id="the-golden-rule-of-ai-trust-issues-are-feature-not-bug">The Golden Rule of AI: Trust Issues Are Feature, Not Bug</h2>
 
@@ -426,11 +440,13 @@
 
 <p>So before panicking that you’re falling behind in the great AI race, remember: the tortoise who carefully evaluates technology based on business fundamentals often outperforms the hare frantically chasing every new digital shiny object.</p>
 
-<p>And if someone insists you need an urgent, company-wide AI strategy immediately? Ask them to have their recommendation double-checked by ChatGPT and see how confident they remain in the results.</p>]]></content><author><name></name></author><category term="insight" /><category term="AI" /><category term="automate" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">When Intelligent Meets Rare</title><link href="http://localhost:4000/newsroom/KGSY-partnership/" rel="alternate" type="text/html" title="When Intelligent Meets Rare" /><published>2024-06-03T10:00:00+04:00</published><updated>2024-06-03T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/KGSY-partnership</id><content type="html" xml:base="http://localhost:4000/newsroom/KGSY-partnership/"><![CDATA[<p><img src="/assets/img/newsroom/2024/chineese.jpg" alt="" /></p>
-
-<h2 id="chinese-manufacturing-giant-selects-rare-digits">Chinese Manufacturing Giant Selects Rare Digits</h2>
+<p>And if someone insists you need an urgent, company-wide AI strategy immediately? Ask them to have their recommendation double-checked by ChatGPT and see how confident they remain in the results.</p>]]></content><author><name></name></author><category term="Insights" /><category term="AI" /><category term="automate" /><summary type="html"><![CDATA[You Don’t]]></summary></entry><entry><title type="html">When Intelligent Meets Rare</title><link href="http://localhost:4000/newsroom/KGSY-partnership/" rel="alternate" type="text/html" title="When Intelligent Meets Rare" /><published>2024-06-03T10:00:00+04:00</published><updated>2024-06-03T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/KGSY-partnership</id><content type="html" xml:base="http://localhost:4000/newsroom/KGSY-partnership/"><![CDATA[<h2 id="chinese-manufacturing-giant-selects-rare-digits">Chinese Manufacturing Giant Selects Rare Digits</h2>
 
 <p>We’re excited to announce that <a href="https://www.chinakgsy.com">Intelligent Technologies</a>, the Chinese industrial powerhouse moving an impressive 50,000 tons of product annually, has chosen Rare Digits to revolutionize their data management systems.</p>
+
+<div class="full-width">
+  <img src="/assets/img/newsroom/2024/chineese.jpg" />
+</div>
 
 <h2 id="smart-choice-for-massive-operations">Smart Choice for Massive Operations</h2>
 
@@ -452,7 +468,8 @@
 
 <p>In manufacturing, efficiency on the factory floor must be matched by efficiency in the boardroom. When decision-makers at Intelligent Technologies evaluated potential data partners, they weren’t looking for flashy presentations—they were seeking tangible results.</p>
 
-<p>Their selection of Rare Digits confirms our approach: when your business operates at industrial scale, your data management needs to be equally robust.</p>
+<p>Their selection of Rare Digits confirms our approach:</p>
+<div class="highlight">when your business operates at industrial scale, your data management needs to be equally robust.</div>
 
 <h2 id="data-in-meaning-out-across-continents">Data In, Meaning Out (Across Continents)</h2>
 
@@ -460,4 +477,4 @@
 
 <p>We’re looking forward to demonstrating how our “<a href="/about/value/">Pure Performance, No Excess</a>” approach applies perfectly to their industrial-scale challenges.</p>
 
-<p>This partnership represents another significant step in Rare Digits’ expansion into international markets. Stay tuned for more news about how we’re helping global enterprises transform their data into actionable insights.</p>]]></content><author><name></name></author><category term="about" /><category term="partnership" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+<p>This partnership represents another significant step in Rare Digits’ expansion into international markets. Stay tuned for more news about how we’re helping global enterprises transform their data into actionable insights.</p>]]></content><author><name></name></author><category term="Expansion" /><category term="partnership" /><summary type="html"><![CDATA[Chinese Manufacturing Giant Selects Rare Digits]]></summary></entry></feed>

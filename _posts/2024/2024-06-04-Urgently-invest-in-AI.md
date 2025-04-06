@@ -2,14 +2,12 @@
 layout: post
 title:  "How to Determine if You Need to Urgently Invest in AI?"
 date:   2024-06-04 10:00:00 +0400
-cover: /assets/img/news/2023/
-categories: insight
+cover: /assets/img/newsroom/2024/invest_in_ai.jpg
+category: Insights
 tags: AI automate
 ---
 
-![](/assets/img/newsroom/2024/invest_in_ai.jpg)
-
-You Don't
+## You Don't
 
 There. We've saved you countless hours of reading breathless tech blogs, attending overpriced conferences, and nodding thoughtfully while venture capitalists explain why your perfectly functional business is actually teetering on the edge of obsolescence without AI.
 
@@ -17,13 +15,19 @@ Let's unpack this revolutionary advice.
 
 ## AI Is the New Paris Fashion Week
 
+<div class="full-width">
+  <img src="{{ page.cover }}" />
+</div>
+
 Artificial Intelligence in its current form is remarkably similar to the latest haute couture trend strutting down Parisian runways. It might be genuinely innovative. It could potentially look spectacular on the right business. It's definitely getting all the media attention and investor champagne toasts.
 
 But is it absolutely necessary for your business to adopt it immediately? About as necessary as your accounting department needs transparent plastic trousers and neon feather epaulets.
 
 Some AI applications are genuinely useful. Others are elaborate solutions frantically searching for problems. The difference lies not in how sophisticated the technology is, but in whether it solves an actual business need that can't be addressed through simpler, more established means.
 
-Remember when every company suddenly needed a blockchain strategy? How's that working out for the average mid-market business? Exactly.
+<div class="highlight">Remember when every company suddenly needed a blockchain strategy? </div>
+
+How's that working out for the average mid-market business? Exactly.
 
 ## The Golden Rule of AI: Trust Issues Are Feature, Not Bug
 

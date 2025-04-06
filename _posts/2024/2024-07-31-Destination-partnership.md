@@ -2,16 +2,18 @@
 layout: post
 title:  "Rare Digits Now Officially Managing the Future"
 date:   2024-07-31 10:00:00 +0400
-cover: /assets/img/news/2023/
-categories: about
+cover: /assets/img/newsroom/2024/destination.jpg
+category: Expansion
 tags: partnership
 ---
 
 ## (Technically Speaking)
 
-![](/assets/img/newsroom/2024/destination.jpg)
-
 We're excited to announce that Rare Digits has formed a strategic partnership with [Destination Future](https://www.destination-future.com), the multi-national technology provider operating across three countries and specializing in Smart Networks, High-Performance Computing, Automation, and IoT solutions.
+
+<div class="full-width">
+  <img src="{{ page.cover }}" />
+</div>
 
 ## From Data to Destiny
 
@@ -39,6 +41,4 @@ This partnership perfectly embodies our "Pure Performance, No Excess" philosophy
 
 And that's exactly what we deliver.
 
----
-
-*Note: While we're technically managing systems that shape the future, Rare Digits cannot be held responsible for paradoxes, timeline disruptions, or butterfly effects. We're working on a dashboard for those too, but it's still in beta.*
+> Note: While we're technically managing systems that shape the future, Rare Digits cannot be held responsible for paradoxes, timeline disruptions, or butterfly effects. We're working on a dashboard for those too, but it's still in beta.

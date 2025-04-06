@@ -6,11 +6,13 @@ remark: 'Current version: v.1.0.7'
 permalink: /tools/corsair/
 ---
 
-<div class="Card">
-    <h2>The Problem: Advanced Tab Management</h2>
+
+## The Problem: Advanced Tab Management
+
+<blockquote>
     <p><strong>The fantasy:</strong> running a business means strategic leadership and visionary decision-making.</p>
     <p><strong>The reality:</strong> it's managing seventeen browser tabs while reconciling data that fundamentally disagrees with itself.</p>
-</div>
+</blockquote>
 
 ![](/assets/img/illustrations/products/corsair/sap.jpg)
 

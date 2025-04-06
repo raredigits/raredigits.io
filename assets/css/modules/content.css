@@ -13,8 +13,51 @@
     height: auto;
 }
 
-.border-bottom {
-    border-bottom: 2px solid var(--border-color);
+article {
+    padding: var(--space-lg) 0;
+}
+  
+section {
+    position: relative;
+    margin-bottom: var(--space-lg);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--heading-font);
+}
+
+h1 {
+    font-size: 2.2em;
+}
+
+h2 {
+    font-size: 1.4em;
+    margin: var(--space-md) 0 var(--space-sm);
+}
+
+h3 {
+    font-size: 1.2em;
+    margin: var(--space-sm) 0;
+}
+
+h4 {
+    font-size: 1.1em;
+    margin: var(--space-sm) 0;
+}
+
+p {
+    margin: var(--space-sm) 0;
+}
+
+img {
+    width: auto;
+    height: auto;
+}
+
+h1 a, h2 a, h3 a, h4 a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    border: none;
 }
 
 .eyebrow {
@@ -27,7 +70,7 @@
     background: var(--secondary-color);
     display: inline-block;
     padding: 1px 8px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-color-light);
     border-radius: 3px;
     font-size: var(--font-size-sm);
     margin-bottom: 3px;
@@ -65,6 +108,7 @@
 
 .height-70vh {
     height: 70vh;
+    align-self: flex-start;
 }
 
 .uppercase {
@@ -105,59 +149,12 @@
     left: -1em;
 }
 
-.Breadcrumbs {
-    margin-bottom: var(--space-lg);
-}
 
-.Breadcrumbs::before {
-    content: '<<';
-    color: var(--secondary-text-color);
-}
 
-article {
-    padding: var(--space-lg) 0;
-}
-  
-section {
-    position: relative;
-    margin-bottom: var(--space-lg);
-}
 
-h1, h2, h3, h4 {
-    font-family: var(--heading-font);
-}
-
-h1 {
-    font-size: 2.2em;
-}
-
-h2 {
-    font-size: 1.4em;
-    margin: var(--space-md) 0 var(--space-sm);
-}
-
-h4 {
-    font-size: 1.1em;
-    margin: var(--space-sm) 0;
-}
-
-p {
-    margin: var(--space-sm) 0;
-}
-
-img {
-    width: auto;
-    height: auto;
-}
 
 .Content {
     width: 100%;
-}
-
-
-
-.Content h3 {
-    margin-top: var(--space-md);
 }
 
 .Space {
@@ -209,11 +206,8 @@ img {
 }
 
 blockquote {
-    background: var(--secondary-color);
-    max-width: var(--content);
-    padding: var(--space-sm) var(--space-md);
-    margin-left: calc(var(--space-sm) * -1.5);
-    border-radius: calc(var(--border-radius) / 1.5);
+    border-left: 4px solid var(--border-color);
+    padding: var(--space-xs) var(--space-md);
 }
 
 ul, ol {
@@ -347,18 +341,9 @@ cite {
         display: none;
     }
 
-    .eyebrow p {
-        margin: 0 0;
-    }
-
-    .tag {
-        display: none;
-    }
-
     .highlight {
         width: 100%;
         padding: var(--space-sm) var(--space-md);
-        margin-left: calc(-1 * var(--space-sm));
     }
 
     .wide-background-wrapper {

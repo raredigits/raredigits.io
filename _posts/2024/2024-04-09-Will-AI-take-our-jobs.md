@@ -2,14 +2,16 @@
 layout: post
 title:  "Will AI Take All Our Jobs?"
 date:   2024-04-09 10:00:00 +0400
-cover: /assets/img/news/2023/
-categories: insight
+cover: /assets/img/newsroom/2024/homeless.jpg
+category: Insighs
 tags: AI automate
 ---
 
-No.
+## No.
 
-![](/assets/img/newsroom/2024/homeless.jpg)
+<div class="full-width">
+  <img src="{{ page.cover }}" />
+</div>
 
 ## Let's Consider a Simple Example
 

@@ -2,8 +2,8 @@
 layout: post
 title:  "Financial Experts Choose Financial Experts"
 date:   2024-06-14 10:00:00 +0400
-cover: /assets/img/news/2023/
-categories: about
+cover: /assets/img/newsroom/2024/asiatech.jpg
+category: Expansion
 tags: partnership finance blessing
 ---
 
@@ -11,7 +11,9 @@ In what might initially seem like unremarkable business news, Rare Digits has si
 
 ## A Business Love Story
 
-![](/assets/img/newsroom/2024/asiatech.jpg)
+<div class="full-width">
+  <img src="{{ page.cover }}" />
+</div>
 
 Asiatech isn't just any company looking to optimize their operations. They're a financial services provider specializing in online consumer lending—you know, the people who professionally decide who gets money, how much, and under what conditions. In other words, they're in the business of making numbers work harder than a caffeine-addicted accountant during tax season.
 
