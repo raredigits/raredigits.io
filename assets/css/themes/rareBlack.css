@@ -14,3 +14,16 @@ a:hover {
   color: var(--background-color);
   background: var(--brand-color);
 }
+
+.nav-global ul a:hover {
+  color: var(--background-color);
+}
+
+button, .button {
+  color: var(--background-color);
+  background: var(--brand-color);
+}
+
+button:hover, .button:hover {
+  box-shadow: var(--shadow-button);
+}

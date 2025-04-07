@@ -8,7 +8,13 @@ header {
 }
 
 .header-wrapper {
-    padding: var(--space-sm)  0 var(--space-xs);
+    height: 100%;
+}
+
+.header-logo-container {
+    min-width: var(--logo-width);
+    height: 100%;
+    padding: var(--space-xs) 0;
 }
 
 header a {
@@ -39,22 +45,37 @@ nav ul {
 }
   
 .nav-global {
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
+    gap: 20px;
 }
   
 .nav-global ul {
     display: flex;
+    height: 100%;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
     gap: 20px;
 }
+
+.nav-global li {
+    height: 100%;
+}
   
-.nav-global a {
+.nav-global ul a {
+    display: flex;
+    align-items: center;
+    height: 100%;
     color: var(--primary-color);
     text-decoration: none;
     border: none;
 }
   
-.nav-global a:hover {
+.nav-global ul a:hover {
     color: var(--nav-link-hover);
 }
 
@@ -93,6 +114,8 @@ nav ul {
         left: 0;
         width: 100%;
         height: 90%;
+        flex-direction: column;
+        align-items: flex-start;
         font-size: var(--font-size-lg);
         background: var(--background-color);
         padding: calc(var(--header-height) + 2 * var(--space-md)) var(--space-md) var(--space-lg);
@@ -109,7 +132,6 @@ nav ul {
     .nav-global ul {
         flex-direction: column;
         gap: 10px;
-        height: 100%;
     }
 
     .nav-global li::after {

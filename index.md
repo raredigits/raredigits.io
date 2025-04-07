@@ -43,9 +43,11 @@ title: Data In, Meaning Out
     <h2><a class="no-decoration" href="/tools/corsair/">Corsair HQ</a></h2>
     <hr class="hrDeco">
 </div>
-<p class="CorsairText">
-    Finally, Even One Eye Is Enough for a <a href="/tools/corsair/">360-Degree View</a>
-</p>
+<div class="center">
+    <a class="button button-lg" href="/tools/corsair/">
+        Finally, Even One Eye Is Enough for a 360-Degree View
+    </a>
+</div>
 <div class="NewProductSign"></div>
 </section>
 
@@ -274,7 +276,7 @@ title: Data In, Meaning Out
                 <input type="email" id="email" name="email" required>
                 <label for="contact">Contact Number:</label>
                 <input type="tel" id="contact" name="contact" required>
-                <button id="my-form-button">Request a Demonstration</button>
+                <button id="my-form-button" class="full-width">Request a Demonstration</button>
                 <h3 id="my-form-status"></h3>
             </form>
             <h3>Meet The Team</h3>

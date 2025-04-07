@@ -61,6 +61,9 @@ section {
     padding: 60px 26px;
     opacity: .96;
     text-align: center;
+    max-width: var(--site-max-width);
+    margin-right: auto;
+    margin-left: auto;
 }
 
 section p {

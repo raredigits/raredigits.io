@@ -53,6 +53,7 @@
     --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
     --shadow-lg: 0 8px 12px rgba(0, 0, 0, 0.4);
     --shadow-inset: inset 0 20px 10px -20px rgba(0,0,0,0.8);
+    --shadow-button: inset 0px -1px 30px 5px rgba(0,0,0,0.2);
   }
 
   * {
@@ -111,6 +112,32 @@
   .page-content {
     flex: 3 1 var(--content-width);
     order: 3;
+  }
+
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--brand-color);
+  }
+  
+  a:hover {
+    background: var(--brand-color);
+    color: var(--primary-color);
+  }
+
+  button, .button {
+    background: var(--background-color);
+    border: 2px solid var(--brand-color);
+    border-radius: var(--space-lg);
+    font-size: inherit;
+    padding: var(--space-xs) var(--space-md);
+    cursor: pointer;
+    width: fit-content;
+    white-space: nowrap;
+  }
+
+  button:hover, .button:hover {
+    background: var(--brand-color);
   }
 
   .row {
@@ -214,6 +241,10 @@
     color: none;
   }
 
+  .mobile-hidden {
+    display: compact;
+  }
+
   .no-scrollbar {
     scrollbar-width: none; 
     -ms-overflow-style: none;
@@ -262,14 +293,7 @@
     padding-top: var(--space-md);
     margin-top: var(--space-md);
   }
-  
-  .Button {
-    background: var(--primary-color);
-    color: var(--background-color);
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 20px;
-  }
+
 
   .Flex {
     display: flex;
@@ -318,26 +342,6 @@
 
   .PaddingVerticalLg {
     padding: var(--space-lg) 0;
-  }
-
-  .mobile-hidden {
-    display: compact;
-  }
-  
-  button {
-    border: none;
-    cursor: pointer;
-  }
-  
-  a {
-    color: var(--primary-color);
-    text-decoration: none;
-    border-bottom: 1px solid var(--brand-color);
-  }
-  
-  a:hover {
-    background: var(--brand-color);
-    color: var(--primary-color);
   }
 
   @media (max-width: 768px) {

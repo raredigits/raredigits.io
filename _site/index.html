@@ -31,14 +31,12 @@
     <div class="Column">
         <header>
     <div class="header-wrapper site-max-width Row Stretched">
-        <a class="no-decoration" href="/">
-            <div class="header-logo"></div>
-        </a>
-        <button class="hamburger no-decoration" aria-label="Toggle navigation">
-            <span class="material-icons icon-menu">menu</span>
-            <span class="material-icons icon-close">close</span>
-        </button>
-        <nav class="nav-global">
+        <div class="header-logo-container">
+            <a class="no-decoration" href="/">
+                <div class="header-logo"></div>
+            </a>
+        </div>
+        <nav class="nav-global stretched">
             <ul>
                 <li><a href="/#services">Services</a></li>
                 <li><a href="/#solutions">Solutions</a></li>
@@ -46,7 +44,12 @@
                 <li><a href="/#newsroom">Pressroom</a></li>
                 <li><a href="/#contacts">Contacts</a></li>
             </ul>
+            <a class="button" href="https://demo.raredigits.io">Demo</a>
         </nav>
+        <button class="hamburger no-decoration" aria-label="Toggle navigation">
+            <span class="material-icons icon-menu">menu</span>
+            <span class="material-icons icon-close">close</span>
+        </button>
     </div>
 </header>
         <div class="NoticeStripe ConstructionStripeMini">
@@ -98,9 +101,11 @@
     <h2><a class="no-decoration" href="/tools/corsair/">Corsair HQ</a></h2>
     <hr class="hrDeco" />
 </div>
-<p class="CorsairText">
-    Finally, Even One Eye Is Enough for a <a href="/tools/corsair/">360-Degree View</a>
-</p>
+<div class="center">
+    <a class="button button-lg" href="/tools/corsair/">
+        Finally, Even One Eye Is Enough for a 360-Degree View
+    </a>
+</div>
 <div class="NewProductSign"></div>
 </section>
 
@@ -473,7 +478,7 @@
                 <input type="email" id="email" name="email" required="" />
                 <label for="contact">Contact Number:</label>
                 <input type="tel" id="contact" name="contact" required="" />
-                <button id="my-form-button">Request a Demonstration</button>
+                <button id="my-form-button" class="full-width">Request a Demonstration</button>
                 <h3 id="my-form-status"></h3>
             </form>
             <h3>Meet The Team</h3>
