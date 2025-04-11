@@ -7,8 +7,14 @@ items:
   - title: "Layout"
     url: ""
 
-  - title: "Components"
+  - title: "Typography"
     url: ""
+
+  - title: "Colors"
+    url: "/tools/open-source/styles/colors/"
+
+  - title: "Components"
+    url: "/tools/open-source/styles/components/"
 
   - title: "Navigation"
     url: ""
@@ -19,14 +25,11 @@ items:
   - title: "Tables"
     url: ""
 
-  - title: "Colors"
-    url: ""
-  
-  - title: "Typography"
-    url: ""
+  - title: "Icons"
+    url: "https://fonts.google.com/icons"
 
   - title: "Scripts"
-    url: ""
+    url: "/tools/open-source/styles/scripts/"
 
   - title: "Manuals"
     url: ""

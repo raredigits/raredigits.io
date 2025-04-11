@@ -2,13 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.querySelector('.hamburger');
   const navGlobal = document.querySelector('.nav-global');
 
-  // Переключение меню
+  // Toggle the hamburger menu on click
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navGlobal.classList.toggle('active');
   });
 
-  // Закрытие по клику вне меню
+  // Closing the menu when clicking outside
   document.addEventListener('click', (event) => {
     if (!navGlobal.contains(event.target) && !hamburger.contains(event.target)) {
       hamburger.classList.remove('active');

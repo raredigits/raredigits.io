@@ -7,20 +7,36 @@
 @import url('/assets/css/modules/content.css');
 @import url('/assets/css/modules/footer.css');
 @import url('/assets/css/modules/special.css');
+@import url('/assets/css/modules/colors.css');
 
 :root {
-    --primary-color: #000000;
-    --background-color: #ffffff;
     --brand-color: #00ff4e;
-    --brand-light-color: #ddfbe6;
-    --brand-dark-color: #01a332;
-    --secondary-color: #f5f5f7;
-    --secondary-text-color: #888;
-    --header-bg: rgba(255, 255, 255, 0.9);
+    --brand-color-light: #b7eb8f;
+    --brand-color-dark: #237804;
 
     --black: #000;
     --white: #fff;
+
+    --grey: #f5f5f5;
+    --grey-light: #fafafa;
+    --grey-dark: #888888;
+
+    --red: #ff0000;
+    --green: #389e0d;
+    --pink: #ffd6e7;
+    --orange: #fa8c16;
+    --purple: #722ed1;
     --yellow: #ffe000;
+
+    --blue: #1677ff;
+    --blue-light: #bae0ff;
+    --blue-dark: #003eb3;
+
+    --primary-color: var(--black);
+    --background-color: var(--white);
+    --secondary-color: var(--grey);
+    --secondary-text-color: var(--grey-dark);
+    --header-bg: rgba(255, 255, 255, 0.9);
 
     --card-border: 1px solid #ddd;
     --border-color: #000;
@@ -49,8 +65,8 @@
 
     --sidebar: var(--logo-width);
 
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
-    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.2);
     --shadow-lg: 0 8px 12px rgba(0, 0, 0, 0.4);
     --shadow-inset: inset 0 20px 10px -20px rgba(0,0,0,0.8);
     --shadow-button: inset 0px -1px 30px 5px rgba(0,0,0,0.2);
@@ -123,21 +139,6 @@ a {
 a:hover {
   background: var(--brand-color);
   color: var(--primary-color);
-}
-
-button, .button {
-  background: var(--background-color);
-  border: 2px solid var(--brand-color);
-  border-radius: var(--space-lg);
-  font-size: inherit;
-  padding: var(--space-xs) var(--space-md);
-  cursor: pointer;
-  width: fit-content;
-  white-space: nowrap;
-}
-
-button:hover, .button:hover {
-  background: var(--brand-color);
 }
 
 .flex {
@@ -238,12 +239,24 @@ button:hover, .button:hover {
 .no-decoration {
   text-decoration: none;
   border-bottom: none;
+  border: none;
+  box-shadow: none;
+}
+
+.no-decoration:hover {
+  border: none;
+  box-shadow: none;
 }
 
 .no-decoration:hover {
   background: none;
   background-color: none;
   color: none;
+}
+
+.no-border {
+  border: none;
+  border-bottom: none;
 }
 
 .mobile-hidden {
@@ -257,18 +270,6 @@ button:hover, .button:hover {
 
 .no-scrollbar::-webkit-scrollbar {
   display: none; 
-}
-
-.bg-black {
-  background: var(--black);
-}
-
-.bg-white {
-  background: var(--white);
-}
-
-.bg-yellow {
-  background: var(--yellow);
 }
 
 .padding-sm {
@@ -354,6 +355,7 @@ button:hover, .button:hover {
 
   .sidebar-nav {
     overflow-x: auto;
+    height: 1.2em;
   }
 
   .sidebar-nav ul {

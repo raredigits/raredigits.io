@@ -1,0 +1,135 @@
+.brand-color, .brand-color:hover {
+    color: var(--brand-color);
+}
+
+.bg-brand-color, .bg-brand-color:hover {
+    background: var(--brand-color);
+}
+
+.brand-color-light, .brand-color-light:hover {
+    color: var(--brand-color-light);
+}
+
+.brand-color-dark, .brand-color-dark:hover {
+    color: var(--brand-color-dark);
+}
+
+.bg-brand-color-light, .bg-brand-color-light:hover {
+    background: var(--brand-color-light);
+}
+
+.bg-brand-color-dark, .bg-brand-color-dark:hover {
+    background: var(--brand-color-dark);
+}
+
+.black, .black:hover {
+    color: var(--black);
+}
+
+.white, .white:hover {
+    color: var(--white);
+}
+
+.grey, .grey:hover {
+    color: var(--grey);
+}
+
+.grey-light, .grey-light:hover {
+    color: var(--grey-light);
+}
+
+.grey-dark, .grey-dark:hover {
+    color: var(--grey-dark);
+}
+
+.blue, .blue:hover {
+    color: var(--blue);
+}
+
+.blue-light, .blue-light:hover {
+    color: var(--blue-light);
+}
+
+.blue-dark, .blue-dark:hover {
+    color: var(--blue-dark);
+}
+
+.red, .red:hover {
+    color: var(--red);
+}
+
+.green, .green:hover {
+    color: var(--green);
+}
+
+.pink, .pink:hover {
+    color: var(--pink);
+}
+
+.orange, .orange:hover {
+    color: var(--orange);
+}
+
+.yellow, .yellow:hover {
+    color: var(--yellow);
+}
+
+.purple, .purple:hover {
+    color: var(--purple);
+}
+
+.bg-black, .bg-black:hover {
+    background: var(--black);
+}
+  
+.bg-white, .bg-white:hover {
+    background: var(--white);
+}
+
+.bg-grey, .bg-grey:hover {
+    background: var(--grey);
+}
+
+.bg-grey-light, .bg-grey-light:hover {
+    background: var(--grey-light);
+}
+
+.bg-grey-dark, .bg-grey-dark:hover {
+    background: var(--grey-dark);
+}
+
+.bg-blue, .bg-blue:hover {
+    background: var(--blue);
+}
+
+.bg-blue-light, .bg-blue-light:hover {
+    background: var(--blue-light);
+}
+
+.bg-blue-dark, .bg-blue-dark:hover {
+    background: var(--blue-dark);
+}
+
+.bg-red, .bg-red:hover {
+    background: var(--red);
+}
+
+.bg-green, .bg-green:hover {
+    background: var(--green);
+}
+
+.bg-pink, .bg-pink:hover {
+    background: var(--pink);
+}
+
+.bg-orange, .bg-orange:hover {
+    background: var(--orange);
+}
+  
+.bg-yellow, .bg-yellow:hover {
+    background: var(--yellow);
+}
+
+.bg-purple, .bg-purple:hover {
+    background: var(--purple);
+}
