@@ -17,7 +17,7 @@ title: Data In, Meaning Out
         </p>
     </div>
 </section>
-<section class="sectionSecret mainRevert Column Stretched">
+<section class="sectionSecret mainRevert column stretched">
     <div>
         <h2>Pure Performance, No Excess</h2>
         <hr class="hrDeco hrBlack">
@@ -38,7 +38,7 @@ title: Data In, Meaning Out
     </div>
 </section>
 
-<section class="Column CorsairPromo Stretched">
+<section class="column CorsairPromo stretched">
 <div>
     <h2><a class="no-decoration" href="/tools/corsair/">Corsair HQ</a></h2>
     <hr class="hrDeco">
@@ -51,14 +51,14 @@ title: Data In, Meaning Out
 <div class="NewProductSign"></div>
 </section>
 
-<section class="sectionServices Column bg-black">
+<section class="sectionServices column bg-black">
     <a class="no-decoration" name="services"></a>
     <h2><a href="/services/" class="no-decoration">Data In, Meaning Out</a></h2>
     <hr class="hrDeco">
     <p class="subheader">
         16 years satisfying enterprise’s every need
     </p>
-    <div class="RowMobile Stretched GapMd">
+    <div class="RowMobile stretched gap-md">
         <div class="service">
             <h3>Consulting</h3>
             <ul>
@@ -107,7 +107,7 @@ title: Data In, Meaning Out
     </div>
 </section>
 
-<section class="Column bg-black">
+<section class="column bg-black">
     <a class="no-decoration" name="solutions"></a>
     <h2><a href="/tools/" class="no-decoration">Simplicity in Every Solution</a></h2>
     <hr class="hrDeco">
@@ -115,7 +115,7 @@ title: Data In, Meaning Out
         <p class="subheader">Navigate the future of business<br>
             with <strong>Rare Digits</strong></p>
     </div>
-    <div class="Flex GapMd">
+    <div class="flex gap-md">
         <div class="solution solutionAccount">
             <h3>Accounting: Beyond Numbers</h3>
             <p>Discover a zenith of precision and clarity in every financial transaction and report</p>
@@ -138,13 +138,13 @@ title: Data In, Meaning Out
     </div>
 </section>
 
-<section class="Column mainRevert">
+<section class="column mainRevert">
     <h2>Bespoke Applications</h2>
     <hr class="hrDeco">
     <p>
         Disclose the full story and simplify decision making
     </p>
-    <div class="appStore Flex Stretched">
+    <div class="appStore flex stretched">
         <div class="app">
             <img src="/assets/img/common/apps/app-atlas.png" alt="">
             <p>
@@ -190,7 +190,7 @@ title: Data In, Meaning Out
     <h2>One Interface. Infinite Control</h2>
     <hr class="hrDeco">
     <p class="subheader">Online data analisys in simple words</p>
-    <div class="oneAppWrapper Flex">
+    <div class="oneAppWrapper flex">
         <div class="oneAppPhone">
             <img src="/assets/img/main/phone.png" alt="">
         </div>
@@ -200,7 +200,7 @@ title: Data In, Meaning Out
             <ul>
                 <li>Seamless integration with back-end systems</li>
                 <li>Responds to off-the-wall questions</li>
-                <li>Flexibly customizable</li>
+                <li>flexibly customizable</li>
                 <li>Tunable alert system</li>
             </ul>
         </div>

@@ -60,6 +60,21 @@ h1 a, h2 a, h3 a, h4 a {
     border: none;
 }
 
+.card {
+    background: var(--secondary-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.width-50-mobile {
+    width: 48%;
+}
+
+.width-30,
+.width-30-mobile {
+    width: 30%;
+}
+
 .button.button-lg {
     font-size: 1.2em;
     padding: var(--space-md) var(--space-lg);
@@ -87,6 +102,13 @@ h1 a, h2 a, h3 a, h4 a {
     border: 4px solid var(--brand-color);
     padding: var(--space-sm) var(--space-lg);
     margin-top: var(--space-md);
+}
+
+.content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .wide-background {
@@ -118,6 +140,14 @@ h1 a, h2 a, h3 a, h4 a {
 
 .uppercase {
     text-transform: uppercase;
+}
+
+.content-separator-lg {
+    width: 100%;
+    max-width: var(--content);
+    height: 1px;
+    margin: var(--space-lg) 0;
+    background: var(--border-color);
 }
 
 
@@ -154,62 +184,6 @@ h1 a, h2 a, h3 a, h4 a {
     left: -1em;
 }
 
-
-
-
-
-.Content {
-    width: 100%;
-}
-
-.Space {
-    padding: var(--space-sm) 0;
-}
-
-.CardsDeck {
-    display: flex;
-    flex-flow: row wrap;
-    gap: var(--space-md);
-    justify-content: center;
-}
-
-.TwoColumns .Card {
-    width: 48%;
-}
-
-.Third {
-    width: 30%;
-}
-
-.Quarter {
-    width: 25%;
-}
-
-.Card {
-    padding: var(--space-sm) var(--space-md);
-    background: var(--secondary-color);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-sm);
-}
-
-.Tag {
-    color: var(--secondary-text-color);
-    padding: 1px 8px;
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    font-size: var(--font-size-sm);
-    margin-right: var(--space-sm);
-}
-
-.Tag:hover {
-    background: var(--border-color);
-    color: var(--primary-color);
-}
-
-.Headline {
-    margin: var(--space-sm) 0;
-}
-
 blockquote {
     border-left: 4px solid var(--border-color);
     padding: var(--space-xs) var(--space-md);
@@ -222,59 +196,9 @@ ul, ol {
     padding-left: var(--space-md);
 }
 
-.Content .List {
-    width: auto;
-    max-width: var(--content);
-    padding-bottom: var(--space-md);
-}
-
-.List ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.List li {
-    margin: var(--space-sm) 0;
-}
-
-.ListTwoColumns {
+.list-two-columns {
     column-count: 2;
     column-gap: var(--space-md);
-}
-
-.IllustratedBlock {
-    display: flex;
-    gap: var(--space-md);
-    justify-content: space-between;
-    align-items: center;
-}
-
-.IllustratedText {
-    max-width: var(--content);
-}
-
-.Illustration {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    text-align: center;
-}
-
-.Illustration img {
-    max-width: 60%;
-    max-height: 300px;
-}
-
-.Air {
-    height: calc(var(--space-lg) * 2);
-}
-
-.ContentSeparator {
-    width: 100%;
-    max-width: var(--content);
-    height: 1px;
-    margin: var(--space-lg) 0;
-    background: var(--border-color);
 }
 
 cite {
@@ -283,41 +207,13 @@ cite {
     text-align: right;
 }
 
-.AppIcon img {
+.img-100 img {
     width: 100%;
     max-width: 100px;
     height: auto;
 }
 
-.VerticalPaddingLg {
-    padding-top: var(--space-lg);
-    padding-bottom: var(--space-lg);
-}
 
-.VerticalPaddingMd {
-    padding-top: var(--space-md);
-    padding-bottom: var(--space-md);
-}
-
-.VerticalPaddingSm {
-    padding-top: var(--space-sm);
-    padding-bottom: var(--space-sm);
-}
-
-.HorizontalPaddingLg {
-    padding-left: var(--space-lg);
-    padding-right: var(--space-lg);
-}
-
-.HorizontalPaddingMd {
-    padding-left: var(--space-md);
-    padding-right: var(--space-md);
-}
-
-.HorizontalPaddingSm {
-    padding-left: var(--space-sm);
-    padding-right: var(--space-sm);
-}
 
 @media (max-width: 768px) {
     .sidebar-header {
@@ -346,48 +242,8 @@ cite {
         padding-left: var(--space-sm);
     }
 
-    .PageOffset {
-        padding-top: 0;
-        width: 100%;
-        max-width: none;
-        position: static;
-    }
-
-    .Sidebar {
-        display: flex;
-        flex-flow: row nowrap;
-        padding: var(--space-sm) 0;
-        border-bottom: 1px solid var(--border-color);
-    }
-
-    .SidebarHeader, .SidebarNav {
-        display: inline-block;
-    }
-
-    .SidebarNav {
-        overflow-x: scroll;
-    }
-
-    .SidebarNav ul {
-        display: flex;
-        flex-flow: row nowrap;
-    }
-
-    .SidebarNav li {
-        margin: 0 var(--space-sm);
-        white-space: nowrap;
-    }
-
-    .Content {
-        padding: 0 0 calc(var(--space-lg) * 3) 0;
-    }
-
-    .TwoColumns .Card {
-        text-align: center;
-        width: 100%;
-    }
-
-    .Third {
+    .width-50-mobile,
+    .width-30-mobile {
         width: 100%;
     }
 

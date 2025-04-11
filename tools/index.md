@@ -9,74 +9,74 @@ Here are the tools and approaches we've developed while helping businesses stop 
 
 Take a look. Your future self with higher margins will thank you.
 
-<div class="Flex GapSm">
-    <div class="Card Third Column Stretched Center AppIcon VerticalPaddingLg HorizontalPaddingMd">
-        <div class="Center">
+<div class="flex gap-md">
+    <div class="card width-30-mobile column stretched center img-100 padding-lg">
+        <div class="center">
             <img src="/assets/img/common/apps/app-atlas.png"></div>
         <div>
             <p><a href="/tools/atlas/">Atlas ERP</a></p>
-            <div class="ContentSeparator"></div>
-            <span class="Tag">#business</span>
+            <div class="content-separator-lg"></div>
+            <span class="tag">#business</span>
         </div>
     </div>
-    <div class="Card Third">{% include /special/constructionNotice.html %}</div>
-    <div class="Card Third Column Stretched Center AppIcon VerticalPaddingLg HorizontalPaddingMd">
-        <div class="Center">
+    <div class="card width-30-mobile">{% include /special/constructionNotice.html %}</div>
+    <div class="card width-30-mobile column stretched center img-100 padding-lg">
+        <div class="center">
             <img src="/assets/img/common/apps/app-columbus.png"></div>
         <div>
             <p><a href="/tools/columbus/">Columbus CRM</a></p>
-            <div class="ContentSeparator"></div>
-            <span class="Tag">#business</span>
+            <div class="content-separator-lg"></div>
+            <span class="tag">#business</span>
         </div>
     </div>
-    <div class="Card Third Column Stretched Center AppIcon VerticalPaddingLg HorizontalPaddingMd">
-        <div class="Center">
+    <div class="card width-30-mobile column stretched center img-100 padding-lg">
+        <div class="center">
             <img src="/assets/img/common/apps/app-forecast.png"></div>
         <div>
             <p><a href="/tools/forecast/">Forecast App</a></p>
-            <div class="ContentSeparator"></div>
-            <span class="Tag">#business</span>
+            <div class="content-separator-lg"></div>
+            <span class="tag">#business</span>
         </div>
     </div>
-    <div class="Card Third Column Stretched Center AppIcon VerticalPaddingLg HorizontalPaddingMd">
-        <div class="Center">
+    <div class="card width-30-mobile column stretched center img-100 padding-lg">
+        <div class="center">
             <img src="/assets/img/common/apps/app-fanfare.png"></div>
         <div>
             <p>Loyalty App <a href="/tools/fanfare/">Fanfare</a></p>
-            <div class="ContentSeparator"></div>
-            <span class="Tag">#business</span>
+            <div class="content-separator-lg"></div>
+            <span class="tag">#business</span>
         </div>
     </div>
-    <div class="Card Third">{% include /special/constructionNotice.html %}</div>
-    <div class="Card Third">{% include /special/constructionNotice.html %}</div>
-    <div class="Card Third">{% include /special/constructionNotice.html %}</div>
-    <div class="Card Third Column Stretched Center AppIcon VerticalPaddingLg HorizontalPaddingMd">
-        <div class="Center">
+    <div class="card width-30-mobile">{% include /special/constructionNotice.html %}</div>
+    <div class="card width-30-mobile">{% include /special/constructionNotice.html %}</div>
+    <div class="card width-30-mobile">{% include /special/constructionNotice.html %}</div>
+    <div class="card width-30-mobile column stretched center img-100 padding-lg">
+        <div class="center">
             <img src="/assets/img/common/vendors/github-mark/github-mark.png"></div>
         <div>
             <p><a href="https://github.com/raredigits">Rare Styles</a></p>
-            <div class="ContentSeparator"></div>
-            <span class="Tag">#opensource</span><span class="Tag">#css</span>
+            <div class="content-separator-lg"></div>
+            <span class="tag">#opensource</span><span class="tag">#css</span>
         </div>
     </div>
-    <div class="Card Third Column Stretched Center AppIcon VerticalPaddingLg HorizontalPaddingMd">
-        <div class="Center">
+    <div class="card width-30-mobile column stretched center img-100 padding-lg">
+        <div class="center">
             <img src="/assets/img/common/vendors/github-mark/github-mark.png"></div>
         <div>
             <p><a href="https://github.com/raredigits">Rare Odoo Theme</a></p>
-            <div class="ContentSeparator"></div>
-            <span class="Tag">#opensource</span>
+            <div class="content-separator-lg"></div>
+            <span class="tag">#opensource</span>
         </div>
     </div>
-    <div class="Card Third Column Stretched Center AppIcon VerticalPaddingLg HorizontalPaddingMd">
-        <div class="Center">
+    <div class="card width-30-mobile column stretched center img-100 padding-lg">
+        <div class="center">
             <img src="/assets/img/common/vendors/github-mark/github-mark.png"></div>
         <div>
             <p><a href="https://github.com/raredigits">Jekyll Tips & Tricks</a></p>
-            <div class="ContentSeparator"></div>
-            <span class="Tag">#opensource</span><span class="Tag">#jekyll</span>
+            <div class="content-separator-lg"></div>
+            <span class="tag">#opensource</span><span class="tag">#jekyll</span>
         </div>
     </div>
-    <div class="Card Third">{% include /special/constructionNotice.html %}</div>
-    <div class="Card Third">{% include /special/constructionNotice.html %}</div>
+    <div class="card width-30-mobile">{% include /special/constructionNotice.html %}</div>
+    <div class="card width-30-mobile">{% include /special/constructionNotice.html %}</div>
 </div>

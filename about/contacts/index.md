@@ -25,8 +25,8 @@ Wish to&nbsp;witness our elegance and brutality in&nbsp;person? Our ambassadors 
   <img src="/assets/img/illustrations/world_map_contacts.jpg" />
 </div>
 
-<div class="List ListTwoColumns">
-   <ul>
+<nav>
+   <ul class="list-two-columns">
       <li><a href="">Dubai</a> (Home Base)</li>
       <li><a href="">Limassol</a> (Mediterranean Microservices)</li>
       <li><a href="">Porto</a> (Port and Python)</li>
@@ -38,7 +38,7 @@ Wish to&nbsp;witness our elegance and brutality in&nbsp;person? Our ambassadors 
       <li><a href="">Miami</a> (Sunscreen and Scalability)</li>
       <li><a href="">Phuket</a> (Thai and TypeScript)</li>
    </ul>
-</div>
+</nav>
 
 Choose your preferred locale, and we&#146;ll arrange a&nbsp;meeting faster than you can say &ldquo;asynchronous non-blocking I/O&rdquo;.
 
