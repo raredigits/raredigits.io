@@ -1,0 +1,35 @@
+# _data/menu/rare-styles.yml
+
+items:
+  - title: "Overview"
+    url: "/tools/open-source/styles/"
+
+  - title: "Layout"
+    url: ""
+
+  - title: "Components"
+    url: ""
+
+  - title: "Navigation"
+    url: ""
+
+  - title: "Forms"
+    url: ""
+
+  - title: "Tables"
+    url: ""
+
+  - title: "Colors"
+    url: ""
+  
+  - title: "Typography"
+    url: ""
+
+  - title: "Scripts"
+    url: ""
+
+  - title: "Manuals"
+    url: ""
+
+  - title: "Contribute"
+    url: ""

@@ -1,0 +1,16 @@
+<span class="sidebar-header">
+  <a class="no-decoration" href="/tools/open-source/styles/">Styles</a>
+</span>
+<nav class="sidebar-nav no-scrollbar">
+  <ul>
+    {% for item in site.data.menu.rare-styles.items %}
+      <li class="{% if page.url == item.url %}bold{% endif %}">
+        {% if page.url == item.url %}
+          {{ item.title }}
+        {% else %}
+          <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

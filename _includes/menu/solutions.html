@@ -19,8 +19,8 @@
     <span class="sidebar-header">Featured</span>
     <ul>
         {% for item in site.data.menu.solutions.featured %}
-        <li class="{% if item.badge %}sidebar-badge{% endif %}">
-            {% if item.badge %}{{ item.badge }}{% endif %}
+        <li class="{% if item.icon %}sidebar-icon{% endif %}">
+            {% if item.icon %}{{ item.icon }}{% endif %}
             <a href="{{ item.url | relative_url }}">
             {{ item.title }}
             </a>
