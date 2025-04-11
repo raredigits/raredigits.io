@@ -1,3 +1,8 @@
+.air-lg {
+    width: 100%;
+    height: var(--space-lg)
+}
+
 .NoticeStripe {
     width: var(--site-max-width);
     margin: var(--header-height) auto 0;

@@ -222,7 +222,7 @@ title: Data In, Meaning Out
 </section> -->
 <section class="sectionPricing bg-black">
     <a class="noDecor" name="pricing"></a>
-    <h2>Pricing for Your Happiness</h2>
+    <h2><a href="/services/pricing/" class="no-decoration">Pricing for Your Happiness</a></h2>
     <hr class="hrDeco">
     <p>Customized plans for everyone</p>
     <div class="pricingWrapper">
@@ -230,6 +230,7 @@ title: Data In, Meaning Out
             <h3>The price doesn’t matter.</h3>
             Because we’re talking only about the client’s profit.<br>
             The aim is client happiness, achieved by crafting conditions that are inherently advantageous. Here, it’s not about spending money; it’s about investing in well-being. So, the emphasis is on the benefit: the cost is secondary to the inherent advantage.
+            <p><a href="/services/pricing/">Check Plans</a> >></p>
         </div>
         <div class="pricingImg"></div>
     </div>

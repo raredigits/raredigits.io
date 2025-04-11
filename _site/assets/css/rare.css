@@ -334,10 +334,15 @@ button:hover, .button:hover {
       flex-direction: column;
   }
 
+  .page-content {
+    width: 100%;
+  }
+
   .sidebar {
     width: 100%;
     position: sticky;
     display: flex;
+    top: var(--header-height);
     flex-flow: row nowrap;
     align-items: flex-end;
     gap: var(--space-md);
@@ -348,7 +353,7 @@ button:hover, .button:hover {
   }
 
   .sidebar-nav {
-    overflow-x: scroll;
+    overflow-x: auto;
   }
 
   .sidebar-nav ul {

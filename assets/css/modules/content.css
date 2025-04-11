@@ -213,6 +213,45 @@ cite {
     height: auto;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    display: block;
+}
+
+th {
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+th, td {
+    padding: var(--space-sm);
+}
+
+th:first-child,
+td:first-child {
+    padding: var(--space-sm) var(--space-sm) var(--space-sm) 0;
+}
+
+th:last-child,
+td:last-child {
+    text-align: right;
+    padding-left: var(--space-sm) 0 var(--space-sm) var(--space-sm);
+}
+
+tr:nth-child(even) {
+    background: var(--secondary-color);
+}
+
+td {
+    border-top: 1px solid var(--border-color-light);
+}
+
+
+
+tr:hover {
+    background: var(--border-color-light);
+}
 
 
 @media (max-width: 768px) {
@@ -247,21 +286,9 @@ cite {
         width: 100%;
     }
 
-    .Quarter {
-        width: 45%;
-    }
-
-    .IllustratedBlock {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .IllustratedText {
-      width: 100%;
-    }
-  
-    .Illustration {
-      width: 100%;
-      max-width: none;
+    table {
+        display: block;
+        overflow-x: auto;
+        max-width: 100%;
     }
   }
