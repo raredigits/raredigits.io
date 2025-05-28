@@ -50,18 +50,20 @@ Choose your preferred locale, and we&#146;ll arrange a&nbsp;meeting faster than 
 
 Not a&nbsp;fan of&nbsp;geographical constraints? Our demo booking form transcends space and time. Well, mostly time zones.
 
-<form class="column text-content-width" id="my-form" action="https://formspree.io/f/xoqodadn" method="POST">
-   <label for="name">Name:</label>
-   <input type="text" id="name" name="name" required>
-   <label for="company">Company:</label>
-   <input type="text" id="company" name="company" required>
-   <label for="email">Email:</label>
-   <input type="email" id="email" name="email" required>
-   <label for="contact">Contact Number:</label>
-   <input type="tel" id="contact" name="contact" required>
-   <button id="my-form-button" class="margin-t-md">Request a Demonstration</button>
-   <h3 id="my-form-status"></h3>
-</form>
+<div class="card text-content-caption padding-t-md padding-x-lg">
+   <form class="column text-content-width" id="my-form" action="https://formspree.io/f/xoqodadn" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="company">Company:</label>
+      <input type="text" id="company" name="company" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="contact">Contact Number:</label>
+      <input type="tel" id="contact" name="contact" required>
+      <button id="my-form-button" class="margin-t-md">Request a Demonstration</button>
+      <h3 id="my-form-status"></h3>
+   </form>
+</div>
 
 Remember, whether you&#146;re reaching out from the bustling streets of&nbsp;Tokyo or&nbsp;the quiet corners of&nbsp;Timbuktu, we&#146;re just a&nbsp;quantum entanglement away.
 

@@ -71,6 +71,20 @@ blockquote {
     font-family: serif;
 }
 
+form label {
+    font-size: var(--font-size-sm);
+}
+
+form input {
+    border-radius: var(--space-sm);
+    border-color: var(--border-color-light);
+    padding: var(--space-xs) var(--space-sm);
+}
+
+form button {
+    border-color: var(--border-color);
+}
+
 /* CONSTRUCTION NOTICE */
 
 .notice-stripe {
