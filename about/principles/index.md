@@ -9,7 +9,7 @@ A curious thing about business is how much time everyone spends trying to predic
 
 When you know someone's priorities – what they optimize for, what they'll sacrifice, what they consider non-negotiable – you can predict their behavior with surprising accuracy. 
 
-<div class="full-width">
+<div class="text-content-caption">
   <img src="/assets/img/illustrations/principles.jpg" />
 </div>
 

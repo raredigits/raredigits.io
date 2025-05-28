@@ -14,8 +14,9 @@ permalink: /tools/corsair/
     <p><strong>The reality:</strong> it's managing seventeen browser tabs while reconciling data that fundamentally disagrees with itself.</p>
 </blockquote>
 
-![](/assets/img/illustrations/products/corsair/sap.jpg)
-
+<div class="text-content-caption">
+  <img src="/assets/img/illustrations/products/corsair/sap.jpg" />
+</div>
 <cite>Lovely "friendly" and "modern" business application interface</cite>
 
 **Current Workflow:** Your ERP system offers a labyrinth of menus containing theoretically useful information, much like how an ancient library contained knowledge—somewhere in there, possibly. Your departmental reports each use creative accounting that would make tax havens nervous, with costs mysteriously migrating between departments like birds seeking warmer climates. Your CRM tracks customer metrics using definitions unrelated to any other system. And your accounting software stubbornly insists on reflecting actual financial reality, making it the least popular system in your technology stack.
@@ -37,21 +38,21 @@ Corsair HQ performs three services that shouldn't be revolutionary but somehow a
                     <h3>First,</h3>
                     <p>It filters the data firehose down to potable water.</p><p>Your existing systems generate information with the restraint of a fire hydrant that's been hit by a truck. Corsair applies filters that separate "needs executive attention" from "technically data but practically noise."</p>
                 </div>
-                <img class="height-70vh" src="/assets/img/illustrations/products/corsair/corsair-mobile-1.png">
+                <img style="height: 70vh; max-width: fit-content" src="/assets/img/illustrations/products/corsair/corsair-mobile-1.png">
             </div>
             <div class="column stretched">
                 <div>
                     <h3>Second,</h3>
                     <p>It connects information that should already be connected but isn't.</p><p>Sales data talks to inventory data, customer acquisition costs connect to lifetime value, and department profitability metrics acknowledge the existence of overhead expenses.</p>
                 </div>
-                <img class="height-70vh" src="/assets/img/illustrations/products/corsair/corsair-mobile-2.png">
+                <img style="height: 70vh; max-width: fit-content" src="/assets/img/illustrations/products/corsair/corsair-mobile-2.png">
             </div>
             <div class="column stretched">
                 <div>
                     <h3>Third,</h3>
                     <p>It surfaces problems before they become financial cardiac events.</p><p>The dashboard doesn't just show where you are; it shows where trouble is brewing, using the radical approach of comparing actual performance to what needs to happen for your business to survive.</p>
                 </div>
-                <img class="height-70vh" src="/assets/img/illustrations/products/corsair/corsair-mobile-3.png">
+                <img style="height: 70vh; max-width: fit-content" src="/assets/img/illustrations/products/corsair/corsair-mobile-3.png">
             </div> 
           </div>
       </div>
@@ -63,7 +64,7 @@ Corsair HQ performs three services that shouldn't be revolutionary but somehow a
 
 Traditional marketing would tell you that you need our comprehensive solution to see the full 360-degree picture of your business. The truth is more subversive: with Corsair HQ, you could navigate your entire business with one eye closed. 
 
-<div class="full-width">
+<div class="text-content-caption">
   <img src="/assets/img/newsroom/2024/corsair.jpg" />
 </div>
 

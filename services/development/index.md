@@ -5,8 +5,6 @@ offset: services
 permalink: /services/development/
 ---
 
-# 
-
 ## When You Need Something That Doesn't Exist Yet
 
 Sometimes, the perfect solution for your business problem simply doesn't exist in the market. No amount of searching, comparing feature lists, or sitting through demos will help, because what you need hasn't been built yet.
@@ -17,8 +15,8 @@ That's when we roll up our sleeves and build it ourselves.
 
 Custom software development often falls victim to overengineering—building complex architectures and flexibility that you'll never actually use. It's like commissioning a custom Swiss Army knife with 200 tools when you really just need a good hammer.
 
-<div class="full-width">
-  <img src="/assets/img/illustrations/rare-development.jpg" />
+<div class="text-content-caption">
+<img src="/assets/img/illustrations/rare-development.jpg" />
 </div>
 
 This all points to an industry dirty secret: custom projects are notorious for running over time, over budget, and under expectations. Clients enter with optimism and exit with battle scars, wondering how a "six-month project" turned into a two-year odyssey.

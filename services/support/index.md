@@ -27,7 +27,7 @@ Our radical approach?
 
 ## Technical Directors as Your First Line of Support
 
-<div class="full-width">
+<div class="text-content-caption">
   <img src="/assets/img/illustrations/rare_support.jpg" />
 </div>
 <cite>Rare Support Frontline</cite>

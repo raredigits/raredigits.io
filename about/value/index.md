@@ -5,16 +5,16 @@ offset: about
 permalink: /about/value/
 ---
 
+<div class="text-content-caption">
+  <img src="/assets/img/illustrations/value.jpg" />
+</div>
+
 Let's cut to the chase—business software should do more than exist on your servers. 
 
 At Rare Digits, we firmly believe nobody wakes up excited to purchase another software license. What they're actually buying is a solution to a problem.
 
 Our value proposition is refreshingly simple: 
 <div class="highlight">we turn your mountain of confusing data into a crystal-clear neatly assembled peices of actionable insights.</div>
-
-<div class="full-width">
-  <img src="/assets/img/illustrations/value.jpg" />
-</div>
 
 ## Beyond Data Collection
 

@@ -3,6 +3,7 @@ email: hi@raredigits.io
 description: Data In, Meaning Out
 url: "https://raredigits.io"
 email: "hi@raredigits.io"
+phone: "+971 52 87-86-777"
 
 plugins:
   - jekyll-feed

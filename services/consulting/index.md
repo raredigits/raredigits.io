@@ -11,7 +11,7 @@ Every business believes it's fundamentally different from all others. You have y
 
 And to some extent, you're absolutely right. Your business is unique in many ways.
 
-<div class="full-width">
+<div class="text-content-caption">
   <img src="/assets/img/illustrations/rare-consulting.jpg" />
 </div>
 <cite>Rare Consulting Session</cite>

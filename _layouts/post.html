@@ -1,36 +1,40 @@
 {% include head.html %}
 
-<div class="Column">
+<body>
     {% include header.html %}
-    {% include /special/constructionHeader.html %}
     
     <main>
-        <div class="content-wrapper">
+        {% include /special/constructionHeader.html %}
+        <div class="content grid-global">
             <aside class="sidebar">
-                <div class="sidebar-header">
-                    <a class="no-decoration" href="/about/newsroom/">Newsroom</a>
-                </div>
-                    {% if page.category %}
-                        <div class="eyebrow">{{ page.category }}</div>
-                    {% endif %}
-                    {% if page.date %}
-                        <div class="eyebrow">{{ page.date | date: "%B %d, %Y" }}</div>
-                    {% endif %}
-                <div class="sidebar-section mobile-hidden">
-                    {% if page.tags %}
-                        {% for tag in page.tags %}
-                        <span class="tag">{{ tag }}</span>
-                        {% endfor %}
-                    {% endif %}
+                <div class="sidebar-wrapper">
+                    <nav class="sidebar-nav no-scrollbar">
+                        <h5 class="sidebar-header">
+                            <a href="/about/newsroom/">Newsroom</a>
+                        </h5>
+                            {% if page.category %}
+                                <div class="sidebar-meta">{{ page.category }}</div>
+                            {% endif %}
+                            {% if page.date %}
+                                <div class="sidebar-meta">{{ page.date | date: "%B %d, %Y" }}</div>
+                            {% endif %}
+                        <div class="sidebar-meta">
+                            {% if page.tags %}
+                                {% for tag in page.tags %}
+                                <span class="tag">#{{ tag }}</span>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </nav>
                 </div>
             </aside>
             {% include title.html %}
-            <section class="page-content">
+            <article>
                 {{ content }}
                 {% include /special/pressOffice.html %}
-            </section>
+            </article>
         </div>
     </main>
-</div>
+</body>
 
 {% include footer.html %}

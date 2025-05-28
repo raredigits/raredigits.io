@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ site.title }} | {{ page.title }}</title>
 
-    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+    <link rel="icon" href="/assets/img/favicon/favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="icon" href="/assets/img/favicon/favicon-32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png" sizes="180x180">
 
+    <link rel="stylesheet" href="https://raredigits.github.io/rare-styles/rare.min.css">
     <link rel="stylesheet" href="/assets/css/rare.css">
     <link rel="stylesheet" href="/assets/css/feedback.scss">
 
@@ -15,12 +18,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-91KWRG2Y9N"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  if (!['localhost', '127.0.0.1'].includes(location.hostname)) {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-91KWRG2Y9N";
+    document.head.appendChild(s);
 
-  gtag('config', 'G-91KWRG2Y9N');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-91KWRG2Y9N');
+  }
 </script>

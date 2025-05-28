@@ -1,30 +1,36 @@
 {% include head.html %}
 
-<div class="Column">
+<body>
     {% include header.html %}
-    {% include /special/constructionHeader.html %}
-    
     <main>
-        <div class="content-wrapper">
+        {% include /special/constructionHeader.html %}
+        <div class="content grid-global">
             <aside class="sidebar">
-                {% if page.offset == "solutions" %}
-                    {% include /menu/solutions.html %}
-                {% elsif page.offset == "about" %}
-                    {% include /menu/about.html %}
-                {% elsif page.offset == "legal" %}
-                    {% include /menu/legal.html %}
-                {% elsif page.offset == "services" %}
-                    {% include /menu/services.html %}
-                {% elsif page.offset == "styles" %}
-                    {% include /menu/demo/styles.html %}
-                {% endif %}
+                <nav class="sidebar-wrapper sidebar-nav no-scrollbar">
+                    {% if page.offset == "solutions" %}
+                        {% include /menu/solutions.html %}
+                    {% elsif page.offset == "about" %}
+                        {% include /menu/about.html %}
+                    {% elsif page.offset == "legal" %}
+                        {% include /menu/legal.html %}
+                    {% elsif page.offset == "services" %}
+                        {% include /menu/services.html %}
+                    {% elsif page.offset == "styles" %}
+                        {% include /menu/demo/styles.html %}
+                    {% endif %}
+                </nav>
             </aside>
             {% include title.html %}
-            <section class="page-content">
+            <article>
+                {% if page.remark %}
+                    <p class="meta-info">
+                        <span class="">{{ page.remark }}</span>
+                    </p>
+                {% endif %}
                 {{ content }}
-            </section>
+            </article>
         </div>
     </main>
-</div>
+</body>
 
 {% include footer.html %}

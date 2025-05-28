@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rare Digits | Data In, Meaning Out</title>
 
-    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+    <link rel="icon" href="/assets/img/favicon/favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="icon" href="/assets/img/favicon/favicon-32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png" sizes="180x180">
 
+    <link rel="stylesheet" href="https://raredigits.github.io/rare-styles/rare.min.css">
     <link rel="stylesheet" href="/assets/css/rare.css">
-    <link rel="stylesheet" href="/assets/css/themes/rareBlack.css">
+    <link rel="stylesheet" href="/assets/css/themes/black.css">
+    <!-- <link rel="stylesheet" href="/assets/css/themes/rareBlack.css"> -->
     <link rel="stylesheet" href="/assets/css/modules/home.css">
     <link rel="stylesheet" href="/assets/css/feedback.scss">
 
@@ -17,118 +21,140 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-91KWRG2Y9N"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  if (!['localhost', '127.0.0.1'].includes(location.hostname)) {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-91KWRG2Y9N";
+    document.head.appendChild(s);
 
-  gtag('config', 'G-91KWRG2Y9N');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-91KWRG2Y9N');
+  }
 </script>
 
-<body class="Black">
-    <div class="Column">
-        <header>
-    <div class="header-wrapper site-max-width row stretched">
-        <div class="header-logo-container">
-            <a class="no-decoration" href="/">
-                <div class="header-logo"></div>
-            </a>
-        </div>
-        <nav class="nav-global stretched">
-            <ul>
-                <li><a href="/services/">Services</a></li>
-                <li><a href="/tools/">Solutions</a></li>
-                <li><a href="/services/pricing/">Pricing</a></li>
-                <li><a href="/about/newsroom/">Newsroom</a></li>
-                <li><a href="/about/contacts/">Contacts</a></li>
-            </ul>
-            <a class="button" href="https://demo.raredigits.io">Demo</a>
-        </nav>
-        <button class="hamburger no-decoration" aria-label="Toggle navigation">
-            <span class="material-icons icon-menu">menu</span>
-            <span class="material-icons icon-close">close</span>
-        </button>
+<body class="theme-black">
+    <header class="padding-x-md">
+  <div class="header-container grid-global">
+    <div class="header-logo-wrapper">
+        <a class="no-decoration" href="/"><div class="header-logo"></div></a>
     </div>
+    <nav class="nav-global flex stretched">
+      <ul>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/tools/">Solutions</a></li>
+          <li><a href="/services/pricing/">Pricing</a></li>
+          <li><a href="/about/newsroom/">Newsroom</a></li>
+          <li><a href="/about/contacts/">Contacts</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger no-decoration" aria-label="Toggle navigation">
+        <span class="material-icons icon-menu">menu</span>
+        <span class="material-icons icon-close">close</span>
+    </button>
+  </div>
 </header>
-        <div class="NoticeStripe ConstructionStripeMini">
-    <div class="site-max-width">
-        🚧 <a href="/newsroom/Reconstruction/">Website is Under Construction</a> 🚧
-    </div>
-</div>
         
-        <main>
-            <div class="Content">
-                <div>
-<section class="sectionFirst">
-    <div class="helloWorld">
-        <h1>Elegant Exteriors,<br />Brutal Internal</h1>
-        <p>
+    <main class="main-home">
+        <div class="content">
+            <div class="notice-stripe construction-stripe-mini">
+    🚧 <a class="no-decoration" href="/newsroom/Reconstruction/">Website is Under Construction</a> 🚧
+</div>
+            <section class="section-hero white">
+    <div class="absolute width-33 mobile:width-100 right right-xl mobile:right-md bottom-xl mobile:bottom-md">
+        <h1>Elegant Exteriors,<br>Brutal Internal</h1>
+        <p class="subheader">
             Software that’s easy to use
             and powerful under the hood,
             perfectly blending design
             with functionality
         </p>
-        <p>
-            <a href="/about">Nice to meet you</a> &gt;&gt;
+        <p class="subheader">
+            <a class="white link-thick brand-color-link"
+            href="/about">Nice to meet you</a> >>
         </p>
     </div>
 </section>
-<section class="sectionSecret mainRevert column stretched">
+
+<section class="section-about white-bg column stretched">
     <div>
         <h2>Pure Performance, No Excess</h2>
-        <hr class="hrDeco hrBlack" />
-        <p>
-            Efficiency is our hallmark at Rare.<br />Solutions that fit the task, with zero fluff.
+        <hr class="margin-x-auto width-50">
+        <p class="subheader">
+            Efficiency is our hallmark at Rare.<br>
+            Solutions that fit the task, with zero fluff.
         </p>
     </div>
-    <div>
-        <p style="font-size: 1em;">Finally get what you need from:</p>
-        <div class="secretVendors">
-            <img class="secretVendor" src="/assets/img/common/vendors/odoo_logo.svg" />
-            <img class="secretVendor" src="/assets/img/common/vendors/sap_logo.svg" />
-            <img class="secretVendor" src="/assets/img/common/vendors/zoho_logo.svg" />
+    <div class="mobile:margin-b-lg">
+        <p>Finally get what you need from:</p>
+        <div class="width-100 flex center-x gap-md">
+            <img class="width-xxl" src="/assets/img/common/vendors/odoo_logo.svg">
+            <img class="width-xxl" src="/assets/img/common/vendors/sap_logo.svg">
+            <img class="width-xxl" src="/assets/img/common/vendors/zoho_logo.svg">
         </div>
     </div>
-    <div class="secretCTA">
-        <a href="/about/value/" class="black">Check it out</a> &gt;&gt;
+    <div class="subheader absolute width-33 right right-xl mobile:right-md bottom-lg">
+        <a class="link-thick" href="/about/value/" class="black">Check it out</a> >>
     </div>
 </section>
 
-<section class="column CorsairPromo stretched">
-<div>
-    <h2><a class="no-decoration" href="/tools/corsair/">Corsair HQ</a></h2>
-    <hr class="hrDeco" />
-</div>
-<div class="center">
-    <a class="button button-lg" href="/tools/corsair/">
-        Finally, Even One Eye Is Enough for a 360-Degree View
-    </a>
-</div>
-<div class="NewProductSign"></div>
+<section class="corsair-promo rounded-lg column stretched">
+    <div>
+        <a class="no-decoration" href="/tools/corsair/">
+            <h2 class="white">Corsair HQ</h2>
+        </a>
+        <hr class="brand-color margin-x-auto width-50">
+    </div>
+    <div class="margin-x-auto">
+        <a class="button subheader block text-wrap" href="/tools/corsair/">
+            Finally, Even One Eye Is Enough for a 360-Degree View
+        </a>
+    </div>
+    <div class="new-product-sign"></div>
 </section>
 
-<section class="sectionServices column bg-black">
-    <a class="no-decoration" name="services"></a>
-    <h2><a href="/services/" class="no-decoration">Data In, Meaning Out</a></h2>
-    <hr class="hrDeco" />
+<section class="black-bg white">
+    <a class="no-decoration white" href="/services/">
+        <h2>Data In, Meaning Out</h2>
+    </a>
+    <hr class="brand-color margin-x-auto width-50">
     <p class="subheader">
         16 years satisfying enterprise’s every need
     </p>
-    <div class="RowMobile stretched gap-md">
-        <div class="service">
-            <h3>Consulting</h3>
+    <div class="grid grid-cols-4 mobile:grid-cols-1 gap-md padding-y-lg">
+        <div class="left white-bg black padding-x-md padding-t-md padding-b-lg rounded-md">
+            <h3 class="center-x">Consulting</h3>
             <ul>
+                <li>Value Highlighting;</li>
+                <li>Profit Search;</li>
+                <li>Loses Eliminating;</li>
                 <li>Data Analisys;</li>
-                <li>Enterprise Insights;</li>
-                <li>Best Practices;</li>
-                <li>Security Issues and Vulnerability Prevention;</li>
-                <li>Web3/Internal Tokenomics.</li>
+                <li>Enterprise Insights.</li>
             </ul>
         </div>
-        <div class="service">
-            <h3>Support</h3>
+        <div class="left white-bg black padding-x-md padding-t-md padding-b-lg rounded-md">
+            <h3 class="center-x">Development</h3>
+            <ul>
+                <li>Diverse Systems Integrations;</li>
+                <li>Websites & Applications;</li>
+                <li>Mobile & Cross-Platform Desktop Applications;</li>
+                <li>Custom Software.</li> 
+            </ul>
+        </div>
+        <div class="left white-bg black padding-x-md padding-t-md padding-b-lg rounded-md">
+            <h3 class="center-x">Design</h3>
+            <ul>
+                <li>Omni-Channel Value Delivering;</li>
+                <li>Dashboards;</li>
+                <li>Database Queries;</li>
+                <li>High-Load Architecture Design;</li>
+                <li>Decisions Provision.</li>
+            </ul>
+        </div>
+        <div class="left white-bg black padding-x-md padding-t-md padding-b-lg rounded-md">
+            <h3 class="center-x">Support</h3>
             <ul>
                 <li>Third-Party Apps Customization;</li>
                 <li>Get Help with Custom Software;</li>
@@ -136,41 +162,21 @@
                 <li>Tunable Alert Systems.</li>
             </ul>
         </div>
-        <div class="service">
-            <h3>Development</h3>
-            <ul>
-                <li>Websites &amp; Applications;</li>
-                <li>Mobile &amp; Cross-Platform Desktop Applications;</li>
-                <li>Custom Software;</li>
-                <li>Diverse Systems Integrations;</li>
-                <li>High-Load Architecture Design.</li>
-            </ul>
-        </div>
-        <div class="service">
-            <h3>Web3</h3>
-            <ul>
-                <li>Web3 Applications;</li>
-                <li>Payment Services;</li>
-                <li>Blockchain &amp; Smart Contracts Implementation;</li>
-                <li>Web3 Integrations;</li>
-                <li>Decentralized Architecture Design.</li>
-            </ul>
-        </div>
     </div>
     <div class="servicesText">
-        <p><strong>Integration Tools for Data Providers:</strong><br /> Odoo, SAP Business One, Zoho, CIN7, Oracle NetSuite, MS Business Central, Acumatica, 1C</p>
+        <p><strong>Integration Tools for Data Providers:</strong><br> Odoo, SAP Business One, Zoho, CIN7, Oracle NetSuite, MS Business Central, Acumatica, 1C</p>
     </div>
     <div class="servicesText">
-        <p><strong>Technical Stack:</strong><br /> NodeJS, Python, React, TypeScript, Ruby, Solidity, IPFS, Rust, Infura, EtherJS, Web3JS, C#, WPF, Electron, Flutter, Cordova, PassportJS, Auth0, Firebase, PostgreSQL, Redis, MySQL, Memcached, MongoDB, MSSQL</p>
+        <p><strong>Technical Stack:</strong><br> NodeJS, Python, React, TypeScript, Ruby, Solidity, IPFS, Rust, Infura, EtherJS, Web3JS, C#, WPF, Electron, Flutter, Cordova, PassportJS, Auth0, Firebase, PostgreSQL, Redis, MySQL, Memcached, MongoDB, MSSQL</p>
     </div>
 </section>
 
-<section class="column bg-black">
+<!-- <section class="column bg-black">
     <a class="no-decoration" name="solutions"></a>
     <h2><a href="/tools/" class="no-decoration">Simplicity in Every Solution</a></h2>
-    <hr class="hrDeco" />
+    <hr class="hrDeco">
     <div class="solutionsText">
-        <p class="subheader">Navigate the future of business<br />
+        <p class="subheader">Navigate the future of business<br>
             with <strong>Rare Digits</strong></p>
     </div>
     <div class="flex gap-md">
@@ -180,13 +186,13 @@
         </div>
         <div class="solution solutionIntergation">
             <h3>Integration: Harmony Across Platforms</h3>
-            <p>Orchestrate disparate systems,<br />transforming them into a seamless, unified experience</p>
+            <p>Orchestrate disparate systems,<br>transforming them into a seamless, unified experience</p>
         </div>
         <div class="solution solutionSales">
             <h3>Push the Envelope</h3>
         </div>
         <div class="solution solutionLogistics">
-            <h3>Just In Time.<br />
+            <h3>Just In Time.<br>
             Always</h3>
         </div>
         <div class="solution solutionConsulting">
@@ -194,66 +200,70 @@
             <p>Visionary insights meet unparalleled expertise</p>
         </div>
     </div>
-</section>
+</section> -->
 
-<section class="column mainRevert">
-    <h2>Bespoke Applications</h2>
-    <hr class="hrDeco" />
-    <p>
+<section class="white-bg">
+    <a class="no-decoration" href="/tools/">
+        <h2>Bespoke Applications</h2>
+    </a> 
+    <hr class="margin-x-auto width-50">
+    <p class="subheader">
         Disclose the full story and simplify decision making
     </p>
-    <div class="appStore flex stretched">
-        <div class="app">
-            <img src="/assets/img/common/apps/app-atlas.png" alt="" />
+    <div class="flex stretched wrap padding-y-lg">
+        <div class="width-15 mobile:width-50">
+            <img src="/assets/img/common/apps/app-atlas.png" alt="">
             <p>
-                <strong><a href="/tools/atlas/">Atlas ERP</a></strong><br />
+                <strong><a href="/tools/atlas/">Atlas ERP</a></strong><br>
                 Visualized ERP System
             </p>
         </div>
-        <div class="app">
-            <img src="/assets/img/common/apps/app-columbus.png" alt="" />
+        <div class="width-15 mobile:width-50">
+            <img src="/assets/img/common/apps/app-columbus.png" alt="">
             <p>
-                <strong><a href="/tools/columbus/">Columbus</a></strong><br />
+                <strong><a href="/tools/columbus/">Columbus</a></strong><br>
                 Automated Sales Navigator
             </p>
         </div>
-        <div class="app">
-            <img src="/assets/img/common/apps/app-forecast.png" alt="" />
+        <div class="width-15 mobile:width-50">
+            <img src="/assets/img/common/apps/app-forecast.png" alt="">
             <p>
-                <strong><a href="/tools/forecast/">Forecast App</a></strong><br />
+                <strong><a href="/tools/forecast/">Forecast App</a></strong><br>
                 Predictive Analytics
             </p>
         </div>
-        <div class="app">
-            <img src="/assets/img/common/apps/app-fanfare.png" alt="" />
+        <div class="width-15 mobile:width-50">
+            <img src="/assets/img/common/apps/app-fanfare.png" alt="">
             <p>
-                <strong><a href="/tools/fanfare/">Fanfare</a></strong><br />
+                <strong><a href="/tools/fanfare/">Fanfare</a></strong><br>
                 Loyalty Management System
             </p>
         </div>
-        <div class="app">
-            <img src="/assets/img/common/apps/app-concierge.png" alt="" />
+        <div class="width-15 mobile:width-50">
+            <img src="/assets/img/common/apps/app-concierge.png" alt="">
             <p>
-                <strong><a href="/tools/jeeves/">Concierge App</a></strong><br />
+                <strong><a href="/tools/jeeves/">Concierge App</a></strong><br>
                 Personal GPT Assistant
             </p>
         </div>
     </div>
-    <div class="appStoreText">
-        <p>Customized, turnkey apps that epitomize sophistication.<br />Impeccably crafted to resonate with your enterprise’s unique rhythm</p>
-    </div>
+    <p>Customized, turnkey apps that epitomize sophistication.<br>
+    Impeccably crafted to resonate with your enterprise’s unique rhythm</p>
 </section>
 
-<section class="oneApp bg-black">
-    <h2>One Interface. Infinite Control</h2>
-    <hr class="hrDeco" />
+<section class="jeeves-promo black-bg white rounded-lg">
+    <a class="no-decoration white" href="/tools/jeeves/">
+        <h2>One Interface. Infinite Control</h2>
+    </a>
+    <hr class="brand-color margin-x-auto width-50">
     <p class="subheader">Online data analisys in simple words</p>
-    <div class="oneAppWrapper flex">
-        <div class="oneAppPhone">
-            <img src="/assets/img/main/phone.png" alt="" />
+
+    <div class="flex wrap">
+        <div class="width-50 mobile:width-100 center-x">
+            <img class="inline-block" src="/assets/img/main/phone.png" alt="">
         </div>
-        <div class="oneAppText">
-            <p><strong>Decades of expertise captured in one sleek interface</strong><br />
+        <div class="width-30 mobile:width-100 left margin-y-auto">
+            <p><strong>Decades of expertise captured in one sleek interface</strong><br>
             Empower your enterprise with real-time insights and control, anywhere, anytime.</p>
             <ul>
                 <li>Seamless integration with back-end systems</li>
@@ -263,11 +273,11 @@
             </ul>
         </div>
     </div>
-    <div class="sleep">
-        <p>
-            Trained to suit<br />
-            your individual needs<br />
-            <img src="/assets/img/main/sleep.png" alt="" />
+    <div class="absolute left right-lg bottom-lg mobile-hidden">
+        <p class="font-size-sm">
+            Trained to suit<br>
+            your individual needs<br>
+            <img class="height-lg" src="/assets/img/main/sleep.png" alt="">
         </p>
     </div>
 </section>
@@ -278,358 +288,336 @@
         <div class="feedback">
         </div>
 </section> -->
-<section class="sectionPricing bg-black">
-    <a class="noDecor" name="pricing"></a>
-    <h2><a href="/services/pricing/" class="no-decoration">Pricing for Your Happiness</a></h2>
-    <hr class="hrDeco" />
-    <p>Customized plans for everyone</p>
-    <div class="pricingWrapper">
-        <div class="pricingText">
-            <h3>The price doesn’t matter.</h3>
-            Because we’re talking only about the client’s profit.<br />
-            The aim is client happiness, achieved by crafting conditions that are inherently advantageous. Here, it’s not about spending money; it’s about investing in well-being. So, the emphasis is on the benefit: the cost is secondary to the inherent advantage.
-            <p><a href="/services/pricing/">Check Plans</a> &gt;&gt;</p>
-        </div>
-        <div class="pricingImg"></div>
+
+<section class="section-pricing black-bg white">
+    <a class="no-decoration white" href="/services/pricing/">
+        <h2>Pricing for Your Happiness</h2>
+    </a>
+    <hr class="brand-color margin-x-auto width-50">
+    <p class="subheader">Customized plans for everyone</p>
+
+    <div class="width-40 mobile:width-100 padding-y-lg left">
+        <h3>The price doesn’t matter.</h3>
+        Because we’re talking only about the client’s profit.<br>
+        The aim is client happiness, achieved by crafting conditions that are inherently advantageous. Here, it’s not about spending money; it’s about investing in well-being. So, the emphasis is on the benefit: the cost is secondary to the inherent advantage.
+        <p><a class="white" href="/services/pricing/">Check Plans</a> >></p>
     </div>
 </section>
 
-<section class="Newsroom bg-black">
-    <a class="no-decoration" name="newsroom"></a>
-    <h2><a class="no-decoration" href="/about/newsroom">Newsroom</a></h2>
-    <hr class="hrDeco" />
+<section class="black-bg white">
+    <a class="no-decoration white" href="/about/newsroom">
+        <h2>Newsroom</h2>
+    </a>
+    <hr class="brand-color margin-x-auto width-50">
     <p class="subheader">Stay up to date with news that matters</p>
-    <div class="newsMain">
+    <div class="air-lg"></div>
+    <div class="grid grid-cols-3 mobile:grid-cols-1 left">
         
-        <div class="newsBlock">
-            <div class="newsData">
+        <div class="padding-b-md">
+            <div class="font-size-sm">
                 03.02.2025
                 
                     
-                    <span class="list-tag">
-                        #kitchen
-                    </span>
+                    <span class="tag">#kitchen&nbsp;</span>
                 
                     
-                    <span class="list-tag">
-                        #web3
-                    </span>
+                    <span class="tag">#web3&nbsp;</span>
                 
             </div>
-            <a href="/newsroom/Introducing-Whatchtower/">Introducing Watchtower v.0.1</a><br />
+            <a class="white brand-color-link" href="/newsroom/Introducing-Whatchtower/">Introducing Watchtower v.0.1</a><br>
         </div>
         
-        <div class="newsBlock">
-            <div class="newsData">
+        <div class="padding-b-md">
+            <div class="font-size-sm">
                 20.01.2025
                 
                     
-                    <span class="list-tag">
-                        #business
-                    </span>
+                    <span class="tag">#business&nbsp;</span>
                 
                     
-                    <span class="list-tag">
-                        #core
-                    </span>
+                    <span class="tag">#core&nbsp;</span>
                 
             </div>
-            <a href="/newsroom/Big-checks-vs-frequent/">Big Checks vs. Frequent Buyers</a><br />
+            <a class="white brand-color-link" href="/newsroom/Big-checks-vs-frequent/">Big Checks vs. Frequent Buyers</a><br>
         </div>
         
-        <div class="newsBlock">
-            <div class="newsData">
+        <div class="padding-b-md">
+            <div class="font-size-sm">
                 13.01.2025
                 
                     
-                    <span class="list-tag">
-                        #finance
-                    </span>
+                    <span class="tag">#finance&nbsp;</span>
                 
                     
-                    <span class="list-tag">
-                        #forecast
-                    </span>
+                    <span class="tag">#forecast&nbsp;</span>
                 
             </div>
-            <a href="/newsroom/Lending-Scoring-Practice/">How Lending Assessment Practices Can Revolutionize Auto Repair Shop's Cash Flow</a><br />
+            <a class="white brand-color-link" href="/newsroom/Lending-Scoring-Practice/">How Lending Assessment Practices Can Revolutionize Auto Repair Shop's Cash Flow</a><br>
         </div>
         
-        <div class="newsBlock">
-            <div class="newsData">
+        <div class="padding-b-md">
+            <div class="font-size-sm">
                 18.11.2024
                 
                     
-                    <span class="list-tag">
-                        #kitchen
-                    </span>
+                    <span class="tag">#kitchen&nbsp;</span>
                 
                     
-                    <span class="list-tag">
-                        #erp
-                    </span>
+                    <span class="tag">#erp&nbsp;</span>
                 
             </div>
-            <a href="/newsroom/Introducing-Corsair-HQ/">Introducing Corsair HQ</a><br />
+            <a class="white brand-color-link" href="/newsroom/Introducing-Corsair-HQ/">Introducing Corsair HQ</a><br>
         </div>
         
-        <div class="newsBlock">
-            <div class="newsData">
+        <div class="padding-b-md">
+            <div class="font-size-sm">
                 02.09.2024
                 
                     
-                    <span class="list-tag">
-                        #kitchen
-                    </span>
+                    <span class="tag">#kitchen&nbsp;</span>
                 
             </div>
-            <a href="/newsroom/Reconstruction/">Pardon Our Digital Dust</a><br />
+            <a class="white brand-color-link" href="/newsroom/Reconstruction/">Pardon Our Digital Dust</a><br>
         </div>
         
-        <div class="newsBlock">
-            <div class="newsData">
+        <div class="padding-b-md">
+            <div class="font-size-sm">
                 31.07.2024
                 
                     
-                    <span class="list-tag">
-                        #partnership
-                    </span>
+                    <span class="tag">#partnership&nbsp;</span>
                 
             </div>
-            <a href="/newsroom/Destination-partnership/">Rare Digits Now Officially Managing the Future</a><br />
+            <a class="white brand-color-link" href="/newsroom/Destination-partnership/">Rare Digits Now Officially Managing the Future</a><br>
         </div>
         
-        <div class="newsBlock">
-            <div class="newsData">
+        <div class="padding-b-md">
+            <div class="font-size-sm">
                 02.07.2024
                 
                     
-                    <span class="list-tag">
-                        #automate
-                    </span>
+                    <span class="tag">#automate&nbsp;</span>
                 
                     
-                    <span class="list-tag">
-                        #kitchen
-                    </span>
+                    <span class="tag">#kitchen&nbsp;</span>
                 
             </div>
-            <a href="/newsroom/Product-management-for-IT-infrastructure/">Product Management for IT Infrastructure</a><br />
+            <a class="white brand-color-link" href="/newsroom/Product-management-for-IT-infrastructure/">Product Management for IT Infrastructure</a><br>
         </div>
         
-        <div class="newsBlock">
-            <div class="newsData">
+        <div class="padding-b-md">
+            <div class="font-size-sm">
                 14.06.2024
                 
                     
-                    <span class="list-tag">
-                        #partnership
-                    </span>
+                    <span class="tag">#finance&nbsp;</span>
                 
                     
-                    <span class="list-tag">
-                        #finance
-                    </span>
-                
-                    
-                    <span class="list-tag">
-                        #blessing
-                    </span>
+                    <span class="tag">#blessing&nbsp;</span>
                 
             </div>
-            <a href="/newsroom/Asiatech-partnership/">Financial Experts Choose Financial Experts</a><br />
+            <a class="white brand-color-link" href="/newsroom/Asiatech-partnership/">Financial Experts Choose Financial Experts</a><br>
         </div>
         
-        <div class="newsBlock">
-            <div class="newsData">
+        <div class="padding-b-md">
+            <div class="font-size-sm">
                 04.06.2024
                 
                     
-                    <span class="list-tag">
-                        #AI
-                    </span>
+                    <span class="tag">#AI&nbsp;</span>
                 
                     
-                    <span class="list-tag">
-                        #automate
-                    </span>
+                    <span class="tag">#automate&nbsp;</span>
                 
             </div>
-            <a href="/newsroom/Urgently-invest-in-AI/">How to Determine if You Need to Urgently Invest in AI?</a><br />
+            <a class="white brand-color-link" href="/newsroom/Urgently-invest-in-AI/">How to Determine if You Need to Urgently Invest in AI?</a><br>
         </div>
         
     </div>
 </section>
 
-<section class="sectionContacts bg-black">
-    <a name="demo"></a>
-    <h2>Experience Rare Digits</h2>
-    <hr class="hrDeco" />
-    <p>A renaissance in enterprise software awaits.<br />
+<section class="black-bg white">
+    <a class="no-decoration white" href="/about/contacts">
+        <h2>Experience Rare Digits</h2>
+    </a>
+    <hr class="brand-color margin-x-auto width-50">
+    <p class="subheader">A renaissance in enterprise software awaits.<br>
         Explore elegance, efficiency, and excellence—encapsulated by yourself</p>
-    <div class="contactsWrapper">
-        <div class="demoRequest">
-            <h3>Book a Demo:</h3>
-            <form id="my-form" action="https://formspree.io/f/xoqodadn" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required="" />
-                <label for="company">Company:</label>
-                <input type="text" id="company" name="company" required="" />
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required="" />
-                <label for="contact">Contact Number:</label>
-                <input type="tel" id="contact" name="contact" required="" />
-                <button id="my-form-button" class="full-width">Request a Demonstration</button>
-                <h3 id="my-form-status"></h3>
-            </form>
-            <h3>Meet The Team</h3>
-            <p>Our Reps are available at: Dubai, Berlin, Copenhagen, Jakarta, Bali, Tbilisi, Limassol, Porto, Miami or Phuket
-            </p>
-            <img src="/assets/img/main/world-map.png" alt="" />
-        </div>
+
+    <div class="air-lg"></div>
+
+    <div class="width-60 mobile:width-100 margin-x-auto">
+        <h3>Book a Demo:</h3>
+        <form id="my-form" action="https://formspree.io/f/xoqodadn" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="company">Company:</label>
+            <input type="text" id="company" name="company" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" required>
+            <button id="my-form-button" class="full-width">Request a Demonstration</button>
+            <h3 id="my-form-status"></h3>
+        </form>
+        <h3>Meet The Team</h3>
+        <p>Our Reps are available at: Dubai, Berlin, Copenhagen, Jakarta, Bali, Tbilisi, Limassol, Porto, Miami or Phuket
+        </p>
+        <img src="/assets/img/main/world-map.png" alt="">
     </div>
 </section>
-</div>
-
+            <div class="wa-button-wrapper">
+                <a href="https://wa.me/971528786777" class="wa-button" aria-label="Chat on WhatsApp"></a>
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
     
     <footer>
-  <div class="site-max-width column">
-    <div class="grid-columns-md space-md">
-      <div>
-  <h3>Solutions</h3>
-    <ul>
-      
-        <li>
-            <a href="/tools/atlas/">Atlas ERP</a>
-        </li>
-      
-        <li>
-            <a href="/tools/corsair/">Corsair HQ</a>
-        </li>
-      
-        <li>
-            <a href="/tools/columbus/">Columbus CRM</a>
-        </li>
-      
-        <li>
-            <a href="/tools/forecast/">Forecast App</a>
-        </li>
-      
-        <li>
-            <a href="/tools/fanfare/">Fanfare Loyalty</a>
-        </li>
-      
-        <li>
-            <a href="/tools/jeeves/">Jeeves GPT</a>
-        </li>
-      
-        <li>
-            <a href="/tools/web3/watchtower/">Watchtower</a>
-        </li>
-      
-        <li>
-            <a href="/tools/open-source/">Open-Source</a>
-        </li>
-      
-    </ul>
+  <div class="site-max-width padding-x-md padding-b-lg">
+    <div class="grid-global padding-y-lg">
+      <div class="col-span-2">
+  <h5>Solutions</h5>
+    <nav>
+      <ul>
+        
+          <li>
+              <a href="/tools/atlas/">Atlas ERP</a>
+          </li>
+        
+          <li>
+              <a href="/tools/corsair/">Corsair HQ</a>
+          </li>
+        
+          <li>
+              <a href="/tools/columbus/">Columbus CRM</a>
+          </li>
+        
+          <li>
+              <a href="/tools/forecast/">Forecast App</a>
+          </li>
+        
+          <li>
+              <a href="/tools/fanfare/">Fanfare Loyalty</a>
+          </li>
+        
+          <li>
+              <a href="/tools/jeeves/">Jeeves GPT</a>
+          </li>
+        
+          <li>
+              <a href="/tools/web3/watchtower/">Watchtower</a>
+          </li>
+        
+          <li>
+              <a href="/tools/open-source/">Open-Source</a>
+          </li>
+        
+      </ul>
+    </nav>
 </div>
-      <div>
-  <h3>Services</h3>
-    <ul>
-      
-        <li>
-            <a href="/services/consulting/">Consulting</a>
-        </li>
-      
-        <li>
-            <a href="/services/design/">Design</a>
-        </li>
-      
-        <li>
-            <a href="/services/integrations/">Intergations</a>
-        </li>
-      
-        <li>
-            <a href="/services/development/">Development</a>
-        </li>
-      
-        <li>
-            <a href="/services/security/">Security</a>
-        </li>
-      
-        <li>
-            <a href="/services/support/">Support</a>
-        </li>
-      
-        <li>
-            <a href="/services/pricing/">Pricing</a>
-        </li>
-      
-    </ul>
+      <div class="col-span-2">
+  <h5>Services</h5>
+    <nav>
+      <ul class="nav-list">
+        
+          <li>
+              <a href="/services/consulting/">Consulting</a>
+          </li>
+        
+          <li>
+              <a href="/services/design/">Design</a>
+          </li>
+        
+          <li>
+              <a href="/services/integrations/">Intergations</a>
+          </li>
+        
+          <li>
+              <a href="/services/development/">Development</a>
+          </li>
+        
+          <li>
+              <a href="/services/security/">Security</a>
+          </li>
+        
+          <li>
+              <a href="/services/support/">Support</a>
+          </li>
+        
+          <li>
+              <a href="/services/pricing/">Pricing</a>
+          </li>
+        
+      </ul>
+    </nav>
 </div>
-      <div>
-        <h3>Subscriptions</h3>
-        <ul>
-          <li><a href="">Junior Associate</a></li>
-          <li><a href="">Associate</a></li>
-          <li><a href="">Consigliere</a></li>
-          <li><a href="">Mr. Wolf</a></li>
-          <li><a href="">NED</a></li>
-          <li><a href="/services/pricing/">Pricing</a></li>
-        </ul>
+      <div class="col-span-2">
+        <h5>Subscriptions</h5>
+        <nav>
+          <ul>
+            <li><a href="">Junior Associate</a></li>
+            <li><a href="">Associate</a></li>
+            <li><a href="">Consigliere</a></li>
+            <li><a href="">Mr. Wolf</a></li>
+            <li><a href="">NED</a></li>
+            <li><a href="/services/pricing/">Pricing</a></li>
+          </ul>
+        </nav>
       </div>
-      <div>
-  <h3>Rare</h3>
-    <ul>
-      
-        <li>
-            <a href="/about/value/">The Value</a>
-        </li>
-      
-        <li>
-            <a href="/about/">About</a>
-        </li>
-      
-        <li>
-            <a href="/about/principles/">Principles</a>
-        </li>
-      
-        <li>
-            <a href="/about/partnership/">Partnership</a>
-        </li>
-      
-        <li>
-            <a href="/about/newsroom/">Newsroom</a>
-        </li>
-      
-        <li>
-            <a href="/about/contacts/">Contacts</a>
-        </li>
-      
-    </ul>
+      <div class="col-span-2">
+  <h5>Rare</h5>
+    <nav>
+      <ul>
+        
+          <li>
+              <a href="/about/value/">The Value</a>
+          </li>
+        
+          <li>
+              <a href="/about/">About</a>
+          </li>
+        
+          <li>
+              <a href="/about/principles/">Principles</a>
+          </li>
+        
+          <li>
+              <a href="/about/partnership/">Partnership</a>
+          </li>
+        
+          <li>
+              <a href="/about/newsroom/">Newsroom</a>
+          </li>
+        
+          <li>
+              <a href="/about/contacts/">Contacts</a>
+          </li>
+        
+      </ul>
+    </nav>
 </div>
-      <div>
-  <h3>Legal Stuff</h3>
-    <ul>
-      
-        <li>
-            <a href="/legal/privacy/">Privacy Policy</a>
-        </li>
-      
-        <li>
-            <a href="/legal/terms/">Terms of Service</a>
-        </li>
-      
-    </ul>
+      <div class="col-span-2">
+  <h5>Legal Stuff</h5>
+    <nav>
+      <ul>
+        
+          <li>
+              <a href="/legal/privacy/">Privacy Policy</a>
+          </li>
+        
+          <li>
+              <a href="/legal/terms/">Terms of Service</a>
+          </li>
+        
+      </ul>
+    </nav>
 </div>
     </div>
 
-    <div class="row stretched border-top space-md">
+    <div class="flex stretched border-top">
       <div>
         <p>Data In, Meaning Out:<br>
+          <a class="no-decoration" href="tel:+971 52 87-86-777">+971 52 87-86-777</a><br>
           <a href="mailto:hi@raredigits.io">hi@raredigits.io</a>
         </p>
       </div>
@@ -646,7 +634,8 @@
     <div class="cookieText">
         <h3>🍪</h3>
         <p class="Bold">Help yourself to&nbsp;some cookies!</p>
-        <p>We're using third party cookies and scripts to improve the functionality of this website. <a href="/legal/privacy">Legal explanation</a> >></p>
+        <p>We're using third party cookies and scripts to improve the functionality of this website.</p>
+        <p><a href="/legal/privacy">In legal terms</a> >></p>
         <div class="Right">
             <button id="cookie-notice-accept" class="cookieButton">Nice!</button>
         </div>

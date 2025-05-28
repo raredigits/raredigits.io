@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rare Digits | Privacy Policy</title>
 
-    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+    <link rel="icon" href="/assets/img/favicon/favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="icon" href="/assets/img/favicon/favicon-32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png" sizes="180x180">
 
+    <link rel="stylesheet" href="https://raredigits.github.io/rare-styles/rare.min.css">
     <link rel="stylesheet" href="/assets/css/rare.css">
     <link rel="stylesheet" href="/assets/css/feedback.scss">
 
@@ -15,51 +18,50 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-91KWRG2Y9N"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  if (!['localhost', '127.0.0.1'].includes(location.hostname)) {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-91KWRG2Y9N";
+    document.head.appendChild(s);
 
-  gtag('config', 'G-91KWRG2Y9N');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-91KWRG2Y9N');
+  }
 </script>
 
-<div class="Column">
-    <header>
-    <div class="header-wrapper site-max-width row stretched">
-        <div class="header-logo-container">
-            <a class="no-decoration" href="/">
-                <div class="header-logo"></div>
-            </a>
-        </div>
-        <nav class="nav-global stretched">
-            <ul>
-                <li><a href="/services/">Services</a></li>
-                <li><a href="/tools/">Solutions</a></li>
-                <li><a href="/services/pricing/">Pricing</a></li>
-                <li><a href="/about/newsroom/">Newsroom</a></li>
-                <li><a href="/about/contacts/">Contacts</a></li>
-            </ul>
-            <a class="button" href="https://demo.raredigits.io">Demo</a>
-        </nav>
-        <button class="hamburger no-decoration" aria-label="Toggle navigation">
-            <span class="material-icons icon-menu">menu</span>
-            <span class="material-icons icon-close">close</span>
-        </button>
+<body>
+    <header class="padding-x-md">
+  <div class="header-container grid-global">
+    <div class="header-logo-wrapper">
+        <a class="no-decoration" href="/"><div class="header-logo"></div></a>
     </div>
+    <nav class="nav-global flex stretched">
+      <ul>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/tools/">Solutions</a></li>
+          <li><a href="/services/pricing/">Pricing</a></li>
+          <li><a href="/about/newsroom/">Newsroom</a></li>
+          <li><a href="/about/contacts/">Contacts</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger no-decoration" aria-label="Toggle navigation">
+        <span class="material-icons icon-menu">menu</span>
+        <span class="material-icons icon-close">close</span>
+    </button>
+  </div>
 </header>
-    <div class="NoticeStripe ConstructionStripeMini">
-    <div class="site-max-width">
-        🚧 <a href="/newsroom/Reconstruction/">Website is Under Construction</a> 🚧
-    </div>
-</div>
-    
     <main>
-        <div class="content-wrapper">
+        <div class="notice-stripe construction-stripe-mini">
+    🚧 <a class="no-decoration" href="/newsroom/Reconstruction/">Website is Under Construction</a> 🚧
+</div>
+        <div class="content grid-global">
             <aside class="sidebar">
-                
-                    <span class="sidebar-header">
+                <nav class="sidebar-wrapper sidebar-nav no-scrollbar">
+                    
+                        <span class="sidebar-header">
   <a href="/legal/" class="no-decoration">Legal Stuff</a></span>
 <nav class="sidebar-nav no-scrollbar">
   <ul>
@@ -79,15 +81,16 @@
   </ul>
 </nav>
 
-                
+                    
+                </nav>
             </aside>
             
-  <section class="page-title border-bottom">
+  <section class="page-title">
     <h1>Privacy Policy</h1>
-    
   </section>
-  
-            <section class="page-content">
+
+            <article>
+                
                 <h2 id="yes-we-use-cookies">Yes, We Use Cookies</h2>
 
 <p>This is where we’re legally obligated to tell you about those little digital breadcrumbs called “cookies” that follow you around the internet. But instead of drowning you in legalese that nobody reads, let’s have an honest conversation.</p>
@@ -127,146 +130,157 @@
 
 <p>If you have any questions about our privacy practices that weren’t answered by this refreshingly straightforward policy, please contact us at <a href="mailto:legal@raredigits.io">legal@raredigits.io</a>.</p>
 
-            </section>
+            </article>
         </div>
     </main>
-</div>
+</body>
 
 <footer>
-  <div class="site-max-width column">
-    <div class="grid-columns-md space-md">
-      <div>
-  <h3>Solutions</h3>
-    <ul>
-      
-        <li>
-            <a href="/tools/atlas/">Atlas ERP</a>
-        </li>
-      
-        <li>
-            <a href="/tools/corsair/">Corsair HQ</a>
-        </li>
-      
-        <li>
-            <a href="/tools/columbus/">Columbus CRM</a>
-        </li>
-      
-        <li>
-            <a href="/tools/forecast/">Forecast App</a>
-        </li>
-      
-        <li>
-            <a href="/tools/fanfare/">Fanfare Loyalty</a>
-        </li>
-      
-        <li>
-            <a href="/tools/jeeves/">Jeeves GPT</a>
-        </li>
-      
-        <li>
-            <a href="/tools/web3/watchtower/">Watchtower</a>
-        </li>
-      
-        <li>
-            <a href="/tools/open-source/">Open-Source</a>
-        </li>
-      
-    </ul>
+  <div class="site-max-width padding-x-md padding-b-lg">
+    <div class="grid-global padding-y-lg">
+      <div class="col-span-2">
+  <h5>Solutions</h5>
+    <nav>
+      <ul>
+        
+          <li>
+              <a href="/tools/atlas/">Atlas ERP</a>
+          </li>
+        
+          <li>
+              <a href="/tools/corsair/">Corsair HQ</a>
+          </li>
+        
+          <li>
+              <a href="/tools/columbus/">Columbus CRM</a>
+          </li>
+        
+          <li>
+              <a href="/tools/forecast/">Forecast App</a>
+          </li>
+        
+          <li>
+              <a href="/tools/fanfare/">Fanfare Loyalty</a>
+          </li>
+        
+          <li>
+              <a href="/tools/jeeves/">Jeeves GPT</a>
+          </li>
+        
+          <li>
+              <a href="/tools/web3/watchtower/">Watchtower</a>
+          </li>
+        
+          <li>
+              <a href="/tools/open-source/">Open-Source</a>
+          </li>
+        
+      </ul>
+    </nav>
 </div>
-      <div>
-  <h3>Services</h3>
-    <ul>
-      
-        <li>
-            <a href="/services/consulting/">Consulting</a>
-        </li>
-      
-        <li>
-            <a href="/services/design/">Design</a>
-        </li>
-      
-        <li>
-            <a href="/services/integrations/">Intergations</a>
-        </li>
-      
-        <li>
-            <a href="/services/development/">Development</a>
-        </li>
-      
-        <li>
-            <a href="/services/security/">Security</a>
-        </li>
-      
-        <li>
-            <a href="/services/support/">Support</a>
-        </li>
-      
-        <li>
-            <a href="/services/pricing/">Pricing</a>
-        </li>
-      
-    </ul>
+      <div class="col-span-2">
+  <h5>Services</h5>
+    <nav>
+      <ul class="nav-list">
+        
+          <li>
+              <a href="/services/consulting/">Consulting</a>
+          </li>
+        
+          <li>
+              <a href="/services/design/">Design</a>
+          </li>
+        
+          <li>
+              <a href="/services/integrations/">Intergations</a>
+          </li>
+        
+          <li>
+              <a href="/services/development/">Development</a>
+          </li>
+        
+          <li>
+              <a href="/services/security/">Security</a>
+          </li>
+        
+          <li>
+              <a href="/services/support/">Support</a>
+          </li>
+        
+          <li>
+              <a href="/services/pricing/">Pricing</a>
+          </li>
+        
+      </ul>
+    </nav>
 </div>
-      <div>
-        <h3>Subscriptions</h3>
-        <ul>
-          <li><a href="">Junior Associate</a></li>
-          <li><a href="">Associate</a></li>
-          <li><a href="">Consigliere</a></li>
-          <li><a href="">Mr. Wolf</a></li>
-          <li><a href="">NED</a></li>
-          <li><a href="/services/pricing/">Pricing</a></li>
-        </ul>
+      <div class="col-span-2">
+        <h5>Subscriptions</h5>
+        <nav>
+          <ul>
+            <li><a href="">Junior Associate</a></li>
+            <li><a href="">Associate</a></li>
+            <li><a href="">Consigliere</a></li>
+            <li><a href="">Mr. Wolf</a></li>
+            <li><a href="">NED</a></li>
+            <li><a href="/services/pricing/">Pricing</a></li>
+          </ul>
+        </nav>
       </div>
-      <div>
-  <h3>Rare</h3>
-    <ul>
-      
-        <li>
-            <a href="/about/value/">The Value</a>
-        </li>
-      
-        <li>
-            <a href="/about/">About</a>
-        </li>
-      
-        <li>
-            <a href="/about/principles/">Principles</a>
-        </li>
-      
-        <li>
-            <a href="/about/partnership/">Partnership</a>
-        </li>
-      
-        <li>
-            <a href="/about/newsroom/">Newsroom</a>
-        </li>
-      
-        <li>
-            <a href="/about/contacts/">Contacts</a>
-        </li>
-      
-    </ul>
+      <div class="col-span-2">
+  <h5>Rare</h5>
+    <nav>
+      <ul>
+        
+          <li>
+              <a href="/about/value/">The Value</a>
+          </li>
+        
+          <li>
+              <a href="/about/">About</a>
+          </li>
+        
+          <li>
+              <a href="/about/principles/">Principles</a>
+          </li>
+        
+          <li>
+              <a href="/about/partnership/">Partnership</a>
+          </li>
+        
+          <li>
+              <a href="/about/newsroom/">Newsroom</a>
+          </li>
+        
+          <li>
+              <a href="/about/contacts/">Contacts</a>
+          </li>
+        
+      </ul>
+    </nav>
 </div>
-      <div>
-  <h3>Legal Stuff</h3>
-    <ul>
-      
-        <li>
-            <a href="/legal/privacy/">Privacy Policy</a>
-        </li>
-      
-        <li>
-            <a href="/legal/terms/">Terms of Service</a>
-        </li>
-      
-    </ul>
+      <div class="col-span-2">
+  <h5>Legal Stuff</h5>
+    <nav>
+      <ul>
+        
+          <li>
+              <a href="/legal/privacy/">Privacy Policy</a>
+          </li>
+        
+          <li>
+              <a href="/legal/terms/">Terms of Service</a>
+          </li>
+        
+      </ul>
+    </nav>
 </div>
     </div>
 
-    <div class="row stretched border-top space-md">
+    <div class="flex stretched border-top">
       <div>
         <p>Data In, Meaning Out:<br>
+          <a class="no-decoration" href="tel:+971 52 87-86-777">+971 52 87-86-777</a><br>
           <a href="mailto:hi@raredigits.io">hi@raredigits.io</a>
         </p>
       </div>
@@ -283,7 +297,8 @@
     <div class="cookieText">
         <h3>🍪</h3>
         <p class="Bold">Help yourself to&nbsp;some cookies!</p>
-        <p>We're using third party cookies and scripts to improve the functionality of this website. <a href="/legal/privacy">Legal explanation</a> >></p>
+        <p>We're using third party cookies and scripts to improve the functionality of this website.</p>
+        <p><a href="/legal/privacy">In legal terms</a> >></p>
         <div class="Right">
             <button id="cookie-notice-accept" class="cookieButton">Nice!</button>
         </div>

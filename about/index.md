@@ -10,7 +10,7 @@ Basically alchemy, but with better ROI.
 
 Let's talk about your problems, how to use them on Tinder, and other useful things.
 
-<div class="full-width">
+<div class="text-content-caption">
   <img src="/assets/img/illustrations/rare_about.jpg" />
 </div>
 <cite>(We're still working on turning code back into coffee. We'll keep you posted.)</cite>

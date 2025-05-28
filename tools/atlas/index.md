@@ -6,6 +6,10 @@ remark: 'Current version: v.2.4.6'
 permalink: /tools/atlas/
 ---
 
+<div class="text-content-caption">
+  <img src="/assets/img/newsroom/2023/atlas.jpg" />
+</div>
+
 Atlas ERP is what happens when engineers who actually run businesses get fed up with traditional ERP interfaces designed by people who clearly never had to use them under deadline pressure.
 
 We took [Odoo](https://www.odoo.com)—one of the most powerful open-source ERP platforms available—and performed radical interface surgery. 
@@ -13,10 +17,6 @@ We took [Odoo](https://www.odoo.com)—one of the most powerful open-source ERP 
 The result? 
 
 <div class="highlight">An ERP that doesn't require a PhD in menu navigation to find critical information.</div>
-
-<div class="full-width">
-  <img src="/assets/img/newsroom/2023/atlas.jpg" />
-</div>
 
 ## What Makes Atlas Different:
 

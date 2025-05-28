@@ -1,10 +1,12 @@
-<div>
-  <h3>Solutions</h3>
-    <ul>
-      {% for item in site.data.menu.solutions.items %}
-        <li>
-            <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+<div class="col-span-2">
+  <h5>Solutions</h5>
+    <nav>
+      <ul>
+        {% for item in site.data.menu.solutions.items %}
+          <li>
+              <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
 </div>

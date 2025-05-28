@@ -1,26 +1,29 @@
 <footer>
-  <div class="site-max-width column">
-    <div class="grid-columns-md space-md">
+  <div class="site-max-width padding-x-md padding-b-lg">
+    <div class="grid-global padding-y-lg">
       {% include /menu/footer-solutions.html %}
       {% include /menu/footer-services.html %}
-      <div>
-        <h3>Subscriptions</h3>
-        <ul>
-          <li><a href="">Junior Associate</a></li>
-          <li><a href="">Associate</a></li>
-          <li><a href="">Consigliere</a></li>
-          <li><a href="">Mr. Wolf</a></li>
-          <li><a href="">NED</a></li>
-          <li><a href="/services/pricing/">Pricing</a></li>
-        </ul>
+      <div class="col-span-2">
+        <h5>Subscriptions</h5>
+        <nav>
+          <ul>
+            <li><a href="">Junior Associate</a></li>
+            <li><a href="">Associate</a></li>
+            <li><a href="">Consigliere</a></li>
+            <li><a href="">Mr. Wolf</a></li>
+            <li><a href="">NED</a></li>
+            <li><a href="/services/pricing/">Pricing</a></li>
+          </ul>
+        </nav>
       </div>
       {% include /menu/footer-about.html %}
       {% include /menu/footer-legal.html %}
     </div>
 
-    <div class="row stretched border-top space-md">
+    <div class="flex stretched border-top">
       <div>
         <p>{{ site.description }}:<br>
+          <a class="no-decoration" href="tel:{{ site.phone }}">{{ site.phone }}</a><br>
           <a href="mailto:{{ site.email }}">{{ site.email }}</a>
         </p>
       </div>

@@ -4,7 +4,7 @@ title:  "Financial Experts Choose Financial Experts"
 date:   2024-06-14 10:00:00 +0400
 cover: /assets/img/newsroom/2024/asiatech.jpg
 category: Expansion
-tags: partnership finance blessing
+tags: finance blessing
 ---
 
 In what might initially seem like unremarkable business news, Rare Digits has signed a contract with Philippine company [Asiatech](https://onlineloanspilipinas.ph/en). But wait—there's a financial plot twist that deserves your attention.

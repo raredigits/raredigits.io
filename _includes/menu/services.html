@@ -1,15 +1,15 @@
-<span class="sidebar-header">
-  <a href="/services/" class="no-decoration">Services</a></span>
-<nav class="sidebar-nav no-scrollbar">
-  <ul>
-    {% for item in site.data.menu.services.items %}
-      <li class="{% if page.url == item.url %}bold{% endif %}">
-        {% if page.url == item.url %}
-          {{ item.title }}
-        {% else %}
-          <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-</nav>
+<h5 class="sidebar-header">
+  <a href="/services/" class="no-decoration">Services</a>
+</h5>
+<ul>
+  {% for item in site.data.menu.services.items %}
+    <li class="{% if page.url == item.url %}bold{% endif %}">
+      {% if page.url == item.url %}
+        {{ item.title }}
+      {% else %}
+        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+

@@ -7,7 +7,7 @@ permalink: /about/partnership/
 
 One of the great ironies of business is that everyone talks about getting to the top, but almost no one wants to discuss what's at the bottom. This is odd because, as it turns out, the bottom parts tend to be quite important. Burj Khalifa would be considerably less impressive if its first few floors were made of papier-mâché and optimistic thinking, right?
 
-<div class="full-width">
+<div class="text-content-caption">
   <img src="/assets/img/illustrations/human_pyramid.jpg" />
 </div>
 

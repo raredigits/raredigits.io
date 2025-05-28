@@ -85,7 +85,7 @@ h1 a, h2 a, h3 a, h4 a {
     width: 30%;
 }
 
-button, .button {
+/* button, .button {
     background: var(--brand-color);
     border: none;
     border-radius: var(--space-lg);
@@ -133,22 +133,11 @@ button:hover, .button:hover {
       inset 0 -3px 3px #999,
       0 5px 4px rgba(0,0,0,0.1);
     transform: translateY(1px);
-}
+} */
 
 .eyebrow {
     color: var(--secondary-text-color);
     font-size: var(--font-size-sm);
-}
-
-.tag {
-    color: var(--secondary-text-color);
-    background: var(--secondary-color);
-    display: inline-block;
-    padding: 1px 8px;
-    border: 1px solid var(--border-color-light);
-    border-radius: 3px;
-    font-size: var(--font-size-sm);
-    margin-bottom: 3px;
 }
 
 .highlight {

@@ -1,16 +1,17 @@
 {% include main-head.html %}
 
-<body class="Black">
-    <div class="Column">
-        {% include header.html %}
-        {% include /special/constructionHeader.html %}
+<body class="theme-black">
+    {% include header.html %}
         
-        <main>
-            <div class="Content">
-                {{ content }}
+    <main class="main-home">
+        <div class="content">
+            {% include /special/constructionHeader.html %}
+            {{ content }}
+            <div class="wa-button-wrapper">
+                <a href="https://wa.me/971528786777" class="wa-button" aria-label="Chat on WhatsApp"></a>
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
     
     {% include footer.html %}
 </body>

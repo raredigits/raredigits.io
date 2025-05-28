@@ -12,21 +12,25 @@ We&nbsp;promise our response times are faster than light (in&nbsp;a&nbsp;vacuum 
 Our mothership is&nbsp;docked in&nbsp;Dubai. For official correspondence (love letters, wedding invitations, quantum physics debates), please use:
 
 
-> Rare Digits Production DMCC<br>
-DMCC Business Centre,<br>
-Jewellery & Gemplex 3,<br>
-115738, Dubai, UAE
+<div class="caption">
+   Rare Digits Production DMCC<br>
+   DMCC Business Centre,<br>
+   Jewellery & Gemplex 3,<br>
+   115738, Dubai, UAE
+   
+   <p>Phone/WA: <a class="no-decoration" href="tel:+971528786777">+971 52 87-86-777</a></p>
+</div>
 
 ## Personal Encounters of the Third Kind
 
 Wish to&nbsp;witness our elegance and brutality in&nbsp;person? Our ambassadors of&nbsp;innovation are strategically placed around the globe, much like a&nbsp;very sophisticated game of&nbsp;Risk:
 
-<div class="full-width">
+<div class="text-content-caption">
   <img src="/assets/img/illustrations/world_map_contacts.jpg" />
 </div>
 
-<nav>
-   <ul class="list-two-columns">
+<div class="padding-y-lg">
+   <ul class="columns list-unstyled">
       <li><a href="">Dubai</a> (Home Base)</li>
       <li><a href="">Limassol</a> (Mediterranean Microservices)</li>
       <li><a href="">Porto</a> (Port and Python)</li>
@@ -38,7 +42,7 @@ Wish to&nbsp;witness our elegance and brutality in&nbsp;person? Our ambassadors 
       <li><a href="">Miami</a> (Sunscreen and Scalability)</li>
       <li><a href="">Phuket</a> (Thai and TypeScript)</li>
    </ul>
-</nav>
+</div>
 
 Choose your preferred locale, and we&#146;ll arrange a&nbsp;meeting faster than you can say &ldquo;asynchronous non-blocking I/O&rdquo;.
 
@@ -46,7 +50,18 @@ Choose your preferred locale, and we&#146;ll arrange a&nbsp;meeting faster than 
 
 Not a&nbsp;fan of&nbsp;geographical constraints? Our demo booking form transcends space and time. Well, mostly time zones.
 
-<div class="Space">{% include /special/constructionNotice.html %}</div>
+<form class="column text-content-width" id="my-form" action="https://formspree.io/f/xoqodadn" method="POST">
+   <label for="name">Name:</label>
+   <input type="text" id="name" name="name" required>
+   <label for="company">Company:</label>
+   <input type="text" id="company" name="company" required>
+   <label for="email">Email:</label>
+   <input type="email" id="email" name="email" required>
+   <label for="contact">Contact Number:</label>
+   <input type="tel" id="contact" name="contact" required>
+   <button id="my-form-button" class="margin-t-md">Request a Demonstration</button>
+   <h3 id="my-form-status"></h3>
+</form>
 
 Remember, whether you&#146;re reaching out from the bustling streets of&nbsp;Tokyo or&nbsp;the quiet corners of&nbsp;Timbuktu, we&#146;re just a&nbsp;quantum entanglement away.
 
@@ -54,6 +69,6 @@ Remember, whether you&#146;re reaching out from the bustling streets of&nbsp;Tok
 
 For any media request feel free to touch <a href="mailto:pr@raredigits.io">Press Office</a>.
 
-<div class="ContentSeparator"></div>
+<div class="content-separator"></div>
 
 Let&#146;s make software magic together. Or&nbsp;at&nbsp;least have a&nbsp;chat about how we&nbsp;can automate your coffee machine to&nbsp;brew the perfect cup based on&nbsp;your circadian rhythms and current project deadlines.

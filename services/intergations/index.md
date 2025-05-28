@@ -20,7 +20,7 @@ Here's our hot take:
 
 Here's the truth: some of the most successful businesses we work with rely heavily on spreadsheets. Why? Because spreadsheets are incredibly flexible tools that adapt to how businesses actually work, rather than forcing businesses to adapt to the software.
 
-<div class="full-width">
+<div class="text-content-caption">
   <img src="/assets/img/illustrations/rare-integration.jpg" />
 </div>
 <cite>Source Data We’re Happy to Deal With</cite>

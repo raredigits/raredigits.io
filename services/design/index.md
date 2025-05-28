@@ -7,15 +7,15 @@ permalink: /services/design/
 
 People have funny ideas about design in business software. There's this whole industry of designers who will spend weeks debating whether your button should be "Ocean Blue" or "Pacific Blue," or if your sidebar should collapse at 768 pixels or 800 pixels. They'll show you breathtaking mockups with pristine data and talk about "visual hierarchies" and "design systems."
 
+<div class="text-content-caption">
+  <img src="/assets/img/illustrations/rare-design.jpg" />
+</div>
+
 Which is all very nice! Design is nice. Pretty things are nice to look at. Dark mode is easy on the eyes at night. But there's a problem with this approach to business software design, which is that none of it helps answer the question: "Will I make payroll this month?"
 
 ## Design as Financial Intelligence
 
 The thing about business software is that it exists to help businesses make money. That's it. It's not art. It's not self-expression. Nobody downloads your ERP system because it's a profound aesthetic experience.
-
-<div class="full-width">
-  <img src="/assets/img/illustrations/rare-design.jpg" />
-</div>
 
 At Rare Digits, we have this radical notion: 
 <div class="highlight">in business softwar the most important design work happens in database queries, not Figma files. </div>

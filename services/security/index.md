@@ -12,7 +12,7 @@ When most companies talk about security, they immediately jump to firewalls, int
 
 For us, true security means **ensuring your business-critical data is available when you need it, performing at the speed you require, and structured in ways that create genuine business value**.
 
-<div class="full-width">
+<div class="text-content-caption">
   <img src="/assets/img/illustrations/rare_security.jpg" />
 </div>
 <cite>Rare Security Officer</cite>
