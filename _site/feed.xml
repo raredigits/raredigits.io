@@ -1,4 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-27T14:29:30+04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Rare Digits</title><subtitle>Data In, Meaning Out</subtitle><entry><title type="html">Introducing Watchtower v.0.1</title><link href="http://localhost:4000/newsroom/Introducing-Whatchtower/" rel="alternate" type="text/html" title="Introducing Watchtower v.0.1" /><published>2025-02-03T10:00:00+04:00</published><updated>2025-02-03T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Introducing-Whatchtower</id><content type="html" xml:base="http://localhost:4000/newsroom/Introducing-Whatchtower/"><![CDATA[<div class="full-width">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-27T17:45:56+04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Rare Digits</title><subtitle>Data In, Meaning Out</subtitle><entry><title type="html">Introducing Rare Styles</title><link href="http://localhost:4000/newsroom/Introducing-Rare-Styles/" rel="alternate" type="text/html" title="Introducing Rare Styles" /><published>2025-05-20T10:00:00+04:00</published><updated>2025-05-20T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Introducing-Rare-Styles</id><content type="html" xml:base="http://localhost:4000/newsroom/Introducing-Rare-Styles/"><![CDATA[<h2 id="let-digital-rareism-wear-the-crown">Let Digital Rareism Wear the Crown</h2>
+
+<div class="full-width">
+  <img src="/assets/img/newsroom/2025/rarestyles-main-left.jpg" />
+</div>
+
+<p>Finally, we have a mountain of data. Tons of it. Great.  <br />
+AI churns out terabytes of content. Wow.  <br />
+Everything sorted into endless tabs. Amazing.  <br />
+But wait. What’s the point?</p>
+
+<h3 id="were-thrilled-topresent-what-you-definitely-werent-asking-for-another-design-framework">We’re thrilled to present what you definitely weren’t asking for: another design framework!</h3>
+
+<p>Just kidding. We’re actually thrilled, but for different reasons.</p>
+
+<p>After 20 years of watching businesses drown in meaningless dashboards and screaming metrics, we finally decided to do something about it. Meet <a href="/tools/open-source/styles/">Rare Styles</a>—a design system for those who are tired of information noise.
+“Revolutionary approach to data visualization!” you’ll say. And you’d be right, but not in the way these words are usually thrown around. Our revolution is about refusal. <strong>In the age of excess, refusal becomes revolution.</strong></p>
+
+<p>What we’ve done:</p>
+<ul>
+  <li>Packed 20 years of experience into one component library</li>
+  <li>Threw out everything that doesn’t help make decisions</li>
+  <li>Created the Digital Rareism philosophy (yes, we’re cocky enough to call it philosophy)</li>
+  <li>Made it all open source because good ideas should multiply</li>
+</ul>
+
+<p>“But we already have Bootstrap/Material/whatever!” we’ll hear. Perfect. Keep drowning in decorative clutter. We’re taking a different path—only the rare survives.</p>
+
+<p>Grab it at <a href="https://raredigits.art/">raredigits.art</a>. Documentation written in human language, examples that work on the first try.</p>
+
+<p><em>P.S. No marketing promises about “boosting conversion 300%.” Just common sense in code.</em></p>]]></content><author><name></name></author><category term="Release" /><category term="kitchen" /><category term="design" /><summary type="html"><![CDATA[Let Digital Rareism Wear the Crown]]></summary></entry><entry><title type="html">Introducing Watchtower v.0.1</title><link href="http://localhost:4000/newsroom/Introducing-Whatchtower/" rel="alternate" type="text/html" title="Introducing Watchtower v.0.1" /><published>2025-02-03T10:00:00+04:00</published><updated>2025-02-03T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Introducing-Whatchtower</id><content type="html" xml:base="http://localhost:4000/newsroom/Introducing-Whatchtower/"><![CDATA[<div class="full-width">
   <img src="/assets/img/newsroom/2025/watchtower.jpg" />
 </div>
 
@@ -440,41 +470,4 @@
 
 <p>So before panicking that you’re falling behind in the great AI race, remember: the tortoise who carefully evaluates technology based on business fundamentals often outperforms the hare frantically chasing every new digital shiny object.</p>
 
-<p>And if someone insists you need an urgent, company-wide AI strategy immediately? Ask them to have their recommendation double-checked by ChatGPT and see how confident they remain in the results.</p>]]></content><author><name></name></author><category term="Insights" /><category term="AI" /><category term="automate" /><summary type="html"><![CDATA[You Don’t]]></summary></entry><entry><title type="html">When Intelligent Meets Rare</title><link href="http://localhost:4000/newsroom/KGSY-partnership/" rel="alternate" type="text/html" title="When Intelligent Meets Rare" /><published>2024-06-03T10:00:00+04:00</published><updated>2024-06-03T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/KGSY-partnership</id><content type="html" xml:base="http://localhost:4000/newsroom/KGSY-partnership/"><![CDATA[<h2 id="chinese-manufacturing-giant-selects-rare-digits">Chinese Manufacturing Giant Selects Rare Digits</h2>
-
-<p>We’re excited to announce that <a href="https://www.chinakgsy.com">Intelligent Technologies</a>, the Chinese industrial powerhouse moving an impressive 50,000 tons of product annually, has chosen Rare Digits to revolutionize their data management systems.</p>
-
-<div class="full-width">
-  <img src="/assets/img/newsroom/2024/chineese.jpg" />
-</div>
-
-<h2 id="smart-choice-for-massive-operations">Smart Choice for Massive Operations</h2>
-
-<p>When your production volumes can be measured in tens of thousands of tons, the data generated by your operations becomes similarly massive. Intelligent Technologies didn’t build their manufacturing empire by making uninformed decisions, which is precisely why they’ve selected our solutions to bring clarity to their extensive operations.</p>
-
-<h2 id="the-weight-of-decision">The Weight of Decision</h2>
-
-<p>50,000 tons of annual production creates:</p>
-<ul>
-  <li>Complex supply chain data spanning multiple countries</li>
-  <li>Production metrics from dozens of manufacturing lines</li>
-  <li>Inventory management challenges at industrial scale</li>
-  <li>Quality control data requiring immediate analysis</li>
-</ul>
-
-<p>With volumes this substantial, efficiency isn’t just desirable—it’s essential for survival. That’s why Intelligent Technologies’ decision to partner with the most effective data management contractor makes perfect business sense.</p>
-
-<h2 id="data-efficiency-at-industrial-scale">Data Efficiency at Industrial Scale</h2>
-
-<p>In manufacturing, efficiency on the factory floor must be matched by efficiency in the boardroom. When decision-makers at Intelligent Technologies evaluated potential data partners, they weren’t looking for flashy presentations—they were seeking tangible results.</p>
-
-<p>Their selection of Rare Digits confirms our approach:</p>
-<div class="highlight">when your business operates at industrial scale, your data management needs to be equally robust.</div>
-
-<h2 id="data-in-meaning-out-across-continents">Data In, Meaning Out (Across Continents)</h2>
-
-<p>Our philosophy of transforming raw data into meaningful insights works in any language or business environment. For Intelligent Technologies, this means their vast production data will now power equally powerful business intelligence, helping them optimize every aspect of their operation.</p>
-
-<p>We’re looking forward to demonstrating how our “<a href="/about/value/">Pure Performance, No Excess</a>” approach applies perfectly to their industrial-scale challenges.</p>
-
-<p>This partnership represents another significant step in Rare Digits’ expansion into international markets. Stay tuned for more news about how we’re helping global enterprises transform their data into actionable insights.</p>]]></content><author><name></name></author><category term="Expansion" /><category term="partnership" /><summary type="html"><![CDATA[Chinese Manufacturing Giant Selects Rare Digits]]></summary></entry></feed>
+<p>And if someone insists you need an urgent, company-wide AI strategy immediately? Ask them to have their recommendation double-checked by ChatGPT and see how confident they remain in the results.</p>]]></content><author><name></name></author><category term="Insights" /><category term="AI" /><category term="automate" /><summary type="html"><![CDATA[You Don’t]]></summary></entry></feed>

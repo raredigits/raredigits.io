@@ -18,7 +18,7 @@ So&nbsp;here are some tools you might find useful. They&#146;re all on&nbsp;GitH
 
 <div class="grid grid-cols-2 mobile:grid-cols-1 gap-md padding-b-lg">
     <div class="col-span-1 card shadow-sm padding-lg">
-        <p><a href="https://raredigits.io">Rare Styles</a>: A&nbsp;style library for rapid development, for those moments when you need a&nbsp;button that looks like a&nbsp;button before your next funding round closes.</p>
+        <p><a href="https://raredigits.art">Rare Styles</a>: A&nbsp;style library for rapid development, for those moments when you need a&nbsp;button that looks like a&nbsp;button before your next funding round closes.</p>
     </div>
     <div class="col-span-1 card shadow-sm padding-lg">
         <p><a href="">11ty Scripts Collection</a>: for simple websites, because sometimes you just need something that works without explaining to&nbsp;your CEO what &ldquo;static site generation&rdquo; means while they glance anxiously at&nbsp;their watch.</p>

@@ -33,3 +33,7 @@ featured:
   - title: "Watchtower"
     url: "/tools/web3/watchtower/"
     icon: '<span class="material-icons">new_releases</span>'
+
+  - title: "Rare Styles"
+    url: "/tools/open-source/styles/"
+    icon: '<span class="material-icons">format_paint</span>'

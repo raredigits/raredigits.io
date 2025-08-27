@@ -73,6 +73,13 @@ section {
     background-repeat: no-repeat;
 }
 
+.digit-crown {
+    height: 1000px;
+    background: url(/assets/img/main/digital-crown.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 form {
     display: flex;
     flex-flow: column;
