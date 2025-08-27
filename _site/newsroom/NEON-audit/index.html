@@ -17,20 +17,21 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<script>
-  if (!['localhost', '127.0.0.1'].includes(location.hostname)) {
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = "https://www.googletagmanager.com/gtag/js?id=G-91KWRG2Y9N";
-    document.head.appendChild(s);
+    
+    <script>
+      if (location.hostname !== "localhost") {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=G-91KWRG2Y9N";
+        document.head.appendChild(s);
 
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-91KWRG2Y9N');
-  }
-</script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-91KWRG2Y9N');
+      }
+    </script>
+</head>
 
 <body>
     <header class="padding-x-md">
@@ -268,7 +269,8 @@
         </p>
       </div>
       <div class="right">
-        <p>© 2023—2025  Rare Digits</p>
+        <p>© 2023—2025  Rare Digits<br>
+          Built with <a href="https://raredigits.art">Rare Styles</a></p>
       </div>
     </div>
   </div>
