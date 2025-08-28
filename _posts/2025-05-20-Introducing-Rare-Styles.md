@@ -10,7 +10,7 @@ tags: kitchen design
 ## Let Digital Rareism Wear the Crown
 
 <div class="full-width">
-  <img src="/assets/img/newsroom/2025/rarestyles-main-left.jpg" />
+  <img src="/assets/img/newsroom/2025/crown-in-the-room.jpg" />
 </div>
 
 Finally, we have a mountain of data. Tons of it. Great.    
@@ -23,6 +23,7 @@ But wait. What's the point?
 Just kidding. We’re actually thrilled, but for different reasons.
 
 After 20 years of watching businesses drown in meaningless dashboards and screaming metrics, we finally decided to do something about it. Meet [Rare Styles](/tools/open-source/styles/)—a design system for those who are tired of information noise.
+
 “Revolutionary approach to data visualization!” you’ll say. And you’d be right, but not in the way these words are usually thrown around. Our revolution is about refusal. **In the age of excess, refusal becomes revolution.**
 
 What we’ve done:

@@ -1,7 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-27T17:45:56+04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Rare Digits</title><subtitle>Data In, Meaning Out</subtitle><entry><title type="html">Introducing Rare Styles</title><link href="http://localhost:4000/newsroom/Introducing-Rare-Styles/" rel="alternate" type="text/html" title="Introducing Rare Styles" /><published>2025-05-20T10:00:00+04:00</published><updated>2025-05-20T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Introducing-Rare-Styles</id><content type="html" xml:base="http://localhost:4000/newsroom/Introducing-Rare-Styles/"><![CDATA[<h2 id="let-digital-rareism-wear-the-crown">Let Digital Rareism Wear the Crown</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-28T09:04:06+04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Rare Digits</title><subtitle>Data In, Meaning Out</subtitle><entry><title type="html">Vacation Notice: The August Disappearing Act</title><link href="http://localhost:4000/newsroom/Vacation-Notice/" rel="alternate" type="text/html" title="Vacation Notice: The August Disappearing Act" /><published>2025-05-21T10:00:00+04:00</published><updated>2025-05-21T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Vacation-Notice</id><content type="html" xml:base="http://localhost:4000/newsroom/Vacation-Notice/"><![CDATA[<p>One weird thing about running a company is that everyone expects you to, you know, actually work. But here’s the thing: we’ve decided that August 2025 is going to be our collective “nope” month.</p>
+
+<p>Starting August 4th through September 8th, the entire Rare Digits Production team will be doing that thing humans supposedly do when they’re not staring at screens—relaxing, allegedly. (They’re told this involves activities like “touching grass” and “remembering what the sun feels like,” though skepticism remains.)</p>
 
 <div class="full-width">
-  <img src="/assets/img/newsroom/2025/rarestyles-main-left.jpg" />
+  <img src="/assets/img/newsroom/2025/touching-grass.jpg" />
+</div>
+
+<p>Now, you might wonder: “What about all our urgent requests and burning questions about data visualization philosophy?” Great question. Here’s where it gets interesting: our technical support will continue operating in normal mode, because apparently some people drew the short straw in the vacation lottery. (Just kidding—they volunteered. We think.)</p>
+
+<p>This creates a fascinating corporate paradox: a company that’s simultaneously closed and open, like Schrödinger’s business entity. Our support team will handle your technical issues with the same efficiency as always, while the rest of us practice the ancient art of “logging off.”</p>
+
+<p>Why announce this? Because transparency is good, and also because we learned that people get really upset when their emails bounce back with mysterious auto-replies. Who knew?</p>
+
+<p>We’ll be back September 8th, presumably well-rested and with renewed enthusiasm for turning data chaos into decision clarity. Or at least with better tans.</p>
+
+<p>Technical support remains available at <a href="support@raredigits.io">support@raredigits.io</a>. They promise to answer faster than we usually respond to Slack.RetryClaude can make mistakes. Please double-check responses.</p>]]></content><author><name></name></author><category term="Internal Affairs" /><category term="kitchen" /><summary type="html"><![CDATA[One weird thing about running a company is that everyone expects you to, you know, actually work. But here’s the thing: we’ve decided that August 2025 is going to be our collective “nope” month.]]></summary></entry><entry><title type="html">Introducing Rare Styles</title><link href="http://localhost:4000/newsroom/Introducing-Rare-Styles/" rel="alternate" type="text/html" title="Introducing Rare Styles" /><published>2025-05-20T10:00:00+04:00</published><updated>2025-05-20T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Introducing-Rare-Styles</id><content type="html" xml:base="http://localhost:4000/newsroom/Introducing-Rare-Styles/"><![CDATA[<h2 id="let-digital-rareism-wear-the-crown">Let Digital Rareism Wear the Crown</h2>
+
+<div class="full-width">
+  <img src="/assets/img/newsroom/2025/crown-in-the-room.jpg" />
 </div>
 
 <p>Finally, we have a mountain of data. Tons of it. Great.  <br />
@@ -13,8 +29,9 @@ But wait. What’s the point?</p>
 
 <p>Just kidding. We’re actually thrilled, but for different reasons.</p>
 
-<p>After 20 years of watching businesses drown in meaningless dashboards and screaming metrics, we finally decided to do something about it. Meet <a href="/tools/open-source/styles/">Rare Styles</a>—a design system for those who are tired of information noise.
-“Revolutionary approach to data visualization!” you’ll say. And you’d be right, but not in the way these words are usually thrown around. Our revolution is about refusal. <strong>In the age of excess, refusal becomes revolution.</strong></p>
+<p>After 20 years of watching businesses drown in meaningless dashboards and screaming metrics, we finally decided to do something about it. Meet <a href="/tools/open-source/styles/">Rare Styles</a>—a design system for those who are tired of information noise.</p>
+
+<p>“Revolutionary approach to data visualization!” you’ll say. And you’d be right, but not in the way these words are usually thrown around. Our revolution is about refusal. <strong>In the age of excess, refusal becomes revolution.</strong></p>
 
 <p>What we’ve done:</p>
 <ul>
@@ -408,66 +425,4 @@ But wait. What’s the point?</p>
 
 <p>It’s like saying, “If we can prepare a meal that impresses Gordon Ramsay, your company holiday party is in extremely capable hands.”</p>
 
-<p>For businesses looking to understand their financial reality without the usual smoke, mirrors, and incomprehensible spreadsheets—well, you know where to find us. We’ve been vetted by people who professionally vet things for a living.</p>]]></content><author><name></name></author><category term="Expansion" /><category term="finance" /><category term="blessing" /><summary type="html"><![CDATA[In what might initially seem like unremarkable business news, Rare Digits has signed a contract with Philippine company Asiatech. But wait—there’s a financial plot twist that deserves your attention.]]></summary></entry><entry><title type="html">How to Determine if You Need to Urgently Invest in AI?</title><link href="http://localhost:4000/newsroom/Urgently-invest-in-AI/" rel="alternate" type="text/html" title="How to Determine if You Need to Urgently Invest in AI?" /><published>2024-06-04T10:00:00+04:00</published><updated>2024-06-04T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Urgently-invest-in-AI</id><content type="html" xml:base="http://localhost:4000/newsroom/Urgently-invest-in-AI/"><![CDATA[<h2 id="you-dont">You Don’t</h2>
-
-<p>There. We’ve saved you countless hours of reading breathless tech blogs, attending overpriced conferences, and nodding thoughtfully while venture capitalists explain why your perfectly functional business is actually teetering on the edge of obsolescence without AI.</p>
-
-<p>Let’s unpack this revolutionary advice.</p>
-
-<h2 id="ai-is-the-new-paris-fashion-week">AI Is the New Paris Fashion Week</h2>
-
-<div class="full-width">
-  <img src="/assets/img/newsroom/2024/invest_in_ai.jpg" />
-</div>
-
-<p>Artificial Intelligence in its current form is remarkably similar to the latest haute couture trend strutting down Parisian runways. It might be genuinely innovative. It could potentially look spectacular on the right business. It’s definitely getting all the media attention and investor champagne toasts.</p>
-
-<p>But is it absolutely necessary for your business to adopt it immediately? About as necessary as your accounting department needs transparent plastic trousers and neon feather epaulets.</p>
-
-<p>Some AI applications are genuinely useful. Others are elaborate solutions frantically searching for problems. The difference lies not in how sophisticated the technology is, but in whether it solves an actual business need that can’t be addressed through simpler, more established means.</p>
-
-<div class="highlight">Remember when every company suddenly needed a blockchain strategy? </div>
-
-<p>How’s that working out for the average mid-market business? Exactly.</p>
-
-<h2 id="the-golden-rule-of-ai-trust-issues-are-feature-not-bug">The Golden Rule of AI: Trust Issues Are Feature, Not Bug</h2>
-
-<p>The most crucial principle to remember when considering AI implementation is astonishingly simple: you cannot trust or rely entirely on its outputs.</p>
-
-<p>AI systems are essentially sophisticated pattern-matching machines trained on historical data, often hallucinating with impressive confidence when confronted with edge cases. They’re perfect for generating ideas, sorting through vast information sets, and suggesting possibilities—but terrible at final verification, factual accuracy, and understanding crucial business context.</p>
-
-<p>This isn’t a temporary limitation waiting to be patched in the next release. It’s fundamental to how these systems work. The current generation of AI doesn’t “know” things—it predicts what language patterns would likely follow your input based on its training data.</p>
-
-<p>It’s like hiring an exceptionally articulate consultant who memorized every business book, article, and earnings call transcript in existence but has never actually run a business or been responsible for a P&amp;L statement.</p>
-
-<h2 id="for-entertainment-education-and-exploration-absolutely">For Entertainment, Education, and Exploration? Absolutely</h2>
-
-<p>Does this mean AI is useless? Not remotely. For exploration, ideation, education, and entertainment, today’s AI tools are genuinely revolutionary.</p>
-
-<p>Use them to:</p>
-<ul>
-  <li>Draft initial content that you’ll heavily edit</li>
-  <li>Summarize information for further human review</li>
-  <li>Generate creative alternatives to consider</li>
-  <li>Automate truly repetitive tasks where errors have minimal consequences</li>
-  <li>Learn about new subjects (while fact-checking independently)</li>
-</ul>
-
-<p>Just don’t use them to:</p>
-<ul>
-  <li>Make final financial decisions</li>
-  <li>Replace human judgment in customer-facing roles</li>
-  <li>Handle sensitive information without appropriate safeguards</li>
-  <li>Generate “facts” without verification</li>
-  <li>Impress investors with buzzword compliance</li>
-</ul>
-
-<h2 id="the-bottom-line-strategic-patience-beats-panic-spending">The Bottom Line: Strategic Patience Beats Panic Spending</h2>
-
-<p>If your competitors are frantically throwing capital at AI initiatives while struggling to articulate exactly what business problems they’re solving, congratulations—you’re witnessing a strategic opportunity forming in real time. Let them deplete their resources chasing technological fashions while you focus on fundamentals.</p>
-
-<p>The businesses that will extract genuine value from AI aren’t those rushing to implement it everywhere immediately, but those methodically identifying specific use cases where the technology’s strengths align with actual business needs.</p>
-
-<p>So before panicking that you’re falling behind in the great AI race, remember: the tortoise who carefully evaluates technology based on business fundamentals often outperforms the hare frantically chasing every new digital shiny object.</p>
-
-<p>And if someone insists you need an urgent, company-wide AI strategy immediately? Ask them to have their recommendation double-checked by ChatGPT and see how confident they remain in the results.</p>]]></content><author><name></name></author><category term="Insights" /><category term="AI" /><category term="automate" /><summary type="html"><![CDATA[You Don’t]]></summary></entry></feed>
+<p>For businesses looking to understand their financial reality without the usual smoke, mirrors, and incomprehensible spreadsheets—well, you know where to find us. We’ve been vetted by people who professionally vet things for a living.</p>]]></content><author><name></name></author><category term="Expansion" /><category term="finance" /><category term="blessing" /><summary type="html"><![CDATA[In what might initially seem like unremarkable business news, Rare Digits has signed a contract with Philippine company Asiatech. But wait—there’s a financial plot twist that deserves your attention.]]></summary></entry></feed>

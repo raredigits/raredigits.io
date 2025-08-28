@@ -43,6 +43,12 @@ section {
     min-height: 75vh;
 }
 
+.vacation-grass {
+    background: url(/assets/img/main/vacation-grass.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 .section-about {
     min-height: 85vh;
 }
