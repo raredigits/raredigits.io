@@ -92,11 +92,13 @@ form button {
 }
 
 .construction-stripe-mini {
-    width: 100%;
+    width: 100vw;
     background: var(--yellow);
     color: #000;
     padding: 3px 0;
     text-align: center;
+    margin-left: -16px;
+    margin-right: -16px;
 }
 
 .construction-notice {

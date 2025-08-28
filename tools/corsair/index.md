@@ -62,7 +62,7 @@ Corsair HQ performs three services that shouldn't be revolutionary but somehow a
 
 ## Why "Corsair"
 
-Traditional marketing would tell you that you need our comprehensive solution to see the full 360-degree picture of your business. The truth is more subversive: with Corsair HQ, you could navigate your entire business with one eye closed. 
+Traditional marketing would tell you that you need our comprehensive solution to see the full 360-degree picture of your business. The truth is more subversive: with Corsair HQ, you could navigate your entire business **with one eye closed**. 
 
 <div class="text-content-caption">
   <img src="/assets/img/newsroom/2024/corsair.jpg" />
