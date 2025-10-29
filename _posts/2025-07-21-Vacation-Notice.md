@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Vacation Notice: The August Disappearing Act"
-date:   2025-05-21 10:00:00 +0400
+date:   2025-07-21 10:00:00 +0400
 cover: /assets/img/news/2023/
 category: Internal Affairs
 tags: kitchen

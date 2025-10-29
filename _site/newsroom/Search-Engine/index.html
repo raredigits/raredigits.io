@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rare Digits | How Lending Assessment Practices Can Revolutionize Auto Repair Shop's Cash Flow</title>
+    <title>Rare Digits | Building Your Own Search Engine</title>
 
     <link rel="icon" href="/assets/img/favicon/favicon.svg" sizes="any" type="image/svg+xml">
     <link rel="icon" href="/assets/img/favicon/favicon-32.png" sizes="32x32">
@@ -70,14 +70,12 @@
                                 <div class="sidebar-meta">Insights</div>
                             
                             
-                                <div class="sidebar-meta">January 13, 2025</div>
+                                <div class="sidebar-meta">October 29, 2025</div>
                             
                         <div class="sidebar-meta">
                             
                                 
-                                <span class="tag">#finance</span>
-                                
-                                <span class="tag">#forecast</span>
+                                <span class="tag">#kitchen</span>
                                 
                             
                         </div>
@@ -86,103 +84,29 @@
             </aside>
             
   <section class="page-title">
-    <h1>How Lending Assessment Practices Can Revolutionize Auto Repair Shop's Cash Flow</h1>
+    <h1>Building Your Own Search Engine</h1>
   </section>
 
             <article>
-                <p>Ever wondered why banks sleep soundly while your auto repair shop suffers from payment anxiety? Simple: they’ve mastered the dark art of predicting who will actually pay.</p>
+                <h3 id="the-urge-tobuild-aferrari-todeliver-apizza">The urge to build a Ferrari to deliver a pizza</h3>
 
-<p>Good news—you can steal their techniques.</p>
+<p>There is a certain type of developer who, when told “we need search on the website, ” immediately opens a blank file and starts writing their own search engine. This is the software equivalent of building a shadow banking system in Excel macros because Bloomberg didn’t have the exact screen you wanted. You can do it, it may even work for a while, but everyone around you will quietly wish you didn’t.</p>
 
-<div class="full-width">
-  <img src="/assets/img/newsroom/2025/auto_mechanic.jpg" />
-</div>
-<p><cite>“Is this even going to be paid for?”</cite></p>
+<p>For static sites the rational thing to do is: don’t roll your own. Not because you can’t — let’s assume you absolutely could — but because nobody earns extra credibility points in 2025 for reinventing full-text indexing from scratch on a blog. Just like in finance, there are tasks where inventiveness is rewarded (new structured products, new exchanges), and there are tasks where using an existing, boring, proven thing is the optimal choice. Static-site search is the latter.</p>
 
-<h2 id="the-problem-schrödingers-payment">The Problem: Schrödinger’s Payment</h2>
+<h3 id="pagefind-asthe-etf-ofsearch">Pagefind as the ETF of search</h3>
 
-<p>You’ve got six vehicles in your service bay. Parts ordered, labor scheduled, but the critical question remains: will all these customers pay promptly when the work is done? Until they do, each invoice exists in a quantum state of both “definitely getting paid” and “absolutely hopeless.”</p>
+<p>So you pick <a href="https://pagefind.app">Pagefind</a>. It’s basically the ETF of website search: low-overhead, passive, client-side, privacy-respecting, and costs nothing. You pipe your static site through Eleventy, Pagefind vacuums up the text and spits out an index, and the whole thing sits in the browser doing its job without servers or SaaS invoices. No vendor lock-in, no external API, no “your quota for this month is over.” Like a good index fund, it just quietly works.</p>
 
-<p>This uncertainty isn’t just annoying—it’s financially dangerous. It leads to:</p>
-<ul>
-  <li>Cash flow forecasts with the accuracy of a carnival fortune teller</li>
-  <li>Inventory decisions based on hope rather than data</li>
-  <li>Stress levels that would concern medical professionals</li>
-</ul>
+<p>And because developers share one trait with bankers — if something “just works” we get suspicious — we wrote down a full step-by-step implementation so you can inspect every knob yourself rather than trusting black boxes. The guide is published at <a href="https://raredigits.art/scripts/search/">Rere Styles</a>.</p>
 
-<h2 id="banking-wisdom-for-grease-monkeys">Banking Wisdom for Grease Monkeys</h2>
+<h3 id="weights-or-how-reality-isrearranged">Weights, or: how reality is rearranged</h3>
 
-<p>Lenders have solved this problem through systematic risk assessment. Here’s how to adapt their approach for your repair shop:</p>
+<p>Once the search is working, the curious developer will eventually ask: “but how do I make the results better?” And the answer is: weights. You start telling the engine which types of pages matter more than others — posts above static pages, titles above footers, this topic above that topic. It’s a bit tedious but it absolutely works.</p>
 
-<h3 id="1-basic-payment-history-scoring">1. Basic Payment History Scoring</h3>
+<p>And at this point it is hard not to glance sideways at modern LLMs. They look brilliant and elegant now — but only because someone spent a truly absurd amount of time assigning and re-assigning weights. Now imagine how different the answers would look if the same knowledge was weighted differently. Not censored, not removed — just rearranged in priority.</p>
 
-<p>Start simple: create a three-tier classification system for existing customers:</p>
-<ul>
-  <li><strong>Green</strong>: Pays promptly, never disputes charges (your financial angels)</li>
-  <li><strong>Yellow</strong>: Pays eventually, sometimes negotiates after work is done</li>
-  <li><strong>Red</strong>: History of disputes, delayed payments, or mysterious disappearances</li>
-</ul>
-
-<p>For new customers, begin with yellow and adjust based on behavior.</p>
-
-<h3 id="2-pre-work-qualification">2. Pre-Work Qualification</h3>
-
-<p>Before significant repairs, implement these lending-inspired techniques:</p>
-<ul>
-  <li><strong>Deposit requirements</strong>: Scale based on job size and customer history</li>
-  <li><strong>Credit card pre-authorization</strong>: The automotive equivalent of a credit check</li>
-  <li><strong>Payment plan documentation</strong>: For larger repairs, establish terms before work begins</li>
-</ul>
-
-<h3 id="3-external-signals-assessment">3. External Signals Assessment</h3>
-
-<p>Banks look beyond direct history. You can too:</p>
-<ul>
-  <li><strong>Vehicle value vs. repair cost ratio</strong>: If the repair exceeds 60% of vehicle value, payment risk increases dramatically</li>
-  <li><strong>Customer stability indicators</strong>: Local homeowners with steady jobs are statistically more likely to pay than temporary residents</li>
-  <li><strong>Communication patterns</strong>: Customers who are difficult to reach or vague about details represent higher risk</li>
-</ul>
-
-<h2 id="implementation-a-simple-scoring-system">Implementation: A Simple Scoring System</h2>
-
-<p>Create a basic 10-point system where customers start at 5 points. Add or subtract based on:</p>
-<ul>
-  <li>Prior payment history (+3/-3)</li>
-  <li>Deposit provided (+2)</li>
-  <li>Repair-to-vehicle value ratio (-1 for every 20% above 50%)</li>
-  <li>Local property owner (+1)</li>
-  <li>Communication clarity (+1/-1)</li>
-</ul>
-
-<p>8-10 points = Green (96% payment probability)
-5-7 points = Yellow (82% payment probability)
-1-4 points = Red (60% payment probability)</p>
-
-<h2 id="strategic-responses-to-scores">Strategic Responses to Scores</h2>
-
-<p>Different risk levels require different approaches:</p>
-<ul>
-  <li><strong>Green</strong>: Standard payment terms, priority scheduling</li>
-  <li><strong>Yellow</strong>: Deposits required, clear payment terms documentation</li>
-  <li><strong>Red</strong>: Higher deposits, phased approval for work, pre-authorized payments</li>
-</ul>
-
-<h2 id="the-financial-impact">The Financial Impact</h2>
-
-<p>By implementing even a basic version of this system, you can:</p>
-<ul>
-  <li>Predict cash flow with significantly improved accuracy</li>
-  <li>Make informed inventory and staffing decisions</li>
-  <li>Identify which jobs actually contribute to profitability</li>
-</ul>
-
-<h2 id="the-bottom-line">The Bottom Line</h2>
-
-<p>Banks don’t extend credit based on good feelings or optimism—they use systems. Your auto shop deserves the same protection. Because while fixing engines might be your passion, getting paid should be a certainty.</p>
-
-<p>Remember: hope is not a financial strategy. Systematic payment prediction is.</p>
-
-<p>Try to use <a href="/tools/forecast/">Forecast App</a> to evaluate posibilities of forecasting.</p>
+<p>When someone says “search is objective, ” what they usually mean is “my weighting is currently invisible to you.” The data is all there, nothing is hidden — but the order in which it appears is a choice, and choices have consequences. In finance, in language models, and yes, even in blog search.</p>
 
                 <div>
     <div class="text-content-separator-lg"></div>

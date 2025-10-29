@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-28T11:40:53+04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Rare Digits</title><subtitle>Data In, Meaning Out</subtitle><entry><title type="html">Vacation Notice: The August Disappearing Act</title><link href="http://localhost:4000/newsroom/Vacation-Notice/" rel="alternate" type="text/html" title="Vacation Notice: The August Disappearing Act" /><published>2025-05-21T10:00:00+04:00</published><updated>2025-05-21T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Vacation-Notice</id><content type="html" xml:base="http://localhost:4000/newsroom/Vacation-Notice/"><![CDATA[<p>One weird thing about running a company is that everyone expects you to, you know, actually work. But here’s the thing: we’ve decided that August 2025 is going to be our collective “nope” month.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-10-29T13:44:56+04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Rare Digits</title><subtitle>Data In, Meaning Out</subtitle><entry><title type="html">Building Your Own Search Engine</title><link href="http://localhost:4000/newsroom/Search-Engine/" rel="alternate" type="text/html" title="Building Your Own Search Engine" /><published>2025-10-29T10:00:00+04:00</published><updated>2025-10-29T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Search-Engine</id><content type="html" xml:base="http://localhost:4000/newsroom/Search-Engine/"><![CDATA[<h3 id="the-urge-tobuild-aferrari-todeliver-apizza">The urge to build a Ferrari to deliver a pizza</h3>
+
+<p>There is a certain type of developer who, when told “we need search on the website, ” immediately opens a blank file and starts writing their own search engine. This is the software equivalent of building a shadow banking system in Excel macros because Bloomberg didn’t have the exact screen you wanted. You can do it, it may even work for a while, but everyone around you will quietly wish you didn’t.</p>
+
+<p>For static sites the rational thing to do is: don’t roll your own. Not because you can’t — let’s assume you absolutely could — but because nobody earns extra credibility points in 2025 for reinventing full-text indexing from scratch on a blog. Just like in finance, there are tasks where inventiveness is rewarded (new structured products, new exchanges), and there are tasks where using an existing, boring, proven thing is the optimal choice. Static-site search is the latter.</p>
+
+<h3 id="pagefind-asthe-etf-ofsearch">Pagefind as the ETF of search</h3>
+
+<p>So you pick <a href="https://pagefind.app">Pagefind</a>. It’s basically the ETF of website search: low-overhead, passive, client-side, privacy-respecting, and costs nothing. You pipe your static site through Eleventy, Pagefind vacuums up the text and spits out an index, and the whole thing sits in the browser doing its job without servers or SaaS invoices. No vendor lock-in, no external API, no “your quota for this month is over.” Like a good index fund, it just quietly works.</p>
+
+<p>And because developers share one trait with bankers — if something “just works” we get suspicious — we wrote down a full step-by-step implementation so you can inspect every knob yourself rather than trusting black boxes. The guide is published at <a href="https://raredigits.art/scripts/search/">Rere Styles</a>.</p>
+
+<h3 id="weights-or-how-reality-isrearranged">Weights, or: how reality is rearranged</h3>
+
+<p>Once the search is working, the curious developer will eventually ask: “but how do I make the results better?” And the answer is: weights. You start telling the engine which types of pages matter more than others — posts above static pages, titles above footers, this topic above that topic. It’s a bit tedious but it absolutely works.</p>
+
+<p>And at this point it is hard not to glance sideways at modern LLMs. They look brilliant and elegant now — but only because someone spent a truly absurd amount of time assigning and re-assigning weights. Now imagine how different the answers would look if the same knowledge was weighted differently. Not censored, not removed — just rearranged in priority.</p>
+
+<p>When someone says “search is objective, ” what they usually mean is “my weighting is currently invisible to you.” The data is all there, nothing is hidden — but the order in which it appears is a choice, and choices have consequences. In finance, in language models, and yes, even in blog search.</p>]]></content><author><name></name></author><category term="Insights" /><category term="kitchen" /><summary type="html"><![CDATA[The urge to build a Ferrari to deliver a pizza]]></summary></entry><entry><title type="html">Vacation Notice: The August Disappearing Act</title><link href="http://localhost:4000/newsroom/Vacation-Notice/" rel="alternate" type="text/html" title="Vacation Notice: The August Disappearing Act" /><published>2025-07-21T10:00:00+04:00</published><updated>2025-07-21T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Vacation-Notice</id><content type="html" xml:base="http://localhost:4000/newsroom/Vacation-Notice/"><![CDATA[<p>One weird thing about running a company is that everyone expects you to, you know, actually work. But here’s the thing: we’ve decided that August 2025 is going to be our collective “nope” month.</p>
 
 <p>Starting August 4th through September 8th, the entire Rare Digits Production team will be doing that thing humans supposedly do when they’re not staring at screens—relaxing, allegedly. (They’re told this involves activities like “touching grass” and “remembering what the sun feels like,” though skepticism remains.)</p>
 
@@ -429,20 +447,4 @@ But wait. What’s the point?</p>
 
 <blockquote>
   <p>Note: While we’re technically managing systems that shape the future, Rare Digits cannot be held responsible for paradoxes, timeline disruptions, or butterfly effects. We’re working on a dashboard for those too, but it’s still in beta.</p>
-</blockquote>]]></content><author><name></name></author><category term="Expansion" /><category term="partnership" /><summary type="html"><![CDATA[(Technically Speaking)]]></summary></entry><entry><title type="html">Product Management for IT Infrastructure</title><link href="http://localhost:4000/newsroom/Product-management-for-IT-infrastructure/" rel="alternate" type="text/html" title="Product Management for IT Infrastructure" /><published>2024-07-02T10:00:00+04:00</published><updated>2024-07-02T10:00:00+04:00</updated><id>http://localhost:4000/newsroom/Product-management-for-IT-infrastructure</id><content type="html" xml:base="http://localhost:4000/newsroom/Product-management-for-IT-infrastructure/"><![CDATA[<div class="construction-notice">
-    <p>
-        <span style="font-size: 2em">🚧</span>
-    </p>
-    <p><strong>SECTION ON RECONSTRUCTION</strong></p>
-    <p>
-        <span class="white-bg">
-        Work on this section is in progress. Everything will be available soon.
-        </span>
-    </p>
-    <p>
-        <a href="/newsroom/Reconstruction/">Statement on Reconstruction</a>
-    </p>
-    <p>
-        <span class="material-icons" style="font-size: 2em">construction</span>
-    </p>
-</div>]]></content><author><name></name></author><category term="insight" /><category term="automate" /><category term="kitchen" /><summary type="html"><![CDATA[🚧 SECTION ON RECONSTRUCTION Work on this section is in progress. Everything will be available soon. Statement on Reconstruction construction]]></summary></entry></feed>
+</blockquote>]]></content><author><name></name></author><category term="Expansion" /><category term="partnership" /><summary type="html"><![CDATA[(Technically Speaking)]]></summary></entry></feed>
