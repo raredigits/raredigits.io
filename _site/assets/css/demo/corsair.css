@@ -1,0 +1,155 @@
+:root {
+    --site-max-width: 100%;
+
+    --header-height: var(--space-xl);
+
+    --sidebar-width: calc(var(--global-fr) * 3 + var(--grid-gap) * 2);
+
+    --field-width: calc(50vw - var(--site-max-width)/2);
+}
+
+header {
+    background: var(--black);
+}
+
+.header-logo-wrapper {
+    grid-column: 1 / span 1;
+}
+
+.header-logo {
+    background-image: url('/assets/img/logo/logo_black.svg');
+    background-repeat: no-repeat;
+}
+
+.nav-global {
+    grid-column: 2 / span 8;
+}
+
+nav a {
+    color: var(--white);
+}
+
+nav a:hover {
+    color: var(--white);
+}
+
+.nav-global ul {
+    gap: 0;
+}
+
+.nav-global ul li {
+    padding: 0 var(--space-lg);
+}
+
+.nav-global ul li:hover {
+    background: var(--pen);
+}
+
+.nav-global-current {
+    background: var(--pen);
+}
+
+nav .material-symbols-outlined {
+    font-size: 2em;
+    vertical-align: middle;
+}
+
+.notice-stripe {
+    width: var(--site-max-width);
+}
+
+.construction-stripe-mini {
+    width: 100vw;
+    background: var(--yellow);
+    color: #000;
+    padding: 3px 0;
+    text-align: center;
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
+article {
+    grid-row: 1;
+    grid-column: 1 / span 12;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--primary-font);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.card-rounded-sm {
+    padding: var(--space-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--space-sm);
+}
+
+pre {
+    margin-left: 0;
+}
+
+.data-card-md {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--space-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--space-sm);
+    text-align: center;
+}
+
+.data-card-md .data {
+    font-size: 1.8em;
+}
+
+.data-card-sm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--space-sm);
+    text-align: center;
+}
+
+.data-card-sm .data {
+    font-size: 1.3em;
+}
+
+.data-card-md h3,
+.data-card-sm h4 {
+    margin: 0 0 var(--space-md);
+}
+
+table {
+    font-size: var(--font-size-md);
+}
+
+tr td:last-child,
+tr th:last-child {
+    text-align: right;
+}
+
+.table-striped td, .table-striped th {
+    padding: var(--space-sm);
+}
+
+.tip {
+    width: 100%;
+    text-align: right;
+    position: relative;
+    padding-bottom: var(--space-md);
+}
+
+.tip .material-symbols-outlined {
+    font-size: 1.3em;
+    position: relative;
+    top: var(--space-xs);
+}

@@ -1,0 +1,18 @@
+<header class="padding-x-md">
+  <div class="header-container grid-global">
+    <div class="header-logo-wrapper">
+        <a class="no-decoration" href="/"><div class="header-logo"></div></a>
+    </div>
+    <nav class="nav-global flex stretched">
+      <ul>
+        {% for item in site.data.demo.corsair.corsairNav.items %}
+          <li {% if page.url == item.url %} class="nav-global-current"{% endif %}>
+            <a href="{{ item.url }}" title="{{ item.title }}">
+              <span class="material-symbols-outlined">{{ item.icon }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

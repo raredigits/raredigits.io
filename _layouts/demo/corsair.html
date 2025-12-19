@@ -1,0 +1,20 @@
+{% include /special/demo/corsair/head.html %}
+
+<body>
+    {% include /special/demo/corsair/header.html %}
+    <main>
+        {% include /special/demo/noticeDemo.html %}
+        <div class="content grid-global">
+            <article>
+                {% if page.remark %}
+                    <p class="meta-info">
+                        <span class="">{{ page.remark }}</span>
+                    </p>
+                {% endif %}
+                {{ content }}
+            </article>
+        </div>
+    </main>
+</body>
+
+{% include /special/demo/footer.html %}

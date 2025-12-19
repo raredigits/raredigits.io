@@ -1,0 +1,28 @@
+items:
+  - title: "Dashboard"
+    icon: "speed"
+    url: "/demo/corsair/"
+
+  - title: "Production"
+    icon: "storefront"
+    url: "/demo/corsair/production/"
+
+  - title: "Money"
+    icon: "attach_money"
+    url: "/demo/corsair/money/"
+    
+  - title: "Staff"
+    icon: "family_group"
+    url: "/demo/corsair/staff/"
+
+  - title: "Finance"
+    icon: "trending_up"
+    url: "/demo/corsair/finance/"
+
+  - title: "Settings"
+    icon: "settings"
+    url: "/demo/corsair/settings/"
+
+  - title: "Notifications"
+    icon: "notifications"
+    url: "/demo/corsair/notifications/"

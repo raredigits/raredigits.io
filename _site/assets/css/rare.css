@@ -73,6 +73,7 @@ blockquote {
 }
 
 form label {
+    padding-top: var(--space-sm);
     font-size: var(--font-size-sm);
 }
 
@@ -84,6 +85,11 @@ form input {
 
 form button {
     border-color: var(--border-color);
+}
+
+.form-error {
+    color: var(--red);
+    padding: var(--space-md) 0;
 }
 
 /* CONSTRUCTION NOTICE */

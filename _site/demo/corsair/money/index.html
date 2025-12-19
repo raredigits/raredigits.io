@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rare Digits | Corsair HQ Demo | Money</title>
+
+    <link rel="icon" href="/assets/img/favicon/favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="icon" href="/assets/img/favicon/favicon-32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png" sizes="180x180">
+
+    <link rel="stylesheet" href="https://raredigits.github.io/rare-styles/rare.min.css">
+    <link rel="stylesheet" href="/assets/css/demo/corsair.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <script>
+      if (location.hostname !== "localhost") {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=G-91KWRG2Y9N";
+        document.head.appendChild(s);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-91KWRG2Y9N');
+      }
+    </script>
+</head>
+
+<body>
+    <header class="padding-x-md">
+  <div class="header-container grid-global">
+    <div class="header-logo-wrapper">
+        <a class="no-decoration" href="/"><div class="header-logo"></div></a>
+    </div>
+    <nav class="nav-global flex stretched">
+      <ul>
+        
+          <li >
+            <a href="/demo/corsair/" title="Dashboard">
+              <span class="material-symbols-outlined">speed</span>
+            </a>
+          </li>
+        
+          <li >
+            <a href="/demo/corsair/production/" title="Production">
+              <span class="material-symbols-outlined">storefront</span>
+            </a>
+          </li>
+        
+          <li  class="nav-global-current">
+            <a href="/demo/corsair/money/" title="Money">
+              <span class="material-symbols-outlined">attach_money</span>
+            </a>
+          </li>
+        
+          <li >
+            <a href="/demo/corsair/staff/" title="Staff">
+              <span class="material-symbols-outlined">family_group</span>
+            </a>
+          </li>
+        
+          <li >
+            <a href="/demo/corsair/finance/" title="Finance">
+              <span class="material-symbols-outlined">trending_up</span>
+            </a>
+          </li>
+        
+          <li >
+            <a href="/demo/corsair/settings/" title="Settings">
+              <span class="material-symbols-outlined">settings</span>
+            </a>
+          </li>
+        
+          <li >
+            <a href="/demo/corsair/notifications/" title="Notifications">
+              <span class="material-symbols-outlined">notifications</span>
+            </a>
+          </li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+    <main>
+        <div class="notice-stripe construction-stripe-mini">
+    ⚠️ This is a demonstration environment with fictional data ⚠️ 
+</div>
+        <div class="content grid-global">
+            <article>
+                
+                <h1>Money</h1>
+            </article>
+        </div>
+    </main>
+</body>
+
+<footer>
+  <div class="site-max-width padding-x-md padding-y-lg">
+    <div class="flex stretched">
+      <div>
+        <p>Data In, Meaning Out:<br>
+          <a class="no-decoration" href="tel:+971 52 87-86-777">+971 52 87-86-777</a><br>
+          <a href="mailto:hi@raredigits.io">hi@raredigits.io</a>
+        </p>
+      </div>
+      <div class="right">
+        <p>© 2023—2025  Rare Digits<br>
+          Built on <a href="https://raredigits.art">Rare Styles</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/hamburger.js"></script>
+<script src="/assets/js/header-scroll.js"></script>
+<div id="cookie-notice" class="cookie-notice">
+    <div class="cookie-text">
+        <h3 class="emoji">🍪</h3>
+        <p class="bold">Help yourself to&nbsp;some cookies!</p>
+        <p>We're using third party cookies and scripts to improve the functionality of this website.</p>
+        <p><a href="/legal/privacy">In legal terms</a> >></p>
+        <div class="right">
+            <button id="cookie-notice-accept" class="cookie-button">Nice!</button>
+        </div>
+    </div>
+</div>
+<script>
+    function createCookie(name,value,days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+    function eraseCookie(name) {
+        createCookie(name,"",-1);
+    }
+    
+    // Check if the cookie is already set
+    // If not, show the cookie notice
+    document.addEventListener('DOMContentLoaded', function() {
+        var cookieNotice = document.getElementById('cookie-notice');
+        
+        if(readCookie('cookie-notice-dismissed')=='true') {
+            cookieNotice.style.display = 'none';
+        } else {
+            cookieNotice.style.display = 'block';
+        }
+        
+        document.getElementById('cookie-notice-accept').addEventListener("click", function() {
+            createCookie('cookie-notice-dismissed','true',31);
+            cookieNotice.style.display = 'none';
+        });
+    });
+</script>

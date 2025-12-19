@@ -1,0 +1,20 @@
+<footer>
+  <div class="site-max-width padding-x-md padding-y-lg">
+    <div class="flex stretched">
+      <div>
+        <p>{{ site.description }}:<br>
+          <a class="no-decoration" href="tel:{{ site.phone }}">{{ site.phone }}</a><br>
+          <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </p>
+      </div>
+      <div class="right">
+        <p>© 2023—{{ site.time | date: '%Y' }}  {{ site.title }}<br>
+          Built on <a href="https://raredigits.art">Rare Styles</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/hamburger.js"></script>
+<script src="/assets/js/header-scroll.js"></script>
+{% include /special/cookie-consent.html %}

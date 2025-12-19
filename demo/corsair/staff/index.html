@@ -1,0 +1,306 @@
+---
+layout: demo/corsair
+title: Corsair HQ Demo | Staff
+offset: demo
+permalink: /demo/corsair/staff/
+---
+
+<h1>Staff Overview</h1>
+<pre>
+<strong>Personnel Economics Dashboard</strong> displays workforce cost structure, productivity measurements, 
+and operational risk factors related to human capital allocation.<br>
+<strong>Data Integration:</strong> This dashboard aggregates data from ERP systems, accounting software, 
+HRIS/payroll platforms, or manual uploads.<br>
+Historical data enables filtering by date, department, KPI, and financial metrics.
+</pre>
+
+<section>
+    <div class="grid grid-cols-5 gap-md">
+        <div class="data-card-md">
+            <h3>Payroll Cost</h3>
+            <span class="data">516,000</span>
+        </div>
+        <div class="data-card-md">
+            <h3>Revenue per Employee</h3>
+            <span class="data green">74,140</span>
+        </div>
+        <div class="data-card-md">
+            <h3>Profit per Employee</h3>
+        </div>
+        <div class="data-card-md">
+            <h3>Overtime Cost</h3>
+            <span class="data red">16,000</span>
+        </div>
+        <div class="data-card-md">
+            <h3>Headcount</h3>
+            <span class="data">29</span>
+        </div>
+    </div>
+    <div class="grid grid-cols-5 gap-md padding-y-lg">
+        <div class="data-card-sm">
+            <h4>Highest paid dept:</h4>
+            <span class="data">Production</span>
+        </div>
+        <div class="data-card-sm">
+            <h4>Average Salary:</h4>
+            <span class="data">17,800</span>
+        </div>
+        <div class="data-card-sm">
+            <h4>Average absence:</h4>
+            <span class="data red">20.1%</span>
+        </div>
+        <div class="data-card-sm">
+            <h4>Turnover Rate:</h4>
+            <span class="data green">7%</span>
+        </div>
+        <div class="data-card-sm">
+            <h4>Average tenure:</h4>
+            <span class="data">6 years</span>
+        </div>
+    </div>
+</section>
+
+<div class="air-lg"></div>
+
+<section class="card rounded-sm padding-x-md">
+    <h2>Productivity by Dept.</h2>
+    <table class="table-striped">
+        <tr>
+            <th>Department</th>
+            <th>KPI</th>
+            <th>Staffing</th>
+            <th>Fails</th>
+            <th>Headcount</th>
+            <th>Absence</th>
+            <th>Cost</th>
+            <th>Cost of Rev.</th>
+            
+        </tr>
+        <tr>
+            <td>Sales</td>
+            <td class="green">120%</td>
+            <td>80%</td>
+            <td>1%</td>
+            <td>4</td>
+            <td>0</td>
+            <td>110,000</td>
+            <td>10%</td>
+        </tr>
+        <tr>
+            <td>Production</td>
+            <td>95%</td>
+            <td>90%</td>
+            <td>5%</td>
+            <td>16</td>
+            <td class="red">4</td>
+            <td>280,000</td>
+            <td>20%</td>   
+        </tr>
+        <tr>
+            <td>Support</td>
+            <td>90%</td>
+            <td class="red">75%</td>
+            <td>6%</td>
+            <td>3</td>
+            <td>0</td>
+            <td>36,000</td>
+            <td>25%</td>
+        </tr>
+        <tr>
+            <td>Backoffice</td>
+            <td class="red">85%</td>
+            <td>100%</td>
+            <td class="red">12%</td>
+            <td>6</td>
+            <td class="red">2</td>
+            <td>90,000</td>
+            <td>15%</td>    
+        </tr>
+    </table>
+    <div class="tip">
+        <span class="red material-symbols-outlined">info</span> KPI underperformance may indicate understaffing. <strong>Pro tip:</strong> <a href="">Fire more!</a>
+    </div>
+</section>
+
+<div class="air-lg"></div>
+
+<section>
+    <h2>Key Employees</h2>
+    <table class="table-striped">
+        <tr>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Tenure</th>
+            <th>Compensation</th>
+            <th>Options</th>
+            <th class="right">Key Metrics</th>
+        </tr>
+        {% for person in site.data.demo.corsair.corsairKeyPersons.keyPersonnel %}
+        <tr>
+            <td><strong>{{ person.name }}</strong></td>
+            <td>{{ person.role }}</td>
+            <td>{{ person.tenure }}</td>
+            <td>{{ person.compensation }}</td>
+            <td>{{ person.options }}</td>
+            <td class="right">
+                {% for metric in person.metrics %}
+                    {{ metric.label }}: <strong>{{ metric.value }}</strong>
+                    <span class="trend trend-{{ metric.trend }}">
+                    {% if metric.trend == "up" %}↑{% endif %}
+                    {% if metric.trend == "down" %}↓{% endif %}
+                    {% if metric.trend == "neutral" %}→{% endif %}
+                    </span><br>
+                {% endfor %}
+                {% if person.riskFlag %}
+                <div class="risk-flag">⚠️ {{ person.riskFlag }}</div>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+        </table>
+        <div class="tip">
+            <span class="gray material-symbols-outlined">info</span> Key performance metrics are individually defined per executive role and tracked against objective operational data.</a>
+        </div>
+</section>
+
+<div class="air-lg"></div>
+
+<section>
+    <h2>Vacancies (3)</h2>
+    <table>
+        <tr>
+            <td>Chief Sales Officer</td>
+            <td>Open</td>
+            <td>20,000</td>
+        </tr>
+        <tr>
+            <td>Senior Database Administrator</td>
+            <td>Open</td>
+            <td>18,000</td>
+        </tr>
+        <tr>
+            <td>Support Specialist</td>
+            <td>Open</td>
+            <td>9,000</td>
+        </tr>
+    </table>
+</section>
+
+<section class="card rounded-sm padding-x-md">
+    <h2>Best Practices AI-Opinion</h2>
+</section>
+
+<div class="air-lg"></div>
+
+<section>
+    <h2>System Architecture</h2>
+
+    <pre>
+// System Architecture: Staff Analytics Dashboard
+
+Staff analytics dashboard utilizes pre-configured integration modules for standard
+enterprise systems. Data extraction, normalization, and metric calculation are handled
+automatically. The only manual input required is setting role-specific performance
+targets (KPIs/OKRs) and alert thresholds. All quantitative metrics are derived from
+connected operational systems.
+
+// Input Layer
+Data Sources (API Integration)
+├─ HRMS API → Employee records, tenure, positions
+├─ Payroll System → Compensation, bonuses, equity
+├─ CRM → Sales metrics, deals closed, revenue attribution
+├─ ERP → Production output, operational metrics
+└─ Development Tools → Git commits, Jira tickets, deployments
+
+// Processing Layer
+ETL Pipeline
+├─ Data extraction from multiple sources
+├─ Normalization & validation
+├─ Deduplication & conflict resolution
+└─ Time-series aggregation
+
+Calculation Engine
+├─ KPI computation (revenue/employee, cost ratios)
+├─ Trend analysis (YoY, MoM comparisons)
+├─ Benchmarking against targets
+└─ Risk scoring
+
+// Configuration Layer
+Manual Inputs
+├─ Role-specific KPI definitions
+├─ Target thresholds per metric
+├─ Alert rules & escalation policies
+└─ Weight coefficients for composite scores
+
+// Output Layer
+Staff Dashboard
+├─ Executive summary cards
+├─ Department-level breakdown
+├─ Individual performance tables
+└─ Interactive drill-down views
+
+Alert System
+├─ Real-time anomaly detection
+├─ Threshold breach notifications
+├─ Multi-channel delivery (Email, Slack, SMS)
+└─ Escalation workflows
+
+// Alert Triggers
+⚠️ Turnover rate > 15%
+⚠️ Payroll cost > 70% of revenue
+⚠️ Key personnel tenure < 6 months
+⚠️ Productivity drop > 20% MoM
+⚠️ Understaffing in critical roles
+
+// System Architecture Diagram
+┌─────────────────────────────────────────────────────────────┐
+│                       DATA SOURCES (API)                    │
+├──────────┬──────────┬──────────┬──────────┬─────────────────┤
+│  HRMS    │ Payroll  │   CRM    │   ERP    │   Git/Jira      │
+│ Employee │  Comp.   │  Sales   │  Prod.   │   Dev Metrics   │
+└────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬────────────┘
+     │          │          │          │          │
+     └──────────┴──────────┴──────────┴──────────┘
+                           │
+                           ▼
+                ┌────────────────────────┐
+                │   ETL PIPELINE         │
+                │ • Data Extraction      │◄──────┐
+                │ • Transformation       │       │
+                │ • Validation           │       │
+                └───────────┬────────────┘       │
+                            │                    │
+                            ▼                    │
+                ┌────────────────────────┐       │
+                │  CALCULATION ENGINE    │       │
+                │ • KPI Computation      │◄──────┤
+                │ • Aggregation          │       │
+                │ • Trend Analysis       │       │
+                └───────────┬────────────┘       │
+                            │                    │
+            ┌───────────────┼────────────┐       │
+            │               │            │       │
+            ▼               ▼            ▼       │
+    ┌─────────────┐  ┌──────────┐  ┌──────────┐  │
+    │  DASHBOARD  │  │ REST API │  │ MONITOR  │  │
+    │   Visual    │  │  Export  │  │ Anomaly  │  │
+    │ Analytics   │  │          │  │ Detection│  │
+    └─────────────┘  └──────────┘  └────┬─────┘  │
+                                        │        │
+                                        ▼        │
+                                 ┌───────────────┤
+                                 │ ALERT SYSTEM  │
+                                 │ • Email       │
+                                 │ • WA / Tg     │
+                                 │ • SMS         │
+                                 └───────────────┘
+                                         ▲
+                                         │
+                            ┌────────────┴────────────┐
+                            │  MANUAL CONFIGURATION   │
+                            │ • Role-specific KPIs    │
+                            │ • Alert Thresholds      │
+                            │ • Business Rules        │
+                            └─────────────────────────┘
+    </pre>
+</section>
