@@ -9,6 +9,8 @@ permalink: /legal/
 
 We respect lawyers but prefer not to give them reasons to send us invoices. To achieve this, we employ an ingenious lifehack in all our operations — we aim to comply with applicable laws and honor the commitments we make.
 
+We hope you follow similar principles and will comply, as we do, with the [Terms of Use](/legal/terms/), which govern the relationship between this website and its visitors.
+
 ## Let's Talk Before You Sue
 
 If you ever feel the need to discuss legal matters with us, we always suggest resolving everything pre-trial. It’s consistently more beneficial, cost-effective, and faster for everyone involved.

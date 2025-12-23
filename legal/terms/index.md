@@ -30,6 +30,14 @@ We strive for 99.9% uptime, but sometimes computers do what computers do — t
 
 While we do our best to keep everything running smoothly, technical issues, maintenance, or the occasional digital apocalypse might interrupt your access to our site. During these moments, we suggest trying ancient coping techniques like “reading a book” or “talking to another human.”
 
+## Products and Services: Read the Fine Print
+
+Any products, services, software, or features mentioned on this website are provided under their own separate terms, licenses, and agreements. These may include specific conditions related to pricing, payment terms, scope of services, timelines, limitations, warranties, or support obligations.
+
+Nothing on this website should be interpreted as modifying, extending, or replacing those separate agreements.
+
+If you have legal or contractual questions about a specific product or service, the relevant agreement governs. This page is not a shortcut around that reality.
+
 ## The "Not Our Fault" Clause
 
 By using our website, you acknowledge that:
