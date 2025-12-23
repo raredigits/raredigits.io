@@ -24,6 +24,8 @@
   
     --heading-font: 'Restora', sans-serif;
 
+    --font-size: 18px;
+
     --header-logo: url('/assets/img/logo/logo.svg') no-repeat;
     --sidebar-width: calc(var(--global-fr) * 3 + var(--grid-gap) * 2);
 
