@@ -71,13 +71,13 @@
     
       <li class="">
         
-          <a href="/legal/privacy/">Privacy Policy</a>
+          <a href="/legal/terms/">Terms of Use</a>
         
       </li>
     
       <li class="">
         
-          <a href="/legal/terms/">Terms of Service</a>
+          <a href="/legal/privacy/">Privacy Policy</a>
         
       </li>
     
@@ -96,15 +96,15 @@
                 
                 <h2 id="simple-strategy-just-dont-break-the-law">Simple Strategy: Just Don’t Break the Law</h2>
 
-<p>We respect lawyers but prefer not to give them reasons to send us invoices. To achieve this, we employ an ingenious lifehack in all our operations — we simply don’t break laws or the commitments we make.</p>
+<p>We respect lawyers but prefer not to give them reasons to send us invoices. To achieve this, we employ an ingenious lifehack in all our operations — we aim to comply with applicable laws and honor the commitments we make.</p>
 
 <h2 id="lets-talk-before-you-sue">Let’s Talk Before You Sue</h2>
 
-<p>If you ever feel the need to discuss legal matters with us, we always suggest resolving everything pre-trial. It’s consistently more beneficial, cost-effective, and faster for everyone involved.</p>
+<p>If you ever feel the need to discuss legal matters with us, we always suggest resolving everything pre-trial. It’s consistently more beneficial, cost-effective, and faster for everyone involved.</p>
 
 <h2 id="uae-based-globally-minded">UAE-Based, Globally Minded</h2>
 
-<p>Just as a friendly reminder, we’re legally established in the UAE and comply with all local regulations. If you believe we’ve somehow violated your local norms — we apologize. <a href="./privacy">Have a cookie instead</a> 🍪</p>
+<p>Just as a friendly reminder, we’re legally established in the UAE and comply with all local regulations. If you believe we’ve somehow failed to meet your local legal expectations — please let us know. <a href="/legal/privacy">Have a cookie instead</a> 🍪</p>
 
 <p>If you have legal questions, please contact us at <a href="mailto:legal@raredigits.io">legal@raredigits.io</a>.</p>
 
@@ -243,11 +243,11 @@
       <ul>
         
           <li>
-              <a href="/legal/privacy/">Privacy Policy</a>
+              <a href="/legal/terms/">Terms of Use</a>
           </li>
         
           <li>
-              <a href="/legal/terms/">Terms of Service</a>
+              <a href="/legal/privacy/">Privacy Policy</a>
           </li>
         
       </ul>
@@ -273,54 +273,14 @@
 <script src="/assets/js/hamburger.js"></script>
 <script src="/assets/js/header-scroll.js"></script>
 <div id="cookie-notice" class="cookie-notice">
-    <div class="cookie-text">
-        <h3 class="emoji">🍪</h3>
-        <p class="bold">Help yourself to&nbsp;some cookies!</p>
-        <p>We're using third party cookies and scripts to improve the functionality of this website.</p>
-        <p><a href="/legal/privacy">In legal terms</a> >></p>
-        <div class="right">
-            <button id="cookie-notice-accept" class="cookie-button">Nice!</button>
-        </div>
+  <div class="cookie-notice__content">
+    <h3>🍪</h3>
+    <p class="bold">Help yourself to&nbsp;some cookies!</p>
+    <p>We’re using third party cookies and scripts to improve the functionality of this website. For legal purpose, we have a <a href="/legal/privacy">privacy policy</a>.</p>
+    <div class="right">
+        <button id="cookie-notice-accept" class="cookie-notice__button">Nice!</button>
     </div>
+  </div>
 </div>
-<script>
-    function createCookie(name,value,days) {
-        var expires = "";
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days*24*60*60*1000));
-            expires = "; expires=" + date.toUTCString();
-        }
-        document.cookie = name + "=" + value + expires + "; path=/";
-    }
-    function readCookie(name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(';');
-        for(var i=0;i < ca.length;i++) {
-            var c = ca[i];
-            while (c.charAt(0)==' ') c = c.substring(1,c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-        }
-        return null;
-    }
-    function eraseCookie(name) {
-        createCookie(name,"",-1);
-    }
-    
-    // Check if the cookie is already set
-    // If not, show the cookie notice
-    document.addEventListener('DOMContentLoaded', function() {
-        var cookieNotice = document.getElementById('cookie-notice');
-        
-        if(readCookie('cookie-notice-dismissed')=='true') {
-            cookieNotice.style.display = 'none';
-        } else {
-            cookieNotice.style.display = 'block';
-        }
-        
-        document.getElementById('cookie-notice-accept').addEventListener("click", function() {
-            createCookie('cookie-notice-dismissed','true',31);
-            cookieNotice.style.display = 'none';
-        });
-    });
-</script>
+
+<script src="/assets/js/cookie-consent.js"></script>

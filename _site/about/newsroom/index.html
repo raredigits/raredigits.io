@@ -831,11 +831,11 @@
       <ul>
         
           <li>
-              <a href="/legal/privacy/">Privacy Policy</a>
+              <a href="/legal/terms/">Terms of Use</a>
           </li>
         
           <li>
-              <a href="/legal/terms/">Terms of Service</a>
+              <a href="/legal/privacy/">Privacy Policy</a>
           </li>
         
       </ul>
@@ -861,54 +861,14 @@
 <script src="/assets/js/hamburger.js"></script>
 <script src="/assets/js/header-scroll.js"></script>
 <div id="cookie-notice" class="cookie-notice">
-    <div class="cookie-text">
-        <h3 class="emoji">🍪</h3>
-        <p class="bold">Help yourself to&nbsp;some cookies!</p>
-        <p>We're using third party cookies and scripts to improve the functionality of this website.</p>
-        <p><a href="/legal/privacy">In legal terms</a> >></p>
-        <div class="right">
-            <button id="cookie-notice-accept" class="cookie-button">Nice!</button>
-        </div>
+  <div class="cookie-notice__content">
+    <h3>🍪</h3>
+    <p class="bold">Help yourself to&nbsp;some cookies!</p>
+    <p>We’re using third party cookies and scripts to improve the functionality of this website. For legal purpose, we have a <a href="/legal/privacy">privacy policy</a>.</p>
+    <div class="right">
+        <button id="cookie-notice-accept" class="cookie-notice__button">Nice!</button>
     </div>
+  </div>
 </div>
-<script>
-    function createCookie(name,value,days) {
-        var expires = "";
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days*24*60*60*1000));
-            expires = "; expires=" + date.toUTCString();
-        }
-        document.cookie = name + "=" + value + expires + "; path=/";
-    }
-    function readCookie(name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(';');
-        for(var i=0;i < ca.length;i++) {
-            var c = ca[i];
-            while (c.charAt(0)==' ') c = c.substring(1,c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-        }
-        return null;
-    }
-    function eraseCookie(name) {
-        createCookie(name,"",-1);
-    }
-    
-    // Check if the cookie is already set
-    // If not, show the cookie notice
-    document.addEventListener('DOMContentLoaded', function() {
-        var cookieNotice = document.getElementById('cookie-notice');
-        
-        if(readCookie('cookie-notice-dismissed')=='true') {
-            cookieNotice.style.display = 'none';
-        } else {
-            cookieNotice.style.display = 'block';
-        }
-        
-        document.getElementById('cookie-notice-accept').addEventListener("click", function() {
-            createCookie('cookie-notice-dismissed','true',31);
-            cookieNotice.style.display = 'none';
-        });
-    });
-</script>
+
+<script src="/assets/js/cookie-consent.js"></script>
