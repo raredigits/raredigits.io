@@ -1,0 +1,185 @@
+team:
+  - id: "founder-cd"
+    name: "Reem Bouhassan"
+    role: "Founder / Creative Director"
+    department: "Leadership"
+    joined: "2019-03-14"
+    salaryMonthly: 62000
+    nationality: "Lebanese"
+    avatar: "/assets/img/demo/corsair/avatars/reem.jpg"
+
+  - id: "founder-md"
+    name: "Florian Becker"
+    role: "Founder / Managing Director"
+    department: "Leadership"
+    joined: "2019-03-14"
+    salaryMonthly: 58000
+    nationality: "German"
+    avatar: "/assets/img/demo/corsair/avatars/florian.jpg"
+
+  - id: "cfo"
+    name: "Yousef Khoury"
+    role: "CFO"
+    department: "Finance"
+    joined: "2021-01-04"
+    salaryMonthly: 45000
+    nationality: "Lebanese-Canadian"
+
+  - id: "head-prod"
+    name: "Sheleesh Quereshi"
+    role: "Head of Production"
+    department: "Production"
+    joined: "2020-08-01"
+    salaryMonthly: 41000
+    nationality: "Pakistani"
+    note: "Owns the Umbrella Inc. account — currently disputed"
+
+  - id: "head-acc"
+    name: "Khalil Ammari"
+    role: "Head of Client Services"
+    department: "Accounts"
+    joined: "2020-02-09"
+    salaryMonthly: 38000
+    nationality: "Jordanian"
+
+  - id: "creative-lead"
+    name: "Jiwon Park"
+    role: "Creative Lead"
+    department: "Creative"
+    joined: "2021-05-20"
+    salaryMonthly: 33000
+    nationality: "Korean"
+
+  - id: "prod-festival"
+    name: "Mathilde Vermeulen"
+    role: "Festival Producer"
+    department: "Production"
+    joined: "2022-04-04"
+    salaryMonthly: 31000
+    nationality: "Dutch"
+    note: "Owns Ancient Moon Festival and Lantern Bay"
+
+  - id: "prod-senior"
+    name: "Marco Reyes"
+    role: "Senior Producer"
+    department: "Production"
+    joined: "2021-11-15"
+    salaryMonthly: 28000
+    nationality: "Filipino"
+
+  - id: "acc-senior"
+    name: "Giulia Rinaldi"
+    role: "Senior Account Manager"
+    department: "Accounts"
+    joined: "2022-09-01"
+    salaryMonthly: 26000
+    nationality: "Italian"
+
+  - id: "studio-mgr"
+    name: "Devika Pillai"
+    role: "Studio Manager"
+    department: "Operations"
+    joined: "2020-06-15"
+    salaryMonthly: 24000
+    nationality: "Indian"
+
+  - id: "designer-senior"
+    name: "Tariq Saleh"
+    role: "Senior Designer"
+    department: "Creative"
+    joined: "2022-11-07"
+    salaryMonthly: 23000
+    nationality: "Egyptian"
+
+  - id: "prod-2"
+    name: "Anika Raghunathan"
+    role: "Producer"
+    department: "Production"
+    joined: "2023-06-01"
+    salaryMonthly: 22000
+    nationality: "Indian"
+
+  - id: "acc-mgr"
+    name: "Faisal Karim"
+    role: "Account Manager"
+    department: "Accounts"
+    joined: "2024-03-18"
+    salaryMonthly: 21000
+    nationality: "Pakistani"
+
+  - id: "designer-set"
+    name: "Sienna Whitfield"
+    role: "Set Designer"
+    department: "Creative"
+    joined: "2023-10-12"
+    salaryMonthly: 20000
+    nationality: "British"
+
+  - id: "logistics"
+    name: "Pavel Drozdov"
+    role: "Logistics Lead"
+    department: "Operations"
+    joined: "2022-01-10"
+    salaryMonthly: 19000
+    nationality: "Russian"
+
+  - id: "accountant"
+    name: "Imran Sayed"
+    role: "Senior Accountant"
+    department: "Finance"
+    joined: "2022-07-11"
+    salaryMonthly: 18000
+    nationality: "Indian"
+
+  - id: "hr"
+    name: "Nadia Fakhoury"
+    role: "HR & Admin Manager"
+    department: "Finance"
+    joined: "2023-02-05"
+    salaryMonthly: 17000
+    nationality: "Syrian"
+
+  - id: "bookings"
+    name: "Trisha Aquino"
+    role: "Bookings & Permits Officer"
+    department: "Operations"
+    joined: "2021-09-22"
+    salaryMonthly: 16000
+    nationality: "Filipino"
+
+departments:
+  - id: "Leadership"
+    head: "founder-cd"
+  - id: "Finance"
+    head: "cfo"
+  - id: "Production"
+    head: "head-prod"
+  - id: "Accounts"
+    head: "head-acc"
+  - id: "Creative"
+    head: "creative-lead"
+  - id: "Operations"
+    head: "studio-mgr"
+
+headcountByMonth:
+  - month: "2024-01"
+    fte: 11
+  - month: "2024-04"
+    fte: 12
+  - month: "2024-07"
+    fte: 13
+  - month: "2024-10"
+    fte: 13
+  - month: "2025-01"
+    fte: 14
+  - month: "2025-04"
+    fte: 17
+    note: "Hiring spree post-Lantern Bay 2025 success"
+  - month: "2025-07"
+    fte: 18
+  - month: "2025-10"
+    fte: 18
+  - month: "2026-01"
+    fte: 18
+  - month: "2026-03"
+    fte: 18

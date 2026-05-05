@@ -1,8 +1,381 @@
 ---
 layout: demo/corsair
-title: Corsair HQ Demo
+title: Corsair HQ Demo | Dashboard
 offset: demo
 permalink: /demo/corsair/
 ---
 
-<h1>Unicorn Corp.</h1>
+{% assign company = site.data.demo.corsair.company %}
+{% assign jeeves = site.data.demo.corsair.jeeves %}
+{% assign currMonth = site.data.demo.corsair.targets.monthly | last %}
+{% assign cashSnap = site.data.demo.corsair.cashflow.cashSnapshot %}
+{% assign aging = site.data.demo.corsair.invoices.aging %}
+{% assign yr = site.data.demo.corsair.targets.annual | last %}
+{% assign user = site.data.demo.corsair.staff.team | where: "id", "founder-md" | first %}
+{% assign criticalAlerts = site.data.demo.corsair.alerts.summary.bySeverity.critical %}
+{% assign highAlerts = site.data.demo.corsair.alerts.summary.bySeverity.high %}
+{% assign firesToday = criticalAlerts | plus: highAlerts %}
+
+<header class="demo-hero">
+    <div>
+        <h1>{{ company.profile.brandName }}</h1>
+        <p class="muted">{{ company.profile.tagline }} — {{ company.profile.hq }}</p>
+    </div>
+    <div class="as-of">As of {{ company.today }} · Q1 2026</div>
+</header>
+
+<!-- ============ Today card · with one eye closed ============ -->
+{% assign userFirst = user.name | split: " " | first %}
+{% assign unrM = cashSnap.unrestricted | divided_by: 100000 %}
+{% assign unrW = unrM | divided_by: 10 %}
+{% assign unrF = unrM | modulo: 10 %}
+{% comment %} Runway = unrestricted cash / total cash burn (OpEx + in-flight COGS commitments) ≈ 98d {% endcomment %}
+{% assign runwayDays = 98 %}
+<section class="today-card">
+    <div class="today-greeting">
+        <h2>Good morning, {{ userFirst }}.</h2>
+        <div class="today-date">Saturday · 28 March 2026 · 08:14 GST</div>
+    </div>
+    <div class="today-num">
+        <div class="today-num-label">Cash you can actually spend</div>
+        <div class="today-num-value">{{ unrW }}.{{ unrF }}M</div>
+        <div class="today-num-foot">unrestricted · AED</div>
+    </div>
+    <div class="today-num">
+        <div class="today-num-label">Runway</div>
+        <div class="today-num-value good">{{ runwayDays }}d</div>
+        <div class="today-num-foot">at current OpEx · target ≥ 90</div>
+    </div>
+    <div class="today-num">
+        <div class="today-num-label">Fires today</div>
+        <div class="today-num-value bad">{{ firesToday }}</div>
+        <div class="today-num-foot">critical + high · {{ jeeves.topActions | size }} actions queued</div>
+    </div>
+    <a class="today-action" data-modal="modal-digest">
+        <span class="material-symbols-outlined">drafts</span>
+        Preview Monday digest
+    </a>
+</section>
+
+<!-- ============ Jeeves headline ============ -->
+<div class="jeeves-card">
+    <div class="jeeves-avatar">J</div>
+    <div class="jeeves-body">
+        <h3>{{ jeeves.profile.name }} GPT · {{ jeeves.todaySummary.headline }}</h3>
+        <p>{{ jeeves.todaySummary.body }}</p>
+        <p class="signature">{{ jeeves.profile.signature }} · refreshed {{ jeeves.todaySummary.refresh | date: "%H:%M" }}</p>
+    </div>
+    <a href="#jeeves-actions" class="jeeves-action">Show {{ jeeves.topActions | size }} actions</a>
+</div>
+
+<!-- ============ KPI strip ============ -->
+{% assign cashM = cashSnap.total | divided_by: 100000 %}
+{% assign cashW = cashM | divided_by: 10 %}
+{% assign cashF = cashM | modulo: 10 %}
+{% assign unrM = cashSnap.unrestricted | divided_by: 100000 %}
+{% assign unrW = unrM | divided_by: 10 %}
+{% assign unrF = unrM | modulo: 10 %}
+{% assign revYTD = yr.revenueActualYTD | divided_by: 100000 %}
+{% assign revYTDw = revYTD | divided_by: 10 %}
+{% assign revYTDf = revYTD | modulo: 10 %}
+{% assign revPlanQ1 = yr.revenueQ1Plan | divided_by: 100000 %}
+{% assign revPlanQ1w = revPlanQ1 | divided_by: 10 %}
+{% assign revPlanQ1f = revPlanQ1 | modulo: 10 %}
+{% assign q1Pct = yr.revenueQ1Actual | times: 100 | divided_by: yr.revenueQ1Plan %}
+
+<section class="kpi-strip">
+    <a href="/demo/corsair/money/" class="kpi-tile clickable" style="text-decoration: none; color: inherit;">
+        <div class="kpi-label">Cash on hand</div>
+        <div class="kpi-value">{{ cashW }}.{{ cashF }}M <span class="muted" style="font-size: 0.7em">AED</span></div>
+        <div class="kpi-foot">{{ unrW }}.{{ unrF }}M unrestricted · {{ cashSnap.restrictedEscrow | divided_by: 1000000 }}M escrow</div>
+        <div class="click-hint"><span class="material-symbols-outlined">arrow_forward</span> Open Money</div>
+    </a>
+    <a href="/demo/corsair/finance/" class="kpi-tile kpi-good clickable" style="text-decoration: none; color: inherit;">
+        <div class="kpi-label">Revenue Q1 2026</div>
+        <div class="kpi-value">{{ revYTDw }}.{{ revYTDf }}M</div>
+        <div class="kpi-foot">Plan {{ revPlanQ1w }}.{{ revPlanQ1f }}M · <strong class="green">{{ q1Pct }}% of plan</strong></div>
+        <div class="click-hint"><span class="material-symbols-outlined">arrow_forward</span> Open Finance</div>
+    </a>
+    <a href="/demo/corsair/production/" class="kpi-tile clickable" style="text-decoration: none; color: inherit;">
+        <div class="kpi-label">Active projects</div>
+        <div class="kpi-value">{{ site.data.demo.corsair.projects.kpis.activeProjects }}</div>
+        <div class="kpi-foot">{{ site.data.demo.corsair.projects.kpis.delivered_unbilled }} delivered · awaiting close</div>
+        <div class="click-hint"><span class="material-symbols-outlined">arrow_forward</span> Open Production</div>
+    </a>
+    <a href="/demo/corsair/notifications/" class="kpi-tile kpi-bad clickable" style="text-decoration: none; color: inherit;">
+        <div class="kpi-label">Active alerts</div>
+        <div class="kpi-value">{{ site.data.demo.corsair.alerts.summary.total }}</div>
+        <div class="kpi-foot">
+            {{ site.data.demo.corsair.alerts.summary.bySeverity.critical }} critical ·
+            {{ site.data.demo.corsair.alerts.summary.bySeverity.high }} high ·
+            {{ site.data.demo.corsair.alerts.summary.bySeverity.medium }} med
+        </div>
+        <div class="click-hint"><span class="material-symbols-outlined">arrow_forward</span> Open Notifications</div>
+    </a>
+</section>
+
+<!-- ============ Plan vs Actual ============ -->
+<div class="section-head">
+    <h2>Plan vs Actual — {{ currMonth.month }}</h2>
+    <span class="meta">Four-stage funnel</span>
+</div>
+<section class="ring-row">
+    {% for stage in site.data.demo.corsair.targets.funnelStages %}
+        {% assign actual = currMonth[stage.id].actual %}
+        {% assign plan = currMonth[stage.id].plan %}
+        {% assign pct = actual | times: 100 | divided_by: plan %}
+        {% assign capped = pct %}
+        {% if capped > 100 %}{% assign capped = 100 %}{% endif %}
+        {% assign cls = "warn" %}
+        {% if pct >= 100 %}{% assign cls = "good" %}{% endif %}
+        {% if pct < 80 %}{% assign cls = "bad" %}{% endif %}
+        {% assign actualM = actual | divided_by: 100000 %}
+        {% assign actualW = actualM | divided_by: 10 %}
+        {% assign actualF = actualM | modulo: 10 %}
+        {% assign planM = plan | divided_by: 100000 %}
+        {% assign planW = planM | divided_by: 10 %}
+        {% assign planF = planM | modulo: 10 %}
+        <div class="ring-item">
+            <div class="ring {{ cls }}" style="--pct: {{ capped }};">
+                <span class="ring-pct">{{ pct }}%</span>
+            </div>
+            <div class="ring-label">{{ stage.label }}</div>
+            <div class="ring-sub">{{ actualW }}.{{ actualF }}M / {{ planW }}.{{ planF }}M</div>
+        </div>
+    {% endfor %}
+</section>
+{% if currMonth.note %}
+<div class="jeeves-inline">
+    <span class="label">Jeeves</span>
+    <span class="body">{{ currMonth.note }}</span>
+</div>
+{% endif %}
+
+<!-- ============ Business Units ============ -->
+<div class="section-head">
+    <h2>Business Units — 2026 YTD</h2>
+    <span class="meta">Plan vs Actual</span>
+</div>
+{% assign unitsYr = site.data.demo.corsair.targets.unitAnnual | last %}
+<section class="unit-grid">
+    {% for u in company.units %}
+        {% assign uData = unitsYr.units[u.id] %}
+        {% assign pct = uData.revenueActualYTD | times: 100 | divided_by: uData.revenuePlan %}
+        {% assign cls = "good" %}
+        {% if pct < 65 %}{% assign cls = "warn" %}{% endif %}
+        {% if pct < 35 %}{% assign cls = "bad" %}{% endif %}
+        {% assign capped = pct %}
+        {% if capped > 100 %}{% assign capped = 100 %}{% endif %}
+        {% assign actM = uData.revenueActualYTD | divided_by: 100000 %}
+        {% assign actW = actM | divided_by: 10 %}
+        {% assign actF = actM | modulo: 10 %}
+        {% assign plM = uData.revenuePlan | divided_by: 100000 %}
+        {% assign plW = plM | divided_by: 10 %}
+        {% assign plF = plM | modulo: 10 %}
+        <div class="unit-card clickable" style="--unit-color: {{ u.color }}" data-modal="modal-unit-{{ u.id }}">
+            <h4><span class="material-symbols-outlined" style="vertical-align: middle; font-size: 1em">{{ u.icon }}</span> {{ u.name }}</h4>
+            <div class="unit-actual">{{ actW }}.{{ actF }}M <span class="muted" style="font-size: 0.65em">AED</span></div>
+            <div class="unit-vs-plan">vs plan {{ plW }}.{{ plF }}M · {{ pct }}%</div>
+            <div class="progress"><div class="progress-fill {{ cls }}" style="width: {{ capped }}%"></div></div>
+            <div class="click-hint"><span class="material-symbols-outlined">read_more</span> Drill in</div>
+        </div>
+    {% endfor %}
+</section>
+
+<!-- ============ Active alerts (top) ============ -->
+<div class="section-head">
+    <h2>Active Alerts</h2>
+    <span class="meta"><a href="/demo/corsair/notifications/">See all {{ site.data.demo.corsair.alerts.summary.total }} →</a></span>
+</div>
+<section>
+    {% assign criticals = site.data.demo.corsair.alerts.active | where: "severity", "critical" %}
+    {% assign highs = site.data.demo.corsair.alerts.active | where: "severity", "high" %}
+    {% for a in criticals %}
+        <div class="alert-card sev-critical">
+            <span class="material-symbols-outlined alert-icon">error</span>
+            <div>
+                <h4>{{ a.title }} <span class="pill bad">Critical</span></h4>
+                <p>{{ a.body }}</p>
+                {% if a.suggestedAction %}<p class="alert-meta">Suggested: {{ a.suggestedAction }}</p>{% endif %}
+            </div>
+            <span class="muted" style="font-size: 0.8em">{{ a.triggered }}</span>
+        </div>
+    {% endfor %}
+    {% for a in highs limit: 2 %}
+        <div class="alert-card sev-high">
+            <span class="material-symbols-outlined alert-icon">warning</span>
+            <div>
+                <h4>{{ a.title }} <span class="pill bad">High</span></h4>
+                <p>{{ a.body }}</p>
+            </div>
+            <span class="muted" style="font-size: 0.8em">{{ a.triggered }}</span>
+        </div>
+    {% endfor %}
+</section>
+
+<!-- ============ Money snapshot ============ -->
+<div class="section-head">
+    <h2>Money</h2>
+    <span class="meta">Today's balance sheet vibe</span>
+</div>
+<section class="money-grid">
+    <div class="money-tile">
+        <h4>Cash position</h4>
+        <div class="money-big">{{ cashW }}.{{ cashF }}M <span class="muted" style="font-size: 0.5em">AED</span></div>
+        <div class="money-line"><span class="label">ENBD operating</span><span class="tabular">{{ cashSnap.bankAedOperating | divided_by: 1000 }}K</span></div>
+        <div class="money-line"><span class="label">ENBD escrow (restricted)</span><span class="tabular muted">{{ cashSnap.bankAedEscrow | divided_by: 1000 }}K</span></div>
+        <div class="money-line"><span class="label">HSBC USD (AED equiv.)</span><span class="tabular">{{ cashSnap.bankUsdAedEquivalent | divided_by: 1000 }}K</span></div>
+        <div class="money-line"><span class="label">Mashreq WPS payroll</span><span class="tabular">{{ cashSnap.bankPayroll | divided_by: 1000 }}K</span></div>
+    </div>
+    <div class="money-tile">
+        <h4>Pending Income (AR)</h4>
+        <div class="money-big">{{ aging.receivable.totalAR | divided_by: 1000 }}K</div>
+        <div class="money-line"><span class="label">Current</span><span class="tabular">{{ aging.receivable.current | divided_by: 1000 }}K</span></div>
+        <div class="money-line"><span class="label">1–30d</span><span class="tabular">{{ aging.receivable.days1to30 | divided_by: 1000 }}K</span></div>
+        <div class="money-line"><span class="label">31–60d</span><span class="tabular red">{{ aging.receivable.days31to60 | divided_by: 1000 }}K</span></div>
+        <div class="money-line"><span class="label">90d+</span><span class="tabular red">{{ aging.receivable.days90plus }}</span></div>
+    </div>
+    <div class="money-tile">
+        <h4>Pending Payments (AP)</h4>
+        <div class="money-big">{{ aging.payable.totalAP | divided_by: 1000 }}K</div>
+        <div class="money-line"><span class="label">Current</span><span class="tabular">{{ aging.payable.current | divided_by: 1000 }}K</span></div>
+        <div class="money-line"><span class="label">1–30d</span><span class="tabular">{{ aging.payable.days1to30 | divided_by: 1000 }}K</span></div>
+        <div class="money-line"><span class="label">DSO trailing 90d</span><span class="tabular">51 days</span></div>
+        <div class="money-line"><span class="label">DSO target</span><span class="tabular muted">45 days</span></div>
+    </div>
+</section>
+
+<!-- ============ In Progress (active projects) ============ -->
+<div class="section-head">
+    <h2>In Progress</h2>
+    <span class="meta">{{ site.data.demo.corsair.projects.kpis.activeProjects }} active</span>
+</div>
+<section class="row-list">
+    {% assign actives = site.data.demo.corsair.projects.projects | where: "status", "active" %}
+    {% for p in actives %}
+        {% assign client = site.data.demo.corsair.clients.clients | where: "id", p.client | first %}
+        <div class="project-row">
+            <div class="health-bar {{ p.health }}"></div>
+            <div>
+                <div class="row-title">{{ p.name }}</div>
+                <div class="row-sub">{{ p.code }} · {{ client.name | default: "Internal IP" }}</div>
+            </div>
+            <div>
+                <div class="muted" style="font-size: 0.75em">EVENT</div>
+                <div>{{ p.eventDate }}</div>
+            </div>
+            <div>
+                <div class="muted" style="font-size: 0.75em">BUDGET</div>
+                <div class="tabular">{{ p.budget | divided_by: 1000 }}K</div>
+            </div>
+            <div>
+                <div class="muted" style="font-size: 0.75em">SPENT</div>
+                <div class="tabular">{{ p.actualCost | divided_by: 1000 }}K</div>
+            </div>
+            <div>
+                {% if p.health == "red" %}<span class="pill bad">At risk</span>
+                {% elsif p.health == "yellow" %}<span class="pill warn">Watch</span>
+                {% else %}<span class="pill good">On track</span>{% endif %}
+            </div>
+        </div>
+    {% endfor %}
+</section>
+
+<!-- ============ Recent invoices ============ -->
+<div class="section-head">
+    <h2>Recent Invoices</h2>
+    <span class="meta">Outgoing AR · last 30 days</span>
+</div>
+<section class="row-list">
+    {% assign recents = site.data.demo.corsair.invoices.receivable | sort: "issued" | reverse %}
+    {% for inv in recents limit: 6 %}
+        {% assign client = site.data.demo.corsair.clients.clients | where: "id", inv.client | first %}
+        {% assign cls = "" %}
+        {% if inv.status == "overdue" %}{% assign cls = "row-bad" %}{% endif %}
+        {% if inv.status == "disputed" %}{% assign cls = "row-bad" %}{% endif %}
+        {% if inv.status == "partial" %}{% assign cls = "row-warn" %}{% endif %}
+        <div class="list-row {{ cls }}">
+            <div>
+                <div class="row-title">Invoice {{ inv.number }}</div>
+                <div class="row-sub">{{ inv.description | truncate: 70 }}</div>
+            </div>
+            <div>
+                <div class="muted" style="font-size: 0.75em">CUSTOMER</div>
+                <div>{{ client.name | default: inv.description | truncate: 30 }}</div>
+            </div>
+            <div>
+                <div class="muted" style="font-size: 0.75em">DUE</div>
+                <div>{{ inv.due }}</div>
+            </div>
+            <div class="row-amount">
+                {% if inv.currency == "USD" %}USD {% endif %}{{ inv.total | divided_by: 1000 }}K
+                {% if inv.status == "overdue" %}<div><span class="pill bad">Overdue {{ inv.overdueDays }}d</span></div>
+                {% elsif inv.status == "disputed" %}<div><span class="pill bad">Disputed</span></div>
+                {% elsif inv.status == "partial" %}<div><span class="pill warn">Partial</span></div>
+                {% elsif inv.status == "paid" %}<div><span class="pill good">Paid</span></div>
+                {% else %}<div><span class="pill info">Sent</span></div>{% endif %}
+            </div>
+        </div>
+    {% endfor %}
+</section>
+
+<!-- ============ 27-month revenue ============ -->
+<div class="section-head">
+    <h2>Revenue Trail · 27 months</h2>
+    <span class="meta">Jan 2024 → Mar 2026</span>
+</div>
+<section>
+    {% assign maxRev = 0 %}
+    {% for m in site.data.demo.corsair.cashflow.monthly %}
+        {% if m.revenue > maxRev %}{% assign maxRev = m.revenue %}{% endif %}
+    {% endfor %}
+    <div class="bar-chart">
+        {% for m in site.data.demo.corsair.cashflow.monthly %}
+            {% assign h = m.revenue | times: 100 | divided_by: maxRev %}
+            {% assign bcls = "" %}
+            {% if m.ebitda < 0 %}{% assign bcls = "bar-bad" %}{% endif %}
+            {% if m.ebitda > 500000 %}{% assign bcls = "bar-good" %}{% endif %}
+            <div class="bar {{ bcls }}" style="height: {{ h }}%" title="{{ m.month }}: rev {{ m.revenue | divided_by: 1000 }}K · EBITDA {{ m.ebitda | divided_by: 1000 }}K"></div>
+        {% endfor %}
+    </div>
+    <div class="bar-axis">
+        {% for m in site.data.demo.corsair.cashflow.monthly %}
+            {% if m.month contains "-01" or m.month contains "-07" %}<div>{{ m.month | replace: "-", "/" | slice: 2, 5 }}</div>{% else %}<div></div>{% endif %}
+        {% endfor %}
+    </div>
+    <p class="muted" style="font-size: 0.8em; margin-top: var(--space-sm);">
+        Bar height = monthly revenue · <span style="display: inline-block; width: 8px; height: 8px; background: var(--tct-good); border-radius: 2px;"></span> good EBITDA &nbsp;
+        <span style="display: inline-block; width: 8px; height: 8px; background: var(--tct-info); border-radius: 2px;"></span> normal &nbsp;
+        <span style="display: inline-block; width: 8px; height: 8px; background: var(--tct-bad); border-radius: 2px;"></span> negative EBITDA (Sep '24 = Ancient Moon cancellation)
+    </p>
+</section>
+
+<!-- ============ Top actions from Jeeves ============ -->
+<div class="section-head" id="jeeves-actions">
+    <h2>Top Actions · {{ jeeves.profile.name }} GPT</h2>
+    <span class="meta">Decisions queued for human approval</span>
+</div>
+<section>
+    {% for action in jeeves.topActions %}
+        <div class="alert-card sev-{{ action.severity | replace: 'critical', 'critical' | replace: 'warning', 'medium' | replace: 'info', 'low' }}">
+            <span class="material-symbols-outlined alert-icon">arrow_forward</span>
+            <div>
+                <h4>{{ action.title }}
+                    {% if action.severity == "critical" %}<span class="pill bad">Critical</span>
+                    {% elsif action.severity == "warning" %}<span class="pill warn">Warning</span>
+                    {% else %}<span class="pill info">Info</span>{% endif %}
+                </h4>
+                <p><strong>Impact:</strong> {{ action.impact }} · <strong>Owner:</strong> {{ action.owner }}</p>
+                <p class="alert-meta">Horizon: {{ action.horizon }}</p>
+            </div>
+            <span class="muted" style="font-size: 0.8em">#{{ action.id }}</span>
+        </div>
+    {% endfor %}
+</section>
+
+<div class="air-md"></div>
+
+<div class="tip">
+    <span class="material-symbols-outlined" style="color: var(--tct-jeeves)">smart_toy</span>
+    Insights powered by <strong>Jeeves GPT</strong> · trained on your last 27 months
+</div>

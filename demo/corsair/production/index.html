@@ -5,4 +5,253 @@ offset: demo
 permalink: /demo/corsair/production/
 ---
 
-<h1>Production</h1>
+{% assign company = site.data.demo.corsair.company %}
+{% assign jeeves = site.data.demo.corsair.jeeves %}
+{% assign projects = site.data.demo.corsair.projects.projects %}
+{% assign kpis = site.data.demo.corsair.projects.kpis %}
+
+<header class="demo-hero">
+    <div>
+        <h1>Production</h1>
+        <p class="muted">Project portfolio · Jan 2024 — Mar 2026</p>
+    </div>
+    <div class="as-of">{{ projects | size }} projects on file</div>
+</header>
+
+<!-- Jeeves nudge for production -->
+{% assign prodInsight = jeeves.insights | where: "scope", "production" | first %}
+<div class="jeeves-card">
+    <div class="jeeves-avatar">J</div>
+    <div class="jeeves-body">
+        <h3>{{ prodInsight.title }}</h3>
+        <p>{{ prodInsight.body }}</p>
+        <p class="signature">{{ jeeves.profile.signature }} · {{ prodInsight.severity }} · confidence {{ prodInsight.confidence }}</p>
+    </div>
+    <span class="pill {% if prodInsight.severity == 'critical' %}bad{% elsif prodInsight.severity == 'warning' %}warn{% else %}info{% endif %}">{{ prodInsight.severity }}</span>
+</div>
+
+<!-- KPI strip: project portfolio counts -->
+<section class="kpi-strip">
+    <div class="kpi-tile kpi-good">
+        <div class="kpi-label">Active</div>
+        <div class="kpi-value">{{ kpis.activeProjects }}</div>
+        <div class="kpi-foot">In production right now</div>
+    </div>
+    <div class="kpi-tile">
+        <div class="kpi-label">Delivered, unbilled</div>
+        <div class="kpi-value">{{ kpis.delivered_unbilled }}</div>
+        <div class="kpi-foot">Closing paperwork pending</div>
+    </div>
+    <div class="kpi-tile kpi-bad">
+        <div class="kpi-label">Disputed</div>
+        <div class="kpi-value">{{ kpis.disputed }}</div>
+        <div class="kpi-foot">Umbrella Inc. — Invoice #329</div>
+    </div>
+    <div class="kpi-tile kpi-warn">
+        <div class="kpi-label">Cancelled (lifetime)</div>
+        <div class="kpi-value">{{ kpis.cancelled }}</div>
+        <div class="kpi-foot">Ancient Moon 2024 — weather</div>
+    </div>
+</section>
+
+<!-- Active projects -->
+<div class="section-head">
+    <h2>Active Projects</h2>
+    <span class="meta">In production · sorted by health</span>
+</div>
+<section class="row-list">
+    {% assign actives = projects | where: "status", "active" %}
+    <div class="project-row" style="font-weight: bold; background: var(--tct-bg-soft); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--tct-mute);">
+        <div></div>
+        <div>Project</div>
+        <div>Event Date</div>
+        <div>Budget</div>
+        <div>Spent</div>
+        <div>Status</div>
+    </div>
+    {% for p in actives %}
+        {% assign client = site.data.demo.corsair.clients.clients | where: "id", p.client | first %}
+        {% assign burnPct = p.actualCost | times: 100 | divided_by: p.budget %}
+        <div class="project-row">
+            <div class="health-bar {{ p.health }}"></div>
+            <div>
+                <div class="row-title">{{ p.name }}</div>
+                <div class="row-sub">{{ p.code }} · {{ client.name | default: "Internal IP" }} · {{ p.venue | truncate: 50 }}</div>
+                {% if p.note %}<div class="row-sub" style="color: var(--tct-bad); margin-top: 4px;">⚠ {{ p.note | truncate: 110 }}</div>{% endif %}
+            </div>
+            <div>
+                <div>{{ p.eventDate }}</div>
+                <div class="row-sub">{{ p.unit | upcase }}</div>
+            </div>
+            <div>
+                <div class="tabular">{% if p.currency == "USD" %}USD {% endif %}{{ p.budget | divided_by: 1000 }}K</div>
+            </div>
+            <div>
+                <div class="tabular">{{ p.actualCost | divided_by: 1000 }}K</div>
+                <div class="row-sub">{{ burnPct }}% burned</div>
+            </div>
+            <div>
+                {% if p.health == "red" %}<span class="pill bad">At risk</span>
+                {% elsif p.health == "yellow" %}<span class="pill warn">Watch</span>
+                {% else %}<span class="pill good">On track</span>{% endif %}
+            </div>
+        </div>
+    {% endfor %}
+</section>
+
+<!-- Delivered, billing pending -->
+<div class="section-head">
+    <h2>Delivered · Pending Close</h2>
+    <span class="meta">Event done, paperwork open</span>
+</div>
+<section class="row-list">
+    {% assign delivered = projects | where: "status", "delivered" %}
+    {% for p in delivered %}
+        {% assign client = site.data.demo.corsair.clients.clients | where: "id", p.client | first %}
+        {% assign gp = p.actualRevenue | minus: p.actualCost %}
+        {% assign gpPct = gp | times: 100 | divided_by: p.actualRevenue %}
+        <div class="project-row">
+            <div class="health-bar {{ p.health }}"></div>
+            <div>
+                <div class="row-title">{{ p.name }}</div>
+                <div class="row-sub">{{ p.code }} · {{ client.name | default: "Internal IP" }}</div>
+            </div>
+            <div>
+                <div>{{ p.eventDate }}</div>
+                <div class="row-sub">{{ p.unit | upcase }}</div>
+            </div>
+            <div>
+                <div class="tabular">{{ p.actualRevenue | divided_by: 1000 }}K</div>
+                <div class="row-sub">revenue</div>
+            </div>
+            <div>
+                <div class="tabular green">+{{ gp | divided_by: 1000 }}K</div>
+                <div class="row-sub">{{ gpPct }}% GP</div>
+            </div>
+            <div><span class="pill info">Awaiting close</span></div>
+        </div>
+    {% endfor %}
+</section>
+
+<!-- Cross-reference: Umbrella case file -->
+<div class="tip" style="background: var(--tct-bg-soft); padding: var(--space-md); border-radius: var(--space-sm); text-align: left; display: flex; gap: var(--space-md); align-items: center; justify-content: space-between; flex-wrap: wrap;">
+    <div>
+        <strong>Umbrella Inc.</strong> — Phase 1 disputed, Phase 2 frozen, AED 22K/wk staff still loaded.
+        <span class="muted">Full cross-system case file with timeline.</span>
+    </div>
+    <button class="btn-corsair primary" data-modal="modal-umbrella">
+        <span class="material-symbols-outlined">folder_open</span>
+        Open Umbrella case file
+    </button>
+</div>
+
+<!-- Disputed / red -->
+<div class="section-head">
+    <h2>Disputed & Cancelled</h2>
+    <span class="meta">Long-tail items</span>
+</div>
+<section class="row-list">
+    {% assign disputed = projects | where: "status", "disputed" %}
+    {% assign cancelled = projects | where: "status", "cancelled" %}
+    {% for p in disputed %}
+        {% assign client = site.data.demo.corsair.clients.clients | where: "id", p.client | first %}
+        <div class="project-row">
+            <div class="health-bar red"></div>
+            <div>
+                <div class="row-title">{{ p.name }}</div>
+                <div class="row-sub">{{ p.code }} · {{ client.name }}</div>
+                <div class="row-sub" style="color: var(--tct-bad); margin-top: 4px;">⚠ {{ p.note | truncate: 140 }}</div>
+            </div>
+            <div>
+                <div>{{ p.eventDate }}</div>
+                <div class="row-sub">{{ p.unit | upcase }}</div>
+            </div>
+            <div>
+                <div class="tabular">{{ p.budget | divided_by: 1000 }}K</div>
+                <div class="row-sub">budget</div>
+            </div>
+            <div>
+                <div class="tabular red">{{ p.grossProfit | divided_by: 1000 }}K</div>
+                <div class="row-sub">GP</div>
+            </div>
+            <div><span class="pill bad">Disputed</span></div>
+        </div>
+    {% endfor %}
+    {% for p in cancelled %}
+        {% assign loss = p.grossProfit %}
+        <div class="project-row">
+            <div class="health-bar red"></div>
+            <div>
+                <div class="row-title">{{ p.name }}</div>
+                <div class="row-sub">{{ p.code }} · own IP · {{ p.cancellationReason | truncate: 90 }}</div>
+                <div class="row-sub" style="margin-top: 4px;">
+                    Insurance: claim {{ p.insuranceClaim.claimAmount | divided_by: 1000 }}K · paid {{ p.insuranceClaim.acknowledged | divided_by: 1000 }}K · <strong class="red">{{ p.insuranceClaim.status }}</strong>
+                </div>
+            </div>
+            <div>
+                <div>{{ p.eventDate }}</div>
+                <div class="row-sub">{{ p.unit | upcase }}</div>
+            </div>
+            <div>
+                <div class="tabular">{{ p.budget | divided_by: 1000 }}K</div>
+                <div class="row-sub">budget</div>
+            </div>
+            <div>
+                <div class="tabular red">{{ loss | divided_by: 1000 }}K</div>
+                <div class="row-sub">GP loss</div>
+            </div>
+            <div><span class="pill bad">Cancelled</span></div>
+        </div>
+    {% endfor %}
+</section>
+
+<!-- Closed projects, by unit & year -->
+<div class="section-head">
+    <h2>Closed Projects · 2024–2026</h2>
+    <span class="meta">Profitability by unit</span>
+</div>
+<section>
+    <table class="tct-table">
+        <thead>
+            <tr>
+                <th>Unit</th>
+                <th>Project</th>
+                <th>Client</th>
+                <th>Event date</th>
+                <th class="num">Revenue</th>
+                <th class="num">Cost</th>
+                <th class="num">GP</th>
+                <th class="num">GP %</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% assign closed = projects | where: "status", "closed" | sort: "eventDate" | reverse %}
+            {% for p in closed %}
+                {% assign client = site.data.demo.corsair.clients.clients | where: "id", p.client | first %}
+                {% assign gp = p.grossProfit %}
+                {% assign gpPct = gp | times: 100 | divided_by: p.actualRevenue %}
+                {% assign cls = "" %}
+                {% if gpPct >= 30 %}{% assign cls = "green" %}{% endif %}
+                {% if gpPct < 18 %}{% assign cls = "red" %}{% endif %}
+                <tr>
+                    <td><span class="pill muted">{{ p.unit }}</span></td>
+                    <td>
+                        <strong>{{ p.name | truncate: 40 }}</strong>
+                        <div class="row-sub">{{ p.code }}</div>
+                    </td>
+                    <td>{{ client.name | default: "Own IP" }}</td>
+                    <td>{{ p.eventDate }}</td>
+                    <td class="num">{{ p.actualRevenue | divided_by: 1000 }}K</td>
+                    <td class="num">{{ p.actualCost | divided_by: 1000 }}K</td>
+                    <td class="num"><strong class="{{ cls }}">{{ gp | divided_by: 1000 }}K</strong></td>
+                    <td class="num"><span class="{{ cls }}">{{ gpPct }}%</span></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+<div class="jeeves-inline">
+    <span class="label">Jeeves</span>
+    <span class="body">{{ jeeves.insights | where: "scope", "production" | last | map: "body" | first | default: "Festivals are your highest-margin unit. Installations chronically miss plan — see Insights for the full take." }}</span>
+</div>

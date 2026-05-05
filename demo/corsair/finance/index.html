@@ -5,4 +5,227 @@ offset: demo
 permalink: /demo/corsair/finance/
 ---
 
-<h1>Finance</h1>
+{% assign company = site.data.demo.corsair.company %}
+{% assign jeeves = site.data.demo.corsair.jeeves %}
+{% assign cashflow = site.data.demo.corsair.cashflow %}
+{% assign targets = site.data.demo.corsair.targets %}
+{% assign annual = targets.annual %}
+{% assign currMonth = targets.monthly | last %}
+{% assign currCf = cashflow.monthly | last %}
+
+<header class="demo-hero">
+    <div>
+        <h1>Finance</h1>
+        <p class="muted">P&L, plan vs actual, financial health · {{ company.fiscal.reportingPeriod.from }} → {{ company.fiscal.reportingPeriod.to }}</p>
+    </div>
+    <div class="as-of">VAT 5% · CIT 9% · AED reporting</div>
+</header>
+
+<!-- Jeeves finance insights -->
+{% assign finInsights = jeeves.insights | where: "scope", "finance" %}
+{% for ins in finInsights limit: 1 %}
+<div class="jeeves-card">
+    <div class="jeeves-avatar">J</div>
+    <div class="jeeves-body">
+        <h3>{{ ins.title }}</h3>
+        <p>{{ ins.body }}</p>
+        <p class="signature">{{ jeeves.profile.signature }}</p>
+    </div>
+    <span class="pill {% if ins.severity == 'critical' %}bad{% elsif ins.severity == 'warning' %}warn{% else %}info{% endif %}">{{ ins.severity }}</span>
+</div>
+{% endfor %}
+
+<!-- This month — feb-style summary block (matches screenshot 3 vibe) -->
+<div class="section-head">
+    <h2>{{ currCf.month }} — Snapshot</h2>
+    <span class="meta">Current reporting month</span>
+</div>
+<section class="kpi-strip">
+    <div class="kpi-tile kpi-good">
+        <div class="kpi-label">Total Income</div>
+        <div class="kpi-value">{{ currCf.revenue | divided_by: 1000 }}K</div>
+        <div class="kpi-foot">vs plan {{ currMonth.production.plan | divided_by: 1000 }}K</div>
+    </div>
+    <div class="kpi-tile kpi-bad">
+        <div class="kpi-label">Total Expenses</div>
+        <div class="kpi-value">{{ currCf.cogs | plus: currCf.opex | divided_by: 1000 }}K</div>
+        <div class="kpi-foot">{{ currCf.cogs | divided_by: 1000 }}K COGS · {{ currCf.opex | divided_by: 1000 }}K OpEx</div>
+    </div>
+    <div class="kpi-tile kpi-good">
+        <div class="kpi-label">EBITDA</div>
+        <div class="kpi-value">{{ currCf.ebitda | divided_by: 1000 }}K</div>
+        <div class="kpi-foot">{% assign m = currCf.ebitda | times: 100 | divided_by: currCf.revenue %}{{ m }}% margin</div>
+    </div>
+    <div class="kpi-tile">
+        <div class="kpi-label">Net Cashflow</div>
+        <div class="kpi-value">+{{ currCf.cashIn | minus: currCf.cashOut | divided_by: 1000 }}K</div>
+        <div class="kpi-foot">{{ currCf.cashIn | divided_by: 1000 }}K in · {{ currCf.cashOut | divided_by: 1000 }}K out</div>
+    </div>
+</section>
+
+<!-- Plan vs Actual rings — current month -->
+<div class="section-head">
+    <h2>Plan vs Actual — {{ currMonth.month }}</h2>
+    <span class="meta">Sales · Production · Deliveries · Payments</span>
+</div>
+<section class="ring-row">
+    {% for stage in targets.funnelStages %}
+        {% assign actual = currMonth[stage.id].actual %}
+        {% assign plan = currMonth[stage.id].plan %}
+        {% assign pct = actual | times: 100 | divided_by: plan %}
+        {% assign capped = pct %}{% if capped > 100 %}{% assign capped = 100 %}{% endif %}
+        {% assign cls = "warn" %}
+        {% if pct >= 100 %}{% assign cls = "good" %}{% endif %}
+        {% if pct < 80 %}{% assign cls = "bad" %}{% endif %}
+        <div class="ring-item">
+            <div class="ring {{ cls }}" style="--pct: {{ capped }};"><span class="ring-pct">{{ pct }}%</span></div>
+            <div class="ring-label">{{ stage.label }}</div>
+            <div class="ring-sub">{{ actual | divided_by: 1000 }}K / {{ plan | divided_by: 1000 }}K</div>
+        </div>
+    {% endfor %}
+</section>
+
+<!-- Annual headline -->
+<div class="section-head">
+    <h2>Annual Performance</h2>
+    <span class="meta">Plan vs Actual · 3-year view</span>
+</div>
+<section>
+    <table class="tct-table">
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th class="num">Revenue Plan</th>
+                <th class="num">Revenue Actual</th>
+                <th class="num">Δ</th>
+                <th class="num">GM Plan</th>
+                <th class="num">GM Actual</th>
+                <th class="num">EBITDA Plan</th>
+                <th class="num">EBITDA Actual</th>
+                <th>Story</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for y in annual %}
+                {% assign actual = y.revenueActual | default: y.revenueActualYTD %}
+                {% assign delta = actual | times: 100 | divided_by: y.revenuePlan %}
+                {% assign deltaPts = delta | minus: 100 %}
+                {% assign cls = "" %}
+                {% if delta >= 100 %}{% assign cls = "green" %}{% else %}{% assign cls = "red" %}{% endif %}
+                <tr>
+                    <td><strong>{{ y.year }}</strong>{% if y.revenueActualYTD %} <span class="pill muted">YTD</span>{% endif %}</td>
+                    <td class="num">{{ y.revenuePlan | divided_by: 1000000 }}M</td>
+                    <td class="num"><strong>{{ actual | divided_by: 1000000 }}M</strong></td>
+                    <td class="num"><span class="{{ cls }}">{{ deltaPts }}pp</span></td>
+                    <td class="num">{{ y.grossMarginPlanPct }}%</td>
+                    <td class="num">{{ y.grossMarginActualPct | default: y.grossMarginActualPctYTD }}%</td>
+                    <td class="num">{{ y.ebitdaPlan | divided_by: 1000 }}K</td>
+                    <td class="num">
+                        {% assign eb = y.ebitdaActual | default: y.ebitdaActualYTD %}
+                        {% if eb < 0 %}<span class="red">{{ eb | divided_by: 1000 }}K</span>{% else %}<span class="green">{{ eb | divided_by: 1000 }}K</span>{% endif %}
+                    </td>
+                    <td class="row-sub">{{ y.note }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+<!-- Monthly P&L -->
+<div class="section-head">
+    <h2>Monthly P&L · 27 months</h2>
+    <span class="meta">Accrual basis</span>
+</div>
+<section>
+    <table class="tct-table">
+        <thead>
+            <tr>
+                <th>Month</th>
+                <th class="num">Revenue</th>
+                <th class="num">COGS</th>
+                <th class="num">GP</th>
+                <th class="num">GP %</th>
+                <th class="num">OpEx</th>
+                <th class="num">EBITDA</th>
+                <th class="num">DSO</th>
+                <th>Note</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for m in cashflow.monthly %}
+                {% assign gpPct = m.gp | times: 100 | divided_by: m.revenue %}
+                {% assign cls = "" %}
+                {% if m.ebitda < 0 %}{% assign cls = "red" %}{% endif %}
+                {% if m.ebitda > 500000 %}{% assign cls = "green" %}{% endif %}
+                <tr>
+                    <td><strong>{{ m.month }}</strong></td>
+                    <td class="num">{{ m.revenue | divided_by: 1000 }}K</td>
+                    <td class="num">{{ m.cogs | divided_by: 1000 }}K</td>
+                    <td class="num">{{ m.gp | divided_by: 1000 }}K</td>
+                    <td class="num">{{ gpPct }}%</td>
+                    <td class="num">{{ m.opex | divided_by: 1000 }}K</td>
+                    <td class="num"><strong class="{{ cls }}">{{ m.ebitda | divided_by: 1000 }}K</strong></td>
+                    <td class="num">{{ m.dso }}</td>
+                    <td class="row-sub">{{ m.note | truncate: 50 }}</td>
+                </tr>
+            {% endfor %}
+            <tr style="background: var(--tct-bg-soft); font-weight: bold;">
+                <td>27-month total</td>
+                <td class="num">{{ cashflow.totals.revenue | divided_by: 1000 }}K</td>
+                <td class="num">{{ cashflow.totals.cogs | divided_by: 1000 }}K</td>
+                <td class="num">{{ cashflow.totals.gp | divided_by: 1000 }}K</td>
+                <td class="num">{% assign tgp = cashflow.totals.gp | times: 100 | divided_by: cashflow.totals.revenue %}{{ tgp }}%</td>
+                <td class="num">{{ cashflow.totals.opex | divided_by: 1000 }}K</td>
+                <td class="num">{{ cashflow.totals.ebitda | divided_by: 1000 }}K</td>
+                <td colspan="2"></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- Operational targets -->
+<div class="section-head">
+    <h2>Operational KPIs</h2>
+    <span class="meta">Non-financial health metrics</span>
+</div>
+<section class="kpi-strip">
+    {% assign ot = targets.operationalTargets %}
+    <div class="kpi-tile">
+        <div class="kpi-label">DSO (current)</div>
+        <div class="kpi-value">{{ currCf.dso }}</div>
+        <div class="kpi-foot">target {{ ot.dso.target }} · yellow {{ ot.dso.yellowAt }} · red {{ ot.dso.redAt }}</div>
+    </div>
+    <div class="kpi-tile">
+        <div class="kpi-label">Cash runway</div>
+        <div class="kpi-value">~98d</div>
+        <div class="kpi-foot">target {{ ot.cashRunwayDays.target }}d · unrestricted / monthly OpEx</div>
+    </div>
+    <div class="kpi-tile">
+        <div class="kpi-label">Gross margin</div>
+        <div class="kpi-value">31%</div>
+        <div class="kpi-foot">target {{ ot.grossMarginPct.target }}% · trailing 90d</div>
+    </div>
+    <div class="kpi-tile kpi-warn">
+        <div class="kpi-label">Project overrun rate</div>
+        <div class="kpi-value">11%</div>
+        <div class="kpi-foot">target {{ ot.projectOverrunRatePct.target }}% · Aurora dragging</div>
+    </div>
+</section>
+
+<!-- All Jeeves finance commentary -->
+<div class="section-head">
+    <h2>Jeeves · Finance Commentary</h2>
+    <span class="meta">Full set of insights for this scope</span>
+</div>
+<section>
+    {% for ins in finInsights %}
+    <div class="alert-card sev-{% if ins.severity == 'critical' %}critical{% elsif ins.severity == 'warning' %}medium{% else %}info{% endif %}">
+        <span class="material-symbols-outlined alert-icon">smart_toy</span>
+        <div>
+            <h4>{{ ins.title }} <span class="pill {% if ins.severity == 'critical' %}bad{% elsif ins.severity == 'warning' %}warn{% else %}info{% endif %}">{{ ins.severity }}</span></h4>
+            <p>{{ ins.body }}</p>
+            <p class="alert-meta">{{ ins.stance }} · confidence {{ ins.confidence }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</section>

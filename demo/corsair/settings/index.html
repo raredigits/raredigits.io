@@ -5,19 +5,204 @@ offset: demo
 permalink: /demo/corsair/settings/
 ---
 
-<h1>Settings</h1>
-<pre>
-<strong>Personnel Economics Dashboard</strong> displays workforce cost structure, productivity measurements, 
-and operational risk factors related to human capital allocation.<br>
-<strong>Data Integration:</strong> This dashboard aggregates data from ERP systems, accounting software, 
-HRIS/payroll platforms, or manual uploads.<br>
-Historical data enables filtering by date, department, KPI, and financial metrics.
-</pre>
+{% assign company = site.data.demo.corsair.company %}
+{% assign jeeves = site.data.demo.corsair.jeeves %}
+{% assign alerts = site.data.demo.corsair.alerts %}
+{% assign targets = site.data.demo.corsair.targets %}
 
+<header class="demo-hero">
+    <div>
+        <h1>Settings</h1>
+        <p class="muted">Alert rules · KPI thresholds · channels · integrations</p>
+    </div>
+    <div class="as-of">{{ alerts.rules | size }} rules configured</div>
+</header>
+
+<!-- Jeeves settings advice -->
+{% assign setInsight = jeeves.insights | where: "scope", "settings" | first %}
+<div class="jeeves-card">
+    <div class="jeeves-avatar">J</div>
+    <div class="jeeves-body">
+        <h3>{{ setInsight.title }}</h3>
+        <p>{{ setInsight.body }}</p>
+        <p class="signature">{{ jeeves.profile.signature }}</p>
+    </div>
+    <span class="pill info">{{ setInsight.severity }}</span>
+</div>
+
+<!-- Company profile -->
+<div class="section-head">
+    <h2>Company Profile</h2>
+    <span class="meta">Reporting basis</span>
+</div>
 <section>
-    <h2>Human Resources / Staff Settings</h2>
-    <p><a href="">HR key metrics and configuration</a></p>
-    <p><a href="">Departments KPI</a></p>
-    <p><a href="">Key employees metrics configuration</a></p>
-    <p><a href="">Triggers and Alerts</a></p>
+    <table class="tct-table">
+        <tbody>
+            <tr><td><strong>Legal name</strong></td><td>{{ company.profile.legalName }}</td></tr>
+            <tr><td><strong>Brand</strong></td><td>{{ company.profile.brandName }}</td></tr>
+            <tr><td><strong>HQ</strong></td><td>{{ company.profile.hq }}</td></tr>
+            <tr><td><strong>Satellite</strong></td><td>{{ company.profile.satellite }}</td></tr>
+            <tr><td><strong>TRN</strong></td><td class="tabular">{{ company.profile.trn }}</td></tr>
+            <tr><td><strong>Trade licence</strong></td><td>{{ company.profile.license }}</td></tr>
+            <tr><td><strong>IP arm</strong></td><td>{{ company.profile.ipArm }}</td></tr>
+            <tr><td><strong>Founded</strong></td><td>{{ company.profile.founded }}</td></tr>
+            <tr><td><strong>Reporting currency</strong></td><td>{{ company.fiscal.reportingCurrency }} (peg {{ company.fiscal.fxPeg }})</td></tr>
+            <tr><td><strong>VAT / CIT</strong></td><td>VAT {{ company.fiscal.vatRate | times: 100 }}% · CIT {{ company.fiscal.corporateTaxRate | times: 100 }}% (above AED {{ company.fiscal.corporateTaxFreeThreshold | divided_by: 1000 }}K)</td></tr>
+            <tr><td><strong>Period</strong></td><td>{{ company.fiscal.reportingPeriod.from }} → {{ company.fiscal.reportingPeriod.to }}</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- Alert rules -->
+<div class="section-head">
+    <h2>Alert Rules</h2>
+    <span class="meta">{{ alerts.rules | size }} configured · click to edit</span>
+</div>
+<section class="row-list" style="padding: var(--space-md);">
+    {% for r in alerts.rules %}
+        <div class="rule-row">
+            <div>
+                <span class="material-symbols-outlined" style="color: {% if r.enabled %}var(--tct-good){% else %}var(--tct-mute){% endif %}; font-size: 1.2em;">
+                    {% if r.enabled %}toggle_on{% else %}toggle_off{% endif %}
+                </span>
+            </div>
+            <div>
+                <div class="rule-name">{{ r.name }}</div>
+                <div class="rule-cond">{{ r.condition }}</div>
+                <div class="row-sub">
+                    Notify: {{ r.notify | join: ", " }} · via {{ r.channel }}
+                </div>
+            </div>
+            <div>
+                <span class="pill muted">{{ r.category }}</span>
+            </div>
+            <div>
+                <span class="pill {% if r.severity == 'critical' or r.severity == 'high' %}bad{% elsif r.severity == 'medium' %}warn{% else %}info{% endif %}">{{ r.severity }}</span>
+            </div>
+        </div>
+    {% endfor %}
+</section>
+
+<!-- KPI thresholds -->
+<div class="section-head">
+    <h2>KPI Thresholds</h2>
+    <span class="meta">Targets &amp; trip-points</span>
+</div>
+<section>
+    <table class="tct-table">
+        <thead>
+            <tr>
+                <th>KPI</th>
+                <th class="num">Target</th>
+                <th class="num">Yellow at</th>
+                <th class="num">Red at</th>
+                <th>Note</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for kpi in targets.operationalTargets %}
+                <tr>
+                    <td><strong>{{ kpi[0] }}</strong></td>
+                    <td class="num">{{ kpi[1].target }}</td>
+                    <td class="num">{{ kpi[1].yellowAt }}</td>
+                    <td class="num red">{{ kpi[1].redAt }}</td>
+                    <td class="row-sub">{{ kpi[1].note }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+<!-- Channels -->
+<div class="section-head">
+    <h2>Notification Channels</h2>
+    <span class="meta">Routing &amp; quiet hours</span>
+</div>
+<section class="kpi-strip">
+    <div class="kpi-tile">
+        <div class="kpi-label">Email</div>
+        <div class="kpi-value" style="font-size: 1rem;">{{ alerts.notificationChannels.email.digestFrequency }}</div>
+        <div class="kpi-foot">{% if alerts.notificationChannels.email.enabled %}<span class="pill good">Active</span>{% else %}<span class="pill muted">Off</span>{% endif %}</div>
+    </div>
+    <div class="kpi-tile">
+        <div class="kpi-label">Slack</div>
+        <div class="kpi-value" style="font-size: 1rem;">{{ alerts.notificationChannels.slack.workspace }}</div>
+        <div class="kpi-foot">{% if alerts.notificationChannels.slack.enabled %}<span class="pill good">Active</span>{% else %}<span class="pill muted">Off</span>{% endif %}</div>
+    </div>
+    <div class="kpi-tile">
+        <div class="kpi-label">SMS</div>
+        <div class="kpi-value" style="font-size: 1rem;">{{ alerts.notificationChannels.sms.severityThreshold }} only</div>
+        <div class="kpi-foot">{% if alerts.notificationChannels.sms.enabled %}<span class="pill good">Active</span>{% else %}<span class="pill muted">Off</span>{% endif %}</div>
+    </div>
+    <div class="kpi-tile">
+        <div class="kpi-label">Quiet hours</div>
+        <div class="kpi-value" style="font-size: 1rem;">{{ alerts.quietHours.start }}–{{ alerts.quietHours.end }}</div>
+        <div class="kpi-foot">{{ alerts.quietHours.timezone }} · except {{ alerts.quietHours.exceptions | join: ", " }}</div>
+    </div>
+</section>
+
+<!-- Integrations placeholder -->
+<div class="section-head">
+    <h2>Integrations</h2>
+    <span class="meta">Where data flows in from</span>
+</div>
+<section>
+    <table class="tct-table">
+        <thead>
+            <tr><th>System</th><th>Purpose</th><th>Status</th><th>Last sync</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>Zoho Books</strong></td><td>Accounting · GL · VAT</td><td><span class="pill good">Live</span></td><td>2026-03-28 06:14</td></tr>
+            <tr><td><strong>Bayzat</strong></td><td>HRIS · payroll · WPS</td><td><span class="pill good">Live</span></td><td>2026-03-28 06:00</td></tr>
+            <tr><td><strong>HubSpot</strong></td><td>CRM · sales pipeline · accounts</td><td><span class="pill good">Live</span></td><td>2026-03-28 06:14</td></tr>
+            <tr><td><strong>Asana</strong></td><td>Project &amp; production tracking</td><td><span class="pill good">Live</span></td><td>2026-03-28 06:14</td></tr>
+            <tr><td><strong>Ticketstream MENA</strong></td><td>Festival ticketing &amp; escrow</td><td><span class="pill good">Live</span></td><td>2026-03-28 06:14</td></tr>
+            <tr><td><strong>ENBD / HSBC / Mashreq</strong></td><td>Bank feeds (read-only)</td><td><span class="pill good">Live</span></td><td>2026-03-28 06:00</td></tr>
+            <tr><td><strong>{{ jeeves.profile.product }}</strong></td><td>AI insights &amp; nudges</td><td><span class="pill good">Live</span></td><td>continuous</td></tr>
+        </tbody>
+    </table>
+    <div class="tip">
+        <span class="material-symbols-outlined" style="color: var(--tct-mute)">hub</span>
+        Source-system credentials managed in your team's password vault, not here.
+    </div>
+</section>
+
+<!-- Architecture pre-block (kept from original demo aesthetic) -->
+<div class="section-head">
+    <h2>System Architecture</h2>
+    <span class="meta">How the data flows</span>
+</div>
+<section>
+    <pre>
+// Corsair HQ — pipeline overview
+
+Sources (read-only)
+├─ Zoho Books      → invoices, bills, GL, VAT
+├─ Bayzat          → headcount, salaries, attendance
+├─ HubSpot         → contracts, accounts, sales pipeline
+├─ Asana           → projects, milestones, status, owners
+├─ Ticketstream    → festival ticket sales, escrow movements
+└─ Bank feeds      → cash positions, transactions
+
+ETL (hourly)
+├─ Normalisation   → currency, VAT, period mapping
+├─ Reconciliation  → invoice ↔ project ↔ cash
+└─ Roll-up         → unit / month / year aggregates
+
+Insight engine — Jeeves GPT
+├─ Plan vs Actual deviation analysis
+├─ DSO / cashflow / runway forecasting
+├─ Project burn-rate & overrun detection
+└─ Counterfactual narratives ("what if Aurora signs CO?")
+
+Alert system
+├─ Rule evaluation (per yml above)
+├─ Severity escalation
+└─ Multi-channel delivery (email / Slack / SMS / dashboard)
+
+Output surfaces
+├─ Corsair Dashboard (this UI)
+├─ REST API for downstream consumers
+└─ Weekly Markdown digest to founders
+    </pre>
 </section>

@@ -1,0 +1,601 @@
+# Invoices ledger — both AR (issued by us) and AP (received from vendors).
+# Amounts in AED unless currency overrides. VAT 5% standard rate.
+# Status: draft | sent | partial | paid | overdue | disputed | written-off
+
+# === ACCOUNTS RECEIVABLE (issued by The Crisis Theater) ===
+receivable:
+
+  # ---------- 2024 ----------
+
+  - number: "TCT-2024-001"
+    project: "p-2024-002"
+    client: null
+    description: "Lantern Bay 2024 — Red Bull title sponsorship"
+    issued: "2024-01-22"
+    due: "2024-02-21"
+    amount: 850000
+    vat: 42500
+    total: 892500
+    paid: 892500
+    status: "paid"
+    paidDate: "2024-02-12"
+
+  - number: "TCT-2024-007"
+    project: "p-2024-001"
+    client: "etihad-wings"
+    description: "Wings Gala 2024 — Milestone 1 (25%)"
+    issued: "2024-02-01"
+    due: "2024-04-01"
+    amount: 462500
+    vat: 23125
+    total: 485625
+    paid: 485625
+    status: "paid"
+    paidDate: "2024-03-18"
+
+  - number: "TCT-2024-018"
+    project: "p-2024-001"
+    client: "etihad-wings"
+    description: "Wings Gala 2024 — Milestone 2 (50%)"
+    issued: "2024-03-25"
+    due: "2024-05-24"
+    amount: 925000
+    vat: 46250
+    total: 971250
+    paid: 971250
+    status: "paid"
+    paidDate: "2024-05-19"
+
+  - number: "TCT-2024-022"
+    project: "p-2024-003"
+    client: "private-k"
+    description: "Family K. Wedding — Final"
+    issued: "2024-05-02"
+    due: "2024-05-20"
+    amount: 456000
+    vat: 22800
+    total: 478800
+    paid: 478800
+    status: "paid"
+    paidDate: "2024-05-19"
+
+  - number: "TCT-2024-031"
+    project: "p-2024-007"
+    client: null
+    description: "Ancient Moon 2024 — Red Bull sponsorship (settled before cancellation)"
+    issued: "2024-06-04"
+    due: "2024-07-04"
+    amount: 600000
+    vat: 30000
+    total: 630000
+    paid: 630000
+    status: "paid"
+    paidDate: "2024-06-28"
+
+  - number: "TCT-2024-044"
+    project: "p-2024-006"
+    client: "emaar"
+    description: "EMAAR Beachfront — Permanent Light Walk Milestone 3"
+    issued: "2024-09-12"
+    due: "2024-11-11"
+    amount: 510000
+    vat: 25500
+    total: 535500
+    paid: 535500
+    status: "paid"
+    paidDate: "2024-11-08"
+
+  - number: "TCT-2024-051"
+    project: "p-2024-010"
+    client: "royal-g"
+    description: "Royal Reception — full settlement on contract"
+    issued: "2024-10-08"
+    due: "2024-10-08"
+    amount: 1900000
+    vat: 0
+    total: 1900000
+    paid: 1900000
+    status: "paid"
+    paidDate: "2024-10-09"
+    note: "VAT-exempt — diplomatic billing"
+
+  - number: "TCT-2024-058"
+    project: "p-2024-011"
+    client: null
+    description: "Solstice Souk 2024 — DTCM grant (final tranche)"
+    issued: "2024-12-20"
+    due: "2025-02-18"
+    amount: 480000
+    vat: 24000
+    total: 504000
+    paid: 504000
+    status: "paid"
+    paidDate: "2025-02-26"
+    note: "DTCM paid 8 days late — typical"
+
+  # ---------- 2025 ----------
+
+  - number: "TCT-2025-003"
+    project: "p-2025-001"
+    client: "dtcm"
+    description: "DTCM Welcome Year 2025 — Final invoice"
+    issued: "2025-01-14"
+    due: "2025-03-15"
+    amount: 720000
+    vat: 36000
+    total: 756000
+    paid: 756000
+    status: "paid"
+    paidDate: "2025-03-22"
+
+  - number: "TCT-2025-019"
+    project: "p-2025-002"
+    client: "sirius-telecom"
+    description: "Sirius 5G Launch — Scope extras"
+    issued: "2025-02-25"
+    due: "2025-04-26"
+    amount: 320000
+    vat: 16000
+    total: 336000
+    paid: 336000
+    status: "paid"
+    paidDate: "2025-04-24"
+
+  - number: "TCT-2025-027"
+    project: "p-2025-003"
+    client: null
+    description: "Lantern Bay 2025 — Patron Spirits sponsorship"
+    issued: "2025-02-08"
+    due: "2025-03-10"
+    amount: 720000
+    vat: 36000
+    total: 756000
+    paid: 756000
+    status: "paid"
+    paidDate: "2025-03-04"
+
+  - number: "TCT-2025-032"
+    project: "p-2025-003"
+    client: null
+    description: "Lantern Bay 2025 — Almas Bank sponsorship"
+    issued: "2025-02-10"
+    due: "2025-04-11"
+    amount: 480000
+    vat: 24000
+    total: 504000
+    paid: 504000
+    status: "paid"
+    paidDate: "2025-03-29"
+
+  - number: "TCT-2025-061"
+    project: "p-2025-004"
+    client: "private-a"
+    description: "Family A. Wedding Trilogy — Final"
+    issued: "2025-04-08"
+    due: "2025-04-29"
+    amount: 1010000
+    vat: 50500
+    total: 1060500
+    paid: 1060500
+    status: "paid"
+    paidDate: "2025-04-22"
+
+  - number: "TCT-2025-098"
+    project: "p-2025-007"
+    client: "chalhoub"
+    description: "Chalhoub House Opening — Final"
+    issued: "2025-07-15"
+    due: "2025-08-14"
+    amount: 380000
+    vat: 19000
+    total: 399000
+    paid: 399000
+    status: "paid"
+    paidDate: "2025-08-22"
+
+  - number: "TCT-2025-127"
+    project: "p-2025-009"
+    client: null
+    description: "Ancient Moon 2025 — Red Bull sponsorship"
+    issued: "2025-08-01"
+    due: "2025-08-31"
+    amount: 950000
+    vat: 47500
+    total: 997500
+    paid: 997500
+    status: "paid"
+    paidDate: "2025-08-26"
+
+  - number: "TCT-2025-156"
+    project: "p-2025-013"
+    client: "aldira"
+    description: "Solstice Souk 2025 — Aldira Group title sponsorship final"
+    issued: "2025-12-22"
+    due: "2026-02-20"
+    amount: 760000
+    vat: 40000
+    total: 800000
+    paid: 0
+    status: "overdue"
+    overdueDays: 36
+    note: "Aldira finance team unresponsive since 2026-02-15. CFO escalated to founder-md."
+
+  - number: "TCT-2025-161"
+    project: "p-2025-013"
+    client: null
+    description: "Solstice Souk 2025 — DTCM grant final"
+    issued: "2025-12-23"
+    due: "2026-02-21"
+    amount: 320000
+    vat: 16000
+    total: 336000
+    paid: 336000
+    status: "paid"
+    paidDate: "2026-03-04"
+
+  - number: "TCT-2025-164"
+    project: "p-2025-014"
+    client: "adnoc"
+    description: "ADNOC Innovation Summit 2025 — Final"
+    issued: "2025-12-01"
+    due: "2026-03-01"
+    amount: 510000
+    vat: 25500
+    total: 535500
+    paid: 535500
+    status: "paid"
+    paidDate: "2026-02-28"
+
+  - number: "TCT-2025-171"
+    project: "p-2025-012"
+    client: "majid-al-futtaim"
+    description: "MAF Holiday Soiree — Final"
+    issued: "2025-12-12"
+    due: "2026-01-26"
+    amount: 280000
+    vat: 14000
+    total: 294000
+    paid: 294000
+    status: "paid"
+    paidDate: "2026-01-30"
+
+  # ---------- 2026 ----------
+
+  - number: "TCT-2026-008"
+    project: "p-2026-002"
+    client: "royal-g"
+    description: "Royal Reception — full settlement on contract"
+    issued: "2026-01-04"
+    due: "2026-01-04"
+    amount: 1450000
+    vat: 0
+    total: 1450000
+    paid: 1450000
+    status: "paid"
+    paidDate: "2026-01-05"
+
+  - number: "TCT-2026-014"
+    project: "p-2026-001"
+    client: "adnoc"
+    description: "ADNOC Innovation Summit 2026 — Final invoice"
+    issued: "2026-02-01"
+    due: "2026-05-02"
+    amount: 1050000
+    vat: 52500
+    total: 1102500
+    paid: 0
+    status: "sent"
+    note: "Net 90 — ADNOC always pays on day 89/90 like clockwork"
+
+  - number: "TCT-2026-019"
+    project: "p-2026-003"
+    client: "lvmh-mena"
+    currency: "USD"
+    description: "LVMH MENA Excellence Awards — Final"
+    issued: "2026-02-22"
+    due: "2026-03-24"
+    amount: 95000
+    vat: 4750
+    total: 99750
+    paid: 99750
+    status: "paid"
+    paidDate: "2026-03-19"
+    note: "Settled in USD — booked AED 366K + AED 1.2K FX gain"
+
+  - number: "TCT-2026-027"
+    project: "p-2026-005"
+    client: "private-k"
+    description: "Family K. Daughter Engagement — Deposit (60%)"
+    issued: "2026-01-15"
+    due: "2026-01-30"
+    amount: 1440000
+    vat: 72000
+    total: 1512000
+    paid: 1512000
+    status: "paid"
+    paidDate: "2026-01-22"
+
+  - number: "TCT-2026-031"
+    project: "p-2026-006"
+    client: "meraas"
+    description: "Bluewaters AR Walk — Milestone 2 (50%)"
+    issued: "2026-02-10"
+    due: "2026-03-27"
+    amount: 690000
+    vat: 34500
+    total: 724500
+    paid: 0
+    status: "sent"
+    note: "Due tomorrow — Meraas typically pays on time"
+
+  - number: "TCT-2026-034"
+    project: "p-2026-007"
+    client: "ksa-vision"
+    currency: "USD"
+    description: "Aurora Gala 2026 — Milestone 1 (50% deposit)"
+    issued: "2026-01-08"
+    due: "2026-03-09"
+    amount: 250000
+    vat: 0
+    total: 250000
+    paid: 250000
+    status: "paid"
+    paidDate: "2026-03-11"
+    note: "KSA cross-border — AED equivalent booked at 3.6710 (FX loss AED 375). VAT zero-rated for export of services."
+
+  - number: "TCT-2026-038"
+    project: "p-2026-007"
+    client: "ksa-vision"
+    currency: "USD"
+    description: "Aurora Gala 2026 — Change Order #1 (LED dome scope expansion)"
+    issued: "2026-02-26"
+    due: "2026-04-27"
+    amount: 110000
+    vat: 0
+    total: 110000
+    paid: 0
+    status: "disputed"
+    note: "Client refuses to acknowledge change order — claims verbal scope only. AED 404K exposure. Legal review in progress."
+
+  - number: "TCT-2026-041"
+    project: "p-2026-008"
+    client: "emaar"
+    description: "EMAAR Riviera Phase 6 — Milestone 1 (30%)"
+    issued: "2026-02-22"
+    due: "2026-04-23"
+    amount: 354000
+    vat: 17700
+    total: 371700
+    paid: 0
+    status: "sent"
+
+  - number: "TCT-2026-044"
+    project: "p-2026-009"
+    client: "royal-q"
+    currency: "USD"
+    description: "Doha Heritage Reception — Milestone 1 (70%)"
+    issued: "2026-02-04"
+    due: "2026-02-18"
+    amount: 210000
+    vat: 0
+    total: 210000
+    paid: 210000
+    status: "paid"
+    paidDate: "2026-02-15"
+
+  - number: "TCT-2026-049"
+    project: "p-2026-004"
+    client: null
+    description: "Lantern Bay 2026 — Patron Spirits sponsorship"
+    issued: "2026-01-22"
+    due: "2026-02-21"
+    amount: 880000
+    vat: 44000
+    total: 924000
+    paid: 924000
+    status: "paid"
+    paidDate: "2026-02-19"
+
+  - number: "TCT-2026-053"
+    project: "p-2026-004"
+    client: null
+    description: "Lantern Bay 2026 — Almas Bank sponsorship"
+    issued: "2026-01-25"
+    due: "2026-03-26"
+    amount: 620000
+    vat: 31000
+    total: 651000
+    paid: 0
+    status: "sent"
+    note: "Due in 2 days — Almas Bank reliable"
+
+  # ---------- The infamous Invoice #329 ----------
+
+  - number: "TCT-2026-329"
+    project: "p-2024-012"
+    client: "umbrella"
+    description: "Umbrella Inc. Atrium — Special Services (spiritual energy alignment consultation, ritual cleansing of mezzanine, lunar synchronisation rebrief)"
+    issued: "2025-01-02"
+    due: "2025-03-01"
+    amount: 11467
+    vat: 573
+    total: 12040
+    paid: 6000
+    balanceReceivable: 6040
+    status: "partial"
+    overdueDays: 5
+    grossProfit: 5890
+    timing:
+      workStatus: "In Progress"
+      startDate: "2025-01-02"
+      expectedCompletion: "2025-02-07"
+      completionDate: null
+      deliveryDate: "2025-10-02"
+      deliveryStatus: "Waiting"
+      daysInProduction: 15
+    notes:
+      - "First time failed quality control inspection as items reportedly emitted crying noises."
+      - "Further delays occurred when Sheleesh was unavailable for week-long deep meditation retreat for the Ancient Moon Festival, and left a note stating he would return when his spiritual energy aligned with the project timeline."
+
+# === ACCOUNTS PAYABLE (received from vendors) ===
+payable:
+
+  - number: "PROT-2024-0091"
+    vendor: "vend-protec"
+    project: "p-2024-002"
+    description: "Stage rigging — Lantern Bay 2024"
+    received: "2024-03-25"
+    due: "2024-04-24"
+    amount: 380000
+    vat: 19000
+    total: 399000
+    paid: 399000
+    status: "paid"
+    paidDate: "2024-04-20"
+
+  - number: "ECL-2024-0140"
+    vendor: "vend-eclipse"
+    project: "p-2024-007"
+    description: "Lighting & video — Ancient Moon 2024 (cancelled, materials used)"
+    received: "2024-09-30"
+    due: "2024-10-30"
+    amount: 420000
+    vat: 21000
+    total: 441000
+    paid: 441000
+    status: "paid"
+    paidDate: "2024-10-29"
+
+  - number: "LLD-2024-CLM"
+    vendor: "vend-coverlloyds"
+    project: "p-2024-007"
+    description: "Ancient Moon 2024 weather cancellation — outstanding insurance balance receivable from carrier"
+    received: "2024-10-15"
+    due: "2024-12-14"
+    amount: 1310000
+    vat: 0
+    total: 1310000
+    paid: 0
+    status: "disputed"
+    note: "We claim AED 1.85M, carrier paid AED 540K. Dispute filed 2024-11-04. Legal counsel advises 50–60% recovery probability. Currently classified as contingent receivable for accounting."
+    direction: "incoming-counterclaim"
+
+  - number: "PROT-2025-0162"
+    vendor: "vend-protec"
+    project: "p-2025-003"
+    description: "Stage & rigging — Lantern Bay 2025"
+    received: "2025-03-19"
+    due: "2025-04-18"
+    amount: 520000
+    vat: 26000
+    total: 546000
+    paid: 546000
+    status: "paid"
+    paidDate: "2025-04-16"
+
+  - number: "NIM-2025-0088"
+    vendor: "vend-nimbus"
+    project: "p-2025-009"
+    description: "Talent — Ancient Moon 2025 headliners"
+    received: "2025-08-22"
+    due: "2025-09-21"
+    amount: 740000
+    vat: 37000
+    total: 777000
+    paid: 777000
+    status: "paid"
+    paidDate: "2025-09-18"
+
+  - number: "DRN-2026-0014"
+    vendor: "vend-drone-collective"
+    project: "p-2026-004"
+    description: "Drone show — Lantern Bay 2026 (60% upfront)"
+    received: "2026-01-30"
+    due: "2026-02-13"
+    amount: 480000
+    vat: 24000
+    total: 504000
+    paid: 504000
+    status: "paid"
+    paidDate: "2026-02-05"
+
+  - number: "DRN-2026-0020"
+    vendor: "vend-drone-collective"
+    project: "p-2026-004"
+    description: "Drone show — Lantern Bay 2026 (40% balance)"
+    received: "2026-03-17"
+    due: "2026-04-16"
+    amount: 320000
+    vat: 16000
+    total: 336000
+    paid: 0
+    status: "sent"
+
+  - number: "ARB-2026-0033"
+    vendor: "vend-arabian-fab"
+    project: "p-2026-007"
+    description: "LED dome substructure fabrication — Aurora Gala (scope expansion)"
+    received: "2026-03-04"
+    due: "2026-04-18"
+    amount: 290000
+    vat: 14500
+    total: 304500
+    paid: 0
+    status: "sent"
+    note: "Cost driver behind Aurora Gala overrun — CFO challenged this PO; supersedes verbal authorisation"
+
+  - number: "ECL-2026-0072"
+    vendor: "vend-eclipse"
+    project: "p-2026-007"
+    description: "LED panels — Aurora Gala expansion"
+    received: "2026-03-15"
+    due: "2026-04-14"
+    amount: 410000
+    vat: 20500
+    total: 430500
+    paid: 0
+    status: "sent"
+    note: "Aurora Gala — same change order chain"
+
+  - number: "PRM-2026-0019"
+    vendor: "vend-permitsplus"
+    project: "p-2026-004"
+    description: "DTCM, civil defence, alcohol licence — Lantern Bay 2026"
+    received: "2026-02-26"
+    due: "2026-03-05"
+    amount: 84000
+    vat: 4200
+    total: 88200
+    paid: 88200
+    status: "paid"
+    paidDate: "2026-03-02"
+
+  - number: "TIK-2026-0007"
+    vendor: "vend-ticketstream"
+    project: "p-2026-004"
+    description: "Ticketing platform fees — Lantern Bay 2026 (6.5% of gross)"
+    received: "2026-03-22"
+    due: "2026-03-27"
+    amount: 209300
+    vat: 10465
+    total: 219765
+    paid: 0
+    status: "sent"
+    note: "Auto-deducted from escrow on 2026-03-27 settlement run"
+
+aging:
+  asOf: "2026-03-28"
+  receivable:
+    current: 1810500
+    days1to30: 651000
+    days31to60: 800000
+    days61to90: 0
+    days90plus: 12040
+    totalAR: 3273540
+  payable:
+    current: 968265
+    days1to30: 219765
+    days31to60: 0
+    days61to90: 0
+    days90plus: 0
+    totalAP: 1188030

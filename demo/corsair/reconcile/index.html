@@ -1,0 +1,386 @@
+---
+layout: demo/corsair
+title: Corsair HQ Demo | Reconcile
+offset: demo
+permalink: /demo/corsair/reconcile/
+---
+
+{% assign company = site.data.demo.corsair.company %}
+{% assign jeeves = site.data.demo.corsair.jeeves %}
+
+<header class="demo-hero">
+    <div>
+        <h1>Reconcile</h1>
+        <p class="muted">What HubSpot, Asana, Zoho, Bayzat, the bank, and Ticketstream each say — and where they disagree</p>
+    </div>
+    <div class="as-of">As of {{ company.today }} · 6 sources · live</div>
+</header>
+
+<!-- Jeeves framing -->
+<div class="jeeves-card">
+    <div class="jeeves-avatar">J</div>
+    <div class="jeeves-body">
+        <h3>The reason we built Corsair</h3>
+        <p>Every department head presents reports showing comfortable profitability. Your accountant contemplates a career change. Both can be correct. Below is the same eight deals as each system sees them — and the gap between those views, in cash terms.</p>
+        <p class="signature">— Jeeves</p>
+    </div>
+    <span class="pill info">Cross-system</span>
+</div>
+
+<!-- Headline numbers -->
+<section class="kpi-strip">
+    <div class="kpi-tile kpi-bad">
+        <div class="kpi-label">Total leakage today</div>
+        <div class="kpi-value">2.96M</div>
+        <div class="kpi-foot">work delivered without invoice or cash · AED</div>
+    </div>
+    <div class="kpi-tile kpi-warn">
+        <div class="kpi-label">Cash awaiting collection</div>
+        <div class="kpi-value">3.27M</div>
+        <div class="kpi-foot">invoiced but unpaid · AED</div>
+    </div>
+    <div class="kpi-tile kpi-warn">
+        <div class="kpi-label">Unsigned change orders</div>
+        <div class="kpi-value">USD 110K</div>
+        <div class="kpi-foot">Aurora Gala · scope expanded mid-build</div>
+    </div>
+    <div class="kpi-tile">
+        <div class="kpi-label">Cash in escrow</div>
+        <div class="kpi-value">5.64M</div>
+        <div class="kpi-foot">festival vendor sweep · 2026-04-15</div>
+    </div>
+</section>
+
+<!-- Legend -->
+<div class="section-head">
+    <h2>Cross-system view · 8 active deals</h2>
+    <span class="meta">Each row · what every system sees</span>
+</div>
+
+<div class="reconcile-legend">
+    <span class="system-badge hubspot">HubSpot</span> contracts &amp; pipeline
+    <span class="system-badge asana">Asana</span> production progress
+    <span class="system-badge zoho">Zoho Books</span> billing &amp; AR
+    <span class="system-badge bayzat">Bayzat</span> staff cost loaded
+    <span class="system-badge bank">Bank</span> cash received
+    <span class="system-badge tickets">Ticketstream</span> festival escrow
+</div>
+
+<section style="overflow-x: auto;">
+<table class="reconcile-table">
+    <thead>
+        <tr>
+            <th>Deal</th>
+            <th>HubSpot</th>
+            <th>Asana</th>
+            <th>Zoho Books</th>
+            <th>Bayzat</th>
+            <th>Bank / Tickets</th>
+            <th style="min-width: 220px;">Reality (Corsair view)</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <!-- Aurora Gala — the big crisis -->
+        <tr>
+            <td>
+                <div class="deal-name">Aurora Gala 2026</div>
+                <div class="deal-meta">BR-2026-Aurora · Vision Realm KSA · Apr 11</div>
+                <span class="pill bad" style="margin-top: 4px;">Critical</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">USD 1.9M</span>
+                <span class="sys-detail">contract signed 2025-12-15<br>Net 60 · single LOI, no addenda</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">60% delivered</span>
+                <span class="sys-detail">build started 2025-12-22<br>116 days elapsed · 78% of plan</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">0 invoiced</span>
+                <span class="sys-detail">milestone trigger = on-site<br>no draft in queue</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">4 FTE × 14 wk</span>
+                <span class="sys-detail">AED 1.62M COGS loaded<br>(85% of budget at 60% timeline)</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">0 received</span>
+                <span class="sys-detail">milestone-based<br>nothing due until handover</span>
+            </td>
+            <td class="gap-cell">
+                <span class="gap-amount">−AED 990K forecast loss</span>
+                <span class="gap-reason">LED dome scope <em>doubled</em> mid-build at client request. No signed change order. Cost-to-date 85% / timeline 60%. Revenue ceiling capped by original contract until CO signed.</span>
+            </td>
+        </tr>
+
+        <!-- Aldira — the cash gap -->
+        <tr>
+            <td>
+                <div class="deal-name">Solstice Souk 2025 · Aldira sponsorship</div>
+                <div class="deal-meta">FE-2025-Solstice-Souk · final tranche</div>
+                <span class="pill bad" style="margin-top: 4px;">Overdue 47d</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">AED 1.6M</span>
+                <span class="sys-detail">3-tier sponsor pkg<br>signed 2025-08-30</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">Closed Q1 '26</span>
+                <span class="sys-detail">festival delivered Dec 22<br>final report sent 2026-01-30</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">1.6M / 0.8M paid</span>
+                <span class="sys-detail">invoice TCT-2025-156<br>balance AED 800K · 47d overdue</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">Project closed</span>
+                <span class="sys-detail">Mathilde + crew<br>off the cost centre</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">800K received</span>
+                <span class="sys-detail">tranche 1 + 2 cleared<br>tranche 3 ghosted since Feb 15</span>
+            </td>
+            <td class="gap-cell">
+                <span class="gap-amount">−AED 800K cash gap</span>
+                <span class="gap-reason">Work delivered. Books say profitable. Bank says still waiting. No contact from Aldira AP since 15 Feb. Demand letter recommended today.</span>
+            </td>
+        </tr>
+
+        <!-- Umbrella — ongoing dispute -->
+        <tr>
+            <td>
+                <div class="deal-name">Umbrella Atrium Phase 1</div>
+                <div class="deal-meta">IN-2024-Umbrella-Atrium · disputed</div>
+                <span class="pill bad" style="margin-top: 4px;">Disputed 12 wk</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">AED 480K</span>
+                <span class="sys-detail">signed 2024-10-22<br>Net 30 · no retention clause</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">78% stalled</span>
+                <span class="sys-detail">last activity 2026-02-04<br>QC ticket QC-211 unresolved</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">480K / 372K paid</span>
+                <span class="sys-detail">3 invoices for Phase 1<br>AED 108K balance disputed</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">~AED 22K / wk</span>
+                <span class="sys-detail">head-prod 60% allocated<br>against a frozen project</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">372K received</span>
+                <span class="sys-detail">last receipt 2026-02-12<br>"provisional" memo</span>
+            </td>
+            <td class="gap-cell">
+                <span class="gap-amount">−AED 108K + bleeding 22K/wk</span>
+                <span class="gap-reason">Phase 2 (AED 620K) frozen by CFO. Staff still loaded against it. <a href="#" data-modal="modal-umbrella" style="color: inherit; text-decoration: underline;">Open the case file →</a></span>
+            </td>
+        </tr>
+
+        <!-- Lantern Bay 2026 — escrow story -->
+        <tr>
+            <td>
+                <div class="deal-name">Lantern Bay Festival 2026</div>
+                <div class="deal-meta">FE-2026-Lantern-Bay · 3 sold-out nights</div>
+                <span class="pill good" style="margin-top: 4px;">Sold out</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-detail">— promoter-owned —<br>no client contract</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">Delivered Mar 15</span>
+                <span class="sys-detail">closing tasks open<br>vendor reconciliation due Apr 15</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">5.81M recognised</span>
+                <span class="sys-detail">tickets + sponsors + F&amp;B<br>booked accrual basis</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">Wrap phase</span>
+                <span class="sys-detail">Mathilde + freelance bench<br>cost AED 3.56M closed</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">5.64M in escrow</span>
+                <span class="sys-detail">Ticketstream → ENBD escrow<br>cannot be used for OpEx</span>
+            </td>
+            <td class="gap-cell gap-info">
+                <span class="gap-amount">+AED 5.64M arriving Apr 15</span>
+                <span class="gap-reason">Looks like cash on dashboard. Isn't, until vendor sweep on April 15. Do not double-count this in runway.</span>
+            </td>
+        </tr>
+
+        <!-- ADNOC — Net 90 -->
+        <tr>
+            <td>
+                <div class="deal-name">ADNOC Innovation Summit 2026</div>
+                <div class="deal-meta">BR-2026-ADNOC-Innovation · delivered</div>
+                <span class="pill info" style="margin-top: 4px;">Net 90</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">AED 1.75M</span>
+                <span class="sys-detail">signed 2025-10-08<br>standard ADNOC MSA · Net 90</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">Delivered Jan 29</span>
+                <span class="sys-detail">closing report submitted<br>client sign-off received</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">1.82M invoiced</span>
+                <span class="sys-detail">issued 2026-01-30<br>due 2026-04-29</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">Project closed</span>
+                <span class="sys-detail">producer + crew<br>off the cost centre Feb 28</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">0 received</span>
+                <span class="sys-detail">Net 90 — ADNOC pays<br>exactly on day 90</span>
+            </td>
+            <td class="gap-cell gap-ok">
+                <span class="gap-amount">+AED 1.82M arriving Apr 29</span>
+                <span class="gap-reason">Healthy. Calendared. ADNOC pays like clockwork — runway projection should bake this in.</span>
+            </td>
+        </tr>
+
+        <!-- EMAAR Riviera — early -->
+        <tr>
+            <td>
+                <div class="deal-name">EMAAR Riviera Phase 6</div>
+                <div class="deal-meta">BR-2026-EMAAR · handover May 8</div>
+                <span class="pill good" style="margin-top: 4px;">On track</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">AED 1.18M</span>
+                <span class="sys-detail">MSA-anchored<br>30/40/30 milestone billing</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">30% built</span>
+                <span class="sys-detail">started Feb 18<br>50 days elapsed · on plan</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">0 invoiced</span>
+                <span class="sys-detail">M1 trigger = creative sign-off<br>scheduled Apr 7</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">2 FTE × 6 wk</span>
+                <span class="sys-detail">AED 290K loaded<br>aligned with progress</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">0 received</span>
+                <span class="sys-detail">first tranche due<br>after creative sign-off</span>
+            </td>
+            <td class="gap-cell gap-ok">
+                <span class="gap-amount">No gap — sample of "healthy"</span>
+                <span class="gap-reason">Every system tells the same story. This is what 70% of your portfolio looks like.</span>
+            </td>
+        </tr>
+
+        <!-- Meraas — early but yellow -->
+        <tr>
+            <td>
+                <div class="deal-name">Meraas Bluewaters AR Walk</div>
+                <div class="deal-meta">IN-2026-Meraas · launch May 20</div>
+                <span class="pill warn" style="margin-top: 4px;">Watch</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">AED 1.38M</span>
+                <span class="sys-detail">signed 2026-01-08<br>40/30/30 milestone</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">50% behind plan</span>
+                <span class="sys-detail">AR vendor (Lagoa) stalling<br>integration milestone slipping</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">552K invoiced</span>
+                <span class="sys-detail">M1 cleared on signature<br>M2 due May 1</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">3 FTE × 9 wk</span>
+                <span class="sys-detail">AED 720K loaded<br>burn +12% vs plan</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">552K received</span>
+                <span class="sys-detail">M1 cleared on schedule</span>
+            </td>
+            <td class="gap-cell gap-warn">
+                <span class="gap-amount">+12% burn vs plan</span>
+                <span class="gap-reason">Vendor delay on AR layer. Decision by Apr 10: swap vendor or absorb 2-week slip and renegotiate M2 with Meraas now while goodwill holds.</span>
+            </td>
+        </tr>
+
+        <!-- Royal Q — healthy USD -->
+        <tr>
+            <td>
+                <div class="deal-name">Royal Office (Qatar) — Heritage Reception</div>
+                <div class="deal-meta">PR-2026-Royal-Q · Doha · Apr 18</div>
+                <span class="pill good" style="margin-top: 4px;">On track</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">USD 300K</span>
+                <span class="sys-detail">70/30 terms<br>signed 2026-01-22</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">70% delivered</span>
+                <span class="sys-detail">creative locked<br>build phase on plan</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">USD 210K invoiced</span>
+                <span class="sys-detail">cleared on contract<br>30% balance on event</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">2 FTE + senior</span>
+                <span class="sys-detail">AED 540K loaded<br>aligned with progress</span>
+            </td>
+            <td class="system-cell">
+                <span class="sys-num">USD 210K received</span>
+                <span class="sys-detail">to HSBC USD account<br>AED equiv. ~770K</span>
+            </td>
+            <td class="gap-cell gap-ok">
+                <span class="gap-amount">No gap — clean USD</span>
+                <span class="gap-reason">FX risk minimal (peg). 30% remainder due on event. Watch only for currency reporting noise.</span>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+</section>
+
+<!-- Pattern summary -->
+<div class="section-head">
+    <h2>Patterns · what the cross-system view exposes</h2>
+    <span class="meta">Three systemic gaps</span>
+</div>
+<section>
+    <div class="alert-card sev-critical">
+        <span class="material-symbols-outlined alert-icon">trending_down</span>
+        <div>
+            <h4>Pattern 1 · Work-without-invoice <span class="pill bad">AED 1.62M live</span></h4>
+            <p>Aurora Gala has 14 weeks of staff and vendor cost loaded with zero invoiced. Milestone-trigger billing without milestone enforcement. <strong>Fix:</strong> Asana milestone changes auto-trigger Zoho draft invoices.</p>
+            <p class="alert-meta">Visible only when HubSpot, Asana, Bayzat and Zoho are read together · Corsair handles this hourly</p>
+        </div>
+    </div>
+    <div class="alert-card sev-high">
+        <span class="material-symbols-outlined alert-icon">currency_exchange</span>
+        <div>
+            <h4>Pattern 2 · Cash-on-paper vs cash-in-bank <span class="pill bad">AED 6.44M misread</span></h4>
+            <p>AED 5.64M in festival escrow + AED 800K Aldira AR shows up as "cash" in standard reports but isn't spendable until April 15 / collected. Standard dashboards quietly inflate runway by ~7 weeks.</p>
+            <p class="alert-meta">Bank vs Ticketstream vs Zoho disagreement</p>
+        </div>
+    </div>
+    <div class="alert-card sev-medium">
+        <span class="material-symbols-outlined alert-icon">groups</span>
+        <div>
+            <h4>Pattern 3 · Staff loaded against frozen work <span class="pill warn">~22K/wk</span></h4>
+            <p>Bayzat shows head-of-prod 60% allocated to Umbrella while Asana shows the project stalled and Zoho shows the invoice disputed. Work isn't happening; cost is.</p>
+            <p class="alert-meta">Bayzat vs Asana vs Zoho disagreement</p>
+        </div>
+    </div>
+</section>
+
+<div class="tip">
+    <span class="material-symbols-outlined" style="color: var(--tct-jeeves)">hub</span>
+    Reconciliation runs hourly. Each pattern above triggers a rule in <a href="/demo/corsair/settings/">Settings</a> that you can tune.
+</div>

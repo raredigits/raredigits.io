@@ -5,4 +5,169 @@ offset: demo
 permalink: /demo/corsair/notifications/
 ---
 
-<h1>Alerts & Notifications</h1>
+{% assign jeeves = site.data.demo.corsair.jeeves %}
+{% assign alerts = site.data.demo.corsair.alerts %}
+{% assign company = site.data.demo.corsair.company %}
+
+<header class="demo-hero">
+    <div>
+        <h1>Notifications</h1>
+        <p class="muted">Active alerts &amp; triage queue · refreshed in real time</p>
+    </div>
+    <div class="as-of">{{ alerts.summary.total }} active · as of {{ company.today }}</div>
+</header>
+
+<!-- Jeeves triage tip -->
+{% assign notifInsight = jeeves.insights | where: "scope", "notifications" | first %}
+<div class="jeeves-card">
+    <div class="jeeves-avatar">J</div>
+    <div class="jeeves-body">
+        <h3>{{ notifInsight.title }}</h3>
+        <p>{{ notifInsight.body }}</p>
+        <p class="signature">{{ jeeves.profile.signature }}</p>
+    </div>
+    <span class="pill info">Triage</span>
+</div>
+
+<!-- Severity strip -->
+<section class="kpi-strip">
+    <div class="kpi-tile kpi-bad">
+        <div class="kpi-label">Critical</div>
+        <div class="kpi-value">{{ alerts.summary.bySeverity.critical }}</div>
+        <div class="kpi-foot">Action required today</div>
+    </div>
+    <div class="kpi-tile kpi-bad">
+        <div class="kpi-label">High</div>
+        <div class="kpi-value">{{ alerts.summary.bySeverity.high }}</div>
+        <div class="kpi-foot">Action this week</div>
+    </div>
+    <div class="kpi-tile kpi-warn">
+        <div class="kpi-label">Medium</div>
+        <div class="kpi-value">{{ alerts.summary.bySeverity.medium }}</div>
+        <div class="kpi-foot">Watch list</div>
+    </div>
+    <div class="kpi-tile">
+        <div class="kpi-label">Low / Info</div>
+        <div class="kpi-value">{{ alerts.summary.bySeverity.low }}</div>
+        <div class="kpi-foot">Monitor only</div>
+    </div>
+</section>
+
+<!-- By category bar -->
+<div class="section-head">
+    <h2>By Category</h2>
+    <span class="meta">Where the noise is</span>
+</div>
+<section>
+    <table class="tct-table">
+        <tbody>
+            {% for c in alerts.summary.byCategory %}
+                <tr>
+                    <td style="text-transform: capitalize; width: 200px;"><strong>{{ c[0] }}</strong></td>
+                    <td class="num" style="width: 80px;">{{ c[1] }}</td>
+                    <td>
+                        <div class="progress" style="width: {{ c[1] | times: 50 }}px; min-width: 40px;">
+                            <div class="progress-fill" style="width: 100%; background: var(--tct-info);"></div>
+                        </div>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+<!-- Cross-reference: Umbrella case file -->
+<div class="tip" style="background: var(--tct-bg-soft); padding: var(--space-md); border-radius: var(--space-sm); text-align: left; display: flex; gap: var(--space-md); align-items: center; justify-content: space-between; flex-wrap: wrap;">
+    <div>
+        <strong>The Umbrella Inc. dispute</strong> spans 3 alerts, an invoice, two projects, and a staff escalation.
+        <span class="muted">View it as a single case file with timeline + suggested actions.</span>
+    </div>
+    <button class="btn-corsair primary" data-modal="modal-umbrella">
+        <span class="material-symbols-outlined">folder_open</span>
+        Open Umbrella case file
+    </button>
+</div>
+
+<!-- Active alerts (sorted by severity) -->
+<div class="section-head">
+    <h2>Active Alerts</h2>
+    <span class="meta">Ordered by severity</span>
+</div>
+<section>
+    {% assign sevOrder = "critical,high,medium,low,info" | split: "," %}
+    {% for sev in sevOrder %}
+        {% assign matched = alerts.active | where: "severity", sev %}
+        {% for a in matched %}
+            <div class="alert-card sev-{{ sev }}">
+                <span class="material-symbols-outlined alert-icon">
+                    {% if sev == "critical" %}error
+                    {% elsif sev == "high" %}warning
+                    {% elsif sev == "medium" %}error_outline
+                    {% else %}info{% endif %}
+                </span>
+                <div>
+                    <h4>{{ a.title }}
+                        <span class="pill {% if sev == 'critical' or sev == 'high' %}bad{% elsif sev == 'medium' %}warn{% else %}info{% endif %}">{{ sev }}</span>
+                        {% if a.classification %}<span class="pill muted">{{ a.classification }}</span>{% endif %}
+                    </h4>
+                    <p>{{ a.body }}</p>
+                    {% if a.suggestedAction %}<p class="alert-meta"><strong>Suggested:</strong> {{ a.suggestedAction }}</p>{% endif %}
+                    <p class="alert-meta">
+                        Rule: <code>{{ a.rule }}</code> ·
+                        Triggered: {{ a.triggered }}{% if a.age_days %} · {{ a.age_days }} days old{% endif %} ·
+                        Owners: {{ a.owners | join: ", " }}
+                    </p>
+                </div>
+                <span class="muted" style="font-size: 0.75em; white-space: nowrap;">#{{ a.id }}</span>
+            </div>
+        {% endfor %}
+    {% endfor %}
+</section>
+
+<!-- Notification channels summary -->
+<div class="section-head">
+    <h2>Delivery Channels</h2>
+    <span class="meta">Where alerts go</span>
+</div>
+<section>
+    <table class="tct-table">
+        <thead>
+            <tr><th>Channel</th><th>Enabled</th><th>Routing / threshold</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="material-symbols-outlined" style="vertical-align:middle">mail</span> <strong>Email</strong></td>
+                <td><span class="pill good">On</span></td>
+                <td class="row-sub">{{ alerts.notificationChannels.email.digestFrequency }}</td>
+            </tr>
+            <tr>
+                <td><span class="material-symbols-outlined" style="vertical-align:middle">forum</span> <strong>Slack</strong></td>
+                <td><span class="pill good">On</span></td>
+                <td class="row-sub">
+                    Workspace: {{ alerts.notificationChannels.slack.workspace }} ·
+                    critical → {{ alerts.notificationChannels.slack.channels.critical }} ·
+                    high → {{ alerts.notificationChannels.slack.channels.high }}
+                </td>
+            </tr>
+            <tr>
+                <td><span class="material-symbols-outlined" style="vertical-align:middle">sms</span> <strong>SMS</strong></td>
+                <td><span class="pill good">On</span></td>
+                <td class="row-sub">Threshold: {{ alerts.notificationChannels.sms.severityThreshold }} · to: {{ alerts.notificationChannels.sms.recipients | join: ", " }}</td>
+            </tr>
+            <tr>
+                <td><span class="material-symbols-outlined" style="vertical-align:middle">dashboard</span> <strong>Dashboard</strong></td>
+                <td><span class="pill good">On</span></td>
+                <td class="row-sub">Badge from: {{ alerts.notificationChannels.dashboard.badgeOn | join: ", " }}</td>
+            </tr>
+            <tr>
+                <td><span class="material-symbols-outlined" style="vertical-align:middle">bedtime</span> <strong>Quiet hours</strong></td>
+                <td><span class="pill good">On</span></td>
+                <td class="row-sub">{{ alerts.quietHours.start }}–{{ alerts.quietHours.end }} {{ alerts.quietHours.timezone }} · exceptions: {{ alerts.quietHours.exceptions | join: ", " }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="tip">
+        <span class="material-symbols-outlined" style="color: var(--tct-mute)">tune</span>
+        Configure rules &amp; channels in <a href="/demo/corsair/settings/">Settings</a>
+    </div>
+</section>

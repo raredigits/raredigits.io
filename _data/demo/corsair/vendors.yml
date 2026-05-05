@@ -1,0 +1,175 @@
+vendors:
+  - id: "vend-protec"
+    name: "Protec Stage Engineering"
+    type: "Stage / Rigging"
+    paymentTerms: "Net 30"
+    rating: "preferred"
+    note: "Used on every festival — one-stop rigging"
+
+  - id: "vend-eclipse"
+    name: "Eclipse Lighting & Visuals"
+    type: "Lighting / Video"
+    paymentTerms: "Net 30"
+    rating: "preferred"
+
+  - id: "vend-soundpro"
+    name: "Soundpro ME"
+    type: "Audio"
+    paymentTerms: "Net 30"
+    rating: "preferred"
+
+  - id: "vend-blink"
+    name: "Blink AV"
+    type: "AV / Video Mapping"
+    paymentTerms: "Net 45"
+    rating: "approved"
+
+  - id: "vend-sevens"
+    name: "Sevens Catering"
+    type: "F&B / Catering"
+    paymentTerms: "50% upfront / 50% on event"
+    rating: "preferred"
+
+  - id: "vend-bystro"
+    name: "Bystro Hospitality"
+    type: "F&B / Catering"
+    paymentTerms: "Net 30"
+    rating: "approved"
+
+  - id: "vend-nimbus"
+    name: "Nimbus Talent Agency"
+    type: "Talent / Booking"
+    paymentTerms: "70% on contract / 30% post-show"
+    rating: "preferred"
+
+  - id: "vend-redcarpet"
+    name: "Red Carpet Logistics"
+    type: "Transport / Logistics"
+    paymentTerms: "Net 15"
+    rating: "approved"
+
+  - id: "vend-permitsplus"
+    name: "Permits Plus DXB"
+    type: "Permits / Compliance"
+    paymentTerms: "Net 7"
+    rating: "preferred"
+    note: "DTCM, RTA, civil defence, alcohol licence handler"
+
+  - id: "vend-coverlloyds"
+    name: "Lloyds Underwriting Cover ME"
+    type: "Insurance"
+    paymentTerms: "Net 30"
+    rating: "preferred"
+    note: "Currently in dispute over Ancient Moon 2024 weather claim"
+
+  - id: "vend-arabian-fab"
+    name: "Arabian Fabrication Works"
+    type: "Set / Fabrication"
+    paymentTerms: "Net 45"
+    rating: "approved"
+
+  - id: "vend-decor-house"
+    name: "The Décor House"
+    type: "Floral / Décor"
+    paymentTerms: "Net 30"
+    rating: "preferred"
+
+  - id: "vend-pyrolux"
+    name: "Pyrolux SFX"
+    type: "Pyrotechnics / SFX"
+    paymentTerms: "Net 30"
+    rating: "approved"
+
+  - id: "vend-drone-collective"
+    name: "Drone Collective"
+    type: "Drone shows"
+    paymentTerms: "60% upfront / 40% post-show"
+    rating: "preferred"
+
+  - id: "vend-securipro"
+    name: "Securipro Group"
+    type: "Security / Stewarding"
+    paymentTerms: "Net 30"
+    rating: "approved"
+
+  - id: "vend-ticketstream"
+    name: "Ticketstream MENA"
+    type: "Ticketing platform"
+    paymentTerms: "T+5 net of 6.5% fee"
+    rating: "preferred"
+
+freelancers:
+  - id: "fl-rashid"
+    name: "Rashid Al-Maktoum (no relation)"
+    role: "Lead Stage Manager"
+    dayRate: 4500
+    nationality: "Emirati"
+    favourite: true
+
+  - id: "fl-mira"
+    name: "Mira Hadid"
+    role: "Production Designer"
+    dayRate: 5200
+    nationality: "Lebanese"
+    favourite: true
+
+  - id: "fl-andrei"
+    name: "Andrei Volkov"
+    role: "Lighting Designer"
+    dayRate: 4800
+    nationality: "Russian"
+    favourite: true
+
+  - id: "fl-priya"
+    name: "Priya Menon"
+    role: "Choreographer"
+    dayRate: 3500
+    nationality: "Indian"
+
+  - id: "fl-jorge"
+    name: "Jorge Almeida"
+    role: "Audio Engineer"
+    dayRate: 3800
+    nationality: "Portuguese"
+
+  - id: "fl-lina"
+    name: "Lina Habibi"
+    role: "Stylist"
+    dayRate: 3200
+    nationality: "Iranian-Canadian"
+
+  - id: "fl-tomasz"
+    name: "Tomasz Wójcik"
+    role: "Video Director"
+    dayRate: 5500
+    nationality: "Polish"
+
+  - id: "fl-ayesha"
+    name: "Ayesha Rahman"
+    role: "Stage Carpenter"
+    dayRate: 2400
+    nationality: "Bangladeshi"
+
+  - id: "fl-omar"
+    name: "Omar Saqqaf"
+    role: "MC / Compere"
+    dayRate: 6500
+    nationality: "Yemeni"
+
+  - id: "fl-emma"
+    name: "Emma O'Sullivan"
+    role: "Floor Manager"
+    dayRate: 3000
+    nationality: "Irish"
+
+  - id: "fl-vikram"
+    name: "Vikram Bhatia"
+    role: "Camera Operator"
+    dayRate: 2800
+    nationality: "Indian"
+
+  - id: "fl-hassan"
+    name: "Hassan Al-Marri"
+    role: "Arabic Calligrapher / Live Artist"
+    dayRate: 4200
+    nationality: "Emirati"

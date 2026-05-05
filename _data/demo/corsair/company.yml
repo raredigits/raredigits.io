@@ -1,0 +1,74 @@
+profile:
+  legalName: "The Crisis Theater FZ-LLC"
+  brandName: "The Crisis Theater"
+  tagline: "Designed Disasters. Delivered Joy."
+  founded: "2019-03-14"
+  hq: "Unit 1804, Index Tower, DIFC, Dubai"
+  satellite: "Studio B7, Alserkal Avenue, Al Quoz, Dubai"
+  trn: "100487632100003"
+  license: "DET-CN-1145820"
+  ipArm: "Crisis IP FZ-LLC (Meydan Free Zone)"
+
+fiscal:
+  yearEnd: "12-31"
+  reportingCurrency: "AED"
+  secondaryCurrency: "USD"
+  fxPeg: 3.6725
+  reportingPeriod:
+    from: "2024-01-01"
+    to: "2026-03-31"
+  vatRate: 0.05
+  corporateTaxRate: 0.09
+  corporateTaxFreeThreshold: 375000
+
+today: "2026-03-28"
+
+banks:
+  - id: "bank-aed-op"
+    label: "ENBD — AED Operating"
+    iban: "AE07 0260 0010 1145 8201 901"
+    currency: "AED"
+    type: "operating"
+  - id: "bank-aed-escrow"
+    label: "ENBD — Festival Escrow"
+    iban: "AE07 0260 0010 1145 8201 902"
+    currency: "AED"
+    type: "escrow"
+    note: "Ring-fenced for festival ticketing — cannot be used for OpEx"
+  - id: "bank-usd"
+    label: "HSBC — USD Correspondent"
+    iban: "AE19 0200 0009 9988 1144 011"
+    currency: "USD"
+    type: "operating"
+    note: "International sponsors and KSA / Qatar projects"
+  - id: "bank-payroll"
+    label: "Mashreq — WPS Payroll"
+    iban: "AE03 0330 0000 4421 7788 110"
+    currency: "AED"
+    type: "payroll"
+
+units:
+  - id: "brand"
+    name: "Brand Experiences"
+    icon: "campaign"
+    description: "Corporate activations, brand launches, gala dinners"
+    revenueShareTarget: 0.40
+    color: "#8B5CF6"
+  - id: "festivals"
+    name: "Festivals & Own IP"
+    icon: "festival"
+    description: "Promoter-side: Ancient Moon Festival, Lantern Bay, Solstice Souk"
+    revenueShareTarget: 0.25
+    color: "#F59E0B"
+  - id: "private"
+    name: "Private Commissions"
+    icon: "diamond"
+    description: "Royal, diplomatic, ultra-HNW weddings & milestones"
+    revenueShareTarget: 0.20
+    color: "#EC4899"
+  - id: "installations"
+    name: "Installations"
+    icon: "auto_awesome_mosaic"
+    description: "Permanent and seasonal experiential installations for developers"
+    revenueShareTarget: 0.15
+    color: "#10B981"

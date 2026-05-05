@@ -5,4 +5,287 @@ offset: demo
 permalink: /demo/corsair/money/
 ---
 
-<h1>Money</h1>
+{% assign company = site.data.demo.corsair.company %}
+{% assign jeeves = site.data.demo.corsair.jeeves %}
+{% assign cashflow = site.data.demo.corsair.cashflow %}
+{% assign aging = site.data.demo.corsair.invoices.aging %}
+{% assign cashSnap = cashflow.cashSnapshot %}
+
+<header class="demo-hero">
+    <div>
+        <h1>Money</h1>
+        <p class="muted">Cash, AR, AP, FX exposure — as of {{ company.today }}</p>
+    </div>
+    <div class="as-of">DSO {{ cashflow.monthly | last | map: "dso" | first }} days · target 45</div>
+</header>
+
+<!-- Jeeves money insights -->
+{% assign moneyInsights = jeeves.insights | where: "scope", "money" %}
+{% for ins in moneyInsights limit: 2 %}
+<div class="jeeves-card">
+    <div class="jeeves-avatar">J</div>
+    <div class="jeeves-body">
+        <h3>{{ ins.title }}</h3>
+        <p>{{ ins.body }}</p>
+        <p class="signature">{{ jeeves.profile.signature }}</p>
+    </div>
+    <span class="pill {% if ins.severity == 'critical' %}bad{% elsif ins.severity == 'warning' %}warn{% elsif ins.severity == 'nice' %}good{% else %}info{% endif %}">{{ ins.severity }}</span>
+</div>
+{% endfor %}
+
+<!-- Bank accounts -->
+<div class="section-head">
+    <h2>Cash Position</h2>
+    <span class="meta">4 accounts · AED equivalent</span>
+</div>
+<section>
+    <table class="tct-table">
+        <thead>
+            <tr>
+                <th>Account</th>
+                <th>Type</th>
+                <th>Currency</th>
+                <th class="num">Balance (AED)</th>
+                <th>Note</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>{{ company.banks[0].label }}</strong><div class="row-sub">{{ company.banks[0].iban }}</div></td>
+                <td><span class="pill good">Operating</span></td>
+                <td>AED</td>
+                <td class="num"><strong>{{ cashSnap.bankAedOperating | divided_by: 1000 }}K</strong></td>
+                <td class="row-sub">Free for OpEx & vendor payments</td>
+            </tr>
+            <tr>
+                <td><strong>{{ company.banks[1].label }}</strong><div class="row-sub">{{ company.banks[1].iban }}</div></td>
+                <td><span class="pill warn">Restricted</span></td>
+                <td>AED</td>
+                <td class="num"><strong>{{ cashSnap.bankAedEscrow | divided_by: 1000 }}K</strong></td>
+                <td class="row-sub red">{{ company.banks[1].note }}</td>
+            </tr>
+            <tr>
+                <td><strong>{{ company.banks[2].label }}</strong><div class="row-sub">{{ company.banks[2].iban }}</div></td>
+                <td><span class="pill info">FX</span></td>
+                <td>USD</td>
+                <td class="num"><strong>{{ cashSnap.bankUsdAedEquivalent | divided_by: 1000 }}K</strong></td>
+                <td class="row-sub">{{ company.banks[2].note }}</td>
+            </tr>
+            <tr>
+                <td><strong>{{ company.banks[3].label }}</strong><div class="row-sub">{{ company.banks[3].iban }}</div></td>
+                <td><span class="pill muted">Payroll</span></td>
+                <td>AED</td>
+                <td class="num"><strong>{{ cashSnap.bankPayroll | divided_by: 1000 }}K</strong></td>
+                <td class="row-sub">WPS — next run 2026-04-01</td>
+            </tr>
+            <tr style="background: var(--tct-bg-soft); font-weight: bold;">
+                <td>Total</td>
+                <td colspan="2"></td>
+                <td class="num">{{ cashSnap.total | divided_by: 1000 }}K</td>
+                <td class="row-sub">{{ cashSnap.unrestricted | divided_by: 1000 }}K unrestricted</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- AR aging -->
+<div class="section-head">
+    <h2>Accounts Receivable</h2>
+    <span class="meta">{{ aging.receivable.totalAR | divided_by: 1000 }}K outstanding</span>
+</div>
+<section class="money-grid" style="grid-template-columns: repeat(5, 1fr);">
+    <div class="money-tile">
+        <h4>Current</h4>
+        <div class="money-big">{{ aging.receivable.current | divided_by: 1000 }}K</div>
+        <div class="money-line"><span class="label">Not yet due</span></div>
+    </div>
+    <div class="money-tile">
+        <h4>1–30 days</h4>
+        <div class="money-big" style="color: var(--tct-info)">{{ aging.receivable.days1to30 | divided_by: 1000 }}K</div>
+        <div class="money-line"><span class="label">Watch list</span></div>
+    </div>
+    <div class="money-tile">
+        <h4>31–60 days</h4>
+        <div class="money-big" style="color: var(--tct-warn)">{{ aging.receivable.days31to60 | divided_by: 1000 }}K</div>
+        <div class="money-line"><span class="label red">Aldira AED 800K</span></div>
+    </div>
+    <div class="money-tile">
+        <h4>61–90 days</h4>
+        <div class="money-big">{{ aging.receivable.days61to90 | divided_by: 1000 }}K</div>
+        <div class="money-line"><span class="label">Clean</span></div>
+    </div>
+    <div class="money-tile">
+        <h4>90+ days</h4>
+        <div class="money-big" style="color: var(--tct-bad)">{{ aging.receivable.days90plus }}</div>
+        <div class="money-line"><span class="label">Umbrella #329</span></div>
+    </div>
+</section>
+
+<!-- Outstanding invoices (open) -->
+<div class="section-head">
+    <h2>Outstanding Invoices</h2>
+    <span class="meta">Awaiting payment</span>
+</div>
+<section>
+    <table class="tct-table">
+        <thead>
+            <tr>
+                <th>Invoice</th>
+                <th>Customer</th>
+                <th>Issued</th>
+                <th>Due</th>
+                <th class="num">Amount</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for inv in site.data.demo.corsair.invoices.receivable %}
+                {% if inv.status == "paid" %}{% continue %}{% endif %}
+                {% assign client = site.data.demo.corsair.clients.clients | where: "id", inv.client | first %}
+                <tr>
+                    <td>
+                        <strong>{{ inv.number }}</strong>
+                        <div class="row-sub">{{ inv.description | truncate: 60 }}</div>
+                    </td>
+                    <td>{{ client.name | default: "Sponsor / Direct" }}</td>
+                    <td>{{ inv.issued }}</td>
+                    <td>{{ inv.due }}</td>
+                    <td class="num">
+                        <strong>{% if inv.currency == "USD" %}USD {% endif %}{{ inv.total | divided_by: 1000 }}K</strong>
+                        {% if inv.balanceReceivable %}<div class="row-sub red">{{ inv.balanceReceivable }} balance</div>{% endif %}
+                    </td>
+                    <td>
+                        {% if inv.status == "overdue" %}<span class="pill bad">Overdue {{ inv.overdueDays }}d</span>
+                        {% elsif inv.status == "disputed" %}<span class="pill bad">Disputed</span>
+                        {% elsif inv.status == "partial" %}<span class="pill warn">Partial · {{ inv.overdueDays }}d</span>
+                        {% else %}<span class="pill info">Sent</span>{% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+<!-- Featured invoice — #329 detail card (replicates screenshot) -->
+{% assign inv329 = site.data.demo.corsair.invoices.receivable | where: "number", "TCT-2026-329" | first %}
+<div class="section-head">
+    <h2>Invoice {{ inv329.number }} · Detail</h2>
+    <span class="meta">Featured · long-running dispute</span>
+</div>
+<section class="money-tile" style="padding: var(--space-lg);">
+    <div style="display: grid; grid-template-columns: 1fr auto; gap: var(--space-md); margin-bottom: var(--space-md);">
+        <div>
+            <h4 style="margin-bottom: 4px;">Section: Special Services</h4>
+            <p class="muted" style="margin: 0;">Customer: <strong>Umbrella Inc.</strong> · Manager: <strong>Sheleesh Quereshi</strong></p>
+        </div>
+        <span class="pill bad" style="align-self: start;">Overdue</span>
+    </div>
+
+    <h4 style="text-align: center; margin: var(--space-md) 0;">Payment</h4>
+    <div class="money-grid" style="grid-template-columns: repeat(3, 1fr); margin: 0 0 var(--space-md);">
+        <div class="money-tile" style="text-align: center;">
+            <h4>Total Amount</h4>
+            <div class="money-big">{{ inv329.total }}</div>
+        </div>
+        <div class="money-tile" style="text-align: center;">
+            <h4>Balance Receivable</h4>
+            <div class="money-big" style="color: var(--tct-bad)">{{ inv329.balanceReceivable }}</div>
+        </div>
+        <div class="money-tile" style="text-align: center;">
+            <h4>Gross Profit</h4>
+            <div class="money-big" style="color: var(--tct-good)">{{ inv329.grossProfit }}</div>
+        </div>
+    </div>
+
+    <p>
+        <strong>Payment Status:</strong> <span class="pill warn">Partially Paid</span><br>
+        <strong>Expected Payment Date:</strong> {{ inv329.due }}
+    </p>
+
+    <h4 style="text-align: center; margin: var(--space-md) 0;">Timing</h4>
+    <table class="tct-table">
+        <tr><td><strong>Work Status</strong></td><td><span class="pill info">{{ inv329.timing.workStatus }}</span></td></tr>
+        <tr><td><strong>Start Date</strong></td><td>{{ inv329.timing.startDate }}</td></tr>
+        <tr><td><strong>Expected Completion</strong></td><td>{{ inv329.timing.expectedCompletion }}</td></tr>
+        <tr><td><strong>Completion Date</strong></td><td class="muted">—</td></tr>
+        <tr><td><strong>Delivery Date</strong></td><td>{{ inv329.timing.deliveryDate }}</td></tr>
+        <tr><td><strong>Delivery Status</strong></td><td><span class="pill warn">{{ inv329.timing.deliveryStatus }}</span></td></tr>
+        <tr><td><strong>Days in Production</strong></td><td>{{ inv329.timing.daysInProduction }}</td></tr>
+        <tr><td><strong>Days Overdue</strong></td><td class="red"><strong>{{ inv329.overdueDays }}</strong></td></tr>
+    </table>
+
+    <h4 style="text-align: center; margin: var(--space-md) 0;">Notes</h4>
+    <div style="background: #FFFBEB; border-left: 3px solid var(--tct-warn); padding: var(--space-sm) var(--space-md); border-radius: 4px;">
+        {% for note in inv329.notes %}<p style="margin: 0 0 var(--space-sm);">{{ note }}</p>{% endfor %}
+    </div>
+
+    <div style="text-align: right; margin-top: var(--space-md);">
+        <button class="btn-corsair primary" data-modal="modal-umbrella">
+            <span class="material-symbols-outlined">folder_open</span>
+            Open full case file
+        </button>
+    </div>
+</section>
+
+<!-- AP -->
+<div class="section-head">
+    <h2>Accounts Payable</h2>
+    <span class="meta">{{ aging.payable.totalAP | divided_by: 1000 }}K open · vendors</span>
+</div>
+<section>
+    <table class="tct-table">
+        <thead>
+            <tr>
+                <th>Bill</th>
+                <th>Vendor</th>
+                <th>Project</th>
+                <th>Due</th>
+                <th class="num">Amount</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ap in site.data.demo.corsair.invoices.payable %}
+                {% if ap.status == "paid" %}{% continue %}{% endif %}
+                {% assign vendor = site.data.demo.corsair.vendors.vendors | where: "id", ap.vendor | first %}
+                {% assign proj = site.data.demo.corsair.projects.projects | where: "id", ap.project | first %}
+                <tr>
+                    <td><strong>{{ ap.number }}</strong><div class="row-sub">{{ ap.description | truncate: 60 }}</div></td>
+                    <td>{{ vendor.name }}</td>
+                    <td>{{ proj.name | default: ap.project | truncate: 30 }}</td>
+                    <td>{{ ap.due }}</td>
+                    <td class="num"><strong>{{ ap.total | divided_by: 1000 }}K</strong></td>
+                    <td>
+                        {% if ap.status == "disputed" %}<span class="pill bad">Disputed (incoming)</span>
+                        {% else %}<span class="pill info">{{ ap.status }}</span>{% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+<!-- DSO trend -->
+<div class="section-head">
+    <h2>DSO Trend · 27 months</h2>
+    <span class="meta">Days sales outstanding · target 45 · red ≥ 70</span>
+</div>
+<section>
+    {% assign maxDso = 0 %}
+    {% for m in cashflow.monthly %}{% if m.dso > maxDso %}{% assign maxDso = m.dso %}{% endif %}{% endfor %}
+    <div class="bar-chart">
+        {% for m in cashflow.monthly %}
+            {% assign h = m.dso | times: 100 | divided_by: maxDso %}
+            {% assign bcls = "bar-good" %}
+            {% if m.dso > 55 %}{% assign bcls = "bar-warn" %}{% endif %}
+            {% if m.dso >= 70 %}{% assign bcls = "bar-bad" %}{% endif %}
+            <div class="bar {{ bcls }}" style="height: {{ h }}%" title="{{ m.month }}: DSO {{ m.dso }}d"></div>
+        {% endfor %}
+    </div>
+    <div class="bar-axis">
+        {% for m in cashflow.monthly %}
+            {% if m.month contains "-01" or m.month contains "-07" %}<div>{{ m.month | slice: 2, 5 | replace: "-", "/" }}</div>{% else %}<div></div>{% endif %}
+        {% endfor %}
+    </div>
+    <p class="muted" style="font-size: 0.8em; margin-top: var(--space-sm);">DSO peaked at 78 days in Sep 2025 (Ancient Moon Recovery + Family R + DAMAC Sky Tower receivables in flight). Now recovering — currently 51.</p>
+</section>

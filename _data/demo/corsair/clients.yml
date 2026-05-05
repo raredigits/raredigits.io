@@ -1,0 +1,255 @@
+clients:
+  - id: "emaar"
+    name: "EMAAR Group"
+    type: "Developer"
+    segment: "B2B"
+    relationshipSince: "2020"
+    accountManager: "head-acc"
+    paymentTerms: "Net 60"
+    creditLimit: 2500000
+    status: "active"
+    note: "Anchor account — multi-year MSA"
+
+  - id: "aldar"
+    name: "Aldar Properties"
+    type: "Developer"
+    segment: "B2B"
+    relationshipSince: "2022"
+    accountManager: "acc-senior"
+    paymentTerms: "Net 45"
+    creditLimit: 1500000
+    status: "active"
+
+  - id: "damac"
+    name: "DAMAC Properties"
+    type: "Developer"
+    segment: "B2B"
+    relationshipSince: "2023"
+    accountManager: "acc-mgr"
+    paymentTerms: "Net 60"
+    creditLimit: 1200000
+    status: "active"
+
+  - id: "meraas"
+    name: "Meraas"
+    type: "Developer"
+    segment: "B2B"
+    relationshipSince: "2024"
+    accountManager: "head-acc"
+    paymentTerms: "Net 45"
+    creditLimit: 1000000
+    status: "active"
+
+  - id: "advantage"
+    name: "Advantage Development"
+    type: "Developer"
+    segment: "B2B"
+    relationshipSince: "2023"
+    accountManager: "acc-mgr"
+    paymentTerms: "Net 30"
+    creditLimit: 600000
+    status: "active"
+
+  - id: "umbrella"
+    name: "Umbrella Inc."
+    type: "Holding / Mixed Use"
+    segment: "B2B"
+    relationshipSince: "2024"
+    accountManager: "head-prod"
+    paymentTerms: "Net 30"
+    creditLimit: 400000
+    status: "watchlist"
+    note: "Late on Invoice #329 — 5 days overdue, manager unreachable"
+
+  - id: "etihad-wings"
+    name: "Etihad Wings"
+    type: "Aviation"
+    segment: "B2B"
+    relationshipSince: "2021"
+    accountManager: "head-acc"
+    paymentTerms: "Net 60"
+    creditLimit: 1800000
+    status: "active"
+
+  - id: "almas-bank"
+    name: "Almas Bank"
+    type: "Banking"
+    segment: "B2B"
+    relationshipSince: "2022"
+    accountManager: "acc-senior"
+    paymentTerms: "Net 45"
+    creditLimit: 900000
+    status: "active"
+
+  - id: "sirius-telecom"
+    name: "Sirius Telecom"
+    type: "Telecom"
+    segment: "B2B"
+    relationshipSince: "2023"
+    accountManager: "acc-mgr"
+    paymentTerms: "Net 60"
+    creditLimit: 800000
+    status: "active"
+
+  - id: "chalhoub"
+    name: "Chalhoub House"
+    type: "Luxury Retail"
+    segment: "B2B"
+    relationshipSince: "2024"
+    accountManager: "acc-senior"
+    paymentTerms: "Net 30"
+    creditLimit: 700000
+    status: "active"
+
+  - id: "lvmh-mena"
+    name: "LVMH MENA"
+    type: "Luxury Retail"
+    segment: "B2B"
+    relationshipSince: "2025"
+    accountManager: "head-acc"
+    paymentTerms: "Net 30"
+    creditLimit: 1500000
+    currency: "USD"
+    status: "active"
+
+  - id: "adnoc"
+    name: "ADNOC"
+    type: "Energy"
+    segment: "B2B"
+    relationshipSince: "2024"
+    accountManager: "founder-md"
+    paymentTerms: "Net 90"
+    creditLimit: 2000000
+    status: "active"
+    note: "Slowest payer — 90 day terms, but pays exactly on day 90"
+
+  - id: "majid-al-futtaim"
+    name: "Majid Al Futtaim"
+    type: "Mall / Hospitality"
+    segment: "B2B"
+    relationshipSince: "2022"
+    accountManager: "acc-senior"
+    paymentTerms: "Net 45"
+    creditLimit: 1100000
+    status: "active"
+
+  - id: "mashreq"
+    name: "Mashreq Bank"
+    type: "Banking"
+    segment: "B2B"
+    relationshipSince: "2021"
+    accountManager: "head-acc"
+    paymentTerms: "Net 45"
+    creditLimit: 600000
+    status: "active"
+
+  - id: "dtcm"
+    name: "Dubai Tourism (DET)"
+    type: "Government"
+    segment: "B2B"
+    relationshipSince: "2022"
+    accountManager: "founder-md"
+    paymentTerms: "Net 60"
+    creditLimit: 1500000
+    status: "active"
+    note: "Strategic — pays slow but reliable; political weight"
+
+  - id: "aldira"
+    name: "Aldira Group"
+    type: "Conglomerate"
+    segment: "B2B"
+    relationshipSince: "2023"
+    accountManager: "head-acc"
+    paymentTerms: "Net 60"
+    creditLimit: 1200000
+    status: "watchlist"
+    note: "AED 800K final tranche of Solstice Souk 2025 sponsorship overdue 47 days"
+
+  - id: "redbull-mena"
+    name: "Red Bull MENA"
+    type: "FMCG / Sponsor"
+    segment: "B2B"
+    relationshipSince: "2024"
+    accountManager: "prod-festival"
+    paymentTerms: "Net 30"
+    creditLimit: 400000
+    status: "active"
+
+  - id: "patron-mena"
+    name: "Patron Spirits MENA"
+    type: "Beverage / Sponsor"
+    segment: "B2B"
+    relationshipSince: "2025"
+    accountManager: "prod-festival"
+    paymentTerms: "Net 30"
+    creditLimit: 350000
+    status: "active"
+
+  - id: "private-k"
+    name: "Family K. (Private)"
+    type: "Ultra-HNW"
+    segment: "Private"
+    relationshipSince: "2024"
+    accountManager: "founder-cd"
+    paymentTerms: "50/30/20 milestone"
+    creditLimit: null
+    status: "active"
+    confidential: true
+
+  - id: "private-z"
+    name: "Family Z. (Private)"
+    type: "Ultra-HNW"
+    segment: "Private"
+    relationshipSince: "2024"
+    accountManager: "founder-cd"
+    paymentTerms: "50/30/20 milestone"
+    creditLimit: null
+    status: "active"
+    confidential: true
+
+  - id: "private-a"
+    name: "Family A. (Private)"
+    type: "Ultra-HNW"
+    segment: "Private"
+    relationshipSince: "2025"
+    accountManager: "founder-cd"
+    paymentTerms: "60/40 milestone"
+    creditLimit: null
+    status: "active"
+    confidential: true
+
+  - id: "royal-g"
+    name: "Office of Sheikh G."
+    type: "Royal"
+    segment: "Private"
+    relationshipSince: "2024"
+    accountManager: "founder-md"
+    paymentTerms: "100% upfront"
+    creditLimit: null
+    status: "active"
+    confidential: true
+    note: "Briefs verbal only; no email trail permitted"
+
+  - id: "royal-q"
+    name: "Royal Office (Qatar)"
+    type: "Royal / International"
+    segment: "Private"
+    relationshipSince: "2025"
+    accountManager: "founder-md"
+    paymentTerms: "70/30"
+    creditLimit: null
+    currency: "USD"
+    status: "active"
+    confidential: true
+
+  - id: "ksa-vision"
+    name: "Vision Realm Holdings (KSA)"
+    type: "Sovereign / International"
+    segment: "B2B"
+    relationshipSince: "2025"
+    accountManager: "founder-md"
+    paymentTerms: "Net 60"
+    creditLimit: 3000000
+    currency: "USD"
+    status: "active"
+    note: "USD 250K AR exposed to FX swing on March settlement"

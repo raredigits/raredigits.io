@@ -1,0 +1,437 @@
+# Monthly cashflow & P&L roll-up — 27 months, Jan 2024 → Mar 2026.
+# All amounts in AED.
+# revenue   = recognised revenue (accrual basis)
+# cogs      = direct cost of project delivery (talent, crew, materials, venue, permits)
+# gp        = gross profit (revenue − cogs)
+# opex      = studio overhead (payroll, rent, software, marketing, professional fees)
+# ebitda    = gp − opex
+# cashIn / cashOut = actual cash movement (operating)
+# cashEnd   = aggregate cash position end-of-month (all 4 banks, AED equivalent)
+# arEnd     = accounts receivable balance end-of-month
+# apEnd     = accounts payable balance end-of-month
+# dso       = days sales outstanding (rolling 90d)
+
+monthly:
+
+  - month: "2024-01"
+    revenue: 980000
+    cogs: 680000
+    gp: 300000
+    opex: 460000
+    ebitda: -160000
+    cashIn: 1240000
+    cashOut: 1180000
+    cashEnd: 2840000
+    arEnd: 1620000
+    apEnd: 740000
+    dso: 38
+    headcount: 11
+    note: "Slow Jan — production phase only, festival not yet billed"
+
+  - month: "2024-02"
+    revenue: 1410000
+    cogs: 1010000
+    gp: 400000
+    opex: 470000
+    ebitda: -70000
+    cashIn: 1850000
+    cashOut: 1490000
+    cashEnd: 3200000
+    arEnd: 1410000
+    apEnd: 820000
+    dso: 35
+    headcount: 11
+
+  - month: "2024-03"
+    revenue: 3450000
+    cogs: 2380000
+    gp: 1070000
+    opex: 480000
+    ebitda: 590000
+    cashIn: 3680000
+    cashOut: 2840000
+    cashEnd: 4040000
+    arEnd: 1280000
+    apEnd: 980000
+    dso: 32
+    headcount: 11
+    note: "Lantern Bay 2024 — sell-out three nights, escrow swept"
+
+  - month: "2024-04"
+    revenue: 2980000
+    cogs: 2050000
+    gp: 930000
+    opex: 510000
+    ebitda: 420000
+    cashIn: 2710000
+    cashOut: 2210000
+    cashEnd: 4540000
+    arEnd: 1320000
+    apEnd: 850000
+    dso: 33
+    headcount: 12
+
+  - month: "2024-05"
+    revenue: 1820000
+    cogs: 1290000
+    gp: 530000
+    opex: 510000
+    ebitda: 20000
+    cashIn: 2140000
+    cashOut: 1830000
+    cashEnd: 4850000
+    arEnd: 1410000
+    apEnd: 760000
+    dso: 36
+    headcount: 12
+
+  - month: "2024-06"
+    revenue: 1640000
+    cogs: 1170000
+    gp: 470000
+    opex: 510000
+    ebitda: -40000
+    cashIn: 1810000
+    cashOut: 1620000
+    cashEnd: 5040000
+    arEnd: 1450000
+    apEnd: 720000
+    dso: 38
+    headcount: 12
+
+  - month: "2024-07"
+    revenue: 980000
+    cogs: 720000
+    gp: 260000
+    opex: 540000
+    ebitda: -280000
+    cashIn: 1320000
+    cashOut: 1480000
+    cashEnd: 4880000
+    arEnd: 1390000
+    apEnd: 690000
+    dso: 41
+    headcount: 13
+    note: "Summer dip; pre-production for Ancient Moon ramps up"
+
+  - month: "2024-08"
+    revenue: 720000
+    cogs: 580000
+    gp: 140000
+    opex: 540000
+    ebitda: -400000
+    cashIn: 980000
+    cashOut: 1310000
+    cashEnd: 4550000
+    arEnd: 1240000
+    apEnd: 720000
+    dso: 44
+    headcount: 13
+
+  - month: "2024-09"
+    revenue: 740000
+    cogs: 1940000
+    gp: -1200000
+    opex: 540000
+    ebitda: -1740000
+    cashIn: 1480000
+    cashOut: 2640000
+    cashEnd: 3390000
+    arEnd: 1180000
+    apEnd: 1280000
+    dso: 47
+    headcount: 13
+    note: "Ancient Moon Festival 2024 cancelled day-of — full COGS hit, partial ticket revenue, insurance recovery booked subsequent"
+
+  - month: "2024-10"
+    revenue: 1860000
+    cogs: 1280000
+    gp: 580000
+    opex: 540000
+    ebitda: 40000
+    cashIn: 3050000
+    cashOut: 1840000
+    cashEnd: 4600000
+    arEnd: 1460000
+    apEnd: 1060000
+    dso: 44
+    headcount: 13
+    note: "Royal Reception 100%-upfront cleared in cash; Lloyds partial payout AED 540K recognised"
+
+  - month: "2024-11"
+    revenue: 1840000
+    cogs: 1290000
+    gp: 550000
+    opex: 540000
+    ebitda: 10000
+    cashIn: 1620000
+    cashOut: 1750000
+    cashEnd: 4470000
+    arEnd: 1620000
+    apEnd: 940000
+    dso: 42
+    headcount: 13
+
+  - month: "2024-12"
+    revenue: 2410000
+    cogs: 1740000
+    gp: 670000
+    opex: 600000
+    ebitda: 70000
+    cashIn: 2980000
+    cashOut: 1980000
+    cashEnd: 5470000
+    arEnd: 1940000
+    apEnd: 880000
+    dso: 39
+    headcount: 13
+    note: "Solstice Souk close + EMAAR Beachfront final milestone"
+
+  # 2024 FULL-YEAR roll-up
+  # revenue  20,830,000   cogs 16,130,000  gp 4,700,000  opex 6,240,000  ebitda -1,540,000
+  # Net loss largely driven by Ancient Moon AED 1.2M GP loss.
+
+  - month: "2025-01"
+    revenue: 2240000
+    cogs: 1530000
+    gp: 710000
+    opex: 620000
+    ebitda: 90000
+    cashIn: 2680000
+    cashOut: 1820000
+    cashEnd: 6330000
+    arEnd: 1740000
+    apEnd: 920000
+    dso: 38
+    headcount: 14
+
+  - month: "2025-02"
+    revenue: 2680000
+    cogs: 1830000
+    gp: 850000
+    opex: 620000
+    ebitda: 230000
+    cashIn: 2510000
+    cashOut: 2010000
+    cashEnd: 6830000
+    arEnd: 2040000
+    apEnd: 870000
+    dso: 39
+    headcount: 14
+
+  - month: "2025-03"
+    revenue: 5180000
+    cogs: 3370000
+    gp: 1810000
+    opex: 640000
+    ebitda: 1170000
+    cashIn: 4920000
+    cashOut: 3140000
+    cashEnd: 8610000
+    arEnd: 2380000
+    apEnd: 1110000
+    dso: 41
+    headcount: 14
+    note: "Lantern Bay 2025 — record month, AED 4.7M festival revenue. Family A. Trilogy adds AED 1.5M. Hiring brief approved."
+
+  - month: "2025-04"
+    revenue: 2840000
+    cogs: 1990000
+    gp: 850000
+    opex: 760000
+    ebitda: 90000
+    cashIn: 3580000
+    cashOut: 2870000
+    cashEnd: 9320000
+    arEnd: 2510000
+    apEnd: 980000
+    dso: 44
+    headcount: 17
+    note: "Hiring spree: +3 FTE start. Payroll jump"
+
+  - month: "2025-05"
+    revenue: 2110000
+    cogs: 1480000
+    gp: 630000
+    opex: 800000
+    ebitda: -170000
+    cashIn: 2240000
+    cashOut: 2310000
+    cashEnd: 9250000
+    arEnd: 2740000
+    apEnd: 1010000
+    dso: 49
+    headcount: 17
+
+  - month: "2025-06"
+    revenue: 2260000
+    cogs: 1620000
+    gp: 640000
+    opex: 800000
+    ebitda: -160000
+    cashIn: 2110000
+    cashOut: 2180000
+    cashEnd: 9180000
+    arEnd: 3010000
+    apEnd: 1080000
+    dso: 56
+    headcount: 17
+
+  - month: "2025-07"
+    revenue: 1180000
+    cogs: 850000
+    gp: 330000
+    opex: 820000
+    ebitda: -490000
+    cashIn: 1640000
+    cashOut: 1860000
+    cashEnd: 8960000
+    arEnd: 3220000
+    apEnd: 940000
+    dso: 62
+    headcount: 18
+    note: "Summer dip + scaled team = OpEx outpaces revenue. DSO ticks up further."
+
+  - month: "2025-08"
+    revenue: 1340000
+    cogs: 970000
+    gp: 370000
+    opex: 820000
+    ebitda: -450000
+    cashIn: 1180000
+    cashOut: 1740000
+    cashEnd: 8400000
+    arEnd: 3580000
+    apEnd: 1180000
+    dso: 71
+    headcount: 18
+    note: "DSO at 71 days — first formal CFO red flag."
+
+  - month: "2025-09"
+    revenue: 5510000
+    cogs: 3680000
+    gp: 1830000
+    opex: 820000
+    ebitda: 1010000
+    cashIn: 4280000
+    cashOut: 3410000
+    cashEnd: 9270000
+    arEnd: 4120000
+    apEnd: 1490000
+    dso: 78
+    headcount: 18
+    note: "Ancient Moon 2025 (Recovery Edition) + DAMAC Sky Tower + Family R. 60th. DSO peaks at 78."
+
+  - month: "2025-10"
+    revenue: 2640000
+    cogs: 1810000
+    gp: 830000
+    opex: 820000
+    ebitda: 10000
+    cashIn: 5180000
+    cashOut: 2740000
+    cashEnd: 11710000
+    arEnd: 3340000
+    apEnd: 1240000
+    dso: 71
+    headcount: 18
+    note: "Big collection month — Ancient Moon receivables clear"
+
+  - month: "2025-11"
+    revenue: 2880000
+    cogs: 2040000
+    gp: 840000
+    opex: 820000
+    ebitda: 20000
+    cashIn: 2510000
+    cashOut: 2380000
+    cashEnd: 11840000
+    arEnd: 3680000
+    apEnd: 1110000
+    dso: 67
+    headcount: 18
+
+  - month: "2025-12"
+    revenue: 4480000
+    cogs: 3160000
+    gp: 1320000
+    opex: 880000
+    ebitda: 440000
+    cashIn: 3110000
+    cashOut: 3420000
+    cashEnd: 11530000
+    arEnd: 4640000
+    apEnd: 1340000
+    dso: 64
+    headcount: 18
+    note: "Solstice Souk 2025 + MAF Holiday + bonuses paid"
+
+  # 2025 FULL-YEAR roll-up
+  # revenue 35,340,000  cogs 24,330,000  gp 11,010,000  opex 9,420,000  ebitda 1,590,000
+  # Year of growth, but DSO and AR balloon — classic "profitable on paper, cashflow-stressed" story
+
+  - month: "2026-01"
+    revenue: 2960000
+    cogs: 2010000
+    gp: 950000
+    opex: 880000
+    ebitda: 70000
+    cashIn: 4310000
+    cashOut: 2640000
+    cashEnd: 13200000
+    arEnd: 4120000
+    apEnd: 1180000
+    dso: 60
+    headcount: 18
+    note: "Royal Reception 100% upfront + Family K. deposit cleared. Strongest cash month in history."
+
+  - month: "2026-02"
+    revenue: 2530000
+    cogs: 1750000
+    gp: 780000
+    opex: 880000
+    ebitda: -100000
+    cashIn: 2890000
+    cashOut: 2410000
+    cashEnd: 13680000
+    arEnd: 3940000
+    apEnd: 1080000
+    dso: 58
+    headcount: 18
+
+  - month: "2026-03"
+    revenue: 6020000
+    cogs: 4180000
+    gp: 1840000
+    opex: 920000
+    ebitda: 920000
+    cashIn: 4640000
+    cashOut: 3580000
+    cashEnd: 14740000
+    arEnd: 3273540
+    apEnd: 1188030
+    dso: 51
+    headcount: 18
+    note: "Lantern Bay 2026 — biggest event month ever (AED 5.8M). Aldira AED 800K still outstanding. Aurora Gala costs accelerating."
+
+# 27-month roll-up (informational — handy for dashboard hero numbers)
+totals:
+  revenue: 79530000
+  cogs: 54440000
+  gp: 25090000
+  opex: 21470000
+  ebitda: 3620000
+  netProfitBeforeTax: 3620000
+  effectiveTaxAccrued: 326000
+
+# Cash position breakdown at "today" 2026-03-28
+cashSnapshot:
+  asOf: "2026-03-28"
+  bankAedOperating: 7820000
+  bankAedEscrow: 5640000
+  bankUsdAedEquivalent: 1080000
+  bankPayroll: 200000
+  total: 14740000
+  unrestricted: 9100000
+  restrictedEscrow: 5640000
+  note: "AED 5.64M is festival escrow — earmarked for Lantern Bay 2026 final vendor settlement (due 2026-04-15). Unrestricted operating cash AED 9.1M."

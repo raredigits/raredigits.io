@@ -1,0 +1,273 @@
+# Alert rules + currently active alerts as of 2026-03-28.
+# Severity: critical | high | medium | low | info
+# Categories: cash, ar, ap, project, fx, payroll, compliance, ops
+
+# === ALERT RULES (configurable in Settings) ===
+rules:
+
+  - id: "rule-dso-spike"
+    name: "DSO crossed 60 days"
+    category: "ar"
+    enabled: true
+    severity: "high"
+    condition: "rolling_90d_dso > 60"
+    notify: ["cfo", "founder-md"]
+    channel: "email + dashboard"
+
+  - id: "rule-invoice-overdue-7"
+    name: "Invoice overdue > 7 days"
+    category: "ar"
+    enabled: true
+    severity: "medium"
+    condition: "days_overdue > 7"
+    notify: ["cfo", "owner_account_manager"]
+    channel: "dashboard"
+
+  - id: "rule-invoice-overdue-30"
+    name: "Invoice overdue > 30 days"
+    category: "ar"
+    enabled: true
+    severity: "high"
+    condition: "days_overdue > 30"
+    notify: ["cfo", "founder-md", "owner_account_manager"]
+    channel: "email + dashboard + slack"
+
+  - id: "rule-project-overrun-15"
+    name: "Project cost overrun ≥ 15% of budget"
+    category: "project"
+    enabled: true
+    severity: "high"
+    condition: "actual_cost / budget > 1.15"
+    notify: ["cfo", "head-prod", "owner_producer"]
+    channel: "email + dashboard"
+
+  - id: "rule-project-burn-vs-progress"
+    name: "Cost-to-date outpaces timeline progress"
+    category: "project"
+    enabled: true
+    severity: "medium"
+    condition: "(cost_to_date / budget) > (elapsed_days / total_days) + 0.10"
+    notify: ["head-prod", "owner_producer"]
+    channel: "dashboard"
+
+  - id: "rule-fx-exposure"
+    name: "USD AR exposure > USD 100K unhedged"
+    category: "fx"
+    enabled: true
+    severity: "medium"
+    condition: "usd_ar_open > 100000"
+    notify: ["cfo"]
+    channel: "dashboard"
+
+  - id: "rule-cash-runway"
+    name: "Unrestricted cash < 60 days OpEx"
+    category: "cash"
+    enabled: true
+    severity: "critical"
+    condition: "unrestricted_cash / monthly_opex < 2"
+    notify: ["cfo", "founder-md", "founder-cd"]
+    channel: "email + dashboard + sms"
+
+  - id: "rule-escrow-mix"
+    name: "Restricted cash > 50% of total"
+    category: "cash"
+    enabled: true
+    severity: "low"
+    condition: "restricted_cash / total_cash > 0.5"
+    notify: ["cfo"]
+    channel: "dashboard"
+
+  - id: "rule-vendor-paid-late"
+    name: "Vendor invoice paid > 5 days late"
+    category: "ap"
+    enabled: true
+    severity: "low"
+    condition: "days_late_paid > 5"
+    notify: ["cfo"]
+    channel: "dashboard"
+
+  - id: "rule-permit-expiry"
+    name: "Event permit expires in < 14 days"
+    category: "compliance"
+    enabled: true
+    severity: "high"
+    condition: "permit_days_to_expiry < 14"
+    notify: ["bookings", "owner_producer"]
+    channel: "email + dashboard"
+
+  - id: "rule-payroll-coverage"
+    name: "WPS account < 1.2× upcoming run"
+    category: "payroll"
+    enabled: true
+    severity: "high"
+    condition: "wps_balance / next_payroll < 1.2"
+    notify: ["cfo", "hr"]
+    channel: "email + dashboard"
+
+  - id: "rule-disputed-invoice"
+    name: "Disputed invoice older than 14 days"
+    category: "ar"
+    enabled: true
+    severity: "high"
+    condition: "status == 'disputed' AND days_open > 14"
+    notify: ["cfo", "founder-md", "owner_account_manager"]
+    channel: "email + dashboard"
+
+  - id: "rule-change-order-unsigned"
+    name: "Unsigned change order > 7 days"
+    category: "project"
+    enabled: true
+    severity: "high"
+    condition: "change_order_value > 50000 AND days_unsigned > 7"
+    notify: ["cfo", "head-acc", "owner_producer"]
+    channel: "email + dashboard + slack"
+
+# === ACTIVE ALERTS at 2026-03-28 ===
+active:
+
+  - id: "alert-2026-001"
+    rule: "rule-project-overrun-15"
+    severity: "critical"
+    triggered: "2026-03-15"
+    project: "p-2026-007"
+    title: "Aurora Gala 2026 — projected overrun +22%"
+    body: "Cost-to-date AED 1.62M against AED 1.9M budget at ~60% timeline progress. LED dome scope doubled mid-build (Change Order #1, AED 110K disputed by client). Forecast final cost AED 2.32M; client billable scope unchanged → projected loss AED 990K unless change order accepted."
+    owners: ["cfo", "founder-md", "prod-senior"]
+    suggestedAction: "Halt further fabrication; force-resolve Change Order #1 in writing before next vendor PO."
+
+  - id: "alert-2026-002"
+    rule: "rule-invoice-overdue-30"
+    severity: "high"
+    triggered: "2026-03-22"
+    invoice: "TCT-2025-156"
+    title: "Aldira Group invoice AED 800K — 36 days overdue"
+    body: "Solstice Souk 2025 final tranche. Aldira finance unresponsive since 2026-02-15. Account flagged 'watchlist'. CFO escalated to founder-md."
+    owners: ["cfo", "founder-md", "head-acc"]
+    suggestedAction: "Send formal demand letter (template T-3); pause new business with Aldira pending settlement."
+
+  - id: "alert-2026-003"
+    rule: "rule-disputed-invoice"
+    severity: "high"
+    triggered: "2026-03-18"
+    invoice: "TCT-2026-038"
+    title: "Aurora Gala Change Order #1 — disputed > 14 days"
+    body: "USD 110K (AED 404K) change order rejected by Vision Realm KSA. Client claims verbal scope only. No signed change order. Linked to alert-2026-001."
+    owners: ["cfo", "founder-md", "head-acc"]
+
+  - id: "alert-2026-004"
+    rule: "rule-disputed-invoice"
+    severity: "medium"
+    triggered: "2026-03-23"
+    invoice: "TCT-2026-329"
+    title: "Umbrella Inc. Invoice #329 — partial paid, 5 days overdue"
+    body: "AED 6,040 outstanding. Quality-control dispute over 'spiritual energy alignment' deliverable. Client demands re-inspection. Producer Sheleesh Quereshi unreachable."
+    owners: ["head-prod", "cfo"]
+
+  - id: "alert-2026-005"
+    rule: "rule-project-burn-vs-progress"
+    severity: "medium"
+    triggered: "2026-03-19"
+    project: "p-2026-006"
+    title: "Bluewaters AR Walk — burn rate +12% vs plan"
+    body: "Software vendor delay on AR engine pushed crew time by 10 days. Margin compression risk if delay extends past 2026-04-10."
+    owners: ["head-prod", "head-acc"]
+
+  - id: "alert-2026-006"
+    rule: "rule-fx-exposure"
+    severity: "medium"
+    triggered: "2026-03-12"
+    title: "Open USD AR exposure: USD 360K"
+    body: "Vision Realm KSA + Royal Office Qatar combined open AR. Hedging not in place. AED-USD peg holds, but invoicing in USD with AED-denominated COGS creates reporting noise."
+    owners: ["cfo"]
+
+  - id: "alert-2026-007"
+    rule: "rule-escrow-mix"
+    severity: "low"
+    triggered: "2026-03-16"
+    title: "Restricted cash 38% of total — within tolerance, monitor"
+    body: "Lantern Bay escrow holding AED 5.64M. Sweep to operating after vendor settlement 2026-04-15."
+    owners: ["cfo"]
+
+  - id: "alert-2026-008"
+    rule: "rule-vendor-paid-late"
+    severity: "low"
+    triggered: "2026-03-25"
+    title: "Permits Plus DXB — paid 4 days late on PRM-2026-0019"
+    body: "Pattern: 3rd late payment to this preferred vendor in 90 days. Risk of reduced priority on next-event permit run."
+    owners: ["cfo"]
+
+  - id: "alert-2026-009"
+    rule: "rule-disputed-invoice"
+    severity: "high"
+    triggered: "2024-11-04"
+    age_days: 510
+    invoice: "LLD-2024-CLM"
+    title: "Lloyds insurance dispute — Ancient Moon 2024 — long-running"
+    body: "Outstanding contingent receivable AED 1.31M. Last carrier response 2026-01-18 (declined arbitration). Counsel recommends civil suit; cost-benefit analysis pending."
+    owners: ["cfo", "founder-md"]
+    classification: "long-tail"
+
+  - id: "alert-2026-010"
+    rule: "rule-permit-expiry"
+    severity: "high"
+    triggered: "2026-03-27"
+    project: "p-2026-005"
+    title: "Family K. engagement — Bvlgari Marina noise permit expires 2026-04-04"
+    body: "Renewal application not yet submitted. 7-day permit lead time. Bookings flagged."
+    owners: ["bookings", "founder-cd"]
+
+  - id: "alert-2026-011"
+    rule: "rule-invoice-overdue-7"
+    severity: "medium"
+    triggered: "2026-03-20"
+    invoice: "TCT-2026-031"
+    title: "Meraas Bluewaters Milestone 2 — due tomorrow"
+    body: "AED 690K. Meraas historically pays on time, no escalation needed yet — informational."
+    owners: ["head-acc"]
+    classification: "watch"
+
+# Notification preferences (for Settings page)
+notificationChannels:
+  email:
+    enabled: true
+    digestFrequency: "real-time-critical, daily-digest-rest"
+  slack:
+    enabled: true
+    workspace: "thecrisistheater.slack.com"
+    channels:
+      critical: "#alerts-fire"
+      high: "#alerts-finance"
+      medium: "#ops-watch"
+      low: "#ops-watch"
+  sms:
+    enabled: true
+    severityThreshold: "critical"
+    recipients: ["cfo", "founder-md"]
+  dashboard:
+    enabled: true
+    badgeOn: ["medium", "high", "critical"]
+
+# Quiet hours (no non-critical pings)
+quietHours:
+  enabled: true
+  start: "22:00"
+  end: "07:00"
+  timezone: "Asia/Dubai"
+  exceptions: ["critical"]
+
+# Summary counters (for dashboard pill)
+summary:
+  asOf: "2026-03-28"
+  total: 11
+  bySeverity:
+    critical: 1
+    high: 5
+    medium: 3
+    low: 2
+  byCategory:
+    project: 3
+    ar: 4
+    cash: 1
+    ap: 1
+    fx: 1
+    compliance: 1

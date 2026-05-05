@@ -1,0 +1,139 @@
+{% comment %}
+Generic unit drilldown — emits 4 dialogs (one per business unit).
+Triggered from: data-modal="modal-unit-<id>" on unit cards.
+{% endcomment %}
+
+{% assign company = site.data.demo.corsair.company %}
+{% assign yr2025 = site.data.demo.corsair.targets.unitAnnual | where: "year", 2025 | first %}
+{% assign yr2026 = site.data.demo.corsair.targets.unitAnnual | last %}
+
+{% for u in company.units %}
+    {% assign u2025 = yr2025.units[u.id] %}
+    {% assign u2026 = yr2026.units[u.id] %}
+    {% assign pct2026 = u2026.revenueActualYTD | times: 100 | divided_by: u2026.revenuePlan %}
+    {% assign pct2025 = u2025.revenueActual | times: 100 | divided_by: u2025.revenuePlan %}
+    {% assign uProjects = site.data.demo.corsair.projects.projects | where: "unit", u.id %}
+    {% assign uClosed2025 = uProjects | where: "status", "closed" %}
+
+    <dialog id="modal-unit-{{ u.id }}" class="corsair-modal">
+        <div class="dialog-header">
+            <div>
+                <h3>{{ u.name }} · drilldown</h3>
+                <div class="dialog-sub">{{ u.description }}</div>
+            </div>
+            <button class="dialog-close" data-close-modal aria-label="Close">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div class="dialog-body">
+
+            <div class="unit-drilldown-head" style="--unit-color: {{ u.color }}">
+                <h2><span class="material-symbols-outlined" style="vertical-align: middle">{{ u.icon }}</span> {{ u.name }}</h2>
+                <div class="unit-tag">Target share of revenue: {{ u.revenueShareTarget | times: 100 }}% · color {{ u.color }}</div>
+            </div>
+
+            <!-- KPI tiles for this unit -->
+            <section class="kpi-strip" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="kpi-tile">
+                    <div class="kpi-label">2026 YTD revenue</div>
+                    <div class="kpi-value">{{ u2026.revenueActualYTD | divided_by: 1000 }}K</div>
+                    <div class="kpi-foot">vs plan {{ u2026.revenuePlan | divided_by: 1000 }}K · {{ pct2026 }}%</div>
+                </div>
+                <div class="kpi-tile">
+                    <div class="kpi-label">2025 closed</div>
+                    <div class="kpi-value">{{ u2025.revenueActual | divided_by: 1000 }}K</div>
+                    <div class="kpi-foot">vs plan {{ u2025.revenuePlan | divided_by: 1000 }}K · {{ pct2025 }}%</div>
+                </div>
+                <div class="kpi-tile">
+                    <div class="kpi-label">Projects on file</div>
+                    <div class="kpi-value">{{ uProjects | size }}</div>
+                    <div class="kpi-foot">{{ uClosed2025 | size }} closed · {{ uProjects | where: "status", "active" | size }} active</div>
+                </div>
+                <div class="kpi-tile">
+                    <div class="kpi-label">Owner / lead</div>
+                    <div class="kpi-value" style="font-size: 0.95rem;">
+                        {% if u.id == "festivals" %}Mathilde Vermeulen
+                        {% elsif u.id == "private" %}Reem Bouhassan
+                        {% elsif u.id == "installations" %}Sheleesh Quereshi
+                        {% else %}Marco Reyes{% endif %}
+                    </div>
+                    <div class="kpi-foot">
+                        {% if u.id == "festivals" %}Festival producer · single key person
+                        {% elsif u.id == "private" %}Founder / Creative Director
+                        {% elsif u.id == "installations" %}Head of Production · also Umbrella owner
+                        {% else %}Senior Producer{% endif %}
+                    </div>
+                </div>
+            </section>
+
+            <!-- Top projects in this unit -->
+            <div class="section-head">
+                <h2>Recent projects</h2>
+                <span class="meta">Last 8 in this unit</span>
+            </div>
+            <table class="tct-table">
+                <thead>
+                    <tr>
+                        <th>Project</th>
+                        <th>Event date</th>
+                        <th>Status</th>
+                        <th class="num">Revenue</th>
+                        <th class="num">GP</th>
+                        <th class="num">GP %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% assign sorted = uProjects | sort: "eventDate" | reverse %}
+                    {% for p in sorted limit: 8 %}
+                        {% assign rev = p.actualRevenue | default: 0 %}
+                        {% assign gp = p.grossProfit | default: 0 %}
+                        {% assign gpPct = 0 %}
+                        {% if rev > 0 %}{% assign gpPct = gp | times: 100 | divided_by: rev %}{% endif %}
+                        <tr>
+                            <td>
+                                <strong>{{ p.name | truncate: 38 }}</strong>
+                                <div class="row-sub">{{ p.code }}</div>
+                            </td>
+                            <td>{{ p.eventDate }}</td>
+                            <td>
+                                {% if p.status == "active" %}<span class="pill {% if p.health == 'red' %}bad{% elsif p.health == 'yellow' %}warn{% else %}good{% endif %}">{{ p.status }}</span>
+                                {% elsif p.status == "disputed" %}<span class="pill bad">{{ p.status }}</span>
+                                {% elsif p.status == "cancelled" %}<span class="pill bad">{{ p.status }}</span>
+                                {% elsif p.status == "delivered" %}<span class="pill info">{{ p.status }}</span>
+                                {% else %}<span class="pill muted">{{ p.status }}</span>{% endif %}
+                            </td>
+                            <td class="num">{{ rev | divided_by: 1000 }}K</td>
+                            <td class="num">{% if gp < 0 %}<span class="red">{{ gp | divided_by: 1000 }}K</span>{% else %}<span class="green">{{ gp | divided_by: 1000 }}K</span>{% endif %}</td>
+                            <td class="num">
+                                {% if gpPct >= 30 %}<span class="green">{{ gpPct }}%</span>
+                                {% elsif gpPct < 18 %}<span class="red">{{ gpPct }}%</span>
+                                {% else %}{{ gpPct }}%{% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <!-- Jeeves take on this unit -->
+            <div class="jeeves-inline" style="margin-top: var(--space-lg);">
+                <span class="label">Jeeves</span>
+                <span class="body">
+                    {% if u.id == "festivals" %}
+                        Highest-margin unit, +39% over plan in 2025. Single-key-person risk: Mathilde owns Ancient Moon AND Lantern Bay end-to-end. If she leaves, two festivals lose institutional knowledge overnight. Hire a deputy this quarter.
+                    {% elsif u.id == "private" %}
+                        Steadily lucrative, low-noise. Royal and HNW deals have 100%-upfront or aggressive milestone terms — they don't show up in DSO. Continue to over-invest here; it funds the festival risk.
+                    {% elsif u.id == "installations" %}
+                        Materially underperforming since 2024. Either kill it, find a permanent developer partnership, or invest in a dedicated unit head. Sheleesh is splitting attention and Umbrella is the visible cost of that.
+                    {% else %}
+                        Brand experiences are the bread-and-butter — predictable, on-margin, and where most clients enter the funnel. Aurora Gala 2026 is the only live concern — see Production for the live overrun.
+                    {% endif %}
+                </span>
+            </div>
+
+        </div>
+        <div class="dialog-footer">
+            <button class="btn-corsair" data-close-modal>Close</button>
+            <a class="btn-corsair primary" href="/demo/corsair/production/">Open in Production →</a>
+        </div>
+    </dialog>
+{% endfor %}

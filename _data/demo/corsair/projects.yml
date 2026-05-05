@@ -1,0 +1,761 @@
+# All amounts in AED unless project.currency overrides.
+# Status: planned | active | delivered | closed | cancelled | disputed
+# Health: green | yellow | red
+
+projects:
+
+  # ============ 2024 ============
+
+  - id: "p-2024-001"
+    code: "BR-2024-Wings-Gala"
+    name: "Etihad Wings Annual Gala 2024"
+    unit: "brand"
+    client: "etihad-wings"
+    producer: "prod-senior"
+    accountManager: "head-acc"
+    status: "closed"
+    health: "green"
+    venue: "Emirates Palace Ballroom, Abu Dhabi"
+    eventDate: "2024-04-12"
+    startDate: "2024-01-22"
+    closedDate: "2024-05-10"
+    budget: 1850000
+    actualRevenue: 1920000
+    actualCost: 1310000
+    grossProfit: 610000
+
+  - id: "p-2024-002"
+    code: "FE-2024-Lantern-Bay"
+    name: "Lantern Bay Festival 2024"
+    unit: "festivals"
+    client: null
+    promoterOwned: true
+    producer: "prod-festival"
+    accountManager: "founder-md"
+    status: "closed"
+    health: "green"
+    venue: "Bluewaters Island, Dubai"
+    eventDate: "2024-03-22"
+    eventEndDate: "2024-03-24"
+    startDate: "2024-01-08"
+    closedDate: "2024-04-30"
+    budget: 2400000
+    actualRevenue: 3180000
+    actualCost: 2210000
+    grossProfit: 970000
+    revenueBreakdown:
+      tickets: 1980000
+      sponsors: 850000
+      fnb: 240000
+      merchandise: 110000
+    sponsors: ["redbull-mena", "dtcm"]
+    note: "Sold-out three nights — best margin festival to date"
+
+  - id: "p-2024-003"
+    code: "PR-2024-FamilyK-Wedding"
+    name: "Family K. Wedding"
+    unit: "private"
+    client: "private-k"
+    producer: "founder-cd"
+    accountManager: "founder-cd"
+    status: "closed"
+    health: "green"
+    venue: "Mövenpick Bahr (private barge)"
+    eventDate: "2024-04-19"
+    startDate: "2024-02-01"
+    closedDate: "2024-05-08"
+    budget: 2100000
+    actualRevenue: 2280000
+    actualCost: 1640000
+    grossProfit: 640000
+    confidential: true
+
+  - id: "p-2024-004"
+    code: "BR-2024-EMAAR-Riviera"
+    name: "EMAAR Riviera Phase 4 Launch"
+    unit: "brand"
+    client: "emaar"
+    producer: "prod-senior"
+    accountManager: "head-acc"
+    status: "closed"
+    health: "green"
+    venue: "Riviera Sales Pavilion, Meydan"
+    eventDate: "2024-06-08"
+    startDate: "2024-03-15"
+    closedDate: "2024-07-15"
+    budget: 980000
+    actualRevenue: 1040000
+    actualCost: 720000
+    grossProfit: 320000
+
+  - id: "p-2024-005"
+    code: "PR-2024-FamilyZ-50th"
+    name: "Family Z. 50th Anniversary"
+    unit: "private"
+    client: "private-z"
+    producer: "founder-cd"
+    accountManager: "founder-cd"
+    status: "closed"
+    health: "green"
+    venue: "Bulgari Resort, Jumeirah Bay"
+    eventDate: "2024-06-22"
+    startDate: "2024-04-01"
+    closedDate: "2024-07-20"
+    budget: 1450000
+    actualRevenue: 1510000
+    actualCost: 1080000
+    grossProfit: 430000
+    confidential: true
+
+  - id: "p-2024-006"
+    code: "IN-2024-EMAAR-Beachfront"
+    name: "EMAAR Beachfront — Permanent Light Walk"
+    unit: "installations"
+    client: "emaar"
+    producer: "head-prod"
+    accountManager: "head-acc"
+    status: "closed"
+    health: "yellow"
+    venue: "EMAAR Beachfront Promenade"
+    eventDate: "2024-10-01"
+    startDate: "2024-07-02"
+    closedDate: "2024-12-15"
+    budget: 1700000
+    actualRevenue: 1700000
+    actualCost: 1395000
+    grossProfit: 305000
+    note: "Final milestone delayed 6 weeks — civil defence approval. Margin compressed by extended crew time."
+
+  - id: "p-2024-007"
+    code: "FE-2024-Ancient-Moon"
+    name: "Ancient Moon Festival 2024"
+    unit: "festivals"
+    client: null
+    promoterOwned: true
+    producer: "prod-festival"
+    accountManager: "founder-md"
+    status: "cancelled"
+    health: "red"
+    venue: "Hatta Mountain Reserve"
+    eventDate: "2024-09-21"
+    cancelledDate: "2024-09-21"
+    startDate: "2024-05-10"
+    closedDate: "2024-12-31"
+    budget: 3200000
+    actualRevenue: 740000
+    actualCost: 1940000
+    grossProfit: -1200000
+    cancellationReason: "Day-of severe weather — civil defence ordered evacuation 4hrs before gates"
+    insuranceClaim:
+      vendor: "vend-coverlloyds"
+      claimAmount: 1850000
+      acknowledged: 540000
+      status: "disputed"
+      filedDate: "2024-09-25"
+    note: "Insurance partial-paid AED 540K, AED 1.31M still in dispute. Drives 2024 net loss."
+
+  - id: "p-2024-008"
+    code: "BR-2024-Aldar-Founders"
+    name: "Aldar Founders Night"
+    unit: "brand"
+    client: "aldar"
+    producer: "prod-2"
+    accountManager: "acc-senior"
+    status: "closed"
+    health: "green"
+    venue: "Louvre Abu Dhabi"
+    eventDate: "2024-10-14"
+    startDate: "2024-07-22"
+    closedDate: "2024-11-30"
+    budget: 1380000
+    actualRevenue: 1420000
+    actualCost: 1010000
+    grossProfit: 410000
+
+  - id: "p-2024-009"
+    code: "BR-2024-Mashreq-25"
+    name: "Mashreq 25th Anniversary Reception"
+    unit: "brand"
+    client: "mashreq"
+    producer: "prod-senior"
+    accountManager: "head-acc"
+    status: "closed"
+    health: "green"
+    venue: "Burj Al Arab Skyview"
+    eventDate: "2024-11-09"
+    startDate: "2024-08-12"
+    closedDate: "2024-12-20"
+    budget: 720000
+    actualRevenue: 765000
+    actualCost: 540000
+    grossProfit: 225000
+
+  - id: "p-2024-010"
+    code: "PR-2024-Royal-Engagement"
+    name: "Office of Sheikh G. — Private Engagement Reception"
+    unit: "private"
+    client: "royal-g"
+    producer: "founder-cd"
+    accountManager: "founder-md"
+    status: "closed"
+    health: "green"
+    venue: "Confidential — private estate, Al Marmoom"
+    eventDate: "2024-11-26"
+    startDate: "2024-10-04"
+    closedDate: "2024-12-10"
+    budget: 1900000
+    actualRevenue: 1900000
+    actualCost: 1340000
+    grossProfit: 560000
+    confidential: true
+    paymentTerms: "100% upfront — cleared on contract"
+
+  - id: "p-2024-011"
+    code: "FE-2024-Solstice-Souk"
+    name: "Solstice Souk 2024"
+    unit: "festivals"
+    client: null
+    promoterOwned: true
+    producer: "prod-festival"
+    accountManager: "founder-md"
+    status: "closed"
+    health: "yellow"
+    venue: "Al Seef Heritage District"
+    eventDate: "2024-12-19"
+    eventEndDate: "2024-12-23"
+    startDate: "2024-09-02"
+    closedDate: "2025-02-15"
+    budget: 1850000
+    actualRevenue: 1910000
+    actualCost: 1810000
+    grossProfit: 100000
+    revenueBreakdown:
+      tickets: 980000
+      sponsors: 620000
+      fnb: 240000
+      merchandise: 70000
+    sponsors: ["dtcm"]
+    note: "Near-breakeven — rebuilt confidence after Ancient Moon cancellation, but margin sacrificed for attendance"
+
+  - id: "p-2024-012"
+    code: "IN-2024-Umbrella-Atrium"
+    name: "Umbrella Inc. — Atrium Special Project"
+    unit: "installations"
+    client: "umbrella"
+    producer: "head-prod"
+    accountManager: "head-prod"
+    status: "disputed"
+    health: "red"
+    venue: "Umbrella Tower Lobby, Business Bay"
+    eventDate: "2025-03-01"
+    startDate: "2024-12-02"
+    closedDate: null
+    budget: 480000
+    actualRevenue: 372000
+    actualCost: 408000
+    grossProfit: -36000
+    note: "Linked to Invoice #329 — partially paid AED 372K of AED 480K. Client disputes quality control finding from inspection (see Invoice #329 notes)."
+
+  # ============ 2025 ============
+
+  - id: "p-2025-001"
+    code: "BR-2025-DTCM-Welcome"
+    name: "DTCM Welcome Year 2025 Opening"
+    unit: "brand"
+    client: "dtcm"
+    producer: "prod-2"
+    accountManager: "founder-md"
+    status: "closed"
+    health: "green"
+    venue: "Madinat Jumeirah Arena"
+    eventDate: "2025-01-11"
+    startDate: "2024-10-20"
+    closedDate: "2025-03-30"
+    budget: 1620000
+    actualRevenue: 1680000
+    actualCost: 1170000
+    grossProfit: 510000
+
+  - id: "p-2025-002"
+    code: "BR-2025-Sirius-5G"
+    name: "Sirius Telecom 5G Launch"
+    unit: "brand"
+    client: "sirius-telecom"
+    producer: "prod-senior"
+    accountManager: "acc-mgr"
+    status: "closed"
+    health: "yellow"
+    venue: "Coca-Cola Arena"
+    eventDate: "2025-02-22"
+    startDate: "2024-11-15"
+    closedDate: "2025-04-22"
+    budget: 2100000
+    actualRevenue: 2150000
+    actualCost: 1690000
+    grossProfit: 460000
+    note: "Two scope-changes mid-flight; client paid extras after escalation"
+
+  - id: "p-2025-003"
+    code: "FE-2025-Lantern-Bay"
+    name: "Lantern Bay Festival 2025"
+    unit: "festivals"
+    client: null
+    promoterOwned: true
+    producer: "prod-festival"
+    accountManager: "founder-md"
+    status: "closed"
+    health: "green"
+    venue: "Bluewaters Island, Dubai"
+    eventDate: "2025-03-14"
+    eventEndDate: "2025-03-16"
+    startDate: "2024-12-01"
+    closedDate: "2025-05-10"
+    budget: 3100000
+    actualRevenue: 4720000
+    actualCost: 2680000
+    grossProfit: 2040000
+    revenueBreakdown:
+      tickets: 2840000
+      sponsors: 1420000
+      fnb: 320000
+      merchandise: 140000
+    sponsors: ["redbull-mena", "patron-mena", "dtcm", "almas-bank"]
+    note: "Breakout year — international press, 3-night sell-out, drove the Q2 hiring wave"
+
+  - id: "p-2025-004"
+    code: "PR-2025-FamilyA-Trilogy"
+    name: "Family A. Wedding Trilogy"
+    unit: "private"
+    client: "private-a"
+    producer: "founder-cd"
+    accountManager: "founder-cd"
+    status: "closed"
+    health: "green"
+    venue: "Three nights — Atlantis The Royal, One&Only Royal Mirage, Desert Palm"
+    eventDate: "2025-03-27"
+    eventEndDate: "2025-03-29"
+    startDate: "2024-11-20"
+    closedDate: "2025-05-05"
+    budget: 4800000
+    actualRevenue: 5050000
+    actualCost: 3640000
+    grossProfit: 1410000
+    confidential: true
+
+  - id: "p-2025-005"
+    code: "IN-2025-Advantage-Lobby"
+    name: "Advantage Development — Lobby Atrium"
+    unit: "installations"
+    client: "advantage"
+    producer: "prod-2"
+    accountManager: "acc-mgr"
+    status: "closed"
+    health: "green"
+    venue: "Advantage HQ Tower, JLT"
+    eventDate: "2025-05-22"
+    startDate: "2025-02-04"
+    closedDate: "2025-07-10"
+    budget: 540000
+    actualRevenue: 565000
+    actualCost: 410000
+    grossProfit: 155000
+
+  - id: "p-2025-006"
+    code: "BR-2025-Almas-Investor"
+    name: "Almas Bank Annual Investor Day"
+    unit: "brand"
+    client: "almas-bank"
+    producer: "prod-senior"
+    accountManager: "acc-senior"
+    status: "closed"
+    health: "green"
+    venue: "Address Sky View"
+    eventDate: "2025-05-15"
+    startDate: "2025-02-20"
+    closedDate: "2025-06-30"
+    budget: 880000
+    actualRevenue: 920000
+    actualCost: 640000
+    grossProfit: 280000
+
+  - id: "p-2025-007"
+    code: "BR-2025-Chalhoub-House"
+    name: "Chalhoub House Opening"
+    unit: "brand"
+    client: "chalhoub"
+    producer: "prod-2"
+    accountManager: "acc-senior"
+    status: "closed"
+    health: "green"
+    venue: "Chalhoub HQ, Dubai Design District"
+    eventDate: "2025-07-04"
+    startDate: "2025-04-12"
+    closedDate: "2025-08-10"
+    budget: 1100000
+    actualRevenue: 1140000
+    actualCost: 800000
+    grossProfit: 340000
+
+  - id: "p-2025-008"
+    code: "PR-2025-FamilyR-60th"
+    name: "Family R. 60th Birthday"
+    unit: "private"
+    client: "private-z"
+    producer: "founder-cd"
+    accountManager: "founder-cd"
+    status: "closed"
+    health: "green"
+    venue: "Ras Al Khaimah private estate"
+    eventDate: "2025-09-06"
+    startDate: "2025-06-15"
+    closedDate: "2025-10-20"
+    budget: 1280000
+    actualRevenue: 1320000
+    actualCost: 950000
+    grossProfit: 370000
+    confidential: true
+
+  - id: "p-2025-009"
+    code: "FE-2025-Ancient-Moon"
+    name: "Ancient Moon Festival 2025 (Recovery Edition)"
+    unit: "festivals"
+    client: null
+    promoterOwned: true
+    producer: "prod-festival"
+    accountManager: "founder-md"
+    status: "closed"
+    health: "green"
+    venue: "Hatta Mountain Reserve (with backup tented village)"
+    eventDate: "2025-09-19"
+    eventEndDate: "2025-09-21"
+    startDate: "2025-05-04"
+    closedDate: "2025-11-10"
+    budget: 3600000
+    actualRevenue: 4420000
+    actualCost: 3010000
+    grossProfit: 1410000
+    revenueBreakdown:
+      tickets: 2480000
+      sponsors: 1580000
+      fnb: 280000
+      merchandise: 80000
+    sponsors: ["redbull-mena", "patron-mena", "dtcm"]
+    note: "Insurance now embedded as line-item; backup venue paid for itself in PR alone"
+
+  - id: "p-2025-010"
+    code: "BR-2025-DAMAC-SkyTower"
+    name: "DAMAC Sky Tower Topping-Out Ceremony"
+    unit: "brand"
+    client: "damac"
+    producer: "prod-senior"
+    accountManager: "acc-mgr"
+    status: "closed"
+    health: "yellow"
+    venue: "DAMAC Sky Tower (under construction), Business Bay"
+    eventDate: "2025-09-28"
+    startDate: "2025-06-30"
+    closedDate: "2025-11-15"
+    budget: 740000
+    actualRevenue: 760000
+    actualCost: 590000
+    grossProfit: 170000
+    note: "Margin compressed — last-minute helicopter shot for VIP arrival"
+
+  - id: "p-2025-011"
+    code: "IN-2025-Aldar-YasMall"
+    name: "Aldar Yas Mall Seasonal Installation"
+    unit: "installations"
+    client: "aldar"
+    producer: "head-prod"
+    accountManager: "acc-senior"
+    status: "closed"
+    health: "green"
+    venue: "Yas Mall Central Atrium"
+    eventDate: "2025-08-15"
+    startDate: "2025-05-22"
+    closedDate: "2025-12-08"
+    budget: 920000
+    actualRevenue: 980000
+    actualCost: 700000
+    grossProfit: 280000
+
+  - id: "p-2025-012"
+    code: "BR-2025-MAF-Holiday"
+    name: "Majid Al Futtaim Holiday Soiree"
+    unit: "brand"
+    client: "majid-al-futtaim"
+    producer: "prod-2"
+    accountManager: "acc-senior"
+    status: "closed"
+    health: "green"
+    venue: "Mall of the Emirates Ski Slope (private hire)"
+    eventDate: "2025-12-04"
+    startDate: "2025-09-08"
+    closedDate: "2026-01-25"
+    budget: 1180000
+    actualRevenue: 1230000
+    actualCost: 870000
+    grossProfit: 360000
+
+  - id: "p-2025-013"
+    code: "FE-2025-Solstice-Souk"
+    name: "Solstice Souk 2025"
+    unit: "festivals"
+    client: null
+    promoterOwned: true
+    producer: "prod-festival"
+    accountManager: "founder-md"
+    status: "delivered"
+    health: "yellow"
+    venue: "Al Seef Heritage District + extension to Dubai Creek"
+    eventDate: "2025-12-18"
+    eventEndDate: "2025-12-22"
+    startDate: "2025-08-15"
+    closedDate: null
+    budget: 2300000
+    actualRevenue: 2640000
+    actualCost: 2080000
+    grossProfit: 560000
+    revenueBreakdown:
+      tickets: 1280000
+      sponsors: 1080000
+      fnb: 220000
+      merchandise: 60000
+    sponsors: ["aldira", "dtcm"]
+    note: "AED 800K final tranche from Aldira Group sponsorship outstanding 47 days. Project booked but cash not yet collected — post-event close blocked."
+
+  - id: "p-2025-014"
+    code: "BR-2025-ADNOC-Innovation"
+    name: "ADNOC Innovation Summit 2025 (pre-event)"
+    unit: "brand"
+    client: "adnoc"
+    producer: "prod-senior"
+    accountManager: "founder-md"
+    status: "delivered"
+    health: "green"
+    venue: "ADNOC HQ Auditorium, Abu Dhabi"
+    eventDate: "2025-11-21"
+    startDate: "2025-08-04"
+    closedDate: "2026-02-28"
+    budget: 1640000
+    actualRevenue: 1690000
+    actualCost: 1180000
+    grossProfit: 510000
+    note: "ADNOC pays Net 90 — cleared late Feb 2026"
+
+  # ============ 2026 ============
+
+  - id: "p-2026-001"
+    code: "BR-2026-ADNOC-Innovation"
+    name: "ADNOC Innovation Summit 2026"
+    unit: "brand"
+    client: "adnoc"
+    producer: "prod-senior"
+    accountManager: "founder-md"
+    status: "delivered"
+    health: "green"
+    venue: "Yas Marina Circuit Hospitality Suite"
+    eventDate: "2026-01-29"
+    startDate: "2025-11-04"
+    closedDate: null
+    budget: 1750000
+    actualRevenue: 1820000
+    actualCost: 1220000
+    grossProfit: 600000
+    note: "Delivered on time, Net 90 — payment expected 2026-04-29"
+
+  - id: "p-2026-002"
+    code: "PR-2026-Royal-Reception"
+    name: "Royal Reception (Sheikh G.)"
+    unit: "private"
+    client: "royal-g"
+    producer: "founder-cd"
+    accountManager: "founder-md"
+    status: "closed"
+    health: "green"
+    venue: "Confidential"
+    eventDate: "2026-01-18"
+    startDate: "2025-12-01"
+    closedDate: "2026-02-20"
+    budget: 1450000
+    actualRevenue: 1450000
+    actualCost: 1010000
+    grossProfit: 440000
+    confidential: true
+    paymentTerms: "100% upfront"
+
+  - id: "p-2026-003"
+    code: "BR-2026-LVMH-Awards"
+    name: "LVMH MENA Excellence Awards"
+    unit: "brand"
+    client: "lvmh-mena"
+    producer: "prod-2"
+    accountManager: "head-acc"
+    status: "delivered"
+    health: "green"
+    currency: "USD"
+    venue: "Atlantis The Royal, Avatar Ballroom"
+    eventDate: "2026-02-14"
+    startDate: "2025-11-12"
+    closedDate: null
+    budget: 480000
+    actualRevenue: 510000
+    actualCost: 348000
+    grossProfit: 162000
+    note: "Billed in USD — FX gain or loss to be booked at settlement"
+
+  - id: "p-2026-004"
+    code: "FE-2026-Lantern-Bay"
+    name: "Lantern Bay Festival 2026"
+    unit: "festivals"
+    client: null
+    promoterOwned: true
+    producer: "prod-festival"
+    accountManager: "founder-md"
+    status: "delivered"
+    health: "green"
+    venue: "Bluewaters Island + extension to JBR Beach"
+    eventDate: "2026-03-13"
+    eventEndDate: "2026-03-15"
+    startDate: "2025-12-08"
+    closedDate: null
+    budget: 4200000
+    actualRevenue: 5810000
+    actualCost: 3560000
+    grossProfit: 2250000
+    revenueBreakdown:
+      tickets: 3220000
+      sponsors: 2180000
+      fnb: 320000
+      merchandise: 90000
+    sponsors: ["redbull-mena", "patron-mena", "almas-bank", "dtcm"]
+    note: "Ticketing in escrow account — cash not yet swept to operating. Post-event reconciliation due 2026-04-15."
+
+  - id: "p-2026-005"
+    code: "PR-2026-FamilyK-Daughter"
+    name: "Family K. Daughter Engagement"
+    unit: "private"
+    client: "private-k"
+    producer: "founder-cd"
+    accountManager: "founder-cd"
+    status: "active"
+    health: "green"
+    venue: "Bvlgari Resort Marina"
+    eventDate: "2026-04-24"
+    startDate: "2026-01-12"
+    closedDate: null
+    budget: 2400000
+    actualRevenue: 1440000
+    actualCost: 980000
+    grossProfit: null
+    confidential: true
+    note: "60% deposit collected; on track"
+
+  - id: "p-2026-006"
+    code: "IN-2026-Meraas-Bluewaters"
+    name: "Meraas Bluewaters AR Walk"
+    unit: "installations"
+    client: "meraas"
+    producer: "head-prod"
+    accountManager: "head-acc"
+    status: "active"
+    health: "yellow"
+    venue: "Bluewaters Boardwalk"
+    eventDate: "2026-05-20"
+    startDate: "2026-01-20"
+    closedDate: null
+    budget: 1380000
+    actualRevenue: 690000
+    actualCost: 720000
+    grossProfit: null
+    note: "Software vendor delay on AR layer. Burn rate +12% vs plan."
+
+  - id: "p-2026-007"
+    code: "BR-2026-Aurora-Gala"
+    name: "Aurora Gala 2026 (Vision Realm KSA)"
+    unit: "brand"
+    client: "ksa-vision"
+    producer: "prod-senior"
+    accountManager: "founder-md"
+    status: "active"
+    health: "red"
+    currency: "USD"
+    venue: "AlUla — Maraya Concert Hall"
+    eventDate: "2026-04-11"
+    startDate: "2025-12-15"
+    closedDate: null
+    budget: 1900000
+    actualRevenue: 1330000
+    actualCost: 1620000
+    grossProfit: null
+    note: "Active overrun: cost-to-date already 85% of budget at 60% of timeline. Scope of LED dome doubled mid-build at client request without signed change order. CFO flagged."
+
+  - id: "p-2026-008"
+    code: "BR-2026-EMAAR-Riviera-Final"
+    name: "EMAAR Riviera Phase 6 Handover"
+    unit: "brand"
+    client: "emaar"
+    producer: "prod-2"
+    accountManager: "head-acc"
+    status: "active"
+    health: "green"
+    venue: "Riviera Promenade, Meydan"
+    eventDate: "2026-05-08"
+    startDate: "2026-02-18"
+    closedDate: null
+    budget: 1180000
+    actualRevenue: 354000
+    actualCost: 290000
+    grossProfit: null
+
+  - id: "p-2026-009"
+    code: "PR-2026-Royal-Q-Reception"
+    name: "Royal Office (Qatar) — Heritage Reception"
+    unit: "private"
+    client: "royal-q"
+    producer: "founder-cd"
+    accountManager: "founder-md"
+    status: "active"
+    health: "green"
+    currency: "USD"
+    venue: "Doha — Confidential"
+    eventDate: "2026-04-18"
+    startDate: "2026-02-02"
+    closedDate: null
+    budget: 1100000
+    actualRevenue: 770000
+    actualCost: 540000
+    grossProfit: null
+    confidential: true
+
+  - id: "p-2026-010"
+    code: "IN-2026-Umbrella-Phase2"
+    name: "Umbrella Inc. — Atrium Phase 2 (on hold)"
+    unit: "installations"
+    client: "umbrella"
+    producer: "head-prod"
+    accountManager: "head-prod"
+    status: "planned"
+    health: "red"
+    venue: "Umbrella Tower Lobby, Business Bay"
+    eventDate: "2026-06-15"
+    startDate: null
+    closedDate: null
+    budget: 620000
+    actualRevenue: 0
+    actualCost: 0
+    grossProfit: null
+    note: "Frozen pending resolution of Phase 1 dispute. CFO recommends suspending until Invoice #329 settled."
+
+# Aggregate KPIs (denormalised — handy for dashboard widgets)
+kpis:
+  totalRevenueClosed_2024: 14947000
+  totalRevenueClosed_2025: 22825000
+  totalRevenueYTD_2026: 7174000
+  totalGrossProfit_2024: 1880000
+  totalGrossProfit_2025: 7140000
+  totalGrossProfitYTD_2026: 1860000
+  activeProjects: 6
+  delivered_unbilled: 4
+  cancelled: 1
+  disputed: 1

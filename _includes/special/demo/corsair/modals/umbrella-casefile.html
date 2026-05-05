@@ -1,0 +1,140 @@
+{% comment %}
+Umbrella Inc. — full case file modal.
+Triggered from: data-modal="modal-umbrella" anywhere in the demo.
+{% endcomment %}
+
+{% assign client = site.data.demo.corsair.clients.clients | where: "id", "umbrella" | first %}
+{% assign p1 = site.data.demo.corsair.projects.projects | where: "id", "p-2024-012" | first %}
+{% assign p2 = site.data.demo.corsair.projects.projects | where: "id", "p-2026-010" | first %}
+{% assign inv = site.data.demo.corsair.invoices.receivable | where: "number", "TCT-2026-329" | first %}
+{% assign owner = site.data.demo.corsair.staff.team | where: "id", "head-prod" | first %}
+{% assign phase1Outstanding = p1.budget | minus: p1.actualRevenue %}
+
+<dialog id="modal-umbrella" class="corsair-modal">
+    <div class="dialog-header">
+        <div>
+            <h3>Case file · Umbrella Inc.</h3>
+            <div class="dialog-sub">Disputed account · 12 weeks open · cross-system view</div>
+        </div>
+        <button class="dialog-close" data-close-modal aria-label="Close">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </div>
+    <div class="dialog-body">
+
+        <!-- Header stats -->
+        <div class="case-header-grid">
+            <div class="case-stat bad">
+                <div class="case-label">Outstanding (Phase 1)</div>
+                <div class="case-value">{{ phase1Outstanding | divided_by: 1000 }}K</div>
+                <div class="row-sub">disputed · 12 weeks open</div>
+            </div>
+            <div class="case-stat warn">
+                <div class="case-label">Phase 2 frozen</div>
+                <div class="case-value">{{ p2.budget | divided_by: 1000 }}K</div>
+                <div class="row-sub">{{ p2.note | truncate: 50 }}</div>
+            </div>
+            <div class="case-stat warn">
+                <div class="case-label">Staff still loaded</div>
+                <div class="case-value">~22K/wk</div>
+                <div class="row-sub">{{ owner.name }} · 60% allocated</div>
+            </div>
+            <div class="case-stat">
+                <div class="case-label">Credit limit</div>
+                <div class="case-value">{{ client.creditLimit | divided_by: 1000 }}K</div>
+                <div class="row-sub">Status: {{ client.status }}</div>
+            </div>
+        </div>
+
+        <!-- Cross-system pull -->
+        <div class="case-cross-refs">
+            <h5>What each system says about this client</h5>
+            <ul>
+                <li><span class="system-badge hubspot">HubSpot</span> Contract signed 2024-10-22 · AED 480K · "Atrium special project, 1 phase + option"</li>
+                <li><span class="system-badge asana">Asana</span> Project p-2024-012 stalled at 78% · last activity 2026-02-04 · ticket QC-211 unresolved</li>
+                <li><span class="system-badge zoho">Zoho Books</span> Phase 1 billed across 3 invoices · received AED 372K of AED 480K · final extras invoice {{ inv.number }} (AED 12K, "Special Services") still outstanding</li>
+                <li><span class="system-badge bayzat">Bayzat</span> {{ owner.name }} timesheet still allocating 24h/wk to umbrella-* tags</li>
+                <li><span class="system-badge bank">ENBD</span> Last receipt from Umbrella: 2026-02-12 (AED 180K partial)</li>
+            </ul>
+        </div>
+
+        <!-- Timeline -->
+        <h4 style="margin: var(--space-md) 0 var(--space-sm); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.05em; color: var(--tct-mute);">Timeline</h4>
+        <div class="case-timeline">
+            <div class="case-timeline-item good">
+                <div class="case-date">2024-10-22 · HubSpot</div>
+                <div class="case-title">Contract signed — AED 480K</div>
+                <div class="case-detail">Sheleesh closes the deal personally. Net 30 terms. No retention clause negotiated.</div>
+            </div>
+            <div class="case-timeline-item">
+                <div class="case-date">2024-12-02 · Asana</div>
+                <div class="case-title">Phase 1 kickoff</div>
+                <div class="case-detail">Atrium installation begins. Umbrella facilities team adds last-minute change requests not in scope.</div>
+            </div>
+            <div class="case-timeline-item warn">
+                <div class="case-date">2025-03-01 · Asana</div>
+                <div class="case-title">Substantial completion · QC inspection raises 4 findings</div>
+                <div class="case-detail">Umbrella's QC inspector flags lighting calibration and finish quality. Sheleesh disputes findings as opinion-based, no remediation agreed.</div>
+            </div>
+            <div class="case-timeline-item warn">
+                <div class="case-date">2025-05-14 · Zoho</div>
+                <div class="case-title">Phase 1 invoiced in full · AED 480K</div>
+                <div class="case-detail">Three invoices over April–May for build, install, and special services. Net 30 across all three.</div>
+            </div>
+            <div class="case-timeline-item">
+                <div class="case-date">2025-08-30 · Bank</div>
+                <div class="case-title">Partial payment received · AED 192K</div>
+                <div class="case-detail">"Provisional payment subject to QC remediation" per Umbrella memo. Covers main install invoices.</div>
+            </div>
+            <div class="case-timeline-item warn">
+                <div class="case-date">2026-02-12 · Bank</div>
+                <div class="case-title">Second partial · AED 180K</div>
+                <div class="case-detail">Brings total to AED 372K. AED 108K still disputed — including the small TCT-2026-329 extras invoice (AED 12K, "Special Services").</div>
+            </div>
+            <div class="case-timeline-item bad">
+                <div class="case-date">2026-02-15 · Email log</div>
+                <div class="case-title">Sheleesh's escalation email goes unanswered</div>
+                <div class="case-detail">Subject: "Final settlement — Atrium Phase 1." 9 follow-ups since, no response from Umbrella AP.</div>
+            </div>
+            <div class="case-timeline-item bad">
+                <div class="case-date">2026-03-15 · Asana</div>
+                <div class="case-title">Phase 2 (AED 620K) frozen by CFO recommendation</div>
+                <div class="case-detail">Yousef Khoury blocks pre-fabrication PO until Phase 1 settled.</div>
+            </div>
+            <div class="case-timeline-item bad">
+                <div class="case-date">2026-03-28 · Today</div>
+                <div class="case-title">Jeeves flags as escalation candidate</div>
+                <div class="case-detail">Pattern: same head-of-prod owns deal, dispute, and silence. Recommend founder-MD intervention.</div>
+            </div>
+        </div>
+
+        <!-- Suggested actions -->
+        <h4 style="margin: var(--space-lg) 0 var(--space-sm); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.05em; color: var(--tct-mute);">Suggested actions</h4>
+        <div class="case-actions">
+            <div class="case-action">
+                <h5>Founder-MD direct call</h5>
+                <p>Bypass Sheleesh; Florian to call Umbrella COO directly. Goal: settle AED 108K within 14 days.</p>
+                <a class="case-action-btn" href="#">Draft talking points</a>
+            </div>
+            <div class="case-action">
+                <h5>Statutory demand letter</h5>
+                <p>If no response within 7 days post-call, instruct counsel. Recovery probability high (UAE assets).</p>
+                <a class="case-action-btn" href="#">Use template T-3</a>
+            </div>
+            <div class="case-action">
+                <h5>Reassign account</h5>
+                <p>Pattern review: Sheleesh shouldn't own a disputed account he sold. Move to Khalil (acct services head).</p>
+                <a class="case-action-btn" href="#">Open HR ticket</a>
+            </div>
+        </div>
+
+        <div class="jeeves-inline" style="margin-top: var(--space-lg);">
+            <span class="label">Jeeves</span>
+            <span class="body">Symbolic AED 108K is not why this matters. The pattern matters: ownership concentration, silence under pressure, frozen Phase 2 worth 620K, and AED 22K/wk staff cost still loaded. Resolve in two weeks or write off and book a clean lesson.</span>
+        </div>
+    </div>
+    <div class="dialog-footer">
+        <button class="btn-corsair" data-close-modal>Close</button>
+        <a class="btn-corsair primary" href="/demo/corsair/money/">Open invoice in Money →</a>
+    </div>
+</dialog>

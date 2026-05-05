@@ -5,302 +5,228 @@ offset: demo
 permalink: /demo/corsair/staff/
 ---
 
-<h1>Staff Overview</h1>
-<pre>
-<strong>Personnel Economics Dashboard</strong> displays workforce cost structure, productivity measurements, 
-and operational risk factors related to human capital allocation.<br>
-<strong>Data Integration:</strong> This dashboard aggregates data from ERP systems, accounting software, 
-HRIS/payroll platforms, or manual uploads.<br>
-Historical data enables filtering by date, department, KPI, and financial metrics.
-</pre>
+{% assign company = site.data.demo.corsair.company %}
+{% assign jeeves = site.data.demo.corsair.jeeves %}
+{% assign team = site.data.demo.corsair.staff.team %}
+{% assign freelancers = site.data.demo.corsair.vendors.freelancers %}
+{% assign keyPersons = site.data.demo.corsair.corsairKeyPersons.keyPersonnel %}
 
-<section>
-    <div class="grid grid-cols-5 gap-md">
-        <div class="data-card-md">
-            <h3>Payroll Cost</h3>
-            <span class="data">516,000</span>
-        </div>
-        <div class="data-card-md">
-            <h3>Revenue per Employee</h3>
-            <span class="data green">74,140</span>
-        </div>
-        <div class="data-card-md">
-            <h3>Profit per Employee</h3>
-        </div>
-        <div class="data-card-md">
-            <h3>Overtime Cost</h3>
-            <span class="data red">16,000</span>
-        </div>
-        <div class="data-card-md">
-            <h3>Headcount</h3>
-            <span class="data">29</span>
-        </div>
+{% assign payroll = 0 %}
+{% for p in team %}{% assign payroll = payroll | plus: p.salaryMonthly %}{% endfor %}
+
+<header class="demo-hero">
+    <div>
+        <h1>Staff</h1>
+        <p class="muted">Workforce economics · core team + freelance bench + advisory board</p>
     </div>
-    <div class="grid grid-cols-5 gap-md padding-y-lg">
-        <div class="data-card-sm">
-            <h4>Highest paid dept:</h4>
-            <span class="data">Production</span>
-        </div>
-        <div class="data-card-sm">
-            <h4>Average Salary:</h4>
-            <span class="data">17,800</span>
-        </div>
-        <div class="data-card-sm">
-            <h4>Average absence:</h4>
-            <span class="data red">20.1%</span>
-        </div>
-        <div class="data-card-sm">
-            <h4>Turnover Rate:</h4>
-            <span class="data green">7%</span>
-        </div>
-        <div class="data-card-sm">
-            <h4>Average tenure:</h4>
-            <span class="data">6 years</span>
-        </div>
+    <div class="as-of">{{ team | size }} FTE · {{ freelancers | size }} freelancers</div>
+</header>
+
+<!-- Jeeves staff insights -->
+{% assign staffInsights = jeeves.insights | where: "scope", "staff" %}
+{% for ins in staffInsights %}
+<div class="jeeves-card">
+    <div class="jeeves-avatar">J</div>
+    <div class="jeeves-body">
+        <h3>{{ ins.title }}</h3>
+        <p>{{ ins.body }}</p>
+        <p class="signature">{{ jeeves.profile.signature }}</p>
+    </div>
+    <span class="pill {% if ins.severity == 'critical' %}bad{% elsif ins.severity == 'warning' %}warn{% else %}info{% endif %}">{{ ins.severity }}</span>
+</div>
+{% endfor %}
+
+<!-- KPI strip -->
+<section class="kpi-strip">
+    <div class="kpi-tile">
+        <div class="kpi-label">Headcount</div>
+        <div class="kpi-value">{{ team | size }}</div>
+        <div class="kpi-foot">FTE · stable since Q3 2025</div>
+    </div>
+    <div class="kpi-tile">
+        <div class="kpi-label">Monthly payroll</div>
+        <div class="kpi-value">{{ payroll | divided_by: 1000 }}K</div>
+        <div class="kpi-foot">Core only · before benefits</div>
+    </div>
+    <div class="kpi-tile kpi-good">
+        <div class="kpi-label">Revenue / FTE (annual)</div>
+        <div class="kpi-value">1.96M</div>
+        <div class="kpi-foot">2025 actual · industry benchmark 1.4M</div>
+    </div>
+    <div class="kpi-tile">
+        <div class="kpi-label">Freelance bench</div>
+        <div class="kpi-value">{{ freelancers | size }}</div>
+        <div class="kpi-foot">Active in last 12 months</div>
     </div>
 </section>
 
-<div class="air-lg"></div>
+<!-- Headcount trend -->
+<div class="section-head">
+    <h2>Headcount · 27 months</h2>
+    <span class="meta">11 → 18 FTE</span>
+</div>
+<section>
+    {% assign hcMax = 18 %}
+    <div style="display: grid; grid-template-columns: repeat({{ site.data.demo.corsair.staff.headcountByMonth | size }}, 1fr); gap: var(--space-sm); align-items: end; height: 100px;">
+        {% for h in site.data.demo.corsair.staff.headcountByMonth %}
+            {% assign hh = h.fte | times: 100 | divided_by: hcMax %}
+            <div style="text-align: center;">
+                <div style="height: {{ hh }}%; min-height: 8px; background: var(--tct-jeeves); border-radius: 2px 2px 0 0;" title="{{ h.month }}: {{ h.fte }} FTE{% if h.note %} · {{ h.note }}{% endif %}"></div>
+                <div class="row-sub" style="margin-top: 4px;">{{ h.fte }}</div>
+                <div class="row-sub">{{ h.month | slice: 2, 5 | replace: "-", "/" }}</div>
+            </div>
+        {% endfor %}
+    </div>
+    <p class="muted" style="font-size: 0.8em; margin-top: var(--space-md);">Hiring spree in Q2 2025 (+3 FTE) was funded by Lantern Bay 2025 outperformance. Frozen since.</p>
+</section>
 
-<section class="card rounded-sm padding-x-md">
-    <h2>Productivity by Dept.</h2>
-    <table class="table-striped">
-        <tr>
-            <th>Department</th>
-            <th>KPI</th>
-            <th>Staffing</th>
-            <th>Fails</th>
-            <th>Headcount</th>
-            <th>Absence</th>
-            <th>Cost</th>
-            <th>Cost of Rev.</th>
-            
-        </tr>
-        <tr>
-            <td>Sales</td>
-            <td class="green">120%</td>
-            <td>80%</td>
-            <td>1%</td>
-            <td>4</td>
-            <td>0</td>
-            <td>110,000</td>
-            <td>10%</td>
-        </tr>
-        <tr>
-            <td>Production</td>
-            <td>95%</td>
-            <td>90%</td>
-            <td>5%</td>
-            <td>16</td>
-            <td class="red">4</td>
-            <td>280,000</td>
-            <td>20%</td>   
-        </tr>
-        <tr>
-            <td>Support</td>
-            <td>90%</td>
-            <td class="red">75%</td>
-            <td>6%</td>
-            <td>3</td>
-            <td>0</td>
-            <td>36,000</td>
-            <td>25%</td>
-        </tr>
-        <tr>
-            <td>Backoffice</td>
-            <td class="red">85%</td>
-            <td>100%</td>
-            <td class="red">12%</td>
-            <td>6</td>
-            <td class="red">2</td>
-            <td>90,000</td>
-            <td>15%</td>    
-        </tr>
+<!-- Department breakdown -->
+<div class="section-head">
+    <h2>By Department</h2>
+    <span class="meta">Cost & headcount</span>
+</div>
+<section>
+    <table class="tct-table">
+        <thead>
+            <tr>
+                <th>Department</th>
+                <th>Head</th>
+                <th class="num">FTE</th>
+                <th class="num">Monthly cost</th>
+                <th class="num">% of payroll</th>
+                <th>Note</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for dept in site.data.demo.corsair.staff.departments %}
+                {% assign deptTeam = team | where: "department", dept.id %}
+                {% assign deptCost = 0 %}
+                {% for p in deptTeam %}{% assign deptCost = deptCost | plus: p.salaryMonthly %}{% endfor %}
+                {% assign pctPayroll = deptCost | times: 100 | divided_by: payroll %}
+                {% assign head = team | where: "id", dept.head | first %}
+                <tr>
+                    <td><strong>{{ dept.id }}</strong></td>
+                    <td>{{ head.name }}</td>
+                    <td class="num">{{ deptTeam | size }}</td>
+                    <td class="num">{{ deptCost | divided_by: 1000 }}K</td>
+                    <td class="num">{{ pctPayroll }}%</td>
+                    <td class="row-sub">
+                        {% if dept.id == "Production" %}Owns Umbrella dispute · in spotlight{% endif %}
+                        {% if dept.id == "Leadership" %}2 founders, equity-driven{% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+<!-- Core team table -->
+<div class="section-head">
+    <h2>Core Team · {{ team | size }} FTE</h2>
+    <span class="meta">Sorted by tenure</span>
+</div>
+<section>
+    <table class="tct-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Department</th>
+                <th>Joined</th>
+                <th>Nationality</th>
+                <th class="num">Monthly</th>
+                <th>Note</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% assign sortedTeam = team | sort: "joined" %}
+            {% for p in sortedTeam %}
+                <tr>
+                    <td><strong>{{ p.name }}</strong></td>
+                    <td>{{ p.role }}</td>
+                    <td><span class="pill muted">{{ p.department }}</span></td>
+                    <td>{{ p.joined }}</td>
+                    <td class="row-sub">{{ p.nationality }}</td>
+                    <td class="num">{{ p.salaryMonthly | divided_by: 1000 }}K</td>
+                    <td class="row-sub">
+                        {% if p.note %}<span class="red">⚠ {{ p.note }}</span>{% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+<!-- Freelance bench -->
+<div class="section-head">
+    <h2>Freelance Bench</h2>
+    <span class="meta">Per-day rates · used on demand</span>
+</div>
+<section>
+    <table class="tct-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Nationality</th>
+                <th class="num">Day rate</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% assign sortedFL = freelancers | sort: "dayRate" | reverse %}
+            {% for f in sortedFL %}
+                <tr>
+                    <td><strong>{{ f.name }}</strong></td>
+                    <td>{{ f.role }}</td>
+                    <td class="row-sub">{{ f.nationality }}</td>
+                    <td class="num">{{ f.dayRate }}</td>
+                    <td>{% if f.favourite %}<span class="pill good">★ Favourite</span>{% else %}<span class="pill muted">Approved</span>{% endif %}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+<!-- Advisory board (the satirical key persons) -->
+<div class="section-head">
+    <h2>Advisory Board</h2>
+    <span class="meta">External · non-executive</span>
+</div>
+<section>
+    <table class="tct-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Tenure</th>
+                <th>Compensation</th>
+                <th>Options</th>
+                <th>Key metrics</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for person in keyPersons %}
+                <tr>
+                    <td><strong>{{ person.name }}</strong></td>
+                    <td>{{ person.role }}</td>
+                    <td>{{ person.tenure }}</td>
+                    <td>{{ person.compensation }}</td>
+                    <td class="row-sub">{{ person.options }}</td>
+                    <td class="row-sub">
+                        {% for metric in person.metrics %}
+                            {{ metric.label }}: <strong>{{ metric.value }}</strong>
+                            {% if metric.trend == "up" %}<span class="green">↑</span>
+                            {% elsif metric.trend == "down" %}<span class="red">↓</span>
+                            {% else %}→{% endif %}<br>
+                        {% endfor %}
+                        {% if person.riskFlag %}<span class="red">⚠ {{ person.riskFlag }}</span>{% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
     </table>
     <div class="tip">
-        <span class="red material-symbols-outlined">info</span> KPI underperformance may indicate understaffing. <strong>Pro tip:</strong> <a href="">Fire more!</a>
+        <span class="material-symbols-outlined" style="color: var(--tct-mute)">info</span> Advisory metrics are individually defined per role and tracked against subjective vibes.
     </div>
-</section>
-
-<div class="air-lg"></div>
-
-<section>
-    <h2>Key Employees</h2>
-    <table class="table-striped">
-        <tr>
-            <th>Name</th>
-            <th>Role</th>
-            <th>Tenure</th>
-            <th>Compensation</th>
-            <th>Options</th>
-            <th class="right">Key Metrics</th>
-        </tr>
-        {% for person in site.data.demo.corsair.corsairKeyPersons.keyPersonnel %}
-        <tr>
-            <td><strong>{{ person.name }}</strong></td>
-            <td>{{ person.role }}</td>
-            <td>{{ person.tenure }}</td>
-            <td>{{ person.compensation }}</td>
-            <td>{{ person.options }}</td>
-            <td class="right">
-                {% for metric in person.metrics %}
-                    {{ metric.label }}: <strong>{{ metric.value }}</strong>
-                    <span class="trend trend-{{ metric.trend }}">
-                    {% if metric.trend == "up" %}↑{% endif %}
-                    {% if metric.trend == "down" %}↓{% endif %}
-                    {% if metric.trend == "neutral" %}→{% endif %}
-                    </span><br>
-                {% endfor %}
-                {% if person.riskFlag %}
-                <div class="risk-flag">⚠️ {{ person.riskFlag }}</div>
-                {% endif %}
-            </td>
-        </tr>
-        {% endfor %}
-        </table>
-        <div class="tip">
-            <span class="gray material-symbols-outlined">info</span> Key performance metrics are individually defined per executive role and tracked against objective operational data.</a>
-        </div>
-</section>
-
-<div class="air-lg"></div>
-
-<section>
-    <h2>Vacancies (3)</h2>
-    <table>
-        <tr>
-            <td>Chief Sales Officer</td>
-            <td>Open</td>
-            <td>20,000</td>
-        </tr>
-        <tr>
-            <td>Senior Database Administrator</td>
-            <td>Open</td>
-            <td>18,000</td>
-        </tr>
-        <tr>
-            <td>Support Specialist</td>
-            <td>Open</td>
-            <td>9,000</td>
-        </tr>
-    </table>
-</section>
-
-<section class="card rounded-sm padding-x-md">
-    <h2>Best Practices AI-Opinion</h2>
-</section>
-
-<div class="air-lg"></div>
-
-<section>
-    <h2>System Architecture</h2>
-
-    <pre>
-// System Architecture: Staff Analytics Dashboard
-
-Staff analytics dashboard utilizes pre-configured integration modules for standard
-enterprise systems. Data extraction, normalization, and metric calculation are handled
-automatically. The only manual input required is setting role-specific performance
-targets (KPIs/OKRs) and alert thresholds. All quantitative metrics are derived from
-connected operational systems.
-
-// Input Layer
-Data Sources (API Integration)
-├─ HRMS API → Employee records, tenure, positions
-├─ Payroll System → Compensation, bonuses, equity
-├─ CRM → Sales metrics, deals closed, revenue attribution
-├─ ERP → Production output, operational metrics
-└─ Development Tools → Git commits, Jira tickets, deployments
-
-// Processing Layer
-ETL Pipeline
-├─ Data extraction from multiple sources
-├─ Normalization & validation
-├─ Deduplication & conflict resolution
-└─ Time-series aggregation
-
-Calculation Engine
-├─ KPI computation (revenue/employee, cost ratios)
-├─ Trend analysis (YoY, MoM comparisons)
-├─ Benchmarking against targets
-└─ Risk scoring
-
-// Configuration Layer
-Manual Inputs
-├─ Role-specific KPI definitions
-├─ Target thresholds per metric
-├─ Alert rules & escalation policies
-└─ Weight coefficients for composite scores
-
-// Output Layer
-Staff Dashboard
-├─ Executive summary cards
-├─ Department-level breakdown
-├─ Individual performance tables
-└─ Interactive drill-down views
-
-Alert System
-├─ Real-time anomaly detection
-├─ Threshold breach notifications
-├─ Multi-channel delivery (Email, Slack, SMS)
-└─ Escalation workflows
-
-// Alert Triggers
-⚠️ Turnover rate > 15%
-⚠️ Payroll cost > 70% of revenue
-⚠️ Key personnel tenure < 6 months
-⚠️ Productivity drop > 20% MoM
-⚠️ Understaffing in critical roles
-
-// System Architecture Diagram
-┌─────────────────────────────────────────────────────────────┐
-│                       DATA SOURCES (API)                    │
-├──────────┬──────────┬──────────┬──────────┬─────────────────┤
-│  HRMS    │ Payroll  │   CRM    │   ERP    │   Git/Jira      │
-│ Employee │  Comp.   │  Sales   │  Prod.   │   Dev Metrics   │
-└────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬────────────┘
-     │          │          │          │          │
-     └──────────┴──────────┴──────────┴──────────┘
-                           │
-                           ▼
-                ┌────────────────────────┐
-                │   ETL PIPELINE         │
-                │ • Data Extraction      │◄──────┐
-                │ • Transformation       │       │
-                │ • Validation           │       │
-                └───────────┬────────────┘       │
-                            │                    │
-                            ▼                    │
-                ┌────────────────────────┐       │
-                │  CALCULATION ENGINE    │       │
-                │ • KPI Computation      │◄──────┤
-                │ • Aggregation          │       │
-                │ • Trend Analysis       │       │
-                └───────────┬────────────┘       │
-                            │                    │
-            ┌───────────────┼────────────┐       │
-            │               │            │       │
-            ▼               ▼            ▼       │
-    ┌─────────────┐  ┌──────────┐  ┌──────────┐  │
-    │  DASHBOARD  │  │ REST API │  │ MONITOR  │  │
-    │   Visual    │  │  Export  │  │ Anomaly  │  │
-    │ Analytics   │  │          │  │ Detection│  │
-    └─────────────┘  └──────────┘  └────┬─────┘  │
-                                        │        │
-                                        ▼        │
-                                 ┌───────────────┤
-                                 │ ALERT SYSTEM  │
-                                 │ • Email       │
-                                 │ • WA / Tg     │
-                                 │ • SMS         │
-                                 └───────────────┘
-                                         ▲
-                                         │
-                            ┌────────────┴────────────┐
-                            │  MANUAL CONFIGURATION   │
-                            │ • Role-specific KPIs    │
-                            │ • Alert Thresholds      │
-                            │ • Business Rules        │
-                            └─────────────────────────┘
-    </pre>
 </section>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rare Digits | Corsair HQ Demo | Staff</title>
+    <title>Rare Digits | Corsair HQ Demo | Forecast</title>
 
     <link rel="icon" href="/assets/img/favicon/favicon.svg" sizes="any" type="image/svg+xml">
     <link rel="icon" href="/assets/img/favicon/favicon-32.png" sizes="32x32">
@@ -65,13 +65,13 @@
             </a>
           </li>
         
-          <li >
+          <li  class="nav-global-current">
             <a href="/demo/corsair/forecast/" title="Forecast">
               <span class="material-symbols-outlined">insights</span>
             </a>
           </li>
         
-          <li  class="nav-global-current">
+          <li >
             <a href="/demo/corsair/staff/" title="Staff">
               <span class="material-symbols-outlined">family_group</span>
             </a>
@@ -110,834 +110,303 @@
 
 
 
-
-
-
-
-
 <header class="demo-hero">
     <div>
-        <h1>Staff</h1>
-        <p class="muted">Workforce economics · core team + freelance bench + advisory board</p>
+        <h1>Forecast</h1>
+        <p class="muted">12-week cash forward · runway under each scenario · counterfactuals you can toggle</p>
     </div>
-    <div class="as-of">18 FTE · 12 freelancers</div>
+    <div class="as-of">Base: 2026-03-28 · 12-week horizon</div>
 </header>
 
-<!-- Jeeves staff insights -->
-
-
+<!-- Jeeves framing -->
 <div class="jeeves-card">
     <div class="jeeves-avatar">J</div>
     <div class="jeeves-body">
-        <h3>Headcount stable, utilisation likely below target</h3>
-        <p>FTE 18 since Q3 2025. With Lantern Bay just delivered and only Aurora + a handful of installations active in April, productive utilisation will dip to ~62% in May. That is fine for one month; if it persists into June you should freeze the planned creative hire and lean harder on the freelance bench.</p>
+        <h3>What-if, in numbers</h3>
+        <p>Below is your forward cash position week-by-week through 22 June 2026, starting from AED 9.1M unrestricted. Toggle the chips — every scenario adjusts the bars, the runway days, and the delta tile in real time.</p>
         <p class="signature">— Jeeves</p>
     </div>
-    <span class="pill info">info</span>
+    <span class="pill info">Forward-looking</span>
 </div>
 
-<div class="jeeves-card">
-    <div class="jeeves-avatar">J</div>
-    <div class="jeeves-body">
-        <h3>Sheleesh — escalation needed, not avoidance</h3>
-        <p>Head of Production has owned the Umbrella account end-to-end and the dispute has now lasted 12 weeks. He is also unreachable per the Invoice #329 status note. This is a managerial issue, not a project issue. Recommend founder-MD has a direct conversation this week before the dispute crystallises into a quality / performance pattern.</p>
-        <p class="signature">— Jeeves</p>
+<!-- Summary tiles (live, updated by JS) -->
+<section class="forecast-summary">
+    <div class="forecast-tile">
+        <div class="forecast-label">Projected end-of-horizon cash</div>
+        <div class="forecast-value" id="forecast-cash-value">10.5M</div>
+        <div class="forecast-delta" id="forecast-delta-value">base case · no toggles applied</div>
     </div>
-    <span class="pill warn">warning</span>
-</div>
-
-
-<!-- KPI strip -->
-<section class="kpi-strip">
-    <div class="kpi-tile">
-        <div class="kpi-label">Headcount</div>
-        <div class="kpi-value">18</div>
-        <div class="kpi-foot">FTE · stable since Q3 2025</div>
+    <div class="forecast-tile">
+        <div class="forecast-label">Runway from today</div>
+        <div class="forecast-value green" id="forecast-runway-value">98d</div>
+        <div class="forecast-delta">at full burn (OpEx + in-flight COGS) · target ≥ 90d</div>
     </div>
-    <div class="kpi-tile">
-        <div class="kpi-label">Monthly payroll</div>
-        <div class="kpi-value">542K</div>
-        <div class="kpi-foot">Core only · before benefits</div>
-    </div>
-    <div class="kpi-tile kpi-good">
-        <div class="kpi-label">Revenue / FTE (annual)</div>
-        <div class="kpi-value">1.96M</div>
-        <div class="kpi-foot">2025 actual · industry benchmark 1.4M</div>
-    </div>
-    <div class="kpi-tile">
-        <div class="kpi-label">Freelance bench</div>
-        <div class="kpi-value">12</div>
-        <div class="kpi-foot">Active in last 12 months</div>
+    <div class="forecast-tile">
+        <div class="forecast-label">Lowest week in horizon</div>
+        <div class="forecast-value" id="forecast-lowest-value">8.4M</div>
+        <div class="forecast-delta">week of Apr 13 · payroll + Aurora burn</div>
     </div>
 </section>
 
-<!-- Headcount trend -->
+<!-- Scenario rail -->
 <div class="section-head">
-    <h2>Headcount · 27 months</h2>
-    <span class="meta">11 → 18 FTE</span>
+    <h2>Scenario toggles</h2>
+    <span class="meta">Click to add or remove an assumption</span>
 </div>
-<section>
-    
-    <div style="display: grid; grid-template-columns: repeat(10, 1fr); gap: var(--space-sm); align-items: end; height: 100px;">
-        
-            
-            <div style="text-align: center;">
-                <div style="height: 61%; min-height: 8px; background: var(--tct-jeeves); border-radius: 2px 2px 0 0;" title="2024-01: 11 FTE"></div>
-                <div class="row-sub" style="margin-top: 4px;">11</div>
-                <div class="row-sub">24/01</div>
-            </div>
-        
-            
-            <div style="text-align: center;">
-                <div style="height: 66%; min-height: 8px; background: var(--tct-jeeves); border-radius: 2px 2px 0 0;" title="2024-04: 12 FTE"></div>
-                <div class="row-sub" style="margin-top: 4px;">12</div>
-                <div class="row-sub">24/04</div>
-            </div>
-        
-            
-            <div style="text-align: center;">
-                <div style="height: 72%; min-height: 8px; background: var(--tct-jeeves); border-radius: 2px 2px 0 0;" title="2024-07: 13 FTE"></div>
-                <div class="row-sub" style="margin-top: 4px;">13</div>
-                <div class="row-sub">24/07</div>
-            </div>
-        
-            
-            <div style="text-align: center;">
-                <div style="height: 72%; min-height: 8px; background: var(--tct-jeeves); border-radius: 2px 2px 0 0;" title="2024-10: 13 FTE"></div>
-                <div class="row-sub" style="margin-top: 4px;">13</div>
-                <div class="row-sub">24/10</div>
-            </div>
-        
-            
-            <div style="text-align: center;">
-                <div style="height: 77%; min-height: 8px; background: var(--tct-jeeves); border-radius: 2px 2px 0 0;" title="2025-01: 14 FTE"></div>
-                <div class="row-sub" style="margin-top: 4px;">14</div>
-                <div class="row-sub">25/01</div>
-            </div>
-        
-            
-            <div style="text-align: center;">
-                <div style="height: 94%; min-height: 8px; background: var(--tct-jeeves); border-radius: 2px 2px 0 0;" title="2025-04: 17 FTE · Hiring spree post-Lantern Bay 2025 success"></div>
-                <div class="row-sub" style="margin-top: 4px;">17</div>
-                <div class="row-sub">25/04</div>
-            </div>
-        
-            
-            <div style="text-align: center;">
-                <div style="height: 100%; min-height: 8px; background: var(--tct-jeeves); border-radius: 2px 2px 0 0;" title="2025-07: 18 FTE"></div>
-                <div class="row-sub" style="margin-top: 4px;">18</div>
-                <div class="row-sub">25/07</div>
-            </div>
-        
-            
-            <div style="text-align: center;">
-                <div style="height: 100%; min-height: 8px; background: var(--tct-jeeves); border-radius: 2px 2px 0 0;" title="2025-10: 18 FTE"></div>
-                <div class="row-sub" style="margin-top: 4px;">18</div>
-                <div class="row-sub">25/10</div>
-            </div>
-        
-            
-            <div style="text-align: center;">
-                <div style="height: 100%; min-height: 8px; background: var(--tct-jeeves); border-radius: 2px 2px 0 0;" title="2026-01: 18 FTE"></div>
-                <div class="row-sub" style="margin-top: 4px;">18</div>
-                <div class="row-sub">26/01</div>
-            </div>
-        
-            
-            <div style="text-align: center;">
-                <div style="height: 100%; min-height: 8px; background: var(--tct-jeeves); border-radius: 2px 2px 0 0;" title="2026-03: 18 FTE"></div>
-                <div class="row-sub" style="margin-top: 4px;">18</div>
-                <div class="row-sub">26/03</div>
-            </div>
-        
+<div class="scenario-rail"
+     data-base-runway-days="98"
+     data-monthly-opex="2785000"
+     data-base-unrestricted="9100000"
+     data-bar-max="15000000">
+    <h4>Cash positive</h4>
+    <div class="scenario-list" style="margin-bottom: var(--space-md);">
+        <div class="scenario-toggle positive" data-impact="800000" data-scenario="aldira">
+            <span class="material-symbols-outlined" style="font-size: 1.1em;">check_circle</span>
+            Aldira settles
+            <span class="scenario-impact">+800K</span>
+        </div>
+        <div class="scenario-toggle positive" data-impact="1100000" data-scenario="aurora-co">
+            <span class="material-symbols-outlined" style="font-size: 1.1em;">check_circle</span>
+            Aurora signs change order
+            <span class="scenario-impact">+1.1M</span>
+        </div>
+        <div class="scenario-toggle positive" data-impact="108000" data-scenario="umbrella">
+            <span class="material-symbols-outlined" style="font-size: 1.1em;">check_circle</span>
+            Umbrella settles AED 108K
+            <span class="scenario-impact">+108K</span>
+        </div>
+        <div class="scenario-toggle positive" data-impact="540000" data-scenario="lloyds">
+            <span class="material-symbols-outlined" style="font-size: 1.1em;">check_circle</span>
+            Lloyds settles 50% remainder
+            <span class="scenario-impact">+540K</span>
+        </div>
     </div>
-    <p class="muted" style="font-size: 0.8em; margin-top: var(--space-md);">Hiring spree in Q2 2025 (+3 FTE) was funded by Lantern Bay 2025 outperformance. Frozen since.</p>
+
+    <h4>Cash negative</h4>
+    <div class="scenario-list" style="margin-bottom: var(--space-md);">
+        <div class="scenario-toggle negative" data-impact="-1820000" data-scenario="adnoc-delay">
+            <span class="material-symbols-outlined" style="font-size: 1.1em;">remove_circle</span>
+            ADNOC delays Apr 29 payment
+            <span class="scenario-impact">−1.82M</span>
+        </div>
+        <div class="scenario-toggle negative" data-impact="-990000" data-scenario="aurora-loss">
+            <span class="material-symbols-outlined" style="font-size: 1.1em;">remove_circle</span>
+            Aurora loss crystallises
+            <span class="scenario-impact">−990K</span>
+        </div>
+        <div class="scenario-toggle negative" data-impact="-200000" data-scenario="lloyds-suit">
+            <span class="material-symbols-outlined" style="font-size: 1.1em;">remove_circle</span>
+            Lloyds civil suit (legal cost)
+            <span class="scenario-impact">−200K</span>
+        </div>
+    </div>
+
+    <h4>Strategic</h4>
+    <div class="scenario-list">
+        <div class="scenario-toggle negative" data-impact="-69000" data-scenario="hire">
+            <span class="material-symbols-outlined" style="font-size: 1.1em;">person_add</span>
+            Approve Q2 creative hire
+            <span class="scenario-impact">−23K/mo · 3mo</span>
+        </div>
+        <div class="scenario-toggle negative" data-impact="-800000" data-scenario="festival-3">
+            <span class="material-symbols-outlined" style="font-size: 1.1em;">festival</span>
+            Greenlight 3rd festival IP for autumn
+            <span class="scenario-impact">−800K seed</span>
+        </div>
+        <div class="scenario-toggle positive" data-impact="500000" data-scenario="freeze-installations">
+            <span class="material-symbols-outlined" style="font-size: 1.1em;">pause_circle</span>
+            Pause Installations unit (3 months)
+            <span class="scenario-impact">+500K saved</span>
+        </div>
+    </div>
+</div>
+
+<!-- The forecast chart itself -->
+<div class="section-head">
+    <h2>Weekly closing cash · 12 weeks</h2>
+    <span class="meta">Bars = unrestricted cash at end of week · jeeves-glow = current week</span>
+</div>
+<section style="background: #fff; border: 1px solid var(--tct-border); border-radius: var(--space-sm); padding: var(--space-lg); padding-bottom: calc(var(--space-lg) + 24px);">
+    <div class="forecast-chart">
+        <!-- 13 bars · base values · JS recomputes on toggle. data-base in AED -->
+        <div class="fc-bar-wrap"><div class="fc-bar this-week good" data-base="9100000" style="height: 60%"></div><div class="fc-label">Mar 30</div></div>
+        <div class="fc-bar-wrap"><div class="fc-bar good"          data-base="8620000" style="height: 57%"></div><div class="fc-label">Apr 6</div></div>
+        <div class="fc-bar-wrap"><div class="fc-bar good"          data-base="8400000" style="height: 56%"></div><div class="fc-label">Apr 13</div></div>
+        <div class="fc-bar-wrap"><div class="fc-bar good"          data-base="9360000" style="height: 62%"></div><div class="fc-label">Apr 20</div></div>
+        <div class="fc-bar-wrap"><div class="fc-bar good"          data-base="8920000" style="height: 59%"></div><div class="fc-label">Apr 27</div></div>
+        <div class="fc-bar-wrap"><div class="fc-bar good"          data-base="10470000" style="height: 70%"></div><div class="fc-label">May 4</div></div>
+        <div class="fc-bar-wrap"><div class="fc-bar good"          data-base="10210000" style="height: 68%"></div><div class="fc-label">May 11</div></div>
+        <div class="fc-bar-wrap"><div class="fc-bar good"          data-base="11460000" style="height: 76%"></div><div class="fc-label">May 18</div></div>
+        <div class="fc-bar-wrap"><div class="fc-bar good"          data-base="11030000" style="height: 73%"></div><div class="fc-label">May 25</div></div>
+        <div class="fc-bar-wrap"><div class="fc-bar good"          data-base="10720000" style="height: 71%"></div><div class="fc-label">Jun 1</div></div>
+        <div class="fc-bar-wrap"><div class="fc-bar good"          data-base="10490000" style="height: 70%"></div><div class="fc-label">Jun 8</div></div>
+        <div class="fc-bar-wrap"><div class="fc-bar good"          data-base="10260000" style="height: 68%"></div><div class="fc-label">Jun 15</div></div>
+        <div class="fc-bar-wrap"><div class="fc-bar good"          data-base="10520000" style="height: 70%"></div><div class="fc-label">Jun 22</div></div>
+    </div>
+    <p class="muted" style="font-size: 0.75rem; margin-top: var(--space-md); padding-top: var(--space-sm); border-top: 1px dashed var(--tct-border);">
+        <strong>Bar colour:</strong>
+        <span style="display: inline-block; width: 8px; height: 8px; background: var(--tct-good); border-radius: 2px;"></span> &gt; AED 7M
+        <span style="display: inline-block; width: 8px; height: 8px; background: var(--tct-warn); border-radius: 2px; margin-left: var(--space-md);"></span> AED 4–7M
+        <span style="display: inline-block; width: 8px; height: 8px; background: var(--tct-bad); border-radius: 2px; margin-left: var(--space-md);"></span> &lt; AED 4M (red zone)
+    </p>
 </section>
 
-<!-- Department breakdown -->
+<!-- Scheduled cash events the model bakes in -->
 <div class="section-head">
-    <h2>By Department</h2>
-    <span class="meta">Cost & headcount</span>
+    <h2>Scheduled cash events · the 12-week base case</h2>
+    <span class="meta">Calendar items the projection already counts</span>
 </div>
 <section>
     <table class="tct-table">
         <thead>
             <tr>
-                <th>Department</th>
-                <th>Head</th>
-                <th class="num">FTE</th>
-                <th class="num">Monthly cost</th>
-                <th class="num">% of payroll</th>
+                <th>Date</th>
+                <th>Event</th>
+                <th>Source</th>
+                <th class="num">Impact</th>
                 <th>Note</th>
             </tr>
         </thead>
         <tbody>
-            
-                
-                
-                
-                
-                
-                <tr>
-                    <td><strong>Leadership</strong></td>
-                    <td>Reem Bouhassan</td>
-                    <td class="num">2</td>
-                    <td class="num">120K</td>
-                    <td class="num">22%</td>
-                    <td class="row-sub">
-                        
-                        2 founders, equity-driven
-                    </td>
-                </tr>
-            
-                
-                
-                
-                
-                
-                <tr>
-                    <td><strong>Finance</strong></td>
-                    <td>Yousef Khoury</td>
-                    <td class="num">3</td>
-                    <td class="num">80K</td>
-                    <td class="num">14%</td>
-                    <td class="row-sub">
-                        
-                        
-                    </td>
-                </tr>
-            
-                
-                
-                
-                
-                
-                <tr>
-                    <td><strong>Production</strong></td>
-                    <td>Sheleesh Quereshi</td>
-                    <td class="num">4</td>
-                    <td class="num">122K</td>
-                    <td class="num">22%</td>
-                    <td class="row-sub">
-                        Owns Umbrella dispute · in spotlight
-                        
-                    </td>
-                </tr>
-            
-                
-                
-                
-                
-                
-                <tr>
-                    <td><strong>Accounts</strong></td>
-                    <td>Khalil Ammari</td>
-                    <td class="num">3</td>
-                    <td class="num">85K</td>
-                    <td class="num">15%</td>
-                    <td class="row-sub">
-                        
-                        
-                    </td>
-                </tr>
-            
-                
-                
-                
-                
-                
-                <tr>
-                    <td><strong>Creative</strong></td>
-                    <td>Jiwon Park</td>
-                    <td class="num">3</td>
-                    <td class="num">76K</td>
-                    <td class="num">14%</td>
-                    <td class="row-sub">
-                        
-                        
-                    </td>
-                </tr>
-            
-                
-                
-                
-                
-                
-                <tr>
-                    <td><strong>Operations</strong></td>
-                    <td>Devika Pillai</td>
-                    <td class="num">3</td>
-                    <td class="num">59K</td>
-                    <td class="num">10%</td>
-                    <td class="row-sub">
-                        
-                        
-                    </td>
-                </tr>
-            
+            <tr>
+                <td>2026-04-01</td>
+                <td><strong>Payroll run · April</strong></td>
+                <td><span class="system-badge bayzat">Bayzat</span></td>
+                <td class="num red">−480K</td>
+                <td class="row-sub">WPS via Mashreq · 18 FTE</td>
+            </tr>
+            <tr>
+                <td>2026-04-15</td>
+                <td><strong>Lantern Bay vendor settlement</strong></td>
+                <td><span class="system-badge tickets">Ticketstream</span></td>
+                <td class="num">±0 net</td>
+                <td class="row-sub">Escrow 5.64M out · matched by booked vendor liability · operating cash unaffected</td>
+            </tr>
+            <tr>
+                <td>2026-04-24</td>
+                <td><strong>Family K. milestone in</strong></td>
+                <td><span class="system-badge zoho">Zoho</span></td>
+                <td class="num green">+960K</td>
+                <td class="row-sub">40% on event-day milestone</td>
+            </tr>
+            <tr>
+                <td>2026-04-29</td>
+                <td><strong>ADNOC Innovation 2026 payment</strong></td>
+                <td><span class="system-badge bank">Bank</span></td>
+                <td class="num green">+1.82M</td>
+                <td class="row-sub">Net 90 — pays exactly day 90</td>
+            </tr>
+            <tr>
+                <td>2026-05-15</td>
+                <td><strong>Festival surplus to operating</strong></td>
+                <td><span class="system-badge tickets">Ticketstream</span></td>
+                <td class="num green">+1.45M</td>
+                <td class="row-sub">Lantern Bay GP after vendor settlement</td>
+            </tr>
+            <tr>
+                <td>2026-05-01</td>
+                <td><strong>Payroll run · May</strong></td>
+                <td><span class="system-badge bayzat">Bayzat</span></td>
+                <td class="num red">−480K</td>
+                <td class="row-sub">WPS via Mashreq</td>
+            </tr>
+            <tr>
+                <td>2026-06-01</td>
+                <td><strong>Payroll run · June</strong></td>
+                <td><span class="system-badge bayzat">Bayzat</span></td>
+                <td class="num red">−480K</td>
+                <td class="row-sub">WPS via Mashreq</td>
+            </tr>
+            <tr>
+                <td>2026-06-15</td>
+                <td><strong>VAT return Q1</strong></td>
+                <td><span class="system-badge zoho">Zoho</span></td>
+                <td class="num red">−420K</td>
+                <td class="row-sub">5% net VAT · Federal Tax Authority</td>
+            </tr>
         </tbody>
     </table>
 </section>
 
-<!-- Core team table -->
+<!-- Scenario reference cards -->
 <div class="section-head">
-    <h2>Core Team · 18 FTE</h2>
-    <span class="meta">Sorted by tenure</span>
+    <h2>What each scenario assumes</h2>
+    <span class="meta">Where the numbers come from</span>
 </div>
 <section>
     <table class="tct-table">
         <thead>
-            <tr>
-                <th>Name</th>
-                <th>Role</th>
-                <th>Department</th>
-                <th>Joined</th>
-                <th>Nationality</th>
-                <th class="num">Monthly</th>
-                <th>Note</th>
-            </tr>
+            <tr><th>Scenario</th><th>Assumes</th><th>Source / evidence</th><th class="num">Impact</th></tr>
         </thead>
         <tbody>
-            
-            
-                <tr>
-                    <td><strong>Florian Becker</strong></td>
-                    <td>Founder / Managing Director</td>
-                    <td><span class="pill muted">Leadership</span></td>
-                    <td>2019-03-14</td>
-                    <td class="row-sub">German</td>
-                    <td class="num">58K</td>
-                    <td class="row-sub">
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Reem Bouhassan</strong></td>
-                    <td>Founder / Creative Director</td>
-                    <td><span class="pill muted">Leadership</span></td>
-                    <td>2019-03-14</td>
-                    <td class="row-sub">Lebanese</td>
-                    <td class="num">62K</td>
-                    <td class="row-sub">
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Khalil Ammari</strong></td>
-                    <td>Head of Client Services</td>
-                    <td><span class="pill muted">Accounts</span></td>
-                    <td>2020-02-09</td>
-                    <td class="row-sub">Jordanian</td>
-                    <td class="num">38K</td>
-                    <td class="row-sub">
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Devika Pillai</strong></td>
-                    <td>Studio Manager</td>
-                    <td><span class="pill muted">Operations</span></td>
-                    <td>2020-06-15</td>
-                    <td class="row-sub">Indian</td>
-                    <td class="num">24K</td>
-                    <td class="row-sub">
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Sheleesh Quereshi</strong></td>
-                    <td>Head of Production</td>
-                    <td><span class="pill muted">Production</span></td>
-                    <td>2020-08-01</td>
-                    <td class="row-sub">Pakistani</td>
-                    <td class="num">41K</td>
-                    <td class="row-sub">
-                        <span class="red">⚠ Owns the Umbrella Inc. account — currently disputed</span>
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Yousef Khoury</strong></td>
-                    <td>CFO</td>
-                    <td><span class="pill muted">Finance</span></td>
-                    <td>2021-01-04</td>
-                    <td class="row-sub">Lebanese-Canadian</td>
-                    <td class="num">45K</td>
-                    <td class="row-sub">
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Jiwon Park</strong></td>
-                    <td>Creative Lead</td>
-                    <td><span class="pill muted">Creative</span></td>
-                    <td>2021-05-20</td>
-                    <td class="row-sub">Korean</td>
-                    <td class="num">33K</td>
-                    <td class="row-sub">
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Trisha Aquino</strong></td>
-                    <td>Bookings & Permits Officer</td>
-                    <td><span class="pill muted">Operations</span></td>
-                    <td>2021-09-22</td>
-                    <td class="row-sub">Filipino</td>
-                    <td class="num">16K</td>
-                    <td class="row-sub">
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Marco Reyes</strong></td>
-                    <td>Senior Producer</td>
-                    <td><span class="pill muted">Production</span></td>
-                    <td>2021-11-15</td>
-                    <td class="row-sub">Filipino</td>
-                    <td class="num">28K</td>
-                    <td class="row-sub">
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Pavel Drozdov</strong></td>
-                    <td>Logistics Lead</td>
-                    <td><span class="pill muted">Operations</span></td>
-                    <td>2022-01-10</td>
-                    <td class="row-sub">Russian</td>
-                    <td class="num">19K</td>
-                    <td class="row-sub">
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Mathilde Vermeulen</strong></td>
-                    <td>Festival Producer</td>
-                    <td><span class="pill muted">Production</span></td>
-                    <td>2022-04-04</td>
-                    <td class="row-sub">Dutch</td>
-                    <td class="num">31K</td>
-                    <td class="row-sub">
-                        <span class="red">⚠ Owns Ancient Moon Festival and Lantern Bay</span>
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Imran Sayed</strong></td>
-                    <td>Senior Accountant</td>
-                    <td><span class="pill muted">Finance</span></td>
-                    <td>2022-07-11</td>
-                    <td class="row-sub">Indian</td>
-                    <td class="num">18K</td>
-                    <td class="row-sub">
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Giulia Rinaldi</strong></td>
-                    <td>Senior Account Manager</td>
-                    <td><span class="pill muted">Accounts</span></td>
-                    <td>2022-09-01</td>
-                    <td class="row-sub">Italian</td>
-                    <td class="num">26K</td>
-                    <td class="row-sub">
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Tariq Saleh</strong></td>
-                    <td>Senior Designer</td>
-                    <td><span class="pill muted">Creative</span></td>
-                    <td>2022-11-07</td>
-                    <td class="row-sub">Egyptian</td>
-                    <td class="num">23K</td>
-                    <td class="row-sub">
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Nadia Fakhoury</strong></td>
-                    <td>HR & Admin Manager</td>
-                    <td><span class="pill muted">Finance</span></td>
-                    <td>2023-02-05</td>
-                    <td class="row-sub">Syrian</td>
-                    <td class="num">17K</td>
-                    <td class="row-sub">
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Anika Raghunathan</strong></td>
-                    <td>Producer</td>
-                    <td><span class="pill muted">Production</span></td>
-                    <td>2023-06-01</td>
-                    <td class="row-sub">Indian</td>
-                    <td class="num">22K</td>
-                    <td class="row-sub">
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Sienna Whitfield</strong></td>
-                    <td>Set Designer</td>
-                    <td><span class="pill muted">Creative</span></td>
-                    <td>2023-10-12</td>
-                    <td class="row-sub">British</td>
-                    <td class="num">20K</td>
-                    <td class="row-sub">
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Faisal Karim</strong></td>
-                    <td>Account Manager</td>
-                    <td><span class="pill muted">Accounts</span></td>
-                    <td>2024-03-18</td>
-                    <td class="row-sub">Pakistani</td>
-                    <td class="num">21K</td>
-                    <td class="row-sub">
-                        
-                    </td>
-                </tr>
-            
+            <tr>
+                <td><strong>Aldira settles</strong></td>
+                <td>Demand letter sent today · settlement within 21 days</td>
+                <td class="row-sub">Counsel: high recovery probability against UAE assets</td>
+                <td class="num green">+AED 800K</td>
+            </tr>
+            <tr>
+                <td><strong>Aurora signs CO</strong></td>
+                <td>Vision Realm signs USD 300K change order before Apr 11</td>
+                <td class="row-sub">Currently unsigned · scope already doubled in Asana</td>
+                <td class="num green">+AED 1.1M</td>
+            </tr>
+            <tr>
+                <td><strong>Aurora loss crystallises</strong></td>
+                <td>CO not signed · margin loss booked</td>
+                <td class="row-sub">Cost-to-date 85% of budget at 60% timeline</td>
+                <td class="num red">−AED 990K</td>
+            </tr>
+            <tr>
+                <td><strong>Umbrella settles</strong></td>
+                <td>Founder-MD escalation works · AED 108K paid</td>
+                <td class="row-sub">Symbolic but unlocks Phase 2 (AED 620K) backlog</td>
+                <td class="num green">+AED 108K</td>
+            </tr>
+            <tr>
+                <td><strong>ADNOC delays</strong></td>
+                <td>Net 90 stretches by 14 days</td>
+                <td class="row-sub">ADNOC's own AP backlog · happened twice in 2025</td>
+                <td class="num red">−AED 1.82M (timing)</td>
+            </tr>
+            <tr>
+                <td><strong>Lloyds settles</strong></td>
+                <td>Carrier accepts mediation · 50% of remainder paid</td>
+                <td class="row-sub">Currently declined · counsel says low probability</td>
+                <td class="num green">+AED 540K</td>
+            </tr>
+            <tr>
+                <td><strong>Lloyds civil suit</strong></td>
+                <td>Counsel instructed · legal costs over 12 weeks</td>
+                <td class="row-sub">Quoted AED 180–240K · NPV upside +AED 525K in 9–14mo</td>
+                <td class="num red">−AED 200K (12-wk)</td>
+            </tr>
+            <tr>
+                <td><strong>Q2 creative hire</strong></td>
+                <td>Approve Senior Creative role · April start</td>
+                <td class="row-sub">Salary AED 23K/mo · benefits + recruiter</td>
+                <td class="num red">−AED 69K (3mo)</td>
+            </tr>
+            <tr>
+                <td><strong>3rd festival IP</strong></td>
+                <td>Seed autumn IP · pre-production cost · revenue out of horizon</td>
+                <td class="row-sub">Ancient Moon margin demonstrates 35–40% upside</td>
+                <td class="num red">−AED 800K (seed)</td>
+            </tr>
+            <tr>
+                <td><strong>Pause Installations</strong></td>
+                <td>Reassign Sheleesh + 1 producer; freeze pipeline 3mo</td>
+                <td class="row-sub">Unit −36% on plan in 2025; recovers tight cost</td>
+                <td class="num green">+AED 500K saved</td>
+            </tr>
         </tbody>
     </table>
 </section>
 
-<!-- Freelance bench -->
-<div class="section-head">
-    <h2>Freelance Bench</h2>
-    <span class="meta">Per-day rates · used on demand</span>
+<div class="jeeves-inline" style="margin-top: var(--space-lg);">
+    <span class="label">Jeeves</span>
+    <span class="body">Toggle every cash-positive scenario at once and you finish the horizon at AED 13M. Toggle every cash-negative scenario at once and you finish at AED 7.4M — still above red, but with no buffer for surprises. The point of this page is not to predict the future; it is to make every possible future legible <em>before</em> it happens.</span>
 </div>
-<section>
-    <table class="tct-table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Role</th>
-                <th>Nationality</th>
-                <th class="num">Day rate</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            
-            
-                <tr>
-                    <td><strong>Omar Saqqaf</strong></td>
-                    <td>MC / Compere</td>
-                    <td class="row-sub">Yemeni</td>
-                    <td class="num">6500</td>
-                    <td><span class="pill muted">Approved</span></td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Tomasz Wójcik</strong></td>
-                    <td>Video Director</td>
-                    <td class="row-sub">Polish</td>
-                    <td class="num">5500</td>
-                    <td><span class="pill muted">Approved</span></td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Mira Hadid</strong></td>
-                    <td>Production Designer</td>
-                    <td class="row-sub">Lebanese</td>
-                    <td class="num">5200</td>
-                    <td><span class="pill good">★ Favourite</span></td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Andrei Volkov</strong></td>
-                    <td>Lighting Designer</td>
-                    <td class="row-sub">Russian</td>
-                    <td class="num">4800</td>
-                    <td><span class="pill good">★ Favourite</span></td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Rashid Al-Maktoum (no relation)</strong></td>
-                    <td>Lead Stage Manager</td>
-                    <td class="row-sub">Emirati</td>
-                    <td class="num">4500</td>
-                    <td><span class="pill good">★ Favourite</span></td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Hassan Al-Marri</strong></td>
-                    <td>Arabic Calligrapher / Live Artist</td>
-                    <td class="row-sub">Emirati</td>
-                    <td class="num">4200</td>
-                    <td><span class="pill muted">Approved</span></td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Jorge Almeida</strong></td>
-                    <td>Audio Engineer</td>
-                    <td class="row-sub">Portuguese</td>
-                    <td class="num">3800</td>
-                    <td><span class="pill muted">Approved</span></td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Priya Menon</strong></td>
-                    <td>Choreographer</td>
-                    <td class="row-sub">Indian</td>
-                    <td class="num">3500</td>
-                    <td><span class="pill muted">Approved</span></td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Lina Habibi</strong></td>
-                    <td>Stylist</td>
-                    <td class="row-sub">Iranian-Canadian</td>
-                    <td class="num">3200</td>
-                    <td><span class="pill muted">Approved</span></td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Emma O'Sullivan</strong></td>
-                    <td>Floor Manager</td>
-                    <td class="row-sub">Irish</td>
-                    <td class="num">3000</td>
-                    <td><span class="pill muted">Approved</span></td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Vikram Bhatia</strong></td>
-                    <td>Camera Operator</td>
-                    <td class="row-sub">Indian</td>
-                    <td class="num">2800</td>
-                    <td><span class="pill muted">Approved</span></td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Ayesha Rahman</strong></td>
-                    <td>Stage Carpenter</td>
-                    <td class="row-sub">Bangladeshi</td>
-                    <td class="num">2400</td>
-                    <td><span class="pill muted">Approved</span></td>
-                </tr>
-            
-        </tbody>
-    </table>
-</section>
-
-<!-- Advisory board (the satirical key persons) -->
-<div class="section-head">
-    <h2>Advisory Board</h2>
-    <span class="meta">External · non-executive</span>
-</div>
-<section>
-    <table class="tct-table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Role</th>
-                <th>Tenure</th>
-                <th>Compensation</th>
-                <th>Options</th>
-                <th>Key metrics</th>
-            </tr>
-        </thead>
-        <tbody>
-            
-                <tr>
-                    <td><strong>Donald J. Trump</strong></td>
-                    <td>CEO</td>
-                    <td>4 years</td>
-                    <td>36,700</td>
-                    <td class="row-sub">Insider Trading Rights</td>
-                    <td class="row-sub">
-                        
-                            Deal-Making Index: <strong>Tremendous</strong>
-                            <span class="green">↑</span>
-                            <br>
-                        
-                            Situation Understanding Score: <strong>0</strong>
-                            →<br>
-                        
-                        <span class="red">⚠ Unpredictable decision-making patterns</span>
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Jerome Powell</strong></td>
-                    <td>CFO</td>
-                    <td>6 years</td>
-                    <td>18,000</td>
-                    <td class="row-sub">Freelance</td>
-                    <td class="row-sub">
-                        
-                            Market Volatility: <strong>Up Only</strong>
-                            →<br>
-                        
-                            Money Printed: <strong>-2%</strong>
-                            <span class="red">↓</span>
-                            <br>
-                        
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Elon Musk</strong></td>
-                    <td>Shitposter</td>
-                    <td>2 years</td>
-                    <td>3,000 + equity</td>
-                    <td class="row-sub">Dogecoin</td>
-                    <td class="row-sub">
-                        
-                            Twitter Followers Growth: <strong>18%</strong>
-                            <span class="green">↑</span>
-                            <br>
-                        
-                            Grok Mentions: <strong>x47</strong>
-                            <span class="green">↑</span>
-                            <br>
-                        
-                            New Babies Born: <strong>5</strong>
-                            →<br>
-                        
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Peter Thiel</strong></td>
-                    <td>Chief Product Officer</td>
-                    <td>5 years</td>
-                    <td>1 + equity</td>
-                    <td class="row-sub">Undisclosed</td>
-                    <td class="row-sub">
-                        
-                            Crypto Adoption Rate: <strong>47%</strong>
-                            <span class="green">↑</span>
-                            <br>
-                        
-                            Market Monopolization: <strong>89%</strong>
-                            <span class="green">↑</span>
-                            <br>
-                        
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Zoltan Pozsar</strong></td>
-                    <td>Debt Special Situations</td>
-                    <td>6 years</td>
-                    <td>Volunteer</td>
-                    <td class="row-sub">Professional Glory</td>
-                    <td class="row-sub">
-                        
-                            Debt Optimization: <strong>Undisclosed</strong>
-                            <span class="green">↑</span>
-                            <br>
-                        
-                            Dollar Milkshake Exposure: <strong>Hedged</strong>
-                            →<br>
-                        
-                        <span class="red">⚠ Bretton Woods III scenarios require monitoring</span>
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><strong>HH Sheikh Mohammed bin Rashid Al Maktoum</strong></td>
-                    <td>Sovereign Advisor</td>
-                    <td>Principal Shareholder</td>
-                    <td>Equity</td>
-                    <td class="row-sub">Prosperity Oasis</td>
-                    <td class="row-sub">
-                        
-                            Wisdom Valuation: <strong>Outstanding</strong>
-                            <span class="green">↑</span>
-                            <br>
-                        
-                            Calm Multiplier: <strong>100x</strong>
-                            <span class="green">↑</span>
-                            <br>
-                        
-                            Influence Index: <strong>Outstanding</strong>
-                            <span class="green">↑</span>
-                            <br>
-                        
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Sam Altman</strong></td>
-                    <td>AGI Salesman</td>
-                    <td>1 year</td>
-                    <td>LLM Tokens</td>
-                    <td class="row-sub">AGI Equity</td>
-                    <td class="row-sub">
-                        
-                            Board Reinstatement: <strong>72 hours</strong>
-                            →<br>
-                        
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Warren Buffett</strong></td>
-                    <td>Strategic Advisor</td>
-                    <td>Advisory</td>
-                    <td>Cherry Coke</td>
-                    <td class="row-sub">Cash Parking Opportunities</td>
-                    <td class="row-sub">
-                        
-                            Cash Position Quality: <strong>A+</strong>
-                            <span class="green">↑</span>
-                            <br>
-                        
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><strong>Vladimir Putin</strong></td>
-                    <td>Special Agent (External)</td>
-                    <td>Indefinite</td>
-                    <td>Undisclosed</td>
-                    <td class="row-sub">State Support</td>
-                    <td class="row-sub">
-                        
-                            Evil Scheme Frequency: <strong>Daily</strong>
-                            <span class="green">↑</span>
-                            <br>
-                        
-                            Destabilization Events: <strong>Stable</strong>
-                            →<br>
-                        
-                        <span class="red">⚠ Reputational exposure</span>
-                    </td>
-                </tr>
-            
-        </tbody>
-    </table>
-    <div class="tip">
-        <span class="material-symbols-outlined" style="color: var(--tct-mute)">info</span> Advisory metrics are individually defined per role and tracked against subjective vibes.
-    </div>
-</section>
 
             </article>
         </div>

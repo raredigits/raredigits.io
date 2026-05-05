@@ -1,0 +1,224 @@
+# Jeeves GPT — contextual nudges shown alongside Corsair widgets.
+# Tone: butler-precise, brief, actionable. No filler.
+# severity: critical | warning | info | nice
+# stance: push-sales | push-production | cut-costs | tighten-ar | watch | hold | hire | freeze-hire | hedge | reassure
+# scope: dashboard | production | money | staff | finance | settings | notifications | <project-id> | <invoice-no>
+
+profile:
+  name: "Jeeves"
+  product: "Jeeves GPT"
+  brand: "by Rare Digits"
+  signature: "— Jeeves"
+  avatar: "/assets/img/demo/corsair/jeeves.svg"
+  invocation: "Ask Jeeves"
+  tagline: "Butler-precision insights for executives who'd rather be at the regatta."
+
+# Insights surfaced "today" (2026-03-28). Reference projects/invoices/alerts by id.
+todaySummary:
+  headline: "Two fires, one breeze, and a champagne dilemma."
+  body: "Aurora Gala is bleeding margin while Vision Realm refuses to sign the change order — that is your single largest live risk this quarter. Aldira is still ghosting AED 800K. Lantern Bay 2026 sold out and Q1 beat plan by 9.6%. The escrow account holds AED 5.6M earmarked for vendor settlement on April 15 — do not look at that number as cash."
+  stance: "watch"
+  severity: "warning"
+  refresh: "2026-03-28T08:00:00+04:00"
+
+# Keyed insights — one per scope/page where Jeeves is invoked
+insights:
+
+  # --- Dashboard hero strip ---
+  - id: "j-dash-01"
+    scope: "dashboard"
+    title: "Q1 beat plan, but cash composition is misleading"
+    body: "Production +9.6% vs Q1 plan, Payments +5%. That is genuinely good. Look past the headline cash number though: AED 5.64M of the AED 14.74M total is escrow for Lantern Bay vendor payouts (April 15). Unrestricted cash AED 9.1M — about 10 weeks of OpEx. Comfortable, not abundant."
+    stance: "watch"
+    severity: "info"
+    confidence: "high"
+    sources: ["cashflow.yml#cashSnapshot", "targets.yml#annual.2026"]
+
+  - id: "j-dash-02"
+    scope: "dashboard"
+    title: "Aurora Gala is the only thing keeping me up at night"
+    body: "Cost-to-date 85% of budget at 60% of timeline. Forecast loss AED 990K unless Vision Realm signs the LED-dome change order. Single project, single client risk. I would freeze further fabrication today and have the founders call the KSA principal before another vendor PO is cut."
+    stance: "cut-costs"
+    severity: "critical"
+    confidence: "high"
+    sources: ["projects.yml#p-2026-007", "invoices.yml#TCT-2026-038", "alerts.yml#alert-2026-001"]
+    suggestedActions:
+      - "Halt fabrication & lighting POs (PROT, ECL) until written CO."
+      - "Founder-MD call to KSA principal before EOD."
+      - "Prepare withdraw-from-scope option as BATNA."
+
+  # --- Production page ---
+  - id: "j-prod-01"
+    scope: "production"
+    title: "Push production on Bluewaters AR before margin slips"
+    body: "Burn rate +12% vs plan, AR engine vendor stalling. Currently green-yellow. If software delay extends past 2026-04-10, you lose the buffer and we land in red. Either swap the AR vendor (I have three pre-vetted alternatives) or absorb a 2-week schedule slip and renegotiate the milestone with Meraas now while goodwill is intact."
+    stance: "push-production"
+    severity: "warning"
+    confidence: "medium"
+    sources: ["projects.yml#p-2026-006", "alerts.yml#alert-2026-005"]
+
+  - id: "j-prod-02"
+    scope: "production"
+    title: "Installations unit is materially underperforming"
+    body: "2025 installations actual AED 2.55M vs plan AED 4M (-36%). 2026 YTD even worse. Either kill the unit, find a permanent partnership with one developer, or invest in a dedicated head. Right now Sheleesh is splitting attention and Umbrella demonstrates how that ends."
+    stance: "watch"
+    severity: "warning"
+    confidence: "high"
+    sources: ["targets.yml#unitAnnual", "projects.yml#p-2024-012"]
+
+  # --- Money page ---
+  - id: "j-money-01"
+    scope: "money"
+    title: "Tighten AR collections — Aldira specifically"
+    body: "AED 800K, 36 days overdue, no contact since Feb 15. Send formal demand letter today (template T-3 in your library). Pause new business with Aldira pending settlement. If unresolved by 2026-04-15, instruct counsel to issue statutory demand. Aldira's group has UAE assets — recovery probability is high if you escalate; near-zero if you keep emailing the AP clerk."
+    stance: "tighten-ar"
+    severity: "critical"
+    confidence: "high"
+    sources: ["invoices.yml#TCT-2025-156", "clients.yml#aldira", "alerts.yml#alert-2026-002"]
+
+  - id: "j-money-02"
+    scope: "money"
+    title: "DSO recovering — keep the discipline"
+    body: "DSO down from 78 (Sep '25) to 51 (Mar '26). That is excellent work. The trend is real, not seasonal. The two clients dragging it up are now Aldira (above) and Umbrella (Invoice #329, AED 6K — symbolic, not financial). Resolve both and you land at industry-leading 42–45 days."
+    stance: "reassure"
+    severity: "nice"
+    confidence: "high"
+    sources: ["cashflow.yml#monthly", "targets.yml#operationalTargets.dso"]
+
+  - id: "j-money-03"
+    scope: "money"
+    title: "USD AR exposure rising — peg holds, but reporting will sting"
+    body: "Open USD receivables now USD 360K (≈AED 1.32M). The AED-USD peg is firm; you won't lose money. But mixed currency invoicing creates unnecessary noise in monthly close. Consider: (a) require AED settlement on regional contracts even when negotiated in USD, or (b) maintain a small forward sweep so internal reporting matches reality."
+    stance: "hedge"
+    severity: "info"
+    confidence: "medium"
+    sources: ["invoices.yml", "alerts.yml#alert-2026-006"]
+
+  - id: "j-money-04"
+    scope: "money"
+    title: "Insurance dispute is dead money — book the write-off"
+    body: "Lloyds claim has been open 18 months. Carrier declined arbitration in January. Counsel advises 50–60% recovery probability via civil suit, with 9–14 month timeline and AED 180–240K legal cost. Net expected value AED 525K–735K. Decision: pursue suit, or write off AED 1.31M and stop carrying a ghost asset on the books. Either is defensible. Limbo is not."
+    stance: "watch"
+    severity: "warning"
+    confidence: "high"
+    sources: ["invoices.yml#LLD-2024-CLM", "alerts.yml#alert-2026-009"]
+
+  # --- Staff page ---
+  - id: "j-staff-01"
+    scope: "staff"
+    title: "Headcount stable, utilisation likely below target"
+    body: "FTE 18 since Q3 2025. With Lantern Bay just delivered and only Aurora + a handful of installations active in April, productive utilisation will dip to ~62% in May. That is fine for one month; if it persists into June you should freeze the planned creative hire and lean harder on the freelance bench."
+    stance: "freeze-hire"
+    severity: "info"
+    confidence: "medium"
+    sources: ["staff.yml#headcountByMonth", "projects.yml"]
+
+  - id: "j-staff-02"
+    scope: "staff"
+    title: "Sheleesh — escalation needed, not avoidance"
+    body: "Head of Production has owned the Umbrella account end-to-end and the dispute has now lasted 12 weeks. He is also unreachable per the Invoice #329 status note. This is a managerial issue, not a project issue. Recommend founder-MD has a direct conversation this week before the dispute crystallises into a quality / performance pattern."
+    stance: "watch"
+    severity: "warning"
+    confidence: "medium"
+    sources: ["staff.yml#head-prod", "projects.yml#p-2024-012", "invoices.yml#TCT-2026-329"]
+
+  # --- Finance page ---
+  - id: "j-fin-01"
+    scope: "finance"
+    title: "Q1 numbers are real — drinks earned, but not yet"
+    body: "Revenue +9.6% vs plan, gross margin holding at 31%. EBITDA AED 890K vs plan AED 950K — narrowly missed because of the early Aurora overrun. If you contain Aurora at projected -990K, full-year EBITDA still lands AED 2.8M (74% of plan). If Aurora goes to -1.5M, you finish around AED 2.3M (61%). Aurora is the swing variable."
+    stance: "watch"
+    severity: "info"
+    confidence: "high"
+    sources: ["targets.yml#annual.2026", "projects.yml#p-2026-007"]
+
+  - id: "j-fin-02"
+    scope: "finance"
+    title: "Festivals are the unfair advantage — invest accordingly"
+    body: "Festivals 2025 actual AED 11.78M vs plan AED 8.5M (+39%). Margin 35–40% on Lantern Bay, even after Ancient Moon's structural loss. This unit is your most defensible IP and your highest-margin revenue. Two thoughts: (a) consider a third festival IP for autumn 2026, (b) hire a deputy for Mathilde — single-key-person risk."
+    stance: "push-sales"
+    severity: "info"
+    confidence: "high"
+    sources: ["targets.yml#unitAnnual", "projects.yml"]
+
+  - id: "j-fin-03"
+    scope: "finance"
+    title: "OpEx ratio creeping — watch, don't cut yet"
+    body: "OpEx as % of revenue: 2024 30%, 2025 27%, 2026 YTD 23%. Trend is right. But absolute OpEx is up 51% over the period (AED 6.2M → 9.4M annualised) on the back of the Q2 2025 hiring. That is justified by the festival scaling. If festival revenue softens by 15%+, you need a contingency for trimming AED 80–100K/month."
+    stance: "cut-costs"
+    severity: "info"
+    confidence: "medium"
+    sources: ["cashflow.yml", "staff.yml#headcountByMonth"]
+
+  # --- Notifications page ---
+  - id: "j-notif-01"
+    scope: "notifications"
+    title: "Triage suggestion — 11 active, 3 actually need you today"
+    body: "Of 11 active alerts: alert-2026-001 (Aurora overrun), alert-2026-002 (Aldira AED 800K), alert-2026-010 (permit expiry — Bvlgari Marina) need action by EOD. The remaining 8 are watch-list items. Don't let alert fatigue obscure that hierarchy."
+    stance: "watch"
+    severity: "info"
+    confidence: "high"
+    sources: ["alerts.yml#active"]
+
+  # --- Settings page ---
+  - id: "j-set-01"
+    scope: "settings"
+    title: "Two rules I'd reconsider"
+    body: "Rule 'Restricted cash > 50% of total' is set to severity low. After Lantern Bay it bumps near 40% routinely — consider auto-suppress for 14 days post-festival to avoid noise. Rule 'Unsigned change order > 7 days' threshold is AED 50K — given Aurora's USD 110K disaster, lower it to AED 30K so we catch these earlier."
+    stance: "watch"
+    severity: "info"
+    confidence: "medium"
+    sources: ["alerts.yml#rules"]
+
+# Recommended next moves — for the dashboard "Top 3" widget
+topActions:
+  - id: "act-01"
+    title: "Force Aurora Gala change order today"
+    horizon: "Today"
+    impact: "AED 990K margin protection"
+    owner: "founder-md"
+    severity: "critical"
+    linkInsight: "j-dash-02"
+  - id: "act-02"
+    title: "Issue formal demand letter to Aldira Group"
+    horizon: "Today"
+    impact: "AED 800K cash recovery"
+    owner: "cfo"
+    severity: "critical"
+    linkInsight: "j-money-01"
+  - id: "act-03"
+    title: "Decide insurance dispute: pursue or write off"
+    horizon: "This week"
+    impact: "Clean balance sheet; AED 525K NPV upside if pursue"
+    owner: "founder-md, cfo"
+    severity: "warning"
+    linkInsight: "j-money-04"
+  - id: "act-04"
+    title: "Renew Bvlgari Marina noise permit"
+    horizon: "By 2026-04-04"
+    impact: "Family K. event de-risked"
+    owner: "bookings"
+    severity: "warning"
+    linkInsight: null
+  - id: "act-05"
+    title: "Freeze Q2 creative hire pending utilisation review"
+    horizon: "This month"
+    impact: "AED 23K/mo OpEx avoided if utilisation stays < 70%"
+    owner: "founder-cd, hr"
+    severity: "info"
+    linkInsight: "j-staff-01"
+
+# Stock phrases the UI can show on otherwise-quiet widgets
+chatter:
+  green:
+    - "All quiet on this front. Carry on."
+    - "Within tolerance. Champagne on ice, not on tap."
+    - "No notes. Genuinely."
+  yellow:
+    - "Worth a glance, not a panic."
+    - "I'll check back in 24 hours unless this moves."
+    - "One degree off course. Easily corrected if caught now."
+  red:
+    - "This needs a decision today."
+    - "Not a drill."
+    - "I'd reschedule lunch."

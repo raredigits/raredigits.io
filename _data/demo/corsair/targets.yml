@@ -1,0 +1,282 @@
+# Monthly plan vs actual — four funnel stages tracked separately:
+#   sales       = new contract value SIGNED in month (bookings, forward-looking)
+#   production  = revenue value of work DELIVERED (recognised) in month
+#   deliveries  = invoice value ISSUED in month (billing)
+#   payments    = cash COLLECTED in month
+# Plan ≠ Actual on most months — that's the point. Seasonality + drama.
+# All figures in AED.
+
+funnelStages:
+  - id: "sales"
+    label: "Sales"
+    icon: "trending_up"
+    description: "New contract value booked"
+    color: "#3B82F6"
+  - id: "production"
+    label: "Production"
+    icon: "construction"
+    description: "Revenue recognised from delivered work"
+    color: "#8B5CF6"
+  - id: "deliveries"
+    label: "Deliveries"
+    icon: "receipt_long"
+    description: "Invoices issued"
+    color: "#10B981"
+  - id: "payments"
+    label: "Payments"
+    icon: "payments"
+    description: "Cash collected"
+    color: "#F59E0B"
+
+# Annual headline targets
+annual:
+  - year: 2024
+    revenuePlan: 24000000
+    revenueActual: 20830000
+    grossMarginPlanPct: 30
+    grossMarginActualPct: 22.6
+    ebitdaPlan: 1800000
+    ebitdaActual: -1540000
+    note: "Year missed — Ancient Moon cancellation single-handedly turned plan to loss"
+
+  - year: 2025
+    revenuePlan: 32000000
+    revenueActual: 35340000
+    grossMarginPlanPct: 31
+    grossMarginActualPct: 31.2
+    ebitdaPlan: 2400000
+    ebitdaActual: 1590000
+    note: "Revenue beat plan +10%, but EBITDA missed — hiring + DSO drag"
+
+  - year: 2026
+    revenuePlan: 42000000
+    revenueActualYTD: 11510000
+    revenueQ1Plan: 10500000
+    revenueQ1Actual: 11510000
+    grossMarginPlanPct: 32
+    grossMarginActualPctYTD: 31.0
+    ebitdaPlan: 3800000
+    ebitdaActualYTD: 890000
+    note: "Q1 beat by 9.6%; Aurora Gala overrun threatens Q2"
+
+# Monthly plan-vs-actual on the four funnel stages
+monthly:
+
+  - month: "2024-01"
+    sales:      { plan: 1500000, actual: 1820000 }
+    production: { plan: 1100000, actual: 980000 }
+    deliveries: { plan: 1200000, actual: 1140000 }
+    payments:   { plan: 1300000, actual: 1240000 }
+
+  - month: "2024-02"
+    sales:      { plan: 2000000, actual: 2310000 }
+    production: { plan: 1500000, actual: 1410000 }
+    deliveries: { plan: 1600000, actual: 1620000 }
+    payments:   { plan: 1700000, actual: 1850000 }
+
+  - month: "2024-03"
+    sales:      { plan: 2400000, actual: 2860000 }
+    production: { plan: 3200000, actual: 3450000 }
+    deliveries: { plan: 3300000, actual: 3540000 }
+    payments:   { plan: 3500000, actual: 3680000 }
+
+  - month: "2024-04"
+    sales:      { plan: 2200000, actual: 1980000 }
+    production: { plan: 2800000, actual: 2980000 }
+    deliveries: { plan: 2700000, actual: 2820000 }
+    payments:   { plan: 2600000, actual: 2710000 }
+
+  - month: "2024-05"
+    sales:      { plan: 1900000, actual: 1740000 }
+    production: { plan: 1700000, actual: 1820000 }
+    deliveries: { plan: 1900000, actual: 2010000 }
+    payments:   { plan: 2100000, actual: 2140000 }
+
+  - month: "2024-06"
+    sales:      { plan: 1800000, actual: 1620000 }
+    production: { plan: 1700000, actual: 1640000 }
+    deliveries: { plan: 1800000, actual: 1750000 }
+    payments:   { plan: 1900000, actual: 1810000 }
+
+  - month: "2024-07"
+    sales:      { plan: 1500000, actual: 1180000 }
+    production: { plan: 1100000, actual: 980000 }
+    deliveries: { plan: 1300000, actual: 1240000 }
+    payments:   { plan: 1500000, actual: 1320000 }
+
+  - month: "2024-08"
+    sales:      { plan: 1200000, actual: 940000 }
+    production: { plan: 800000, actual: 720000 }
+    deliveries: { plan: 1000000, actual: 880000 }
+    payments:   { plan: 1100000, actual: 980000 }
+
+  - month: "2024-09"
+    sales:      { plan: 2200000, actual: 920000 }
+    production: { plan: 2600000, actual: 740000 }
+    deliveries: { plan: 2400000, actual: 1180000 }
+    payments:   { plan: 2300000, actual: 1480000 }
+    note: "Ancient Moon cancellation devastates September across all four stages"
+
+  - month: "2024-10"
+    sales:      { plan: 2000000, actual: 1860000 }
+    production: { plan: 1800000, actual: 1860000 }
+    deliveries: { plan: 1900000, actual: 2980000 }
+    payments:   { plan: 2000000, actual: 3050000 }
+    note: "Royal Reception 100%-upfront and Lloyds partial settlement spike collections"
+
+  - month: "2024-11"
+    sales:      { plan: 2100000, actual: 1980000 }
+    production: { plan: 1900000, actual: 1840000 }
+    deliveries: { plan: 1800000, actual: 1690000 }
+    payments:   { plan: 1700000, actual: 1620000 }
+
+  - month: "2024-12"
+    sales:      { plan: 2300000, actual: 2480000 }
+    production: { plan: 2400000, actual: 2410000 }
+    deliveries: { plan: 2500000, actual: 2640000 }
+    payments:   { plan: 2700000, actual: 2980000 }
+
+  - month: "2025-01"
+    sales:      { plan: 2300000, actual: 2480000 }
+    production: { plan: 2300000, actual: 2240000 }
+    deliveries: { plan: 2400000, actual: 2510000 }
+    payments:   { plan: 2400000, actual: 2680000 }
+
+  - month: "2025-02"
+    sales:      { plan: 2500000, actual: 2710000 }
+    production: { plan: 2700000, actual: 2680000 }
+    deliveries: { plan: 2600000, actual: 2540000 }
+    payments:   { plan: 2400000, actual: 2510000 }
+
+  - month: "2025-03"
+    sales:      { plan: 3200000, actual: 3940000 }
+    production: { plan: 4800000, actual: 5180000 }
+    deliveries: { plan: 4900000, actual: 4880000 }
+    payments:   { plan: 4700000, actual: 4920000 }
+
+  - month: "2025-04"
+    sales:      { plan: 2700000, actual: 2940000 }
+    production: { plan: 2900000, actual: 2840000 }
+    deliveries: { plan: 3100000, actual: 3480000 }
+    payments:   { plan: 3300000, actual: 3580000 }
+
+  - month: "2025-05"
+    sales:      { plan: 2400000, actual: 2210000 }
+    production: { plan: 2200000, actual: 2110000 }
+    deliveries: { plan: 2400000, actual: 2380000 }
+    payments:   { plan: 2400000, actual: 2240000 }
+
+  - month: "2025-06"
+    sales:      { plan: 2400000, actual: 2280000 }
+    production: { plan: 2300000, actual: 2260000 }
+    deliveries: { plan: 2300000, actual: 2240000 }
+    payments:   { plan: 2300000, actual: 2110000 }
+
+  - month: "2025-07"
+    sales:      { plan: 1800000, actual: 1320000 }
+    production: { plan: 1400000, actual: 1180000 }
+    deliveries: { plan: 1700000, actual: 1880000 }
+    payments:   { plan: 1900000, actual: 1640000 }
+
+  - month: "2025-08"
+    sales:      { plan: 1700000, actual: 1980000 }
+    production: { plan: 1500000, actual: 1340000 }
+    deliveries: { plan: 1800000, actual: 1720000 }
+    payments:   { plan: 1900000, actual: 1180000 }
+    note: "Sales beat plan, but Payments at 62% of plan — DSO at 71 days. First Jeeves alarm."
+
+  - month: "2025-09"
+    sales:      { plan: 4800000, actual: 5240000 }
+    production: { plan: 5300000, actual: 5510000 }
+    deliveries: { plan: 5500000, actual: 5210000 }
+    payments:   { plan: 5400000, actual: 4280000 }
+
+  - month: "2025-10"
+    sales:      { plan: 2800000, actual: 2540000 }
+    production: { plan: 2700000, actual: 2640000 }
+    deliveries: { plan: 4200000, actual: 4380000 }
+    payments:   { plan: 4500000, actual: 5180000 }
+    note: "Big payments collection month — Ancient Moon receivables clear"
+
+  - month: "2025-11"
+    sales:      { plan: 2900000, actual: 3140000 }
+    production: { plan: 2900000, actual: 2880000 }
+    deliveries: { plan: 2700000, actual: 2640000 }
+    payments:   { plan: 2700000, actual: 2510000 }
+
+  - month: "2025-12"
+    sales:      { plan: 4400000, actual: 4280000 }
+    production: { plan: 4500000, actual: 4480000 }
+    deliveries: { plan: 4200000, actual: 3940000 }
+    payments:   { plan: 3800000, actual: 3110000 }
+    note: "Aldira sponsorship invoice issued late — cash-collection miss"
+
+  - month: "2026-01"
+    sales:      { plan: 3200000, actual: 3680000 }
+    production: { plan: 3000000, actual: 2960000 }
+    deliveries: { plan: 3200000, actual: 3340000 }
+    payments:   { plan: 3300000, actual: 4310000 }
+
+  - month: "2026-02"
+    sales:      { plan: 2800000, actual: 2540000 }
+    production: { plan: 2600000, actual: 2530000 }
+    deliveries: { plan: 2700000, actual: 2580000 }
+    payments:   { plan: 2700000, actual: 2890000 }
+
+  - month: "2026-03"
+    sales:      { plan: 4500000, actual: 4280000 }
+    production: { plan: 5800000, actual: 6020000 }
+    deliveries: { plan: 5900000, actual: 6180000 }
+    payments:   { plan: 5500000, actual: 4640000 }
+    note: "Aldira AED 800K still outstanding pulls payments to 84% of plan despite record production month"
+
+# Per-unit annual targets (for Business Units widgets)
+unitAnnual:
+  - year: 2025
+    units:
+      brand:         { revenuePlan: 14000000, revenueActual: 14640000 }
+      festivals:     { revenuePlan: 8500000,  revenueActual: 11780000 }
+      private:       { revenuePlan: 5500000,  revenueActual: 6370000 }
+      installations: { revenuePlan: 4000000,  revenueActual: 2545000 }
+  - year: 2026
+    units:
+      brand:         { revenuePlan: 18000000, revenueActualYTD: 4630000 }
+      festivals:     { revenuePlan: 11000000, revenueActualYTD: 5810000 }
+      private:       { revenuePlan: 7000000,  revenueActualYTD: 3660000 }
+      installations: { revenuePlan: 6000000,  revenueActualYTD: 690000 }
+
+# Operational KPI targets (non-financial)
+operationalTargets:
+  dso:
+    target: 45
+    yellowAt: 55
+    redAt: 70
+    note: "Industry benchmark 50–60; we set 45 to keep cash agile"
+
+  cashRunwayDays:
+    target: 90
+    yellowAt: 60
+    redAt: 30
+    note: "Unrestricted cash / monthly OpEx"
+
+  grossMarginPct:
+    target: 32
+    yellowAt: 28
+    redAt: 24
+
+  utilisationPct:
+    target: 75
+    yellowAt: 65
+    redAt: 55
+    note: "Billable hours / available hours, core production team"
+
+  projectOverrunRatePct:
+    target: 5
+    yellowAt: 10
+    redAt: 15
+    note: "% of projects closing > 10% over budget"
+
+  clientSatNps:
+    target: 60
+    yellowAt: 45
+    redAt: 30
