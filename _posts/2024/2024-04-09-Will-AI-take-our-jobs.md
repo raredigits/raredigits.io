@@ -4,13 +4,13 @@ title:  "Will AI Take All Our Jobs?"
 date:   2024-04-09T10:00:00+04:00
 cover: /assets/img/newsroom/2024/homeless.jpg
 category: Insighs
-tags: AI automate
+tags: [AI, automate]
 ---
 
 ## No.
 
 <div class="full-width">
-  <img src="{{ page.cover }}" />
+  <img src="{{ cover }}" />
 </div>
 
 ## Let's Consider a Simple Example

@@ -4,7 +4,7 @@ title:  "Introducing Watchtower v.0.1"
 date:   2025-02-03T10:00:00+04:00
 cover: /assets/img/news/2023/
 category: Release
-tags: kitchen web3
+tags: [kitchen, web3]
 ---
 
 <div class="full-width">

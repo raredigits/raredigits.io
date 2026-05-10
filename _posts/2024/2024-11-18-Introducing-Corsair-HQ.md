@@ -4,11 +4,11 @@ title:  "Introducing Corsair HQ"
 date:   2024-11-18T10:00:00+04:00
 cover: /assets/img/newsroom/2024/corsair.jpg
 category: Release
-tags: kitchen erp
+tags: [kitchen, erp]
 ---
 
 <div class="full-width">
-  <img src="{{ page.cover }}" />
+  <img src="{{ cover }}" />
 </div>
 
 In what financial analysts are calling "the least unnecessary software launch of the decade," Rare Digits has released [Corsair HQ](/tools/corsair/), a revolutionary executive intelligence platform designed for business leaders who are tired of pretending they understand their own company's reports.

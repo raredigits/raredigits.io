@@ -26,6 +26,11 @@ export default function (eleventyConfig) {
     return strftime(format, d);
   });
 
+  // Posts collection — built from glob, leaves frontmatter tags alone.
+  eleventyConfig.addCollection("posts", (api) =>
+    api.getFilteredByGlob("./_posts/**/*.md"),
+  );
+
   return {
     dir: {
       input: ".",

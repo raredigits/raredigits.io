@@ -4,7 +4,7 @@ title:  "Introducing Rare Styles"
 date:   2025-05-20T10:00:00+04:00
 cover: /assets/img/news/2023/
 category: Release
-tags: kitchen design
+tags: [kitchen, design]
 ---
 
 ## Let Digital Rareism Wear the Crown

@@ -6,9 +6,9 @@
         {% include "special/demo/noticeDemo.html" %}
         <div class="content grid-global">
             <article>
-                {% if page.remark %}
+                {% if remark %}
                     <p class="meta-info">
-                        <span class="">{{ page.remark }}</span>
+                        <span class="">{{ remark }}</span>
                     </p>
                 {% endif %}
                 {{ content }}

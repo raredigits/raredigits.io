@@ -60,13 +60,16 @@ Working branch: `migrate-to-11ty`. Tick each box as we go.
 - [x] No build errors, no console errors
 
 ## Phase 6 — posts collection & permalinks
-- [ ] Create `_posts/_posts.json`:
-  ```json
-  { "layout": "layouts/post.html", "tags": "posts", "permalink": "/newsroom/{{ page.fileSlug }}/" }
-  ```
-- [ ] Strip redundant `layout: post` from each post's frontmatter (optional)
-- [ ] Build a URL diff table Jekyll vs 11ty for all 31 posts; pin per-post `permalink` where slugify diverges
-- [ ] Verify post dates aren't shifted by timezone (posts use `+0400` and `+0800`)
+- [x] Create `_posts/_posts.json` with `layout: post` and `permalink: /newsroom/{{ page.fileSlug }}/`
+- [x] Define `posts` collection programmatically in config (not via `tags: posts`) so frontmatter `tags` aren't polluted with the technical tag
+- [x] **Discovered**: 11ty `page.*` only exposes built-ins (url, fileSlug, date). Custom frontmatter fields like `page.title`, `page.cover`, `page.category`, `page.tags`, `page.remark`, `page.offset` had to be rewritten as top-level (`{{ title }}` etc.) across all layouts, includes, and 11 posts
+- [x] **Discovered**: collection items expose frontmatter under `post.data.*`, not `post.*` — fixed in `index.html` and `newsroom.html`
+- [x] **Discovered**: LiquidJS for-loop applies `limit:9` BEFORE `reversed`, opposite of expected. Switched homepage to `assign recent = collections.posts | reverse` then iterate with `limit: 9`
+- [x] **Discovered**: js-yaml parses `tags: kitchen design` as a single string (Jekyll splits on spaces). Rewrote 21 posts to YAML flow arrays `tags: [kitchen, design]`
+- [x] All 31 post URLs match Jekyll baseline byte-for-byte (`diff` empty)
+- [x] All 31 newsroom dates match Jekyll byte-for-byte
+- [x] Newsroom titles, tags, categories all match Jekyll byte-for-byte
+- [x] Homepage featured 9 posts match Jekyll byte-for-byte and order
 
 ## Phase 7 — section pages
 - [ ] Update `layout: page` → `layout: layouts/page.html` (or set up layout aliases in `.eleventy.js`)

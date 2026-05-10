@@ -4,7 +4,7 @@ title:  "A Few Words About the Security of Your Website"
 date:   2024-05-06T10:00:00+04:00
 cover: /assets/img/newsroom/2024/digital_security.jpg
 category: Insights
-tags: security web
+tags: [security, web]
 ---
 
 ## The Uncomfortable Truth Most Security Companies Won't Tell You
@@ -18,7 +18,7 @@ But that would be marketing dishonesty, and we prefer a different approach: the 
 Here's the reality most security companies don't want you to know: unless you're running a major financial institution, government agency, or storing particularly juicy data, hackers probably aren't specifically targeting you.
 
 <div class="full-width">
-  <img src="{{ page.cover }}" />
+  <img src="{{ cover }}" />
 </div>
 <cite>Working day of your digital security officer</cite>
 

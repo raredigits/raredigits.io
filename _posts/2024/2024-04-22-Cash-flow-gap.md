@@ -4,7 +4,7 @@ title:  "Cash Flow Gaps Solution"
 date:   2024-04-22T10:00:00+04:00
 cover: /assets/img/newsroom/2024/cash-flow-gaps.jpg
 category: Insights
-tags: finance
+tags: [finance]
 ---
 
 That moment when a major client payment is still "in process" but payroll is due tomorrow isn't just stressful—it's a predictable feature of small business life that somehow always feels like a surprise emergency. Like discovering you're out of coffee on Monday morning: entirely foreseeable, yet somehow always a crisis.
@@ -24,7 +24,7 @@ Your business can be fundamentally profitable and still find itself gasping for 
 The solution to temporary cash flow gaps has existed for approximately 5,000 years: borrowing money.
 
 <div class="full-width">
-  <img src="{{ page.cover }}" />
+  <img src="{{ cover }}" />
 </div>
 
 Yet many small business owners treat banks like mysterious and hostile entities rather than what they actually are: businesses that literally exist to solve your cash flow problems (while making a profit, of course).

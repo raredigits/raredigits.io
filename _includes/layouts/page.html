@@ -7,24 +7,24 @@
         <div class="content grid-global">
             <aside class="sidebar">
                 <nav class="sidebar-wrapper sidebar-nav no-scrollbar">
-                    {% if page.offset == "solutions" %}
+                    {% if offset == "solutions" %}
                         {% include "menu/solutions.html" %}
-                    {% elsif page.offset == "about" %}
+                    {% elsif offset == "about" %}
                         {% include "menu/about.html" %}
-                    {% elsif page.offset == "legal" %}
+                    {% elsif offset == "legal" %}
                         {% include "menu/legal.html" %}
-                    {% elsif page.offset == "services" %}
+                    {% elsif offset == "services" %}
                         {% include "menu/services.html" %}
-                    {% elsif page.offset == "styles" %}
+                    {% elsif offset == "styles" %}
                         {% include "menu/demo/styles.html" %}
                     {% endif %}
                 </nav>
             </aside>
             {% include "title.html" %}
             <article>
-                {% if page.remark %}
+                {% if remark %}
                     <p class="meta-info">
-                        <span class="">{{ page.remark }}</span>
+                        <span class="">{{ remark }}</span>
                     </p>
                 {% endif %}
                 {{ content }}

@@ -4,7 +4,7 @@ title:  "Rare Digits Unveils Atlas ERP"
 date:   2023-08-01T10:00:00+08:00
 cover: /assets/img/newsroom/2023/atlas.jpg
 category: Release
-tags: erp knowledge
+tags: [erp, knowledge]
 ---
 
 
@@ -13,7 +13,7 @@ In a shocking departure from industry standards, Rare Digits has released an ERP
 ## The ERP That Doesn't Hate You
 
 <div class="full-width">
-  <img src="{{ page.cover }}" />
+  <img src="{{ cover }}" />
 </div>
 
 Traditional ERP systems seemingly operate on the principle that business clarity should be earned through suffering, like some digital corporate hazing ritual. Atlas ERP takes the controversial position that maybe—just maybe—critical business information should be accessible without navigating seventeen nested menus designed by sadistic UX theorists.
