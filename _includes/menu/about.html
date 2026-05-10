@@ -7,7 +7,7 @@
       {% if page.url == item.url %}
         {{ item.title }}
       {% else %}
-        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        <a href="{{ item.url }}">{{ item.title }}</a>
       {% endif %}
     </li>
   {% endfor %}
@@ -19,7 +19,7 @@
   <ul>
       {% for item in menu.about.featured %}
       <li>
-          <a href="{{ item.url | relative_url }}">
+          <a href="{{ item.url }}">
           {{ item.title }}
           </a>
       </li>

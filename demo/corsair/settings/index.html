@@ -47,7 +47,7 @@ permalink: /demo/corsair/settings/
             <tr><td><strong>IP arm</strong></td><td>{{ company.profile.ipArm }}</td></tr>
             <tr><td><strong>Founded</strong></td><td>{{ company.profile.founded }}</td></tr>
             <tr><td><strong>Reporting currency</strong></td><td>{{ company.fiscal.reportingCurrency }} (peg {{ company.fiscal.fxPeg }})</td></tr>
-            <tr><td><strong>VAT / CIT</strong></td><td>VAT {{ company.fiscal.vatRate | times: 100 }}% · CIT {{ company.fiscal.corporateTaxRate | times: 100 }}% (above AED {{ company.fiscal.corporateTaxFreeThreshold | divided_by: 1000 }}K)</td></tr>
+            <tr><td><strong>VAT / CIT</strong></td><td>VAT {{ company.fiscal.vatRate | times: 100 }}% · CIT {{ company.fiscal.corporateTaxRate | times: 100 }}% (above AED {{ company.fiscal.corporateTaxFreeThreshold | inThousands }}K)</td></tr>
             <tr><td><strong>Period</strong></td><td>{{ company.fiscal.reportingPeriod.from }} → {{ company.fiscal.reportingPeriod.to }}</td></tr>
         </tbody>
     </table>

@@ -7,7 +7,7 @@
         {% if page.url == item.url %}
           {{ item.title }}
         {% else %}
-          <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+          <a href="{{ item.url }}">{{ item.title }}</a>
         {% endif %}
       </li>
     {% endfor %}
@@ -20,7 +20,7 @@
         {% for item in menu.solutions.featured %}
         <li class="{% if item.icon %}sidebar-icon{% endif %}">
             {% if item.icon %}{{ item.icon }}{% endif %}
-            <a href="{{ item.url | relative_url }}">
+            <a href="{{ item.url }}">
             {{ item.title }}
             </a>
         </li>
@@ -31,5 +31,5 @@
     
   <div class="sidebar-section mobile-hidden">
       <p>Need help?<br>
-      <a href="{{ site.baseurl }}/about/contacts">Let's chat!</a></p>
+      <a href="/about/contacts">Let's chat!</a></p>
   </div>

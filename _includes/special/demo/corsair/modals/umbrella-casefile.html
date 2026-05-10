@@ -26,12 +26,12 @@ Triggered from: data-modal="modal-umbrella" anywhere in the demo.
         <div class="case-header-grid">
             <div class="case-stat bad">
                 <div class="case-label">Outstanding (Phase 1)</div>
-                <div class="case-value">{{ phase1Outstanding | divided_by: 1000 }}K</div>
+                <div class="case-value">{{ phase1Outstanding | inThousands }}K</div>
                 <div class="row-sub">disputed · 12 weeks open</div>
             </div>
             <div class="case-stat warn">
                 <div class="case-label">Phase 2 frozen</div>
-                <div class="case-value">{{ p2.budget | divided_by: 1000 }}K</div>
+                <div class="case-value">{{ p2.budget | inThousands }}K</div>
                 <div class="row-sub">{{ p2.note | truncate: 50 }}</div>
             </div>
             <div class="case-stat warn">
@@ -41,7 +41,7 @@ Triggered from: data-modal="modal-umbrella" anywhere in the demo.
             </div>
             <div class="case-stat">
                 <div class="case-label">Credit limit</div>
-                <div class="case-value">{{ client.creditLimit | divided_by: 1000 }}K</div>
+                <div class="case-value">{{ client.creditLimit | inThousands }}K</div>
                 <div class="row-sub">Status: {{ client.status }}</div>
             </div>
         </div>

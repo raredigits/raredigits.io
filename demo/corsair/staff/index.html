@@ -45,7 +45,7 @@ permalink: /demo/corsair/staff/
     </div>
     <div class="kpi-tile">
         <div class="kpi-label">Monthly payroll</div>
-        <div class="kpi-value">{{ payroll | divided_by: 1000 }}K</div>
+        <div class="kpi-value">{{ payroll | inThousands }}K</div>
         <div class="kpi-foot">Core only · before benefits</div>
     </div>
     <div class="kpi-tile kpi-good">
@@ -69,7 +69,7 @@ permalink: /demo/corsair/staff/
     {% assign hcMax = 18 %}
     <div style="display: grid; grid-template-columns: repeat({{ demo.corsair.staff.headcountByMonth | size }}, 1fr); gap: var(--space-sm); align-items: end; height: 100px;">
         {% for h in demo.corsair.staff.headcountByMonth %}
-            {% assign hh = h.fte | times: 100 | divided_by: hcMax %}
+            {% assign hh = h.fte | percentOf: hcMax %}
             <div style="text-align: center;">
                 <div style="height: {{ hh }}%; min-height: 8px; background: var(--tct-jeeves); border-radius: 2px 2px 0 0;" title="{{ h.month }}: {{ h.fte }} FTE{% if h.note %} · {{ h.note }}{% endif %}"></div>
                 <div class="row-sub" style="margin-top: 4px;">{{ h.fte }}</div>
@@ -102,13 +102,13 @@ permalink: /demo/corsair/staff/
                 {% assign deptTeam = team | where: "department", dept.id %}
                 {% assign deptCost = 0 %}
                 {% for p in deptTeam %}{% assign deptCost = deptCost | plus: p.salaryMonthly %}{% endfor %}
-                {% assign pctPayroll = deptCost | times: 100 | divided_by: payroll %}
+                {% assign pctPayroll = deptCost | percentOf: payroll %}
                 {% assign head = team | where: "id", dept.head | first %}
                 <tr>
                     <td><strong>{{ dept.id }}</strong></td>
                     <td>{{ head.name }}</td>
                     <td class="num">{{ deptTeam | size }}</td>
-                    <td class="num">{{ deptCost | divided_by: 1000 }}K</td>
+                    <td class="num">{{ deptCost | inThousands }}K</td>
                     <td class="num">{{ pctPayroll }}%</td>
                     <td class="row-sub">
                         {% if dept.id == "Production" %}Owns Umbrella dispute · in spotlight{% endif %}
@@ -147,7 +147,7 @@ permalink: /demo/corsair/staff/
                     <td><span class="pill muted">{{ p.department }}</span></td>
                     <td>{{ p.joined }}</td>
                     <td class="row-sub">{{ p.nationality }}</td>
-                    <td class="num">{{ p.salaryMonthly | divided_by: 1000 }}K</td>
+                    <td class="num">{{ p.salaryMonthly | inThousands }}K</td>
                     <td class="row-sub">
                         {% if p.note %}<span class="red">⚠ {{ p.note }}</span>{% endif %}
                     </td>

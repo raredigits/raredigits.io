@@ -71,7 +71,7 @@ permalink: /demo/corsair/production/
     </div>
     {% for p in actives %}
         {% assign client = demo.corsair.clients.clients | where: "id", p.client | first %}
-        {% assign burnPct = p.actualCost | times: 100 | divided_by: p.budget %}
+        {% assign burnPct = p.actualCost | percentOf: p.budget %}
         <div class="project-row">
             <div class="health-bar {{ p.health }}"></div>
             <div>
@@ -84,10 +84,10 @@ permalink: /demo/corsair/production/
                 <div class="row-sub">{{ p.unit | upcase }}</div>
             </div>
             <div>
-                <div class="tabular">{% if p.currency == "USD" %}USD {% endif %}{{ p.budget | divided_by: 1000 }}K</div>
+                <div class="tabular">{% if p.currency == "USD" %}USD {% endif %}{{ p.budget | inThousands }}K</div>
             </div>
             <div>
-                <div class="tabular">{{ p.actualCost | divided_by: 1000 }}K</div>
+                <div class="tabular">{{ p.actualCost | inThousands }}K</div>
                 <div class="row-sub">{{ burnPct }}% burned</div>
             </div>
             <div>
@@ -109,7 +109,7 @@ permalink: /demo/corsair/production/
     {% for p in delivered %}
         {% assign client = demo.corsair.clients.clients | where: "id", p.client | first %}
         {% assign gp = p.actualRevenue | minus: p.actualCost %}
-        {% assign gpPct = gp | times: 100 | divided_by: p.actualRevenue %}
+        {% assign gpPct = gp | percentOf: p.actualRevenue %}
         <div class="project-row">
             <div class="health-bar {{ p.health }}"></div>
             <div>
@@ -121,11 +121,11 @@ permalink: /demo/corsair/production/
                 <div class="row-sub">{{ p.unit | upcase }}</div>
             </div>
             <div>
-                <div class="tabular">{{ p.actualRevenue | divided_by: 1000 }}K</div>
+                <div class="tabular">{{ p.actualRevenue | inThousands }}K</div>
                 <div class="row-sub">revenue</div>
             </div>
             <div>
-                <div class="tabular green">+{{ gp | divided_by: 1000 }}K</div>
+                <div class="tabular green">+{{ gp | inThousands }}K</div>
                 <div class="row-sub">{{ gpPct }}% GP</div>
             </div>
             <div><span class="pill info">Awaiting close</span></div>
@@ -167,11 +167,11 @@ permalink: /demo/corsair/production/
                 <div class="row-sub">{{ p.unit | upcase }}</div>
             </div>
             <div>
-                <div class="tabular">{{ p.budget | divided_by: 1000 }}K</div>
+                <div class="tabular">{{ p.budget | inThousands }}K</div>
                 <div class="row-sub">budget</div>
             </div>
             <div>
-                <div class="tabular red">{{ p.grossProfit | divided_by: 1000 }}K</div>
+                <div class="tabular red">{{ p.grossProfit | inThousands }}K</div>
                 <div class="row-sub">GP</div>
             </div>
             <div><span class="pill bad">Disputed</span></div>
@@ -185,7 +185,7 @@ permalink: /demo/corsair/production/
                 <div class="row-title">{{ p.name }}</div>
                 <div class="row-sub">{{ p.code }} · own IP · {{ p.cancellationReason | truncate: 90 }}</div>
                 <div class="row-sub" style="margin-top: 4px;">
-                    Insurance: claim {{ p.insuranceClaim.claimAmount | divided_by: 1000 }}K · paid {{ p.insuranceClaim.acknowledged | divided_by: 1000 }}K · <strong class="red">{{ p.insuranceClaim.status }}</strong>
+                    Insurance: claim {{ p.insuranceClaim.claimAmount | inThousands }}K · paid {{ p.insuranceClaim.acknowledged | inThousands }}K · <strong class="red">{{ p.insuranceClaim.status }}</strong>
                 </div>
             </div>
             <div>
@@ -193,11 +193,11 @@ permalink: /demo/corsair/production/
                 <div class="row-sub">{{ p.unit | upcase }}</div>
             </div>
             <div>
-                <div class="tabular">{{ p.budget | divided_by: 1000 }}K</div>
+                <div class="tabular">{{ p.budget | inThousands }}K</div>
                 <div class="row-sub">budget</div>
             </div>
             <div>
-                <div class="tabular red">{{ loss | divided_by: 1000 }}K</div>
+                <div class="tabular red">{{ loss | inThousands }}K</div>
                 <div class="row-sub">GP loss</div>
             </div>
             <div><span class="pill bad">Cancelled</span></div>
@@ -229,7 +229,7 @@ permalink: /demo/corsair/production/
             {% for p in closed %}
                 {% assign client = demo.corsair.clients.clients | where: "id", p.client | first %}
                 {% assign gp = p.grossProfit %}
-                {% assign gpPct = gp | times: 100 | divided_by: p.actualRevenue %}
+                {% assign gpPct = gp | percentOf: p.actualRevenue %}
                 {% assign cls = "" %}
                 {% if gpPct >= 30 %}{% assign cls = "green" %}{% endif %}
                 {% if gpPct < 18 %}{% assign cls = "red" %}{% endif %}
@@ -241,9 +241,9 @@ permalink: /demo/corsair/production/
                     </td>
                     <td>{{ client.name | default: "Own IP" }}</td>
                     <td>{{ p.eventDate }}</td>
-                    <td class="num">{{ p.actualRevenue | divided_by: 1000 }}K</td>
-                    <td class="num">{{ p.actualCost | divided_by: 1000 }}K</td>
-                    <td class="num"><strong class="{{ cls }}">{{ gp | divided_by: 1000 }}K</strong></td>
+                    <td class="num">{{ p.actualRevenue | inThousands }}K</td>
+                    <td class="num">{{ p.actualCost | inThousands }}K</td>
+                    <td class="num"><strong class="{{ cls }}">{{ gp | inThousands }}K</strong></td>
                     <td class="num"><span class="{{ cls }}">{{ gpPct }}%</span></td>
                 </tr>
             {% endfor %}

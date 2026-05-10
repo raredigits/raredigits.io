@@ -10,8 +10,8 @@ Triggered from: data-modal="modal-unit-<id>" on unit cards.
 {% for u in company.units %}
     {% assign u2025 = yr2025.units[u.id] %}
     {% assign u2026 = yr2026.units[u.id] %}
-    {% assign pct2026 = u2026.revenueActualYTD | times: 100 | divided_by: u2026.revenuePlan %}
-    {% assign pct2025 = u2025.revenueActual | times: 100 | divided_by: u2025.revenuePlan %}
+    {% assign pct2026 = u2026.revenueActualYTD | percentOf: u2026.revenuePlan %}
+    {% assign pct2025 = u2025.revenueActual | percentOf: u2025.revenuePlan %}
     {% assign uProjects = demo.corsair.projects.projects | where: "unit", u.id %}
     {% assign uClosed2025 = uProjects | where: "status", "closed" %}
 
@@ -36,13 +36,13 @@ Triggered from: data-modal="modal-unit-<id>" on unit cards.
             <section class="kpi-strip" style="grid-template-columns: repeat(4, 1fr);">
                 <div class="kpi-tile">
                     <div class="kpi-label">2026 YTD revenue</div>
-                    <div class="kpi-value">{{ u2026.revenueActualYTD | divided_by: 1000 }}K</div>
-                    <div class="kpi-foot">vs plan {{ u2026.revenuePlan | divided_by: 1000 }}K · {{ pct2026 }}%</div>
+                    <div class="kpi-value">{{ u2026.revenueActualYTD | inThousands }}K</div>
+                    <div class="kpi-foot">vs plan {{ u2026.revenuePlan | inThousands }}K · {{ pct2026 }}%</div>
                 </div>
                 <div class="kpi-tile">
                     <div class="kpi-label">2025 closed</div>
-                    <div class="kpi-value">{{ u2025.revenueActual | divided_by: 1000 }}K</div>
-                    <div class="kpi-foot">vs plan {{ u2025.revenuePlan | divided_by: 1000 }}K · {{ pct2025 }}%</div>
+                    <div class="kpi-value">{{ u2025.revenueActual | inThousands }}K</div>
+                    <div class="kpi-foot">vs plan {{ u2025.revenuePlan | inThousands }}K · {{ pct2025 }}%</div>
                 </div>
                 <div class="kpi-tile">
                     <div class="kpi-label">Projects on file</div>
@@ -88,7 +88,7 @@ Triggered from: data-modal="modal-unit-<id>" on unit cards.
                         {% assign rev = p.actualRevenue | default: 0 %}
                         {% assign gp = p.grossProfit | default: 0 %}
                         {% assign gpPct = 0 %}
-                        {% if rev > 0 %}{% assign gpPct = gp | times: 100 | divided_by: rev %}{% endif %}
+                        {% if rev > 0 %}{% assign gpPct = gp | percentOf: rev %}{% endif %}
                         <tr>
                             <td>
                                 <strong>{{ p.name | truncate: 38 }}</strong>
@@ -102,8 +102,8 @@ Triggered from: data-modal="modal-unit-<id>" on unit cards.
                                 {% elsif p.status == "delivered" %}<span class="pill info">{{ p.status }}</span>
                                 {% else %}<span class="pill muted">{{ p.status }}</span>{% endif %}
                             </td>
-                            <td class="num">{{ rev | divided_by: 1000 }}K</td>
-                            <td class="num">{% if gp < 0 %}<span class="red">{{ gp | divided_by: 1000 }}K</span>{% else %}<span class="green">{{ gp | divided_by: 1000 }}K</span>{% endif %}</td>
+                            <td class="num">{{ rev | inThousands }}K</td>
+                            <td class="num">{% if gp < 0 %}<span class="red">{{ gp | inThousands }}K</span>{% else %}<span class="green">{{ gp | inThousands }}K</span>{% endif %}</td>
                             <td class="num">
                                 {% if gpPct >= 30 %}<span class="green">{{ gpPct }}%</span>
                                 {% elsif gpPct < 18 %}<span class="red">{{ gpPct }}%</span>

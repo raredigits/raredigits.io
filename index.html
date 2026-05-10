@@ -283,13 +283,13 @@ title: Data In, Meaning Out
     <p class="subheader">Stay up to date with news that matters</p>
     <div class="air-lg"></div>
     <div class="grid grid-cols-3 mobile:grid-cols-1 left">
-        {% assign recent = collections.posts | reverse %}
+        {% assign recent = collections.news | reverse %}
         {% for post in recent limit: 9 %}
         <div class="padding-b-md">
             <div class="font-size-sm">
-                {{ post.date | date: "%d.%m.%Y" }}
-                {% for tag in post.data.tags %}
-                    {% capture tag_name %}{{ tag }}{% endcapture %}
+                {{ post.date | formatDate }}
+                {% for label in post.data.labels %}
+                    {% capture tag_name %}{{ label }}{% endcapture %}
                     <span class="tag">#{{ tag_name }}&nbsp;</span>
                 {% endfor %}
             </div>
