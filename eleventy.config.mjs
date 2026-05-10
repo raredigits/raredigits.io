@@ -31,6 +31,21 @@ export default function (eleventyConfig) {
     api.getFilteredByGlob("./_posts/**/*.md"),
   );
 
+  // Jekyll-compatible numeric filters: integer division when both operands
+  // are integers (LiquidJS defaults to float division, which breaks the
+  // corsair demo's integer-pair-as-decimal pattern: `{{ x | divided_by: 10 }}`
+  // followed by `{{ x | modulo: 10 }}` rendered as `W.FM`).
+  eleventyConfig.addFilter("divided_by", (a, b) => {
+    if (Number.isInteger(a) && Number.isInteger(b)) return Math.floor(a / b);
+    return a / b;
+  });
+  eleventyConfig.addFilter("modulo", (a, b) => {
+    if (Number.isInteger(a) && Number.isInteger(b)) {
+      return ((a % b) + b) % b;
+    }
+    return a % b;
+  });
+
   return {
     dir: {
       input: ".",

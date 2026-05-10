@@ -79,11 +79,15 @@ Working branch: `migrate-to-11ty`. Tick each box as we go.
 - [x] **Side fix**: corrected `mailto: ` typo (extra space) in `legal/terms/index.md` — markdown-it strict, Jekyll tolerated
 
 ## Phase 8 — corsair demo (highest QA risk)
-- [ ] Move/update `_includes/layouts/demo/corsair.html` include paths
-- [ ] Walk every page: `demo/corsair/{index,finance,forecast,money,notification,production,reconcile,settings,staff}/index.html`
-- [ ] Walk every modal: `umbrella-casefile.html`, `unit-drilldown.html`, `monday-digest.html`
-- [ ] Confirm LiquidJS compatibility for `where`, `sort`, `last`, `first`, `slice` filter chains
-- [ ] `assets/js/demo/corsair.js` — passthrough only
+- [x] All 9 demo pages render and load corsair YAML data correctly
+- [x] **Discovered**: LiquidJS `divided_by` always does float division, Jekyll's does integer division when both operands are integers. Pattern `{{ x | divided_by: 10 }}.{{ x | modulo: 10 }}M` rendered as `9.1.1M` — completely broken
+- [x] **Discovered**: Jekyll/Ruby integer division floors (negatives go more negative), JavaScript `Math.trunc` truncates toward zero. Difference visible on `-163%` vs `-162%`
+- [x] Registered Jekyll-compatible `divided_by` and `modulo` shims in config — fixed all 113 callsites at once
+- [x] Visual check: corsair main page numbers match (`9.1M`, `14.7M AED`, `4.2M / 4.5M`, `95% / 103% / 104% / 84%`)
+- [x] Remaining diffs vs Jekyll baseline are non-material:
+  - Sort tie-breaker order for 2 invoices with identical `issued` date (Ruby sort non-stable; LiquidJS stable — Jekyll behavior is undefined here)
+  - `40.0%` rendered as `40%` because js-yaml doesn't preserve float precision (JS Number doesn't distinguish int/float). Cosmetic
+- [x] `assets/js/demo/corsair.js` carried through via assets passthrough
 
 ## Phase 9 — feed, sitemap, 404, robots
 - [ ] Create `feed.njk` via `eleventy-plugin-rss`, output `/feed.xml`, validate against jekyll-feed shape
