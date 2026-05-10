@@ -283,7 +283,7 @@ title: Data In, Meaning Out
     <p class="subheader">Stay up to date with news that matters</p>
     <div class="air-lg"></div>
     <div class="grid grid-cols-3 mobile:grid-cols-1 left">
-        {% for post in site.posts limit:9 %}
+        {% for post in collections.posts reversed limit:9 %}
         <div class="padding-b-md">
             <div class="font-size-sm">
                 {{ post.date | date: "%d.%m.%Y" }}

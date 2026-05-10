@@ -3,11 +3,11 @@ Umbrella Inc. — full case file modal.
 Triggered from: data-modal="modal-umbrella" anywhere in the demo.
 {% endcomment %}
 
-{% assign client = site.data.demo.corsair.clients.clients | where: "id", "umbrella" | first %}
-{% assign p1 = site.data.demo.corsair.projects.projects | where: "id", "p-2024-012" | first %}
-{% assign p2 = site.data.demo.corsair.projects.projects | where: "id", "p-2026-010" | first %}
-{% assign inv = site.data.demo.corsair.invoices.receivable | where: "number", "TCT-2026-329" | first %}
-{% assign owner = site.data.demo.corsair.staff.team | where: "id", "head-prod" | first %}
+{% assign client = demo.corsair.clients.clients | where: "id", "umbrella" | first %}
+{% assign p1 = demo.corsair.projects.projects | where: "id", "p-2024-012" | first %}
+{% assign p2 = demo.corsair.projects.projects | where: "id", "p-2026-010" | first %}
+{% assign inv = demo.corsair.invoices.receivable | where: "number", "TCT-2026-329" | first %}
+{% assign owner = demo.corsair.staff.team | where: "id", "head-prod" | first %}
 {% assign phase1Outstanding = p1.budget | minus: p1.actualRevenue %}
 
 <dialog id="modal-umbrella" class="corsair-modal">

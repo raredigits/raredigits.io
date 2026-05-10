@@ -5,15 +5,15 @@ offset: demo
 permalink: /demo/corsair/
 ---
 
-{% assign company = site.data.demo.corsair.company %}
-{% assign jeeves = site.data.demo.corsair.jeeves %}
-{% assign currMonth = site.data.demo.corsair.targets.monthly | last %}
-{% assign cashSnap = site.data.demo.corsair.cashflow.cashSnapshot %}
-{% assign aging = site.data.demo.corsair.invoices.aging %}
-{% assign yr = site.data.demo.corsair.targets.annual | last %}
-{% assign user = site.data.demo.corsair.staff.team | where: "id", "founder-md" | first %}
-{% assign criticalAlerts = site.data.demo.corsair.alerts.summary.bySeverity.critical %}
-{% assign highAlerts = site.data.demo.corsair.alerts.summary.bySeverity.high %}
+{% assign company = demo.corsair.company %}
+{% assign jeeves = demo.corsair.jeeves %}
+{% assign currMonth = demo.corsair.targets.monthly | last %}
+{% assign cashSnap = demo.corsair.cashflow.cashSnapshot %}
+{% assign aging = demo.corsair.invoices.aging %}
+{% assign yr = demo.corsair.targets.annual | last %}
+{% assign user = demo.corsair.staff.team | where: "id", "founder-md" | first %}
+{% assign criticalAlerts = demo.corsair.alerts.summary.bySeverity.critical %}
+{% assign highAlerts = demo.corsair.alerts.summary.bySeverity.high %}
 {% assign firesToday = criticalAlerts | plus: highAlerts %}
 
 <header class="demo-hero">
@@ -98,17 +98,17 @@ permalink: /demo/corsair/
     </a>
     <a href="/demo/corsair/production/" class="kpi-tile clickable" style="text-decoration: none; color: inherit;">
         <div class="kpi-label">Active projects</div>
-        <div class="kpi-value">{{ site.data.demo.corsair.projects.kpis.activeProjects }}</div>
-        <div class="kpi-foot">{{ site.data.demo.corsair.projects.kpis.delivered_unbilled }} delivered · awaiting close</div>
+        <div class="kpi-value">{{ demo.corsair.projects.kpis.activeProjects }}</div>
+        <div class="kpi-foot">{{ demo.corsair.projects.kpis.delivered_unbilled }} delivered · awaiting close</div>
         <div class="click-hint"><span class="material-symbols-outlined">arrow_forward</span> Open Production</div>
     </a>
     <a href="/demo/corsair/notifications/" class="kpi-tile kpi-bad clickable" style="text-decoration: none; color: inherit;">
         <div class="kpi-label">Active alerts</div>
-        <div class="kpi-value">{{ site.data.demo.corsair.alerts.summary.total }}</div>
+        <div class="kpi-value">{{ demo.corsair.alerts.summary.total }}</div>
         <div class="kpi-foot">
-            {{ site.data.demo.corsair.alerts.summary.bySeverity.critical }} critical ·
-            {{ site.data.demo.corsair.alerts.summary.bySeverity.high }} high ·
-            {{ site.data.demo.corsair.alerts.summary.bySeverity.medium }} med
+            {{ demo.corsair.alerts.summary.bySeverity.critical }} critical ·
+            {{ demo.corsair.alerts.summary.bySeverity.high }} high ·
+            {{ demo.corsair.alerts.summary.bySeverity.medium }} med
         </div>
         <div class="click-hint"><span class="material-symbols-outlined">arrow_forward</span> Open Notifications</div>
     </a>
@@ -120,7 +120,7 @@ permalink: /demo/corsair/
     <span class="meta">Four-stage funnel</span>
 </div>
 <section class="ring-row">
-    {% for stage in site.data.demo.corsair.targets.funnelStages %}
+    {% for stage in demo.corsair.targets.funnelStages %}
         {% assign actual = currMonth[stage.id].actual %}
         {% assign plan = currMonth[stage.id].plan %}
         {% assign pct = actual | times: 100 | divided_by: plan %}
@@ -156,7 +156,7 @@ permalink: /demo/corsair/
     <h2>Business Units — 2026 YTD</h2>
     <span class="meta">Plan vs Actual</span>
 </div>
-{% assign unitsYr = site.data.demo.corsair.targets.unitAnnual | last %}
+{% assign unitsYr = demo.corsair.targets.unitAnnual | last %}
 <section class="unit-grid">
     {% for u in company.units %}
         {% assign uData = unitsYr.units[u.id] %}
@@ -185,11 +185,11 @@ permalink: /demo/corsair/
 <!-- ============ Active alerts (top) ============ -->
 <div class="section-head">
     <h2>Active Alerts</h2>
-    <span class="meta"><a href="/demo/corsair/notifications/">See all {{ site.data.demo.corsair.alerts.summary.total }} →</a></span>
+    <span class="meta"><a href="/demo/corsair/notifications/">See all {{ demo.corsair.alerts.summary.total }} →</a></span>
 </div>
 <section>
-    {% assign criticals = site.data.demo.corsair.alerts.active | where: "severity", "critical" %}
-    {% assign highs = site.data.demo.corsair.alerts.active | where: "severity", "high" %}
+    {% assign criticals = demo.corsair.alerts.active | where: "severity", "critical" %}
+    {% assign highs = demo.corsair.alerts.active | where: "severity", "high" %}
     {% for a in criticals %}
         <div class="alert-card sev-critical">
             <span class="material-symbols-outlined alert-icon">error</span>
@@ -248,12 +248,12 @@ permalink: /demo/corsair/
 <!-- ============ In Progress (active projects) ============ -->
 <div class="section-head">
     <h2>In Progress</h2>
-    <span class="meta">{{ site.data.demo.corsair.projects.kpis.activeProjects }} active</span>
+    <span class="meta">{{ demo.corsair.projects.kpis.activeProjects }} active</span>
 </div>
 <section class="row-list">
-    {% assign actives = site.data.demo.corsair.projects.projects | where: "status", "active" %}
+    {% assign actives = demo.corsair.projects.projects | where: "status", "active" %}
     {% for p in actives %}
-        {% assign client = site.data.demo.corsair.clients.clients | where: "id", p.client | first %}
+        {% assign client = demo.corsair.clients.clients | where: "id", p.client | first %}
         <div class="project-row">
             <div class="health-bar {{ p.health }}"></div>
             <div>
@@ -287,9 +287,9 @@ permalink: /demo/corsair/
     <span class="meta">Outgoing AR · last 30 days</span>
 </div>
 <section class="row-list">
-    {% assign recents = site.data.demo.corsair.invoices.receivable | sort: "issued" | reverse %}
+    {% assign recents = demo.corsair.invoices.receivable | sort: "issued" | reverse %}
     {% for inv in recents limit: 6 %}
-        {% assign client = site.data.demo.corsair.clients.clients | where: "id", inv.client | first %}
+        {% assign client = demo.corsair.clients.clients | where: "id", inv.client | first %}
         {% assign cls = "" %}
         {% if inv.status == "overdue" %}{% assign cls = "row-bad" %}{% endif %}
         {% if inv.status == "disputed" %}{% assign cls = "row-bad" %}{% endif %}
@@ -326,11 +326,11 @@ permalink: /demo/corsair/
 </div>
 <section>
     {% assign maxRev = 0 %}
-    {% for m in site.data.demo.corsair.cashflow.monthly %}
+    {% for m in demo.corsair.cashflow.monthly %}
         {% if m.revenue > maxRev %}{% assign maxRev = m.revenue %}{% endif %}
     {% endfor %}
     <div class="bar-chart">
-        {% for m in site.data.demo.corsair.cashflow.monthly %}
+        {% for m in demo.corsair.cashflow.monthly %}
             {% assign h = m.revenue | times: 100 | divided_by: maxRev %}
             {% assign bcls = "" %}
             {% if m.ebitda < 0 %}{% assign bcls = "bar-bad" %}{% endif %}
@@ -339,7 +339,7 @@ permalink: /demo/corsair/
         {% endfor %}
     </div>
     <div class="bar-axis">
-        {% for m in site.data.demo.corsair.cashflow.monthly %}
+        {% for m in demo.corsair.cashflow.monthly %}
             {% if m.month contains "-01" or m.month contains "-07" %}<div>{{ m.month | replace: "-", "/" | slice: 2, 5 }}</div>{% else %}<div></div>{% endif %}
         {% endfor %}
     </div>

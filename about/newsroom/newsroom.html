@@ -10,7 +10,7 @@ permalink: /about/newsroom/
 </p>
 <br>
 <div class="feed-list">
-    {% for post in site.posts %}
+    {% for post in collections.posts reversed %}
         <div class="feed-list__item">
             <div class="feed-list__item-meta">
                 {{ post.date | date: "%d.%m.%Y" }}

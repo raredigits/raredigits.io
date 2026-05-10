@@ -5,7 +5,7 @@
     </div>
     <nav class="nav-global flex stretched">
       <ul>
-        {% for item in site.data.demo.corsair.corsairNav.items %}
+        {% for item in demo.corsair.corsairNav.items %}
           <li {% if page.url == item.url %} class="nav-global-current"{% endif %}>
             <a href="{{ item.url }}" title="{{ item.title }}">
               <span class="material-symbols-outlined">{{ item.icon }}</span>

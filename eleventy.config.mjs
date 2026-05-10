@@ -1,7 +1,10 @@
 import rss from "@11ty/eleventy-plugin-rss";
+import yaml from "js-yaml";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(rss);
+
+  eleventyConfig.addDataExtension("yml,yaml", (contents) => yaml.load(contents));
 
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("CNAME");

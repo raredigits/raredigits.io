@@ -5,10 +5,10 @@ offset: demo
 permalink: /demo/corsair/production/
 ---
 
-{% assign company = site.data.demo.corsair.company %}
-{% assign jeeves = site.data.demo.corsair.jeeves %}
-{% assign projects = site.data.demo.corsair.projects.projects %}
-{% assign kpis = site.data.demo.corsair.projects.kpis %}
+{% assign company = demo.corsair.company %}
+{% assign jeeves = demo.corsair.jeeves %}
+{% assign projects = demo.corsair.projects.projects %}
+{% assign kpis = demo.corsair.projects.kpis %}
 
 <header class="demo-hero">
     <div>
@@ -70,7 +70,7 @@ permalink: /demo/corsair/production/
         <div>Status</div>
     </div>
     {% for p in actives %}
-        {% assign client = site.data.demo.corsair.clients.clients | where: "id", p.client | first %}
+        {% assign client = demo.corsair.clients.clients | where: "id", p.client | first %}
         {% assign burnPct = p.actualCost | times: 100 | divided_by: p.budget %}
         <div class="project-row">
             <div class="health-bar {{ p.health }}"></div>
@@ -107,7 +107,7 @@ permalink: /demo/corsair/production/
 <section class="row-list">
     {% assign delivered = projects | where: "status", "delivered" %}
     {% for p in delivered %}
-        {% assign client = site.data.demo.corsair.clients.clients | where: "id", p.client | first %}
+        {% assign client = demo.corsair.clients.clients | where: "id", p.client | first %}
         {% assign gp = p.actualRevenue | minus: p.actualCost %}
         {% assign gpPct = gp | times: 100 | divided_by: p.actualRevenue %}
         <div class="project-row">
@@ -154,7 +154,7 @@ permalink: /demo/corsair/production/
     {% assign disputed = projects | where: "status", "disputed" %}
     {% assign cancelled = projects | where: "status", "cancelled" %}
     {% for p in disputed %}
-        {% assign client = site.data.demo.corsair.clients.clients | where: "id", p.client | first %}
+        {% assign client = demo.corsair.clients.clients | where: "id", p.client | first %}
         <div class="project-row">
             <div class="health-bar red"></div>
             <div>
@@ -227,7 +227,7 @@ permalink: /demo/corsair/production/
         <tbody>
             {% assign closed = projects | where: "status", "closed" | sort: "eventDate" | reverse %}
             {% for p in closed %}
-                {% assign client = site.data.demo.corsair.clients.clients | where: "id", p.client | first %}
+                {% assign client = demo.corsair.clients.clients | where: "id", p.client | first %}
                 {% assign gp = p.grossProfit %}
                 {% assign gpPct = gp | times: 100 | divided_by: p.actualRevenue %}
                 {% assign cls = "" %}

@@ -45,10 +45,12 @@ Working branch: `migrate-to-11ty`. Tick each box as we go.
 - [ ] **Carry-over to Phase 4**: footer/sidebar menus render empty because `site.data.menu.*` resolves to `undefined`
 
 ## Phase 4 — global template renames
-- [ ] `site.data.menu.` → `menu.` across all menu/layout files
-- [ ] `site.data.demo.corsair.` → `demo.corsair.` across all corsair files
-- [ ] `site.posts` → `collections.posts | reverse` in `about/newsroom/newsroom.html`
-- [ ] Replace or no-op all `relative_url` filter calls
+- [x] `site.data.` → `` across all menu / layout / corsair files (24 files touched)
+- [x] `site.posts` → `collections.posts reversed` (LiquidJS for-loop modifier; covers both `newsroom.html` and the homepage `limit:9` block)
+- [x] **Discovered**: 11ty doesn't read `.yml` data files by default. Installed `js-yaml`, registered `addDataExtension("yml,yaml", ...)`. Without this every menu / corsair data ref is `undefined`
+- [x] `relative_url` already a no-op shim from Phase 3
+- [x] Build verified: menus render with all items, corsair demo loads data
+- [ ] **Carry-over**: `collections.posts` is still empty until `_posts/_posts.json` adds `tags: posts` (Phase 6)
 
 ## Phase 5 — date filter shim
 - [ ] In `.eleventy.js`: register `date` filter using `strftime` package as a shim

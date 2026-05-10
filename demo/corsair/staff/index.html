@@ -5,11 +5,11 @@ offset: demo
 permalink: /demo/corsair/staff/
 ---
 
-{% assign company = site.data.demo.corsair.company %}
-{% assign jeeves = site.data.demo.corsair.jeeves %}
-{% assign team = site.data.demo.corsair.staff.team %}
-{% assign freelancers = site.data.demo.corsair.vendors.freelancers %}
-{% assign keyPersons = site.data.demo.corsair.corsairKeyPersons.keyPersonnel %}
+{% assign company = demo.corsair.company %}
+{% assign jeeves = demo.corsair.jeeves %}
+{% assign team = demo.corsair.staff.team %}
+{% assign freelancers = demo.corsair.vendors.freelancers %}
+{% assign keyPersons = demo.corsair.corsairKeyPersons.keyPersonnel %}
 
 {% assign payroll = 0 %}
 {% for p in team %}{% assign payroll = payroll | plus: p.salaryMonthly %}{% endfor %}
@@ -67,8 +67,8 @@ permalink: /demo/corsair/staff/
 </div>
 <section>
     {% assign hcMax = 18 %}
-    <div style="display: grid; grid-template-columns: repeat({{ site.data.demo.corsair.staff.headcountByMonth | size }}, 1fr); gap: var(--space-sm); align-items: end; height: 100px;">
-        {% for h in site.data.demo.corsair.staff.headcountByMonth %}
+    <div style="display: grid; grid-template-columns: repeat({{ demo.corsair.staff.headcountByMonth | size }}, 1fr); gap: var(--space-sm); align-items: end; height: 100px;">
+        {% for h in demo.corsair.staff.headcountByMonth %}
             {% assign hh = h.fte | times: 100 | divided_by: hcMax %}
             <div style="text-align: center;">
                 <div style="height: {{ hh }}%; min-height: 8px; background: var(--tct-jeeves); border-radius: 2px 2px 0 0;" title="{{ h.month }}: {{ h.fte }} FTE{% if h.note %} · {{ h.note }}{% endif %}"></div>
@@ -98,7 +98,7 @@ permalink: /demo/corsair/staff/
             </tr>
         </thead>
         <tbody>
-            {% for dept in site.data.demo.corsair.staff.departments %}
+            {% for dept in demo.corsair.staff.departments %}
                 {% assign deptTeam = team | where: "department", dept.id %}
                 {% assign deptCost = 0 %}
                 {% for p in deptTeam %}{% assign deptCost = deptCost | plus: p.salaryMonthly %}{% endfor %}

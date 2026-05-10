@@ -2,7 +2,7 @@
   <h5>Services</h5>
     <nav>
       <ul class="nav-list">
-        {% for item in site.data.menu.services.items %}
+        {% for item in menu.services.items %}
           <li>
               <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
           </li>
