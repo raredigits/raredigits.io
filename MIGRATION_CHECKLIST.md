@@ -9,16 +9,18 @@ Working branch: `migrate-to-11ty`. Tick each box as we go.
 - [x] `git rm --cached` any tracked `.DS_Store` (5 files)
 
 ## Phase 1 — bootstrap 11ty
-- [ ] `npm init -y`
-- [ ] Install: `@11ty/eleventy`, `@11ty/eleventy-plugin-rss`, `strftime` (for date shim)
-- [ ] `package.json` scripts: `dev` (`eleventy --serve`), `build` (`eleventy`), `clean`, `debug`
-- [ ] Create `.eleventy.js`:
-  - `dir: { input: '.', output: '_site', includes: '_includes', data: '_data', layouts: '_includes/layouts' }`
-  - passthrough copy: `assets/`, `CNAME`, `404.html`, favicon files
-  - register RSS plugin
-  - register custom filters (see Phase 5)
-- [ ] Create `.eleventyignore`: `Gemfile*`, `_site_jekyll/`, `node_modules/`, `README.md`, `.claude/`, `MIGRATION_CHECKLIST.md`
-- [ ] **Create `.nojekyll`** in repo root (prevents GitHub Pages from running Jekyll over output)
+- [x] `npm init` (rewrote `package.json` with proper name + scripts)
+- [x] Install: `@11ty/eleventy@3.1.5`, `@11ty/eleventy-plugin-rss@3.0.0`, `strftime`
+- [x] `package.json` scripts: `dev` (`eleventy --serve`), `build` (`eleventy`), `clean`, `debug`
+- [x] Create `eleventy.config.mjs` (ESM — required because `eleventy-plugin-rss@3` is ESM-only):
+  - `dir: { input: '.', output: '_site', includes: '_includes', data: '_data' }`
+  - passthrough copy: `assets/`, `CNAME`, `.nojekyll`
+  - default template engine: `liquid` (matches existing Jekyll templates)
+  - RSS plugin registered
+  - filters wired up in Phase 5
+- [x] Create `.eleventyignore`: ignores `node_modules`, `_site*`, `.claude`, `Gemfile*`, `_config.yml`, `MIGRATION_CHECKLIST.md`, etc.
+- [x] **Create `.nojekyll`** in repo root (prevents GitHub Pages from running Jekyll over output)
+- [x] Smoke test: `npx @11ty/eleventy --dryrun` — config loads, plugin loads, fails on missing layouts (expected; Phase 3 fixes)
 
 ## Phase 2 — global data
 - [ ] Create `_data/site.json` with all `_config.yml` values (`title`, `description`, `email`, `phone`, `url`, `baseurl: ""`)
