@@ -72,9 +72,11 @@ Working branch: `migrate-to-11ty`. Tick each box as we go.
 - [x] Homepage featured 9 posts match Jekyll byte-for-byte and order
 
 ## Phase 7 — section pages
-- [ ] Update `layout: page` → `layout: layouts/page.html` (or set up layout aliases in `.eleventy.js`)
-- [ ] Same for `about/newsroom/newsroom.html`
-- [ ] Verify `if/elsif page.offset == "..."` block in `page.html` renders under LiquidJS
+- [x] Layout aliases from Phase 3 mean frontmatter `layout: page` keeps working unchanged across `services/`, `tools/`, `about/`, `legal/`, and `about/newsroom/`
+- [x] `if/elsif offset == "..."` block in `page.html` renders correctly under LiquidJS (was `page.offset`, fixed in Phase 6)
+- [x] All 72 generated URLs match Jekyll baseline byte-for-byte
+- [x] Per-section URL link diff vs Jekyll is empty for `services/`, `tools/`, `about/contacts`, `about/principles`, `legal/terms`
+- [x] **Side fix**: corrected `mailto: ` typo (extra space) in `legal/terms/index.md` — markdown-it strict, Jekyll tolerated
 
 ## Phase 8 — corsair demo (highest QA risk)
 - [ ] Move/update `_includes/layouts/demo/corsair.html` include paths

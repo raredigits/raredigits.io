@@ -1,3 +1,6 @@
+# Claude
+.claude
+
 # 11ty / Node
 node_modules/
 _site/
