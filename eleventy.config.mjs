@@ -1,15 +1,18 @@
-import rss from "@11ty/eleventy-plugin-rss";
+import rss, { dateToRfc3339, getNewestCollectionItemDate } from "@11ty/eleventy-plugin-rss";
 import yaml from "js-yaml";
 import strftime from "strftime";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(rss);
+  eleventyConfig.addLiquidFilter("dateToRfc3339", dateToRfc3339);
+  eleventyConfig.addLiquidFilter("getNewestCollectionItemDate", getNewestCollectionItemDate);
 
   eleventyConfig.addDataExtension("yml,yaml", (contents) => yaml.load(contents));
 
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("CNAME");
   eleventyConfig.addPassthroughCopy(".nojekyll");
+  eleventyConfig.addPassthroughCopy("robots.txt");
 
   eleventyConfig.addLayoutAlias("home", "layouts/home.html");
   eleventyConfig.addLayoutAlias("page", "layouts/page.html");

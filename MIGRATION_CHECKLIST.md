@@ -90,10 +90,11 @@ Working branch: `migrate-to-11ty`. Tick each box as we go.
 - [x] `assets/js/demo/corsair.js` carried through via assets passthrough
 
 ## Phase 9 — feed, sitemap, 404, robots
-- [ ] Create `feed.njk` via `eleventy-plugin-rss`, output `/feed.xml`, validate against jekyll-feed shape
-- [ ] Add `sitemap.xml.njk` (new — Jekyll didn't have one)
-- [ ] Passthrough `robots.txt` if present, otherwise create
-- [ ] `404.html` — add `permalink: /404.html` or passthrough
+- [x] `feed.liquid` outputting `/feed.xml` — Atom format, 31 entries (Jekyll-feed had 10, but no clamp by default makes more sense)
+- [x] **Discovered**: `eleventy-plugin-rss` v3 only registers filters for Nunjucks. Imported `dateToRfc3339` and `getNewestCollectionItemDate` and re-registered them as Liquid filters
+- [x] `sitemap.xml.liquid` — 73 URLs (all pages including newsroom posts and corsair demo, excluding feed/sitemap themselves via `eleventyExcludeFromCollections`)
+- [x] `robots.txt` (new) — passthrough, points crawlers to `/sitemap.xml`
+- [x] `404.html` — auto-renders through `layout: page` (frontmatter already had `permalink: /404.html`)
 
 ## Phase 10 — CSS
 - [ ] `assets/css/feedback.scss` — passthrough as-is, or rename to `.css` (Jekyll never compiled it)
