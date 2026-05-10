@@ -3,10 +3,10 @@
 Working branch: `migrate-to-11ty`. Tick each box as we go.
 
 ## Phase 0 — repo prep
-- [ ] Snapshot baseline: `bundle exec jekyll build` → copy `_site/` to `_site_jekyll/` for final diff
-- [ ] Add `.nvmrc` with Node LTS (e.g. `20`)
-- [ ] Update `.gitignore`: `node_modules/`, `_site/`, `.cache/`, `.DS_Store`
-- [ ] `git rm --cached` any tracked `.DS_Store`
+- [x] Snapshot baseline: `bundle exec jekyll build` → copy `_site/` to `_site_jekyll/` for final diff
+- [x] Add `.nvmrc` with Node LTS (e.g. `20`)
+- [x] Update `.gitignore`: `node_modules/`, `_site/`, `.cache/`, `.DS_Store`
+- [x] `git rm --cached` any tracked `.DS_Store` (5 files)
 
 ## Phase 1 — bootstrap 11ty
 - [ ] `npm init -y`
@@ -78,6 +78,8 @@ Working branch: `migrate-to-11ty`. Tick each box as we go.
 - [ ] Confirm all `<link rel="stylesheet">` paths resolve in built `_site/`
 
 ## Phase 11 — deploy
+- [ ] **Important context**: `_site/` is currently *committed* to the repo (178 files). Current prod is GitHub Pages serving built HTML from the branch. Cutover must replace this with a proper build pipeline before merging to main.
+- [ ] `git rm -r --cached _site/` once new pipeline is wired up (it's already in `.gitignore`)
 - [ ] Decide: GitHub Pages + Actions, or Cloudflare Pages
 - [ ] **GitHub Pages path:**
   - [ ] `.github/workflows/deploy.yml`: checkout → setup-node@v4 → `npm ci` → `npx @11ty/eleventy` → `actions/upload-pages-artifact@v3` → `actions/deploy-pages@v4`

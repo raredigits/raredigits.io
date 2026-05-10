@@ -1,0 +1,20 @@
+# 11ty / Node
+node_modules/
+_site/
+.cache/
+
+# Jekyll baseline (temporary, deleted after migration)
+_site_jekyll/
+
+# Jekyll
+.jekyll-cache/
+.jekyll-metadata
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
