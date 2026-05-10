@@ -23,9 +23,10 @@ Working branch: `migrate-to-11ty`. Tick each box as we go.
 - [x] Smoke test: `npx @11ty/eleventy --dryrun` — config loads, plugin loads, fails on missing layouts (expected; Phase 3 fixes)
 
 ## Phase 2 — global data
-- [ ] Create `_data/site.json` with all `_config.yml` values (`title`, `description`, `email`, `phone`, `url`, `baseurl: ""`)
-- [ ] Keep a copy of `_config.yml` next to it until final QA
-- [ ] After QA: delete `_config.yml`, `Gemfile`, `Gemfile.lock`, the empty `package-lock.json`
+- [x] Create `_data/site.json` with all `_config.yml` values (`title`, `description`, `email`, `phone`, `url`, `baseurl: ""`)
+- [x] Keep `_config.yml` in place until Phase 13 final cleanup
+- [ ] **Carry-over**: `{{ site.time | date: '%Y' }}` in `footer.html` — Jekyll auto-var; replace in Phase 3 (either inline `now` in Liquid, or convert `_data/site.json` → `_data/site.js` with dynamic `time: new Date()`)
+- [ ] Final cleanup (Phase 13): delete `_config.yml`, `Gemfile`, `Gemfile.lock`
 
 ## Phase 3 — layouts & includes
 - [ ] Create `_includes/layouts/` directory
