@@ -53,9 +53,11 @@ Working branch: `migrate-to-11ty`. Tick each box as we go.
 - [ ] **Carry-over**: `collections.posts` is still empty until `_posts/_posts.json` adds `tags: posts` (Phase 6)
 
 ## Phase 5 — date filter shim
-- [ ] In `.eleventy.js`: register `date` filter using `strftime` package as a shim
-- [ ] Do **not** use the default 11ty Luxon date filter — token syntax differs
-- [ ] Grep all `date:` calls, confirm shim covers `%B %d, %Y`, `%d.%m.%Y`, `%Y`
+- [x] Register `date` filter in `eleventy.config.mjs` using `strftime` package as a drop-in for Jekyll's date filter (accepts Date or ISO string)
+- [x] Convert `_data/site.json` → `_data/site.mjs` with dynamic `time: new Date()` getter (handles `site.time` carry-over from Phase 2)
+- [x] Add `eleventy` config to `.claude/launch.json` for browser preview
+- [x] Verified all 4 formats in real build + browser: `%Y` (footer 2026), `%B %d, %Y` (post sidebar), `%H:%M` (corsair refresh), `%d.%m.%Y` (newsroom — confirmed via post.html template, list itself empty until Phase 6)
+- [x] No build errors, no console errors
 
 ## Phase 6 — posts collection & permalinks
 - [ ] Create `_posts/_posts.json`:

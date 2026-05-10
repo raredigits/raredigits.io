@@ -1,5 +1,6 @@
 import rss from "@11ty/eleventy-plugin-rss";
 import yaml from "js-yaml";
+import strftime from "strftime";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(rss);
@@ -18,7 +19,12 @@ export default function (eleventyConfig) {
   // No-op shim: site has no baseurl, so relative_url is identity.
   eleventyConfig.addFilter("relative_url", (value) => value);
 
-  // The strftime date filter is wired up in Phase 5.
+  // strftime-based `date` filter — drop-in replacement for Jekyll's date
+  // filter. Accepts Date objects, ISO strings, or anything Date can parse.
+  eleventyConfig.addFilter("date", (input, format) => {
+    const d = input instanceof Date ? input : new Date(input);
+    return strftime(format, d);
+  });
 
   return {
     dir: {
