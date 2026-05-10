@@ -97,8 +97,9 @@ Working branch: `migrate-to-11ty`. Tick each box as we go.
 - [x] `404.html` — auto-renders through `layout: page` (frontmatter already had `permalink: /404.html`)
 
 ## Phase 10 — CSS
-- [ ] `assets/css/feedback.scss` — passthrough as-is, or rename to `.css` (Jekyll never compiled it)
-- [ ] Confirm all `<link rel="stylesheet">` paths resolve in built `_site/`
+- [x] `assets/css/feedback.scss` carried through via `assets/` passthrough — same as Jekyll, no compilation, the `.scss` extension is cosmetic
+- [x] All 6 local stylesheets resolve in `_site_11ty/`: `rare.css`, `feedback.scss`, `themes/black.css`, `themes/rareBlack.css`, `modules/home.css`, `demo/corsair.css`
+- [x] Phase closed without code changes — assets passthrough from Phase 1 covers it
 
 ## Phase 11 — deploy
 - [ ] **Important context**: `_site/` is currently *committed* to the repo (178 files). Current prod is GitHub Pages serving built HTML from the branch. Cutover must replace this with a proper build pipeline before merging to main.
