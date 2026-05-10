@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Rare Digits Now Officially Managing the Future"
-date:   2024-07-31 10:00:00 +0400
+date:   2024-07-31T10:00:00+04:00
 cover: /assets/img/newsroom/2024/destination.jpg
 category: Expansion
 tags: partnership

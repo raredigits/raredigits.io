@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Introducing Corsair HQ"
-date:   2024-11-18 10:00:00 +0400
+date:   2024-11-18T10:00:00+04:00
 cover: /assets/img/newsroom/2024/corsair.jpg
 category: Release
 tags: kitchen erp

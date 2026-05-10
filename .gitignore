@@ -3,8 +3,9 @@ node_modules/
 _site/
 .cache/
 
-# Jekyll baseline (temporary, deleted after migration)
+# Jekyll baseline + 11ty scratch builds (temporary, deleted after migration)
 _site_jekyll/
+_site_11ty/
 
 # Jekyll
 .jekyll-cache/

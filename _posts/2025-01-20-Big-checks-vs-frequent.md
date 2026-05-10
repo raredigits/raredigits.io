@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Big Checks vs. Frequent Buyers"
-date:   2025-01-20 10:00:00 +0400
+date:   2025-01-20T10:00:00+04:00
 cover: /assets/img/news/2023/
 category: Insights
 tags: business core

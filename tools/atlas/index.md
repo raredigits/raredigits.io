@@ -20,7 +20,7 @@ The result?
 
 ## What Makes Atlas Different:
 
-<div class="Space">{% include /special/constructionNotice.html %}</div>
+<div class="Space">{% include "special/constructionNotice.html" %}</div>
 
 ## Key Features
 
@@ -31,4 +31,4 @@ The result?
 
 Atlas ERP doesn't just manage your business data—it makes that data usable by the humans who need to make actual decisions with it. Revolutionary concept, we know.
 
-{% include /special/bookDemo.html %}
+{% include "special/bookDemo.html" %}

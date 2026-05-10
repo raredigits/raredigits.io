@@ -7,7 +7,15 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("CNAME");
   eleventyConfig.addPassthroughCopy(".nojekyll");
 
-  // Layout aliases and the strftime date filter are wired up in later phases.
+  eleventyConfig.addLayoutAlias("home", "layouts/home.html");
+  eleventyConfig.addLayoutAlias("page", "layouts/page.html");
+  eleventyConfig.addLayoutAlias("post", "layouts/post.html");
+  eleventyConfig.addLayoutAlias("demo/corsair", "layouts/demo/corsair.html");
+
+  // No-op shim: site has no baseurl, so relative_url is identity.
+  eleventyConfig.addFilter("relative_url", (value) => value);
+
+  // The strftime date filter is wired up in Phase 5.
 
   return {
     dir: {

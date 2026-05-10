@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Russian Engineers Choose Sunshine Over Snow"
-date:   2023-05-17 16:17:18 +0800
+date:   2023-05-17T16:17:18+08:00
 cover: /assets/img/newsroom/2023/landing_in_dubai.jpg
 category: Expansion
 tags: blessing

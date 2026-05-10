@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Cash Flow Gaps Solution"
-date:   2024-04-22 10:00:00 +0400
+date:   2024-04-22T10:00:00+04:00
 cover: /assets/img/newsroom/2024/cash-flow-gaps.jpg
 category: Insights
 tags: finance

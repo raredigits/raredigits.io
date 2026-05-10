@@ -1,10 +1,10 @@
-{% include head.html %}
+{% include "head.html" %}
 
 <body>
-    {% include header.html %}
+    {% include "header.html" %}
     
     <main>
-        {% include /special/constructionHeader.html %}
+        {% include "special/constructionHeader.html" %}
         <div class="content grid-global">
             <aside class="sidebar">
                 <div class="sidebar-wrapper">
@@ -28,13 +28,13 @@
                     </nav>
                 </div>
             </aside>
-            {% include title.html %}
+            {% include "title.html" %}
             <article>
                 {{ content }}
-                {% include /special/pressOffice.html %}
+                {% include "special/pressOffice.html" %}
             </article>
         </div>
     </main>
 </body>
 
-{% include footer.html %}
+{% include "footer.html" %}

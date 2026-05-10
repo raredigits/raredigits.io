@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Financial Experts Choose Financial Experts"
-date:   2024-06-14 10:00:00 +0400
+date:   2024-06-14T10:00:00+04:00
 cover: /assets/img/newsroom/2024/asiatech.jpg
 category: Expansion
 tags: finance blessing

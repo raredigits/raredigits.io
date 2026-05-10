@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How Lending Assessment Practices Can Revolutionize Auto Repair Shop's Cash Flow"
-date:   2025-01-13 10:00:00 +0400
+date:   2025-01-13T10:00:00+04:00
 cover: /assets/img/news/2023/
 category: Insights
 tags: finance forecast

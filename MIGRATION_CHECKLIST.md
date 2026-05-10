@@ -29,14 +29,20 @@ Working branch: `migrate-to-11ty`. Tick each box as we go.
 - [ ] Final cleanup (Phase 13): delete `_config.yml`, `Gemfile`, `Gemfile.lock`
 
 ## Phase 3 — layouts & includes
-- [ ] Create `_includes/layouts/` directory
-- [ ] Move `_layouts/home.html` → `_includes/layouts/home.html`
-- [ ] Move `_layouts/page.html` → `_includes/layouts/page.html`
-- [ ] Move `_layouts/post.html` → `_includes/layouts/post.html`
-- [ ] Move `_layouts/demo/corsair.html` → `_includes/layouts/demo/corsair.html`
-- [ ] Delete empty `_layouts/`
-- [ ] Verify `head.html` / `main-head.html` work — `page.title` auto-injects from frontmatter
-- [ ] Fix `{{ site.time | date: '%Y' }}` in `footer.html` (use shim from Phase 5)
+- [x] Create `_includes/layouts/` directory
+- [x] Move `_layouts/home.html` → `_includes/layouts/home.html`
+- [x] Move `_layouts/page.html` → `_includes/layouts/page.html`
+- [x] Move `_layouts/post.html` → `_includes/layouts/post.html`
+- [x] Move `_layouts/demo/corsair.html` → `_includes/layouts/demo/corsair.html`
+- [x] Delete empty `_layouts/`
+- [x] Register layout aliases (`home`, `page`, `post`, `demo/corsair`) so existing frontmatter `layout: x` keeps working
+- [x] Convert all 31 post `date:` fields from Jekyll `2025-01-13 10:00:00 +0400` to ISO-8601 `2025-01-13T10:00:00+04:00` (LiquidJS / Luxon parser strict)
+- [x] Rewrite all 59 `{% include /path %}` calls to `{% include "path" %}` (LiquidJS requires quoted paths and rejects leading slash)
+- [x] Register no-op `relative_url` filter (baseurl is empty, so identity is correct)
+- [x] First successful build: `npx eleventy --output=_site_11ty` → 177 files in 0.47s
+- [x] Add `_site_11ty/` to `.gitignore` and `.eleventyignore`
+- [ ] **Carry-over to Phase 5**: `{{ site.time | date: '%Y' }}` in `footer.html` not yet handled
+- [ ] **Carry-over to Phase 4**: footer/sidebar menus render empty because `site.data.menu.*` resolves to `undefined`
 
 ## Phase 4 — global template renames
 - [ ] `site.data.menu.` → `menu.` across all menu/layout files

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How to Determine if You Need to Urgently Invest in AI?"
-date:   2024-06-04 10:00:00 +0400
+date:   2024-06-04T10:00:00+04:00
 cover: /assets/img/newsroom/2024/invest_in_ai.jpg
 category: Insights
 tags: AI automate

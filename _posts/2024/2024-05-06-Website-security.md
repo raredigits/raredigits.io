@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "A Few Words About the Security of Your Website"
-date:   2024-05-06 10:00:00 +0400
+date:   2024-05-06T10:00:00+04:00
 cover: /assets/img/newsroom/2024/digital_security.jpg
 category: Insights
 tags: security web

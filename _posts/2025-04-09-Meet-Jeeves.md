@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Meet Jeeves — Your New Digital Concierge"
-date:   2025-05-20 10:00:00 +0400
+date:   2025-05-20T10:00:00+04:00
 cover: /assets/img/news/2023/
 category: Release
 tags: kitchen automate

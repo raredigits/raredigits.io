@@ -14,10 +14,10 @@ permalink: /tools/web3/watchtower/
 
 Monitors of liquidity movements between Web3 networks. Think of it as a financial traffic helicopter reporting on capital flows across the increasingly congested blockchain highway system.
 
-<div class="Space">{% include /special/constructionNotice.html %}</div>
+<div class="Space">{% include "special/constructionNotice.html" %}</div>
 
 ## Capabilities
 
 The first version supports EVM-compatible networks and Cosmos SDK chains—covering most of the territories where digital money does its nomadic wandering. Like any respectable financial surveillance tool, Watchtower plans to expand its jurisdiction in future updates.
 
-{% include /special/bookDemo.html %}
+{% include "special/bookDemo.html" %}

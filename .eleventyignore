@@ -1,6 +1,7 @@
 node_modules
 _site
 _site_jekyll
+_site_11ty
 .claude
 .cache
 Gemfile

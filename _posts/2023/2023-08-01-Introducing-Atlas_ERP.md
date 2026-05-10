@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Rare Digits Unveils Atlas ERP"
-date:   2023-08-01 10:00:00 +0800
+date:   2023-08-01T10:00:00+08:00
 cover: /assets/img/newsroom/2023/atlas.jpg
 category: Release
 tags: erp knowledge

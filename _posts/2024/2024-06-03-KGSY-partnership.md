@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "When Intelligent Meets Rare"
-date:   2024-06-03 10:00:00 +0400
+date:   2024-06-03T10:00:00+04:00
 cover: /assets/img/newsroom/2024/chineese.jpg
 category: Expansion
 tags: partnership

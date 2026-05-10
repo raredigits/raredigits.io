@@ -6,4 +6,4 @@ remark: 'Current version: v.3.0.1'
 permalink: /tools/columbus/
 ---
 
-<div class="Space">{% include /special/constructionNotice.html %}</div>
+<div class="Space">{% include "special/constructionNotice.html" %}</div>

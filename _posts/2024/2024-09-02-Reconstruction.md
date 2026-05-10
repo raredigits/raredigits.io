@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Pardon Our Digital Dust"
-date:   2024-09-02 10:00:00 +0400
+date:   2024-09-02T10:00:00+04:00
 cover: /assets/img/news/2023/
 category: Internal Affairs
 tags: kitchen
@@ -19,7 +19,7 @@ The website is&nbsp;currently undergoing maintenance and upgrades. Some features
 
 Sometimes you can see this:
 
-<div class="Space">{% include /special/constructionNotice.html %}</div>
+<div class="Space">{% include "special/constructionNotice.html" %}</div>
 
 Thats just temporary, no worries.
 
