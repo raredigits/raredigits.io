@@ -3,7 +3,7 @@
 </span>
 <nav class="sidebar-nav no-scrollbar">
   <ul>
-    {% for item in site.data.menu.rare-styles.items %}
+    {% for item in menu.rare-styles.items %}
       <li class="{% if page.url == item.url %}bold{% endif %}">
         {% if page.url == item.url %}
           {{ item.title }}

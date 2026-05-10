@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "Russian Engineers Choose Sunshine Over Snow"
-date:   2023-05-17 16:17:18 +0800
+date:   2023-05-17T16:17:18+08:00
 cover: /assets/img/newsroom/2023/landing_in_dubai.jpg
 category: Expansion
-tags: blessing
+tags: [blessing]
 ---
 
 In what financial analysts are calling "the most predictable migration since birds discovered the concept of winter," Rare Digits has officially secured its operating license as a Software House in the UAE. 
@@ -12,7 +12,7 @@ In what financial analysts are calling "the most predictable migration since bir
 The team of Russian engineers, after careful deliberation lasting approximately 3.7 seconds, decided that Dubai's average temperature of 33°C was marginally preferable to Moscow's balmy -15°C winter wonderland. The decision-making process reportedly involved a sophisticated algorithm consisting of one question: "Do you want to feel your fingers while typing code?"
 
 <div class="full-width">
-  <img src="{{ page.cover }}" />
+  <img src="{{ cover }}" />
 </div>
 
 ## A Match Made in Business Heaven

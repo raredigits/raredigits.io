@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "Meet Jeeves — Your New Digital Concierge"
-date:   2025-05-20 10:00:00 +0400
+date:   2025-05-20T10:00:00+04:00
 cover: /assets/img/news/2023/
 category: Release
-tags: kitchen automate
+tags: [kitchen, automate]
 ---
 
 ## AI butler promises to end the eternal suffering of executives who can’t find last quarter’s numbers without summoning three analysts and a data scientist

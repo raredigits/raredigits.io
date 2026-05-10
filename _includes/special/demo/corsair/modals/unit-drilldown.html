@@ -3,16 +3,16 @@ Generic unit drilldown — emits 4 dialogs (one per business unit).
 Triggered from: data-modal="modal-unit-<id>" on unit cards.
 {% endcomment %}
 
-{% assign company = site.data.demo.corsair.company %}
-{% assign yr2025 = site.data.demo.corsair.targets.unitAnnual | where: "year", 2025 | first %}
-{% assign yr2026 = site.data.demo.corsair.targets.unitAnnual | last %}
+{% assign company = demo.corsair.company %}
+{% assign yr2025 = demo.corsair.targets.unitAnnual | where: "year", 2025 | first %}
+{% assign yr2026 = demo.corsair.targets.unitAnnual | last %}
 
 {% for u in company.units %}
     {% assign u2025 = yr2025.units[u.id] %}
     {% assign u2026 = yr2026.units[u.id] %}
     {% assign pct2026 = u2026.revenueActualYTD | times: 100 | divided_by: u2026.revenuePlan %}
     {% assign pct2025 = u2025.revenueActual | times: 100 | divided_by: u2025.revenuePlan %}
-    {% assign uProjects = site.data.demo.corsair.projects.projects | where: "unit", u.id %}
+    {% assign uProjects = demo.corsair.projects.projects | where: "unit", u.id %}
     {% assign uClosed2025 = uProjects | where: "status", "closed" %}
 
     <dialog id="modal-unit-{{ u.id }}" class="corsair-modal">

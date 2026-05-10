@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "When Intelligent Meets Rare"
-date:   2024-06-03 10:00:00 +0400
+date:   2024-06-03T10:00:00+04:00
 cover: /assets/img/newsroom/2024/chineese.jpg
 category: Expansion
-tags: partnership
+tags: [partnership]
 ---
 
 ## Chinese Manufacturing Giant Selects Rare Digits
@@ -12,7 +12,7 @@ tags: partnership
 We're excited to announce that [Intelligent Technologies](https://www.chinakgsy.com), the Chinese industrial powerhouse moving an impressive 50,000 tons of product annually, has chosen Rare Digits to revolutionize their data management systems.
 
 <div class="full-width">
-  <img src="{{ page.cover }}" />
+  <img src="{{ cover }}" />
 </div>
 
 ## Smart Choice for Massive Operations

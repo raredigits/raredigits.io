@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "Financial Experts Choose Financial Experts"
-date:   2024-06-14 10:00:00 +0400
+date:   2024-06-14T10:00:00+04:00
 cover: /assets/img/newsroom/2024/asiatech.jpg
 category: Expansion
-tags: finance blessing
+tags: [finance, blessing]
 ---
 
 In what might initially seem like unremarkable business news, Rare Digits has signed a contract with Philippine company [Asiatech](https://onlineloanspilipinas.ph/en). But wait—there's a financial plot twist that deserves your attention.
@@ -12,7 +12,7 @@ In what might initially seem like unremarkable business news, Rare Digits has si
 ## A Business Love Story
 
 <div class="full-width">
-  <img src="{{ page.cover }}" />
+  <img src="{{ cover }}" />
 </div>
 
 Asiatech isn't just any company looking to optimize their operations. They're a financial services provider specializing in online consumer lending—you know, the people who professionally decide who gets money, how much, and under what conditions. In other words, they're in the business of making numbers work harder than a caffeine-addicted accountant during tax season.

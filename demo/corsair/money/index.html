@@ -5,10 +5,10 @@ offset: demo
 permalink: /demo/corsair/money/
 ---
 
-{% assign company = site.data.demo.corsair.company %}
-{% assign jeeves = site.data.demo.corsair.jeeves %}
-{% assign cashflow = site.data.demo.corsair.cashflow %}
-{% assign aging = site.data.demo.corsair.invoices.aging %}
+{% assign company = demo.corsair.company %}
+{% assign jeeves = demo.corsair.jeeves %}
+{% assign cashflow = demo.corsair.cashflow %}
+{% assign aging = demo.corsair.invoices.aging %}
 {% assign cashSnap = cashflow.cashSnapshot %}
 
 <header class="demo-hero">
@@ -139,9 +139,9 @@ permalink: /demo/corsair/money/
             </tr>
         </thead>
         <tbody>
-            {% for inv in site.data.demo.corsair.invoices.receivable %}
+            {% for inv in demo.corsair.invoices.receivable %}
                 {% if inv.status == "paid" %}{% continue %}{% endif %}
-                {% assign client = site.data.demo.corsair.clients.clients | where: "id", inv.client | first %}
+                {% assign client = demo.corsair.clients.clients | where: "id", inv.client | first %}
                 <tr>
                     <td>
                         <strong>{{ inv.number }}</strong>
@@ -167,7 +167,7 @@ permalink: /demo/corsair/money/
 </section>
 
 <!-- Featured invoice — #329 detail card (replicates screenshot) -->
-{% assign inv329 = site.data.demo.corsair.invoices.receivable | where: "number", "TCT-2026-329" | first %}
+{% assign inv329 = demo.corsair.invoices.receivable | where: "number", "TCT-2026-329" | first %}
 <div class="section-head">
     <h2>Invoice {{ inv329.number }} · Detail</h2>
     <span class="meta">Featured · long-running dispute</span>
@@ -245,10 +245,10 @@ permalink: /demo/corsair/money/
             </tr>
         </thead>
         <tbody>
-            {% for ap in site.data.demo.corsair.invoices.payable %}
+            {% for ap in demo.corsair.invoices.payable %}
                 {% if ap.status == "paid" %}{% continue %}{% endif %}
-                {% assign vendor = site.data.demo.corsair.vendors.vendors | where: "id", ap.vendor | first %}
-                {% assign proj = site.data.demo.corsair.projects.projects | where: "id", ap.project | first %}
+                {% assign vendor = demo.corsair.vendors.vendors | where: "id", ap.vendor | first %}
+                {% assign proj = demo.corsair.projects.projects | where: "id", ap.project | first %}
                 <tr>
                     <td><strong>{{ ap.number }}</strong><div class="row-sub">{{ ap.description | truncate: 60 }}</div></td>
                     <td>{{ vendor.name }}</td>

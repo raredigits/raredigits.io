@@ -1,0 +1,13 @@
+node_modules
+_site
+_site_jekyll
+_site_11ty
+.claude
+.cache
+Gemfile
+Gemfile.lock
+_config.yml
+MIGRATION_CHECKLIST.md
+README.md
+package.json
+package-lock.json

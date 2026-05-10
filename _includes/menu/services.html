@@ -2,7 +2,7 @@
   <a href="/services/" class="no-decoration">Services</a>
 </h5>
 <ul>
-  {% for item in site.data.menu.services.items %}
+  {% for item in menu.services.items %}
     <li class="{% if page.url == item.url %}bold{% endif %}">
       {% if page.url == item.url %}
         {{ item.title }}

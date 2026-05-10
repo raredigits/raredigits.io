@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "Building Your Own Search Engine"
-date:   2025-10-29 10:00:00 +0400
+date:   2025-10-29T10:00:00+04:00
 cover: /assets/img/news/2023/
 category: Insights
-tags: kitchen
+tags: [kitchen]
 ---
 
 ### The urge to build a Ferrari to deliver a pizza

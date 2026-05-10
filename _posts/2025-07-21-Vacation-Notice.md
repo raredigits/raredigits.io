@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "Vacation Notice: The August Disappearing Act"
-date:   2025-07-21 10:00:00 +0400
+date:   2025-07-21T10:00:00+04:00
 cover: /assets/img/news/2023/
 category: Internal Affairs
-tags: kitchen
+tags: [kitchen]
 ---
 
 One weird thing about running a company is that everyone expects you to, you know, actually work. But here’s the thing: we’ve decided that August 2025 is going to be our collective “nope” month.

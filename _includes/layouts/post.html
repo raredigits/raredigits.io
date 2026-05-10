@@ -1,10 +1,10 @@
-{% include head.html %}
+{% include "head.html" %}
 
 <body>
-    {% include header.html %}
+    {% include "header.html" %}
     
     <main>
-        {% include /special/constructionHeader.html %}
+        {% include "special/constructionHeader.html" %}
         <div class="content grid-global">
             <aside class="sidebar">
                 <div class="sidebar-wrapper">
@@ -12,15 +12,15 @@
                         <h5 class="sidebar-header">
                             <a href="/about/newsroom/">Newsroom</a>
                         </h5>
-                            {% if page.category %}
-                                <div class="sidebar-meta">{{ page.category }}</div>
+                            {% if category %}
+                                <div class="sidebar-meta">{{ category }}</div>
                             {% endif %}
                             {% if page.date %}
                                 <div class="sidebar-meta">{{ page.date | date: "%B %d, %Y" }}</div>
                             {% endif %}
                         <div class="sidebar-meta">
-                            {% if page.tags %}
-                                {% for tag in page.tags %}
+                            {% if tags %}
+                                {% for tag in tags %}
                                 <span class="tag">#{{ tag }}</span>
                                 {% endfor %}
                             {% endif %}
@@ -28,13 +28,13 @@
                     </nav>
                 </div>
             </aside>
-            {% include title.html %}
+            {% include "title.html" %}
             <article>
                 {{ content }}
-                {% include /special/pressOffice.html %}
+                {% include "special/pressOffice.html" %}
             </article>
         </div>
     </main>
 </body>
 
-{% include footer.html %}
+{% include "footer.html" %}

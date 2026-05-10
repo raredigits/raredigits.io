@@ -2,7 +2,7 @@
   <a href="/tools/">Solutions</a>
 </h5>
   <ul>
-    {% for item in site.data.menu.solutions.items %}
+    {% for item in menu.solutions.items %}
       <li class="{% if page.url == item.url %}bold{% endif %}">
         {% if page.url == item.url %}
           {{ item.title }}
@@ -13,11 +13,11 @@
     {% endfor %}
   </ul>
 
-  {% if site.data.menu.solutions.featured %}
+  {% if menu.solutions.featured %}
     <div class="sidebar-section mobile-hidden">
     <span class="sidebar-header">Featured</span>
     <ul>
-        {% for item in site.data.menu.solutions.featured %}
+        {% for item in menu.solutions.featured %}
         <li class="{% if item.icon %}sidebar-icon{% endif %}">
             {% if item.icon %}{{ item.icon }}{% endif %}
             <a href="{{ item.url | relative_url }}">

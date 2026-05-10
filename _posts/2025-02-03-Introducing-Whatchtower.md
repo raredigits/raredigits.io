@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "Introducing Watchtower v.0.1"
-date:   2025-02-03 10:00:00 +0400
+date:   2025-02-03T10:00:00+04:00
 cover: /assets/img/news/2023/
 category: Release
-tags: kitchen web3
+tags: [kitchen, web3]
 ---
 
 <div class="full-width">
@@ -15,7 +15,7 @@ tags: kitchen web3
 
 Rare Digits has just launched Watchtower, our new application that monitors liquidity movements between Web3 networks. Think of it as a financial traffic helicopter reporting on capital flows across the increasingly congested blockchain highway system.
 
-<div class="Space">{% include /special/constructionNotice.html %}</div>
+<div class="Space">{% include "special/constructionNotice.html" %}</div>
 
 ## What It Does
 

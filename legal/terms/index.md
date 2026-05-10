@@ -62,4 +62,4 @@ These terms may change without notice, so check back occasionally if you’re 
 
 ## Questions?
 
-If you have questions about these terms that weren’t answered by this refreshingly honest agreement, please contact us at [legal@raredigits.io](mailto: legal@raredigits.io).
+If you have questions about these terms that weren’t answered by this refreshingly honest agreement, please contact us at [legal@raredigits.io](mailto:legal@raredigits.io).

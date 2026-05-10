@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "How to Determine if You Need to Urgently Invest in AI?"
-date:   2024-06-04 10:00:00 +0400
+date:   2024-06-04T10:00:00+04:00
 cover: /assets/img/newsroom/2024/invest_in_ai.jpg
 category: Insights
-tags: AI automate
+tags: [AI, automate]
 ---
 
 ## You Don't
@@ -16,7 +16,7 @@ Let's unpack this revolutionary advice.
 ## AI Is the New Paris Fashion Week
 
 <div class="full-width">
-  <img src="{{ page.cover }}" />
+  <img src="{{ cover }}" />
 </div>
 
 Artificial Intelligence in its current form is remarkably similar to the latest haute couture trend strutting down Parisian runways. It might be genuinely innovative. It could potentially look spectacular on the right business. It's definitely getting all the media attention and investor champagne toasts.

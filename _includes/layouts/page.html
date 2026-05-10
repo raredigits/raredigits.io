@@ -1,0 +1,36 @@
+{% include "head.html" %}
+
+<body>
+    {% include "header.html" %}
+    <main>
+        {% include "special/constructionHeader.html" %}
+        <div class="content grid-global">
+            <aside class="sidebar">
+                <nav class="sidebar-wrapper sidebar-nav no-scrollbar">
+                    {% if offset == "solutions" %}
+                        {% include "menu/solutions.html" %}
+                    {% elsif offset == "about" %}
+                        {% include "menu/about.html" %}
+                    {% elsif offset == "legal" %}
+                        {% include "menu/legal.html" %}
+                    {% elsif offset == "services" %}
+                        {% include "menu/services.html" %}
+                    {% elsif offset == "styles" %}
+                        {% include "menu/demo/styles.html" %}
+                    {% endif %}
+                </nav>
+            </aside>
+            {% include "title.html" %}
+            <article>
+                {% if remark %}
+                    <p class="meta-info">
+                        <span class="">{{ remark }}</span>
+                    </p>
+                {% endif %}
+                {{ content }}
+            </article>
+        </div>
+    </main>
+</body>
+
+{% include "footer.html" %}

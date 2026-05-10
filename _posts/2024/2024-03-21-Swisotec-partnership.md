@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "Swisotec Partnership"
-date:   2024-03-21 10:00:00 +0400
+date:   2024-03-21T10:00:00+04:00
 cover: /assets/img/news/2023/
 categories: about
-tags: partnership
+tags: [partnership]
 ---
 
-{% include /special/constructionNotice.html %}
+{% include "special/constructionNotice.html" %}

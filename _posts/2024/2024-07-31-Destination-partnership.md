@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "Rare Digits Now Officially Managing the Future"
-date:   2024-07-31 10:00:00 +0400
+date:   2024-07-31T10:00:00+04:00
 cover: /assets/img/newsroom/2024/destination.jpg
 category: Expansion
-tags: partnership
+tags: [partnership]
 ---
 
 ## (Technically Speaking)
@@ -12,7 +12,7 @@ tags: partnership
 We're excited to announce that Rare Digits has formed a strategic partnership with [Destination Future](https://www.destination-future.com), the multi-national technology provider operating across three countries and specializing in Smart Networks, High-Performance Computing, Automation, and IoT solutions.
 
 <div class="full-width">
-  <img src="{{ page.cover }}" />
+  <img src="{{ cover }}" />
 </div>
 
 ## From Data to Destiny

@@ -19,7 +19,7 @@ Take a look. Your future self with higher margins will thank you.
             <span class="tag">#business</span>
         </div>
     </div>
-    <div class="col-span-1 card shadow-sm column stretched center-x">{% include /special/constructionNotice.html %}</div>
+    <div class="col-span-1 card shadow-sm column stretched center-x">{% include "special/constructionNotice.html" %}</div>
     <div class="col-span-1 card shadow-sm column stretched center-x padding-lg">
         <div class="center">
             <img src="/assets/img/common/apps/app-columbus.png"></div>
@@ -56,8 +56,8 @@ Take a look. Your future self with higher margins will thank you.
             <span class="tag">#business</span>
         </div>
     </div>
-    <div class="col-span-1 card shadow-sm column stretched center-x">{% include /special/constructionNotice.html %}</div>
-    <div class="col-span-1 card shadow-sm column stretched center-x">{% include /special/constructionNotice.html %}</div>
+    <div class="col-span-1 card shadow-sm column stretched center-x">{% include "special/constructionNotice.html" %}</div>
+    <div class="col-span-1 card shadow-sm column stretched center-x">{% include "special/constructionNotice.html" %}</div>
     <div class="col-span-1 card shadow-sm column stretched center-x padding-lg">
         <img src="/assets/img/common/vendors/github-mark/github-mark.png">
         <p><a href="/tools/open-source/styles/">Rare Styles</a></p>
