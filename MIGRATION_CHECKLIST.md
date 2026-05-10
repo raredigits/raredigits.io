@@ -105,16 +105,16 @@ Working branch: `migrate-to-11ty`. Tick each box as we go.
 - [ ] **Important context**: `_site/` is currently *committed* to the repo (178 files). Current prod is GitHub Pages serving built HTML from the branch. Cutover must replace this with a proper build pipeline before merging to main.
 - [ ] `git rm -r --cached _site/` once new pipeline is wired up (it's already in `.gitignore`)
 - [ ] Decide: GitHub Pages + Actions, or Cloudflare Pages
-- [ ] **GitHub Pages path:**
-  - [ ] `.github/workflows/deploy.yml`: checkout → setup-node@v4 → `npm ci` → `npx @11ty/eleventy` → `actions/upload-pages-artifact@v3` → `actions/deploy-pages@v4`
-  - [ ] Settings → Pages → switch source to "GitHub Actions"
-  - [ ] Verify `.nojekyll` is in `_site/` after build
-  - [ ] Verify `CNAME` is in `_site/` after build
-- [ ] **Cloudflare Pages path:**
-  - [ ] Connect repo, build cmd `npx @11ty/eleventy`, output `_site/`, Node 20
-  - [ ] Move DNS for raredigits.io to Cloudflare
-  - [ ] Disable old GitHub Pages site
-- [ ] **Do not switch prod DNS until preview deploy is green**
+- [x] **Decision: GitHub Pages + Actions**
+- [x] `.github/workflows/deploy.yml` created — checkout → setup-node@v4 (reads `.nvmrc`) → `npm ci` → `npx @11ty/eleventy` → `actions/configure-pages@v5` → `actions/upload-pages-artifact@v3` → `actions/deploy-pages@v4`
+- [x] Triggers: push to `main`, plus `workflow_dispatch` for manual reruns
+- [x] Verified locally that `npm ci && npx @11ty/eleventy` produces `_site/` with `.nojekyll`, `CNAME`, `feed.xml`, `sitemap.xml`, `robots.txt`, `index.html`, `404.html`
+- [ ] **Manual cutover steps for the user (cannot be done from CLI):**
+  1. Merge `migrate-to-11ty` → `main` (squash-merge recommended)
+  2. GitHub → Settings → Pages → Source: switch from "Deploy from a branch" to "GitHub Actions"
+  3. Actions tab → run "Build and deploy to GitHub Pages" via `workflow_dispatch` once to confirm green
+  4. Visit https://raredigits.io and spot-check
+  5. Open a follow-up PR with `git rm -r _site/` and a `git rm Gemfile Gemfile.lock _config.yml` to clean up Jekyll legacy (Phase 13)
 
 ## Phase 12 — QA
 - [ ] `npx @11ty/eleventy && diff -r _site_jekyll _site` — review diff
