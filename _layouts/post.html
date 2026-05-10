@@ -1,0 +1,40 @@
+{% include "head.html" %}
+
+<body>
+    {% include "header.html" %}
+    
+    <main>
+        {% include "special/constructionHeader.html" %}
+        <div class="content grid-global">
+            <aside class="sidebar">
+                <div class="sidebar-wrapper">
+                    <nav class="sidebar-nav no-scrollbar">
+                        <h5 class="sidebar-header">
+                            <a href="/about/newsroom/">Newsroom</a>
+                        </h5>
+                            {% if category %}
+                                <div class="sidebar-meta">{{ category }}</div>
+                            {% endif %}
+                            {% if page.date %}
+                                <div class="sidebar-meta">{{ page.date | formatLongDate }}</div>
+                            {% endif %}
+                        <div class="sidebar-meta">
+                            {% if labels %}
+                                {% for label in labels %}
+                                <span class="tag">#{{ label }}</span>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </nav>
+                </div>
+            </aside>
+            {% include "title.html" %}
+            <article>
+                {{ content }}
+                {% include "special/pressOffice.html" %}
+            </article>
+        </div>
+    </main>
+</body>
+
+{% include "footer.html" %}
