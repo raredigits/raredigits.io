@@ -11,9 +11,9 @@ Basically alchemy, but with better ROI.
 Let's talk about your problems, how to use them on Tinder, and other useful things.
 
 <div class="text-content-caption">
-  <img src="/assets/img/illustrations/rare_about.jpg" />
+  <img src="/assets/img/illustrations/rare_about.jpg">
+  <cite>(We're still working on turning code back into coffee. We'll keep you posted.)</cite>
 </div>
-<cite>(We're still working on turning code back into coffee. We'll keep you posted.)</cite>
 
 ## The Value Proposition Nobody Asked For But Everyone Needs
 One peculiar thing about modern business is the inverse relationship between the amount of software installed and the clarity of answers obtained. Companies somehow end up with seventeen different systems that don't talk to each other, generating reports that answer questions nobody asked while ignoring the only two that matter: where are we losing money, and where could we be making more?

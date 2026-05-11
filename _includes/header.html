@@ -5,11 +5,14 @@
     </div>
     <nav class="nav-global flex stretched">
       <ul>
-          <li><a href="/services/">Services</a></li>
-          <li><a href="/tools/">Solutions</a></li>
-          <li><a href="/services/pricing/">Pricing</a></li>
-          <li><a href="/about/newsroom/">Newsroom</a></li>
-          <li><a href="/about/contacts/">Contacts</a></li>
+        {% for item in site.navigation %}
+        <li>
+            <a href="{{ item.url }}"
+               class="{% if page.url and page.url contains item.url %}current{% endif %}">
+              {{ item.text }}
+            </a>
+        </li>
+        {% endfor %}
       </ul>
     </nav>
     <div class="header-icons">

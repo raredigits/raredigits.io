@@ -1,17 +1,32 @@
 body.theme-black {
     --primary-color: var(--white);
     --bg-color: var(--black);
-}
 
-.header-logo {
-    background-image: url('/assets/img/logo/logo_black.svg');
-}
+    .header-logo {
+        background-image: url('/assets/img/logo/logo_black.svg');
+    }
 
-header .material-icons,
-nav a:hover  {
-    color: var(--white);
-}
+    header .material-icons,
+    nav a:hover  {
+        color: var(--white);
+    }
 
-nav a:hover {
-    border-bottom: 2px solid var(--white);
+    nav a:hover {
+        border-bottom: 2px solid var(--white);
+    }
+
+    button,
+    .button {
+        background: var(--white);
+        color: var(--black);
+        &:hover {
+            background: var(--black);
+            color: var(--white);
+        }
+    }
+
+    .hamburger {
+        background: var(--black);
+        color: var(--white);
+    }
 }

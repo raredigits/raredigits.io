@@ -1,11 +1,11 @@
 # _data/menu/about.yml
 
 items:
-  - title: "The Value"
-    url: "/about/value/"
-
   - title: "About"
     url: "/about/"
+    
+  - title: "The Value"
+    url: "/about/value/"
 
   - title: "Principles"
     url: "/about/principles/"

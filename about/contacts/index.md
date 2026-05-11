@@ -5,25 +5,24 @@ offset: about
 permalink: /about/contacts/
 ---
 
-Welcome to&nbsp;our virtual reception.   
-We&nbsp;promise our response times are faster than light (in&nbsp;a&nbsp;vacuum of&nbsp;bureaucracy).
+Welcome to our virtual reception.<br>
+We promise our response times are faster than light (in a vacuum of bureaucracy).
 
 ## Headquarter
-Our mothership is&nbsp;docked in&nbsp;Dubai. For official correspondence (love letters, wedding invitations, quantum physics debates), please use:
 
+Our mothership is docked in Dubai. For official correspondence (love letters, wedding invitations, quantum physics debates), please use:
 
 <div class="caption">
    Rare Digits Production DMCC<br>
    DMCC Business Centre,<br>
    Jewellery & Gemplex 3,<br>
    115738, Dubai, UAE
-   
    <p>Phone/WA: <a class="no-decoration" href="tel:+971528786777">+971 52 87-86-777</a></p>
 </div>
 
 ## Personal Encounters of the Third Kind
 
-Wish to&nbsp;witness our elegance and brutality in&nbsp;person? Our ambassadors of&nbsp;innovation are strategically placed around the globe, much like a&nbsp;very sophisticated game of&nbsp;Risk:
+Wish to witness our elegance and brutality in person? Our ambassadors of innovation are strategically placed around the globe, much like a very sophisticated game of Risk:
 
 <div class="text-content-caption">
   <img src="/assets/img/illustrations/world_map_contacts.jpg" />
@@ -44,13 +43,13 @@ Wish to&nbsp;witness our elegance and brutality in&nbsp;person? Our ambassadors 
    </ul>
 </div>
 
-Choose your preferred locale, and we&#146;ll arrange a&nbsp;meeting faster than you can say &ldquo;asynchronous non-blocking I/O&rdquo;.
+Choose your preferred locale, and we’ll arrange a meeting faster than you can say “asynchronous non-blocking I/O”.
 
 ## Beam Me Up, Scotty
 
-Not a&nbsp;fan of&nbsp;geographical constraints? Our demo booking form transcends space and time. Well, mostly time zones.
+Not a fan of geographical constraints? Our demo booking form transcends space and time. Well, mostly time zones.
 
-<div class="card text-content-caption padding-t-md padding-x-lg">
+<div class="text-content-caption padding-t-md padding-x-lg gray-light-bg">
    <form class="column text-content-width" id="my-form" action="https://formspree.io/f/xoqodadn" method="POST">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required>
@@ -65,12 +64,10 @@ Not a&nbsp;fan of&nbsp;geographical constraints? Our demo booking form transcend
    </form>
 </div>
 
-Remember, whether you&#146;re reaching out from the bustling streets of&nbsp;Tokyo or&nbsp;the quiet corners of&nbsp;Timbuktu, we&#146;re just a&nbsp;quantum entanglement away.
+Remember, whether you’re reaching out from the bustling streets of Tokyo or the quiet corners of Timbuktu, we’re just a quantum entanglement away.
 
 ## Media Hotline
 
-For any media request feel free to touch <a href="mailto:pr@raredigits.io">Press Office</a>.
+For any media request feel free to touch <a href="mailto:pr@raredigits.io">Press Office</a>.
 
-<div class="content-separator"></div>
-
-Let&#146;s make software magic together. Or&nbsp;at&nbsp;least have a&nbsp;chat about how we&nbsp;can automate your coffee machine to&nbsp;brew the perfect cup based on&nbsp;your circadian rhythms and current project deadlines.
+Let’s make software magic together. Or at least have a chat about how we can automate your coffee machine to brew the perfect cup based on your circadian rhythms and current project deadlines.
