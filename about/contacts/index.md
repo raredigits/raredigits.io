@@ -14,9 +14,9 @@ Our mothership is docked in Dubai. For official correspondence (love letters, 
 
 <div class="caption">
    Rare Digits Production DMCC<br>
-   DMCC Business Centre,<br>
-   Jewellery & Gemplex 3,<br>
-   115738, Dubai, UAE
+   1710 Preatoni Tower,<br>
+   Cluster L, Jumeirah Lakes Towers (JLT)<br>
+   00000, Dubai, UAE
    <p>Phone/WA: <a class="no-decoration" href="tel:+971528786777">+971 52 87-86-777</a></p>
 </div>
 
