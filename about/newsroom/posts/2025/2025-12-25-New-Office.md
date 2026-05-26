@@ -12,7 +12,9 @@ Our Dubai office has moved. The new address is 1710 Preatoni Tower, Cluster L, 
 
 ## In Terms of Real Information
 
-With all due respect to Slack threads and official corporate correspondence — the real information has always traveled differently. Best practices that actually work, war stories about integrations that didn’t, vendor reputations built or destroyed over twelve months of painful go-lives — none of this ends up in pre-sales presentations. It circulates in person, between people who have no particular incentive to be diplomatic.
+With all due respect to Slack threads and official corporate correspondence — the real information has always traveled differently. Best practices that actually work, war stories about integrations that didn’t, vendor reputations built or destroyed over twelve months of painful go-lives — none of this ends up in pre-sales presentations.
+
+<div class="highlight">It circulates in person, between people who have no particular incentive to be diplomatic.</div>
 
 So: come over. Complain about whatever needs complaining about. Sometimes the conversation ends with a proper roadmap. Sometimes it ends with “you don’t actually need an integration, there’s a query that does the same thing in forty seconds.” Sometimes nothing gets solved but you meet someone interesting — which, in the long run, tends to be worth more than most integrations anyway.
 
