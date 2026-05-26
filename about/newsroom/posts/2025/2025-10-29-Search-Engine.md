@@ -1,27 +1,41 @@
 ---
-title:  "Building Your Own Search Engine"
+title: "The Simple Search Problem (And the Part That Isn’t)"
 date:   2025-10-29T10:00:00+04:00
 permalink: /newsroom/Search-Engine/
 category: Insights
 labels: [kitchen]
 ---
 
-### The urge to build a Ferrari to deliver a pizza
+Somewhere in the backlog of every company with a content-heavy website there’s a ticket that says “add search.” It usually sits there for a while. Then someone prioritizes it. Then it reaches a developer.
 
-There is a certain type of developer who, when told “we need search on the website, ” immediately opens a blank file and starts writing their own search engine. This is the software equivalent of building a shadow banking system in Excel macros because Bloomberg didn’t have the exact screen you wanted. You can do it, it may even work for a while, but everyone around you will quietly wish you didn’t.
+Then the ticket grows.
 
-For static sites the rational thing to do is: don’t roll your own. Not because you can’t — let’s assume you absolutely could — but because nobody earns extra credibility points in 2025 for reinventing full-text indexing from scratch on a blog. Just like in finance, there are tasks where inventiveness is rewarded (new structured products, new exchanges), and there are tasks where using an existing, boring, proven thing is the optimal choice. Static-site search is the latter.
+Three days later there’s a Slack thread about Elasticsearch vs. Typesense vs. Algolia. Someone mentions a managed Kubernetes option. Someone else points out that Algolia has a free tier, but the pricing scales uncomfortably after a certain query volume. A fourth option gets posted. The original ticket now has eleven comments and no search.
 
-### Pagefind as the ETF of search
+We’ve watched this happen enough times to have stopped being surprised. The actual problem — visitors can’t find posts on a static site — needs about two hours to solve. The conversation around it reliably takes three weeks.
 
-So you pick [Pagefind](https://pagefind.app). It’s basically the ETF of website search: low-overhead, passive, client-side, privacy-respecting, and costs nothing. You pipe your static site through Eleventy, Pagefind vacuums up the text and spits out an index, and the whole thing sits in the browser doing its job without servers or SaaS invoices. No vendor lock-in, no external API, no “your quota for this month is over.” Like a good index fund, it just quietly works.
+## How a two-hour problem becomes a sprint
 
-And because developers share one trait with bankers — if something “just works” we get suspicious — we wrote down a full step-by-step implementation so you can inspect every knob yourself rather than trusting black boxes. The guide is published at [Rere Styles](https://raredigits.art/scripts/search/).
+The pattern is consistent across industries and company sizes. A reasonable person identifies a real need. The need gets translated into a technical requirement. The technical requirement attracts people who find technical requirements interesting. The scope expands to accommodate what’s possible rather than what was asked for. Six weeks later there’s a architecture diagram and a Jira board, and the person who raised the original need has mostly stopped asking.
 
-### Weights, or: how reality is rearranged
+This is not a technology problem. It’s what happens when the distance between “we need X” and “we’re shipping X” gets filled with interesting decisions instead of boring ones.
 
-Once the search is working, the curious developer will eventually ask: “but how do I make the results better?” And the answer is: weights. You start telling the engine which types of pages matter more than others — posts above static pages, titles above footers, this topic above that topic. It’s a bit tedious but it absolutely works.
+## Boring, correct, and costs nothing
 
-And at this point it is hard not to glance sideways at modern LLMs. They look brilliant and elegant now — but only because someone spent a truly absurd amount of time assigning and re-assigning weights. Now imagine how different the answers would look if the same knowledge was weighted differently. Not censored, not removed — just rearranged in priority.
+[Pagefind](https://pagefind.app). Client-side, runs in the browser, no server, no API key, no invoice arriving at the end of a high-traffic month. You build the site, Pagefind indexes the output, the index deploys alongside the HTML. Works offline. Free.
 
-When someone says “search is objective, ” what they usually mean is “my weighting is currently invisible to you.” The data is all there, nothing is hidden — but the order in which it appears is a choice, and choices have consequences. In finance, in language models, and yes, even in blog search.
+We documented the full implementation at [Rare Styles](https://raredigits.art/scripts/search/) — every step, every configuration option. If you’re on Eleventy or any static site generator, it’s an afternoon.
+
+<div class="highlight">The integration that “requires infrastructure planning” is usually a build step and two JavaScript files.</div>
+
+### The part where we ruin “Objective” search for you
+
+Once search is working, the next question is always: how do we make the results *better*? The answer is weights — you tell the engine which pages matter more than others, which fields rank above which. It’s not complicated. It works.
+
+But it forces you to make explicit a decision that was previously invisible: what order should information appear in?
+
+“Search is objective” is something people say when the weighting function is not visible to them. The data is all there — nothing hidden, nothing removed. Just a particular ordering, which is a choice, made by someone, for reasons that may or may not still apply.
+
+This is true for a search box on a marketing site. It’s true for recommendation engines. It’s true for LLMs, which look brilliant and neutral right up until you realize someone spent an extraordinary amount of time deciding what to weight and how. In finance, the same number tells a different story depending on which line it appears under.
+
+The question is never whether the data is accurate. The question is who decided what comes first.

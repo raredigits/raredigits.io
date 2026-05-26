@@ -1,5 +1,5 @@
 ---
-title:  "We Moved. The PS5 Came With Us"
+title:  "We Moved. The PS5 Came With Us"
 date:   2025-12-25T10:00:00+04:00
 permalink: /newsroom/New-Dubai-Address/
 category: Internal Affairs
@@ -8,7 +8,9 @@ labels: [blessing]
 
 The conventional theory of business meetings holds that productive conversations about enterprise automation require a conference room, several stakeholders with *conflicting incentives*, and at least one consultant billing by the hour to facilitate the conflict. This theory is, at minimum, incomplete.
 
-Our Dubai office has moved. The new address is 1710 Preatoni Tower, Cluster L, JLT, which is where you will now find us, and also a PlayStation 5.
+Our Dubai office has moved. The new address is:<br>
+**1710 Preatoni Tower, Cluster L, JLT**<br>
+which is where you will now find us, and also a PlayStation 5.
 
 ## In Terms of Real Information
 
