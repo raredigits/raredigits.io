@@ -8,7 +8,7 @@ export default {
     { "text": "Services", "url": "/services/" },
     { "text": "Solutions", "url": "/tools/" },
     { "text": "Pricing", "url": "/services/pricing/" },
-    { "text": "Newsroom", "url": "/about/newsroom/" },
+    { "text": "Pressroom", "url": "/about/pressroom/" },
     { "text": "Contacts", "url": "/about/contacts/"}
   ]
 };
