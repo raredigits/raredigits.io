@@ -42,8 +42,7 @@ Published: 2023-09-15
 The vendor demo was for a company that doesn't exist. The requirements were written by someone who doesn't use the system. The go-live date was chosen for the board presentation, not the calendar.
 
 ### Nov 2023
-`✅` **Useful Daily GPT Usecases** — Standalone
-Published: 2023-11-07
+`📝` **Useful Daily GPT Usecases** — Standalone
 
 ### Dec 2023
 `📝` **Your ERP Sucks, Part 2: Nobody Owns It After Go-Live** — [ERP]
@@ -54,16 +53,13 @@ The implementation partner left. The project manager moved to another role. The 
 ## 2024
 
 ### Jan 2024
-`✅` **Manageable B2B Marketing** — Standalone
-Published: 2024-01-08
+`📝` **Manageable B2B Marketing** — Standalone
 
 ### Feb 2024
-`✅` **CRM Best Practices 2024** — Standalone
-Published: 2024-02-06
+`📝` **CRM Best Practices 2024** — Standalone
 
 ### Mar 2024
-`✅` **Tone of Voice as a Competitive Advantage** — Standalone
-Published: 2024-03-04
+`📝` **Tone of Voice as a Competitive Advantage** — Standalone
 
 ### Apr 2024
 `✅` **Cash Flow Gaps** — Standalone
@@ -78,8 +74,7 @@ Published: 2024-05-06
 Published: 2024-06-04
 
 ### Jul 2024
-`✅` **Product Management for IT Infrastructure** — Standalone
-Published: 2024-07-02
+`📝` **Product Management for IT Infrastructure** — Standalone
 
 ### Aug 2024
 `📝` **Your ERP Sucks, Part 3: It Was Configured by the Vendor, Not You** — [ERP]
@@ -101,11 +96,17 @@ Every quarter a new model is "best in class." We've integrated enough of them to
 `📝` **We're AI-Agnostic, Part 2: The Question You're Asking Wrong** — [AI]
 GPT-4 vs Claude vs Gemini is a vendor comparison. The real question is: what's the task, and what does failure look like? The answer usually points to one model. It changes every six months.
 
+`→` **Switching to Per-Seat License Subscriptions Across All Products** — Release — **high**
+All products move to seat-based licensing. What it means for existing clients and how to buy going forward.
+
 ---
 
 ## 2025
 
 ### Jan 2025
+`→` **Switching to Distributor Sales Model** — Release — **high**
+We no longer sell direct in most markets — reach out to certified partners. Who they are, how to find them, what changes for existing clients.
+
 `✅` **Lending Scoring in Practice** — Standalone
 Published: 2025-01-13
 
@@ -214,8 +215,8 @@ One honest observation per quarter. No year-in-review fluff. The things that cha
 
 | Period | Published | Gaps to fill | Planned future |
 |---|---|---|---|
-| 2023 (May–Dec) | 3 | 5 | — |
-| 2024 | 7 | 5 | — |
-| 2025 | 3 | 9 | — |
+| 2023 (May–Dec) | 2 | 6 | — |
+| 2024 | 3 | 9 | — |
+| 2025 | 3 | 10 | — |
 | 2026 | — | — | 12 |
-| **Total** | **13** | **19** | **12** |
+| **Total** | **8** | **25** | **12** |

@@ -6,6 +6,16 @@ Format: `- [ ] Title — notes — category — priority`
 
 ## Queue (ready to write)
 
+### Announcements (stub pages exist, need content)
+
+- [ ] Interoperability Research for NEON Labs — Dec 2023 — Partnership — high
+- [ ] DSRV Partnership — Dec 2023 — Partnership — high
+- [ ] Rare Digits Report'23 — Jan 2024 — Internal Affairs — high
+- [ ] Logica Partnership — Feb 2024 — Partnership — high
+- [ ] Swisotec Partnership — Mar 2024 — Partnership — high
+
+### Insights & Releases
+
 - [ ] Privacy Policy & Terms Update — we respect them but don't take them too seriously; reserve the right to change anything, use Google Analytics for tracking; tone: self-aware, honest — Internal Affairs — med
 - [ ] Watchtower Pricing — $3000/mo, announce/clarify positioning — Release — high
 - [ ] Concierge: Daily Reports and Chat — daily digests + natural language queries; $999/mo — Release — high
@@ -50,5 +60,6 @@ Format: `- [ ] Title — notes — category — priority`
 - [x] Introducing Watchower — Release
 - [x] Search Engine — Release
 - [x] Vacation Notice — Jul 2025 — Internal Affairs
+- [x] Distribution Partnership with Universal.com — Oct 2023 — Partnership
 - [x] Big Checks vs Frequent Payments — Industry
 - [x] Lending Scoring in Practice — Industry

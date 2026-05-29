@@ -43,6 +43,30 @@ blockquote {
     background-image: url('https://cdn.jsdelivr.net/gh/raredigits/rare-styles@v0.6.13/images/common/mark-quote.svg');
 }
 
+.boilerplate {
+    width: var(--text-content-width);
+    margin-top: var(--space-lg);
+    padding: var(--space-md) 0 0 var(--space-md);
+    font-size: var(--font-size-sm);
+    line-height: 1.2;
+    color: var(--text-color-light);
+    border-top: 1px solid var(--text-color-light);
+
+    p {
+        position: relative;
+    }
+
+    p::before {
+        position: absolute;
+        left: -1.2em;
+        top: -0.2em;
+        font-size: var(--font-size-lg);
+        font-family: 'Material Symbols Outlined';
+        content: 'info';
+        vertical-align: middle;
+    }
+}
+
 .wa-button {
     background-image: url('https://cdn.jsdelivr.net/gh/raredigits/rare-styles@v0.6.13/images/vendors/whatsapp/wa-stripe.svg');
 }

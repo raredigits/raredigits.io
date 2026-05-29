@@ -15,6 +15,9 @@ items:
 
   - title: "Pressroom"
     url: "/about/pressroom/"
+
+  - title: "Pricing"
+    url: "/about/pricing/"
     
   - title: "Contacts"
     url: "/about/contacts/"

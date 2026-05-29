@@ -30,20 +30,29 @@ Wish to witness our elegance and brutality in person? Our ambassadors of inno
 
 <div class="padding-y-lg">
    <ul class="columns list-unstyled">
-      <li><a href="">Dubai</a> (Home Base)</li>
-      <li><a href="">Limassol</a> (Mediterranean Microservices)</li>
-      <li><a href="">Porto</a> (Port and Python)</li>
-      <li><a href="">Berlin</a> (Bratwurst and Bytecode)</li>
-      <li><a href="">Copenhagen</a> (Danish and Databases)</li>
-      <li><a href="">Jakarta</a> (Java Central, pun intended)</li>
-      <li><a href="">Bali</a> (Beach Coding Retreats)</li>
-      <li><a href="">Tbilisi</a> (Wine and Web Services)</li>
-      <li><a href="">Miami</a> (Sunscreen and Scalability)</li>
-      <li><a href="">Phuket</a> (Thai and TypeScript)</li>
+      <li><a href="mailto:hi@raredigits.io">Dubai</a> (Home Base)</li>
+      <li><a href="mailto:v@raredigits.io">Limassol</a></li>
+      <li><a href="mailto:babah@raredigits.io">Porto</a></li>
+      <li><a href="mailto:ivo@raredigits.io">Berlin</a></li>
+      <li><a href="mailto:nikita@raredigits.io">Copenhagen</a></li>
+      <li><a href="mailto:ya@raredigits.io">Jakarta</a></li>
+      <li><a href="mailto:cyberhead@raredigits.io">Bali</a></li>
+      <li><a href="mailto:ivan@raredigits.io">Tbilisi</a></li>
+      <li><a href="mailto:arvitaly@raredigits.io">Phuket</a></li>
    </ul>
 </div>
 
 Choose your preferred locale, and we’ll arrange a meeting faster than you can say “asynchronous non-blocking I/O”.
+
+## Buy Through a Partner
+
+If your preferred locale wasn’t on that map, or if you’d simply rather work with someone who already understands your local procurement rituals without a Wikipedia detour, we have certified distribution partners in three regions:
+
+- [VAQOSA](https://vaqosa.com) — MENA
+- [Bonny One Services](https://bonny-one.com/) — Europe
+- [PROF IT DESIGN](https://prof-it-design.com) — Asia
+
+Same software, same implementation quality — just with someone who knows which public holidays will delay your go-live.
 
 ## Beam Me Up, Scotty
 
