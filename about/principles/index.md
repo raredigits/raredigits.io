@@ -17,7 +17,7 @@ This is also why we’re transparent about these principles. Not just as a st
 
 ## #1 Collaboration
 
-Genious feature of markets is that they’re not zero-sum, despite what trading floor culture might suggest. The most successful transactions create value for everyone involved. This is why collaboration means solving shared problems rather than engaging in institutional tug-of-war competitions.
+Genius feature of markets is that they’re not zero-sum, despite what trading floor culture might suggest. The most successful transactions create value for everyone involved. This is why collaboration means solving shared problems rather than engaging in institutional tug-of-war competitions.
 
 Growing the entire pie tends to be more lucrative than tactical maneuvers to secure 3% more of a shrinking one. Simple arithmetic, really.
 

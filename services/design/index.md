@@ -18,7 +18,7 @@ Which is all very nice! Design is nice. Pretty things are nice to look at. Dark 
 The thing about business software is that it exists to help businesses make money. That's it. It's not art. It's not self-expression. Nobody downloads your ERP system because it's a profound aesthetic experience.
 
 At Rare Digits, we have this radical notion: 
-<div class="highlight">in business softwar the most important design work happens in database queries, not Figma files. </div>
+<div class="highlight">in business software the most important design work happens in database queries, not Figma files. </div>
 
 Our design philosophy can be summarized as:
 

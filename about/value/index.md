@@ -16,7 +16,7 @@ At Rare Digits, we firmly believe nobody wakes up excited to purchase anothe
 Our value proposition is refreshingly simple:
 
 <div class="highlight">
-  We turn your mountain of confusing data into a crystal-clear neatly assembled peices of actionable insights.
+  We turn your mountain of confusing data into a crystal-clear neatly assembled pieces of actionable insights.
 </div>
 
 ## Beyond Data Collection
