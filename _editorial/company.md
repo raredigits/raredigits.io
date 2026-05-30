@@ -12,9 +12,9 @@ We sell accumulated expertise and pattern recognition, not software. We've seen 
 
 ## Target Client
 
-SMB owners and shareholders who can't tell from their current ERP where the profit went or who's responsible. Holding structures where each entity runs a different system and nobody has a consolidated view.
+SMB owners, shareholders, and senior managers with P&L responsibility who can't tell from their current systems where the profit went or who's responsible. Holding structures where each entity runs a different system and nobody has a consolidated view.
 
-The **shareholder is the primary buyer** — they understand the value of transparency faster than anyone else in the org chart, and they're more motivated to fix the problem than the people who created it.
+The **shareholder is the primary buyer** — they understand the value of transparency faster than anyone else in the org chart, and they're more motivated to fix the problem than the people who created it. Senior managers are often the internal champions who feel the pain daily and push for the solution.
 
 ## People
 

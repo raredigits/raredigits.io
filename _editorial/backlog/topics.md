@@ -25,6 +25,10 @@ Format: `- [ ] Title — notes — category — priority`
 
 ## Ideas (needs development)
 
+### Site Structure
+
+- [ ] Launch a "101" section — curated entry-level reads built from existing blog posts; for readers who are new to the topic; no new writing required, just selection and framing — Internal Affairs — med
+
 ### Releases
 
 - [ ] Subscription Plans Launch — pricing tiers, integration cost, feature breakdown, monthly vs. annual commitment — Release — high

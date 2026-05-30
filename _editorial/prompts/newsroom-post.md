@@ -15,7 +15,7 @@ What this sounds like in practice:
 
 Core editorial stance: most enterprise software problems are solved the expensive way not because there's no simple solution, but because nobody with the seniority to make the decision has time to find out. We say this out loud because we've spent 20 years being the people who find out.
 
-The primary reader is a **shareholder or founder** of an SMB or holding structure. They are not interested in features. They are interested in: where is the money, who is responsible for the current situation, and why does the report take three days to produce. Write for them.
+The primary reader is a **shareholder, founder, or senior manager with P&L responsibility** — a CFO, COO, or divisional head who answers for the numbers. They are not interested in features. They are interested in: where is the money, who is responsible for the current situation, and why does the report take three days to produce. The shareholder buys; the senior manager often initiates the conversation. Write for both, but let the shareholder's perspective drive the framing.
 
 ## Company Context
 
@@ -25,7 +25,7 @@ We sell accumulated expertise, not software. We've seen the mistakes (made some 
 
 **What we actually do:** We sit on top of a client's existing ERP, CRM, and accounting stack and make the numbers legible to the people who own the business. One screen, key metrics, alert system. The insight that used to take a CFO three days now takes a shareholder three minutes.
 
-**Target client:** SMB owners and shareholders who can't tell from their current ERP where the profit went or who's responsible. Holding structures where each entity runs a different system and nobody has a consolidated view. The shareholder is the primary buyer — they understand the value of transparency faster than anyone else in the org chart.
+**Target client:** SMB owners, shareholders, and senior managers (CFO, COO, divisional heads) who can't tell from their current systems where the profit went or who's responsible. Holding structures where each entity runs a different system and nobody has a consolidated view. The shareholder is the primary buyer — they understand the value of transparency faster than anyone else in the org chart. Senior managers are the internal champions who feel the pain daily and push for the solution.
 
 **Office:** Preatoni Tower, Cluster L, JLT, Dubai, UAE. Team distributed across Limassol, Porto, Berlin, Copenhagen, Jakarta, Bali, Tbilisi, Miami, Phuket.
 
@@ -82,6 +82,8 @@ labels: [tag1, tag2]
 
 **Common labels:** `automate`, `kitchen`, `blessing`, `erp`, `ai`, `finance`, `hr`, `crm`, `sales`, `marketing`, `partnership`, `web3`
 
+**Additional labels for principles posts:** `principles`, `101`
+
 ## Post Structure
 
 1. **The pattern** — open with a scenario the reader has lived. Specific enough to be real: an industry, a job title, a familiar Tuesday afternoon. No product mention, no company mention.
@@ -106,6 +108,7 @@ For partnership announcements, use the boilerplate block at the end:
 - "We've seen this" is more authoritative than "studies show." Use it.
 - Don't editorialize about what *might* go wrong. Say what *does* go wrong, in present tense.
 - Irony is welcome; sarcasm at the reader's expense is not. The reader is the hero of this story, not the cautionary tale.
+- When revising old posts, preserve the product positioning and commercial context of the publication year unless the goal is explicitly to repurpose the post for current positioning.
 - Avoid: "excited," "thrilled," "game-changer," "leverage," "synergy," "seamless," "robust," "end-to-end," "best-in-class."
 - Never write "In today's fast-paced business environment."
 - Length: 400–700 words for announcements, 200–400 for company notes, 600–900 for industry posts.

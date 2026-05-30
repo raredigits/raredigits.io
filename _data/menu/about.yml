@@ -9,7 +9,10 @@ items:
 
   - title: "Principles"
     url: "/about/principles/"
-    
+
+  - title: "Management 101"
+    url: "/about/101/"
+
   - title: "Partnership"
     url: "/about/partnership/"
 

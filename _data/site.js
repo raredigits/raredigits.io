@@ -7,8 +7,9 @@ export default {
   "navigation": [
     { "text": "Services", "url": "/services/" },
     { "text": "Solutions", "url": "/tools/" },
-    { "text": "Pricing", "url": "/about/pricing/" },
+    { "text": "101", "url": "/about/101/" },
     { "text": "Pressroom", "url": "/about/pressroom/" },
+    { "text": "Pricing", "url": "/about/pricing/" },
     { "text": "Contacts", "url": "/about/contacts/"}
   ]
 };
