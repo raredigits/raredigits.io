@@ -4,12 +4,14 @@
     {% include "header.html" %}
         
     <main class="main-home">
-        <div class="content">
-            {% include "special/constructionHeader.html" %}
-            {{ content }}
+        <div class="wa-sticky-zone">
             <div class="wa-button-wrapper">
                 <a href="https://wa.me/971528786777" class="wa-button" aria-label="Chat on WhatsApp"></a>
             </div>
+        </div>
+        <div class="content">
+            {% include "special/constructionHeader.html" %}
+            {{ content }}
         </div>
     </main>
     

@@ -106,8 +106,17 @@ form input[type="tel"] {
 }
 
 #my-form-button {
+    background-color: var(--black);
+    color: var(--gray-trans);
+    border: 1px solid var(--gray-trans);
     margin-top: 10px;
     font-size: 1.2em;
+
+    &:hover {
+        background-color: var(--black);
+        color: var(--white);
+        border-color: var(--white);
+    }
 }
 
 footer {
@@ -138,5 +147,105 @@ footer {
 
     .section-pricing {
         background-image: none;
+    }
+}
+
+/* CONTACTS STRIP (static bottom floor; WhatsApp button roams above it) */
+
+.contacts-strip {
+    display: flex;
+    padding: 0;
+}
+
+.newsletter-bar {
+    width: 90%;
+    background: var(--black);
+    color: var(--gray-trans);
+    padding: var(--space-lg);
+    text-align: left;
+
+    p {
+        font-size: 0.9em;
+    }
+
+    @media (max-width: 768px) {
+            width: 80%;
+    }
+}
+
+.newsletter-bar form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: var(--space-sm);
+
+    input[type="email"] {
+        background: var(--bg-color);
+        margin: 0;
+        width: 16rem;
+        min-width: 30vw;
+        border-color: var(--gray-trans);
+    }
+
+    button {
+        background-color: var(--black);
+        color: var(--gray-trans);
+        border: 1px solid var(--gray-trans);
+        margin-top: 0;
+
+        &:hover {
+            background-color: var(--black);
+            color: var(--white);
+            border-color: var(--white);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .newsletter-bar form {
+        flex-direction: column;
+    }
+}
+
+.main-home {
+    position: relative;
+    --wa-size: 60px;
+}
+
+.main-home .content {
+    position: relative;
+    z-index: 1;
+}
+
+.main-home .wa-sticky-zone {
+    position: absolute;
+    inset: 0 0 calc(clamp(8rem, 18vh, 12rem) - 56px) 0;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.main-home .wa-button-wrapper {
+    position: sticky;
+    top: calc(100vh - var(--wa-size) - var(--space-lg));
+    display: flex;
+    justify-content: flex-end;
+    padding-right: var(--space-lg);
+}
+
+.main-home .wa-button-wrapper .wa-button {
+    pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+    .main-home .wa-sticky-zone {
+        position: absolute;
+        inset: 0 0 calc(8rem + env(safe-area-inset-bottom)) 0;
+    }
+
+    .main-home .wa-button-wrapper {
+        position: sticky;
+        top: calc(100vh - var(--wa-size) - max(1.25rem, calc(env(safe-area-inset-bottom) + 1rem)));
+        justify-content: flex-end;
+        padding-right: var(--space-lg);
     }
 }

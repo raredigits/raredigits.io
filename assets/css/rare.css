@@ -22,11 +22,6 @@
 
     --font-size: 18px;
 
-    --header-logo: url('/assets/img/logo/logo.svg') no-repeat;
-    --sidebar-width: calc(var(--global-fr) * 3 + var(--grid-gap) * 2);
-
-    --field-width: calc(50vw - var(--site-max-width)/2);
-
     @media (max-width: 768px) {
             --font-size: 16px;
         }
@@ -34,106 +29,7 @@
 
 /* REMOVE AFTER UPDATE */
 
-.header-logo {
-    background-image: url('https://cdn.jsdelivr.net/gh/raredigits/rare-styles@v0.6.13/images/vendors/rare-digits/rare-logo-black.svg');
-    background-repeat: no-repeat;
-}
 
-blockquote {
-    background-image: url('https://cdn.jsdelivr.net/gh/raredigits/rare-styles@v0.6.13/images/common/mark-quote.svg');
-}
-
-.boilerplate {
-    width: var(--text-content-width);
-    margin-top: var(--space-lg);
-    padding: var(--space-md) 0 0 var(--space-md);
-    font-size: var(--font-size-sm);
-    line-height: 1.2;
-    color: var(--text-color-light);
-    border-top: 1px solid var(--text-color-light);
-
-    p {
-        position: relative;
-    }
-
-    p::before {
-        position: absolute;
-        left: -1.2em;
-        top: -0.2em;
-        font-size: var(--font-size-lg);
-        font-family: 'Material Symbols Outlined';
-        content: 'info';
-        vertical-align: middle;
-    }
-}
-
-.wa-button {
-    background-image: url('https://cdn.jsdelivr.net/gh/raredigits/rare-styles@v0.6.13/images/vendors/whatsapp/wa-stripe.svg');
-}
-
-.wide-background {
-    width: 100vw;
-    position: relative;
-    margin-left: calc(-1 * var(--sidebar-width) - var(--grid-gap-global) - var(--field-width));
-
-    &.wide-section {
-        padding: var(--space-md) 0 var(--space-lg);
-    }
-
-    .wide-background-text-content-wrapper {
-        padding-left: calc(var(--sidebar-width) + var(--field-width) + var(--grid-gap-global));
-        
-        @media (769px <= width <= 1116px) {
-            padding-left: calc(var(--sidebar-width) + var(--grid-gap-global) + var(--base-unit));
-        }
-
-        @media (max-width: 768px) {
-            padding-left: var(--base-unit);
-        }
-    }
-
-    img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    @media (769px <= width <= 1116px) {
-        & {
-            margin-left: calc(-1 * var(--sidebar-width) - var(--grid-gap-global) - var(--base-unit));
-        }
-    }
-
-    @media (max-width: 768px)  {
-        & {
-            margin-left: calc(-1 * var(--space-md));
-        }
-    }
-}
-
-.feature-row {
-    display: flex;
-    gap: var(--space-lg);
-    padding: var(--space-md) 0;
-    overflow-x: auto;
-    overflow-y: hidden;
-
-    .feature-row__item {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex: 0 0 clamp(280px, 30vw, 420px);
-
-        img {
-            display: block;
-            width: 100%;
-            max-width: none;
-            object-fit: contain;
-            align-self: flex-start;
-            flex-shrink: 0;
-        }
-    }
-}
 
 /* REMOVE AFTER UPDATE */
 
