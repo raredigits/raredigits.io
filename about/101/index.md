@@ -1,11 +1,12 @@
 ---
 layout: page
+body_class: text-content
 title: "Business Management 101"
 offset: about
 permalink: /about/101/
 ---
 
-Spend enough time working with real businesses and you start noticing that the same things go wrong in roughly the same ways. The industry changes. The crisis that prompted the engagement changes. The company size, the market, the management style (all of these change). The underlying mistake is usually one of maybe two dozen things.
+<section class="lead">Spend enough time working with real businesses and you start noticing that the same things go wrong in roughly the same ways. The industry changes. The crisis that prompted the engagement changes. The company size, the market, the management style (all of these change). The underlying mistake is usually one of maybe two dozen things.</section>
 
 This is a list of those things. Twenty-five observations assembled over twenty years of watching businesses work, not work, and work in ways that look like not working until the quarterly numbers come in. Some are about money. Some are about how decisions get made. Some are about the organizational mechanics that make obviously bad outcomes feel inevitable from the inside.
 
@@ -85,7 +86,7 @@ Posts on each principle are published gradually and linked here as they go up
 - “We need integration” usually means “two departments aren’t talking.”
 - The technical request is the safe version of the management problem.
 
-### Every Decision Needs an Owner
+### [Every Decision Needs an Owner](/pressroom/Every-Mistake-Has-a-Name/)
 
 - Accountability should exist before the error, not after it.
 - Collective decisions without personal consequences produce unclaimed outcomes.

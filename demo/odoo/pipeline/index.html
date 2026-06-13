@@ -1,0 +1,268 @@
+---
+permalink: /demo/odoo/pipeline/
+eleventyExcludeFromCollections: true
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sales Pipeline — Odoo, reimagined · Rare Digits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Titillium+Web:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/raredigits/rare-styles@v0.6.15/rare.min.css">
+<link rel="stylesheet" href="/assets/css/modules/odoo-fintech.css">
+<style>
+  .material-symbols-outlined { vertical-align: middle; }
+  .card-meta { display:flex; align-items:center; justify-content:space-between; }
+  .card-title { font-size: var(--font-size-md); }
+  .card-cust { font-size: var(--font-size-xs); color: var(--fin-ink-soft); }
+  .kanban__card .foot { display:flex; align-items:center; justify-content:space-between; margin-top: var(--space-xs); }
+  .col-total { font-family: var(--code-font); color: var(--fin-ink); }
+  .stars { color: var(--orange); font-size: var(--font-size-sm); letter-spacing: -1px; }
+  .pipe-summary { display:flex; gap: var(--space-lg); flex-wrap: wrap; }
+  .pipe-summary .item .v { font-family: var(--code-font); font-size: var(--font-size-xl); }
+  .pipe-summary .item .l { font-size: var(--font-size-xs); text-transform:uppercase; letter-spacing:.06em; color: var(--fin-ink-soft); }
+</style>
+</head>
+<body class="fin">
+<div class="erp-shell">
+
+  <header class="erp-topbar">
+    <div class="erp-topbar__brand"><span class="erp-topbar__dot"></span> Meridian</div>
+    <div class="erp-topbar__spacer"></div>
+    <label class="erp-topbar__search">
+      <span class="material-symbols-outlined" style="font-size:20px">search</span>
+      <input type="text" placeholder="Search deals, customers…">
+    </label>
+    <span class="material-symbols-outlined" style="color:var(--fin-ink-soft)">notifications</span>
+    <div class="avatar">SO</div>
+  </header>
+
+  <nav class="erp-sidebar">
+    <a class="erp-sidebar__item" title="Dashboard" href="/demo/odoo/dashboard/"><span class="material-symbols-outlined">dashboard</span></a>
+    <a class="erp-sidebar__item" title="Invoicing" href="/demo/odoo/invoice/"><span class="material-symbols-outlined">receipt_long</span></a>
+    <a class="erp-sidebar__item active" title="Sales"><span class="material-symbols-outlined">trending_up</span></a>
+    <a class="erp-sidebar__item" title="Bank"><span class="material-symbols-outlined">account_balance</span></a>
+    <a class="erp-sidebar__item" title="Contacts"><span class="material-symbols-outlined">group</span></a>
+    <a class="erp-sidebar__item" title="Reporting"><span class="material-symbols-outlined">bar_chart</span></a>
+  </nav>
+
+  <main class="erp-main">
+
+    <div class="flex items-center" style="justify-content: space-between; flex-wrap: wrap; gap: var(--space-md)">
+      <div>
+        <h1 style="font-size: clamp(1.6rem,3.5vw,2.4rem)">Pipeline</h1>
+        <div class="inv-meta" style="color:var(--fin-ink-soft); font-size:var(--font-size-sm)">Q3 2026 · 14 open deals</div>
+      </div>
+      <div class="segment">
+        <button class="active">Kanban</button>
+        <button>List</button>
+        <button>Forecast</button>
+      </div>
+    </div>
+
+    <!-- pipeline summary -->
+    <div class="card-soft pipe-summary" style="margin: var(--space-lg) 0">
+      <div class="item"><div class="l">Weighted pipeline</div><div class="v">1.42M <span style="font-size:.5em;color:var(--fin-ink-soft)">€</span></div></div>
+      <div class="item"><div class="l">Expected this quarter</div><div class="v" style="color:var(--fin-accent)">680K</div></div>
+      <div class="item"><div class="l">Win rate · 90d</div><div class="v">38%</div></div>
+      <div class="item"><div class="l">Avg. cycle</div><div class="v">26<span style="font-size:.5em;color:var(--fin-ink-soft)">d</span></div></div>
+    </div>
+
+    <!-- the board -->
+    <div class="kanban">
+
+      <!-- New -->
+      <div class="kanban__col">
+        <div class="kanban__head"><span>New</span><span class="kanban__count">4 · 210K</span></div>
+
+        <div class="kanban__card">
+          <div class="card-meta"><span class="card-title">Rebrand &amp; launch film</span><span class="stars">★★☆</span></div>
+          <div class="card-cust">Northwind Retail</div>
+          <div class="foot"><span class="kanban__amount">48K</span><div class="avatar" style="width:26px;height:26px;font-size:11px">DM</div></div>
+        </div>
+
+        <div class="kanban__card">
+          <div class="card-meta"><span class="card-title">Investor day deck + video</span><span class="stars">★☆☆</span></div>
+          <div class="card-cust">Larkspur Group</div>
+          <div class="foot"><span class="kanban__amount">62K</span><div class="avatar" style="width:26px;height:26px;font-size:11px">VL</div></div>
+        </div>
+
+        <div class="kanban__card">
+          <div class="card-meta"><span class="card-title">Product explainer series</span><span class="stars">★☆☆</span></div>
+          <div class="card-cust">Cobalt SaaS</div>
+          <div class="foot"><span class="kanban__amount">35K</span><div class="avatar" style="width:26px;height:26px;font-size:11px">DM</div></div>
+        </div>
+
+        <div class="kanban__card">
+          <div class="card-meta"><span class="card-title">Brand sprint</span><span class="stars">★★☆</span></div>
+          <div class="card-cust">Vesper Hotels</div>
+          <div class="foot"><span class="kanban__amount">65K</span><div class="avatar" style="width:26px;height:26px;font-size:11px">SO</div></div>
+        </div>
+      </div>
+
+      <!-- Qualified -->
+      <div class="kanban__col">
+        <div class="kanban__head"><span>Qualified</span><span class="kanban__count">3 · 295K</span></div>
+
+        <div class="kanban__card">
+          <div class="card-meta"><span class="card-title">Annual content retainer</span><span class="stars">★★★</span></div>
+          <div class="card-cust">Halcyon Studios</div>
+          <div class="foot"><span class="kanban__amount">120K</span><span class="pill pill--info pill--no-dot">Meeting Thu</span></div>
+        </div>
+
+        <div class="kanban__card">
+          <div class="card-meta"><span class="card-title">Campaign · spring</span><span class="stars">★★☆</span></div>
+          <div class="card-cust">Aster Cosmetics</div>
+          <div class="foot"><span class="kanban__amount">88K</span><div class="avatar" style="width:26px;height:26px;font-size:11px">VL</div></div>
+        </div>
+
+        <div class="kanban__card">
+          <div class="card-meta"><span class="card-title">Event film package</span><span class="stars">★★☆</span></div>
+          <div class="card-cust">Meridian Fintech</div>
+          <div class="foot"><span class="kanban__amount">87K</span><div class="avatar" style="width:26px;height:26px;font-size:11px">DM</div></div>
+        </div>
+      </div>
+
+      <!-- Proposal -->
+      <div class="kanban__col">
+        <div class="kanban__head"><span>Proposal sent</span><span class="kanban__count">4 · 512K</span></div>
+
+        <div class="kanban__card kanban__card--warn">
+          <div class="card-meta"><span class="card-title">3-year licensing</span><span class="stars">★★★</span></div>
+          <div class="card-cust">Cobalt SaaS</div>
+          <div class="foot"><span class="kanban__amount">240K</span><span class="pill pill--warn pill--no-dot">Stale 9d</span></div>
+        </div>
+
+        <div class="kanban__card">
+          <div class="card-meta"><span class="card-title">Documentary series</span><span class="stars">★★★</span></div>
+          <div class="card-cust">Northwind Retail</div>
+          <div class="foot"><span class="kanban__amount">130K</span><div class="avatar" style="width:26px;height:26px;font-size:11px">SO</div></div>
+        </div>
+
+        <div class="kanban__card">
+          <div class="card-meta"><span class="card-title">Rebrand phase 2</span><span class="stars">★★☆</span></div>
+          <div class="card-cust">Vesper Hotels</div>
+          <div class="foot"><span class="kanban__amount">82K</span><div class="avatar" style="width:26px;height:26px;font-size:11px">VL</div></div>
+        </div>
+
+        <div class="kanban__card">
+          <div class="card-meta"><span class="card-title">Social retainer</span><span class="stars">★★☆</span></div>
+          <div class="card-cust">Aster Cosmetics</div>
+          <div class="foot"><span class="kanban__amount">60K</span><div class="avatar" style="width:26px;height:26px;font-size:11px">DM</div></div>
+        </div>
+      </div>
+
+      <!-- Negotiation -->
+      <div class="kanban__col">
+        <div class="kanban__head"><span>Negotiation</span><span class="kanban__count">2 · 308K</span></div>
+
+        <div class="kanban__card">
+          <div class="card-meta"><span class="card-title">Global campaign</span><span class="stars">★★★</span></div>
+          <div class="card-cust">Halcyon Studios</div>
+          <div class="foot"><span class="kanban__amount">220K</span><span class="pill pill--info pill--no-dot">Verbal yes</span></div>
+        </div>
+
+        <div class="kanban__card">
+          <div class="card-meta"><span class="card-title">Brand film + retainer</span><span class="stars">★★★</span></div>
+          <div class="card-cust">Larkspur Group</div>
+          <div class="foot"><span class="kanban__amount">88K</span><div class="avatar" style="width:26px;height:26px;font-size:11px">SO</div></div>
+        </div>
+      </div>
+
+      <!-- Won -->
+      <div class="kanban__col">
+        <div class="kanban__head"><span>Won</span><span class="kanban__count">1 · 96K</span></div>
+
+        <div class="kanban__card" style="border-left-color: var(--fin-accent)">
+          <div class="card-meta"><span class="card-title">Onboarding film</span><span class="pill pill--pos pill--no-dot">Won</span></div>
+          <div class="card-cust">Cobalt SaaS</div>
+          <div class="foot"><span class="kanban__amount" style="color:var(--fin-accent)">96K</span><div class="avatar" style="width:26px;height:26px;font-size:11px">VL</div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="callout" style="margin-top: var(--space-xl); max-width: 640px; margin-left:auto; margin-right:auto;">
+      Odoo's CRM kanban, kept — but the deals that are going stale or close to signing surface themselves, instead of hiding in identical cards.
+    </p>
+
+  </main>
+</div>
+
+<!-- deal detail popup -->
+<div class="modal-overlay" id="dealModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="dm-title">
+    <div class="modal__head">
+      <div>
+        <span class="pill pill--info pill--no-dot" id="dm-pill"></span>
+        <h3 class="modal__title" id="dm-title" style="margin-top: var(--space-sm)"></h3>
+      </div>
+      <button class="modal__close" id="dm-close" aria-label="Close"><span class="material-symbols-outlined" style="font-size:20px">close</span></button>
+    </div>
+    <div class="modal__meta" id="dm-meta"></div>
+    <p class="modal__desc" id="dm-desc"></p>
+    <div class="modal__section">
+      <div class="modal__label">Linked deal</div>
+      <div class="flex items-center gap-sm" style="justify-content: space-between">
+        <div class="flex items-center gap-sm">
+          <span class="material-symbols-outlined" style="color:var(--fin-ink-soft)">handshake</span>
+          <span id="dm-project"></span>
+        </div>
+        <a class="link-disabled" aria-disabled="true" title="Not available in this demo">Open deal <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span></a>
+      </div>
+      <div class="link-note">Deal workspace isn't part of this demo.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var overlay = document.getElementById('dealModal');
+  var pill = document.getElementById('dm-pill');
+  var title = document.getElementById('dm-title');
+  var meta = document.getElementById('dm-meta');
+  var desc = document.getElementById('dm-desc');
+  var project = document.getElementById('dm-project');
+
+  function txt(el, sel) { var e = el.querySelector(sel); return e ? e.textContent.trim() : ''; }
+
+  function openDeal(card) {
+    var stageEl = card.closest('.kanban__col').querySelector('.kanban__head span');
+    var stage = stageEl ? stageEl.textContent.trim() : 'Pipeline';
+    var t = txt(card, '.card-title');
+    var cust = txt(card, '.card-cust');
+    var amount = txt(card, '.kanban__amount');
+    var owner = txt(card, '.foot .avatar');
+    var status = txt(card, '.foot .pill');
+    var stars = txt(card, '.stars');
+    var prio = stars ? (stars.split('★').length - 1) + '/3 priority' : '';
+
+    pill.textContent = stage;
+    title.textContent = t;
+    meta.textContent = [cust, '€' + amount, owner ? ('owner ' + owner) : ''].filter(Boolean).join(' · ');
+    var bits = [];
+    if (prio) bits.push(prio + '.');
+    bits.push('Currently in the “' + stage + '” stage.');
+    if (status) bits.push(status + '.');
+    desc.textContent = bits.join(' ');
+    project.textContent = cust + ' — ' + t;
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden', 'false');
+  }
+  function close() { overlay.classList.remove('open'); overlay.setAttribute('aria-hidden', 'true'); }
+
+  document.querySelectorAll('.kanban__card').forEach(function (c) {
+    c.addEventListener('click', function () { openDeal(c); });
+  });
+  document.getElementById('dm-close').addEventListener('click', close);
+  overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+})();
+</script>
+</body>
+</html>

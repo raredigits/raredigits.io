@@ -22,7 +22,16 @@ body {
 }
 
 .main-home {
+    position: relative;
+}
+
+.main-home {
     padding: var(--header-height) var(--space-md) 0;
+}
+
+.main-home .content {
+    position: relative;
+    z-index: 1;
 }
 
 .nav-global {
@@ -158,7 +167,7 @@ footer {
 }
 
 .newsletter-bar {
-    width: 90%;
+    width: 86%;
     background: var(--black);
     color: var(--gray-trans);
     padding: var(--space-lg);
@@ -183,7 +192,7 @@ footer {
         background: var(--bg-color);
         margin: 0;
         width: 16rem;
-        min-width: 30vw;
+        min-width: 24vw;
         border-color: var(--gray-trans);
     }
 
@@ -204,48 +213,5 @@ footer {
 @media (max-width: 768px) {
     .newsletter-bar form {
         flex-direction: column;
-    }
-}
-
-.main-home {
-    position: relative;
-    --wa-size: 60px;
-}
-
-.main-home .content {
-    position: relative;
-    z-index: 1;
-}
-
-.main-home .wa-sticky-zone {
-    position: absolute;
-    inset: 0 0 calc(clamp(8rem, 18vh, 12rem) - 56px) 0;
-    z-index: 20;
-    pointer-events: none;
-}
-
-.main-home .wa-button-wrapper {
-    position: sticky;
-    top: calc(100vh - var(--wa-size) - var(--space-lg));
-    display: flex;
-    justify-content: flex-end;
-    padding-right: var(--space-lg);
-}
-
-.main-home .wa-button-wrapper .wa-button {
-    pointer-events: auto;
-}
-
-@media (max-width: 768px) {
-    .main-home .wa-sticky-zone {
-        position: absolute;
-        inset: 0 0 calc(8rem + env(safe-area-inset-bottom)) 0;
-    }
-
-    .main-home .wa-button-wrapper {
-        position: sticky;
-        top: calc(100vh - var(--wa-size) - max(1.25rem, calc(env(safe-area-inset-bottom) + 1rem)));
-        justify-content: flex-end;
-        padding-right: var(--space-lg);
     }
 }

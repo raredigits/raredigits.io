@@ -1,14 +1,14 @@
 ---
 layout: page
+body_class: text-content
 title: Book your Demo
 offset: about
 permalink: /about/contacts/
 ---
 
-Welcome to our virtual reception.<br>
-We promise our response times are faster than light (in a vacuum of bureaucracy).
+Welcome to our virtual reception. We promise our response times are faster than light (in a vacuum of bureaucracy).
 
-## Headquarter
+## Headquarters
 
 Our mothership is docked in Dubai. For official correspondence (love letters, wedding invitations, quantum physics debates), please use:
 
@@ -16,9 +16,11 @@ Our mothership is docked in Dubai. For official correspondence (love letters, 
    Rare Digits Production DMCC<br>
    1710 Preatoni Tower,<br>
    Cluster L, Jumeirah Lakes Towers (JLT)<br>
-   00000, Dubai, UAE
+   Dubai, UAE
    <p>Phone/WA: <a class="no-decoration" href="tel:+971528786777">+971 52 87-86-777</a></p>
 </div>
+
+Don’t be shy to pay us a visit. We offer the latest [industrial gossip](/pressroom/New-Dubai-Address/) and a PlayStation 5 as part of the hospitality.
 
 ## Personal Encounters of the Third Kind
 
@@ -29,7 +31,7 @@ Wish to witness our elegance and brutality in person? Our ambassadors of inno
 </div>
 
 <div class="padding-y-lg">
-   <ul class="columns list-unstyled">
+   <ul class="list-columns list-unstyled">
       <li><a href="mailto:hi@raredigits.io">Dubai</a> (Home Base)</li>
       <li><a href="mailto:v@raredigits.io">Limassol</a></li>
       <li><a href="mailto:babah@raredigits.io">Porto</a></li>
@@ -77,6 +79,6 @@ Remember, whether you’re reaching out from the bustling streets of Tokyo or 
 
 ## Media Hotline
 
-For any media request feel free to touch <a href="mailto:pr@raredigits.io">Press Office</a>.
+For any media requests feel free to reach out to <a href="mailto:pr@raredigits.io">Press Office</a>.
 
 Let’s make software magic together. Or at least have a chat about how we can automate your coffee machine to brew the perfect cup based on your circadian rhythms and current project deadlines.

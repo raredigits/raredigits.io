@@ -1,0 +1,67 @@
+/* ============================================================================
+   WhatsApp floating button
+   ============================================================================
+
+   A chat button that floats at the bottom-right from the first screen and, at
+   the end of the page, parks on the contacts strip instead of dangling over the
+   footer.
+
+   --- How to use --------------------------------------------------------------
+
+   1. Markup (the zone wraps the button; put it inside the scrolling container):
+
+        <main class="main-home">          <!-- needs position: relative -->
+          <div class="wa-sticky-zone">
+            <div class="wa-button-wrapper">
+              <a class="wa-button" href="https://wa.me/PHONE"></a>
+            </div>
+          </div>
+          ...page content...
+        </main>
+
+   2. Tune it with the variables below — don't edit the rules. The usual one:
+        --wa-stop : where the button parks at the end. Bigger = higher up the
+                    strip; smaller = closer to the footer.
+
+   --- Good to know ------------------------------------------------------------
+
+   * `.main-home` must be `position: relative` (it is, in home.css) — the zone is
+     absolutely positioned against it.
+   * The button is pinned with `top`, not `bottom`, on purpose: the zone starts
+     at the top of the page, so a `bottom` sticky would only catch the button
+     after you scrolled down to it. The `top` offset floats it from screen one.
+   ============================================================================ */
+
+.main-home {
+    --wa-size:  60px;            /* matches rare-styles .wa-button */
+    --wa-float: var(--space-xl); /* gap above the viewport bottom while scrolling */
+    --wa-right: var(--space-lg); /* gap from the right edge */
+    --wa-stop:  84px; /* parks the button on the strip, clear of the form */
+}
+
+.main-home .wa-sticky-zone {
+    position: absolute;
+    inset: 0 0 var(--wa-stop) 0;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.main-home .wa-button-wrapper {
+    position: sticky;
+    top: calc(100vh - var(--wa-size) - var(--wa-float));
+    display: flex;
+    justify-content: flex-end;
+    padding-right: var(--wa-right);
+}
+
+.main-home .wa-button-wrapper .wa-button {
+    pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+    .main-home {
+        --wa-right: var(--space-md);
+        /* keep clear of the home indicator on notched phones */
+        --wa-float: calc(var(--space-md) + env(safe-area-inset-bottom, 0px));
+    }
+}

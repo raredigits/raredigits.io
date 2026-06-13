@@ -1,0 +1,255 @@
+---
+permalink: /demo/odoo/invoice/
+eleventyExcludeFromCollections: true
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invoice — Odoo, reimagined · Rare Digits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Titillium+Web:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/raredigits/rare-styles@v0.6.15/rare.min.css">
+<link rel="stylesheet" href="/assets/css/modules/odoo-fintech.css">
+<style>
+  .material-symbols-outlined { vertical-align: middle; }
+  .doc-grid { display: grid; grid-template-columns: 1fr 340px; gap: var(--space-lg); align-items: start; }
+  @media (max-width: 980px) { .doc-grid { grid-template-columns: 1fr; } }
+
+  .inv-head { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: var(--space-md); }
+  .inv-num { font-family: var(--fin-font-head); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 600; text-transform: uppercase; letter-spacing: .03em; }
+  .inv-meta { color: var(--fin-ink-soft); font-size: var(--font-size-sm); }
+
+  .party-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg); margin: var(--space-lg) 0; }
+  .party h4 { font-size: var(--font-size-xs); text-transform: uppercase; letter-spacing:.08em; color: var(--fin-ink-soft); margin:0 0 var(--space-xs); font-weight: var(--font-weight-normal); }
+  .party .name { font-size: var(--font-size-lg); }
+  .party .line { color: var(--fin-ink-soft); font-size: var(--font-size-sm); }
+
+  table.lines { width: 100%; border-collapse: collapse; margin-top: var(--space-md); }
+  table.lines th { text-align: left; font-size: var(--font-size-xs); text-transform: uppercase; letter-spacing:.06em; color: var(--fin-ink-soft); font-weight: var(--font-weight-normal); padding: var(--space-sm) var(--space-xs); border-bottom: 1px solid var(--fin-line); }
+  table.lines td { padding: var(--space-sm) var(--space-xs); border-bottom: 1px solid var(--fin-line); }
+  table.lines tbody tr { cursor: pointer; transition: background .12s ease; }
+  table.lines tbody tr:hover { background: var(--gray-lightest); }
+  table.lines .r { text-align: right; font-family: var(--code-font); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  table.lines .desc { color: var(--fin-ink-soft); font-size: var(--font-size-sm); }
+
+  .totals { margin-left: auto; width: min(320px, 100%); margin-top: var(--space-md); }
+  .totals .row { display:flex; justify-content:space-between; padding: var(--space-xs) 0; }
+  .totals .row .v { font-family: var(--code-font); font-variant-numeric: tabular-nums; }
+  .totals .grand { border-top: 2px solid var(--fin-ink); margin-top: var(--space-xs); padding-top: var(--space-sm); font-size: var(--font-size-xl); }
+  .totals .grand .v { font-size: var(--font-size-xl); }
+
+  .pay-amount { font-family: var(--code-font); font-variant-numeric: tabular-nums; font-size: clamp(2rem,5vw,2.8rem); letter-spacing:-.02em; }
+  .pay-btn { display:flex; align-items:center; justify-content:center; gap:.4em; width:100%; background: var(--fin-accent); color: var(--white); border:0; border-radius: var(--space-lg); padding: var(--space-sm) var(--space-md); font-family: var(--primary-font); font-size: var(--font-size-md); cursor:pointer; }
+  .pay-btn:hover { filter: brightness(.95); }
+  .pay-sub { font-size: var(--font-size-xs); color: var(--fin-ink-soft); text-align:center; margin-top: var(--space-sm); }
+  .method { display:flex; align-items:center; gap: var(--space-sm); padding: var(--space-sm); border:1px solid var(--fin-line); border-radius: var(--fin-radius-sm); margin-top: var(--space-sm); }
+  .method.sel { border-color: var(--fin-ink); }
+</style>
+</head>
+<body class="fin">
+<div class="erp-shell">
+
+  <header class="erp-topbar">
+    <div class="erp-topbar__brand"><span class="erp-topbar__dot"></span> Meridian</div>
+    <div class="erp-topbar__spacer"></div>
+    <label class="erp-topbar__search">
+      <span class="material-symbols-outlined" style="font-size:20px">search</span>
+      <input type="text" placeholder="Search invoices, customers…">
+    </label>
+    <span class="material-symbols-outlined" style="color:var(--fin-ink-soft)">notifications</span>
+    <div class="avatar">SO</div>
+  </header>
+
+  <nav class="erp-sidebar">
+    <a class="erp-sidebar__item" title="Dashboard" href="/demo/odoo/dashboard/"><span class="material-symbols-outlined">dashboard</span></a>
+    <a class="erp-sidebar__item active" title="Invoicing"><span class="material-symbols-outlined">receipt_long</span></a>
+    <a class="erp-sidebar__item" title="Sales" href="/demo/odoo/pipeline/"><span class="material-symbols-outlined">trending_up</span></a>
+    <a class="erp-sidebar__item" title="Bank"><span class="material-symbols-outlined">account_balance</span></a>
+    <a class="erp-sidebar__item" title="Contacts"><span class="material-symbols-outlined">group</span></a>
+    <a class="erp-sidebar__item" title="Reporting"><span class="material-symbols-outlined">bar_chart</span></a>
+  </nav>
+
+  <main class="erp-main">
+
+    <!-- breadcrumb + status -->
+    <div class="flex items-center" style="justify-content: space-between; flex-wrap: wrap; gap: var(--space-md); margin-bottom: var(--space-lg)">
+      <div class="inv-meta"><a href="/demo/odoo/invoice/" style="color:inherit; text-decoration:none">Invoicing</a> · Customer invoices · <strong>INV-2074</strong></div>
+      <div class="stepper">
+        <span class="stepper__step stepper__step--done"><span class="stepper__dot"><span class="material-symbols-outlined" style="font-size:14px">check</span></span> Draft</span>
+        <span class="stepper__bar stepper__bar--done"></span>
+        <span class="stepper__step stepper__step--current"><span class="stepper__dot">2</span> Sent</span>
+        <span class="stepper__bar"></span>
+        <span class="stepper__step"><span class="stepper__dot">3</span> Paid</span>
+      </div>
+    </div>
+
+    <div class="doc-grid">
+
+      <!-- the document -->
+      <div class="card-soft" style="padding: var(--space-xl)">
+        <div class="inv-head">
+          <div>
+            <div class="inv-num">Invoice INV-2074</div>
+            <div class="inv-meta">Issued 02 June 2026 · Due 17 June 2026</div>
+          </div>
+          <span class="pill pill--info pill--no-dot" style="font-size: var(--font-size-sm)">Awaiting payment · 4 days left</span>
+        </div>
+
+        <div class="party-row">
+          <div class="party">
+            <h4>From</h4>
+            <div class="name">Meridian Studio FZ-LLC</div>
+            <div class="line">Dubai · TRN 100xxxxxx00003</div>
+            <div class="line">finance@meridian.studio</div>
+          </div>
+          <div class="party">
+            <h4>Bill to</h4>
+            <div class="name">Halcyon Studios Ltd</div>
+            <div class="line">London · VAT GB 4421xxxx</div>
+            <div class="line">ap@halcyon.example</div>
+          </div>
+        </div>
+
+        <table class="lines">
+          <thead>
+            <tr><th>Item</th><th class="r">Qty</th><th class="r">Unit</th><th class="r">Amount</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div>Brand film — production</div><div class="desc">Pre-production, 2-day shoot, edit</div></td>
+              <td class="r">1</td><td class="r">42,000</td><td class="r">42,000</td>
+            </tr>
+            <tr>
+              <td><div>Motion graphics package</div><div class="desc">12 animated sequences</div></td>
+              <td class="r">12</td><td class="r">1,250</td><td class="r">15,000</td>
+            </tr>
+            <tr>
+              <td><div>Licensing — 24 months</div><div class="desc">All channels, worldwide</div></td>
+              <td class="r">1</td><td class="r">9,000</td><td class="r">9,000</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="totals">
+          <div class="row"><span>Subtotal</span><span class="v">66,000</span></div>
+          <div class="row"><span>VAT 5%</span><span class="v">3,300</span></div>
+          <div class="row grand"><span>Total due</span><span class="v">69,300 €</span></div>
+        </div>
+      </div>
+
+      <!-- pay panel -->
+      <div>
+        <div class="card-soft">
+          <div class="kpi__label">Amount due</div>
+          <div class="pay-amount">69,300<span style="font-size:.4em; color:var(--fin-ink-soft)"> €</span></div>
+          <div class="inv-meta" style="margin-bottom: var(--space-md)">Due in 4 days · 17 Jun 2026</div>
+
+          <button class="pay-btn"><span class="material-symbols-outlined">bolt</span> Pay now</button>
+          <div class="pay-sub">Instant SEPA · settles same day</div>
+
+          <div class="method sel">
+            <span class="material-symbols-outlined" style="color:var(--fin-ink-soft)">account_balance</span>
+            <div style="flex:1"><div>Bank transfer</div><div class="inv-meta">ENBD ··· 4471</div></div>
+            <span class="material-symbols-outlined" style="color:var(--fin-accent)">radio_button_checked</span>
+          </div>
+          <div class="method">
+            <span class="material-symbols-outlined" style="color:var(--fin-ink-soft)">credit_card</span>
+            <div style="flex:1"><div>Card</div><div class="inv-meta">Visa, Mastercard · +2.9%</div></div>
+            <span class="material-symbols-outlined" style="color:var(--gray)">radio_button_unchecked</span>
+          </div>
+        </div>
+
+        <div class="card-soft" style="margin-top: var(--space-md); padding: var(--space-md)">
+          <div class="kpi__label" style="margin-bottom: var(--space-sm)">Timeline</div>
+          <div class="txn-list">
+            <div class="txn" style="grid-template-columns:auto 1fr">
+              <div class="txn__icon" style="background:var(--brand-color-light); color:var(--green)"><span class="material-symbols-outlined">visibility</span></div>
+              <div><div class="txn__title">Viewed by customer</div><div class="txn__sub">today · 09:02</div></div>
+            </div>
+            <div class="txn" style="grid-template-columns:auto 1fr">
+              <div class="txn__icon"><span class="material-symbols-outlined">send</span></div>
+              <div><div class="txn__title">Sent to ap@halcyon</div><div class="txn__sub">02 Jun · 14:10</div></div>
+            </div>
+            <div class="txn" style="grid-template-columns:auto 1fr">
+              <div class="txn__icon"><span class="material-symbols-outlined">edit_document</span></div>
+              <div><div class="txn__title">Created by Sofia</div><div class="txn__sub">02 Jun · 13:55</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="callout" style="margin-top: var(--space-xl); max-width: 640px; margin-left:auto; margin-right:auto;">
+      The same <code>account.move</code> from Odoo — reorganised so the customer sees one number and one button, and the owner sees where it stands.
+    </p>
+
+  </main>
+</div>
+
+<!-- line item detail popup -->
+<div class="modal-overlay" id="lineModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="im-title">
+    <div class="modal__head">
+      <div>
+        <span class="pill pill--mute pill--no-dot" id="im-pill">Invoice line</span>
+        <h3 class="modal__title" id="im-title" style="margin-top: var(--space-sm)"></h3>
+      </div>
+      <button class="modal__close" id="im-close" aria-label="Close"><span class="material-symbols-outlined" style="font-size:20px">close</span></button>
+    </div>
+    <div class="modal__meta" id="im-meta"></div>
+    <p class="modal__desc" id="im-desc"></p>
+    <div class="modal__section">
+      <div class="modal__label">Catalogue item</div>
+      <div class="flex items-center gap-sm" style="justify-content: space-between">
+        <div class="flex items-center gap-sm">
+          <span class="material-symbols-outlined" style="color:var(--fin-ink-soft)">inventory_2</span>
+          <span id="im-project"></span>
+        </div>
+        <a class="link-disabled" aria-disabled="true" title="Not available in this demo">Open item <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span></a>
+      </div>
+      <div class="link-note">Product catalogue isn't part of this demo.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var overlay = document.getElementById('lineModal');
+  var title = document.getElementById('im-title');
+  var meta = document.getElementById('im-meta');
+  var desc = document.getElementById('im-desc');
+  var project = document.getElementById('im-project');
+
+  function openLine(row) {
+    var cell = row.cells[0];
+    var sub = cell.querySelector('.desc');
+    var name = (cell.querySelector('div:not(.desc)') || cell).textContent.trim();
+    var qty = row.cells[1].textContent.trim();
+    var unit = row.cells[2].textContent.trim();
+    var amount = row.cells[3].textContent.trim();
+
+    title.textContent = name;
+    meta.textContent = 'Qty ' + qty + ' × ' + unit + ' = ' + amount + ' €';
+    desc.textContent = (sub ? sub.textContent.trim() + '. ' : '') + 'Billed on invoice INV-2074.';
+    project.textContent = name;
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden', 'false');
+  }
+  function close() { overlay.classList.remove('open'); overlay.setAttribute('aria-hidden', 'true'); }
+
+  document.querySelectorAll('table.lines tbody tr').forEach(function (r) {
+    r.addEventListener('click', function () { openLine(r); });
+  });
+  document.getElementById('im-close').addEventListener('click', close);
+  overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+})();
+</script>
+</body>
+</html>

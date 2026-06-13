@@ -25,7 +25,7 @@ The app runs on `http://localhost:8080` and automatically rebuilds when files ch
 - [`_data/`](/Users/dk/GiHub/raredigits.io/_data): global data files and navigation data
 - [`_includes/`](/Users/dk/GiHub/raredigits.io/_includes): partial templates
 - [`_layouts/`](/Users/dk/GiHub/raredigits.io/_layouts): page layouts
-- [`about/newsroom/`](/Users/dk/GiHub/raredigits.io/about/newsroom): newsroom landing page and news posts
+- [`about/pressroom/`](/Users/dk/GiHub/raredigits.io/about/pressroom): pressroom landing page and news posts
 - [`assets/`](/Users/dk/GiHub/raredigits.io/assets): static assets copied through to the output
 
 ## Eleventy config
@@ -48,15 +48,15 @@ Most project-specific logic that used to live directly in the config has been mo
 
 These are ordinary project utilities, not migration shims from Jekyll.
 
-## Newsroom model
+## pressroom model
 
-News posts live in [`about/newsroom/posts/`](/Users/dk/GiHub/raredigits.io/about/newsroom/posts).
+News posts live in [`about/pressroom/posts/`](/Users/dk/GiHub/raredigits.io/about/pressroom/posts).
 
 Important details:
 
-- [`about/newsroom/index.html`](/Users/dk/GiHub/raredigits.io/about/newsroom/index.html) renders the newsroom landing page
-- [`about/newsroom/posts/posts.json`](/Users/dk/GiHub/raredigits.io/about/newsroom/posts/posts.json) is a native Eleventy directory data file
-- `posts.json` applies shared data to all newsroom posts:
+- [`about/pressroom/index.html`](/Users/dk/GiHub/raredigits.io/about/pressroom/index.html) renders the pressroom landing page
+- [`about/pressroom/posts/posts.json`](/Users/dk/GiHub/raredigits.io/about/pressroom/posts/posts.json) is a native Eleventy directory data file
+- `posts.json` applies shared data to all pressroom posts:
   - `layout: "post"`
   - `tags: "news"`
 - the `news` tag creates the native collection `collections.news`
@@ -66,7 +66,7 @@ Important details:
 
 This means:
 
-- use `collections.news` when rendering newsroom content
+- use `collections.news` when rendering pressroom content
 - use `post.data.labels` when rendering visible labels on cards or post pages
 
 ## Content conventions
@@ -79,7 +79,7 @@ This means:
 
 - If you are changing page chrome, start in [`_layouts/`](/Users/dk/GiHub/raredigits.io/_layouts) and [`_includes/`](/Users/dk/GiHub/raredigits.io/_includes)
 - If you are changing menus or shared site data, check [`_data/`](/Users/dk/GiHub/raredigits.io/_data)
-- If you are changing newsroom behavior, check both [`about/newsroom/index.html`](/Users/dk/GiHub/raredigits.io/about/newsroom/index.html) and [`about/newsroom/posts/posts.json`](/Users/dk/GiHub/raredigits.io/about/newsroom/posts/posts.json)
+- If you are changing pressroom behavior, check both [`about/pressroom/index.html`](/Users/dk/GiHub/raredigits.io/about/pressroom/index.html) and [`about/pressroom/posts/posts.json`](/Users/dk/GiHub/raredigits.io/about/pressroom/posts/posts.json)
 - If you are changing formatting logic used in templates, check [`_config/filters.js`](/Users/dk/GiHub/raredigits.io/_config/filters.js)
 
 ## Verification

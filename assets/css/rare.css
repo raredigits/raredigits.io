@@ -18,7 +18,6 @@
     --bg-color: var(--white);
     --secondary-color: var(--gray-light);
     --header-bg: rgba(255, 255, 255, 0.9);
-    --border-color: var(--black);
 
     --font-size: 18px;
 
@@ -28,8 +27,18 @@
 }
 
 /* REMOVE AFTER UPDATE */
+body.text-content article > h2,
+body.text-content article > h3 {
+    margin-left: calc(var(--space-lg) * -1);
 
+    @media (max-width: 768px) {
+        margin-left: calc(var(--space-md) * -1);
+    }
+}
 
+.text-content-fullwidth-caption {
+    margin-left: calc(var(--space-lg) * -1);
+}
 
 /* REMOVE AFTER UPDATE */
 

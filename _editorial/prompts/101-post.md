@@ -28,7 +28,7 @@ If a reader remembers only one sentence from the post, that sentence should stil
 
 ## Voice
 
-Same practitioner register as newsroom and principles posts. Calm, specific, slightly ironic, never academic.
+Same practitioner register as pressroom and principles posts. Calm, specific, slightly ironic, never academic.
 
 The reader should feel:
 "This is basic, but not simplistic. I should probably have had this framework earlier."

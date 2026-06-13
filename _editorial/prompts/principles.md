@@ -16,7 +16,7 @@ The principle is the headline. Everything else exists to make it land.
 
 ## Voice
 
-Same practitioner register as newsroom posts, but tighter. No warm-up. Start with the situation. The reader should feel: *someone finally said this out loud.*
+Same practitioner register as pressroom posts, but tighter. No warm-up. Start with the situation. The reader should feel: *someone finally said this out loud.*
 
 Length: 300–500 words.
 
@@ -32,7 +32,7 @@ labels: [principles, 101]
 ---
 ```
 
-These labels are specific to principles posts; the broader newsroom label set lives in `_editorial/prompts/newsroom-post.md`.
+These labels are specific to principles posts; the broader pressroom label set lives in `_editorial/prompts/pressroom-post.md`.
 
 ## Principles Backlog
 

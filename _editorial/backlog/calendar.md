@@ -44,12 +44,14 @@ Published: 2023-09-15
 The vendor demo was for a company that doesn't exist. The requirements were written by someone who doesn't use the system. The go-live date was chosen for the board presentation, not the calendar.
 
 ### Nov 2023
+`📝` **Your ERP Sucks, Part 2: Nobody Owns It After Go-Live** — [ERP]
+The implementation partner left. The project manager moved to another role. The consultant who configured the approval workflows doesn't work here anymore. And the system does what it does.
+
 `📝` **Useful Daily GPT Usecases** — Standalone
 
 ### Dec 2023
-`📝` **Your ERP Sucks, Part 2: Nobody Owns It After Go-Live** — [ERP]
-The implementation partner left. The project manager moved to another role. The consultant who configured the approval workflows doesn't work here anymore. And the system does what it does.
-↳ 101: *У решений есть владельцы*
+`✅` **101: Every Mistake Has a Surname** — [101]
+Published: 2023-12-11 · Principle: *У решений есть владельцы*
 
 ---
 
@@ -255,9 +257,9 @@ Part 5 of 5. Three different measurement systems produce three different stories
 
 | Period | Published | Gaps to fill | Planned future |
 |---|---|---|---|
-| 2023 (May–Dec) | 2 | 6 | — |
+| 2023 (May–Dec) | 3 | 6 | — |
 | 2024 | 3 | 9 | — |
 | 2025 | 3 | 10 | — |
 | 2026 | — | — | 12 |
 | 2027 (Jan–Jun) | — | — | 6 |
-| **Total** | **8** | **25** | **18** |
+| **Total** | **9** | **25** | **18** |
