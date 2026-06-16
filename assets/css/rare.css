@@ -15,6 +15,8 @@
 }
 
 :root {
+    --primary-font: 'Titillium Web', sans-serif;
+    --secondary-font: 'Literata', serif;
     --bg-color: var(--white);
     --secondary-color: var(--gray-light);
     --header-bg: rgba(255, 255, 255, 0.9);
@@ -40,7 +42,19 @@ body.text-content article > h3 {
     margin-left: calc(var(--space-lg) * -1);
 }
 
+.caption p {
+    max-width: 86%;
+}
+
 /* REMOVE AFTER UPDATE */
+
+.ru {
+    --primary-font: 'PT Sans', sans-serif;
+
+    .en {
+        --primary-font: 'Titillium Web', sans-serif;
+    }
+}
 
 .highlight {
     margin-top: var(--space-md);

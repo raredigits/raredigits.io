@@ -1,0 +1,253 @@
+---
+permalink: /demo/forecast/revenue/
+eleventyExcludeFromCollections: true
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revenue Forecast — Forecast App · Rare Digits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Titillium+Web:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/raredigits/rare-styles@v0.6.15/rare.min.css">
+<link rel="stylesheet" href="/assets/css/modules/odoo-fintech.css">
+<link rel="stylesheet" href="/assets/css/modules/forecast.css">
+<style>
+  .material-symbols-outlined { vertical-align: middle; }
+  .crumb { color: var(--fin-ink-soft); font-size: var(--font-size-sm); }
+  .crumb a { color: var(--fin-ink-soft); }
+  .metric-title { font-size: clamp(1.6rem, 3.5vw, 2.3rem); }
+
+  .head-kpis { display: flex; gap: var(--space-xl); flex-wrap: wrap; margin-top: var(--space-md); }
+  .head-kpis .kpi__value { font-size: clamp(1.5rem, 3vw, 2rem); }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); align-items: start; }
+  @media (max-width: 900px) { .two-col { grid-template-columns: 1fr; } }
+
+  .card-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-md); }
+  .card-head h3 { font-size: var(--font-size-md); }
+
+  .bar-actual { fill: var(--gray-mid-light); }
+  .bar-actual.is-recent { fill: var(--gray); }
+  .trend { fill: none; stroke: var(--fin-ink); stroke-width: 1.5; stroke-dasharray: 4 4; vector-effect: non-scaling-stroke; }
+</style>
+</head>
+<body class="fin">
+<div class="erp-shell">
+
+  <header class="erp-topbar">
+    <div class="erp-topbar__brand"><span class="erp-topbar__dot"></span> Meridian</div>
+    <div class="erp-topbar__spacer"></div>
+    <label class="erp-topbar__search">
+      <span class="material-symbols-outlined" style="font-size:20px">search</span>
+      <input type="text" placeholder="Forecast a metric&hellip;">
+    </label>
+    <span class="material-symbols-outlined" style="color:var(--fin-ink-soft)">notifications</span>
+    <div class="avatar" title="Founder / MD">SO</div>
+  </header>
+
+  <nav class="erp-sidebar">
+    <a class="erp-sidebar__item" title="Forecast cockpit" href="/demo/forecast/cockpit/"><span class="material-symbols-outlined">query_stats</span></a>
+    <a class="erp-sidebar__item active" title="Metric deep-dive"><span class="material-symbols-outlined">show_chart</span></a>
+    <a class="erp-sidebar__item" title="Scenario lab" href="/demo/forecast/scenarios/"><span class="material-symbols-outlined">tune</span></a>
+    <a class="erp-sidebar__item" title="Cash"><span class="material-symbols-outlined">account_balance</span></a>
+    <a class="erp-sidebar__item" title="Reporting"><span class="material-symbols-outlined">bar_chart</span></a>
+  </nav>
+
+  <main class="erp-main">
+
+    <div class="crumb"><a href="/demo/forecast/cockpit/">Cockpit</a> &nbsp;&rsaquo;&nbsp; Metrics &nbsp;&rsaquo;&nbsp; Revenue</div>
+    <div class="flex items-center" style="justify-content: space-between; flex-wrap: wrap; gap: var(--space-md); margin-top: var(--space-xs)">
+      <h1 class="metric-title">Revenue &mdash; monthly</h1>
+      <div class="segment" role="tablist">
+        <button>6 mo</button>
+        <button class="active">12 mo</button>
+        <button>24 mo</button>
+      </div>
+    </div>
+
+    <div class="head-kpis">
+      <div><div class="kpi__label">Next 90 days &middot; P50</div><div class="kpi__value">2.71<span class="unit">M &euro;</span></div></div>
+      <div><div class="kpi__label">P10&ndash;P90</div><div class="kpi__value" style="color:var(--fin-ink-soft)">2.43&ndash;2.98<span class="unit">M</span></div></div>
+      <div><div class="kpi__label">Model fit &middot; R&sup2;</div><div class="kpi__value">0.91</div></div>
+      <div><div class="kpi__label">History used</div><div class="kpi__value">24<span class="unit">mo</span></div></div>
+    </div>
+
+    <!-- REGRESSION CHART: actuals (bars) + fitted trend + forecast cone + plan -->
+    <div class="section-head"><h2>Actuals, trend &amp; forecast</h2><span class="meta">Jul 2025 &ndash; Dec 2026 &middot; &euro; / month</span></div>
+    <div class="card-soft">
+      <svg class="fanchart" viewBox="0 0 720 240" height="240" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Monthly revenue: 12 months of actuals, fitted trend, and a 6-month forecast cone">
+        <!-- grid -->
+        <line class="grid" x1="0" y1="70"  x2="720" y2="70"/>
+        <line class="grid" x1="0" y1="140" x2="720" y2="140"/>
+        <line class="grid" x1="0" y1="210" x2="720" y2="210"/>
+
+        <!-- actual monthly bars -->
+        <g>
+          <rect class="bar-actual" x="9"   y="140" width="22" height="70"  rx="2"/>
+          <rect class="bar-actual" x="49"  y="146" width="22" height="64"  rx="2"/>
+          <rect class="bar-actual" x="89"  y="90"  width="22" height="120" rx="2"/>
+          <rect class="bar-actual" x="129" y="82"  width="22" height="128" rx="2"/>
+          <rect class="bar-actual" x="169" y="98"  width="22" height="112" rx="2"/>
+          <rect class="bar-actual" x="209" y="138" width="22" height="72"  rx="2"/>
+          <rect class="bar-actual" x="249" y="118" width="22" height="92"  rx="2"/>
+          <rect class="bar-actual" x="289" y="126" width="22" height="84"  rx="2"/>
+          <rect class="bar-actual" x="329" y="102" width="22" height="108" rx="2"/>
+          <rect class="bar-actual" x="369" y="92"  width="22" height="118" rx="2"/>
+          <rect class="bar-actual is-recent" x="409" y="86"  width="22" height="124" rx="2"/>
+          <rect class="bar-actual is-recent" x="449" y="106" width="22" height="104" rx="2"/>
+        </g>
+
+        <!-- P10–P90 forecast cone -->
+        <path class="band" d="M480,112 L500,119 540,120 580,83 620,74 660,80 700,105 L700,152 L660,127 620,117 580,116 540,142 500,136 Z"/>
+
+        <!-- deseasonalised fitted trend (regression line), extended into forecast -->
+        <polyline class="trend" points="20,150 460,104 700,92"/>
+
+        <!-- plan reference -->
+        <polyline class="plan" points="480,113 500,122 540,124 580,99 620,100 660,108 700,126"/>
+
+        <!-- median forecast -->
+        <polyline class="median" points="480,112 500,128 540,131 580,100 620,96 660,104 700,129"/>
+
+        <!-- now marker -->
+        <line class="nowline" x1="480" y1="20" x2="480" y2="220"/>
+        <circle class="dot" cx="480" cy="112" r="4"/>
+        <text class="nowlabel" x="486" y="32">now</text>
+      </svg>
+      <div class="chart-axis" style="padding: 0 9px">
+        <span>Jul</span><span>Sep</span><span>Nov</span><span>Jan</span><span>Mar</span><span>May</span><span style="color:var(--fin-ink)">Jul</span><span>Sep</span><span>Nov</span>
+      </div>
+      <div class="chart-legend">
+        <span class="key"><span class="swatch" style="border-top-color:var(--gray)"></span> Actual</span>
+        <span class="key" style="color:var(--fin-ink)"><span class="swatch swatch--dash"></span> Fitted trend</span>
+        <span class="key" style="color:var(--fin-accent)"><span class="swatch"></span> Forecast (P50)</span>
+        <span class="key"><span class="swatch swatch--band"></span> P10&ndash;P90</span>
+        <span class="key" style="color:var(--fc-plan)"><span class="swatch swatch--dash"></span> Plan</span>
+      </div>
+    </div>
+
+    <!-- SEASONALITY + METHOD -->
+    <div class="two-col" style="margin-top: var(--space-lg)">
+      <div>
+        <div class="section-head" style="margin-top:0"><h2>Seasonality</h2><span class="meta">multiplicative index &middot; 24 mo</span></div>
+        <div class="card-soft">
+          <p class="assumption-note" style="margin-bottom: var(--space-md)">How each calendar month runs against the deseasonalised average (100 = on trend). Summer is light; the autumn campaign window carries the year.</p>
+          <div class="season">
+            <div class="season__col"><div class="season__bar season__bar--under" style="height:71px"></div><div class="season__m">J</div></div>
+            <div class="season__col"><div class="season__bar season__bar--under" style="height:68px"></div><div class="season__m">F</div></div>
+            <div class="season__col"><div class="season__bar season__bar--over" style="height:77px"></div><div class="season__m">M</div></div>
+            <div class="season__col"><div class="season__bar season__bar--over" style="height:80px"></div><div class="season__m">A</div></div>
+            <div class="season__col"><div class="season__bar season__bar--over" style="height:81px"></div><div class="season__m">M</div></div>
+            <div class="season__col"><div class="season__bar season__bar--over" style="height:75px"></div><div class="season__m">J</div></div>
+            <div class="season__col"><div class="season__bar season__bar--under" style="height:62px"></div><div class="season__m">J</div></div>
+            <div class="season__col"><div class="season__bar season__bar--under" style="height:59px"></div><div class="season__m">A</div></div>
+            <div class="season__col"><div class="season__bar season__bar--over" style="height:87px"></div><div class="season__m">S</div></div>
+            <div class="season__col"><div class="season__bar season__bar--over" style="height:90px"></div><div class="season__m">O</div></div>
+            <div class="season__col"><div class="season__bar season__bar--over" style="height:86px"></div><div class="season__m">N</div></div>
+            <div class="season__col"><div class="season__bar season__bar--under" style="height:65px"></div><div class="season__m">D</div></div>
+          </div>
+          <div class="flex" style="justify-content: space-between; margin-top: var(--space-sm)">
+            <span class="txn__sub">Lightest: Aug &middot; index 80</span>
+            <span class="txn__sub">Peak: Oct &middot; index 122</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-head" style="margin-top:0"><h2>How it&rsquo;s built</h2><span class="meta">method</span></div>
+        <div class="card-soft">
+          <div style="display:flex; flex-direction:column; gap: var(--space-md)">
+            <div class="flex items-start gap-sm">
+              <span class="tag-method" style="flex:none">1</span>
+              <div><strong>Decompose, then forecast each part.</strong><br><span class="txn__sub">Committed contracts, recurring retainers (churn-modelled), and probability-weighted pipeline are projected separately &mdash; they behave nothing alike.</span></div>
+            </div>
+            <div class="flex items-start gap-sm">
+              <span class="tag-method" style="flex:none">2</span>
+              <div><strong>Trend &times; seasonality.</strong><br><span class="txn__sub">A regression on 24 months gives the underlying trend; the monthly index above puts the seasonal shape back on top.</span></div>
+            </div>
+            <div class="flex items-start gap-sm">
+              <span class="tag-method" style="flex:none">3</span>
+              <div><strong>Carry the uncertainty, don&rsquo;t hide it.</strong><br><span class="txn__sub">The band is the model&rsquo;s residual error widened by how far out we&rsquo;re looking. December&rsquo;s band is wide on purpose.</span></div>
+            </div>
+            <div class="flex items-start gap-sm">
+              <span class="tag-method" style="flex:none">4</span>
+              <div><strong>Score it next month.</strong><br><span class="txn__sub">When May&rsquo;s books closed, May&rsquo;s old forecast got graded. That error feeds back into the bands.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MONTH-BY-MONTH TABLE -->
+    <div class="section-head"><h2>Month by month</h2><span class="meta">forecast &middot; Jul &ndash; Dec 2026</span></div>
+    <div class="card-soft">
+      <table class="ftable">
+        <thead>
+          <tr><th>Month</th><th class="r">Expected (P50)</th><th>Where in the band</th><th class="r">Plan</th><th class="r">vs plan</th><th>Basis</th></tr>
+        </thead>
+        <tbody>
+          <tr class="is-now">
+            <td class="month">Jul &rsquo;26</td>
+            <td class="r">0.82M</td>
+            <td><div class="rangebar" title="0.74M – 0.91M"><span class="rangebar__p50" style="left:47%"></span></div><span class="band" style="font-size:var(--font-size-xs)">0.74 &ndash; 0.91M</span></td>
+            <td class="r">0.88M</td>
+            <td class="r" style="color:var(--orange)">&minus;7%</td>
+            <td class="basis">Summer dip; 2 retainers + 1 SOW committed</td>
+          </tr>
+          <tr>
+            <td class="month">Aug &rsquo;26</td>
+            <td class="r">0.79M</td>
+            <td><div class="rangebar" title="0.68M – 0.90M"><span class="rangebar__p50" style="left:50%"></span></div><span class="band" style="font-size:var(--font-size-xs)">0.68 &ndash; 0.90M</span></td>
+            <td class="r">0.86M</td>
+            <td class="r" style="color:var(--orange)">&minus;8%</td>
+            <td class="basis">Lightest month; thin pipeline</td>
+          </tr>
+          <tr>
+            <td class="month">Sep &rsquo;26</td>
+            <td class="r">1.10M</td>
+            <td><div class="rangebar" title="0.94M – 1.27M"><span class="rangebar__p50" style="left:48%"></span></div><span class="band" style="font-size:var(--font-size-xs)">0.94 &ndash; 1.27M</span></td>
+            <td class="r">1.11M</td>
+            <td class="r" style="color:var(--fin-ink-soft)">&minus;1%</td>
+            <td class="basis">Autumn ramp; Cobalt licensing weighted in</td>
+          </tr>
+          <tr>
+            <td class="month">Oct &rsquo;26</td>
+            <td class="r">1.14M</td>
+            <td><div class="rangebar" title="0.93M – 1.36M"><span class="rangebar__p50" style="left:49%"></span></div><span class="band" style="font-size:var(--font-size-xs)">0.93 &ndash; 1.36M</span></td>
+            <td class="r">1.10M</td>
+            <td class="r" style="color:var(--green)">+4%</td>
+            <td class="basis">Peak season; 3 deals weighted</td>
+          </tr>
+          <tr>
+            <td class="month">Nov &rsquo;26</td>
+            <td class="r">1.06M</td>
+            <td><div class="rangebar" title="0.83M – 1.30M"><span class="rangebar__p50" style="left:49%"></span></div><span class="band" style="font-size:var(--font-size-xs)">0.83 &ndash; 1.30M</span></td>
+            <td class="r">1.02M</td>
+            <td class="r" style="color:var(--green)">+4%</td>
+            <td class="basis">Campaign delivery billed</td>
+          </tr>
+          <tr>
+            <td class="month">Dec &rsquo;26</td>
+            <td class="r">0.81M</td>
+            <td><div class="rangebar" title="0.58M – 1.05M"><span class="rangebar__p50" style="left:49%"></span></div><span class="band" style="font-size:var(--font-size-xs)">0.58 &ndash; 1.05M</span></td>
+            <td class="r">0.84M</td>
+            <td class="r" style="color:var(--fin-ink-soft)">&minus;4%</td>
+            <td class="basis">Holiday slowdown; band widest (far horizon)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="callout" style="margin-top: var(--space-xl); max-width: 680px; margin-left:auto; margin-right:auto;">
+      &ldquo;Revenue will be about a million a month&rdquo; is a feeling. <em>0.79M, P10&ndash;P90 of 0.68 to 0.90, because August is always the quiet one</em> &mdash; that&rsquo;s something you can plan payroll against.
+    </p>
+
+  </main>
+</div>
+</body>
+</html>

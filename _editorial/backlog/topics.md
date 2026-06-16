@@ -58,6 +58,7 @@ Format: `- [ ] Title — notes — category — priority`
 
 ## Published (archive)
 
+- [x] Forecasting Methods, Ranked by Honesty — Oct 2023 — survey of forecasting methods + why Atlas's new forecasting module (later → Forecast App) went with decomposition / regression × seasonality / probabilistic bands / backtest — Insights
 - [x] We Moved. The PS5 Came With Us — New Dubai office at JLT — Internal Affairs
 - [x] Meet Jeeves — Jeeves GPT launch — Release
 - [x] Introducing Rare Styles — Release

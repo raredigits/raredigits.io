@@ -50,8 +50,8 @@ Loyalty program software. Out-of-the-box coupon and obligation issuance.
 → `/tools/fanfare/`  *(placeholder — verify URL)*
 
 ### Forecast
-Forecasting add-on using regression on historical metrics.
-→ `/tools/forecast/`  *(placeholder — verify URL)*
+Forecasting add-on using regression on historical metrics. Decomposes a metric (committed / recurring / pipeline-weighted / seasonal), forecasts in probabilistic bands (P10–P90) rather than single numbers, and backtests itself against closed-book actuals. Started life as a forecasting module inside **Atlas ERP** (~Oct 2023) and later spun out into its own product.
+→ `/tools/forecast/`
 
 ### Watchtower
 Blockchain transaction parser and analyser. Tracks capital movement across Web3 networks.
@@ -62,7 +62,7 @@ Open-source design library for business information presentation.
 → `/tools/open-source/styles/`
 
 ### Atlas ERP *(legacy)*
-Odoo fork, was the flagship product for years. Other products were originally built on top of it. No longer actively sold — not the most efficient solution for most clients. Mention only in historical context.
+Odoo fork, was the flagship product for years. Other products were originally built on top of it — e.g. the forecasting module shipped in Atlas around Oct 2023 later spun out into the standalone **Forecast** product. No longer actively sold — not the most efficient solution for most clients. Mention only in historical context.
 → `/tools/atlas/`
 
 ---
@@ -101,7 +101,7 @@ Distributor sales model adopted in early 2025. In most markets, clients buy thro
 
 ## Editorial Voice
 
-See `_editorial/prompts/newsroom-post.md` for the full writing guide.
+See `_editorial/prompts/newsroom-post.md` for the full writing guide, and `_editorial/prompts/product-page.md` for product (`/tools/`) pages.
 
 Short version: always ironic, never cold. The reader is a peer, not a student.
 

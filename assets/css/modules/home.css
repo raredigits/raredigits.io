@@ -170,7 +170,7 @@ footer {
     width: 86%;
     background: var(--black);
     color: var(--gray-trans);
-    padding: var(--space-lg);
+    padding: var(--space-md) var(--space-lg) var(--space-lg);
     text-align: left;
 
     p {

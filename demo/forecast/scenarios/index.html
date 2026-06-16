@@ -1,0 +1,301 @@
+---
+permalink: /demo/forecast/scenarios/
+eleventyExcludeFromCollections: true
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scenario Lab — Forecast App · Rare Digits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Titillium+Web:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/raredigits/rare-styles@v0.6.15/rare.min.css">
+<link rel="stylesheet" href="/assets/css/modules/odoo-fintech.css">
+<link rel="stylesheet" href="/assets/css/modules/forecast.css">
+<style>
+  .material-symbols-outlined { vertical-align: middle; }
+  .crumb { color: var(--fin-ink-soft); font-size: var(--font-size-sm); }
+  .crumb a { color: var(--fin-ink-soft); }
+  .lab-title { font-size: clamp(1.6rem, 3.5vw, 2.3rem); }
+
+  .lab-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: var(--space-md); align-items: start; }
+  @media (max-width: 980px) { .lab-grid { grid-template-columns: 1fr; } }
+
+  .card-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-md); }
+  .card-head h3 { font-size: var(--font-size-md); }
+
+  /* live outcome track */
+  .otrack { position: relative; height: 14px; border-radius: var(--space-lg); background: var(--gray-light); margin: var(--space-lg) 0 var(--space-sm); }
+  .otrack__band { position: absolute; top: 0; bottom: 0; background: var(--fc-band); border-radius: var(--space-lg); }
+  .otrack__p50 { position: absolute; top: 50%; width: 16px; height: 16px; border-radius: 50%; background: var(--fin-accent); border: 3px solid var(--fin-surface); box-shadow: var(--fin-shadow-sm); transform: translate(-50%, -50%); transition: left .15s ease; }
+  .otrack__plan { position: absolute; top: -5px; bottom: -5px; width: 2px; background: var(--fin-ink); }
+  .otrack__plan::after { content: "plan"; position: absolute; top: -16px; left: 50%; transform: translateX(-50%); font-size: 10px; color: var(--fin-ink-soft); text-transform: uppercase; letter-spacing: .06em; }
+  .otrack-ends { display: flex; justify-content: space-between; font-family: var(--code-font); font-size: var(--font-size-xs); color: var(--fin-ink-soft); }
+
+  .scenario { cursor: pointer; transition: transform .15s ease, box-shadow .15s ease; }
+  .scenario:hover { transform: translateY(-3px); box-shadow: var(--fin-shadow); }
+  .scenario.is-active { outline: 2px solid var(--fin-accent); outline-offset: 2px; }
+</style>
+</head>
+<body class="fin">
+<div class="erp-shell">
+
+  <header class="erp-topbar">
+    <div class="erp-topbar__brand"><span class="erp-topbar__dot"></span> Meridian</div>
+    <div class="erp-topbar__spacer"></div>
+    <label class="erp-topbar__search">
+      <span class="material-symbols-outlined" style="font-size:20px">search</span>
+      <input type="text" placeholder="What if&hellip;?">
+    </label>
+    <span class="material-symbols-outlined" style="color:var(--fin-ink-soft)">notifications</span>
+    <div class="avatar" title="Founder / MD">SO</div>
+  </header>
+
+  <nav class="erp-sidebar">
+    <a class="erp-sidebar__item" title="Forecast cockpit" href="/demo/forecast/cockpit/"><span class="material-symbols-outlined">query_stats</span></a>
+    <a class="erp-sidebar__item" title="Metric deep-dive" href="/demo/forecast/revenue/"><span class="material-symbols-outlined">show_chart</span></a>
+    <a class="erp-sidebar__item active" title="Scenario lab"><span class="material-symbols-outlined">tune</span></a>
+    <a class="erp-sidebar__item" title="Cash"><span class="material-symbols-outlined">account_balance</span></a>
+    <a class="erp-sidebar__item" title="Reporting"><span class="material-symbols-outlined">bar_chart</span></a>
+  </nav>
+
+  <main class="erp-main">
+
+    <div class="crumb"><a href="/demo/forecast/cockpit/">Cockpit</a> &nbsp;&rsaquo;&nbsp; Scenario lab</div>
+    <h1 class="lab-title" style="margin-top: var(--space-xs)">What would have to be true?</h1>
+    <div class="sub" style="color:var(--fin-ink-soft); margin-top:4px">Move the drivers and watch the quarter-end cash move with them. Forecasting isn&rsquo;t a single number &mdash; it&rsquo;s a number per set of assumptions.</div>
+
+    <!-- LEVERS + LIVE OUTCOME -->
+    <div class="lab-grid" style="margin-top: var(--space-lg)">
+
+      <div class="card-soft">
+        <div class="card-head"><h3>Drivers</h3><a class="chip" id="resetBtn"><span class="material-symbols-outlined" style="font-size:18px">restart_alt</span> Reset to base</a></div>
+
+        <div class="lever">
+          <div class="lever__label">Pipeline win rate <span class="sub">last 90 days: 38%</span></div>
+          <div class="lever__value"><span data-out="win">38</span>%</div>
+          <input type="range" min="22" max="55" step="1" value="38" data-lever="win">
+        </div>
+        <div class="lever">
+          <div class="lever__label">Average project size <span class="sub">trailing: &euro;88K</span></div>
+          <div class="lever__value">&euro;<span data-out="deal">88</span>K</div>
+          <input type="range" min="50" max="140" step="1" value="88" data-lever="deal">
+        </div>
+        <div class="lever">
+          <div class="lever__label">Retainer churn <span class="sub">annualised: 6%</span></div>
+          <div class="lever__value"><span data-out="churn">6</span>%</div>
+          <input type="range" min="0" max="20" step="1" value="6" data-lever="churn">
+        </div>
+        <div class="lever">
+          <div class="lever__label">Collection lag <span class="sub">current: 48 days</span></div>
+          <div class="lever__value"><span data-out="lag">48</span>d</div>
+          <input type="range" min="30" max="75" step="1" value="48" data-lever="lag">
+        </div>
+        <div class="lever">
+          <div class="lever__label">New hires this quarter <span class="sub">cash out before they bill</span></div>
+          <div class="lever__value"><span data-out="hires">0</span></div>
+          <input type="range" min="0" max="6" step="1" value="0" data-lever="hires">
+        </div>
+      </div>
+
+      <div class="card-soft">
+        <div class="card-head"><h3>Cash at quarter-end &middot; 30 Sep</h3><span class="tag-method" id="liveTag">base</span></div>
+        <div class="outcome">
+          <div class="outcome__value"><span id="outValue">2.58</span><span class="unit">M &euro;</span></div>
+          <div class="outcome__band">P10&ndash;P90 &middot; <span id="outLow">2.04</span>M &ndash; <span id="outHigh">3.05</span>M</div>
+        </div>
+
+        <div class="otrack">
+          <div class="otrack__band" id="trackBand"></div>
+          <div class="otrack__plan" id="trackPlan"></div>
+          <div class="otrack__p50" id="trackP50"></div>
+        </div>
+        <div class="otrack-ends"><span>1.4M</span><span>3.6M</span></div>
+
+        <div class="flex items-center gap-sm" style="margin-top: var(--space-lg); padding-top: var(--space-md); border-top:1px solid var(--fin-line)">
+          <span class="material-symbols-outlined" style="color:var(--fin-accent)">target</span>
+          <div style="flex:1"><div>Chance of hitting plan</div><div class="txn__sub">plan target &middot; &euro;2.42M by 30 Sep</div></div>
+          <span class="num" id="outProb" style="font-size: var(--font-size-xl)">72%</span>
+        </div>
+
+        <p class="assumption-note" style="margin-top: var(--space-md)" id="liveNote">
+          The base case clears plan with room. The single biggest swing factor is win rate &mdash; eight points either way moves quarter-end cash by roughly &euro;145K.
+        </p>
+      </div>
+    </div>
+
+    <!-- THREE SAVED SCENARIOS -->
+    <div class="section-head"><h2>Saved scenarios</h2><span class="meta">click one to load its drivers</span></div>
+    <div class="scenario-grid" id="scenarioGrid">
+
+      <div class="scenario scenario--down" data-preset="conservative">
+        <div class="scenario__name"><span class="material-symbols-outlined" style="color:var(--orange); font-size:20px">trending_down</span> Conservative</div>
+        <div class="scenario__value">2.16<span class="unit">M &euro;</span></div>
+        <div class="scenario__prob">18% chance of hitting plan</div>
+        <ul class="scenario__assumptions">
+          <li>Win rate <span class="v">29%</span></li>
+          <li>Avg project <span class="v">&euro;80K</span></li>
+          <li>Churn <span class="v">11%</span></li>
+          <li>Collection lag <span class="v">56d</span></li>
+          <li>New hires <span class="v">1</span></li>
+        </ul>
+      </div>
+
+      <div class="scenario scenario--base is-active" data-preset="base">
+        <div class="scenario__name"><span class="material-symbols-outlined" style="color:var(--fin-accent); font-size:20px">check_circle</span> Base</div>
+        <div class="scenario__value" style="color:var(--fin-accent)">2.58<span class="unit">M &euro;</span></div>
+        <div class="scenario__prob">72% chance of hitting plan</div>
+        <ul class="scenario__assumptions">
+          <li>Win rate <span class="v">38%</span></li>
+          <li>Avg project <span class="v">&euro;88K</span></li>
+          <li>Churn <span class="v">6%</span></li>
+          <li>Collection lag <span class="v">48d</span></li>
+          <li>New hires <span class="v">0</span></li>
+        </ul>
+      </div>
+
+      <div class="scenario scenario--up" data-preset="stretch">
+        <div class="scenario__name"><span class="material-symbols-outlined" style="color:var(--blue); font-size:20px">rocket_launch</span> Stretch</div>
+        <div class="scenario__value">2.90<span class="unit">M &euro;</span></div>
+        <div class="scenario__prob">94% chance of hitting plan</div>
+        <ul class="scenario__assumptions">
+          <li>Win rate <span class="v">47%</span></li>
+          <li>Avg project <span class="v">&euro;98K</span></li>
+          <li>Churn <span class="v">4%</span></li>
+          <li>Collection lag <span class="v">42d</span></li>
+          <li>New hires <span class="v">2</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- BACKTEST -->
+    <div class="section-head"><h2>Backtest &mdash; was the model right?</h2><span class="meta">Dec 2025 &ndash; May 2026 &middot; revenue</span></div>
+    <div class="lab-grid">
+      <div class="card-soft">
+        <div class="backtest">
+          <div class="backtest__row"><span class="backtest__month">Dec &rsquo;25</span><div class="backtest__track"><span class="backtest__actual backtest__actual--in" style="left:44%"></span></div><span class="backtest__err" style="color:var(--fin-ink-soft)">&minus;3.2%</span></div>
+          <div class="backtest__row"><span class="backtest__month">Jan &rsquo;26</span><div class="backtest__track"><span class="backtest__actual backtest__actual--in" style="left:41%"></span></div><span class="backtest__err" style="color:var(--fin-ink-soft)">&minus;4.0%</span></div>
+          <div class="backtest__row"><span class="backtest__month">Feb &rsquo;26</span><div class="backtest__track"><span class="backtest__actual backtest__actual--out" style="left:96%"></span></div><span class="backtest__err" style="color:var(--red)">+11.0%</span></div>
+          <div class="backtest__row"><span class="backtest__month">Mar &rsquo;26</span><div class="backtest__track"><span class="backtest__actual backtest__actual--in" style="left:46%"></span></div><span class="backtest__err" style="color:var(--fin-ink-soft)">&minus;2.8%</span></div>
+          <div class="backtest__row"><span class="backtest__month">Apr &rsquo;26</span><div class="backtest__track"><span class="backtest__actual backtest__actual--in" style="left:40%"></span></div><span class="backtest__err" style="color:var(--fin-ink-soft)">&minus;4.9%</span></div>
+          <div class="backtest__row"><span class="backtest__month">May &rsquo;26</span><div class="backtest__track"><span class="backtest__actual backtest__actual--in" style="left:47%"></span></div><span class="backtest__err" style="color:var(--fin-ink-soft)">&minus;2.9%</span></div>
+        </div>
+        <div class="chart-legend" style="margin-top: var(--space-md)">
+          <span class="key"><span class="swatch swatch--band"></span> Forecast P10&ndash;P90</span>
+          <span class="key" style="color:var(--fin-accent)"><span class="swatch" style="border:0; width:10px; height:10px; border-radius:50%; background:currentColor"></span> Actual, in band</span>
+          <span class="key" style="color:var(--red)"><span class="swatch" style="border:0; width:10px; height:10px; border-radius:50%; background:currentColor"></span> Actual, out of band</span>
+        </div>
+      </div>
+
+      <div class="card-soft">
+        <div class="flex" style="gap: var(--space-xl); flex-wrap: wrap">
+          <div><div class="kpi__label">MAPE</div><div class="num" style="font-size: var(--font-size-xxl)">4.8%</div></div>
+          <div><div class="kpi__label">Inside the band</div><div class="num" style="font-size: var(--font-size-xxl)">5 / 6</div></div>
+          <div><div class="kpi__label">Bias</div><div class="num" style="font-size: var(--font-size-xxl); color:var(--fin-ink-soft)">&minus;0.9%</div></div>
+        </div>
+        <p class="assumption-note" style="margin-top: var(--space-lg)">
+          February&rsquo;s actual broke through the top of the band &mdash; a campaign closed three weeks earlier than the pipeline implied. The model ran slightly <strong>conservative</strong> (negative bias): when it&rsquo;s wrong, it tends to under-promise. We&rsquo;ll take that direction of error over the alternative.
+        </p>
+        <p class="assumption-note" style="margin-top: var(--space-md)">
+          A forecast that&rsquo;s never scored is just confidence with a chart attached. This panel is the part most tools quietly omit.
+        </p>
+      </div>
+    </div>
+
+    <p class="callout" style="margin-top: var(--space-xl); max-width: 680px; margin-left:auto; margin-right:auto;">
+      The board doesn&rsquo;t need one number it can&rsquo;t question. It needs to see which assumption the number is standing on &mdash; and what happens to the cash when that assumption moves.
+    </p>
+
+  </main>
+</div>
+
+<script>
+(function () {
+  // simple, legible sensitivity model — deltas from the base case (€ millions).
+  var base = { win:38, deal:88, churn:6, lag:48, hires:0 };
+  var presets = {
+    conservative: { win:29, deal:80, churn:11, lag:56, hires:1 },
+    base:         { win:38, deal:88, churn:6,  lag:48, hires:0 },
+    stretch:      { win:47, deal:98, churn:4,  lag:42, hires:2 }
+  };
+  var PLAN = 2.42, DMIN = 1.4, DMAX = 3.6;
+
+  function calc(v) {
+    var cash = 2.58
+      + (v.win  - 38) * 0.018
+      + (v.deal - 88) * 0.009
+      - (v.churn - 6) * 0.022
+      - (v.lag  - 48) * 0.008
+      - (v.hires)     * 0.011;
+    var low  = cash - 0.54;
+    var high = cash + 0.47;
+    var z = (cash - PLAN) / 0.34;
+    var prob = 1 / (1 + Math.exp(-2 * z));
+    prob = Math.max(0.02, Math.min(0.99, prob));
+    return { cash: cash, low: low, high: high, prob: prob };
+  }
+  function pct(v) { return ((v - DMIN) / (DMAX - DMIN)) * 100; }
+
+  var sliders = {};
+  document.querySelectorAll('input[data-lever]').forEach(function (el) { sliders[el.dataset.lever] = el; });
+  function read() {
+    return { win:+sliders.win.value, deal:+sliders.deal.value, churn:+sliders.churn.value, lag:+sliders.lag.value, hires:+sliders.hires.value };
+  }
+
+  function matchPreset(v) {
+    for (var name in presets) {
+      var p = presets[name], ok = true;
+      for (var k in p) { if (p[k] !== v[k]) { ok = false; break; } }
+      if (ok) return name;
+    }
+    return null;
+  }
+
+  function render() {
+    var v = read();
+    Object.keys(v).forEach(function (k) {
+      var out = document.querySelector('[data-out="' + k + '"]');
+      if (out) out.textContent = v[k];
+    });
+    var r = calc(v);
+    document.getElementById('outValue').textContent = r.cash.toFixed(2);
+    document.getElementById('outLow').textContent  = r.low.toFixed(2);
+    document.getElementById('outHigh').textContent = r.high.toFixed(2);
+    document.getElementById('outProb').textContent = Math.round(r.prob * 100) + '%';
+
+    var band = document.getElementById('trackBand');
+    band.style.left  = pct(r.low) + '%';
+    band.style.width = (pct(r.high) - pct(r.low)) + '%';
+    document.getElementById('trackP50').style.left  = pct(r.cash) + '%';
+    document.getElementById('trackPlan').style.left = pct(PLAN) + '%';
+
+    var matched = matchPreset(v);
+    document.getElementById('liveTag').textContent = matched || 'custom';
+    document.querySelectorAll('.scenario').forEach(function (s) {
+      s.classList.toggle('is-active', s.dataset.preset === matched);
+    });
+  }
+
+  function loadPreset(name) {
+    var p = presets[name];
+    Object.keys(p).forEach(function (k) { sliders[k].value = p[k]; });
+    render();
+  }
+
+  document.querySelectorAll('input[data-lever]').forEach(function (el) {
+    el.addEventListener('input', render);
+  });
+  document.querySelectorAll('.scenario').forEach(function (s) {
+    s.addEventListener('click', function () { loadPreset(s.dataset.preset); });
+  });
+  document.getElementById('resetBtn').addEventListener('click', function () { loadPreset('base'); });
+
+  render();
+})();
+</script>
+</body>
+</html>

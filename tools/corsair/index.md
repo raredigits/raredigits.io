@@ -1,5 +1,6 @@
 ---
 layout: page
+body_class: text-content
 title: Corsair HQ
 offset: solutions
 remark: 'Current version: v.1.0.7'

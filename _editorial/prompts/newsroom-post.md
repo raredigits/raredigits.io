@@ -111,7 +111,13 @@ For partnership announcements, use the boilerplate block at the end:
 - When revising old posts, preserve the product positioning and commercial context of the publication year unless the goal is explicitly to repurpose the post for current positioning.
 - Avoid: "excited," "thrilled," "game-changer," "leverage," "synergy," "seamless," "robust," "end-to-end," "best-in-class."
 - Never write "In today's fast-paced business environment."
+- No em-dashes. A comma, colon, or full stop does the job; LLM prose overuses the dash. (En-dashes in true ranges like P10–P90 are fine.)
+- No bullet points in body copy. If it's the substance of the argument, write it as prose.
+- No "it's not X, it's Y" / "X, not Y" antithesis as a rhetorical crutch — it's the reflex of marketing decks and Twitter threads. State the point plainly.
+- Prefer concrete, lived examples and plain analogies the reader already trusts. Lead from the psychology of the people in the scene: the intuitive wrong move first, then the counterintuitive one that works.
 - Length: 400–700 words for announcements, 200–400 for company notes, 600–900 for industry posts.
+
+For **product pages** specifically (the `/tools/` pages), see `_editorial/prompts/product-page.md` for the full arc and rules.
 
 ## Prompt to Claude
 

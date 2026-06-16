@@ -43,6 +43,10 @@ Published: 2023-09-15
 `📝` **Your ERP Sucks, Part 1: You Bought It for the Wrong Reasons** — [ERP]
 The vendor demo was for a company that doesn't exist. The requirements were written by someone who doesn't use the system. The go-live date was chosen for the board presentation, not the calendar.
 
+`✅` **Forecasting Methods, Ranked by Honesty** — Standalone (Insights)
+Published: 2023-10-16 · Survey of the methods (naive, moving average, Holt-Winters, regression + decomposition, ARIMA, ML, judgmental pipeline) with pros/cons and typical error; the two axes that matter most — interval vs point, and backtesting. Grounded in the new **Atlas ERP forecasting module** (shipped ~Oct 2023) — the module that later spins out into the standalone Forecast App.
+↳ 101: *Управление — это работа с будущим* · *Сигнал vs Шум*
+
 ### Nov 2023
 `📝` **Your ERP Sucks, Part 2: Nobody Owns It After Go-Live** — [ERP]
 The implementation partner left. The project manager moved to another role. The consultant who configured the approval workflows doesn't work here anymore. And the system does what it does.
@@ -257,9 +261,9 @@ Part 5 of 5. Three different measurement systems produce three different stories
 
 | Period | Published | Gaps to fill | Planned future |
 |---|---|---|---|
-| 2023 (May–Dec) | 3 | 6 | — |
+| 2023 (May–Dec) | 4 | 6 | — |
 | 2024 | 3 | 9 | — |
 | 2025 | 3 | 10 | — |
 | 2026 | — | — | 12 |
 | 2027 (Jan–Jun) | — | — | 6 |
-| **Total** | **9** | **25** | **18** |
+| **Total** | **10** | **25** | **18** |
