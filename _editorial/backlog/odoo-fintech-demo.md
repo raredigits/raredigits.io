@@ -98,7 +98,7 @@ assets/css/modules/odoo-fintech.css
 
 ## Технические решения
 
-- **Расположение мокапов:** `demo/odoo/<screen>/index.html` (отдаются дев-сервером 11ty по `/demo/odoo/<screen>/`).
+- **Расположение мокапов:** `demo/atlas/<screen>/index.html` (отдаются дев-сервером 11ty по `/demo/atlas/<screen>/`).
 - **Самодостаточность:** каждый файл — полный HTML-документ со своим `<head>`, подключает CDN rare-styles + `/assets/css/modules/odoo-fintech.css`. Без 11ty-layout, чтобы открывался и правился изолированно.
 - **Иконки:** Material Symbols через Google Fonts CDN (как уже принято в demo) либо инлайн-SVG. Решить на первом экране.
 - **Темы:** делаем light по умолчанию; тёмный вариант (`gray-darkest` канва) — как опция-витрина, если успеваем.
@@ -119,8 +119,8 @@ assets/css/modules/odoo-fintech.css
 
 - [x] Заведена задача, зафиксированы требования и принципы
 - [x] Модуль `assets/css/modules/odoo-fintech.css` — каркас компонентов
-- [x] Экран 1 — Дашборд собственника → `/demo/odoo/dashboard/`
-- [x] Экран 2 — Счёт → `/demo/odoo/invoice/`
-- [x] Экран 3 — Воронка (канбан) → `/demo/odoo/pipeline/`
+- [x] Экран 1 — Дашборд собственника → `/demo/atlas/dashboard/`
+- [x] Экран 2 — Счёт → `/demo/atlas/invoice/`
+- [x] Экран 3 — Воронка (канбан) → `/demo/atlas/pipeline/`
 - [ ] Полировка до презентационного состояния (правки стилей по месту)
 - [ ] Решить, как встраиваем на сайт / в питч

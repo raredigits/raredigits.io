@@ -43,7 +43,7 @@ permalink: /tools/atlas/
 
 <div class="text-content-fullwidth-caption">
     <div>{% include "special/constructionNotice.html" %}</div>
-    <cite>The owner's dashboard. See it <a href="/demo/odoo/dashboard/">live in the demo →</a></cite>
+    <cite>The owner's dashboard. See it <a href="/demo/atlas/dashboard/">live in the demo →</a></cite>
 </div>
 
 A modern Enterprise Resource Planning (ERP) system can run a factory on three continents and calculate payroll in currencies you have never heard of. You use maybe a tenth of it. The yearly licence costs about the annual budget of a small African republic, which you could almost forgive if the thing actually answered questions. It doesn’t.
@@ -92,7 +92,7 @@ Picking the right modules sorts out what runs underneath. It does nothing about
             </div>
             <div class="shot-ph">
                 <span class="shot-ph__tag">Screenshot placeholder</span>
-                <p class="shot-ph__what"><strong>Invoice document.</strong><br>Clean payment sheet, status stepper (Draft → Sent → Paid), pay panel and timeline. <a href="/demo/odoo/invoice/">Live →</a></p>
+                <p class="shot-ph__what"><strong>Invoice document.</strong><br>Clean payment sheet, status stepper (Draft → Sent → Paid), pay panel and timeline. <a href="/demo/atlas/invoice/">Live →</a></p>
             </div>
         </div>
         <div class="feature-row__item">
@@ -102,7 +102,7 @@ Picking the right modules sorts out what runs underneath. It does nothing about
             </div>
             <div class="shot-ph">
                 <span class="shot-ph__tag">Screenshot placeholder</span>
-                <p class="shot-ph__what"><strong>Sales pipeline (kanban).</strong><br>Stage columns with weighted totals, deal cards with priority and "stale" flags. <a href="/demo/odoo/pipeline/">Live →</a></p>
+                <p class="shot-ph__what"><strong>Sales pipeline (kanban).</strong><br>Stage columns with weighted totals, deal cards with priority and "stale" flags. <a href="/demo/atlas/pipeline/">Live →</a></p>
             </div>
         </div>
     </div>
@@ -117,7 +117,7 @@ The best thing about Atlas is the one feature the famous vendors can't sell you 
 
 It sounds too good to be true, and we understand the reflex. So don't believe us. Book a demo, bring your CTO, and see the whole thing for yourselves. Or skip the calendar for now and click through the screens as they stand: no login, no sales call, just the dashboard, an invoice and the pipeline, ready to hold up against your own fifty-tab monster.
 
-<div class="caption">→ <a href="/demo/odoo/dashboard/">Open the live Atlas demo</a></div>
+<div class="caption">→ <a href="/demo/atlas/dashboard/">Open the live Atlas demo</a></div>
 
 It's the same Odoo a hundred thousand businesses already run, with the question the owner actually asks put at the top of the screen and a bill that counts only the seats you fill. Once you can picture it on your own systems, the rest is a fifteen-minute conversation.
 

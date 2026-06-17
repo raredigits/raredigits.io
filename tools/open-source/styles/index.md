@@ -2,30 +2,24 @@
 layout: page
 title: Rare Styles
 offset: solutions
-remark: 'Current version: v.0.3.2'
+remark: 'Current version: v0.9.6 <br><a href="https://raredigits.art/">raredigits.art</a> | <a href="https://github.com/raredigits/rare-styles">GitHub</a>'
 permalink: /tools/open-source/styles/
 ---
 
-<p>
-    <span class="material-icons">language</span> <a href="https://raredigits.art/">https://raredigits.art/</a> | <a href="https://github.com/raredigits/rare-styles">GitHub</a>
-</p>
+<div class="lead">Open almost any business dashboard and you are met with abundance: forty tiles, six shades of urgent, charts elbowing each other for the same inch of screen. Somewhere in there sits the single number you actually came for, hiding in plain sight behind nine you never asked for. Modern software has quietly decided that “more” is a personality.</div>
 
-## Let Digital Rareism Wear the Crown
+We have spent twenty years watching people squint at screens like that, and it taught us one stubborn lesson: past a point, piling on more just buries the answer. So we built the opposite. Rare Styles is an open-source design library where every component starts from the decision the reader is trying to make, shows that, and quietly drops the rest. We call the habit Digital Rareism, which is a grand name for a plain discipline: only the rare survives, and less earns its keep only when it is left in on purpose.
 
 <div class="full-width">
   <img src="/assets/img/newsroom/2025/rarestyles-main-left.jpg" />
 </div>
 
-Rare Styles cuts through the BS of modern data presentation. In a world drowning in endless dashboards and screaming metrics, we’ve learned a simple truth: **excessive data doesn’t illuminate—it obscures**.
+It is also not a mood board. We run our own products on it, the same tokens, type and restraint that make a dashboard, an invoice and a forecast feel like one calm thing instead of three teams' arguments. We had to live with it long before we asked anyone else to.
 
-After 20 years of helping businesses make sense of their information, we’ve built something different. This isn’t just another design library—it’s Digital Rareism in action. Every component follows our core belief: only the rare survives.
+Because it is open source, there is nothing to book and nobody to email. Take the components, drop them into your project, fork them, change your mind at two in the morning. The documentation and the examples that actually make sense live at [raredigits.art](https://raredigits.art/), and the code is on [GitHub](https://github.com/raredigits/rare-styles). Have a proper look first. That is genuinely the whole pitch.
 
-Our toolkit transforms your messy dashboards into something people actually want to look at and use. No decoration for decoration’s sake. No pointless charts competing for attention. Just clean, purposeful design that respects cognitive limits and helps people make real decisions.
+## Warranty and SLA
 
-Less is more isn’t just a slogan here—it’s how we work. We give decision-makers exactly what they need, cut everything else, and let meaning breathe through restraint.
+And if you like it enough to build something serious on it, there is a grown-up option. We sell a [commercial licence](/pressroom/Rare-Styles-Enterprise-Support/) with a warranty and an SLA, which in plain words is a guarantee that it works and a phone number that answers when something breaks the night before a launch. Free and open for the curious, a contract for the people whose quarter depends on it.
 
-Grab the components, drop them into your project, and watch the noise disappear. Check out [raredigits.art](https://raredigits.art/) for docs and examples that actually make sense. And since it’s open source, you can join our quiet revolution against information chaos.
-
-In the age of excess, refusal becomes revolution.
-
-Rarity endures.
+In an industry that mistakes more for better, leaving things out is the radical move. Rarity endures.

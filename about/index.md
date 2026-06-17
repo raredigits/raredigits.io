@@ -1,67 +1,47 @@
 ---
 layout: page
-title: Simple Exteriors, Complex Internal
+body_class: text-content
+title: Simple Exteriors, Complex Internals
 offset: about
 permalink: /about/
 ---
 
-We turn coffee into code, and code into client's profits since 2009. Basically alchemy, but with better ROI.
+<div class="lead">Most business software is written by people who have never made payroll, never explained a bad quarter to a shareholder, and never hunted at 11pm for a number the system flatly refused to hand over. You can usually tell. The charts are gorgeous, and the one question that actually matters, where is the money going, goes politely unanswered.</div>
 
-Let's talk about your problems, how to use them on Tinder, and other useful things.
+Rare Digits is a software company that fixes precisely that. Since 2009 we have built financial-clarity software that sits on top of the ERP, CRM and accounting systems a business already runs, and turns them into plain, real-time answers for the people who own the place. We do not rip out what works. We sit above it and translate.
+
+What we sell is not really the code; it is years of pattern recognition about where money hides in a company, most of it earned long before 2009, and the software is simply how we hand it over.
 
 <div class="text-content-caption">
   <img src="/assets/img/illustrations/rare_about.jpg">
-  <cite>(We’re still working on turning code back into coffee. We’ll keep you posted.)</cite>
+  <cite>(How to merge sixteen tabs into one viewport, and nobody missed them?)</cite>
 </div>
 
-## The Value Proposition Nobody Asked For But Everyone Needs
+We started with webshops and the kind of family business where the founder signs the cheques and the entire back office is one heroic bookkeeper. We now do the same work for holding structures sprawling across a dozen legal entities and just as many systems, none of which are on speaking terms.
 
-One peculiar thing about modern business is the inverse relationship between the amount of software installed and the clarity of answers obtained. Companies somehow end up with seventeen different systems that don’t talk to each other, generating reports that answer questions nobody asked while ignoring the only two that matter: where are we losing money, and where could we be making more?
+The company is headquartered in Dubai, with a team scattered across Limassol, Porto, Berlin, Copenhagen, Tbilisi, Bali and a few airport lounges in between. The constant has never changed: thousands of brutally honest conversations with owners about the numbers they need and cannot get.
 
-You’re probably here because:
-- Your company has more financial reports than employees, yet somehow less clarity
-- Every department head insists they’re wildly profitable (while your bank account is crying every day)
-- Your ERP system has a user manual longer than the Dodd-Frank Act
-- You’ve built a thriving ecosystem of non-communicating software applications that would make biodiversity researchers proud
+We license our software per seat, mostly through certified distribution partners across the Middle East, Europe and Asia. That is the dull, accurate sentence the compliance officer reading this page came for, and we are happy to oblige.
 
-<div class="highlight">If you’re running a business, managing one, or directing its IT, and you’d like to see your company’s financial reality without the need for three accounting degrees and a shaman—well, that’s where we come in.</div>
+<div class="highlight">An owner who cannot see his own business is the most expensive problem in the building, and almost nobody bothers to sell the fix.</div>
 
-## The Experience Section
+Do this long enough and the same failures start to look like laws of physics. Departments that are each, on their own, wildly profitable, bolted onto a company whose bank balance quietly weeps. Transfer pricing so creative nobody can say which unit is subsidising which. Forecasts assembled entirely from the past, which is driving by the rear-view mirror and accelerating. And the eternal classic: a problem everyone can see, a number nobody owns, and a slow, well-documented slide while the room debates whose job it was.
 
-Here’s the fundamental problem with the ERP and accounting software landscape: it was built by people who have never sweated over making payroll or explained a bad quarter to investors. They were solving the wrong problems. “Look, we can generate tons of impressive charts!” they proclaim, while CEOs quietly wonder why none of those charts answer the question “Where is my money going?”
+We have written a few dozen of these down as a [running list of management principles](/about/101/), on the theory that a pattern you can name is a pattern you can stop paying for.
 
-The disconnect is practically a law of nature. Most software is written by people who’ve never run the businesses they’re writing for.
+The fix wears different names depending on the job:
 
-Since 2009, we’ve been doing something peculiar: making financial software that actually makes sense. We started with mom-and-pop shops and now serve companies with market caps that would make a decent SPAC acquisition. Actually talking to entrepreneurs—thousands of brutally honest conversations about their daily struggles, late-night anxieties, and the information they desperately need but can’t extract from their expensive software. While Silicon Valley was busy creating apps that help you share photos of your lunch, we were building algorithms that help you afford lunch in the first place.
+- [Corsair HQ](/tools/corsair/) is the dashboard that puts the owner’s real questions at the top of a single screen.
+- [Jeeves](/tools/jeeves/) is the assistant you can ask, in plain English, what your own numbers are quietly doing.
+- [Watchtower](/tools/web3/watchtower/) follows the money when it moves on-chain.
+- And [Rare Styles](/tools/open-source/styles/) is the open-source design language underneath all of it, which we give away for free as our standing contribution to an industry that badly needs to show numbers more clearly.
 
-From our Dubai headquarters, we blend Middle Eastern business acumen with Silicon Valley innovation approaches. Imagine if Sheikh Zayed and Steve Jobs had a tech baby with a finance degree. That’s essentially us, but with a better understanding of your balance sheet and considerably less turtleneck sweaters.
+Different tools, different problems, one obsession: make the money legible and take the friction out of seeing it.
 
-### Worst Practices (A Field Guide)
+We are, when you get down to it, a money business wearing a design business’s clothes. Clearer screens earn their keep in cash. Every minute an executive spends hunting for a figure is friction, and friction, compounded quietly across a company for a year, is money strolling out the back door while everyone admires the charts.
 
-Over time, we’ve noticed some recurring errors in business operations that would make any financial analyst cringe:
+## You are invited
 
-- Time isn’t on the balance sheet—though it’s often your scarcest resource (and unlike money, you can’t raise more of it in a Series B)
-- Profit calculations that would make Enron’s accountants nervous—departments show profits while the company loses money, a mathematical impossibility that somehow persists
-- Internal transfer pricing that would confuse a tax haven specialist—making it impossible to know which business units are subsidizing others
-- Forecasts based on historical data—like driving forward while looking exclusively in the rearview mirror
-- When problems arise, no one knows how to respond (so they just keep losing money), like watching a slow-motion train wreck while the conductor debates which button to press
+So here is the actual invitation. Come to the [office](/contacts/). Bring the problem that has been needling you for three quarters, and we will talk it through and trade you a few of the lifehacks that genuinely move the number, the unglamorous, oddly specific kind that never make it into the Harvard Business Review because they work.
 
-Looks familiar, right? The good news is that these problems are so universal you can use them as a conversation starter on Tinder. (“So, how many times does your paper profit in board reports exceed your actual profit?” works surprisingly well.)
-
-We eventually formalized these and a few dozen others into a [running list of management principles](/about/101/) — observations about how businesses actually work that keep showing up regardless of industry, size, or the particular crisis currently in progress.
-
-The even better news is that solutions exist. And not just any solutions—ones that don’t require a PhD in financial engineering or the patience of a central bank regulator.
-
-## The Value Proposition (Our Term Sheet)
-We don’t just think outside the box. We securitize the box, optimize its cash flows, and then distribute the returns to stakeholders.
-Our approach:
-
-- Profit forensics—we find where money goes to die in your organization, like a financial CSI team
-- Margin automation—because profitable processes should run themselves, like a well-structured perpetuity
-- Real-time decision support—giving executives the information equivalent of insider trading, except it’s legal and about their own company
-
-If you’re looking for software that’s powerful enough to run a hedge fund but simple enough that you won’t need to hire quants to operate it, you’ve found it.
-
-Welcome to the future of business software. It’s sophisticated yet approachable, like a financial model that doesn’t require sixteen tabs of assumptions to make sense.
-
-Would you like to start generating alpha through better information? Or would you prefer to continue with your current approach, which has roughly the same expected return as a savings account in an inflationary environment? (That’s what we in finance call a “leading question.”)
+The coffee is good. The first conversation costs nothing but an afternoon.

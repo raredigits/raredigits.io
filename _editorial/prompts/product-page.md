@@ -47,6 +47,19 @@ These override instinct, and they override the style of older pages.
 
 End every product page with the same two beats, worded freshly each time: an invitation to open the live demo (no login, no sales call), then an invitation to talk about implementing it on the reader's own stack. Keep the existing includes (`special/bookDemo.html`) where present.
 
+## The Exception: Open-Source Project Pages
+
+Some `/tools/` pages are open-source projects, not commercial products (e.g. `tools/open-source/styles/`). These deliberately depart from the methodology above, while keeping the same voice, irony and tone.
+
+What stays: the problem-first opening (still open on the absurdity the reader recognises, never on the product), the Matt Levine register, and every hard rule.
+
+What changes:
+
+- **No demo, no feature row, no commercial mechanics.** Don't sell capabilities. The project speaks for itself.
+- **The link goes to the project's own home**, not to a sales flow: external docs and the repo (for Rare Styles, `raredigits.art` and GitHub). Point the reader there and let them explore.
+- **A different CTA.** Not "book a demo." The two beats are: *have a proper look, it's free and open*, and then, for the people who need it backed in production, *there is a commercial licence with a warranty and an SLA*. Frame the paid tier in plain words (a guarantee that it works, a phone number that answers at 2am), never as upsell pressure.
+- **Manifesto is allowed.** These pages can carry the project's own philosophy and sign-off line; lean into that identity rather than forcing the standard arc.
+
 ## Before You Write
 
 Read `_editorial/company.md` for the facts and `_editorial/prompts/newsroom-post.md` for the register.
