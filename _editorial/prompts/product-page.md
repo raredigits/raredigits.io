@@ -62,7 +62,7 @@ What changes:
 
 ## Before You Write
 
-Read `_editorial/company.md` for the facts and `_editorial/prompts/newsroom-post.md` for the register.
+Read `_editorial/company.md` for the facts, `_editorial/prompts/newsroom-post.md` for the register, and `_editorial/prompts/markup.md` for the styling rule (use Rare Styles classes; new styles go in `assets/css/modules/`, never invented inline).
 
 Then **stop and confirm the spine with the user before drafting a word.** Don't guess these three and start writing; the whole page hangs off them, and getting them wrong wastes a full draft. Propose options (two or three each, with a recommendation) and let the user pick or redirect:
 

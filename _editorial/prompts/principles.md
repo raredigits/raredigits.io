@@ -14,6 +14,8 @@ The principle is the headline. Everything else exists to make it land.
 4. **The corrective** — what following the principle actually looks like in practice. Concrete, not motivational.
 5. **Callout** — one sentence that distills the principle for someone who only reads that line: `<div class="highlight">...</div>`
 
+For any markup beyond the callout, see `_editorial/prompts/markup.md`: use Rare Styles classes, never invent new ones inline; genuinely new styles go in `assets/css/modules/`.
+
 ## Voice
 
 Same practitioner register as pressroom posts, but tighter. No warm-up. Start with the situation. The reader should feel: *someone finally said this out loud.*

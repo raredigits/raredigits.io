@@ -119,6 +119,8 @@ For partnership announcements, use the boilerplate block at the end:
 
 For **product pages** specifically (the `/tools/` pages), see `_editorial/prompts/product-page.md` for the full arc and rules.
 
+For any **markup** in a post (callouts, boilerplate, embeds), see `_editorial/prompts/markup.md`: use Rare Styles classes, never invent new ones inline; genuinely new styles go in `assets/css/modules/`.
+
 ## Prompt to Claude
 
 ```text

@@ -53,6 +53,8 @@ labels: [principles, 101]
 - Show what the principle helps the reader notice, decide, avoid, or escalate.
 - End with options, not vibes.
 
+For the callout and any other markup, see `_editorial/prompts/markup.md`: use Rare Styles classes, never invent new ones inline; genuinely new styles go in `assets/css/modules/`.
+
 ## Prompt Template
 
 ```text
