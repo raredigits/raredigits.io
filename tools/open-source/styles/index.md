@@ -11,7 +11,7 @@ permalink: /tools/open-source/styles/
 We have spent twenty years watching people squint at screens like that, and it taught us one stubborn lesson: past a point, piling on more just buries the answer. So we built the opposite. Rare Styles is an open-source design library where every component starts from the decision the reader is trying to make, shows that, and quietly drops the rest. We call the habit Digital Rareism, which is a grand name for a plain discipline: only the rare survives, and less earns its keep only when it is left in on purpose.
 
 <div class="full-width">
-  <img src="/assets/img/newsroom/2025/rarestyles-main-left.jpg" />
+  <img src="/assets/img/pressroom/2025/rarestyles-main-left.jpg" />
 </div>
 
 It is also not a mood board. We run our own products on it, the same tokens, type and restraint that make a dashboard, an invoice and a forecast feel like one calm thing instead of three teams' arguments. We had to live with it long before we asked anyone else to.

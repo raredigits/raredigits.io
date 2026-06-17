@@ -2,7 +2,7 @@
 title:  "Will AI Take All Our Jobs?"
 date:   2024-04-09T10:00:00+04:00
 permalink: /pressroom/Will-AI-take-our-jobs/
-cover: /assets/img/newsroom/2024/homeless.jpg
+cover: /assets/img/pressroom/2024/homeless.jpg
 category: Insighs
 labels: [AI, automate]
 ---

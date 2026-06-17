@@ -9,10 +9,14 @@ permalink: /services/
   <img src="/assets/img/illustrations/rare_services.jpg" />
 </div>
 
-At Rare Digits, we don't just build software—we transform data into actionable business intelligence. Our services cut through complexity to deliver what matters: clear insights that drive better decisions.
+Every trade here has its ceremony. Designers spend a week on the shade of a button. Security sells you a firewall and a fright. The integrator wants to know if it talks to Salesforce before he asks what you were trying to find out. The consultant bills six figures and four months, and the answer is “watch your margins.”
 
-<div class="highlight">We believe business software should do one thing exceptionally well: help you understand where money comes in and where it leaks out. Everything else is just details.</div>
+Under all of it is one person who runs a company and just wanted an answer.
 
-Whether you need custom dashboards, specialized analytics, system integrations, or bespoke business applications, our approach remains consistent: focus on the outcomes that impact your bottom line, not the technology that gets you there.
+So here is a simpler test. Count the hours the work costs you. Then count how many of those hours actually moved the business. The ceremony rarely survives that. Your day fills up with approving the mockup, escalating the ticket, sitting in the workshop. None of it is the decision you were trying to make.
 
-Explore our services to see how we can bring clarity to your business data.
+That is the thread through everything below. Design, security, a custom build, support, consulting, hooking your systems together: same job every time. We get the work off your desk and hand back the hours, with the answer attached. Where the money comes in. Where it leaks out. What needs you today. The time you get back is the whole point.
+
+<div class="highlight">We don’t count our work in features shipped or decks delivered. We count it in the hours you get back to run the business instead of the software.</div>
+
+The services below are how we do it, one corner of your stack at a time.

@@ -86,8 +86,14 @@ Published: 2024-05-06
 Published: 2024-06-04
 
 ### Jul 2024
+`✅` **101: The Deal Is Made Between the Lines** — [101]
+Published: 2024-07-10 · Principle: *Отношения держатся на балансе взаимных обязательств* (свод 101, раздел IV). Deals run on the unwritten balance of reciprocity, not on pipeline-card position. The 101 the Columbus release links back to.
+
+`→` **Columbus Now Keeps the Books** — Release
+Published: 2024-07-17 (one week after the 101 above). Announces the reciprocity ledger in Columbus CRM; links to `/pressroom/The-Deal-Is-Made-Between-the-Lines/` and the live demo `/demo/columbus/ledger/`. Example of the 101 → Release → Demo workflow.
+
 `📝` **Context Is a Business Variable** — [101]
-Principle: *Контекст — бизнес-переменная.* Decisions only make sense inside context. That context is formed by the current operating situation and the conflict between personal and corporate tasks, incentives, fears, and timelines. Formally correct decisions still fail when context is ignored.
+Principle: *Контекст — бизнес-переменная.* Decisions only make sense inside context. That context is formed by the current operating situation and the conflict between personal and corporate tasks, incentives, fears, and timelines. Formally correct decisions still fail when context is ignored. *(still a gap — bumped by the post above; reslot to a later month.)*
 
 ### Aug 2024
 `📝` **Your ERP Sucks, Part 3: It Was Configured by the Vendor, Not You** — [ERP]
@@ -262,7 +268,7 @@ Part 5 of 5. Three different measurement systems produce three different stories
 | Period | Published | Gaps to fill | Planned future |
 |---|---|---|---|
 | 2023 (May–Dec) | 4 | 6 | — |
-| 2024 | 3 | 9 | — |
+| 2024 | 4 | 9 | — |
 | 2025 | 3 | 10 | — |
 | 2026 | — | — | 12 |
 | 2027 (Jan–Jun) | — | — | 6 |

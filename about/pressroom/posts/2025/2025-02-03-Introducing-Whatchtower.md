@@ -7,7 +7,7 @@ labels: [kitchen, web3]
 ---
 
 <div class="full-width">
-  <img src="/assets/img/newsroom/2025/watchtower.jpg" />
+  <img src="/assets/img/pressroom/2025/watchtower.jpg" />
 </div>
 
 ## Follow the Money Across the Web3 Wilderness

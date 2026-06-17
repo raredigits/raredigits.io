@@ -11,7 +11,7 @@ labels: [kitchen]
 We are, on paper, still working. Emails get read, support keeps running, and the people who keep the lights on will be at their desks, or at least within reach of a laptop and a decent connection. So nothing actually stops.
 
 <div class="text-content-caption">
-  <img src="/assets/img/newsroom/2025/touching-grass.jpg" />
+  <img src="/assets/img/pressroom/2025/touching-grass.jpg" />
 </div>
 
 What might happen is that you turn up at the Dubai office in early August, push open the door, and find it gently echoing. That is deliberate. The work moved out of the building for a few weeks; the chairs stayed behind.

@@ -2,7 +2,7 @@
 title:  "Russian Engineers Choose Sunshine Over Snow"
 date:   2023-05-17T16:17:18+08:00
 permalink: /pressroom/UAE-license/
-cover: /assets/img/newsroom/2023/landing_in_dubai.jpg
+cover: /assets/img/pressroom/2023/landing_in_dubai.jpg
 category: Expansion
 labels: [blessing]
 ---

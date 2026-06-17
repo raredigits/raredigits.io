@@ -13,7 +13,7 @@ C-level executives waste 40% of their time hunting for information that already
 We built Jeeves GPT because waiting for answers is expensive, and complicated interfaces are insulting to intelligent people.
 
 <div class="full-width">
-  <img src="/assets/img/newsroom/2025/jeeves-release.jpg" />
+  <img src="/assets/img/pressroom/2025/jeeves-release.jpg" />
   <cite>24/7 On-Demand Concierge Service</cite>
 </div>
 

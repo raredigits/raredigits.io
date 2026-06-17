@@ -2,7 +2,7 @@
 title:  "Financial Experts Choose Financial Experts"
 date:   2024-06-14T10:00:00+04:00
 permalink: /pressroom/Asiatech-partnership/
-cover: /assets/img/newsroom/2024/asiatech.jpg
+cover: /assets/img/pressroom/2024/asiatech.jpg
 category: Expansion
 labels: [finance, blessing]
 ---

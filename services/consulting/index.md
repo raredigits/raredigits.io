@@ -1,57 +1,38 @@
 ---
 layout: page
+body_class: text-content
 title: Business Consulting Without the Mystique
 offset: services
 permalink: /services/consulting/
 ---
 
-## Your Business is Unique (Kind of)
+<div class="lead">You have hired the consultants before. There was a kickoff. There was a discovery workshop, the one with the whiteboard and the sticky notes, where a young man in a very good shirt asked your team to explain what makes the business special. Everyone got a turn. It took the whole morning.</div>
 
-Every business believes it's fundamentally different from all others. You have your special sauce, your unique market position, your one-of-a-kind challenges that no one else could possibly understand.
-
-And to some extent, you're absolutely right. Your business is unique in many ways.
+Four months later, a deck arrives. It is a beautiful deck. Slide 34 suggests you watch your margins and shorten your sales cycle. You knew that on the morning of the kickoff. You could have written slide 34 yourself, and for the price, you more or less did.
 
 <div class="text-content-caption">
   <img src="/assets/img/illustrations/rare-consulting.jpg" />
+  <cite>Rare Consulting Session</cite>
 </div>
-<cite>Rare Consulting Session</cite>
 
-But here's the uncomfortable truth most consultants won't tell you: beneath all those unique characteristics, businesses face remarkably similar problems. 
+We have been doing this for twenty years, which means we have sat through a great many versions of that workshop. So here is the thing nobody says out loud at the kickoff. A doctor who has seen ten thousand patients stops being startled by a sore throat. We stopped being startled a long time ago.
 
-And the solutions? They're often surprisingly identical too.
+Your business really is unique, the way every patient is unique. The history is yours, the people are yours, the particular way it hurts is yours. But the diagnosis tends to rhyme. A “conversion problem” in e-commerce and a “pipeline efficiency problem” in B2B are the same complaint in two accents. Money comes in at one rate, it leaks out at another, and the gap between them is where the worry lives.
 
-## Let's Save You Time and a Small Fortune
+## You Already Know Where It Leaks
 
-Here's the consulting advice we'd give to virtually any business, regardless of industry, size, or market position (you can send us a smaller check later):
+You do. Your team has named it in three meetings this quarter. The diagnosis was never the hard part.
 
-1. **Focus on where money comes in**
-2. **Plug the holes where money leaks out**
+The hard part is that the number nobody likes goes back into hiding the moment the meeting ends, and resurfaces next quarter, slightly worse. So the job is not discovery. It is instrumentation. Put the number somewhere you cannot avoid looking at it. Give it an alert, so it taps you on the shoulder when it starts to drift, instead of waiting politely for the quarterly post-mortem.
 
-That's it. That's the big secret that most consulting firms will charge you six figures to discover after months of PowerPoint presentations and workshops.
+That is most of consulting, once you stop selling the workshop.
 
-Different industries use different terminology, but the core issues remain the same. A "conversion optimization challenge" in e-commerce is functionally identical to a "sales pipeline efficiency problem" in B2B software. 
+## What We Actually Do
 
-<div class="highlight">It's all about improving the ratio between input and output.</div>
+We find the few numbers that decide whether you make money, and we make them impossible to ignore. A dashboard you read at a glance. An alert that fires before a trend hardens into a quarter. The blind spots filled in where the business has been running on feel. Then we get out of the way, because you understand your own company better than any deck ever will.
 
-## You Already Know Where the Problems Are
+<div class="highlight">You are not paying a consultant to find the leak. You already found it. You are paying to stop forgetting about it.</div>
 
-Here's another truth that most consultants won't admit: you probably already know where your business is making money and where it's losing it. Your team has likely identified the issues multiple times in meetings. The real challenge isn't identifying problems—it's systematically tracking and addressing them.
+If you are tired of people who make the ordinary sound mysterious and the obvious sound expensive, we should talk. No workshop. No speech about how special you are. Just an honest look at where the money comes in, where it goes, and which number we hang on the wall first.
 
-That's where we come in.
-
-## What We Actually Do
-
-Instead of charging you to rediscover what you already know, we help you:
-
-- **Build systems that track what matters**: Creating dashboards and reports that focus on your revenue drivers and cost centers
-- **Establish early warning indicators**: Setting up automated alerts when key metrics start trending in the wrong direction
-- **Remove data blind spots**: Identifying areas where you're operating on intuition rather than information
-- **Make data accessible**: Ensuring decision-makers have the right information at the right time in an understandable format
-
-Our consulting isn't about telling you how to run your business—it's about making sure you have the clear, actionable information you need to run it better.
-
-## Let's Have an Honest Conversation
-
-If you're tired of consultants who mystify the ordinary and complicate the straightforward, let's talk. We promise refreshing directness, practical solutions, and a focus on what actually matters: helping you see where money comes in and where it leaks out.
-
-Because ultimately, you know your business best. We're just here to help you see it more clearly.
+<div class="caption">→ <a href="/about/contacts/">Start the conversation</a></div>

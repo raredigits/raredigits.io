@@ -11,7 +11,7 @@ Ever wondered why banks sleep soundly while your auto repair shop suffers from p
 Good news—you can steal their techniques.
 
 <div class="full-width">
-  <img src="/assets/img/newsroom/2025/auto_mechanic.jpg" />
+  <img src="/assets/img/pressroom/2025/auto_mechanic.jpg" />
 </div>
 <cite>"Is this even going to be paid for?"</cite>
 

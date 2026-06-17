@@ -1,41 +1,36 @@
 ---
 layout: page
+body_class: text-content
 title: Custom Development
 offset: services
 permalink: /services/development/
 ---
 
-## When You Need Something That Doesn't Exist Yet
+<section class="lead">Someone has told you that your problem is unique, and that what you need is software built specially for you. They might even be right. But watch what happens to the room when that idea lands. The developers light up, because building is the fun part. The vendor lights up too, because a build has no natural end, and therefore no natural last invoice. And you, who only wanted the thing to work, are suddenly funding a small construction project that has not laid its first brick.</section>
 
-Sometimes, the perfect solution for your business problem simply doesn't exist in the market. No amount of searching, comparing feature lists, or sitting through demos will help, because what you need hasn't been built yet.
+By now you have probably sat through the ritual. The sprints, the stand-ups, the board full of little coloured cards creeping from one column to the next. Some quiet part of you suspects this is theatre, a well-rehearsed way of looking busy while the months and the money go by. That suspicion is healthier than the people running the board would like you to think.
 
-That's when we roll up our sleeves and build it ourselves.
-
-## Custom Development Without the Custom Timeline
-
-Custom software development often falls victim to overengineering—building complex architectures and flexibility that you'll never actually use. It's like commissioning a custom Swiss Army knife with 200 tools when you really just need a good hammer.
+Here is the part nobody selling you a build says out loud. Software behaves less like a desk you buy once and own, and more like a dog you adopt and feed. Everything someone builds for you has to be looked after for the rest of its life. It needs feeding when the law changes, when your bank redesigns its forms, when the one person who understood it leaves for a competitor in, roughly, month four. The build was the cheap part. The feeding is the bill that never stops coming.
 
 <div class="text-content-caption">
-<img src="/assets/img/illustrations/rare-development.jpg" />
+  <img src="/assets/img/illustrations/rare-development.jpg" />
+  <cite>Mostly We Recommend Against It</cite>
 </div>
 
-This all points to an industry dirty secret: custom projects are notorious for running over time, over budget, and under expectations. Clients enter with optimism and exit with battle scars, wondering how a "six-month project" turned into a two-year odyssey.
+## The First Thing We Do Is Talk You Out Of It
 
-We refuse to play that game. Our development approach follows the “No Overengineering” principle and a strict “three-sprint rule”:
+Twenty years in, we have learned that most of what a business thinks it must build already exists somewhere, finished and tested, very often given away for free by people who cracked this exact problem years ago. The expensive mistake is almost never failing to build something. It is building something that did not need to exist, and then feeding it for the next ten years.
 
-1. **Sprint 1: Requirements & Design** (3 weeks)
-   - Defining exactly what we're building and why
-   - Mapping data flows and integration points
-   - Creating detailed specifications and acceptance criteria
+So our first job, the one we are a little proud of, is to talk you out of the build. We would rather spend a week showing you that you don’t need custom software than spend three months charging you to write it. That is worse for our invoice and much better for yours, and after two decades we have made our peace with it.
 
-2. **Sprint 2: Development** (3 weeks)
-   - Building the core functionality
-   - Implementing integrations with existing systems
-   - Daily progress updates and course corrections
+<div class="highlight">The cheapest software in the world is the software we talk you out of building.</div>
 
-3. **Sprint 3: Testing & Refinement** (3 weeks)
-   - Rigorous testing in environments that mirror production
-   - User acceptance verification
-   - Final optimizations and performance tuning
+## What We Actually Build
 
-If a project can't fit within this nine-week framework, we don't take it on. Not because we lack the capability, but because we've learned that projects extending beyond this timeframe tend to suffer from scope creep, changing requirements, and diminishing returns.
+Sometimes, once the dust settles, there is a real gap. A small, particular thing your business genuinely does that nothing off the shelf quite covers. That part we build, and we keep it deliberately small, because small things break less often and cost far less to keep alive.
+
+We build it on top of the pieces that already work, out in the open, so you can always look inside and see what it is doing. No black box, no secret that only we hold. The day we annoy you, you can pick the whole thing up, hand it to anyone you like, and walk. Something you are free to take elsewhere is something that has to keep earning its place, which has a way of keeping everyone honest.
+
+So bring us the thing you are sure you need built. We will tell you, plainly, how much of it already exists, how little actually has to be made from scratch, and what it will cost you to keep it alive once it does. Sometimes the answer really is a proper build. More often it is a great deal less than you were braced for. Either way, you will know exactly what you are adopting before you bring it home.
+
+<div class="caption">→ <a href="/about/contacts/">Find out whether you even need us to build it</a></div>

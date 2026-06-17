@@ -1,60 +1,34 @@
 ---
 layout: page
-title: No Chatbots, No Scripts, No Excuses
+body_class: text-content
+title: Support Without the Maze
 offset: services
 permalink: /services/support/
 ---
 
-## Support Shouldn't Be Necessary
+<section class="lead">You know the feeling of needing help with a piece of software. First a cheerful chatbot called something like Ava asks how it can help you today, which it cannot. Then a ticket number, which is a receipt for your patience. Then a polite young person reading from a screen, who, at the first real question, says the four words that end all hope: let me escalate that. Somewhere above them, in theory, sits a person who could actually fix the thing. You will not be meeting them today.</section>
 
-Let's start with a controversial opinion: if your software constantly requires support and endless explanations, there's something fundamentally wrong with the product.
+None of this is an accident. Most support is built to keep you away from that person, not to connect you to them. Each tier is a wall. Each script is a moat. The whole setup is quietly designed to wear you down until you give up or invent a workaround of your own. It is cheaper to deflect a thousand people than to fix the one thing all thousand are calling about.
 
-At Rare Digits, we build solutions that work intuitively, present data clearly, and function reliably. Our dashboards don't need instruction manuals, and our systems don't require constant hand-holding.
-
-But we're also realists. Sometimes you need something specific. Sometimes edge cases happen. And yes, occasionally things break. That's why we've created a support approach that's as straightforward as our software.
-
-## No AI Chatbots or Support Tier Mazes
-
-When you need help, you don't want to:
-- Chat with an AI pretending to be human
-- Explain your issue to a junior representative who needs to "escalate" everything
-- Navigate through support tiers designed to wear you down
-- Wait days for someone who actually understands the system
-
-Our radical approach? 
-
-<div class="highlight">When you contact support, you connect directly with our technical directors—the same people who oversee the development of our solutions. They understand the problem because they built them.</div>
-
-## Technical Directors as Your First Line of Support
+There is really only one number that tells you how good support is going to be, and it is the count of people standing between you and whoever can actually fix your problem. The industry spends fortunes making that number bigger. We have spent twenty years making it zero.
 
 <div class="text-content-caption">
   <img src="/assets/img/illustrations/rare_support.jpg" />
+  <cite>The Entire Support Department</cite>
 </div>
-<cite>Rare Support Frontline</cite>
 
-Yes, you read that correctly. Your support requests go straight to our technical leadership. Why?
+## You Reach the People Who Built It
 
-- They can immediately understand what you're asking for
-- They have the authority to prioritize new data views or reports
-- They can implement fixes without needing approval chains
-- They recognize patterns that might indicate larger issues
-- They bring your feedback directly into the product development cycle
+When you contact us, you do not meet Ava. You reach the technical leads who run the actual product, the people who know why it works the way it does because they are the ones who decided. They understand your question on the first reading. They can make the change, or repair the fault, without filing a request to a committee upstairs, because upstairs is them.
 
-This approach isn't scalable in the conventional support model. It's not meant to be. It's designed to be effective, not to handle thousands of tickets about basic functionality that should just work.
+This does not scale in the usual sense, and we are at peace with that. We are not trying to absorb ten thousand tickets about a button that should have been obvious in the first place. We are trying to make the button obvious, so the ticket never gets written. The best support call is the one you never had a reason to make.
 
-## System Outages? That's On Us
+## If It’s Down, You Don’t Pay
 
-If your system isn't working, our support is completely free. Full stop.
+Here is the part that keeps everyone honest. If your system is not working, fixing it is free. Full stop. We will not charge you to repair something that should never have broken.
 
-We don't charge you for fixing problems that shouldn't exist in the first place. Our business model depends on creating reliable systems that deliver value, not on collecting support fees when those systems fail.
+Call it self-interest pointed in a useful direction. An outage costs us the same evening it costs you. When the people who built the thing are also the people who get the 11pm call and swallow the cost of it failing, they tend, funnily enough, to build it so it does not fail.
 
-This policy does more than save you money—it aligns our incentives perfectly with yours. We are motivated to build rock-solid systems that rarely need emergency support because every outage costs us both time and money.
+So when something does go wrong, and one day it will, you will not be posting a ticket into the void and waiting. You will be talking to someone who can end the problem, that same evening, at no charge. That is the whole of our support, and most of the reason we work so hard to make you never need it.
 
-## How Our Support Actually Works
-
-1. **Direct contact:** You reach out through your dedicated channel
-2. **Technical response:** A technical director reviews your request immediately
-3. **Solution implementation:** Rather than explaining why something can't be done, we focus on implementing what you need
-4. **Feedback loop:** Your request informs our product development, improving the system for everyone
-
-At Rare Digits, we believe the best support experience is the one you rarely need to use. But when you do need it, it should connect you directly with the people who can actually solve your problem.
+<div class="caption">→ <a href="/about/contacts/">Talk to someone who can actually fix it</a></div>

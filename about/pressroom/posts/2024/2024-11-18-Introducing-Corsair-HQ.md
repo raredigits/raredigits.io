@@ -2,7 +2,7 @@
 title:  "Introducing Corsair HQ"
 date:   2024-11-18T10:00:00+04:00
 permalink: /pressroom/Introducing-Corsair-HQ/
-cover: /assets/img/newsroom/2024/corsair.jpg
+cover: /assets/img/pressroom/2024/corsair.jpg
 category: Release
 labels: [kitchen, erp]
 ---

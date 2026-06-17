@@ -9,7 +9,7 @@ labels: [kitchen, design]
 ## Let Digital Rareism Wear the Crown
 
 <div class="full-width">
-  <img src="/assets/img/newsroom/2025/crown-in-the-room.jpg" />
+  <img src="/assets/img/pressroom/2025/crown-in-the-room.jpg" />
 </div>
 
 Finally, we have a mountain of data. Tons of it. Great.    

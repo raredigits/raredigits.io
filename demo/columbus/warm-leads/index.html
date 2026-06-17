@@ -1,0 +1,223 @@
+---
+permalink: /demo/columbus/warm-leads/
+eleventyExcludeFromCollections: true
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Warm Leads — Columbus CRM · Rare Digits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Titillium+Web:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/raredigits/rare-styles@v0.6.15/rare.min.css">
+<link rel="stylesheet" href="/assets/css/modules/odoo-fintech.css">
+<style>
+  .material-symbols-outlined { vertical-align: middle; }
+
+  .wl-cols { display:grid; grid-template-columns: 1.5fr 1fr; gap: var(--space-lg); margin-top: var(--space-lg); align-items:start; }
+  @media (max-width: 900px) { .wl-cols { grid-template-columns: 1fr; } }
+
+  .root { background: var(--fin-surface); border-radius: var(--fin-radius); box-shadow: var(--fin-shadow-sm); padding: var(--space-md) var(--space-lg); margin-bottom: var(--space-lg); }
+  .root__head { display:flex; align-items:center; gap: var(--space-sm); }
+  .root__head .cl-sub { font-size: var(--font-size-xs); color: var(--fin-ink-soft); }
+  .root__name { font-weight: var(--font-weight-bold); }
+
+  .branches { margin: var(--space-md) 0 0 18px; padding-left: var(--space-lg); border-left:2px solid var(--fin-line); display:flex; flex-direction:column; gap: var(--space-sm); }
+  .lead-node { position:relative; display:flex; align-items:center; justify-content:space-between; gap: var(--space-md); padding: var(--space-sm) var(--space-md); border-radius: var(--fin-radius-sm); background: var(--gray-lightest); cursor:pointer; transition: box-shadow .12s, background .12s; }
+  .lead-node::before { content:""; position:absolute; left: calc(-1 * var(--space-lg) - 2px); top:50%; width: var(--space-lg); height:2px; background: var(--fin-line); }
+  .lead-node:hover { background: var(--fin-surface); box-shadow: var(--fin-shadow-sm); }
+  .lead-node.sel { background: var(--fin-surface); box-shadow: 0 0 0 2px var(--fin-accent), var(--fin-shadow-sm); }
+  .lead-node .ln-name { font-weight: var(--font-weight-bold); font-size: var(--font-size-sm); }
+  .lead-node .ln-sub { font-size: var(--font-size-xs); color: var(--fin-ink-soft); }
+  .fit { font-family: var(--code-font); font-size: var(--font-size-xs); color: var(--fin-ink-soft); }
+
+  .panel { background: var(--fin-surface); border-radius: var(--fin-radius); box-shadow: var(--fin-shadow); padding: var(--space-lg); position:sticky; top: var(--space-lg); }
+  .panel__via { font-size: var(--font-size-xs); color: var(--fin-ink-soft); }
+  .panel h2 { font-size: var(--font-size-xl); line-height:1.1; margin: 2px 0 var(--space-xs); }
+  .prompt { background: var(--gray-light); border-radius: var(--fin-radius-sm); padding: var(--space-md); font-size: var(--font-size-sm); line-height:1.5; margin: var(--space-md) 0; }
+  .quote { border-left:3px solid var(--fin-accent); padding-left: var(--space-md); margin: var(--space-md) 0; font-style:italic; color: var(--fin-ink); font-size: var(--font-size-sm); }
+  .quote cite { display:block; font-style:normal; font-size: var(--font-size-xs); color: var(--fin-ink-soft); margin-top: var(--space-xs); }
+  .ck { list-style:none; margin: var(--space-sm) 0; }
+  .ck li { display:flex; align-items:flex-start; gap: var(--space-sm); padding: var(--space-xs) 0; font-size: var(--font-size-sm); }
+  .ck .box { flex:none; width:18px; height:18px; border-radius:5px; border:2px solid var(--fin-line); margin-top:1px; display:flex; align-items:center; justify-content:center; }
+  .ck .box.on { background: var(--fin-accent); border-color: var(--fin-accent); color: var(--fin-surface); }
+  .ck .box .material-symbols-outlined { font-size:13px; }
+  .ck li.on { color: var(--fin-ink-soft); }
+</style>
+</head>
+<body class="fin">
+<div class="erp-shell">
+
+  <header class="erp-topbar">
+    <div class="erp-topbar__brand"><span class="erp-topbar__dot"></span> Meridian</div>
+    <div class="erp-topbar__spacer"></div>
+    <label class="erp-topbar__search">
+      <span class="material-symbols-outlined" style="font-size:20px">search</span>
+      <input type="text" placeholder="Search people, companies, promises…">
+    </label>
+    <span class="material-symbols-outlined" style="color:var(--fin-ink-soft)">notifications</span>
+    <div class="avatar">NK</div>
+  </header>
+
+  <nav class="erp-sidebar">
+    <a class="erp-sidebar__item" title="Clients" href="/demo/columbus/clients/"><span class="material-symbols-outlined">groups</span></a>
+    <a class="erp-sidebar__item" title="Thread" href="/demo/columbus/thread/"><span class="material-symbols-outlined">forum</span></a>
+    <a class="erp-sidebar__item active" title="Warm leads"><span class="material-symbols-outlined">account_tree</span></a>
+    <a class="erp-sidebar__item" title="Ledger" href="/demo/columbus/ledger/"><span class="material-symbols-outlined">balance</span></a>
+    <a class="erp-sidebar__item" title="Reporting"><span class="material-symbols-outlined">bar_chart</span></a>
+  </nav>
+
+  <main class="erp-main">
+
+    <div>
+      <h1 style="font-size: clamp(1.6rem,3.5vw,2.4rem)">Warm leads</h1>
+      <div style="color:var(--fin-ink-soft); font-size:var(--font-size-sm)">Every happy client is a doorway. Columbus maps who they can reach, and hands you the ask.</div>
+    </div>
+
+    <div class="wl-cols">
+
+      <!-- the tree -->
+      <div>
+
+        <div class="root">
+          <div class="root__head">
+            <div class="avatar" style="width:38px;height:38px;font-size:14px">NF</div>
+            <div><div class="root__name">Nadia Fennimore</div><div class="cl-sub">Aster Cosmetics · ♥♥♥♥ · gave you a testimonial</div></div>
+          </div>
+          <div class="branches">
+            <div class="lead-node"
+                 data-name="Imani Cole" data-co="Lumen Skincare" data-via="Nadia Fennimore"
+                 data-rel="Co-founders, met at Web Summit; Nadia rates her highly"
+                 data-quote="Meridian is the only agency that has ever made me look smarter than I am."
+                 data-cite="— Nadia Fennimore, Aster Cosmetics">
+              <div><div class="ln-name">Imani Cole</div><div class="ln-sub">Lumen Skincare · founder · rebrand likely</div></div>
+              <div style="text-align:right"><span class="pill pill--pos pill--no-dot">Intro ready</span><div class="fit">fit 92</div></div>
+            </div>
+            <div class="lead-node"
+                 data-name="Theo Brandt" data-co="Marrow &amp; Co" data-via="Nadia Fennimore"
+                 data-rel="Her former CMO, now runs his own DTC brand"
+                 data-quote="Meridian is the only agency that has ever made me look smarter than I am."
+                 data-cite="— Nadia Fennimore, Aster Cosmetics">
+              <div><div class="ln-name">Theo Brandt</div><div class="ln-sub">Marrow &amp; Co · ex-CMO · DTC food</div></div>
+              <div style="text-align:right"><span class="pill pill--info pill--no-dot">Asked, waiting</span><div class="fit">fit 78</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="root">
+          <div class="root__head">
+            <div class="avatar" style="width:38px;height:38px;font-size:14px">SO</div>
+            <div><div class="root__name">Sofia Okonkwo</div><div class="cl-sub">Vesper Hotels · ♥♥♥♥♥ · herself a referral from Nadia</div></div>
+          </div>
+          <div class="branches">
+            <div class="lead-node"
+                 data-name="Marcus Reilly" data-co="Cardinal Resorts" data-via="Sofia Okonkwo"
+                 data-rel="Sat on a hospitality panel together; warm rapport"
+                 data-quote="They rebranded three of our properties without one of us losing a weekend."
+                 data-cite="— Sofia Okonkwo, Vesper Hotels">
+              <div><div class="ln-name">Marcus Reilly</div><div class="ln-sub">Cardinal Resorts · CMO · 9-property group</div></div>
+              <div style="text-align:right"><span class="pill pill--pos pill--no-dot">Intro ready</span><div class="fit">fit 88</div></div>
+            </div>
+            <div class="lead-node"
+                 data-name="Hana Kim" data-co="Drift Hotels" data-via="Sofia Okonkwo"
+                 data-rel="Former colleague; opening a boutique chain in Q4"
+                 data-quote="They rebranded three of our properties without one of us losing a weekend."
+                 data-cite="— Sofia Okonkwo, Vesper Hotels">
+              <div><div class="ln-name">Hana Kim</div><div class="ln-sub">Drift Hotels · founder · launching Q4</div></div>
+              <div style="text-align:right"><span class="pill pill--info pill--no-dot">Timing: Q4</span><div class="fit">fit 71</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="root">
+          <div class="root__head">
+            <div class="avatar" style="width:38px;height:38px;font-size:14px">HP</div>
+            <div><div class="root__name">Priya Anand</div><div class="cl-sub">Halcyon Studios · ♥♥♥♥♥ · the original connector</div></div>
+          </div>
+          <div class="branches">
+            <div class="lead-node"
+                 data-name="Elena Vasquez" data-co="Aurora Fintech" data-via="Priya Anand"
+                 data-rel="Priya's sister-in-law; just raised a Series A"
+                 data-quote="Priya doesn't introduce people lightly. Meridian earned it."
+                 data-cite="— Priya Anand, Halcyon Studios">
+              <div><div class="ln-name">Elena Vasquez</div><div class="ln-sub">Aurora Fintech · CEO · post Series A</div></div>
+              <div style="text-align:right"><span class="pill pill--pos pill--no-dot">Intro ready</span><div class="fit">fit 84</div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- the ask -->
+      <div>
+        <div class="panel" id="panel">
+          <div class="panel__via" id="p-via">via Nadia Fennimore · Aster Cosmetics</div>
+          <h2 id="p-name">Imani Cole</h2>
+          <div class="cl-sub" id="p-co" style="color:var(--fin-ink-soft);font-size:var(--font-size-sm)">Lumen Skincare · founder</div>
+          <div class="cl-sub" id="p-rel" style="margin-top:var(--space-xs);font-size:var(--font-size-sm)">Co-founders, met at Web Summit; Nadia rates her highly</div>
+
+          <div class="prompt" id="p-prompt"></div>
+
+          <div class="modal__label">Attach this testimonial</div>
+          <blockquote class="quote"><span id="p-quote"></span><cite id="p-cite"></cite></blockquote>
+
+          <div class="modal__label">The ask, step by step</div>
+          <ul class="ck">
+            <li class="on"><span class="box on"><span class="material-symbols-outlined">check</span></span> Confirm the connector is genuinely happy right now</li>
+            <li class="on"><span class="box on"><span class="material-symbols-outlined">check</span></span> Draft a one-line intro the connector can forward as-is</li>
+            <li><span class="box"></span> <span>Ask <strong id="p-conn">Nadia</strong> for a double opt-in, not a cold CC</span></li>
+            <li><span class="box"></span> Lead with their problem, attach the testimonial, no deck</li>
+            <li><span class="box"></span> Log the favour owed back to the connector</li>
+          </ul>
+
+          <button class="chip chip--accent" style="margin-top:var(--space-sm)">Draft the intro request</button>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="callout" style="margin-top: var(--space-xl); max-width: 660px; margin-left:auto; margin-right:auto;">
+      Five warm doors, each grown from a relationship you already earned, each arriving with a real client's words attached. The warmest lead in the world is a friend of someone who already likes you.
+    </p>
+
+  </main>
+</div>
+
+<script>
+(function () {
+  var nodes = document.querySelectorAll('.lead-node');
+  var via = document.getElementById('p-via');
+  var name = document.getElementById('p-name');
+  var co = document.getElementById('p-co');
+  var rel = document.getElementById('p-rel');
+  var prompt = document.getElementById('p-prompt');
+  var quote = document.getElementById('p-quote');
+  var cite = document.getElementById('p-cite');
+  var conn = document.getElementById('p-conn');
+
+  function select(n) {
+    nodes.forEach(function (x) { x.classList.remove('sel'); });
+    n.classList.add('sel');
+    var d = n.dataset;
+    var connector = d.via.split(' ')[0];
+    via.textContent = 'via ' + d.via;
+    name.textContent = d.name;
+    co.textContent = d.co + ' · founder';
+    rel.textContent = d.rel;
+    prompt.innerHTML = 'A good moment to ask <strong>' + d.via + '</strong> for a warm introduction to <strong>' + d.name + '</strong>. ' +
+      'They are close enough that a forwarded line will land, and ' + connector + ' has just told you, on the record, that you made them look good. Use their words, not yours.';
+    quote.textContent = '“' + d.quote + '”';
+    cite.textContent = d.cite;
+    conn.textContent = connector;
+  }
+
+  nodes.forEach(function (n) { n.addEventListener('click', function () { select(n); }); });
+  if (nodes.length) select(nodes[0]);
+})();
+</script>
+</body>
+</html>

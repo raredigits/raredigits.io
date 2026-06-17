@@ -9,7 +9,7 @@ labels: [kitchen, automate]
 ## AI butler promises to end the eternal suffering of executives who can’t find last quarter’s numbers without summoning three analysts and a data scientist
 
 <div class="full-width">
-  <img src="/assets/img/newsroom/2025/jeeves-release.jpg" />
+  <img src="/assets/img/pressroom/2025/jeeves-release.jpg" />
 </div>
 
 *Dubai, 09/04/2025* — In what can only be described as “finally,” the company today announced [Jeeves GPT](/tools/jeeves/), an AI-powered business intelligence platform that lets C-suite executives ask their ERP systems questions in actual human language instead of whatever ritualistic incantations they were using before.

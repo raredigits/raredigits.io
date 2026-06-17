@@ -1,0 +1,155 @@
+---
+permalink: /demo/columbus/clients/
+eleventyExcludeFromCollections: true
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clients — Columbus CRM · Rare Digits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Titillium+Web:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/raredigits/rare-styles@v0.6.15/rare.min.css">
+<link rel="stylesheet" href="/assets/css/modules/odoo-fintech.css">
+<style>
+  .material-symbols-outlined { vertical-align: middle; }
+
+  .cl-list { background: var(--fin-surface); border-radius: var(--fin-radius); box-shadow: var(--fin-shadow-sm); overflow:hidden; margin-top: var(--space-lg); }
+  .cl-row { display:grid; grid-template-columns: auto 1.6fr 1fr auto; gap: var(--space-md); align-items:center; padding: var(--space-md) var(--space-lg); border-bottom:1px solid var(--fin-line); cursor:pointer; text-decoration:none; color: inherit; }
+  .cl-row:last-child { border-bottom:0; }
+  .cl-row:hover { background: var(--gray-lightest); }
+  .cl-name { font-weight: var(--font-weight-bold); }
+  .cl-sub { font-size: var(--font-size-xs); color: var(--fin-ink-soft); }
+  .warmth { letter-spacing:1px; color: var(--fin-warn); font-size: var(--font-size-sm); white-space:nowrap; }
+  .warmth .off { color: var(--gray-mid-light); }
+  .cl-next { font-size: var(--font-size-sm); }
+  .cl-right { text-align:right; min-width: 116px; }
+  @media (max-width: 760px) {
+    .cl-row { grid-template-columns: auto 1fr auto; }
+    .cl-next { display:none; }
+  }
+  .seg-wrap { margin-top: var(--space-lg); }
+</style>
+</head>
+<body class="fin">
+<div class="erp-shell">
+
+  <header class="erp-topbar">
+    <div class="erp-topbar__brand"><span class="erp-topbar__dot"></span> Meridian</div>
+    <div class="erp-topbar__spacer"></div>
+    <label class="erp-topbar__search">
+      <span class="material-symbols-outlined" style="font-size:20px">search</span>
+      <input type="text" placeholder="Search people, companies, promises…">
+    </label>
+    <span class="material-symbols-outlined" style="color:var(--fin-ink-soft)">notifications</span>
+    <div class="avatar">NK</div>
+  </header>
+
+  <nav class="erp-sidebar">
+    <a class="erp-sidebar__item active" title="Clients"><span class="material-symbols-outlined">groups</span></a>
+    <a class="erp-sidebar__item" title="Thread" href="/demo/columbus/thread/"><span class="material-symbols-outlined">forum</span></a>
+    <a class="erp-sidebar__item" title="Warm leads" href="/demo/columbus/warm-leads/"><span class="material-symbols-outlined">account_tree</span></a>
+    <a class="erp-sidebar__item" title="Ledger" href="/demo/columbus/ledger/"><span class="material-symbols-outlined">balance</span></a>
+    <a class="erp-sidebar__item" title="Reporting"><span class="material-symbols-outlined">bar_chart</span></a>
+  </nav>
+
+  <main class="erp-main">
+
+    <div class="flex items-center" style="justify-content: space-between; flex-wrap: wrap; gap: var(--space-md)">
+      <div>
+        <h1 style="font-size: clamp(1.6rem,3.5vw,2.4rem)">Relationships</h1>
+        <div style="color:var(--fin-ink-soft); font-size:var(--font-size-sm)">Nora's book · 18 active threads</div>
+      </div>
+    </div>
+
+    <!-- what actually needs you, not what stage a card is in -->
+    <div class="card-soft" style="display:flex; gap: var(--space-xl); flex-wrap:wrap; margin: var(--space-lg) 0">
+      <div><div class="kpi__value" style="font-family:var(--code-font);font-size:var(--font-size-xl)">18</div><div class="kpi__label" style="font-size:var(--font-size-xs);color:var(--fin-ink-soft)">active relationships</div></div>
+      <div><div class="kpi__value" style="font-family:var(--code-font);font-size:var(--font-size-xl);color:var(--orange)">4</div><div class="kpi__label" style="font-size:var(--font-size-xs);color:var(--fin-ink-soft)">gone quiet</div></div>
+      <div><div class="kpi__value" style="font-family:var(--code-font);font-size:var(--font-size-xl);color:var(--orange)">3</div><div class="kpi__label" style="font-size:var(--font-size-xs);color:var(--fin-ink-soft)">promises due</div></div>
+      <div><div class="kpi__value" style="font-family:var(--code-font);font-size:var(--font-size-xl);color:var(--fin-accent)">7</div><div class="kpi__label" style="font-size:var(--font-size-xs);color:var(--fin-ink-soft)">warm intros ready</div></div>
+    </div>
+
+    <div class="segment seg-wrap">
+      <button class="active">Needs you</button>
+      <button>All</button>
+      <button>Warmest</button>
+      <button>Quiet</button>
+    </div>
+
+    <div class="cl-list">
+
+      <a class="cl-row" href="/demo/columbus/thread/">
+        <div class="avatar">NF</div>
+        <div>
+          <div class="cl-name">Nadia Fennimore</div>
+          <div class="cl-sub">Aster Cosmetics · 3y 4mo · €170K direct, €82K referred</div>
+        </div>
+        <div class="cl-next"><span class="pill pill--warn pill--no-dot">Quiet 34d</span> <span class="cl-sub">recital season — send a no-ask note</span></div>
+        <div class="cl-right"><div class="warmth">♥♥♥♥<span class="off">♥</span></div><div class="cl-sub">last touch Q1 renewal</div></div>
+      </a>
+
+      <a class="cl-row" href="/demo/columbus/thread/">
+        <div class="avatar">RT</div>
+        <div>
+          <div class="cl-name">Ravi Talwar</div>
+          <div class="cl-sub">Cobalt SaaS · 2y 1mo · €96K direct</div>
+        </div>
+        <div class="cl-next"><span class="pill pill--warn pill--no-dot">Promise due Fri</span> <span class="cl-sub">owed the case-study draft</span></div>
+        <div class="cl-right"><div class="warmth">♥♥♥<span class="off">♥♥</span></div><div class="cl-sub">last touch 5d ago</div></div>
+      </a>
+
+      <a class="cl-row" href="/demo/columbus/thread/">
+        <div class="avatar">SO</div>
+        <div>
+          <div class="cl-name">Sofia Okonkwo</div>
+          <div class="cl-sub">Vesper Hotels · 2y 7mo · €82K direct (referred by Nadia)</div>
+        </div>
+        <div class="cl-next"><span class="pill pill--pos pill--no-dot">Intro ready</span> <span class="cl-sub">can reach 2 hotel groups</span></div>
+        <div class="cl-right"><div class="warmth">♥♥♥♥♥</div><div class="cl-sub">last touch 8d ago</div></div>
+      </a>
+
+      <a class="cl-row" href="/demo/columbus/thread/">
+        <div class="avatar">DM</div>
+        <div>
+          <div class="cl-name">Daniel Marsh</div>
+          <div class="cl-sub">Northwind Retail · 4y 0mo · €260K direct</div>
+        </div>
+        <div class="cl-next"><span class="pill pill--warn pill--no-dot">Quiet 51d</span> <span class="cl-sub">longest silence in 2 years</span></div>
+        <div class="cl-right"><div class="warmth">♥♥♥♥<span class="off">♥</span></div><div class="cl-sub">last touch project wrap</div></div>
+      </a>
+
+      <a class="cl-row" href="/demo/columbus/thread/">
+        <div class="avatar">LG</div>
+        <div>
+          <div class="cl-name">Leila Garnier</div>
+          <div class="cl-sub">Larkspur Group · 1y 6mo · €88K direct</div>
+        </div>
+        <div class="cl-next"><span class="pill pill--pos pill--no-dot">Testimonial cleared</span> <span class="cl-sub">attach to 2 live leads</span></div>
+        <div class="cl-right"><div class="warmth">♥♥♥♥<span class="off">♥</span></div><div class="cl-sub">last touch 3d ago</div></div>
+      </a>
+
+      <a class="cl-row" href="/demo/columbus/thread/">
+        <div class="avatar">HP</div>
+        <div>
+          <div class="cl-name">Halcyon — Priya Anand</div>
+          <div class="cl-sub">Halcyon Studios · 3y 9mo · €120K direct · introduced you to Nadia</div>
+        </div>
+        <div class="cl-next"><span class="pill pill--info pill--no-dot">Birthday in 9d</span> <span class="cl-sub">the original connector — keep her close</span></div>
+        <div class="cl-right"><div class="warmth">♥♥♥♥♥</div><div class="cl-sub">last touch 2d ago</div></div>
+      </a>
+
+    </div>
+
+    <p class="callout" style="margin-top: var(--space-xl); max-width: 660px; margin-left:auto; margin-right:auto;">
+      Not sorted by deal stage, but by what the relationship needs from you this week: a silence to break, a promise to keep, a door waiting to be opened. Open any row to see the <a href="/demo/columbus/thread/">full thread</a>.
+    </p>
+
+  </main>
+</div>
+</body>
+</html>

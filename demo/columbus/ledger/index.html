@@ -1,0 +1,255 @@
+---
+permalink: /demo/columbus/ledger/
+eleventyExcludeFromCollections: true
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reciprocity Ledger — Columbus CRM · Rare Digits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Titillium+Web:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/raredigits/rare-styles@v0.6.15/rare.min.css">
+<link rel="stylesheet" href="/assets/css/modules/odoo-fintech.css">
+<style>
+  .material-symbols-outlined { vertical-align: middle; }
+
+  .lg-cols { display:grid; grid-template-columns: 1fr 1.25fr; gap: var(--space-lg); margin-top: var(--space-lg); align-items:start; }
+  @media (max-width: 920px) { .lg-cols { grid-template-columns: 1fr; } }
+
+  /* portfolio list */
+  .pf { background: var(--fin-surface); border-radius: var(--fin-radius); box-shadow: var(--fin-shadow-sm); overflow:hidden; }
+  .pf-row { display:grid; grid-template-columns: auto 1fr auto; gap: var(--space-md); align-items:center; padding: var(--space-md) var(--space-lg); border-bottom:1px solid var(--fin-line); cursor:pointer; }
+  .pf-row:last-child { border-bottom:0; }
+  .pf-row:hover { background: var(--gray-lightest); }
+  .pf-row.sel { background: var(--gray-lightest); box-shadow: inset 3px 0 0 var(--fin-ink); }
+  .pf-name { font-weight: var(--font-weight-bold); font-size: var(--font-size-sm); }
+  .pf-sub { font-size: var(--font-size-xs); color: var(--fin-ink-soft); }
+  .pf-right { text-align:right; min-width:108px; }
+
+  /* bidirectional balance meter: centre = settled */
+  .bal-track { position:relative; height:8px; background: var(--gray-light); border-radius:999px; margin-top:6px; }
+  .bal-zero { position:absolute; left:50%; top:-3px; width:2px; height:14px; background: var(--fin-ink-soft); transform:translateX(-50%); }
+  .bal-fill { position:absolute; top:0; height:8px; border-radius:999px; }
+  .bal-fill--neg { background: var(--orange); }
+  .bal-fill--pos { background: var(--fin-accent); }
+  .scale { display:flex; justify-content:space-between; font-size:10px; text-transform:uppercase; letter-spacing:.06em; color: var(--fin-ink-soft); margin-top:4px; }
+
+  /* detail panel */
+  .panel { background: var(--fin-surface); border-radius: var(--fin-radius); box-shadow: var(--fin-shadow); padding: var(--space-lg); position:sticky; top: var(--space-lg); }
+  .panel__head { display:flex; align-items:center; gap: var(--space-md); }
+  .panel__head .avatar { width:46px; height:46px; font-size: var(--font-size-md); }
+  .panel__head h2 { font-size: var(--font-size-xl); line-height:1.05; }
+
+  .verdict { border-radius: var(--fin-radius-sm); padding: var(--space-md); margin: var(--space-md) 0; font-size: var(--font-size-sm); line-height:1.5; }
+  .verdict--neg { background:#fff1e6; border-left:3px solid var(--orange); }
+  .verdict--pos { background: var(--fin-accent-soft); border-left:3px solid var(--fin-accent); }
+  .verdict strong { display:block; font-size: var(--font-size-md); margin-bottom:2px; }
+
+  .led { display:grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg); margin-top: var(--space-md); }
+  @media (max-width: 560px) { .led { grid-template-columns: 1fr; } }
+  .led__col h3 { font-size: var(--font-size-xs); text-transform:uppercase; letter-spacing:.07em; color: var(--fin-ink-soft); margin-bottom: var(--space-sm); }
+  .led__col--owe h3 { color: var(--orange); }
+  .led__col--cred h3 { color: var(--brand-color-dark); }
+  .led-item { padding: var(--space-sm) 0; border-bottom:1px solid var(--fin-line); }
+  .led-item:last-child { border-bottom:0; }
+  .led-item .w { font-size: var(--font-size-sm); }
+  .led-item .m { font-size: var(--font-size-xs); color: var(--fin-ink-soft); display:flex; justify-content:space-between; gap: var(--space-sm); margin-top:2px; }
+  .wt { letter-spacing:1px; }
+  .wt--owe { color: var(--orange); }
+  .wt--cred { color: var(--fin-accent); }
+  .wt .o { color: var(--gray-mid-light); }
+  .overdue { color: var(--fin-neg); font-weight: var(--font-weight-bold); }
+</style>
+</head>
+<body class="fin">
+<div class="erp-shell">
+
+  <header class="erp-topbar">
+    <div class="erp-topbar__brand"><span class="erp-topbar__dot"></span> Meridian</div>
+    <div class="erp-topbar__spacer"></div>
+    <label class="erp-topbar__search">
+      <span class="material-symbols-outlined" style="font-size:20px">search</span>
+      <input type="text" placeholder="Search people, companies, promises…">
+    </label>
+    <span class="material-symbols-outlined" style="color:var(--fin-ink-soft)">notifications</span>
+    <div class="avatar">NK</div>
+  </header>
+
+  <nav class="erp-sidebar">
+    <a class="erp-sidebar__item" title="Clients" href="/demo/columbus/clients/"><span class="material-symbols-outlined">groups</span></a>
+    <a class="erp-sidebar__item" title="Thread" href="/demo/columbus/thread/"><span class="material-symbols-outlined">forum</span></a>
+    <a class="erp-sidebar__item" title="Warm leads" href="/demo/columbus/warm-leads/"><span class="material-symbols-outlined">account_tree</span></a>
+    <a class="erp-sidebar__item active" title="Ledger"><span class="material-symbols-outlined">balance</span></a>
+    <a class="erp-sidebar__item" title="Reporting"><span class="material-symbols-outlined">bar_chart</span></a>
+  </nav>
+
+  <main class="erp-main">
+
+    <div>
+      <h1 style="font-size: clamp(1.6rem,3.5vw,2.4rem)">Reciprocity ledger</h1>
+      <div style="color:var(--fin-ink-soft); font-size:var(--font-size-sm)">Every relationship runs a balance. What they have done for you, what you owe back, and whether you have earned the right to ask again.</div>
+    </div>
+
+    <div class="card-soft" style="display:flex; gap: var(--space-xl); flex-wrap:wrap; margin: var(--space-lg) 0">
+      <div><div class="kpi__value" style="font-family:var(--code-font);font-size:var(--font-size-xl);color:var(--orange)">3</div><div class="kpi__label" style="font-size:var(--font-size-xs);color:var(--fin-ink-soft)">overdrawn — repay first</div></div>
+      <div><div class="kpi__value" style="font-family:var(--code-font);font-size:var(--font-size-xl);color:var(--fin-neg)">4</div><div class="kpi__label" style="font-size:var(--font-size-xs);color:var(--fin-ink-soft)">obligations overdue</div></div>
+      <div><div class="kpi__value" style="font-family:var(--code-font);font-size:var(--font-size-xl);color:var(--fin-accent)">7</div><div class="kpi__label" style="font-size:var(--font-size-xs);color:var(--fin-ink-soft)">goodwill banked — safe to ask</div></div>
+      <div><div class="kpi__value" style="font-family:var(--code-font);font-size:var(--font-size-md)">Priya Anand</div><div class="kpi__label" style="font-size:var(--font-size-xs);color:var(--fin-ink-soft)">largest unpaid debt</div></div>
+    </div>
+
+    <div class="lg-cols">
+
+      <!-- portfolio, sorted by who you owe most -->
+      <div class="pf" id="pf"></div>
+
+      <!-- detail -->
+      <div class="panel" id="panel"></div>
+
+    </div>
+
+    <p class="callout" style="margin-top: var(--space-xl); max-width: 660px; margin-left:auto; margin-right:auto;">
+      Most CRMs push you to extract more from a warm contact. Columbus is the one that tells you when you have taken too much, and asks you to repay before it lets you ask again. A relationship you only withdraw from eventually closes its account.
+    </p>
+
+  </main>
+</div>
+
+<script>
+(function () {
+  // score: -100 (you owe heavily) … 0 settled … +100 (in credit)
+  var data = [
+    {
+      id:'priya', initials:'HP', name:'Priya Anand', co:'Halcyon Studios', score:-78,
+      owe:[
+        {w:'Introduced you to Nadia — the root of your entire warm tree', wt:3, meta:'Nov 2022', state:'unsettled'},
+        {w:'Sent the Larkspur referral', wt:2, meta:'Aug 2024', state:'unsettled'},
+        {w:'Vouched for you to Aurora Fintech', wt:2, meta:'last month', state:'unsettled'}
+      ],
+      cred:[
+        {w:'Birthday gift + handwritten note', wt:1, meta:'planned', state:'due'},
+        {w:'Referred a designer to her team', wt:1, meta:'2023', state:'settled'}
+      ],
+      repay:'She is the reason the whole network exists, and you have repaid almost none of it. Before the next ask, give first: send real work her way, or a public credit. Do not request the Aurora intro until this moves.'
+    },
+    {
+      id:'nadia', initials:'NF', name:'Nadia Fennimore', co:'Aster Cosmetics', score:-52,
+      owe:[
+        {w:'Referred Vesper Hotels — became €82K of business', wt:3, meta:'Nov 2023', state:'unsettled'},
+        {w:'Gave a testimonial, on the record', wt:2, meta:'May 2025', state:'unsettled'},
+        {w:'Always pays on time, never haggles', wt:1, meta:'ongoing', state:'ongoing'}
+      ],
+      cred:[
+        {w:'Thank-you note + flowers for the Vesper intro', wt:2, meta:'overdue 6d', state:'overdue'},
+        {w:'Split her Q1 invoice across two quarters', wt:1, meta:'honoured', state:'settled'},
+        {w:'Good-luck card for Maya’s recital', wt:1, meta:'this week', state:'due'}
+      ],
+      repay:'She handed you €82K and a testimonial. You owe a real thank-you that is already six days late. Repay that first. Two intros are waiting behind her in the warm tree — both stay locked until your balance is back near even.'
+    },
+    {
+      id:'ravi', initials:'RT', name:'Ravi Talwar', co:'Cobalt SaaS', score:-18,
+      owe:[
+        {w:'Defended your invoice to his CFO', wt:2, meta:'Q4 2025', state:'unsettled'}
+      ],
+      cred:[
+        {w:'Promised case-study draft', wt:2, meta:'overdue, 3rd slip', state:'overdue'},
+        {w:'Onboarding film delivered early', wt:1, meta:'done', state:'settled'}
+      ],
+      repay:'Nearly even, but you have slipped the same promise three times. A broken word costs more than a favour earns. Send the draft this week before the balance turns and the warmth cools.'
+    },
+    {
+      id:'daniel', initials:'DM', name:'Daniel Marsh', co:'Northwind Retail', score:34,
+      owe:[
+        {w:'Renewed three years running', wt:2, meta:'loyal', state:'ongoing'}
+      ],
+      cred:[
+        {w:'Pulled an all-nighter for his investor day', wt:3, meta:'Sep 2024', state:'unsettled'},
+        {w:'Comped the rush fee on the relaunch', wt:2, meta:'2023', state:'settled'},
+        {w:'Introduced him to a logistics partner', wt:1, meta:'2024', state:'settled'}
+      ],
+      repay:'You are in credit here. You have given more than you have taken, and he knows it. This is exactly the relationship to ask: an intro, a reference call, a bigger scope. The goodwill is banked and earning nothing sitting there.'
+    },
+    {
+      id:'sofia', initials:'SO', name:'Sofia Okonkwo', co:'Vesper Hotels', score:12,
+      owe:[
+        {w:'Quietly recommends you in her network', wt:2, meta:'ongoing', state:'ongoing'}
+      ],
+      cred:[
+        {w:'Rebranded three properties without drama', wt:2, meta:'2024', state:'settled'},
+        {w:'Flagged a vendor about to overcharge her', wt:1, meta:'last month', state:'settled'}
+      ],
+      repay:'Roughly even, tilting your way. Safe to ask, but do not lean hard — she came to you as a referral herself, so keep the account healthy. One ask, then give again.'
+    }
+  ];
+
+  var pf = document.getElementById('pf');
+  var panel = document.getElementById('panel');
+
+  function wtDots(n, kind) {
+    var on = '●'.repeat(n), off = '○'.repeat(3 - n);
+    return '<span class="wt wt--' + kind + '">' + on + '<span class="o">' + off + '</span></span>';
+  }
+  function balMeter(score) {
+    var pos = score >= 0;
+    var pct = Math.min(Math.abs(score), 100) / 2; // half-track max
+    var fill = pos
+      ? '<div class="bal-fill bal-fill--pos" style="left:50%;width:' + pct + '%"></div>'
+      : '<div class="bal-fill bal-fill--neg" style="right:50%;width:' + pct + '%"></div>';
+    return '<div class="bal-track"><div class="bal-zero"></div>' + fill + '</div>' +
+           '<div class="scale"><span>you owe</span><span>settled</span><span>in credit</span></div>';
+  }
+  function verdictPill(score) {
+    if (score <= -40) return '<span class="pill pill--warn pill--no-dot">Repay before asking</span>';
+    if (score < -8)   return '<span class="pill pill--warn pill--no-dot">Slightly in debt</span>';
+    if (score <= 8)   return '<span class="pill pill--info pill--no-dot">Even — safe to ask</span>';
+    return '<span class="pill pill--pos pill--no-dot">In credit — safe to ask</span>';
+  }
+
+  function renderList() {
+    pf.innerHTML = data.map(function (d) {
+      return '<div class="pf-row" data-id="' + d.id + '">' +
+        '<div class="avatar">' + d.initials + '</div>' +
+        '<div><div class="pf-name">' + d.name + '</div><div class="pf-sub">' + d.co + '</div>' + balMeter(d.score) + '</div>' +
+        '<div class="pf-right">' + verdictPill(d.score) + '</div>' +
+      '</div>';
+    }).join('');
+    pf.querySelectorAll('.pf-row').forEach(function (r) {
+      r.addEventListener('click', function () { select(r.dataset.id); });
+    });
+  }
+
+  function itemHTML(it, kind) {
+    var st = '';
+    if (it.state === 'overdue') st = '<span class="overdue">' + it.meta + '</span>';
+    else st = '<span>' + it.meta + '</span>';
+    return '<div class="led-item"><div class="w">' + it.w + '</div>' +
+           '<div class="m">' + st + wtDots(it.wt, kind) + '</div></div>';
+  }
+
+  function select(id) {
+    var d = data.filter(function (x) { return x.id === id; })[0];
+    pf.querySelectorAll('.pf-row').forEach(function (r) { r.classList.toggle('sel', r.dataset.id === id); });
+    var neg = d.score < -8;
+    panel.innerHTML =
+      '<div class="panel__head"><div class="avatar">' + d.initials + '</div>' +
+        '<div><h2>' + d.name + '</h2><div class="pf-sub">' + d.co + '</div></div>' +
+        '<div style="margin-left:auto">' + verdictPill(d.score) + '</div></div>' +
+      balMeter(d.score) +
+      '<div class="verdict ' + (neg ? 'verdict--neg' : 'verdict--pos') + '">' +
+        '<strong>' + (neg ? 'You are overdrawn here.' : 'You are in credit here.') + '</strong>' + d.repay + '</div>' +
+      '<div class="led">' +
+        '<div class="led__col led__col--owe"><h3>What they have done for you</h3>' + d.owe.map(function (i){return itemHTML(i,'owe');}).join('') + '</div>' +
+        '<div class="led__col led__col--cred"><h3>What you have given back</h3>' + d.cred.map(function (i){return itemHTML(i,'cred');}).join('') + '</div>' +
+      '</div>';
+  }
+
+  renderList();
+  select('priya');
+})();
+</script>
+</body>
+</html>

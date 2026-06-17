@@ -2,7 +2,7 @@
 title:  "Rare Digits Now Officially Managing the Future"
 date:   2024-07-31T10:00:00+04:00
 permalink: /pressroom/Destination-partnership/
-cover: /assets/img/newsroom/2024/destination.jpg
+cover: /assets/img/pressroom/2024/destination.jpg
 category: Expansion
 labels: [partnership]
 ---

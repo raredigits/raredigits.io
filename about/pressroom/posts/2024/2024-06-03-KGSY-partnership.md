@@ -2,7 +2,7 @@
 title:  "When Intelligent Meets Rare"
 date:   2024-06-03T10:00:00+04:00
 permalink: /pressroom/KGSY-partnership/
-cover: /assets/img/newsroom/2024/chineese.jpg
+cover: /assets/img/pressroom/2024/chineese.jpg
 category: Expansion
 labels: [partnership]
 ---

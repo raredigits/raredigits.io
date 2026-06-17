@@ -1,45 +1,38 @@
 ---
 layout: page
+body_class: text-content
 title: 'Design: What Actually Matters'
 offset: services
 permalink: /services/design/
 ---
 
-People have funny ideas about design in business software. There's this whole industry of designers who will spend weeks debating whether your button should be "Ocean Blue" or "Pacific Blue," or if your sidebar should collapse at 768 pixels or 800 pixels. They'll show you breathtaking mockups with pristine data and talk about "visual hierarchies" and "design systems."
+<section class="lead">Somewhere in your company’s past there is a design agency you paid. They arrived with gorgeous mockups, full of clean invented data, and walked your team through whether the button should be Ocean Blue or Pacific Blue, and whether the sidebar ought to collapse at 768 pixels or 800. It was a pleasant morning. Everyone has opinions about blue.</section>
+
+Design is nice. Pretty things are nice. Dark mode is gentle on the eyes at midnight. None of it answered the one question you actually carried into the room, which was whether you are going to make payroll this month.
+
+A business screen is closer to a fuel gauge than a painting. You do not admire a fuel gauge. You trust it, or you don’t.
 
 <div class="text-content-caption">
   <img src="/assets/img/illustrations/rare-design.jpg" />
+  <cite>Rare Design Review</cite>
 </div>
 
-Which is all very nice! Design is nice. Pretty things are nice to look at. Dark mode is easy on the eyes at night. But there's a problem with this approach to business software design, which is that none of it helps answer the question: "Will I make payroll this month?"
+## The Real Design Happens in the Query
 
-## Design as Financial Intelligence
+Business software exists for one reason, which is to help a business make money. Nobody adopts an ERP for the aesthetic experience. So the most consequential design decision in the whole system is not a colour and not a font. It is whether the number on the screen is true, and whether you can read it without convening a meeting.
 
-The thing about business software is that it exists to help businesses make money. That's it. It's not art. It's not self-expression. Nobody downloads your ERP system because it's a profound aesthetic experience.
+That work happens where no designer is looking. In the query that decides what “free cash” actually counts. In the rule that marks a deal as stale before it quietly dies. Get that right and a plain screen in plain type will save your week. Get it wrong and the most beautiful dashboard ever drawn will lie to you in a lovely font.
 
-At Rare Digits, we have this radical notion: 
-<div class="highlight">in business software the most important design work happens in database queries, not Figma files. </div>
+<div class="highlight">When the screen tells you at 3am that you’ll miss the quarter by 12% unless you fix the European conversion rate, does it matter whether it said so in Helvetica or Comic Sans?</div>
 
-Our design philosophy can be summarized as:
+## Clarity Is the Part We Are Fussy About
 
-1. Make software that predicts financial outcomes accurately
-2. Present that information clearly
-3. Don't make it unnecessarily ugly
+This is not a permission slip to ship ugly things. Clutter is a tax. A screen you have to decode is a screen that costs you an explanation every time someone new looks at it. So we are fussy, only about different things than the agency was.
 
-Notice that "implement the latest UI trends" and "ensure brand consistency in dropdown menus" don't make the top three.
+The number is the hero, big and in plain words. Figures line up, so 2.4M and 240K cannot play tricks on a tired eye. One accent colour, spent where it actually means something. The test is simple: you understand what you are looking at before anyone has to walk you through it.
 
-Look, we're not saying aesthetics have zero value. Clean interfaces help people understand information. Consistent design reduces cognitive load. But there's a clear hierarchy of needs in business software, and "tells you useful, accurate things about your business" ranks considerably higher than "uses your brand's secondary accent color correctly."
+We cared about this enough to write it down and give it away. [Rare Styles](https://raredigits.art/) is the open-source library we use to put business numbers on a screen, the visual grammar behind how we think about all of this: clear, precise, made to be read rather than admired. The reasoning is public, so you can see exactly how we argue with ourselves about a chart.
 
-When your software can tell you at 3am, with reasonable accuracy, that "based on current trends, you'll miss your revenue target by 12% unless you address the declining conversion rate in your European market," 
-<div class="highlight">does it really matter if that message comes in Helvetica or Comic Sans?</div>
+A gauge in a cockpit is not art. You trust it because it is right and because you can read it at a glance, in the dark, while something is on fire. That is the standard we hold a business screen to, and it is the only one we lose sleep over.
 
-## The Pearl Diver Analogy
-Imagine you've sent a scout to find treasure in the depths of the ocean. What matters in this scenario? Only one thing: does the diver return with a precious pearl or an empty shell?
-
-If you're spending your time discussing the corporate color scheme of the diver's uniform, you're missing the point entirely. You wouldn't care if the diver was wearing mismatched socks if they consistently brought back valuable pearls.
-
-**Does this mean Rare Digits is against design?** Not at all. We pay careful attention to clarity, precision, and simplicity. Rare's interfaces aren't overloaded and have been thoughtfully considered. And if you don't like the font? We've already thought of that—you can easily change it.
-
-We just ask, respectfully, can we 
-<div class="highlight">stop getting distracted by these things.</div>
-Because when your business needs accurate financial forecasts, spending hours debating button colors is like rearranging deck chairs on the Titanic—a nice activity, sure, but entirely missing the urgent matter at hand.
+<div class="caption margin-t-md">→ <a href="/about/contacts/">Put this kind of clarity on your own numbers</a></div>

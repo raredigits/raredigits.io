@@ -108,3 +108,17 @@ Short version: always ironic, never cold. The reader is a peer, not a student.
 Our audience values us for lifehacks and non-standard-but-effective solutions — the kind of thing that gets passed between practitioners over coffee, not published in HBR. When we write about a problem, we write like someone who solved it at 11pm on a Tuesday and then told a colleague about it the next morning. Direct, a little tired, genuinely useful.
 
 The irony is friendly: we're laughing with the reader at a shared situation, not demonstrating how clever we are. If it reads like it was written for a board presentation at a $10B company, the altitude is wrong. Our reader needs to act by Thursday, not restructure over six months.
+
+---
+
+## Editorial Workflow: 101 → Release → Demo
+
+Every Rare Digits product decision rests on a piece of **101** — a theoretical principle or piece of business wisdom. The principle is the foundation, and we publish it as such. A feature with no 101 underneath it is probably not load-bearing.
+
+The chain runs in this order, and each link points back to the previous one:
+
+1. **Knowledge** — the principle, published in the pressroom as a **101 insight** (see `prompts/101-post.md`). It stands on its own, free of any product mention. This is the *why*.
+2. **Product release** — a pressroom news post announcing how a specific product turns that principle into a feature (or how it already solves it inside the product). It links back to the 101 piece. This is the *what*.
+3. **Demo** — a working, no-login demo screen the release points to, where the reader sees the principle made operational. This is the *show me*.
+
+So a 101 article is never just content marketing: it is the stated reason a feature exists. When building or describing a product, find the 101 underneath it first. If you can't, stop and find it before writing the release.

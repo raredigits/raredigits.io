@@ -2,7 +2,7 @@
 title:  "Cash Flow Gaps Solution"
 date:   2024-04-22T10:00:00+04:00
 permalink: /pressroom/Cash-flow-gap/
-cover: /assets/img/newsroom/2024/cash-flow-gaps.jpg
+cover: /assets/img/pressroom/2024/cash-flow-gaps.jpg
 category: Insights
 labels: [finance]
 ---

@@ -2,7 +2,7 @@
 title:  "Follow the Money: Introducing Atlas ERP"
 date:   2023-08-01T10:00:00+04:00
 permalink: /pressroom/Introducing-Atlas_ERP/
-cover: /assets/img/newsroom/2023/atlas.jpg
+cover: /assets/img/pressroom/2023/atlas.jpg
 category: Release
 labels: [erp, finance]
 ---

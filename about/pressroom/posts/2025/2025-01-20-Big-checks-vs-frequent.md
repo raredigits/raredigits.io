@@ -11,7 +11,7 @@ The eternal business question: should you court the whale clients who write enor
 If consultants have told you "it depends," they're not being evasive—they're being honest. But "it depends" without explaining what it depends on is about as useful as a chocolate teapot.
 
 <div class="full-width">
-  <img src="/assets/img/newsroom/2025/big_check.jpg" />
+  <img src="/assets/img/pressroom/2025/big_check.jpg" />
 </div>
 
 ## The Real Deciding Factor: Your Business Capacity

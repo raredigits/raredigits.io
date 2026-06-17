@@ -64,7 +64,7 @@ Corsair HQ performs three services that shouldn't be revolutionary but somehow a
 Traditional marketing would tell you that you need our comprehensive solution to see the full 360-degree picture of your business. The truth is more subversive: with Corsair HQ, you could navigate your entire business **with one eye closed**. 
 
 <div class="text-content-caption">
-  <img src="/assets/img/newsroom/2024/corsair.jpg" />
+  <img src="/assets/img/pressroom/2024/corsair.jpg" />
 </div>
 
 The name "Corsair" isn't accidental – like the privateers of old, we've figured out how to raid your existing data systems and bring back only the valuable treasures, leaving the ballast behind. And like a seasoned captain, you'll find that the simplified view through a spyglass often provides more actionable intelligence than staring at the entire horizon at once.

@@ -11,7 +11,7 @@ Sometimes the best investments require a&nbsp;little temporary inconvenience. Li
 ## What's Happening?
 
 <div class="full-width">
-  <img src="/assets/img/newsroom/2024/digital-dust.jpg" />
+  <img src="/assets/img/pressroom/2024/digital-dust.jpg" />
 </div>
 
 The website is&nbsp;currently undergoing maintenance and upgrades. Some features might be&nbsp;temporarily unavailable or&nbsp;behave like a&nbsp;cryptocurrency&nbsp;&mdash; there one minute, gone the next. The digital contractors are working diligently behind the scaffolding of&nbsp;code and design.

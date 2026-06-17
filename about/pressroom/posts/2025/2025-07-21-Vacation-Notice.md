@@ -11,7 +11,7 @@ One weird thing about running a company is that everyone expects you to, you 
 Starting August 4th through September 8th, the entire Rare Digits Production team will be doing that thing humans supposedly do when they’re not staring at screens—relaxing, allegedly. (They’re told this involves activities like “touching grass” and “remembering what the sun feels like,” though skepticism remains.)
 
 <div class="full-width">
-  <img src="/assets/img/newsroom/2025/touching-grass.jpg" />
+  <img src="/assets/img/pressroom/2025/touching-grass.jpg" />
 </div>
 
 Now, you might wonder: “What about all our urgent requests and burning questions about data visualization philosophy?” Great question. Here’s where it gets interesting: our technical support will continue operating in normal mode, because apparently some people drew the short straw in the vacation lottery. (Just kidding—they volunteered. We think.)

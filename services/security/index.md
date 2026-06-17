@@ -1,84 +1,32 @@
 ---
 layout: page
-title: Beyond Firewalls and Passwords
+body_class: text-content
+title: What Actually Takes a Business Down
 offset: services
 permalink: /services/security/
 ---
 
+<section class="lead">Every security pitch is built on the same picture. A figure in a hoodie, lit blue, typing fast in a dark room, coming for your data. There are firewalls to buy and intrusions to detect and a slide with a padlock on it. You nod along, feel vaguely guilty about something you cannot quite name, and write the cheque. That hoodie has sold an enormous amount of software.</section>
 
-## What Security Really Means at Rare Digits
+The trouble is that, for most businesses, the hoodie never turns up. The disaster that actually arrives is duller and far more likely. The system folds on the busiest morning of the year, and you spend the one week that pays for the other fifty running completely blind. Or you come in on a Monday to find your own data locked, with a note demanding money to hand it back. Or, quietest of all, you decide to leave a supplier and discover that the only people who can give you your own numbers are the people you are trying to leave.
 
-When most companies talk about security, they immediately jump to firewalls, intrusion detection, and vulnerability scans. Important? Sure. But at Rare Digits, we see security through a different lens.
-
-For us, true security means **ensuring your business-critical data is available when you need it, performing at the speed you require, and structured in ways that create genuine business value**.
+A lock, it turns out, works in both directions. It keeps strangers out of your business, and on a bad day it shuts you out of it too. Most of what gets sold as security is a thicker door. Almost nobody asks the more useful question, which is whether you can get in when you actually need to.
 
 <div class="text-content-caption">
   <img src="/assets/img/illustrations/rare_security.jpg" />
+  <cite>Worrying About the Right Things</cite>
 </div>
-<cite>Rare Security Officer</cite>
 
-## Data Availability: The Security Most Businesses Actually Need
+## We Start With What Would Actually Hurt
 
-Let's be honest—what's more damaging to your daily operations?
-- A theoretical hacker who might target your system someday
-- Your database crashing during peak business hours because it can't handle the load
+So we begin at the likely end of the shelf, with the way a company your size genuinely tends to break, and we work backwards from there. We keep the system standing when everyone reaches for it at once, so your busiest week is when it performs best rather than the week it falls over. We keep spare copies of everything, in more than one place, and, the part almost everyone skips, we actually practise getting them back. A backup nobody has ever restored is just a hope with a file size.
 
-For most of our clients, system availability and performance issues cause far more "security incidents" than actual breaches. 
+And we keep the keys in your hands. Your data stays yours, in a form you can pick up and carry to anyone else, so that “secure” never quietly turns into “locked inside our cupboard.” The day you want to walk, you can, with everything you own. A supplier who holds your data hostage is a security problem wearing a contract.
 
-<div class="highlight">That's why our security services start with ensuring your data is always accessible when you need it.</div>
+None of this means we have forgotten the locks. We still bolt the doors: the passwords, the access rules, the quiet updates that close known holes, the encryption, the audit trail your regulator will eventually ask to see. We simply refuse to start there, because starting with the rare and cinematic threat is exactly how the dull and likely one walks straight in.
 
-## Load Distribution & System Architecture
+<div class="highlight">The most secure data in the world is worthless if you cannot reach it on the morning you need to make a decision.</div>
 
-Our security approach begins with smart system architecture that prevents bottlenecks and single points of failure:
+So before you buy another wall, it is worth asking which disaster you are actually buying it against. Tell us how your business would really break on its worst realistic day, and we will make sure your data is standing, yours, and within reach when that day comes.
 
-- **Intelligent read/write separation**: We configure your databases to separate read operations from write operations, dramatically improving performance under high loads
-- **Strategic replication**: Creating read replicas in multiple locations to distribute query load and provide failover capabilities
-- **Caching layers**: Implementing Redis, Memcached, or custom caching solutions to reduce database hits for frequently accessed data
-- **Connection pooling optimization**: Fine-tuning database connections to prevent resource exhaustion during traffic spikes
-
-## Database Performance Tuning
-
-Security through performance isn't just about architecture—it's about optimization at every level:
-
-- **Query optimization**: Rewriting inefficient queries that cause excessive table scans or temporary table creation
-- **Index strategy development**: Building and maintaining the right indexes for your specific workload patterns
-- **Table partitioning**: Implementing horizontal or vertical partitioning strategies for large tables to improve query performance
-- **Storage engine selection**: Choosing the appropriate storage engines for different tables based on access patterns
-- **Regular EXPLAIN analysis**: Proactively identifying query performance issues before they impact production
-
-## Monitoring & Alerting That Actually Matters
-
-Forget generic security alerts that cry wolf. Our monitoring focuses on what actually impacts your business:
-
-- **Performance anomaly detection**: AI-powered monitoring that learns your normal query patterns and alerts only on meaningful deviations
-- **Resource utilization tracking**: Watching memory, CPU, disk I/O, and connection counts with business-context awareness
-- **Query performance degradation alerts**: Identifying when specific queries start taking longer than their established baselines
-- **Replication lag monitoring**: Ensuring your database replicas stay in sync with configurable thresholds
-
-## Disaster Recovery That Works
-
-Most disaster recovery plans look great on paper but fail when needed. We focus on recovery solutions you can actually count on:
-
-- **Point-in-time recovery capabilities**: Configuring and testing transaction log backups that allow restoration to any moment in time
-- **Automated failover testing**: Regularly verifying that your failover mechanisms actually work under realistic scenarios
-- **Cross-region resilience**: Building systems that can withstand regional outages through strategic geographic distribution
-- **Recovery time optimization**: Continuously improving backup and restore procedures to minimize downtime
-
-## Beyond Traditional Security
-
-Don't worry—we haven't forgotten about traditional security measures. We still implement:
-
-- **Access control and authentication hardening**: Ensuring only authorized users access your data
-- **Encryption at rest and in transit**: Protecting data both when stored and when moving between systems
-- **Security patch management**: Keeping your database systems updated against known vulnerabilities
-- **Audit logging and compliance**: Maintaining detailed logs for regulatory requirements and forensic needs
-
-## What Sets Our Approach Apart
-
-Unlike traditional security vendors who sell fear, we sell something much more valuable: peace of mind knowing your data will be there when you need it, performing as expected, and structured to deliver business insights.
-
-Because the most secure database in the world is useless if you can't access it when you need to make a critical business decision.
-
-<div class="ContentSeparator"></div>
-
-Ready to talk about security that actually matters to your business? [Contact our team](/about/contacts/) to discuss how we can help ensure your data is both secure and available when you need it most.*
+<div class="caption margin-t-md">→ <a href="/about/contacts/">Find out what would actually take you down</a></div>
