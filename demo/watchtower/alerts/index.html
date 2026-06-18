@@ -1,0 +1,153 @@
+---
+permalink: /demo/watchtower/alerts/
+eleventyExcludeFromCollections: true
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alerts — Watchtower · Rare Digits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/modules/watchtower.css">
+</head>
+<body class="wt" data-wt-screen="alerts">
+<div class="wt-app">
+
+  <aside class="wt-sidebar">
+    <div class="wt-logo">
+      <div class="wt-logo__mark">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6z"></path><circle cx="12" cy="11" r="2.6"></circle></svg>
+      </div>
+      <div><div class="wt-logo__name">Watchtower</div><div class="wt-logo__sub">network monitor</div></div>
+    </div>
+    <div class="wt-netsel">
+      <div class="wt-netsel__avatar">H</div>
+      <div class="wt-netsel__body"><div class="wt-netsel__name">Helios</div><div class="wt-netsel__sub">HLX · PoS</div></div>
+      <span class="wt-netsel__dot"></span>
+    </div>
+    <nav class="wt-nav">
+      <a class="wt-nav__item" href="/demo/watchtower/overview/"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h7v7H3z"></path><path d="M14 3h7v7h-7z"></path><path d="M14 14h7v7h-7z"></path><path d="M3 14h7v7H3z"></path></svg><span class="wt-nav__label">Overview</span></a>
+      <a class="wt-nav__item" href="/demo/watchtower/transactions/"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h11"></path><path d="M14 4l4 3-4 3"></path><path d="M17 17H6"></path><path d="M10 14l-4 3 4 3"></path></svg><span class="wt-nav__label">Transactions</span></a>
+      <a class="wt-nav__item" href="/demo/watchtower/staking/"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7z"></path><path d="M3 7l9 5 9-5"></path><path d="M12 12v10"></path></svg><span class="wt-nav__label">Staking</span></a>
+      <a class="wt-nav__item is-active" href="/demo/watchtower/alerts/"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.7 21a2 2 0 0 1-3.4 0"></path></svg><span class="wt-nav__label">Alerts</span><span class="wt-nav__badge">3</span></a>
+    </nav>
+    <div class="wt-user">
+      <div class="wt-user__avatar">AK</div>
+      <div><div class="wt-user__name">Research desk</div><div class="wt-user__sub">analyst workspace</div></div>
+    </div>
+  </aside>
+
+  <main class="wt-main wt-scroll">
+    <header class="wt-topbar">
+      <div class="wt-topbar__head">
+        <div class="wt-topbar__title">Alerts</div>
+        <div class="wt-topbar__caption">anomalies, reorgs &amp; slashing events</div>
+      </div>
+      <div class="wt-search">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a3abb8" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.2-3.2"></path></svg>
+        <span>search address / tx…</span>
+      </div>
+      <div class="wt-period">
+        <button class="wt-period__btn" data-wt-period="24h">24H</button>
+        <button class="wt-period__btn" data-wt-period="7d">7D</button>
+        <button class="wt-period__btn" data-wt-period="30d">30D</button>
+      </div>
+    </header>
+
+    <div class="wt-content" data-wt-content>
+
+      <div class="wt-grid-4">
+        <div class="wt-statcard"><div class="wt-statcard__icon wt-soft-neg"><span class="wt-bg-neg"></span></div><div><div class="wt-statcard__value">1</div><div class="wt-statcard__label">Critical</div></div></div>
+        <div class="wt-statcard"><div class="wt-statcard__icon wt-soft-warn"><span class="wt-bg-warn"></span></div><div><div class="wt-statcard__value">2</div><div class="wt-statcard__label">Warning</div></div></div>
+        <div class="wt-statcard"><div class="wt-statcard__icon wt-soft-info"><span class="wt-bg-info"></span></div><div><div class="wt-statcard__value">4</div><div class="wt-statcard__label">Info</div></div></div>
+        <div class="wt-statcard"><div class="wt-statcard__icon wt-soft-pos"><span class="wt-bg-pos"></span></div><div><div class="wt-statcard__value">12</div><div class="wt-statcard__label">Resolved (24h)</div></div></div>
+      </div>
+
+      <div class="wt-card wt-card--clip">
+        <div class="wt-feed__head">
+          <div class="wt-card__title">Alert feed</div>
+          <div class="wt-feed__filters">
+            <button class="wt-chip is-active">All</button>
+            <button class="wt-chip">Critical</button>
+            <button class="wt-chip">Warning</button>
+            <button class="wt-chip">Info</button>
+          </div>
+        </div>
+
+        <div class="wt-feed__row">
+          <span class="wt-sev wt-sev--critical">Critical</span>
+          <div class="wt-feed__main">
+            <div class="wt-feed__titlerow"><span class="wt-feed__title">Large exchange inflow detected</span><span class="wt-feed__cat">Whale movement</span></div>
+            <div class="wt-feed__detail">2.41M HLX (≈ $15.4M) transferred to a labelled CEX hot wallet from a long-dormant address.</div>
+          </div>
+          <div class="wt-feed__meta"><div class="wt-feed__time">08:55 · 53m ago</div><div class="wt-feed__status">open</div></div>
+        </div>
+
+        <div class="wt-feed__row">
+          <span class="wt-sev wt-sev--warning">Warning</span>
+          <div class="wt-feed__main">
+            <div class="wt-feed__titlerow"><span class="wt-feed__title">Mempool pressure spike</span><span class="wt-feed__cat">Network load</span></div>
+            <div class="wt-feed__detail">Pending transactions rose +218% above the 7-day baseline within a 15-minute window.</div>
+          </div>
+          <div class="wt-feed__meta"><div class="wt-feed__time">08:42 · 1h ago</div><div class="wt-feed__status">open</div></div>
+        </div>
+
+        <div class="wt-feed__row">
+          <span class="wt-sev wt-sev--warning">Warning</span>
+          <div class="wt-feed__main">
+            <div class="wt-feed__titlerow"><span class="wt-feed__title">Figment missed 4 consecutive blocks</span><span class="wt-feed__cat">Validator</span></div>
+            <div class="wt-feed__detail">Validator missed blocks 18,442,101–104. Uptime dropped to 97.8%. Now producing again.</div>
+          </div>
+          <div class="wt-feed__meta"><div class="wt-feed__time">06:10 · 2h ago</div><div class="wt-feed__status">monitoring</div></div>
+        </div>
+
+        <div class="wt-feed__row">
+          <span class="wt-sev wt-sev--info">Info</span>
+          <div class="wt-feed__main">
+            <div class="wt-feed__titlerow"><span class="wt-feed__title">Staking ratio crossed 67%</span><span class="wt-feed__cat">Staking</span></div>
+            <div class="wt-feed__detail">Network staking ratio reached an all-time high of 67.4% of circulating supply.</div>
+          </div>
+          <div class="wt-feed__meta"><div class="wt-feed__time">02:33 · 6h ago</div><div class="wt-feed__status">open</div></div>
+        </div>
+
+        <div class="wt-feed__row">
+          <span class="wt-sev wt-sev--ok">Resolved</span>
+          <div class="wt-feed__main">
+            <div class="wt-feed__titlerow"><span class="wt-feed__title">Chain reorg resolved (depth 2)</span><span class="wt-feed__cat">Consensus</span></div>
+            <div class="wt-feed__detail">A depth-2 reorganization at height 18,440,902 was detected and resolved within one block.</div>
+          </div>
+          <div class="wt-feed__meta"><div class="wt-feed__time">yesterday · 23:14</div><div class="wt-feed__status">resolved</div></div>
+        </div>
+
+        <div class="wt-feed__row">
+          <span class="wt-sev wt-sev--info">Info</span>
+          <div class="wt-feed__main">
+            <div class="wt-feed__titlerow"><span class="wt-feed__title">Proposal #142 entered voting</span><span class="wt-feed__cat">Governance</span></div>
+            <div class="wt-feed__detail">Parameter-change proposal to adjust the inflation schedule is now in its voting period.</div>
+          </div>
+          <div class="wt-feed__meta"><div class="wt-feed__time">yesterday · 19:02</div><div class="wt-feed__status">open</div></div>
+        </div>
+
+        <div class="wt-feed__row">
+          <span class="wt-sev wt-sev--ok">Resolved</span>
+          <div class="wt-feed__main">
+            <div class="wt-feed__titlerow"><span class="wt-feed__title">No slashing events</span><span class="wt-feed__cat">Validator</span></div>
+            <div class="wt-feed__detail">No slashing or double-sign events recorded across the validator set in the last 24 hours.</div>
+          </div>
+          <div class="wt-feed__meta"><div class="wt-feed__time">yesterday · 12:00</div><div class="wt-feed__status">resolved</div></div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/raredigits/rare-charts@v0.9.6/rare-charts.min.js"></script>
+<script src="/assets/js/demo/watchtower.js" defer></script>
+</body>
+</html>

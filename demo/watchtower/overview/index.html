@@ -1,0 +1,404 @@
+---
+permalink: /demo/watchtower/overview/
+eleventyExcludeFromCollections: true
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Network overview — Watchtower · Rare Digits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/modules/watchtower.css">
+</head>
+<body class="wt" data-wt-screen="overview">
+<div class="wt-app">
+
+  <!-- ============================ SIDEBAR ============================ -->
+  <aside class="wt-sidebar">
+    <div class="wt-logo">
+      <div class="wt-logo__mark">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6z"></path><circle cx="12" cy="11" r="2.6"></circle></svg>
+      </div>
+      <div>
+        <div class="wt-logo__name">Watchtower</div>
+        <div class="wt-logo__sub">network monitor</div>
+      </div>
+    </div>
+
+    <div class="wt-netsel">
+      <div class="wt-netsel__avatar">H</div>
+      <div class="wt-netsel__body">
+        <div class="wt-netsel__name">Helios</div>
+        <div class="wt-netsel__sub">HLX · PoS</div>
+      </div>
+      <span class="wt-netsel__dot"></span>
+    </div>
+
+    <nav class="wt-nav">
+      <a class="wt-nav__item is-active" href="/demo/watchtower/overview/">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h7v7H3z"></path><path d="M14 3h7v7h-7z"></path><path d="M14 14h7v7h-7z"></path><path d="M3 14h7v7H3z"></path></svg>
+        <span class="wt-nav__label">Overview</span>
+      </a>
+      <a class="wt-nav__item" href="/demo/watchtower/transactions/">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h11"></path><path d="M14 4l4 3-4 3"></path><path d="M17 17H6"></path><path d="M10 14l-4 3 4 3"></path></svg>
+        <span class="wt-nav__label">Transactions</span>
+      </a>
+      <a class="wt-nav__item" href="/demo/watchtower/staking/">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7z"></path><path d="M3 7l9 5 9-5"></path><path d="M12 12v10"></path></svg>
+        <span class="wt-nav__label">Staking</span>
+      </a>
+      <a class="wt-nav__item" href="/demo/watchtower/alerts/">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.7 21a2 2 0 0 1-3.4 0"></path></svg>
+        <span class="wt-nav__label">Alerts</span>
+        <span class="wt-nav__badge">3</span>
+      </a>
+    </nav>
+
+    <div class="wt-user">
+      <div class="wt-user__avatar">AK</div>
+      <div>
+        <div class="wt-user__name">Research desk</div>
+        <div class="wt-user__sub">analyst workspace</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============================== MAIN ============================== -->
+  <main class="wt-main wt-scroll">
+
+    <header class="wt-topbar">
+      <div class="wt-topbar__head">
+        <div class="wt-topbar__title">Network overview</div>
+        <div class="wt-topbar__caption">Helios mainnet · health &amp; flow at a glance</div>
+      </div>
+      <div class="wt-search">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a3abb8" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.2-3.2"></path></svg>
+        <span>search address / tx…</span>
+      </div>
+      <div class="wt-period">
+        <button class="wt-period__btn" data-wt-period="24h">24H</button>
+        <button class="wt-period__btn" data-wt-period="7d">7D</button>
+        <button class="wt-period__btn" data-wt-period="30d">30D</button>
+      </div>
+    </header>
+
+    <div class="wt-content">
+
+      <div class="wt-layoutbar">
+        <span class="wt-layoutbar__label">Layout</span>
+        <div class="wt-seg">
+          <button class="wt-seg__btn" data-wt-layout-btn="grid">Grid</button>
+          <button class="wt-seg__btn" data-wt-layout-btn="briefing">Briefing</button>
+          <button class="wt-seg__btn" data-wt-layout-btn="dense">Dense</button>
+        </div>
+      </div>
+
+      <!-- ===================== LAYOUT A · GRID ===================== -->
+      <section data-wt-layout="grid" class="is-active">
+
+        <div class="wt-grid-4">
+          <div class="wt-kpi">
+            <div class="wt-kpi__top"><span class="wt-kpi__label">Inbound tx</span><span class="wt-badge wt-badge--pos">+4.8%</span></div>
+            <div class="wt-kpi__value" data-val="kpiInbound">—</div>
+            <div class="wt-kpi__spark" data-chart="spark" data-spark="inflow" data-color="#5b54f0"></div>
+            <div class="wt-kpi__sub" data-val="kpiInboundSub">—</div>
+          </div>
+          <div class="wt-kpi">
+            <div class="wt-kpi__top"><span class="wt-kpi__label">Outbound tx</span><span class="wt-badge wt-badge--pos">+3.1%</span></div>
+            <div class="wt-kpi__value" data-val="kpiOutbound">—</div>
+            <div class="wt-kpi__spark" data-chart="spark" data-spark="outflow" data-color="#19b3a6"></div>
+            <div class="wt-kpi__sub" data-val="kpiOutboundSub">—</div>
+          </div>
+          <div class="wt-kpi">
+            <div class="wt-kpi__top"><span class="wt-kpi__label">Active addresses</span><span class="wt-badge wt-badge--pos">+2.2%</span></div>
+            <div class="wt-kpi__value" data-val="kpiActive">—</div>
+            <div class="wt-kpi__spark" data-chart="spark" data-spark="active" data-color="#5b54f0"></div>
+            <div class="wt-kpi__sub">unique senders + receivers</div>
+          </div>
+          <div class="wt-kpi">
+            <div class="wt-kpi__top"><span class="wt-kpi__label">Staking ratio</span><span class="wt-badge wt-badge--pos">+0.3pp</span></div>
+            <div class="wt-kpi__value">67.4%</div>
+            <div class="wt-kpi__spark" data-chart="spark" data-spark="staking" data-color="#16a34a"></div>
+            <div class="wt-kpi__sub">of circulating HLX</div>
+          </div>
+        </div>
+
+        <div class="wt-row-2-1">
+          <div class="wt-card wt-card--pad">
+            <div class="wt-card__head">
+              <div>
+                <div class="wt-card__title">Transaction flow</div>
+                <div class="wt-card__sub">inbound vs outbound · <span data-val="periodLabel">—</span></div>
+              </div>
+              <div class="wt-legend">
+                <span class="wt-legend__item"><span class="wt-legend__sw wt-legend__sw--in"></span>Inbound</span>
+                <span class="wt-legend__item"><span class="wt-legend__sw wt-legend__sw--out"></span>Outbound</span>
+              </div>
+            </div>
+            <div class="wt-chart wt-mt-14" data-chart="flow" data-h="190"></div>
+            <div class="wt-stats">
+              <div><div class="wt-stat__label">Inbound total</div><div class="wt-stat__value" data-val="flowInTotal">—</div></div>
+              <div><div class="wt-stat__label">Outbound total</div><div class="wt-stat__value" data-val="flowOutTotal">—</div></div>
+              <div><div class="wt-stat__label">Net flow</div><div class="wt-stat__value wt-stat__value--net" data-val="flowNet">—</div></div>
+            </div>
+          </div>
+
+          <div class="wt-card wt-card--pad wt-card--col">
+            <div class="wt-card__title">Network health</div>
+            <div class="wt-card__sub">composite score</div>
+            <div class="wt-gauge" data-chart="health" data-h="150"></div>
+            <div class="wt-signals">
+              <div class="wt-signal"><span class="wt-signal__dot wt-bg-pos"></span><span class="wt-signal__label">Block production</span><span class="wt-signal__value wt-c-pos">99.98%</span></div>
+              <div class="wt-signal"><span class="wt-signal__dot wt-bg-pos"></span><span class="wt-signal__label">Validator uptime</span><span class="wt-signal__value wt-c-pos">99.2%</span></div>
+              <div class="wt-signal"><span class="wt-signal__dot wt-bg-pos"></span><span class="wt-signal__label">Finality time</span><span class="wt-signal__value wt-c-pos">5.8s</span></div>
+              <div class="wt-signal"><span class="wt-signal__dot wt-bg-warn"></span><span class="wt-signal__label">Mempool pressure</span><span class="wt-signal__value wt-c-warn">elevated</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wt-row-1-1">
+          <div class="wt-card wt-card--pad">
+            <div class="wt-card__head">
+              <div>
+                <div class="wt-card__title">Decentralization</div>
+                <div class="wt-card__sub">stake distribution across validators</div>
+              </div>
+            </div>
+            <div class="wt-decent">
+              <div class="wt-donut" data-chart="donut" data-h="150"></div>
+              <div class="wt-vlist">
+                <div class="wt-vrow"><span class="wt-vrow__sw wt-sw-1"></span><span class="wt-vrow__name">Stride Labs</span><span class="wt-vrow__share">8.4%</span></div>
+                <div class="wt-vrow"><span class="wt-vrow__sw wt-sw-2"></span><span class="wt-vrow__name">Cosmostation</span><span class="wt-vrow__share">7.1%</span></div>
+                <div class="wt-vrow"><span class="wt-vrow__sw wt-sw-3"></span><span class="wt-vrow__name">Figment</span><span class="wt-vrow__share">6.2%</span></div>
+                <div class="wt-vrow"><span class="wt-vrow__sw wt-sw-4"></span><span class="wt-vrow__name">Allnodes</span><span class="wt-vrow__share">5.5%</span></div>
+                <div class="wt-vrow"><span class="wt-vrow__sw wt-sw-5"></span><span class="wt-vrow__name">others (171)</span><span class="wt-vrow__share">72.8%</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wt-card wt-card--pad">
+            <div class="wt-card__head">
+              <div>
+                <div class="wt-card__title">TVL &amp; DeFi activity</div>
+                <div class="wt-card__sub">total value locked · <span data-val="periodLabel">—</span></div>
+              </div>
+              <div>
+                <div class="wt-tvl__value" data-val="tvlValue">—</div>
+                <div class="wt-tvl__delta">+1.9%</div>
+              </div>
+            </div>
+            <div class="wt-chart wt-mt-14" data-chart="tvl" data-h="120"></div>
+            <div class="wt-proto">
+              <div class="wt-proto__row"><span class="wt-proto__name">Helix DEX</span><div class="wt-proto__bar"><div class="wt-proto__fill" style="width:100%"></div></div><span class="wt-proto__val">$1.62B</span></div>
+              <div class="wt-proto__row"><span class="wt-proto__name">Lumen Lend</span><div class="wt-proto__bar"><div class="wt-proto__fill" style="width:73%"></div></div><span class="wt-proto__val">$1.18B</span></div>
+              <div class="wt-proto__row"><span class="wt-proto__name">Orbit Staking</span><div class="wt-proto__bar"><div class="wt-proto__fill" style="width:58%"></div></div><span class="wt-proto__val">$0.94B</span></div>
+              <div class="wt-proto__row"><span class="wt-proto__name">Nova Vaults</span><div class="wt-proto__bar"><div class="wt-proto__fill" style="width:38%"></div></div><span class="wt-proto__val">$0.61B</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wt-row-2-1">
+          <div class="wt-card wt-card--clip">
+            <div class="wt-card__head" style="padding:18px 22px 14px">
+              <div>
+                <div class="wt-card__title">Large transactions</div>
+                <div class="wt-card__sub">whale movements · <span data-val="periodLabel">—</span></div>
+              </div>
+              <a class="wt-card__link" href="/demo/watchtower/transactions/">View all →</a>
+            </div>
+            <div class="wt-thead wt-cols-tx4"><span>Transaction</span><span class="wt-right">Amount</span><span class="wt-right">Value</span><span class="wt-right">Age</span></div>
+            <div class="wt-tr wt-cols-tx4"><div class="wt-tx"><span class="wt-tx__icon wt-tile--unbond"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7z"></path></svg></span><div><div class="wt-tx__hash">0x7a3f…b21c</div><div class="wt-tx__type">Validator unbond</div></div></div><div class="wt-right wt-cell-mono">1.84M HLX</div><div class="wt-right wt-cell-usd">$11.8M</div><div class="wt-right wt-cell-age">12m</div></div>
+            <div class="wt-tr wt-cols-tx4"><div class="wt-tx"><span class="wt-tx__icon wt-tile--inflow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"></path></svg></span><div><div class="wt-tx__hash">0x09c2…4e7a</div><div class="wt-tx__type">Exchange inflow</div></div></div><div class="wt-right wt-cell-mono">2.41M HLX</div><div class="wt-right wt-cell-usd">$15.4M</div><div class="wt-right wt-cell-age">48m</div></div>
+            <div class="wt-tr wt-cols-tx4"><div class="wt-tx"><span class="wt-tx__icon wt-tile--deposit"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7z"></path></svg></span><div><div class="wt-tx__hash">0xb1e8…90fd</div><div class="wt-tx__type">DeFi deposit</div></div></div><div class="wt-right wt-cell-mono">0.92M HLX</div><div class="wt-right wt-cell-usd">$5.9M</div><div class="wt-right wt-cell-age">1h 20m</div></div>
+            <div class="wt-tr wt-cols-tx4"><div class="wt-tx"><span class="wt-tx__icon wt-tile--outflow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></span><div><div class="wt-tx__hash">0x5d44…1aa9</div><div class="wt-tx__type">Exchange outflow</div></div></div><div class="wt-right wt-cell-mono">1.27M HLX</div><div class="wt-right wt-cell-usd">$8.1M</div><div class="wt-right wt-cell-age">2h 05m</div></div>
+            <div class="wt-tr wt-cols-tx4"><div class="wt-tx"><span class="wt-tx__icon wt-tile--unbond"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7z"></path></svg></span><div><div class="wt-tx__hash">0x3e90…7c02</div><div class="wt-tx__type">Validator unbond</div></div></div><div class="wt-right wt-cell-mono">0.64M HLX</div><div class="wt-right wt-cell-usd">$4.1M</div><div class="wt-right wt-cell-age">3h 41m</div></div>
+            <div class="wt-tr wt-cols-tx4"><div class="wt-tx"><span class="wt-tx__icon wt-tile--inflow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"></path></svg></span><div><div class="wt-tx__hash">0xf28a…55d1</div><div class="wt-tx__type">Exchange inflow</div></div></div><div class="wt-right wt-cell-mono">3.05M HLX</div><div class="wt-right wt-cell-usd">$19.5M</div><div class="wt-right wt-cell-age">5h 12m</div></div>
+          </div>
+
+          <div class="wt-card wt-card--clip wt-card--col">
+            <div class="wt-card__head" style="padding:18px 20px 14px">
+              <div class="wt-card__title">Recent alerts</div>
+              <a class="wt-card__link" href="/demo/watchtower/alerts/">All →</a>
+            </div>
+            <div class="wt-alert"><span class="wt-alert__dot wt-bg-warn"></span><div><div class="wt-alert__title">Mempool spike</div><div class="wt-alert__detail">Pending tx +218% over baseline in 15 min window.</div><div class="wt-alert__time">08:42 · 6m ago</div></div></div>
+            <div class="wt-alert"><span class="wt-alert__dot wt-bg-neg"></span><div><div class="wt-alert__title">Whale exchange inflow</div><div class="wt-alert__detail">2.4M HLX moved to a known CEX deposit address.</div><div class="wt-alert__time">07:55 · 53m ago</div></div></div>
+            <div class="wt-alert"><span class="wt-alert__dot wt-bg-warn"></span><div><div class="wt-alert__title">Validator missed blocks</div><div class="wt-alert__detail">Figment missed 4 consecutive blocks, now recovered.</div><div class="wt-alert__time">06:10 · 2h ago</div></div></div>
+            <div class="wt-alert"><span class="wt-alert__dot wt-bg-pos"></span><div><div class="wt-alert__title">Staking ratio milestone</div><div class="wt-alert__detail">Network crossed 67% staked for the first time.</div><div class="wt-alert__time">02:33 · 6h ago</div></div></div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ===================== LAYOUT B · BRIEFING ===================== -->
+      <section data-wt-layout="briefing">
+
+        <div class="wt-brief-hero">
+          <div class="wt-card wt-card--pad wt-card--col wt-brief-health">
+            <div class="wt-card__title" style="align-self:flex-start">Network health</div>
+            <div class="wt-gauge" data-chart="health" data-h="150"></div>
+            <div class="wt-signals" style="width:100%">
+              <div class="wt-signal"><span class="wt-signal__dot wt-bg-pos"></span><span class="wt-signal__label">Block production</span><span class="wt-signal__value wt-c-pos">99.98%</span></div>
+              <div class="wt-signal"><span class="wt-signal__dot wt-bg-pos"></span><span class="wt-signal__label">Validator uptime</span><span class="wt-signal__value wt-c-pos">99.2%</span></div>
+              <div class="wt-signal"><span class="wt-signal__dot wt-bg-pos"></span><span class="wt-signal__label">Finality time</span><span class="wt-signal__value wt-c-pos">5.8s</span></div>
+              <div class="wt-signal"><span class="wt-signal__dot wt-bg-warn"></span><span class="wt-signal__label">Mempool pressure</span><span class="wt-signal__value wt-c-warn">elevated</span></div>
+            </div>
+          </div>
+
+          <div class="wt-brief-kpis">
+            <div class="wt-kpi">
+              <div class="wt-kpi__top"><span class="wt-kpi__label">Inbound tx</span><span class="wt-badge wt-badge--pos">+4.8%</span></div>
+              <div class="wt-kpi__value" data-val="kpiInbound">—</div>
+              <div class="wt-kpi__spark" data-chart="spark" data-spark="inflow" data-color="#5b54f0"></div>
+            </div>
+            <div class="wt-kpi">
+              <div class="wt-kpi__top"><span class="wt-kpi__label">Outbound tx</span><span class="wt-badge wt-badge--pos">+3.1%</span></div>
+              <div class="wt-kpi__value" data-val="kpiOutbound">—</div>
+              <div class="wt-kpi__spark" data-chart="spark" data-spark="outflow" data-color="#19b3a6"></div>
+            </div>
+            <div class="wt-kpi">
+              <div class="wt-kpi__top"><span class="wt-kpi__label">Active addresses</span><span class="wt-badge wt-badge--pos">+2.2%</span></div>
+              <div class="wt-kpi__value" data-val="kpiActive">—</div>
+              <div class="wt-kpi__spark" data-chart="spark" data-spark="active" data-color="#5b54f0"></div>
+            </div>
+            <div class="wt-kpi">
+              <div class="wt-kpi__top"><span class="wt-kpi__label">Staking ratio</span><span class="wt-badge wt-badge--pos">+0.3pp</span></div>
+              <div class="wt-kpi__value">67.4%</div>
+              <div class="wt-kpi__spark" data-chart="spark" data-spark="staking" data-color="#16a34a"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wt-card wt-card--pad">
+          <div class="wt-card__head" style="margin-bottom:16px">
+            <div><div class="wt-card__title">Transaction flow</div><div class="wt-card__sub">inbound vs outbound · <span data-val="periodLabel">—</span></div></div>
+            <div class="wt-brief-stats">
+              <div><div class="wt-stat__label">Inbound</div><div class="wt-stat__value" data-val="flowInTotal">—</div></div>
+              <div><div class="wt-stat__label">Outbound</div><div class="wt-stat__value" data-val="flowOutTotal">—</div></div>
+              <div><div class="wt-stat__label">Net</div><div class="wt-stat__value wt-stat__value--net" data-val="flowNet">—</div></div>
+            </div>
+          </div>
+          <div class="wt-chart" data-chart="flow" data-h="200"></div>
+        </div>
+
+        <div class="wt-row-1-1">
+          <div class="wt-card wt-card--pad">
+            <div class="wt-card__title">Decentralization</div>
+            <div class="wt-decent">
+              <div class="wt-donut" data-chart="donut" data-h="150"></div>
+              <div class="wt-vlist">
+                <div class="wt-vrow"><span class="wt-vrow__sw wt-sw-1"></span><span class="wt-vrow__name">Stride Labs</span><span class="wt-vrow__share">8.4%</span></div>
+                <div class="wt-vrow"><span class="wt-vrow__sw wt-sw-2"></span><span class="wt-vrow__name">Cosmostation</span><span class="wt-vrow__share">7.1%</span></div>
+                <div class="wt-vrow"><span class="wt-vrow__sw wt-sw-3"></span><span class="wt-vrow__name">Figment</span><span class="wt-vrow__share">6.2%</span></div>
+                <div class="wt-vrow"><span class="wt-vrow__sw wt-sw-4"></span><span class="wt-vrow__name">Allnodes</span><span class="wt-vrow__share">5.5%</span></div>
+                <div class="wt-vrow"><span class="wt-vrow__sw wt-sw-5"></span><span class="wt-vrow__name">others (171)</span><span class="wt-vrow__share">72.8%</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="wt-card wt-card--pad">
+            <div class="wt-card__head">
+              <div><div class="wt-card__title">TVL &amp; DeFi</div><div class="wt-card__sub"><span data-val="periodLabel">—</span></div></div>
+              <div><div class="wt-tvl__value" data-val="tvlValue">—</div><div class="wt-tvl__delta">+1.9%</div></div>
+            </div>
+            <div class="wt-chart wt-mt-14" data-chart="tvl" data-h="120"></div>
+          </div>
+        </div>
+
+        <div class="wt-card wt-card--clip">
+          <div class="wt-card__head" style="padding:18px 22px 14px">
+            <div class="wt-card__title">Large transactions</div>
+            <a class="wt-card__link" href="/demo/watchtower/transactions/">View all →</a>
+          </div>
+          <div class="wt-tr wt-cols-tx4"><div class="wt-tx"><span class="wt-tx__icon wt-tile--unbond"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7z"></path></svg></span><div><div class="wt-tx__hash">0x7a3f…b21c</div><div class="wt-tx__type">Validator unbond</div></div></div><div class="wt-right wt-cell-mono">1.84M HLX</div><div class="wt-right wt-cell-usd">$11.8M</div><div class="wt-right wt-cell-age">12m</div></div>
+          <div class="wt-tr wt-cols-tx4"><div class="wt-tx"><span class="wt-tx__icon wt-tile--inflow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"></path></svg></span><div><div class="wt-tx__hash">0x09c2…4e7a</div><div class="wt-tx__type">Exchange inflow</div></div></div><div class="wt-right wt-cell-mono">2.41M HLX</div><div class="wt-right wt-cell-usd">$15.4M</div><div class="wt-right wt-cell-age">48m</div></div>
+          <div class="wt-tr wt-cols-tx4"><div class="wt-tx"><span class="wt-tx__icon wt-tile--deposit"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7z"></path></svg></span><div><div class="wt-tx__hash">0xb1e8…90fd</div><div class="wt-tx__type">DeFi deposit</div></div></div><div class="wt-right wt-cell-mono">0.92M HLX</div><div class="wt-right wt-cell-usd">$5.9M</div><div class="wt-right wt-cell-age">1h 20m</div></div>
+          <div class="wt-tr wt-cols-tx4"><div class="wt-tx"><span class="wt-tx__icon wt-tile--outflow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></span><div><div class="wt-tx__hash">0x5d44…1aa9</div><div class="wt-tx__type">Exchange outflow</div></div></div><div class="wt-right wt-cell-mono">1.27M HLX</div><div class="wt-right wt-cell-usd">$8.1M</div><div class="wt-right wt-cell-age">2h 05m</div></div>
+        </div>
+
+      </section>
+
+      <!-- ===================== LAYOUT C · DENSE ===================== -->
+      <section data-wt-layout="dense">
+
+        <div class="wt-dense-kpis">
+          <div class="wt-kpi wt-kpi--dense"><div class="wt-kpi__top"><span class="wt-kpi__label">Inbound tx</span><span class="wt-kpi__delta-mono wt-c-pos">+4.8%</span></div><div class="wt-kpi__value" data-val="kpiInbound">—</div></div>
+          <div class="wt-kpi wt-kpi--dense"><div class="wt-kpi__top"><span class="wt-kpi__label">Outbound tx</span><span class="wt-kpi__delta-mono wt-c-pos">+3.1%</span></div><div class="wt-kpi__value" data-val="kpiOutbound">—</div></div>
+          <div class="wt-kpi wt-kpi--dense"><div class="wt-kpi__top"><span class="wt-kpi__label">Active addresses</span><span class="wt-kpi__delta-mono wt-c-pos">+2.2%</span></div><div class="wt-kpi__value" data-val="kpiActive">—</div></div>
+          <div class="wt-kpi wt-kpi--dense"><div class="wt-kpi__top"><span class="wt-kpi__label">Staking ratio</span><span class="wt-kpi__delta-mono wt-c-pos">+0.3pp</span></div><div class="wt-kpi__value">67.4%</div></div>
+        </div>
+
+        <div class="wt-dense-grid">
+          <div class="wt-card wt-card--dense wt-card--pad wt-span-2">
+            <div class="wt-card__head" style="margin-bottom:12px">
+              <div class="wt-card__title--sm">Transaction flow</div>
+              <div class="wt-legend wt-flow-legend--dense">
+                <span class="wt-legend__item"><span class="wt-legend__sw wt-legend__sw--in"></span>In</span>
+                <span class="wt-legend__item"><span class="wt-legend__sw wt-legend__sw--out"></span>Out</span>
+              </div>
+            </div>
+            <div class="wt-chart" data-chart="flow" data-h="170"></div>
+          </div>
+
+          <div class="wt-card wt-card--dense wt-card--pad wt-card--col">
+            <div class="wt-card__title--sm" style="align-self:flex-start">Health</div>
+            <div class="wt-gauge" data-chart="health" data-h="130"></div>
+          </div>
+
+          <div class="wt-card wt-card--dense wt-card--pad">
+            <div class="wt-card__title--sm" style="margin-bottom:12px">Decentralization</div>
+            <div class="wt-decent" style="margin-top:0">
+              <div class="wt-donut" data-chart="donut" data-h="120" style="width:120px"></div>
+              <div class="wt-vlist">
+                <div class="wt-vrow"><span class="wt-vrow__sw wt-sw-1"></span><span class="wt-vrow__name">Stride Labs</span><span class="wt-vrow__share">8.4%</span></div>
+                <div class="wt-vrow"><span class="wt-vrow__sw wt-sw-2"></span><span class="wt-vrow__name">Cosmostation</span><span class="wt-vrow__share">7.1%</span></div>
+                <div class="wt-vrow"><span class="wt-vrow__sw wt-sw-3"></span><span class="wt-vrow__name">Figment</span><span class="wt-vrow__share">6.2%</span></div>
+                <div class="wt-vrow"><span class="wt-vrow__sw wt-sw-4"></span><span class="wt-vrow__name">Allnodes</span><span class="wt-vrow__share">5.5%</span></div>
+                <div class="wt-vrow"><span class="wt-vrow__sw wt-sw-5"></span><span class="wt-vrow__name">others (171)</span><span class="wt-vrow__share">72.8%</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wt-card wt-card--dense wt-card--pad">
+            <div class="wt-card__head" style="margin-bottom:8px"><div class="wt-card__title--sm">TVL</div><div class="wt-tvl__value" data-val="tvlValue">—</div></div>
+            <div class="wt-chart" data-chart="tvl" data-h="110"></div>
+            <div class="wt-proto" style="border-top:none;padding-top:12px">
+              <div class="wt-proto__row"><span class="wt-proto__name">Helix DEX</span><span class="wt-proto__val">$1.62B</span></div>
+              <div class="wt-proto__row"><span class="wt-proto__name">Lumen Lend</span><span class="wt-proto__val">$1.18B</span></div>
+              <div class="wt-proto__row"><span class="wt-proto__name">Orbit Staking</span><span class="wt-proto__val">$0.94B</span></div>
+              <div class="wt-proto__row"><span class="wt-proto__name">Nova Vaults</span><span class="wt-proto__val">$0.61B</span></div>
+            </div>
+          </div>
+
+          <div class="wt-card wt-card--dense wt-card--clip">
+            <div class="wt-card__title--sm" style="padding:16px 18px 10px">Recent alerts</div>
+            <div class="wt-alert" style="padding:9px 18px"><span class="wt-alert__dot wt-bg-warn"></span><div><div class="wt-alert__title">Mempool spike</div><div class="wt-alert__time">08:42 · 6m ago</div></div></div>
+            <div class="wt-alert" style="padding:9px 18px"><span class="wt-alert__dot wt-bg-neg"></span><div><div class="wt-alert__title">Whale exchange inflow</div><div class="wt-alert__time">07:55 · 53m ago</div></div></div>
+            <div class="wt-alert" style="padding:9px 18px"><span class="wt-alert__dot wt-bg-warn"></span><div><div class="wt-alert__title">Validator missed blocks</div><div class="wt-alert__time">06:10 · 2h ago</div></div></div>
+            <div class="wt-alert" style="padding:9px 18px"><span class="wt-alert__dot wt-bg-pos"></span><div><div class="wt-alert__title">Staking ratio milestone</div><div class="wt-alert__time">02:33 · 6h ago</div></div></div>
+          </div>
+        </div>
+
+        <div class="wt-card wt-card--dense wt-card--clip">
+          <div class="wt-card__title--sm" style="padding:16px 18px 10px">Large transactions</div>
+          <div class="wt-thead wt-cols-tx4" style="padding:0 18px 8px"><span>Transaction</span><span class="wt-right">Amount</span><span class="wt-right">Value</span><span class="wt-right">Age</span></div>
+          <div class="wt-tr wt-cols-tx4" style="padding:9px 18px"><div class="wt-tx"><span class="wt-tx__icon wt-tile--unbond"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7z"></path></svg></span><div class="wt-tx__hash">0x7a3f…b21c</div></div><div class="wt-right wt-cell-mono">1.84M HLX</div><div class="wt-right wt-cell-usd">$11.8M</div><div class="wt-right wt-cell-age">12m</div></div>
+          <div class="wt-tr wt-cols-tx4" style="padding:9px 18px"><div class="wt-tx"><span class="wt-tx__icon wt-tile--inflow"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"></path></svg></span><div class="wt-tx__hash">0x09c2…4e7a</div></div><div class="wt-right wt-cell-mono">2.41M HLX</div><div class="wt-right wt-cell-usd">$15.4M</div><div class="wt-right wt-cell-age">48m</div></div>
+          <div class="wt-tr wt-cols-tx4" style="padding:9px 18px"><div class="wt-tx"><span class="wt-tx__icon wt-tile--deposit"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7z"></path></svg></span><div class="wt-tx__hash">0xb1e8…90fd</div></div><div class="wt-right wt-cell-mono">0.92M HLX</div><div class="wt-right wt-cell-usd">$5.9M</div><div class="wt-right wt-cell-age">1h 20m</div></div>
+          <div class="wt-tr wt-cols-tx4" style="padding:9px 18px"><div class="wt-tx"><span class="wt-tx__icon wt-tile--outflow"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></span><div class="wt-tx__hash">0x5d44…1aa9</div></div><div class="wt-right wt-cell-mono">1.27M HLX</div><div class="wt-right wt-cell-usd">$8.1M</div><div class="wt-right wt-cell-age">2h 05m</div></div>
+          <div class="wt-tr wt-cols-tx4" style="padding:9px 18px"><div class="wt-tx"><span class="wt-tx__icon wt-tile--unbond"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7z"></path></svg></span><div class="wt-tx__hash">0x3e90…7c02</div></div><div class="wt-right wt-cell-mono">0.64M HLX</div><div class="wt-right wt-cell-usd">$4.1M</div><div class="wt-right wt-cell-age">3h 41m</div></div>
+          <div class="wt-tr wt-cols-tx4" style="padding:9px 18px"><div class="wt-tx"><span class="wt-tx__icon wt-tile--inflow"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"></path></svg></span><div class="wt-tx__hash">0xf28a…55d1</div></div><div class="wt-right wt-cell-mono">3.05M HLX</div><div class="wt-right wt-cell-usd">$19.5M</div><div class="wt-right wt-cell-age">5h 12m</div></div>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/raredigits/rare-charts@v0.9.6/rare-charts.min.js"></script>
+<script src="/assets/js/demo/watchtower.js" defer></script>
+</body>
+</html>

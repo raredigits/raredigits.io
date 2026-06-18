@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{font-family:'IBM Plex Sans',system-ui,-apple-system,sans-serif;background:#f7f8fa;color:#1a1d23;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+::selection{background:#dfe1fb;}
+@keyframes wt-pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
+@keyframes wt-fade{from{opacity:0;transform:translateY(7px);}to{opacity:1;transform:none;}}
+.wt-scroll::-webkit-scrollbar{width:11px;height:11px;}
+.wt-scroll::-webkit-scrollbar-thumb{background:#d4d9e2;border-radius:7px;border:3px solid #f7f8fa;}
+.wt-scroll::-webkit-scrollbar-thumb:hover{background:#bcc3cf;}
+</style>
+</helmet>
+<div style="display:flex; min-height:100vh; width:100%;" data-app="watchtower">
+
+  <!-- SIDEBAR -->
+  <aside style="width:248px; flex:none; background:#fff; border-right:1px solid #ebedf2; display:flex; flex-direction:column; position:sticky; top:0; height:100vh;">
+    <div style="padding:22px 22px 18px; display:flex; align-items:center; gap:11px;">
+      <div style="width:34px; height:34px; border-radius:9px; background:#1a1d23; display:flex; align-items:center; justify-content:center; flex:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6z"></path><circle cx="12" cy="11" r="2.6"></circle></svg>
+      </div>
+      <div style="line-height:1.1;">
+        <div style="font-weight:700; font-size:15px; letter-spacing:-.01em;">Watchtower</div>
+        <div style="font-size:11px; color:#8a93a3; font-family:'IBM Plex Mono',monospace;">network monitor</div>
+      </div>
+    </div>
+
+    <!-- network selector -->
+    <div style="margin:0 14px 14px; padding:11px 12px; border:1px solid #ebedf2; border-radius:11px; background:#fbfcfd; display:flex; align-items:center; gap:11px;">
+      <div style="width:30px; height:30px; border-radius:8px; background:linear-gradient(135deg,#5b54f0,#8b7dfb); flex:none; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:13px; font-family:'IBM Plex Mono',monospace;">H</div>
+      <div style="flex:1; line-height:1.15; min-width:0;">
+        <div style="font-weight:600; font-size:13px;">{{ network.name }}</div>
+        <div style="font-size:11px; color:#8a93a3; font-family:'IBM Plex Mono',monospace;">{{ network.token }} · PoS</div>
+      </div>
+      <span style="width:8px; height:8px; border-radius:50%; background:#16a34a; flex:none; animation:wt-pulse 2.4s ease-in-out infinite;"></span>
+    </div>
+
+    <nav style="padding:4px 14px; display:flex; flex-direction:column; gap:3px;">
+      <sc-for list="{{ navItems }}" as="n" hint-placeholder-count="4">
+        <button onClick="{{ n.onClick }}" style="display:flex; align-items:center; gap:12px; width:100%; border:none; cursor:pointer; padding:9px 12px; border-radius:9px; font-family:inherit; font-size:13.5px; font-weight:500; text-align:left; background: {{ n.bg }}; color: {{ n.color }}; transition:background .15s;" style-hover="background:#f2f3f7;">
+          <span style="flex:none; display:flex;">{{ n.icon }}</span>
+          <span style="flex:1;">{{ n.label }}</span>
+          <sc-if value="{{ n.badge }}" hint-placeholder-val="{{ true }}"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; background:#fdeaea; color:#dc2626; padding:1px 7px; border-radius:20px;">{{ n.badge }}</span></sc-if>
+        </button>
+      </sc-for>
+    </nav>
+
+    <div style="margin-top:auto; padding:16px; border-top:1px solid #ebedf2; display:flex; align-items:center; gap:11px;">
+      <div style="width:30px; height:30px; border-radius:50%; background:#eef0fe; color:#5b54f0; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:12px; flex:none;">AK</div>
+      <div style="line-height:1.2; flex:1; min-width:0;">
+        <div style="font-size:12.5px; font-weight:600;">Research desk</div>
+        <div style="font-size:11px; color:#8a93a3;">analyst workspace</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="wt-scroll" style="flex:1; height:100vh; overflow-y:auto; min-width:0;">
+
+    <!-- TOPBAR -->
+    <header style="position:sticky; top:0; z-index:20; background:rgba(247,248,250,.82); backdrop-filter:blur(10px); border-bottom:1px solid #ebedf2; padding:16px 30px; display:flex; align-items:center; gap:20px;">
+      <div style="flex:1; min-width:0;">
+        <div style="font-size:19px; font-weight:700; letter-spacing:-.02em; line-height:1.1;">{{ screenTitle }}</div>
+        <div style="font-size:12.5px; color:#8a93a3; margin-top:2px;">{{ screenCaption }}</div>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:8px; background:#fff; border:1px solid #e8ebf0; border-radius:10px; padding:7px 12px; min-width:220px;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a3abb8" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.2-3.2"></path></svg>
+        <span style="font-size:13px; color:#a3abb8; font-family:'IBM Plex Mono',monospace;">search address / tx…</span>
+      </div>
+
+      <!-- period segmented -->
+      <div style="display:flex; background:#eef0f3; border-radius:10px; padding:3px; gap:2px;">
+        <sc-for list="{{ periods }}" as="p" hint-placeholder-count="3">
+          <button onClick="{{ p.onClick }}" style="border:none; cursor:pointer; font-family:'IBM Plex Mono',monospace; font-size:12.5px; font-weight:600; padding:6px 14px; border-radius:8px; background: {{ p.bg }}; color: {{ p.color }}; box-shadow: {{ p.shadow }}; transition:all .15s;">{{ p.label }}</button>
+        </sc-for>
+      </div>
+    </header>
+
+    <!-- ===================== OVERVIEW ===================== -->
+    <sc-if value="{{ isOverview }}" hint-placeholder-val="{{ true }}">
+    <div style="padding:24px 30px 40px; display:flex; flex-direction:column; gap:18px;">
+
+      <div style="display:flex; align-items:center; gap:11px;">
+        <span style="font-size:12px; color:#a3abb8; font-weight:500;">Layout</span>
+        <div style="display:flex; gap:6px;">
+          <sc-for list="{{ layouts }}" as="l" hint-placeholder-count="3">
+            <button onClick="{{ l.onClick }}" style="border:none; cursor:pointer; font-family:inherit; font-size:12px; font-weight:600; padding:5px 13px; border-radius:8px; background: {{ l.bg }}; color: {{ l.color }}; transition:all .15s;">{{ l.label }}</button>
+          </sc-for>
+        </div>
+      </div>
+
+      <sc-if value="{{ layoutGrid }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex; flex-direction:column; gap:18px;">
+      <!-- KPI ROW -->
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px;">
+        <sc-for list="{{ kpis }}" as="k" hint-placeholder-count="4">
+          <div style="background:#fff; border:1px solid #ebedf2; border-radius:14px; padding:18px 18px 14px; display:flex; flex-direction:column; gap:10px; box-shadow:0 1px 2px rgba(20,25,40,.04); animation:wt-fade .4s ease both;">
+            <div style="display:flex; align-items:center; justify-content:space-between;">
+              <span style="font-size:12px; color:#8a93a3; font-weight:500;">{{ k.label }}</span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; font-weight:600; padding:2px 7px; border-radius:20px; background: {{ k.deltaBg }}; color: {{ k.deltaColor }};">{{ k.delta }}</span>
+            </div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:27px; font-weight:600; letter-spacing:-.02em; line-height:1;">{{ k.value }}</div>
+            <div style="height:34px; margin-top:2px;">{{ k.spark }}</div>
+            <div style="font-size:11px; color:#a3abb8;">{{ k.sub }}</div>
+          </div>
+        </sc-for>
+      </div>
+
+      <!-- ROW 2: flow + health -->
+      <div style="display:grid; grid-template-columns:2fr 1fr; gap:18px;">
+        <div style="background:#fff; border:1px solid #ebedf2; border-radius:14px; padding:20px 22px; box-shadow:0 1px 2px rgba(20,25,40,.04);">
+          <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:18px;">
+            <div>
+              <div style="font-size:14px; font-weight:600;">Transaction flow</div>
+              <div style="font-size:12px; color:#8a93a3; margin-top:2px;">inbound vs outbound · {{ periodLabel }}</div>
+            </div>
+            <div style="display:flex; gap:16px; align-items:center;">
+              <span style="display:flex; align-items:center; gap:6px; font-size:12px; color:#5b6473;"><span style="width:9px; height:9px; border-radius:3px; background:#5b54f0;"></span>Inbound</span>
+              <span style="display:flex; align-items:center; gap:6px; font-size:12px; color:#5b6473;"><span style="width:9px; height:9px; border-radius:3px; background:#19b3a6;"></span>Outbound</span>
+            </div>
+          </div>
+          <div>{{ flowChart }}</div>
+          <div style="display:flex; gap:28px; margin-top:16px; padding-top:16px; border-top:1px solid #f0f1f5;">
+            <div><div style="font-size:11px; color:#a3abb8;">Inbound total</div><div style="font-family:'IBM Plex Mono',monospace; font-size:17px; font-weight:600; margin-top:3px;">{{ flowInTotal }}</div></div>
+            <div><div style="font-size:11px; color:#a3abb8;">Outbound total</div><div style="font-family:'IBM Plex Mono',monospace; font-size:17px; font-weight:600; margin-top:3px;">{{ flowOutTotal }}</div></div>
+            <div><div style="font-size:11px; color:#a3abb8;">Net flow</div><div style="font-family:'IBM Plex Mono',monospace; font-size:17px; font-weight:600; margin-top:3px; color:#16a34a;">{{ flowNet }}</div></div>
+          </div>
+        </div>
+
+        <div style="background:#fff; border:1px solid #ebedf2; border-radius:14px; padding:20px 22px; box-shadow:0 1px 2px rgba(20,25,40,.04); display:flex; flex-direction:column;">
+          <div style="font-size:14px; font-weight:600;">Network health</div>
+          <div style="font-size:12px; color:#8a93a3; margin-top:2px;">composite score</div>
+          <div style="position:relative; align-self:center; margin:14px 0 8px;">
+            {{ healthRing }}
+            <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:30px; font-weight:600; line-height:1;">{{ healthScore }}</div>
+              <div style="font-size:11px; color:#a3abb8; margin-top:2px;">/ 100</div>
+            </div>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:9px; margin-top:6px;">
+            <sc-for list="{{ healthSignals }}" as="s" hint-placeholder-count="4">
+              <div style="display:flex; align-items:center; gap:10px;">
+                <span style="width:7px; height:7px; border-radius:50%; flex:none; background: {{ s.color }};"></span>
+                <span style="flex:1; font-size:12.5px; color:#5b6473;">{{ s.label }}</span>
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; font-weight:600; color: {{ s.color }};">{{ s.value }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW 3: decentralization + tvl -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px;">
+        <div style="background:#fff; border:1px solid #ebedf2; border-radius:14px; padding:20px 22px; box-shadow:0 1px 2px rgba(20,25,40,.04);">
+          <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:6px;">
+            <div>
+              <div style="font-size:14px; font-weight:600;">Decentralization</div>
+              <div style="font-size:12px; color:#8a93a3; margin-top:2px;">stake distribution across validators</div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:22px; margin-top:10px;">
+            <div style="position:relative; flex:none;">
+              {{ validatorDonut }}
+              <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:22px; font-weight:600; line-height:1;">{{ nakamoto }}</div>
+                <div style="font-size:10px; color:#a3abb8; text-align:center; line-height:1.2; margin-top:3px;">Nakamoto<br>coefficient</div>
+              </div>
+            </div>
+            <div style="flex:1; display:flex; flex-direction:column; gap:8px; min-width:0;">
+              <sc-for list="{{ topValidators }}" as="v" hint-placeholder-count="5">
+                <div style="display:flex; align-items:center; gap:9px;">
+                  <span style="width:8px; height:8px; border-radius:2px; flex:none; background: {{ v.color }};"></span>
+                  <span style="flex:1; font-size:12.5px; color:#3a4150; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ v.name }}</span>
+                  <span style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; font-weight:600;">{{ v.share }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#fff; border:1px solid #ebedf2; border-radius:14px; padding:20px 22px; box-shadow:0 1px 2px rgba(20,25,40,.04);">
+          <div style="display:flex; align-items:flex-start; justify-content:space-between;">
+            <div>
+              <div style="font-size:14px; font-weight:600;">TVL &amp; DeFi activity</div>
+              <div style="font-size:12px; color:#8a93a3; margin-top:2px;">total value locked · {{ periodLabel }}</div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:20px; font-weight:600;">{{ tvlValue }}</div>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600; color:#16a34a;">{{ tvlDelta }}</div>
+            </div>
+          </div>
+          <div style="margin-top:14px;">{{ tvlChart }}</div>
+          <div style="display:flex; flex-direction:column; gap:9px; margin-top:14px; padding-top:14px; border-top:1px solid #f0f1f5;">
+            <sc-for list="{{ protocols }}" as="pr" hint-placeholder-count="4">
+              <div style="display:flex; align-items:center; gap:10px;">
+                <span style="flex:1; font-size:12.5px; color:#3a4150;">{{ pr.name }}</span>
+                <div style="width:90px; height:5px; border-radius:3px; background:#eef0f3; overflow:hidden;"><div style="height:100%; border-radius:3px; background:#5b54f0; width: {{ pr.barW }};"></div></div>
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; font-weight:600; width:52px; text-align:right;">{{ pr.tvl }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW 4: large tx + alerts -->
+      <div style="display:grid; grid-template-columns:2fr 1fr; gap:18px;">
+        <div style="background:#fff; border:1px solid #ebedf2; border-radius:14px; box-shadow:0 1px 2px rgba(20,25,40,.04); overflow:hidden;">
+          <div style="display:flex; align-items:center; justify-content:space-between; padding:18px 22px 14px;">
+            <div>
+              <div style="font-size:14px; font-weight:600;">Large transactions</div>
+              <div style="font-size:12px; color:#8a93a3; margin-top:2px;">whale movements · {{ periodLabel }}</div>
+            </div>
+            <button onClick="{{ goTransactions }}" style="border:none; background:none; cursor:pointer; font-family:inherit; font-size:12.5px; font-weight:600; color:#5b54f0;">View all →</button>
+          </div>
+          <div style="display:grid; grid-template-columns:1.4fr 1fr 1fr 0.7fr; padding:0 22px 8px; font-size:11px; color:#a3abb8; font-weight:600; text-transform:uppercase; letter-spacing:.04em;">
+            <span>Transaction</span><span style="text-align:right;">Amount</span><span style="text-align:right;">Value</span><span style="text-align:right;">Age</span>
+          </div>
+          <div>
+            <sc-for list="{{ largeTx }}" as="t" hint-placeholder-count="6">
+              <div style="display:grid; grid-template-columns:1.4fr 1fr 1fr 0.7fr; align-items:center; padding:11px 22px; border-top:1px solid #f3f4f7;" style-hover="background:#fafbfc;">
+                <div style="display:flex; align-items:center; gap:10px; min-width:0;">
+                  <span style="width:26px; height:26px; border-radius:7px; flex:none; display:flex; align-items:center; justify-content:center; background: {{ t.tagBg }}; color: {{ t.tagColor }};">{{ t.icon }}</span>
+                  <div style="min-width:0;">
+                    <div style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; font-weight:500; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ t.hash }}</div>
+                    <div style="font-size:11px; color:#a3abb8;">{{ t.type }}</div>
+                  </div>
+                </div>
+                <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600;">{{ t.amount }}</div>
+                <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:#5b6473;">{{ t.usd }}</div>
+                <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:12px; color:#a3abb8;">{{ t.age }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="background:#fff; border:1px solid #ebedf2; border-radius:14px; box-shadow:0 1px 2px rgba(20,25,40,.04); overflow:hidden; display:flex; flex-direction:column;">
+          <div style="display:flex; align-items:center; justify-content:space-between; padding:18px 20px 14px;">
+            <div style="font-size:14px; font-weight:600;">Recent alerts</div>
+            <button onClick="{{ goAlerts }}" style="border:none; background:none; cursor:pointer; font-family:inherit; font-size:12.5px; font-weight:600; color:#5b54f0;">All →</button>
+          </div>
+          <div style="flex:1;">
+            <sc-for list="{{ alertsPreview }}" as="a" hint-placeholder-count="4">
+              <div style="display:flex; gap:11px; padding:12px 20px; border-top:1px solid #f3f4f7;">
+                <span style="width:8px; height:8px; border-radius:50%; flex:none; margin-top:5px; background: {{ a.color }};"></span>
+                <div style="min-width:0;">
+                  <div style="font-size:12.5px; font-weight:600; color:#2a303b;">{{ a.title }}</div>
+                  <div style="font-size:11.5px; color:#8a93a3; margin-top:2px; line-height:1.4;">{{ a.detail }}</div>
+                  <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#b6bdc8; margin-top:4px;">{{ a.time }}</div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+      </div>
+      </sc-if>
+
+      <!-- ============ LAYOUT B: BRIEFING ============ -->
+      <sc-if value="{{ layoutBriefing }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex; flex-direction:column; gap:18px;">
+        <div style="display:grid; grid-template-columns:320px 1fr; gap:18px;">
+          <div style="background:#fff; border:1px solid #ebedf2; border-radius:14px; padding:22px; box-shadow:0 1px 2px rgba(20,25,40,.04); display:flex; flex-direction:column; align-items:center;">
+            <div style="font-size:13px; font-weight:600; color:#5b6473; align-self:flex-start;">Network health</div>
+            <div style="position:relative; margin:10px 0 14px;">
+              {{ healthRing }}
+              <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;"><div style="font-family:'IBM Plex Mono',monospace; font-size:30px; font-weight:600; line-height:1;">{{ healthScore }}</div><div style="font-size:11px; color:#a3abb8; margin-top:2px;">/ 100</div></div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:10px; width:100%;">
+              <sc-for list="{{ healthSignals }}" as="s" hint-placeholder-count="4">
+                <div style="display:flex; align-items:center; gap:10px;"><span style="width:7px; height:7px; border-radius:50%; flex:none; background: {{ s.color }};"></span><span style="flex:1; font-size:12.5px; color:#5b6473;">{{ s.label }}</span><span style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; font-weight:600; color: {{ s.color }};">{{ s.value }}</span></div>
+              </sc-for>
+            </div>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+            <sc-for list="{{ kpis }}" as="k" hint-placeholder-count="4">
+              <div style="background:#fff; border:1px solid #ebedf2; border-radius:14px; padding:18px; display:flex; flex-direction:column; gap:8px; box-shadow:0 1px 2px rgba(20,25,40,.04);">
+                <div style="display:flex; align-items:center; justify-content:space-between;"><span style="font-size:12px; color:#8a93a3; font-weight:500;">{{ k.label }}</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; font-weight:600; padding:2px 7px; border-radius:20px; background: {{ k.deltaBg }}; color: {{ k.deltaColor }};">{{ k.delta }}</span></div>
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:26px; font-weight:600; letter-spacing:-.02em; line-height:1;">{{ k.value }}</div>
+                <div style="height:30px;">{{ k.spark }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="background:#fff; border:1px solid #ebedf2; border-radius:14px; padding:20px 22px; box-shadow:0 1px 2px rgba(20,25,40,.04);">
+          <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:16px;">
+            <div><div style="font-size:14px; font-weight:600;">Transaction flow</div><div style="font-size:12px; color:#8a93a3; margin-top:2px;">inbound vs outbound · {{ periodLabel }}</div></div>
+            <div style="display:flex; gap:28px;">
+              <div><div style="font-size:11px; color:#a3abb8;">Inbound</div><div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:600;">{{ flowInTotal }}</div></div>
+              <div><div style="font-size:11px; color:#a3abb8;">Outbound</div><div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:600;">{{ flowOutTotal }}</div></div>
+              <div><div style="font-size:11px; color:#a3abb8;">Net</div><div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:600; color:#16a34a;">{{ flowNet }}</div></div>
+            </div>
+          </div>
+          {{ flowChart }}
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px;">
+          <div style="background:#fff; border:1px solid #ebedf2; border-radius:14px; padding:20px 22px; box-shadow:0 1px 2px rgba(20,25,40,.04);">
+            <div style="font-size:14px; font-weight:600;">Decentralization</div>
+            <div style="display:flex; align-items:center; gap:22px; margin-top:14px;">
+              <div style="position:relative; flex:none;">{{ validatorDonut }}<div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;"><div style="font-family:'IBM Plex Mono',monospace; font-size:22px; font-weight:600; line-height:1;">{{ nakamoto }}</div><div style="font-size:10px; color:#a3abb8; text-align:center; line-height:1.2; margin-top:3px;">Nakamoto</div></div></div>
+              <div style="flex:1; display:flex; flex-direction:column; gap:8px; min-width:0;">
+                <sc-for list="{{ topValidators }}" as="v" hint-placeholder-count="5"><div style="display:flex; align-items:center; gap:9px;"><span style="width:8px; height:8px; border-radius:2px; flex:none; background: {{ v.color }};"></span><span style="flex:1; font-size:12.5px; color:#3a4150; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ v.name }}</span><span style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; font-weight:600;">{{ v.share }}</span></div></sc-for>
+              </div>
+            </div>
+          </div>
+          <div style="background:#fff; border:1px solid #ebedf2; border-radius:14px; padding:20px 22px; box-shadow:0 1px 2px rgba(20,25,40,.04);">
+            <div style="display:flex; align-items:flex-start; justify-content:space-between;"><div><div style="font-size:14px; font-weight:600;">TVL &amp; DeFi</div><div style="font-size:12px; color:#8a93a3; margin-top:2px;">{{ periodLabel }}</div></div><div style="text-align:right;"><div style="font-family:'IBM Plex Mono',monospace; font-size:20px; font-weight:600;">{{ tvlValue }}</div><div style="font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600; color:#16a34a;">{{ tvlDelta }}</div></div></div>
+            <div style="margin-top:12px;">{{ tvlChart }}</div>
+          </div>
+        </div>
+
+        <div style="background:#fff; border:1px solid #ebedf2; border-radius:14px; box-shadow:0 1px 2px rgba(20,25,40,.04); overflow:hidden;">
+          <div style="display:flex; align-items:center; justify-content:space-between; padding:18px 22px 14px;"><div style="font-size:14px; font-weight:600;">Large transactions</div><button onClick="{{ goTransactions }}" style="border:none; background:none; cursor:pointer; font-family:inherit; font-size:12.5px; font-weight:600; color:#5b54f0;">View all →</button></div>
+          <sc-for list="{{ largeTx }}" as="t" hint-placeholder-count="6">
+            <div style="display:grid; grid-template-columns:1.4fr 1fr 1fr 0.7fr; align-items:center; padding:11px 22px; border-top:1px solid #f3f4f7;" style-hover="background:#fafbfc;">
+              <div style="display:flex; align-items:center; gap:10px; min-width:0;"><span style="width:26px; height:26px; border-radius:7px; flex:none; display:flex; align-items:center; justify-content:center; background: {{ t.tagBg }}; color: {{ t.tagColor }};">{{ t.icon }}</span><div style="min-width:0;"><div style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; font-weight:500;">{{ t.hash }}</div><div style="font-size:11px; color:#a3abb8;">{{ t.type }}</div></div></div>
+              <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600;">{{ t.amount }}</div>
+              <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:#5b6473;">{{ t.usd }}</div>
+              <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:12px; color:#a3abb8;">{{ t.age }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      </sc-if>
+
+      <!-- ============ LAYOUT C: DENSE ============ -->
+      <sc-if value="{{ layoutDense }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex; flex-direction:column; gap:16px;">
+        <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:14px;">
+          <sc-for list="{{ kpis }}" as="k" hint-placeholder-count="4">
+            <div style="background:#fff; border:1px solid #ebedf2; border-radius:12px; padding:14px 15px; box-shadow:0 1px 2px rgba(20,25,40,.04);">
+              <div style="display:flex; align-items:center; justify-content:space-between;"><span style="font-size:11px; color:#8a93a3; font-weight:500;">{{ k.label }}</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; color: {{ k.deltaColor }};">{{ k.delta }}</span></div>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:21px; font-weight:600; letter-spacing:-.02em; margin-top:7px; line-height:1;">{{ k.value }}</div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; align-items:start;">
+          <div style="grid-column:span 2; background:#fff; border:1px solid #ebedf2; border-radius:12px; padding:16px 18px; box-shadow:0 1px 2px rgba(20,25,40,.04);">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;"><div style="font-size:13px; font-weight:600;">Transaction flow</div><div style="display:flex; gap:14px;"><span style="display:flex; align-items:center; gap:5px; font-size:11px; color:#5b6473;"><span style="width:8px; height:8px; border-radius:2px; background:#5b54f0;"></span>In</span><span style="display:flex; align-items:center; gap:5px; font-size:11px; color:#5b6473;"><span style="width:8px; height:8px; border-radius:2px; background:#19b3a6;"></span>Out</span></div></div>
+            {{ flowChart }}
+          </div>
+          <div style="background:#fff; border:1px solid #ebedf2; border-radius:12px; padding:16px 18px; box-shadow:0 1px 2px rgba(20,25,40,.04); display:flex; flex-direction:column; align-items:center;">
+            <div style="font-size:13px; font-weight:600; align-self:flex-start;">Health</div>
+            <div style="position:relative; margin:6px 0;">{{ healthRing }}<div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;"><div style="font-family:'IBM Plex Mono',monospace; font-size:26px; font-weight:600; line-height:1;">{{ healthScore }}</div><div style="font-size:10px; color:#a3abb8;">/ 100</div></div></div>
+          </div>
+          <div style="background:#fff; border:1px solid #ebedf2; border-radius:12px; padding:16px 18px; box-shadow:0 1px 2px rgba(20,25,40,.04);">
+            <div style="font-size:13px; font-weight:600; margin-bottom:12px;">Decentralization</div>
+            <div style="display:flex; align-items:center; gap:14px;"><div style="position:relative; flex:none;">{{ validatorDonut }}<div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;"><div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:600; line-height:1;">{{ nakamoto }}</div></div></div><div style="flex:1; display:flex; flex-direction:column; gap:6px; min-width:0;"><sc-for list="{{ topValidators }}" as="v" hint-placeholder-count="5"><div style="display:flex; align-items:center; gap:7px;"><span style="width:7px; height:7px; border-radius:2px; flex:none; background: {{ v.color }};"></span><span style="flex:1; font-size:11.5px; color:#3a4150; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ v.name }}</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; font-weight:600;">{{ v.share }}</span></div></sc-for></div></div>
+          </div>
+          <div style="background:#fff; border:1px solid #ebedf2; border-radius:12px; padding:16px 18px; box-shadow:0 1px 2px rgba(20,25,40,.04);">
+            <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:8px;"><div style="font-size:13px; font-weight:600;">TVL</div><div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:600;">{{ tvlValue }}</div></div>
+            {{ tvlChart }}
+            <div style="display:flex; flex-direction:column; gap:7px; margin-top:12px;"><sc-for list="{{ protocols }}" as="pr" hint-placeholder-count="4"><div style="display:flex; align-items:center; gap:9px;"><span style="flex:1; font-size:11.5px; color:#3a4150;">{{ pr.name }}</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; font-weight:600;">{{ pr.tvl }}</span></div></sc-for></div>
+          </div>
+          <div style="background:#fff; border:1px solid #ebedf2; border-radius:12px; box-shadow:0 1px 2px rgba(20,25,40,.04); overflow:hidden;">
+            <div style="padding:16px 18px 10px; font-size:13px; font-weight:600;">Recent alerts</div>
+            <sc-for list="{{ alertsPreview }}" as="a" hint-placeholder-count="4"><div style="display:flex; gap:9px; padding:9px 18px; border-top:1px solid #f3f4f7;"><span style="width:7px; height:7px; border-radius:50%; flex:none; margin-top:5px; background: {{ a.color }};"></span><div style="min-width:0;"><div style="font-size:12px; font-weight:600; color:#2a303b;">{{ a.title }}</div><div style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:#b6bdc8; margin-top:2px;">{{ a.time }}</div></div></div></sc-for>
+          </div>
+        </div>
+        <div style="background:#fff; border:1px solid #ebedf2; border-radius:12px; box-shadow:0 1px 2px rgba(20,25,40,.04); overflow:hidden;">
+          <div style="padding:16px 18px 10px; font-size:13px; font-weight:600;">Large transactions</div>
+          <div style="display:grid; grid-template-columns:1.4fr 1fr 1fr 0.7fr; padding:0 18px 8px; font-size:10.5px; color:#a3abb8; font-weight:600; text-transform:uppercase; letter-spacing:.04em;"><span>Transaction</span><span style="text-align:right;">Amount</span><span style="text-align:right;">Value</span><span style="text-align:right;">Age</span></div>
+          <sc-for list="{{ largeTx }}" as="t" hint-placeholder-count="6"><div style="display:grid; grid-template-columns:1.4fr 1fr 1fr 0.7fr; align-items:center; padding:9px 18px; border-top:1px solid #f3f4f7;" style-hover="background:#fafbfc;"><div style="display:flex; align-items:center; gap:9px; min-width:0;"><span style="width:22px; height:22px; border-radius:6px; flex:none; display:flex; align-items:center; justify-content:center; background: {{ t.tagBg }}; color: {{ t.tagColor }};">{{ t.icon }}</span><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:500;">{{ t.hash }}</span></div><div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:12.5px; font-weight:600;">{{ t.amount }}</div><div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:12px; color:#5b6473;">{{ t.usd }}</div><div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#a3abb8;">{{ t.age }}</div></div></sc-for>
+        </div>
+      </div>
+      </sc-if>
+
+    </div>
+    </sc-if>
+
+    <!-- ===================== TRANSACTIONS ===================== -->
+    <sc-if value="{{ isTransactions }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:24px 30px 40px; display:flex; flex-direction:column; gap:18px;">
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px;">
+        <sc-for list="{{ txKpis }}" as="k" hint-placeholder-count="4">
+          <div style="background:#fff; border:1px solid #ebedf2; border-radius:14px; padding:18px; display:flex; flex-direction:column; gap:9px; box-shadow:0 1px 2px rgba(20,25,40,.04); animation:wt-fade .4s ease both;">
+            <div style="display:flex; align-items:center; justify-content:space-between;">
+              <span style="font-size:12px; color:#8a93a3; font-weight:500;">{{ k.label }}</span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; font-weight:600; padding:2px 7px; border-radius:20px; background: {{ k.deltaBg }}; color: {{ k.deltaColor }};">{{ k.delta }}</span>
+            </div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:25px; font-weight:600; letter-spacing:-.02em; line-height:1;">{{ k.value }}</div>
+            <div style="font-size:11px; color:#a3abb8;">{{ k.sub }}</div>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="background:#fff; border:1px solid #ebedf2; border-radius:14px; padding:20px 22px; box-shadow:0 1px 2px rgba(20,25,40,.04);">
+        <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:16px;">
+          <div><div style="font-size:14px; font-weight:600;">Inbound vs outbound volume</div><div style="font-size:12px; color:#8a93a3; margin-top:2px;">transaction count per interval · {{ periodLabel }}</div></div>
+          <div style="display:flex; gap:16px; align-items:center;">
+            <span style="display:flex; align-items:center; gap:6px; font-size:12px; color:#5b6473;"><span style="width:9px; height:9px; border-radius:3px; background:#5b54f0;"></span>Inbound</span>
+            <span style="display:flex; align-items:center; gap:6px; font-size:12px; color:#5b6473;"><span style="width:9px; height:9px; border-radius:3px; background:#19b3a6;"></span>Outbound</span>
+          </div>
+        </div>
+        <div>{{ txBars }}</div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:2.1fr 1fr; gap:18px;">
+        <div style="background:#fff; border:1px solid #ebedf2; border-radius:14px; box-shadow:0 1px 2px rgba(20,25,40,.04); overflow:hidden;">
+          <div style="padding:18px 22px 14px; font-size:14px; font-weight:600;">Recent large transactions</div>
+          <div style="display:grid; grid-template-columns:1.3fr 1.5fr 0.9fr 0.8fr 0.5fr; padding:0 22px 8px; font-size:11px; color:#a3abb8; font-weight:600; text-transform:uppercase; letter-spacing:.04em;">
+            <span>Transaction</span><span>From → To</span><span style="text-align:right;">Amount</span><span style="text-align:right;">Value</span><span style="text-align:right;">Age</span>
+          </div>
+          <sc-for list="{{ txAll }}" as="t" hint-placeholder-count="10">
+            <div style="display:grid; grid-template-columns:1.3fr 1.5fr 0.9fr 0.8fr 0.5fr; align-items:center; padding:10px 22px; border-top:1px solid #f3f4f7;" style-hover="background:#fafbfc;">
+              <div style="display:flex; align-items:center; gap:10px; min-width:0;">
+                <span style="width:24px; height:24px; border-radius:7px; flex:none; display:flex; align-items:center; justify-content:center; background: {{ t.tagBg }}; color: {{ t.tagColor }};">{{ t.icon }}</span>
+                <div style="min-width:0;"><div style="font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:500;">{{ t.hash }}</div><div style="font-size:10.5px; color:#a3abb8;">{{ t.type }}</div></div>
+              </div>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#5b6473; display:flex; align-items:center; gap:6px; min-width:0;"><span style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ t.from }}</span><span style="color:#c7cbd4;">→</span><span style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ t.to }}</span></div>
+              <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:12.5px; font-weight:600;">{{ t.amount }}</div>
+              <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:12px; color:#5b6473;">{{ t.usd }}</div>
+              <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#a3abb8;">{{ t.age }}</div>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="background:#fff; border:1px solid #ebedf2; border-radius:14px; padding:20px 22px; box-shadow:0 1px 2px rgba(20,25,40,.04);">
+          <div style="font-size:14px; font-weight:600; margin-bottom:4px;">Transaction mix</div>
+          <div style="font-size:12px; color:#8a93a3; margin-bottom:16px;">by category · {{ periodLabel }}</div>
+          <div style="display:flex; flex-direction:column; gap:14px;">
+            <sc-for list="{{ txTypeBreak }}" as="x" hint-placeholder-count="5">
+              <div>
+                <div style="display:flex; justify-content:space-between; margin-bottom:6px;"><span style="font-size:12.5px; color:#3a4150;">{{ x.name }}</span><span style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; font-weight:600;">{{ x.pct }}</span></div>
+                <div style="height:6px; border-radius:4px; background:#eef0f3; overflow:hidden;"><div style="height:100%; border-radius:4px; background:#5b54f0; width: {{ x.barW }};"></div></div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+    </sc-if>
+
+    <!-- ===================== STAKING ===================== -->
+    <sc-if value="{{ isStaking }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:24px 30px 40px; display:flex; flex-direction:column; gap:18px;">
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px;">
+        <sc-for list="{{ stKpis }}" as="k" hint-placeholder-count="4">
+          <div style="background:#fff; border:1px solid #ebedf2; border-radius:14px; padding:18px; display:flex; flex-direction:column; gap:9px; box-shadow:0 1px 2px rgba(20,25,40,.04); animation:wt-fade .4s ease both;">
+            <div style="display:flex; align-items:center; justify-content:space-between;">
+              <span style="font-size:12px; color:#8a93a3; font-weight:500;">{{ k.label }}</span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; font-weight:600; padding:2px 7px; border-radius:20px; background: {{ k.deltaBg }}; color: {{ k.deltaColor }};">{{ k.delta }}</span>
+            </div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:25px; font-weight:600; letter-spacing:-.02em; line-height:1;">{{ k.value }}</div>
+            <div style="font-size:11px; color:#a3abb8;">{{ k.sub }}</div>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="display:grid; grid-template-columns:2.1fr 1fr; gap:18px;">
+        <div style="background:#fff; border:1px solid #ebedf2; border-radius:14px; padding:20px 22px; box-shadow:0 1px 2px rgba(20,25,40,.04);">
+          <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:14px;">
+            <div><div style="font-size:14px; font-weight:600;">Staking ratio</div><div style="font-size:12px; color:#8a93a3; margin-top:2px;">% of circulating HLX staked · {{ periodLabel }}</div></div>
+            <div style="text-align:right;"><div style="font-family:'IBM Plex Mono',monospace; font-size:20px; font-weight:600; color:#16a34a;">67.4%</div></div>
+          </div>
+          <div>{{ stakingChart }}</div>
+        </div>
+        <div style="background:#fff; border:1px solid #ebedf2; border-radius:14px; padding:20px 22px; box-shadow:0 1px 2px rgba(20,25,40,.04);">
+          <div style="font-size:14px; font-weight:600; margin-bottom:14px;">Bonding &amp; rewards</div>
+          <div style="display:flex; flex-direction:column; gap:0;">
+            <sc-for list="{{ unbonding }}" as="u" hint-placeholder-count="4">
+              <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 0; border-bottom:1px solid #f3f4f7;">
+                <span style="font-size:12.5px; color:#5b6473;">{{ u.label }}</span>
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600;">{{ u.value }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#fff; border:1px solid #ebedf2; border-radius:14px; box-shadow:0 1px 2px rgba(20,25,40,.04); overflow:hidden;">
+        <div style="padding:18px 22px 14px; font-size:14px; font-weight:600;">Validator set <span style="font-weight:400; color:#a3abb8; font-size:12.5px;">· top 8 by voting power</span></div>
+        <div style="display:grid; grid-template-columns:0.5fr 1.6fr 1.4fr 0.8fr 0.8fr 0.8fr; padding:0 22px 8px; font-size:11px; color:#a3abb8; font-weight:600; text-transform:uppercase; letter-spacing:.04em;">
+          <span>Rank</span><span>Validator</span><span>Voting power</span><span style="text-align:right;">Commission</span><span style="text-align:right;">Uptime</span><span style="text-align:right;">Status</span>
+        </div>
+        <sc-for list="{{ validatorSet }}" as="v" hint-placeholder-count="8">
+          <div style="display:grid; grid-template-columns:0.5fr 1.6fr 1.4fr 0.8fr 0.8fr 0.8fr; align-items:center; padding:11px 22px; border-top:1px solid #f3f4f7;" style-hover="background:#fafbfc;">
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#a3abb8;">{{ v.rank }}</span>
+            <span style="font-size:13px; font-weight:500;">{{ v.name }}</span>
+            <div style="display:flex; align-items:center; gap:9px;"><div style="flex:1; max-width:90px; height:6px; border-radius:4px; background:#eef0f3; overflow:hidden;"><div style="height:100%; border-radius:4px; background:#5b54f0; width: {{ v.barW }};"></div></div><span style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; font-weight:600;">{{ v.power }}</span></div>
+            <span style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:#5b6473;">{{ v.commission }}</span>
+            <span style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:12.5px;">{{ v.uptime }}</span>
+            <span style="text-align:right;"><span style="font-size:11px; font-weight:600; padding:3px 9px; border-radius:20px; background: {{ v.statusBg }}; color: {{ v.statusC }};">{{ v.status }}</span></span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    </sc-if>
+
+    <!-- ===================== ALERTS ===================== -->
+    <sc-if value="{{ isAlerts }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:24px 30px 40px; display:flex; flex-direction:column; gap:18px;">
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px;">
+        <sc-for list="{{ alertStats }}" as="a" hint-placeholder-count="4">
+          <div style="background:#fff; border:1px solid #ebedf2; border-radius:14px; padding:18px; display:flex; align-items:center; gap:14px; box-shadow:0 1px 2px rgba(20,25,40,.04);">
+            <div style="width:40px; height:40px; border-radius:11px; flex:none; display:flex; align-items:center; justify-content:center; background: {{ a.color }}; opacity:.12;"></div>
+            <div style="margin-left:-44px; width:40px; height:40px; flex:none; display:flex; align-items:center; justify-content:center;"><span style="width:9px; height:9px; border-radius:50%; background: {{ a.color }};"></span></div>
+            <div><div style="font-family:'IBM Plex Mono',monospace; font-size:24px; font-weight:600; line-height:1;">{{ a.value }}</div><div style="font-size:11.5px; color:#8a93a3; margin-top:3px;">{{ a.label }}</div></div>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="background:#fff; border:1px solid #ebedf2; border-radius:14px; box-shadow:0 1px 2px rgba(20,25,40,.04); overflow:hidden;">
+        <div style="display:flex; align-items:center; justify-content:space-between; padding:18px 22px 16px; border-bottom:1px solid #f0f1f5;">
+          <div style="font-size:14px; font-weight:600;">Alert feed</div>
+          <div style="display:flex; gap:7px;">
+            <span style="font-size:12px; font-weight:600; padding:5px 12px; border-radius:8px; background:#1a1d23; color:#fff;">All</span>
+            <span style="font-size:12px; font-weight:500; padding:5px 12px; border-radius:8px; background:#f2f3f7; color:#8a93a3;">Critical</span>
+            <span style="font-size:12px; font-weight:500; padding:5px 12px; border-radius:8px; background:#f2f3f7; color:#8a93a3;">Warning</span>
+            <span style="font-size:12px; font-weight:500; padding:5px 12px; border-radius:8px; background:#f2f3f7; color:#8a93a3;">Info</span>
+          </div>
+        </div>
+        <sc-for list="{{ alertFeed }}" as="a" hint-placeholder-count="7">
+          <div style="display:flex; gap:16px; padding:16px 22px; border-top:1px solid #f3f4f7;" style-hover="background:#fafbfc;">
+            <span style="flex:none; align-self:flex-start; font-size:11px; font-weight:600; padding:3px 10px; border-radius:20px; background: {{ a.sevBg }}; color: {{ a.sevC }}; min-width:64px; text-align:center;">{{ a.sevLabel }}</span>
+            <div style="flex:1; min-width:0;">
+              <div style="display:flex; align-items:center; gap:9px; flex-wrap:wrap;">
+                <span style="font-size:13.5px; font-weight:600; color:#1a1d23;">{{ a.title }}</span>
+                <span style="font-size:10.5px; font-weight:600; color:#a3abb8; text-transform:uppercase; letter-spacing:.04em; background:#f2f3f7; padding:1px 7px; border-radius:5px;">{{ a.cat }}</span>
+              </div>
+              <div style="font-size:12.5px; color:#5b6473; margin-top:5px; line-height:1.5; max-width:680px;">{{ a.detail }}</div>
+            </div>
+            <div style="flex:none; text-align:right; min-width:120px;">
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#a3abb8;">{{ a.time }}</div>
+              <div style="font-size:11px; color:#b6bdc8; margin-top:4px; text-transform:capitalize;">{{ a.status }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    </sc-if>
+
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { screen: 'overview', period: '24h', layout: 'grid' };
+
+  // ---- deterministic PRNG ----
+  rng(seed){ let a=(seed>>>0)||1; return function(){ a|=0; a=a+0x6D2B79F5|0; let t=Math.imul(a^a>>>15,1|a); t=t+Math.imul(t^t>>>7,61|t)^t; return ((t^t>>>14)>>>0)/4294967296; }; }
+
+  mkSeries(n, base, vol, seed){
+    const r=this.rng(seed); const out=[];
+    for(let i=0;i<n;i++){ const wave=Math.sin((i/Math.max(1,n-1))*Math.PI*1.6+seed)*0.10; out.push(base*(1+wave+(r()-0.5)*vol)); }
+    return out;
+  }
+
+  fmt(n){ const a=Math.abs(n); if(a>=1e9) return (n/1e9).toFixed(2)+'B'; if(a>=1e6) return (n/1e6).toFixed(2)+'M'; if(a>=1e3) return (n/1e3).toFixed(1)+'K'; return Math.round(n).toString(); }
+  usd(n){ const a=Math.abs(n); if(a>=1e9) return '$'+(n/1e9).toFixed(2)+'B'; if(a>=1e6) return '$'+(n/1e6).toFixed(1)+'M'; if(a>=1e3) return '$'+(n/1e3).toFixed(0)+'K'; return '$'+Math.round(n); }
+
+  // ---- chart builders (SVG) ----
+  mkSpark(series, color){
+    const el=React.createElement, W=200, H=34, p=4;
+    const mn=Math.min(...series), mx=Math.max(...series), rg=(mx-mn)||1;
+    const x=i=>(i/(series.length-1))*W, y=v=>p+(1-(v-mn)/rg)*(H-2*p);
+    let d=''; series.forEach((v,i)=>{ d+=(i?'L':'M')+x(i).toFixed(1)+' '+y(v).toFixed(1)+' '; });
+    const gid='s'+Math.round(Math.random()*1e6);
+    return el('svg',{viewBox:`0 0 ${W} ${H}`,preserveAspectRatio:'none',style:{width:'100%',height:H+'px',display:'block'}},
+      el('defs',null, el('linearGradient',{id:gid,x1:0,y1:0,x2:0,y2:1}, el('stop',{offset:'0%',stopColor:color,stopOpacity:.22}), el('stop',{offset:'100%',stopColor:color,stopOpacity:0}))),
+      el('path',{d:d+`L${W} ${H} L0 ${H} Z`, fill:`url(#${gid})`}),
+      el('path',{d, fill:'none', stroke:color, strokeWidth:2, strokeLinejoin:'round', strokeLinecap:'round'})
+    );
+  }
+
+  mkMultiArea(layers, h){
+    const el=React.createElement, W=640, H=h||190, p=12;
+    let all=[]; layers.forEach(l=>all=all.concat(l.series));
+    const mn=Math.min(...all), mx=Math.max(...all), rg=(mx-mn)||1;
+    const x=i=>(i/(layers[0].series.length-1))*W, y=v=>p+(1-(v-mn)/rg)*(H-2*p);
+    const grid=[0,.25,.5,.75,1].map((f,i)=>el('line',{key:'g'+i,x1:0,x2:W,y1:p+f*(H-2*p),y2:p+f*(H-2*p),stroke:'#f0f1f5',strokeWidth:1}));
+    const paths=[];
+    layers.forEach((l,li)=>{
+      let d=''; l.series.forEach((v,i)=>{ d+=(i?'L':'M')+x(i).toFixed(1)+' '+y(v).toFixed(1)+' '; });
+      const gid='m'+li+Math.round(Math.random()*1e5);
+      paths.push(el('defs',{key:'d'+li}, el('linearGradient',{id:gid,x1:0,y1:0,x2:0,y2:1}, el('stop',{offset:'0%',stopColor:l.color,stopOpacity:.18}), el('stop',{offset:'100%',stopColor:l.color,stopOpacity:0}))));
+      paths.push(el('path',{key:'a'+li,d:d+`L${W} ${H} L0 ${H} Z`, fill:`url(#${gid})`}));
+      paths.push(el('path',{key:'l'+li,d, fill:'none', stroke:l.color, strokeWidth:2.2, strokeLinejoin:'round', strokeLinecap:'round'}));
+    });
+    return el('svg',{viewBox:`0 0 ${W} ${H}`,preserveAspectRatio:'none',style:{width:'100%',height:H+'px',display:'block'}}, ...grid, ...paths);
+  }
+
+  mkRing(pct, color, size){
+    const el=React.createElement, S=size||130, r=S/2-11, c=2*Math.PI*r, cx=S/2;
+    return el('svg',{viewBox:`0 0 ${S} ${S}`,style:{width:S+'px',height:S+'px',display:'block'}},
+      el('circle',{cx,cy:cx,r,fill:'none',stroke:'#eef0f3',strokeWidth:11}),
+      el('circle',{cx,cy:cx,r,fill:'none',stroke:color,strokeWidth:11,strokeLinecap:'round',strokeDasharray:c,strokeDashoffset:c*(1-pct/100),transform:`rotate(-90 ${cx} ${cx})`})
+    );
+  }
+
+  mkDonut(segs, size){
+    const el=React.createElement, S=size||130, r=S/2-13, c=2*Math.PI*r, cx=S/2;
+    const total=segs.reduce((a,b)=>a+b.value,0); let acc=0;
+    const rings=segs.map((s,i)=>{ const frac=s.value/total; const ring=el('circle',{key:i,cx,cy:cx,r,fill:'none',stroke:s.color,strokeWidth:13,strokeDasharray:`${(frac*c).toFixed(2)} ${(c-frac*c).toFixed(2)}`,strokeDashoffset:(-acc*c).toFixed(2),transform:`rotate(-90 ${cx} ${cx})`}); acc+=frac; return ring; });
+    return el('svg',{viewBox:`0 0 ${S} ${S}`,style:{width:S+'px',height:S+'px',display:'block'}}, ...rings);
+  }
+
+  mkBars(layers, h){
+    const el=React.createElement, W=640, H=h||190, p=12, n=layers[0].series.length;
+    let all=[]; layers.forEach(l=>all=all.concat(l.series));
+    const mx=Math.max(...all)*1.06, gw=W/n, bw=Math.min(13,(gw*0.62)/layers.length);
+    const bars=[];
+    for(let i=0;i<n;i++){ layers.forEach((l,li)=>{ const v=l.series[i]; const bh=(v/mx)*(H-2*p); const x=i*gw+gw/2-(layers.length*bw)/2+li*bw; bars.push(el('rect',{key:i+'-'+li,x:x.toFixed(1),y:(H-p-bh).toFixed(1),width:Math.max(2,bw-2),height:Math.max(0,bh).toFixed(1),rx:2,fill:l.color,opacity:.92})); }); }
+    const grid=[0,.5,1].map((f,i)=>el('line',{key:'g'+i,x1:0,x2:W,y1:p+f*(H-2*p),y2:p+f*(H-2*p),stroke:'#f0f1f5',strokeWidth:1}));
+    return el('svg',{viewBox:`0 0 ${W} ${H}`,preserveAspectRatio:'none',style:{width:'100%',height:H+'px',display:'block'}}, ...grid, ...bars);
+  }
+
+  ic(path){ const el=React.createElement; return el('svg',{width:18,height:18,viewBox:'0 0 24 24',fill:'none',stroke:'currentColor',strokeWidth:2,strokeLinecap:'round',strokeLinejoin:'round'}, ...path.map((d,i)=>el('path',{key:i,d}))); }
+  icC(c){ const el=React.createElement; return el('svg',{width:14,height:14,viewBox:'0 0 24 24',fill:'none',stroke:'currentColor',strokeWidth:2.2,strokeLinecap:'round',strokeLinejoin:'round'}, c); }
+
+  renderVals(){
+    const el=React.createElement;
+    const S=this.state, screen=S.screen, period=S.period;
+    const n = period==='24h'?24 : period==='7d'?7 : 30;
+    const mult = period==='24h'?1 : period==='7d'?6.9 : 30;
+    const network={ name:'Helios', token:'HLX' };
+
+    // nav
+    const nav=(id)=>()=>this.setState({screen:id});
+    const navDef=[
+      {id:'overview', label:'Overview', icon:[ 'M3 3h7v7H3z','M14 3h7v7h-7z','M14 14h7v7h-7z','M3 14h7v7H3z' ]},
+      {id:'transactions', label:'Transactions', icon:[ 'M7 7h11','M14 4l4 3-4 3','M17 17H6','M10 14l-4 3 4 3' ]},
+      {id:'staking', label:'Staking', icon:[ 'M12 2 3 7v10l9 5 9-5V7z','M3 7l9 5 9-5','M12 12v10' ]},
+      {id:'alerts', label:'Alerts', icon:[ 'M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9','M13.7 21a2 2 0 0 1-3.4 0' ], badge:'3'},
+    ];
+    const navItems=navDef.map(d=>({ label:d.label, icon:this.ic(d.icon), onClick:nav(d.id), badge:d.badge||null,
+      bg: screen===d.id?'#eef0fe':'transparent', color: screen===d.id?'#4b40e0':'#5b6473' }));
+
+    // period segmented
+    const pdef=[{id:'24h',label:'24H'},{id:'7d',label:'7D'},{id:'30d',label:'30D'}];
+    const periods=pdef.map(d=>({ label:d.label, onClick:()=>this.setState({period:d.id}),
+      bg: period===d.id?'#fff':'transparent', color: period===d.id?'#1a1d23':'#8a93a3', shadow: period===d.id?'0 1px 2px rgba(20,25,40,.12)':'none' }));
+    const periodLabel = period==='24h'?'last 24h' : period==='7d'?'last 7 days':'last 30 days';
+
+    // overview layout switcher
+    const layout=this.state.layout||'grid';
+    const layoutDefs=[{id:'grid',label:'Grid'},{id:'briefing',label:'Briefing'},{id:'dense',label:'Dense'}];
+    const layouts=layoutDefs.map(d=>({ label:d.label, onClick:()=>this.setState({layout:d.id}), bg: layout===d.id?'#1a1d23':'#f2f3f7', color: layout===d.id?'#fff':'#8a93a3' }));
+
+    // titles
+    const titles={ overview:['Network overview','Helios mainnet · health & flow at a glance'], transactions:['Transactions','inbound / outbound activity & whale movements'], staking:['Staking','validator set, staking ratio & rewards'], alerts:['Alerts','anomalies, reorgs & slashing events'] };
+    const screenTitle=titles[screen][0], screenCaption=titles[screen][1];
+
+    // ---- series ----
+    const inflow=this.mkSeries(n, 1240000, .12, 11);
+    const outflow=this.mkSeries(n, 1190000, .12, 47);
+    const active=this.mkSeries(n, 312000, .10, 23);
+    const tvl=this.mkSeries(n, 4.82e9, .05, 31);
+    const inTot=inflow.reduce((a,b)=>a+b,0)/inflow.length*mult;
+    const outTot=outflow.reduce((a,b)=>a+b,0)/outflow.length*mult;
+
+    // KPIs
+    const kpis=[
+      {label:'Inbound tx', value:this.fmt(inTot), delta:'+4.8%', up:true, sub:'avg '+this.fmt(inTot/n/ (period==='24h'?24:1) )+'/h', spark:this.mkSpark(inflow,'#5b54f0')},
+      {label:'Outbound tx', value:this.fmt(outTot), delta:'+3.1%', up:true, sub:'avg '+this.fmt(outTot/n/(period==='24h'?24:1))+'/h', spark:this.mkSpark(outflow,'#19b3a6')},
+      {label:'Active addresses', value:this.fmt(active[active.length-1]*(period==='24h'?1:mult*0.6)), delta:'+2.2%', up:true, sub:'unique senders + receivers', spark:this.mkSpark(active,'#5b54f0')},
+      {label:'Staking ratio', value:'67.4%', delta:'+0.3pp', up:true, sub:'of circulating HLX', spark:this.mkSpark(this.mkSeries(n,67.4,.01,9),'#16a34a')},
+    ].map(k=>({ ...k, deltaColor:k.up?'#16a34a':'#dc2626', deltaBg:k.up?'#e7f6ec':'#fdeaea' }));
+
+    // flow totals
+    const net=inTot-outTot;
+    const flowInTotal=this.fmt(inTot), flowOutTotal=this.fmt(outTot), flowNet=(net>=0?'+':'')+this.fmt(net);
+    const flowChart=this.mkMultiArea([{series:inflow,color:'#5b54f0'},{series:outflow,color:'#19b3a6'}],190);
+
+    // health
+    const healthScore=86;
+    const healthRing=this.mkRing(healthScore,'#16a34a',130);
+    const healthSignals=[
+      {label:'Block production', value:'99.98%', color:'#16a34a'},
+      {label:'Validator uptime', value:'99.2%', color:'#16a34a'},
+      {label:'Finality time', value:'5.8s', color:'#16a34a'},
+      {label:'Mempool pressure', value:'elevated', color:'#d97706'},
+    ];
+
+    // decentralization
+    const vcolors=['#5b54f0','#7a72f5','#19b3a6','#5cc4ba','#c7cad6'];
+    const vData=[{name:'Stride Labs',value:8.4},{name:'Cosmostation',value:7.1},{name:'Figment',value:6.2},{name:'Allnodes',value:5.5},{name:'others (171)',value:72.8}];
+    const validatorDonut=this.mkDonut(vData.map((v,i)=>({value:v.value,color:vcolors[i]})),140);
+    const topValidators=vData.map((v,i)=>({name:v.name, share:v.value.toFixed(1)+'%', color:vcolors[i]}));
+    const nakamoto='19';
+
+    // TVL
+    const tvlValue=this.usd(tvl[tvl.length-1]);
+    const tvlDelta='+1.9%';
+    const tvlChart=this.mkMultiArea([{series:tvl,color:'#5b54f0'}],120);
+    const protoRaw=[{name:'Helix DEX',v:1.62e9},{name:'Lumen Lend',v:1.18e9},{name:'Orbit Staking',v:0.94e9},{name:'Nova Vaults',v:0.61e9}];
+    const pmax=Math.max(...protoRaw.map(p=>p.v));
+    const protocols=protoRaw.map(p=>({name:p.name, tvl:this.usd(p.v), barW:Math.round(p.v/pmax*100)+'%'}));
+
+    // large tx
+    const txTypes=[
+      {type:'Validator unbond', icon:this.icC(el('path',{d:'M12 2 3 7v10l9 5 9-5V7z'})), tagBg:'#eef0fe', tagColor:'#4b40e0'},
+      {type:'Exchange inflow', icon:this.icC(el('path',{d:'M12 5v14M5 12l7 7 7-7'})), tagBg:'#fdeaea', tagColor:'#dc2626'},
+      {type:'Exchange outflow', icon:this.icC(el('path',{d:'M12 19V5M5 12l7-7 7 7'})), tagBg:'#e7f6ec', tagColor:'#16a34a'},
+      {type:'DeFi deposit', icon:this.icC(el('path',{d:'M12 2 3 7v10l9 5 9-5V7z'})), tagBg:'#eef0fe', tagColor:'#4b40e0'},
+    ];
+    const r=this.rng(period==='24h'?5:period==='7d'?6:7);
+    const hex='0123456789abcdef';
+    const mkHash=()=>{ let s='0x'; for(let i=0;i<6;i++) s+=hex[Math.floor(r()*16)]; return s+'…'+hex[Math.floor(r()*16)]+hex[Math.floor(r()*16)]+hex[Math.floor(r()*16)]+hex[Math.floor(r()*16)]; };
+    const ages=period==='24h'?['12m','48m','1h 20m','2h 05m','3h 41m','5h 12m']:['4h','9h','14h','19h','22h','1d 3h'];
+    const largeTx=Array.from({length:6}).map((_,i)=>{ const t=txTypes[Math.floor(r()*txTypes.length)]; const amt=(0.4+r()*3.2); const price=6.4; return { hash:mkHash(), type:t.type, icon:t.icon, tagBg:t.tagBg, tagColor:t.tagColor, amount:this.fmt(amt*1e6)+' HLX', usd:this.usd(amt*1e6*price), age:ages[i] }; });
+
+    // alerts
+    const alertsPreview=[
+      {title:'Mempool spike', detail:'Pending tx +218% over baseline in 15 min window.', time:'08:42 · 6m ago', color:'#d97706'},
+      {title:'Whale exchange inflow', detail:'2.4M HLX moved to a known CEX deposit address.', time:'07:55 · 53m ago', color:'#dc2626'},
+      {title:'Validator missed blocks', detail:'Figment missed 4 consecutive blocks, now recovered.', time:'06:10 · 2h ago', color:'#d97706'},
+      {title:'Staking ratio milestone', detail:'Network crossed 67% staked for the first time.', time:'02:33 · 6h ago', color:'#16a34a'},
+    ];
+
+    const kpiColor=k=>({ ...k, deltaColor:k.up?'#16a34a':'#dc2626', deltaBg:k.up?'#e7f6ec':'#fdeaea' });
+    const price=6.4;
+
+    // ---- transactions screen ----
+    const totalTx=inTot+outTot;
+    const txKpis=[
+      {label:'Total transactions', value:this.fmt(totalTx), delta:'+4.1%', up:true, sub:periodLabel},
+      {label:'Avg fee', value:'0.0021 HLX', delta:'-6.0%', up:true, sub:'\u2248 $0.013 per tx'},
+      {label:'Success rate', value:'99.4%', delta:'+0.1pp', up:true, sub:this.fmt(totalTx*0.006)+' failed'},
+      {label:'Avg block size', value:'1.84 MB', delta:'+8.3%', up:false, sub:'mempool elevated'},
+    ].map(kpiColor);
+    const txBars=this.mkBars([{series:inflow,color:'#5b54f0'},{series:outflow,color:'#19b3a6'}],190);
+    const addr=()=>{ let s='helios1'; for(let i=0;i<5;i++) s+=hex[Math.floor(r()*16)]; return s+'\u2026'+hex[Math.floor(r()*16)]+hex[Math.floor(r()*16)]; };
+    const txAll=Array.from({length:10}).map((_,i)=>{ const t=txTypes[Math.floor(r()*txTypes.length)]; const amt=(0.05+r()*3.4); return { hash:mkHash(), type:t.type, icon:t.icon, tagBg:t.tagBg, tagColor:t.tagColor, from:addr(), to:addr(), amount:this.fmt(amt*1e6)+' HLX', usd:this.usd(amt*1e6*price), age:(period==='24h'?((i+1)*7+'m'):((i+1)*2+'h')) }; });
+    const ttb=[{name:'Transfers',v:62},{name:'DeFi swaps',v:18},{name:'Staking ops',v:11},{name:'IBC transfers',v:6},{name:'Other',v:3}];
+    const txTypeBreak=ttb.map(x=>({ name:x.name, pct:x.v+'%', barW:x.v+'%' }));
+
+    // ---- staking screen ----
+    const stKpis=[
+      {label:'Staking ratio', value:'67.4%', delta:'+0.3pp', up:true, sub:'of circulating supply'},
+      {label:'Total staked', value:'412.6M HLX', delta:'+0.9%', up:true, sub:'\u2248 $2.64B'},
+      {label:'Active validators', value:'175', delta:'+0', up:true, sub:'of 220 in the set'},
+      {label:'Avg APR', value:'8.92%', delta:'-0.2pp', up:false, sub:'net of commission'},
+    ].map(kpiColor);
+    const stakingChart=this.mkMultiArea([{series:this.mkSeries(n,67.4,.008,9),color:'#16a34a'}],170);
+    const valStatus=(u)=> u>=99.5?{t:'healthy',c:'#16a34a',bg:'#e7f6ec'} : u>=98?{t:'watch',c:'#d97706',bg:'#fdf2e3'} : {t:'jailed',c:'#dc2626',bg:'#fdeaea'};
+    const vnames=['Stride Labs','Cosmostation','Figment','Allnodes','Chorus One','Polychain','Everstake','P2P.org'];
+    const validatorSet=vnames.map((nm,i)=>{ const power=(8.4 - i*0.85 + this.rng(i+50)()*0.4); const up=99.9 - (i===2?2.1:i*0.18); const st=valStatus(up); return { rank:'#'+(i+1), name:nm, power:power.toFixed(2)+'%', commission:(5+i*0.5).toFixed(0)+'%', uptime:up.toFixed(2)+'%', status:st.t, statusC:st.c, statusBg:st.bg, barW:Math.round(power/8.4*100)+'%' }; });
+    const unbonding=[{label:'Unbonding queue',value:'2.1M HLX'},{label:'Unbonding period',value:'21 days'},{label:'Pending rewards',value:'48.3K HLX'},{label:'Slashing (30d)',value:'0 events'}];
+
+    // ---- alerts screen ----
+    const sev={critical:{c:'#dc2626',bg:'#fdeaea',label:'Critical'},warning:{c:'#d97706',bg:'#fdf2e3',label:'Warning'},info:{c:'#5b54f0',bg:'#eef0fe',label:'Info'},ok:{c:'#16a34a',bg:'#e7f6ec',label:'Resolved'}};
+    const alertStats=[{label:'Critical',value:'1',color:'#dc2626'},{label:'Warning',value:'2',color:'#d97706'},{label:'Info',value:'4',color:'#5b54f0'},{label:'Resolved (24h)',value:'12',color:'#16a34a'}];
+    const afeed=[
+      {s:'critical',cat:'Whale movement',title:'Large exchange inflow detected', detail:'2.41M HLX (\u2248 $15.4M) transferred to a labelled CEX hot wallet from a long-dormant address.', time:'08:55 \u00b7 53m ago', status:'open'},
+      {s:'warning',cat:'Network load',title:'Mempool pressure spike', detail:'Pending transactions rose +218% above the 7-day baseline within a 15-minute window.', time:'08:42 \u00b7 1h ago', status:'open'},
+      {s:'warning',cat:'Validator',title:'Figment missed 4 consecutive blocks', detail:'Validator missed blocks 18,442,101\u2013104. Uptime dropped to 97.8%. Now producing again.', time:'06:10 \u00b7 2h ago', status:'monitoring'},
+      {s:'info',cat:'Staking',title:'Staking ratio crossed 67%', detail:'Network staking ratio reached an all-time high of 67.4% of circulating supply.', time:'02:33 \u00b7 6h ago', status:'open'},
+      {s:'ok',cat:'Consensus',title:'Chain reorg resolved (depth 2)', detail:'A depth-2 reorganization at height 18,440,902 was detected and resolved within one block.', time:'yesterday \u00b7 23:14', status:'resolved'},
+      {s:'info',cat:'Governance',title:'Proposal #142 entered voting', detail:'Parameter-change proposal to adjust the inflation schedule is now in its voting period.', time:'yesterday \u00b7 19:02', status:'open'},
+      {s:'ok',cat:'Validator',title:'No slashing events', detail:'No slashing or double-sign events recorded across the validator set in the last 24 hours.', time:'yesterday \u00b7 12:00', status:'resolved'},
+    ];
+    const alertFeed=afeed.map(a=>{ const m=sev[a.s]; return { ...a, sevLabel:m.label, sevC:m.c, sevBg:m.bg }; });
+
+    return {
+      network, navItems, periods, periodLabel, screenTitle, screenCaption,
+      isOverview: screen==='overview', isTransactions: screen==='transactions', isStaking: screen==='staking', isAlerts: screen==='alerts',
+      layouts, layoutGrid: layout==='grid', layoutBriefing: layout==='briefing', layoutDense: layout==='dense',
+      goTransactions:()=>this.setState({screen:'transactions'}), goAlerts:()=>this.setState({screen:'alerts'}),
+      kpis, flowChart, flowInTotal, flowOutTotal, flowNet,
+      healthScore, healthRing, healthSignals,
+      validatorDonut, nakamoto, topValidators,
+      tvlValue, tvlDelta, tvlChart, protocols,
+      largeTx, alertsPreview,
+      txKpis, txBars, txAll, txTypeBreak,
+      stKpis, stakingChart, validatorSet, unbonding,
+      alertStats, alertFeed,
+    };
+  }
+}
+</script>
+</body>
+</html>

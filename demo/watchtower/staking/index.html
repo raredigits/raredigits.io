@@ -1,0 +1,124 @@
+---
+permalink: /demo/watchtower/staking/
+eleventyExcludeFromCollections: true
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Staking — Watchtower · Rare Digits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/modules/watchtower.css">
+</head>
+<body class="wt" data-wt-screen="staking">
+<div class="wt-app">
+
+  <aside class="wt-sidebar">
+    <div class="wt-logo">
+      <div class="wt-logo__mark">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6z"></path><circle cx="12" cy="11" r="2.6"></circle></svg>
+      </div>
+      <div><div class="wt-logo__name">Watchtower</div><div class="wt-logo__sub">network monitor</div></div>
+    </div>
+    <div class="wt-netsel">
+      <div class="wt-netsel__avatar">H</div>
+      <div class="wt-netsel__body"><div class="wt-netsel__name">Helios</div><div class="wt-netsel__sub">HLX · PoS</div></div>
+      <span class="wt-netsel__dot"></span>
+    </div>
+    <nav class="wt-nav">
+      <a class="wt-nav__item" href="/demo/watchtower/overview/"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h7v7H3z"></path><path d="M14 3h7v7h-7z"></path><path d="M14 14h7v7h-7z"></path><path d="M3 14h7v7H3z"></path></svg><span class="wt-nav__label">Overview</span></a>
+      <a class="wt-nav__item" href="/demo/watchtower/transactions/"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h11"></path><path d="M14 4l4 3-4 3"></path><path d="M17 17H6"></path><path d="M10 14l-4 3 4 3"></path></svg><span class="wt-nav__label">Transactions</span></a>
+      <a class="wt-nav__item is-active" href="/demo/watchtower/staking/"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7z"></path><path d="M3 7l9 5 9-5"></path><path d="M12 12v10"></path></svg><span class="wt-nav__label">Staking</span></a>
+      <a class="wt-nav__item" href="/demo/watchtower/alerts/"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.7 21a2 2 0 0 1-3.4 0"></path></svg><span class="wt-nav__label">Alerts</span><span class="wt-nav__badge">3</span></a>
+    </nav>
+    <div class="wt-user">
+      <div class="wt-user__avatar">AK</div>
+      <div><div class="wt-user__name">Research desk</div><div class="wt-user__sub">analyst workspace</div></div>
+    </div>
+  </aside>
+
+  <main class="wt-main wt-scroll">
+    <header class="wt-topbar">
+      <div class="wt-topbar__head">
+        <div class="wt-topbar__title">Staking</div>
+        <div class="wt-topbar__caption">validator set, staking ratio &amp; rewards</div>
+      </div>
+      <div class="wt-search">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a3abb8" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.2-3.2"></path></svg>
+        <span>search address / tx…</span>
+      </div>
+      <div class="wt-period">
+        <button class="wt-period__btn" data-wt-period="24h">24H</button>
+        <button class="wt-period__btn" data-wt-period="7d">7D</button>
+        <button class="wt-period__btn" data-wt-period="30d">30D</button>
+      </div>
+    </header>
+
+    <div class="wt-content" data-wt-content>
+
+      <div class="wt-grid-4">
+        <div class="wt-kpi">
+          <div class="wt-kpi__top"><span class="wt-kpi__label">Staking ratio</span><span class="wt-badge wt-badge--pos">+0.3pp</span></div>
+          <div class="wt-kpi__value">67.4%</div>
+          <div class="wt-kpi__sub">of circulating supply</div>
+        </div>
+        <div class="wt-kpi">
+          <div class="wt-kpi__top"><span class="wt-kpi__label">Total staked</span><span class="wt-badge wt-badge--pos">+0.9%</span></div>
+          <div class="wt-kpi__value">412.6M HLX</div>
+          <div class="wt-kpi__sub">≈ $2.64B</div>
+        </div>
+        <div class="wt-kpi">
+          <div class="wt-kpi__top"><span class="wt-kpi__label">Active validators</span><span class="wt-badge wt-badge--pos">+0</span></div>
+          <div class="wt-kpi__value">175</div>
+          <div class="wt-kpi__sub">of 220 in the set</div>
+        </div>
+        <div class="wt-kpi">
+          <div class="wt-kpi__top"><span class="wt-kpi__label">Avg APR</span><span class="wt-badge wt-badge--neg">-0.2pp</span></div>
+          <div class="wt-kpi__value">8.92%</div>
+          <div class="wt-kpi__sub">net of commission</div>
+        </div>
+      </div>
+
+      <div class="wt-row-21-1">
+        <div class="wt-card wt-card--pad">
+          <div class="wt-card__head" style="margin-bottom:14px">
+            <div><div class="wt-card__title">Staking ratio</div><div class="wt-card__sub">% of circulating HLX staked · <span data-val="periodLabel">—</span></div></div>
+            <div class="wt-tvl__value wt-c-pos">67.4%</div>
+          </div>
+          <div class="wt-chart" data-chart="staking" data-h="170"></div>
+        </div>
+
+        <div class="wt-card wt-card--pad">
+          <div class="wt-card__title" style="margin-bottom:6px">Bonding &amp; rewards</div>
+          <div class="wt-bond__row"><span class="wt-bond__label">Unbonding queue</span><span class="wt-bond__value">2.1M HLX</span></div>
+          <div class="wt-bond__row"><span class="wt-bond__label">Unbonding period</span><span class="wt-bond__value">21 days</span></div>
+          <div class="wt-bond__row"><span class="wt-bond__label">Pending rewards</span><span class="wt-bond__value">48.3K HLX</span></div>
+          <div class="wt-bond__row"><span class="wt-bond__label">Slashing (30d)</span><span class="wt-bond__value">0 events</span></div>
+        </div>
+      </div>
+
+      <div class="wt-card wt-card--clip">
+        <div class="wt-card__title" style="padding:18px 22px 14px">Validator set <span class="wt-card__title-note">· top 8 by voting power</span></div>
+        <div class="wt-thead wt-cols-val"><span>Rank</span><span>Validator</span><span>Voting power</span><span class="wt-right">Commission</span><span class="wt-right">Uptime</span><span class="wt-right">Status</span></div>
+        <div class="wt-tr wt-cols-val"><span class="wt-cell-age">#1</span><span style="font-size:13px;font-weight:500">Stride Labs</span><div class="wt-vp"><div class="wt-vp__bar"><div class="wt-vp__fill" style="width:100%"></div></div><span class="wt-cell-mono" style="font-size:12.5px">8.52%</span></div><span class="wt-right wt-cell-usd">5%</span><span class="wt-right wt-cell-mono" style="font-weight:400">99.90%</span><span class="wt-right"><span class="wt-pill wt-pill--healthy">healthy</span></span></div>
+        <div class="wt-tr wt-cols-val"><span class="wt-cell-age">#2</span><span style="font-size:13px;font-weight:500">Cosmostation</span><div class="wt-vp"><div class="wt-vp__bar"><div class="wt-vp__fill" style="width:92%"></div></div><span class="wt-cell-mono" style="font-size:12.5px">7.71%</span></div><span class="wt-right wt-cell-usd">6%</span><span class="wt-right wt-cell-mono" style="font-weight:400">99.72%</span><span class="wt-right"><span class="wt-pill wt-pill--healthy">healthy</span></span></div>
+        <div class="wt-tr wt-cols-val"><span class="wt-cell-age">#3</span><span style="font-size:13px;font-weight:500">Figment</span><div class="wt-vp"><div class="wt-vp__bar"><div class="wt-vp__fill" style="width:82%"></div></div><span class="wt-cell-mono" style="font-size:12.5px">6.88%</span></div><span class="wt-right wt-cell-usd">6%</span><span class="wt-right wt-cell-mono" style="font-weight:400">97.80%</span><span class="wt-right"><span class="wt-pill wt-pill--jailed">jailed</span></span></div>
+        <div class="wt-tr wt-cols-val"><span class="wt-cell-age">#4</span><span style="font-size:13px;font-weight:500">Allnodes</span><div class="wt-vp"><div class="wt-vp__bar"><div class="wt-vp__fill" style="width:72%"></div></div><span class="wt-cell-mono" style="font-size:12.5px">6.04%</span></div><span class="wt-right wt-cell-usd">7%</span><span class="wt-right wt-cell-mono" style="font-weight:400">99.36%</span><span class="wt-right"><span class="wt-pill wt-pill--watch">watch</span></span></div>
+        <div class="wt-tr wt-cols-val"><span class="wt-cell-age">#5</span><span style="font-size:13px;font-weight:500">Chorus One</span><div class="wt-vp"><div class="wt-vp__bar"><div class="wt-vp__fill" style="width:62%"></div></div><span class="wt-cell-mono" style="font-size:12.5px">5.22%</span></div><span class="wt-right wt-cell-usd">7%</span><span class="wt-right wt-cell-mono" style="font-weight:400">99.18%</span><span class="wt-right"><span class="wt-pill wt-pill--watch">watch</span></span></div>
+        <div class="wt-tr wt-cols-val"><span class="wt-cell-age">#6</span><span style="font-size:13px;font-weight:500">Polychain</span><div class="wt-vp"><div class="wt-vp__bar"><div class="wt-vp__fill" style="width:52%"></div></div><span class="wt-cell-mono" style="font-size:12.5px">4.38%</span></div><span class="wt-right wt-cell-usd">8%</span><span class="wt-right wt-cell-mono" style="font-weight:400">99.00%</span><span class="wt-right"><span class="wt-pill wt-pill--watch">watch</span></span></div>
+        <div class="wt-tr wt-cols-val"><span class="wt-cell-age">#7</span><span style="font-size:13px;font-weight:500">Everstake</span><div class="wt-vp"><div class="wt-vp__bar"><div class="wt-vp__fill" style="width:42%"></div></div><span class="wt-cell-mono" style="font-size:12.5px">3.55%</span></div><span class="wt-right wt-cell-usd">8%</span><span class="wt-right wt-cell-mono" style="font-weight:400">98.82%</span><span class="wt-right"><span class="wt-pill wt-pill--watch">watch</span></span></div>
+        <div class="wt-tr wt-cols-val"><span class="wt-cell-age">#8</span><span style="font-size:13px;font-weight:500">P2P.org</span><div class="wt-vp"><div class="wt-vp__bar"><div class="wt-vp__fill" style="width:33%"></div></div><span class="wt-cell-mono" style="font-size:12.5px">2.79%</span></div><span class="wt-right wt-cell-usd">9%</span><span class="wt-right wt-cell-mono" style="font-weight:400">98.64%</span><span class="wt-right"><span class="wt-pill wt-pill--watch">watch</span></span></div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/raredigits/rare-charts@v0.9.6/rare-charts.min.js"></script>
+<script src="/assets/js/demo/watchtower.js" defer></script>
+</body>
+</html>
