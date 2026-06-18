@@ -159,14 +159,40 @@ tr th:last-child {
    ============================================================ */
 
 :root {
-    --tct-good: #10B981;
-    --tct-warn: #F59E0B;
-    --tct-bad:  #EF4444;
-    --tct-info: #3B82F6;
-    --tct-mute: #94A3B8;
-    --tct-jeeves: #6366F1;
-    --tct-bg-soft: #F8FAFC;
-    --tct-border: #E2E8F0;
+    /* Semantic palette — sourced from Rare Styles tokens so the demo tracks
+       the library on upgrade instead of carrying its own parallel colours.
+       Soft tints and inks are derived from the same library hues. */
+    --tct-good:   var(--green);
+    --tct-warn:   var(--orange);
+    --tct-bad:    var(--red);
+    --tct-info:   var(--blue);
+    --tct-jeeves: var(--purple);
+    --tct-mute:   var(--gray-mid-dark);
+    --tct-border: var(--gray-mid-light);
+    --tct-bg-soft: var(--gray-lightest);
+
+    /* soft tints (pill / row backgrounds) */
+    --tct-good-soft:   color-mix(in srgb, var(--green) 15%, #fff);
+    --tct-warn-soft:   color-mix(in srgb, var(--orange) 16%, #fff);
+    --tct-bad-soft:    color-mix(in srgb, var(--red) 12%, #fff);
+    --tct-info-soft:   color-mix(in srgb, var(--blue) 12%, #fff);
+    --tct-jeeves-soft: color-mix(in srgb, var(--purple) 10%, #fff);
+
+    /* readable ink on the soft tints */
+    --tct-good-ink:   color-mix(in srgb, var(--green) 60%, #000);
+    --tct-warn-ink:   color-mix(in srgb, var(--orange) 62%, #000);
+    --tct-bad-ink:    color-mix(in srgb, var(--red) 55%, #000);
+    --tct-info-ink:   color-mix(in srgb, var(--blue) 55%, #000);
+    --tct-jeeves-ink: color-mix(in srgb, var(--purple) 52%, #000);
+
+    /* dark surfaces (today-card, digest) and on-dark accents */
+    --tct-surface-dark:  var(--gray-darkest);
+    --tct-surface-dark2: var(--gray-dark);
+    --tct-on-dark-mute:  var(--gray);
+    --tct-track:         var(--gray-mid-light);
+    --tct-good-on-dark:  color-mix(in srgb, var(--green) 50%, #fff);
+    --tct-bad-on-dark:   color-mix(in srgb, var(--red) 50%, #fff);
+    --tct-jeeves-on-dark: color-mix(in srgb, var(--purple) 45%, #fff);
 }
 
 /* page subheading row used as section headers */
@@ -213,7 +239,7 @@ tr th:last-child {
 
 /* ----- Jeeves card ----- */
 .jeeves-card {
-    background: linear-gradient(135deg, #EEF2FF 0%, #F5F3FF 100%);
+    background: linear-gradient(135deg, var(--tct-jeeves-soft) 0%, var(--tct-jeeves-soft) 100%);
     border-left: 4px solid var(--tct-jeeves);
     border-radius: var(--space-sm);
     padding: var(--space-md) var(--space-lg);
@@ -271,7 +297,7 @@ tr th:last-child {
     display: flex;
     align-items: flex-start;
     gap: var(--space-sm);
-    background: #EEF2FF;
+    background: var(--tct-jeeves-soft);
     border-left: 3px solid var(--tct-jeeves);
     padding: var(--space-sm) var(--space-md);
     border-radius: 4px;
@@ -339,7 +365,7 @@ tr th:last-child {
     width: 96px;
     height: 96px;
     border-radius: 50%;
-    background: conic-gradient(var(--color) calc(var(--pct) * 1%), #E5E7EB 0);
+    background: conic-gradient(var(--color) calc(var(--pct) * 1%), var(--tct-track) 0);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -405,7 +431,7 @@ tr th:last-child {
 }
 .progress {
     height: 6px;
-    background: #E5E7EB;
+    background: var(--tct-track);
     border-radius: 3px;
     overflow: hidden;
 }
@@ -428,14 +454,14 @@ tr th:last-child {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    background: #E2E8F0;
-    color: #475569;
+    background: var(--tct-border);
+    color: var(--tct-mute);
 }
-.pill.good { background: #D1FAE5; color: #065F46; }
-.pill.warn { background: #FEF3C7; color: #92400E; }
-.pill.bad  { background: #FEE2E2; color: #991B1B; }
-.pill.info { background: #DBEAFE; color: #1E40AF; }
-.pill.muted{ background: #F1F5F9; color: #64748B; }
+.pill.good { background: var(--tct-good-soft); color: var(--tct-good-ink); }
+.pill.warn { background: var(--tct-warn-soft); color: var(--tct-warn-ink); }
+.pill.bad  { background: var(--tct-bad-soft); color: var(--tct-bad-ink); }
+.pill.info { background: var(--tct-info-soft); color: var(--tct-info-ink); }
+.pill.muted{ background: var(--tct-bg-soft); color: var(--tct-mute); }
 
 /* ----- Severity rail (alerts) ----- */
 .alert-card {
@@ -450,7 +476,7 @@ tr th:last-child {
     margin-bottom: var(--space-sm);
     background: #fff;
 }
-.alert-card.sev-critical { border-left-color: var(--tct-bad); background: #FEF2F2; }
+.alert-card.sev-critical { border-left-color: var(--tct-bad); background: var(--tct-bad-soft); }
 .alert-card.sev-high     { border-left-color: var(--tct-bad); }
 .alert-card.sev-medium   { border-left-color: var(--tct-warn); }
 .alert-card.sev-low      { border-left-color: var(--tct-info); }
@@ -501,8 +527,8 @@ tr th:last-child {
     font-size: 0.9rem;
 }
 .list-row:last-child { border-bottom: none; }
-.list-row.row-bad     { background: #FEF2F2; }
-.list-row.row-warn    { background: #FFFBEB; }
+.list-row.row-bad     { background: var(--tct-bad-soft); }
+.list-row.row-warn    { background: var(--tct-warn-soft); }
 .list-row .row-title  { font-weight: bold; }
 .list-row .row-sub    { font-size: 0.8rem; color: var(--tct-mute); }
 .list-row .row-amount { font-weight: bold; font-variant-numeric: tabular-nums; }
@@ -649,7 +675,7 @@ tr th:last-child {
    Today card · Hello-Florian · "with one eye closed" mode
    ============================================================ */
 .today-card {
-    background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+    background: linear-gradient(135deg, var(--tct-surface-dark) 0%, var(--tct-surface-dark2) 100%);
     color: #fff;
     border-radius: var(--space-md);
     padding: var(--space-lg) var(--space-xl);
@@ -671,7 +697,7 @@ tr th:last-child {
     letter-spacing: -0.01em;
 }
 .today-card .today-greeting .today-date {
-    color: #94A3B8;
+    color: var(--tct-on-dark-mute);
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -680,7 +706,7 @@ tr th:last-child {
     text-align: left;
 }
 .today-card .today-num-label {
-    color: #94A3B8;
+    color: var(--tct-on-dark-mute);
     text-transform: uppercase;
     font-size: 0.7rem;
     letter-spacing: 0.05em;
@@ -692,10 +718,10 @@ tr th:last-child {
     color: #fff;
     line-height: 1;
 }
-.today-card .today-num-value.bad { color: #FCA5A5; }
-.today-card .today-num-value.good { color: #6EE7B7; }
+.today-card .today-num-value.bad { color: var(--tct-bad-on-dark); }
+.today-card .today-num-value.good { color: var(--tct-good-on-dark); }
 .today-card .today-num-foot {
-    color: #94A3B8;
+    color: var(--tct-on-dark-mute);
     font-size: 0.75rem;
     margin-top: 4px;
 }
@@ -707,7 +733,7 @@ tr th:last-child {
     background: rgba(99, 102, 241, 0.2);
     border: 1px solid var(--tct-jeeves);
     border-radius: var(--space-sm);
-    color: #C7D2FE;
+    color: var(--tct-jeeves-on-dark);
     text-decoration: none;
     font-size: 0.85rem;
     cursor: pointer;
@@ -771,7 +797,7 @@ dialog.corsair-modal .dialog-close {
     line-height: 0;
 }
 dialog.corsair-modal .dialog-close:hover {
-    background: #E2E8F0;
+    background: var(--tct-border);
     color: var(--tct-bad);
 }
 dialog.corsair-modal .dialog-close .material-symbols-outlined {
@@ -836,16 +862,16 @@ dialog.corsair-modal .dialog-footer {
     font-size: 0.7rem;
     font-weight: bold;
     letter-spacing: 0.03em;
-    background: #F1F5F9;
-    color: #475569;
+    background: var(--tct-bg-soft);
+    color: var(--tct-mute);
     white-space: nowrap;
 }
 .system-badge.hubspot { background: #FFE5DB; color: #C4451B; }
-.system-badge.zoho    { background: #FEE2E2; color: #991B1B; }
+.system-badge.zoho    { background: var(--tct-bad-soft); color: var(--tct-bad-ink); }
 .system-badge.asana   { background: #FCE7F3; color: #9D174D; }
-.system-badge.bayzat  { background: #DCFCE7; color: #166534; }
-.system-badge.bank    { background: #DBEAFE; color: #1E40AF; }
-.system-badge.tickets { background: #F3E8FF; color: #6B21A8; }
+.system-badge.bayzat  { background: var(--tct-good-soft); color: var(--tct-good-ink); }
+.system-badge.bank    { background: var(--tct-info-soft); color: var(--tct-info-ink); }
+.system-badge.tickets { background: var(--tct-jeeves-soft); color: var(--tct-jeeves-ink); }
 
 .reconcile-table {
     width: 100%;
@@ -892,25 +918,25 @@ dialog.corsair-modal .dialog-footer {
     margin-top: 2px;
 }
 .reconcile-table .gap-cell {
-    background: #FEF2F2;
+    background: var(--tct-bad-soft);
     border-left: 3px solid var(--tct-bad);
     font-weight: bold;
-    color: #991B1B;
+    color: var(--tct-bad-ink);
 }
 .reconcile-table .gap-cell.gap-warn {
-    background: #FFFBEB;
+    background: var(--tct-warn-soft);
     border-left-color: var(--tct-warn);
-    color: #92400E;
+    color: var(--tct-warn-ink);
 }
 .reconcile-table .gap-cell.gap-info {
-    background: #EFF6FF;
+    background: var(--tct-info-soft);
     border-left-color: var(--tct-info);
-    color: #1E40AF;
+    color: var(--tct-info-ink);
 }
 .reconcile-table .gap-cell.gap-ok {
-    background: #F0FDF4;
+    background: var(--tct-good-soft);
     border-left-color: var(--tct-good);
-    color: #065F46;
+    color: var(--tct-good-ink);
 }
 .reconcile-table .gap-amount {
     font-size: 0.95rem;
@@ -971,7 +997,7 @@ dialog.corsair-modal .dialog-footer {
     border-color: var(--tct-jeeves);
 }
 .scenario-toggle.active .scenario-impact {
-    color: #C7D2FE;
+    color: var(--tct-jeeves-on-dark);
     border-left-color: rgba(255,255,255,0.3);
 }
 .scenario-toggle.positive.active { background: var(--tct-good); border-color: var(--tct-good); }
@@ -1134,7 +1160,7 @@ dialog.corsair-modal .dialog-footer {
 }
 .case-timeline-item .case-detail {
     font-size: 0.85rem;
-    color: #475569;
+    color: var(--tct-mute);
     line-height: 1.4;
 }
 
@@ -1156,7 +1182,7 @@ dialog.corsair-modal .dialog-footer {
     text-transform: none;
     letter-spacing: 0;
 }
-.case-action p { font-size: 0.8rem; margin: 0; color: #475569; }
+.case-action p { font-size: 0.8rem; margin: 0; color: var(--tct-mute); }
 .case-action .case-action-btn {
     display: inline-block;
     margin-top: var(--space-sm);
@@ -1217,7 +1243,7 @@ dialog.corsair-modal .dialog-footer {
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     font-size: 0.85rem;
     line-height: 1.5;
-    color: #1e293b;
+    color: var(--tct-surface-dark2);
 }
 .digest-frame .digest-meta {
     color: var(--tct-mute);
@@ -1233,7 +1259,7 @@ dialog.corsair-modal .dialog-footer {
     letter-spacing: 0;
     font-size: 1rem;
     margin: var(--space-md) 0 var(--space-xs);
-    color: #0f172a;
+    color: var(--tct-surface-dark);
 }
 .digest-frame h4 {
     text-transform: none;
@@ -1264,7 +1290,7 @@ dialog.corsair-modal .dialog-footer {
     border: 1px solid var(--tct-border);
     border-radius: var(--space-xs);
     background: #fff;
-    color: #1e293b;
+    color: var(--tct-surface-dark2);
     text-decoration: none;
     font-size: 0.85rem;
     cursor: pointer;
@@ -1275,7 +1301,7 @@ dialog.corsair-modal .dialog-footer {
     color: #fff;
     border-color: var(--tct-jeeves);
 }
-.btn-corsair.primary:hover { background: #4F46E5; }
+.btn-corsair.primary:hover { background: var(--tct-jeeves); }
 
 /* mobile */
 @media (max-width: 768px) {

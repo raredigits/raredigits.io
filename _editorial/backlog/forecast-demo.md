@@ -90,10 +90,10 @@ Forecast — add-on: сидит поверх того же стека, что ч
 Идеи на будущие релизы — и для демо (презентационная ценность), и для продукта (повышают интерес к решению).
 
 **Демо / презентация (близкий горизонт):**
-- Реальные скриншоты вместо `.shot-ph` на `tools/forecast/`.
-- Тёмная тема как витрина (по образцу плана odoo-демо).
-- Сделать сегмент **Base / Conservative / Stretch** на cockpit рабочим: переключение реально перерисовывает fan-chart и KPI (сейчас статичен).
-- Jeeves-чип «Model the Cobalt slip» → реальный пересчёт прямо в карточке (сейчас просто ведёт в scenario lab).
+- [x] Реальные скриншоты вместо `.shot-ph` на `tools/forecast/` — сделано 18.06.2026 (см. ниже).
+- [x] Сегмент **Base / Conservative / Stretch** на cockpit рабочий: реально перерисовывает fan-chart + все KPI (cash, P10–P90, chance, delta). Сделано вместе с переводом на rare-charts.
+- [x] Jeeves-чип «Model the Cobalt slip» → реальный in-card пересчёт (cash 2.49M / chance 58%, как обещает текст Jeeves), тоггл on/off. Больше не ведёт в scenario lab.
+- Тёмная тема как витрина (по образцу плана odoo-демо). ← не делали (отложено).
 - Встроить cockpit в продуктовую страницу превью-фреймом (уже есть live line-chart `#line-chart-demo-forecast`).
 
 **Продукт — фичи, повышающие интерес:**
@@ -121,5 +121,11 @@ Forecast — add-on: сидит поверх того же стека, что ч
 - [x] Экран 2 — Revenue deep-dive → `/demo/forecast/revenue/`
 - [x] Экран 3 — Scenario lab (интерактив) → `/demo/forecast/scenarios/`
 - [x] Продуктовая страница + пресс-релиз
-- [ ] Реальные скриншоты вместо `.shot-ph` на `tools/forecast/`
-- [ ] Полировка до презентационного состояния (правки по месту)
+- [x] Реальные скриншоты вместо `.shot-ph` на `tools/forecast/` (18.06.2026)
+- [x] Полировка до презентационного состояния (fan-chart на rare-charts, живой сегмент сценариев, Cobalt-чип)
+
+### Сделано 18.06.2026 (итерация «полировка демо»)
+
+- **Fan-chart → rare-charts.** Ручной inline-SVG `.fanchart` на cockpit и revenue заменён нативной серией `band` (P10–P90) из `rare-charts@v0.9.6` + line-серии (actual / P50 / plan). Cockpit: cone + дашед P50; revenue: bars сделать нельзя (rare-charts `Line` не поддерживает bar-серии — только line/band), поэтому actuals = сплошная линия (солид прошлое / дашед будущее / конус — единый канон с cockpit и с примером на странице).
+- **forecast.css почищен.** Удалены мёртвые `.fanchart` / `.chart-axis` и generic-классы-коллизии (`.grid` переопределял layout-систему библиотеки; `.band`/`.median`/`.actual`/`.plan`), а также мёртвые токены `--fc-band-edge` / `--fc-plan` / `--fc-actual`. `.chart-legend` оставлен — его ещё использует backtest-легенда в scenarios.
+- **Скриншоты:** сняты headless-Chrome (retina 2×) с живых экранов, ужаты `sips` до ~150–200KB JPEG (1600px), лежат в `assets/img/demo/forecast-*.jpg`, вставлены как кликабельные `<img class="shot">` со ссылкой на live-демо. Temp `<style>`-блок `.shot-ph` снят.

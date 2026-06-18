@@ -8,33 +8,8 @@ permalink: /tools/atlas/
 ---
 
 <style>
-/* TEMP — screenshot placeholders until the redesign visuals are final.
-   Remove this block (and swap .shot-ph blocks for <img>) when shots land. */
-.shot-ph {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-sm);
-    text-align: center;
-    min-height: 320px;
-    padding: var(--space-lg);
-    background:
-        repeating-linear-gradient(45deg, var(--gray-lightest), var(--gray-lightest) 12px, var(--bg-color-light) 12px, var(--bg-color-light) 24px);
-    border: 2px dashed var(--border-color);
-    border-radius: var(--space-sm);
-    color: var(--text-color-light);
-}
-.shot-ph .shot-ph__tag {
-    font-size: var(--font-size-xs);
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    border: 1px solid var(--border-color);
-    border-radius: var(--space-lg);
-    padding: 2px 10px;
-}
-.shot-ph .shot-ph__what { max-width: 38ch; line-height: 1.4em; }
-.shot-ph--tall { min-height: 460px; }
+/* framed demo screenshots (captured from the live /demo/ screens) */
+.shot { display: block; width: 100%; height: auto; border: 1px solid var(--border-color); border-radius: var(--space-sm); box-shadow: var(--shadow-sm); margin-top: var(--space-sm); }
 </style>
 
 <div class="lead">
@@ -80,30 +55,21 @@ Picking the right modules sorts out what runs underneath. It does nothing about
                 <h3>The number is the hero.</h3>
                 <p>No more "Unrestricted Cash Balance" in 11px grey. Just the figure, big, in plain words: "cash you can spend." Tabular digits that line up, so 2.4M and 240K never play tricks on you.</p>
             </div>
-            <div class="shot-ph">
-                <span class="shot-ph__tag">Screenshot placeholder</span>
-                <p class="shot-ph__what"><strong>KPI strip.</strong><br>Four tiles: cash, revenue vs plan, runway, what needs you, with deltas and one accent colour used sparingly.</p>
-            </div>
+            <a href="/demo/atlas/dashboard/"><img class="shot" src="/assets/img/demo/atlas-dashboard.jpg" alt="Owner dashboard — cash, revenue vs plan, runway and what needs you, with one accent colour used sparingly" loading="lazy"></a>
         </div>
         <div class="feature-row__item">
             <div>
                 <h3>An invoice you can read.</h3>
                 <p>The same <code>account.move</code> Odoo has always had, reorganised so the customer sees one amount and one button, and you see where it stands at a glance, on a status the size of a thought rather than a spreadsheet.</p>
             </div>
-            <div class="shot-ph">
-                <span class="shot-ph__tag">Screenshot placeholder</span>
-                <p class="shot-ph__what"><strong>Invoice document.</strong><br>Clean payment sheet, status stepper (Draft → Sent → Paid), pay panel and timeline. <a href="/demo/atlas/invoice/">Live →</a></p>
-            </div>
+            <a href="/demo/atlas/invoice/"><img class="shot" src="/assets/img/demo/atlas-invoice.jpg" alt="Invoice document — clean payment sheet, status stepper, pay panel and timeline" loading="lazy"></a>
         </div>
         <div class="feature-row__item">
             <div>
                 <h3>The pipeline shows what's slipping.</h3>
                 <p>Odoo's CRM kanban, kept, but the deal going stale and the deal about to sign no longer hide inside identical cards. Priority, age and status surface themselves.</p>
             </div>
-            <div class="shot-ph">
-                <span class="shot-ph__tag">Screenshot placeholder</span>
-                <p class="shot-ph__what"><strong>Sales pipeline (kanban).</strong><br>Stage columns with weighted totals, deal cards with priority and "stale" flags. <a href="/demo/atlas/pipeline/">Live →</a></p>
-            </div>
+            <a href="/demo/atlas/pipeline/"><img class="shot" src="/assets/img/demo/atlas-pipeline.jpg" alt="Sales pipeline kanban — stage columns with weighted totals and deal cards with priority and stale flags" loading="lazy"></a>
         </div>
     </div>
   </div>

@@ -38,30 +38,21 @@ Columbus runs that fund. It is an ERP for the company’s informal relationsh
                 <h3>The thread, not the funnel.</h3>
                 <p>Every conversation you have had with a client in one place, found in seconds, so you walk in knowing what you promised in March and what their head of finance is touchy about. The small things that carry a relationship get caught and kept, and when a good client goes quiet, it taps you on the shoulder before the silence becomes a problem.</p>
             </div>
-            <div class="shot-ph">
-                <span class="shot-ph__tag">Live demo</span>
-                <p class="shot-ph__what"><strong>The Thread.</strong><br>A relationship as a long story: phases, captured facts, promises, quiet-detection alerts. <a href="/demo/columbus/thread/">Live →</a></p>
-            </div>
+            <a href="/demo/columbus/thread/"><img class="shot" src="/assets/img/demo/columbus-thread.jpg" alt="The Thread — a relationship as a long story: phases, captured facts, promises and quiet-detection alerts" loading="lazy"></a>
         </div>
         <div class="feature-row__item">
             <div>
                 <h3>Every relationship runs a balance.</h3>
                 <p>Columbus keeps a running ledger on each relationship, the way a bank keeps one on a borrower: what they have done for you, what you owe back, what is overdue. It tells you, plainly, when you have drawn down more than you have paid in, and holds the next favour until you settle. A relationship you only ever withdraw from eventually closes the account.</p>
             </div>
-            <div class="shot-ph">
-                <span class="shot-ph__tag">Live demo</span>
-                <p class="shot-ph__what"><strong>The Reciprocity Ledger.</strong><br>A balance per relationship, overdrawn flagged in red, with the verdict: repay, or safe to ask. <a href="/demo/columbus/ledger/">Live →</a></p>
-            </div>
+            <a href="/demo/columbus/ledger/"><img class="shot" src="/assets/img/demo/columbus-ledger.jpg" alt="The Reciprocity Ledger — a balance per relationship, overdrawn flagged in red, with the verdict: repay or safe to ask" loading="lazy"></a>
         </div>
         <div class="feature-row__item">
             <div>
                 <h3>Warm doors, grown from the thread.</h3>
                 <p>Every happy client stands in the middle of a crowd of people remarkably like them, which is exactly who you want to meet next. Columbus maps who each client can reach, hands you the prompt and the short checklist, and arrives with a real testimonial in their words already attached, because a recommendation opens a door your own pitch never will.</p>
             </div>
-            <div class="shot-ph">
-                <span class="shot-ph__tag">Live demo</span>
-                <p class="shot-ph__what"><strong>Warm Leads.</strong><br>A tree of introductions, each with a fit score, a step-by-step ask and an attached client quote. <a href="/demo/columbus/warm-leads/">Live →</a></p>
-            </div>
+            <a href="/demo/columbus/warm-leads/"><img class="shot" src="/assets/img/demo/columbus-warm-leads.jpg" alt="Warm Leads — a tree of introductions, each with a fit score, a step-by-step ask and an attached client quote" loading="lazy"></a>
         </div>
     </div>
   </div>
@@ -106,30 +97,6 @@ We built a working demo on a fictional studio’s book of clients. No logi
 {% include "special/bookDemo.html" %}
 
 <style>
-/* TEMP — live-demo cards reuse the screenshot-placeholder styling until
-   captured stills land. Remove this block when shots replace the .shot-ph blocks. */
-.shot-ph {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-sm);
-    text-align: center;
-    min-height: 220px;
-    padding: var(--space-lg);
-    background:
-        repeating-linear-gradient(45deg, var(--gray-lightest), var(--gray-lightest) 12px, var(--bg-color-light) 12px, var(--bg-color-light) 24px);
-    border: 2px dashed var(--border-color);
-    border-radius: var(--space-sm);
-    color: var(--text-color-light);
-}
-.shot-ph .shot-ph__tag {
-    font-size: var(--font-size-xs);
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    border: 1px solid var(--border-color);
-    border-radius: var(--space-lg);
-    padding: 2px 10px;
-}
-.shot-ph .shot-ph__what { max-width: 38ch; line-height: 1.4em; }
+/* framed demo screenshots (captured from the live /demo/ screens) */
+.shot { display: block; width: 100%; height: auto; border: 1px solid var(--border-color); border-radius: var(--space-sm); box-shadow: var(--shadow-sm); margin-top: var(--space-sm); }
 </style>

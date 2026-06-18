@@ -8,7 +8,8 @@
    .card-soft, .section-head, --fin-* palette). Here we add only what
    forecasting needs that the shared module doesn't have:
 
-     1. Fan chart       .fanchart  (P10–P90 cone of uncertainty)
+     1. Fan chart       .fan-chart (container; the P10–P90 cone itself is drawn
+                                    by rare-charts' native `band` series)
      2. Driver decomp   .decomp    (what builds up to the forecast)
      3. Forecast table  .ftable    (month rows: P50, band, plan, variance)
      4. Seasonality     .season    (12-month multiplicative index bars)
@@ -26,9 +27,6 @@
     /* forecast-specific tints, all derived from library hues so they move with
        the theme. The band is the brand green at low opacity — a quiet cone. */
     --fc-band:        color-mix(in srgb, var(--brand-color) 16%, white);
-    --fc-band-edge:   color-mix(in srgb, var(--brand-color-dark) 30%, white);
-    --fc-plan:        var(--gray-trans);      /* the plan/target reference line */
-    --fc-actual:      var(--fin-ink);         /* solid history */
     --fc-committed:   var(--fin-ink);         /* darkest — most certain */
     --fc-recurring:   var(--brand-color-dark);
     --fc-pipeline:    var(--blue);
@@ -37,18 +35,13 @@
 
 /* ---- 1. fan chart ------------------------------------------------------ */
 
-.fanchart { display: block; width: 100%; height: auto; overflow: visible; }
-.fanchart .band   { fill: var(--fc-band); stroke: none; }
-.fanchart .band-inner { fill: color-mix(in srgb, var(--brand-color) 26%, white); stroke: none; }
-.fanchart .median { fill: none; stroke: var(--fin-accent); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; vector-effect: non-scaling-stroke; }
-.fanchart .actual { fill: none; stroke: var(--fc-actual); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; vector-effect: non-scaling-stroke; }
-.fanchart .plan   { fill: none; stroke: var(--fc-plan); stroke-width: 1.5; stroke-dasharray: 5 4; vector-effect: non-scaling-stroke; }
-.fanchart .grid   { stroke: var(--fin-line); stroke-width: 1; vector-effect: non-scaling-stroke; }
-.fanchart .nowline { stroke: var(--fin-ink-soft); stroke-width: 1; stroke-dasharray: 2 3; vector-effect: non-scaling-stroke; }
-.fanchart .dot    { fill: var(--fin-surface); stroke: var(--fin-accent); stroke-width: 2.5; }
-.fanchart .nowlabel { fill: var(--fin-ink-soft); font-family: var(--primary-font); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
+/* The cockpit and revenue cones are now drawn by rare-charts (native `band`
+   series = P10–P90), so the hand-rolled inline-SVG `.fanchart` and its generic
+   descendant classes (.grid/.band/.median/.actual/.plan — which collided with
+   the rare-styles layout `.grid`) are gone. This is just the container. */
+.fan-chart { width: 100%; }
 
-.chart-axis { display: flex; justify-content: space-between; font-size: var(--font-size-xs); color: var(--fin-ink-soft); margin-top: 6px; }
+/* The scenario lab still uses a small static legend for its backtest strip. */
 .chart-legend { display: flex; flex-wrap: wrap; gap: var(--space-md); margin-top: var(--space-sm); font-size: var(--font-size-xs); color: var(--fin-ink-soft); }
 .chart-legend .key { display: inline-flex; align-items: center; gap: 6px; }
 .chart-legend .swatch { width: 18px; height: 0; border-top: 2.5px solid currentColor; }

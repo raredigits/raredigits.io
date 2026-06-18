@@ -50,6 +50,59 @@ layout: null
   .card-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-md); }
   .card-head h3 { font-size: var(--font-size-md); }
   .card-head .material-symbols-outlined { color: var(--fin-ink-soft); font-size: 20px; }
+
+  /* ---- interactive "Ask Jeeves" panel under the topbar search ---------- */
+  .ask { position: relative; }
+  .ask-panel {
+    position: absolute; top: calc(100% + 8px); right: 0;
+    width: min(460px, 86vw);
+    background: var(--fin-surface); border: 1px solid var(--fin-line);
+    border-radius: var(--fin-radius); box-shadow: var(--fin-shadow-lg);
+    padding: var(--space-xs); z-index: 50; display: none;
+  }
+  .ask-panel.open { display: block; }
+  .ask-panel__hint { padding: 8px 12px 4px; font-size: var(--font-size-xs); color: var(--fin-ink-soft); text-transform: uppercase; letter-spacing: .06em; }
+  .ask-suggest {
+    display: flex; align-items: center; gap: 10px; width: 100%; text-align: left;
+    padding: 10px 12px; border: 0; background: none; cursor: pointer;
+    border-radius: var(--fin-radius-sm); font-family: var(--primary-font);
+    font-size: var(--font-size-sm); color: var(--fin-ink);
+  }
+  .ask-suggest:hover { background: var(--gray-lightest); }
+  .ask-suggest .material-symbols-outlined { color: var(--fin-ink-soft); font-size: 18px; }
+  .ask-answer { display: none; gap: var(--space-sm); padding: var(--space-md); }
+  .ask-answer.open { display: flex; }
+  .ask-answer__q { font-weight: var(--font-weight-bold); margin-bottom: 4px; }
+  .ask-answer__body { font-size: var(--font-size-sm); color: var(--fin-ink); line-height: 1.55; }
+  .ask-back { margin-top: var(--space-sm); font-size: var(--font-size-xs); color: var(--fin-accent); cursor: pointer; background: none; border: 0; padding: 0; font-family: var(--primary-font); }
+
+  /* ---- before / after: the same data as stock Odoo ships it ------------ */
+  .view-toggle .material-symbols-outlined { font-size: 16px; }
+  .raw-banner { display: none; align-items: center; gap: var(--space-sm); margin-top: var(--space-md); padding: var(--space-sm) var(--space-md); background: #efe8ed; border: 1px solid #d8c9d3; border-radius: 3px; font-size: var(--font-size-sm); color: #5c3d54; }
+  .raw-banner button { background: none; border: 0; color: #714B67; font-weight: 600; cursor: pointer; font-family: var(--primary-font); padding: 0; }
+  body.odoo-raw .raw-banner { display: flex; }
+
+  body.odoo-raw { --fin-accent: #714B67; font-family: system-ui, 'Segoe UI', Roboto, sans-serif; }
+  .odoo-raw .erp-topbar { background: #714B67; border-bottom: 1px solid #5c3d54; }
+  .odoo-raw .erp-topbar, .odoo-raw .erp-topbar__brand { color: #fff; }
+  .odoo-raw .erp-topbar__dot { background: #fff; }
+  .odoo-raw .erp-topbar__search { background: rgba(255,255,255,.15); border-color: rgba(255,255,255,.35); color: #fff; border-radius: 3px; }
+  .odoo-raw .erp-topbar__search input { color: #fff; }
+  .odoo-raw .erp-topbar__search input::placeholder { color: rgba(255,255,255,.7); }
+  .odoo-raw .erp-sidebar { background: #fafafa; border-right: 1px solid #d0d0d0; }
+  .odoo-raw .erp-sidebar__item.active { background: #efe8ed; color: #714B67; }
+  .odoo-raw .card-soft, .odoo-raw .kpi { border: 1px solid #d0d0d0; border-radius: 0; box-shadow: none; background: #fff; }
+  .odoo-raw .kpi--hero.kpi--accent { background: #fff; }
+  .odoo-raw .kpi--hero .kpi__value { font-size: 1.5rem; color: #212529; font-weight: 600; }
+  .odoo-raw .kpi__value { color: #212529; }
+  .odoo-raw .kpi--hero .kpi__value .unit, .odoo-raw .kpi__value .unit { color: #6c757d; }
+  .odoo-raw .greeting h1 { font-size: 1.3rem; font-weight: 600; }
+  .odoo-raw .jeeves, .odoo-raw .hero-chart, .odoo-raw .callout, .odoo-raw .delta { display: none; }
+  .odoo-raw .segment button.active { background: #714B67; color: #fff; border-radius: 0; }
+  .odoo-raw .pill { border-radius: 2px; }
+  .odoo-raw .meter, .odoo-raw .meter__fill { border-radius: 0; }
+  .odoo-raw .meter__fill { background: #714B67; }
+  .odoo-raw .meter__fill--warn { background: #b58a00; }
 </style>
 </head>
 <body class="fin">
@@ -59,10 +112,29 @@ layout: null
   <header class="erp-topbar">
     <div class="erp-topbar__brand"><span class="erp-topbar__dot"></span> Meridian</div>
     <div class="erp-topbar__spacer"></div>
-    <label class="erp-topbar__search">
-      <span class="material-symbols-outlined" style="font-size:20px">search</span>
-      <input type="text" placeholder="Ask anything — “overdue over 30 days?”">
-    </label>
+    <div class="ask">
+      <label class="erp-topbar__search">
+        <span class="material-symbols-outlined" style="font-size:20px">search</span>
+        <input type="text" id="ask-input" autocomplete="off" placeholder="Ask anything — “overdue over 30 days?”">
+      </label>
+      <div class="ask-panel" id="ask-panel">
+        <div class="ask-panel__suggestions" id="ask-suggestions">
+          <div class="ask-panel__hint">Ask Jeeves — answered from Meridian’s numbers</div>
+          <button class="ask-suggest" data-q="0"><span class="material-symbols-outlined">error</span> What’s overdue more than 30 days?</button>
+          <button class="ask-suggest" data-q="1"><span class="material-symbols-outlined">group_add</span> Can we afford the Q3 post-production hires?</button>
+          <button class="ask-suggest" data-q="2"><span class="material-symbols-outlined">flag</span> How is June tracking against plan?</button>
+          <button class="ask-suggest" data-q="3"><span class="material-symbols-outlined">payments</span> Where did cash move this month?</button>
+        </div>
+        <div class="ask-answer" id="ask-answer">
+          <div class="jeeves__avatar">J</div>
+          <div>
+            <div class="ask-answer__q" id="ask-answer-q"></div>
+            <div class="ask-answer__body" id="ask-answer-body"></div>
+            <button class="ask-back" id="ask-back">← Ask something else</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <span class="material-symbols-outlined" style="color:var(--fin-ink-soft)">notifications</span>
     <div class="avatar" title="Founder / MD">SO</div>
   </header>
@@ -82,22 +154,35 @@ layout: null
 
     <div class="flex items-center" style="justify-content: space-between; flex-wrap: wrap; gap: var(--space-md);">
       <div class="greeting">
-        <h1>Good morning, Sofia.</h1>
-        <div class="sub">Friday · 13 June 2026 · everything that needs you, on one screen.</div>
+        <h1 data-odoo="Dashboard">Good morning, Sofia.</h1>
+        <div class="sub" data-odoo="Accounting · Reporting · Executive Summary">Friday · 13 June 2026 · everything that needs you, on one screen.</div>
       </div>
-      <div class="segment" role="tablist">
-        <button>Today</button>
-        <button class="active">This month</button>
-        <button>Quarter</button>
-        <button>Year</button>
+      <div class="flex items-center gap-sm" style="flex-wrap: wrap">
+        <div class="segment view-toggle" id="view-toggle" title="Same data, two presentations">
+          <button class="active" data-view="atlas"><span class="material-symbols-outlined">auto_awesome</span> Atlas</button>
+          <button data-view="odoo">Raw Odoo</button>
+        </div>
+        <div class="segment" role="tablist">
+          <button>Today</button>
+          <button class="active">This month</button>
+          <button>Quarter</button>
+          <button>Year</button>
+        </div>
       </div>
+    </div>
+
+    <!-- shown only in Raw-Odoo mode: explains the before/after -->
+    <div class="raw-banner" id="raw-banner">
+      <span class="material-symbols-outlined">info</span>
+      <span>Same Meridian data, exactly as stock Odoo presents it — dense, generic labels, no morning brief.</span>
+      <button id="raw-back">Back to Atlas →</button>
     </div>
 
     <!-- HERO: one number dominates, supported by three -->
     <section class="hero-band" style="margin-top: var(--space-lg)">
       <div class="kpi kpi--hero kpi--accent">
         <div>
-          <span class="kpi__label">Cash you can spend</span>
+          <span class="kpi__label" data-odoo="Unrestricted Cash Balance (Analytic)">Cash you can spend</span>
           <div class="kpi__value">2.41<span class="unit">M €</span></div>
           <div class="kpi__foot" style="margin-top: 6px">
             <span class="delta delta--pos">▲ 4.2%</span> vs last month · unrestricted, after committed payroll &amp; AP
@@ -133,7 +218,7 @@ layout: null
           <span class="kpi__foot"><span class="delta delta--pos">▲ 9d</span> · target ≥ 90</span>
         </a>
         <a class="kpi" href="#">
-          <span class="kpi__label">Needs you today</span>
+          <span class="kpi__label" data-odoo="Open Action Items">Needs you today</span>
           <span class="kpi__value">3</span>
           <span class="kpi__foot">2 overdue · 1 approval queued</span>
         </a>
@@ -470,6 +555,65 @@ layout: null
   document.getElementById('tm-close').addEventListener('click', close);
   overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+
+  /* ---- Ask Jeeves: canned NL questions answered from the page's numbers -- */
+  var answers = [
+    {
+      q: 'What’s overdue more than 30 days?',
+      a: 'One invoice clears that line: <strong>INV-2061, Larkspur Group, €86K, 34 days overdue</strong> — your only 30+ item. The same contact owns an open <strong>€88K</strong> deal, so I bundled the chase into today’s Larkspur follow-up rather than sending a cold reminder.'
+    },
+    {
+      q: 'Can we afford the Q3 post-production hires?',
+      a: 'Yes, with room. You’ve <strong>€2.41M</strong> unrestricted and <strong>112 days</strong> of runway (target ≥ 90). Two post-production seats (~€18K/mo loaded) trim runway by about <strong>11 days</strong> — still inside target. The real constraint right now is post <em>capacity</em>, not cash: two editors are out today.'
+    },
+    {
+      q: 'How is June tracking against plan?',
+      a: 'Revenue is <strong>€874K against a €910K plan — 96%</strong>. Retainers are effectively on plan (99%) and Events & Production at 96%. The drag is <strong>Licensing at 78%</strong> (€164K of €180K), pacing below trend at mid-month — same line Jeeves flagged under “Needs you”.'
+    },
+    {
+      q: 'Where did cash move this month?',
+      a: 'Net up <strong>4.2%</strong> vs May. In: <strong>+€64K</strong> Halcyon (paid today), <strong>+€25K</strong> Northwind retainer, <strong>+€12.8K</strong> Meridian licensing. Looming out: <strong>€188K</strong> payroll on 25 Jun and a <strong>€142K</strong> vendor run waiting on your approval — both already netted out of the spendable figure above.'
+    }
+  ];
+  var askPanel = document.getElementById('ask-panel');
+  var askInput = document.getElementById('ask-input');
+  var askSuggest = document.getElementById('ask-suggestions');
+  var askAnswer = document.getElementById('ask-answer');
+
+  function openPanel() { askPanel.classList.add('open'); }
+  function closePanel() { askPanel.classList.remove('open'); }
+  function showSuggestions() { askSuggest.style.display = 'block'; askAnswer.classList.remove('open'); }
+  function showAnswer(i) {
+    document.getElementById('ask-answer-q').textContent = answers[i].q;
+    document.getElementById('ask-answer-body').innerHTML = answers[i].a;
+    askSuggest.style.display = 'none';
+    askAnswer.classList.add('open');
+  }
+
+  function openAsk() { showSuggestions(); openPanel(); }
+  askInput.addEventListener('focus', openAsk);
+  askInput.addEventListener('click', openAsk);
+  document.querySelectorAll('.ask-suggest').forEach(function (b) {
+    b.addEventListener('click', function () { askInput.value = answers[+b.dataset.q].q; showAnswer(+b.dataset.q); });
+  });
+  document.getElementById('ask-back').addEventListener('click', function () { askInput.value = ''; askInput.focus(); showSuggestions(); });
+  document.addEventListener('click', function (e) { if (!e.target.closest('.ask')) closePanel(); });
+
+  /* ---- before / after: re-skin the same screen as stock Odoo ----------- */
+  var rawEls = document.querySelectorAll('[data-odoo]');
+  rawEls.forEach(function (el) { el.dataset.atlas = el.textContent; });
+  function setView(v) {
+    var raw = v === 'odoo';
+    document.body.classList.toggle('odoo-raw', raw);
+    rawEls.forEach(function (el) { el.textContent = raw ? el.dataset.odoo : el.dataset.atlas; });
+    document.querySelectorAll('#view-toggle button').forEach(function (b) {
+      b.classList.toggle('active', b.dataset.view === v);
+    });
+  }
+  document.querySelectorAll('#view-toggle button').forEach(function (b) {
+    b.addEventListener('click', function () { setView(b.dataset.view); });
+  });
+  document.getElementById('raw-back').addEventListener('click', function () { setView('atlas'); });
 })();
 </script>
 </body>

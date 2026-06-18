@@ -30,10 +30,6 @@ layout: null
 
   .card-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-md); }
   .card-head h3 { font-size: var(--font-size-md); }
-
-  .bar-actual { fill: var(--gray-mid-light); }
-  .bar-actual.is-recent { fill: var(--gray); }
-  .trend { fill: none; stroke: var(--fin-ink); stroke-width: 1.5; stroke-dasharray: 4 4; vector-effect: non-scaling-stroke; }
 </style>
 </head>
 <body class="fin">
@@ -80,55 +76,9 @@ layout: null
     <!-- REGRESSION CHART: actuals (bars) + fitted trend + forecast cone + plan -->
     <div class="section-head"><h2>Actuals, trend &amp; forecast</h2><span class="meta">Jul 2025 &ndash; Dec 2026 &middot; &euro; / month</span></div>
     <div class="card-soft">
-      <svg class="fanchart" viewBox="0 0 720 240" height="240" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Monthly revenue: 12 months of actuals, fitted trend, and a 6-month forecast cone">
-        <!-- grid -->
-        <line class="grid" x1="0" y1="70"  x2="720" y2="70"/>
-        <line class="grid" x1="0" y1="140" x2="720" y2="140"/>
-        <line class="grid" x1="0" y1="210" x2="720" y2="210"/>
-
-        <!-- actual monthly bars -->
-        <g>
-          <rect class="bar-actual" x="9"   y="140" width="22" height="70"  rx="2"/>
-          <rect class="bar-actual" x="49"  y="146" width="22" height="64"  rx="2"/>
-          <rect class="bar-actual" x="89"  y="90"  width="22" height="120" rx="2"/>
-          <rect class="bar-actual" x="129" y="82"  width="22" height="128" rx="2"/>
-          <rect class="bar-actual" x="169" y="98"  width="22" height="112" rx="2"/>
-          <rect class="bar-actual" x="209" y="138" width="22" height="72"  rx="2"/>
-          <rect class="bar-actual" x="249" y="118" width="22" height="92"  rx="2"/>
-          <rect class="bar-actual" x="289" y="126" width="22" height="84"  rx="2"/>
-          <rect class="bar-actual" x="329" y="102" width="22" height="108" rx="2"/>
-          <rect class="bar-actual" x="369" y="92"  width="22" height="118" rx="2"/>
-          <rect class="bar-actual is-recent" x="409" y="86"  width="22" height="124" rx="2"/>
-          <rect class="bar-actual is-recent" x="449" y="106" width="22" height="104" rx="2"/>
-        </g>
-
-        <!-- P10–P90 forecast cone -->
-        <path class="band" d="M480,112 L500,119 540,120 580,83 620,74 660,80 700,105 L700,152 L660,127 620,117 580,116 540,142 500,136 Z"/>
-
-        <!-- deseasonalised fitted trend (regression line), extended into forecast -->
-        <polyline class="trend" points="20,150 460,104 700,92"/>
-
-        <!-- plan reference -->
-        <polyline class="plan" points="480,113 500,122 540,124 580,99 620,100 660,108 700,126"/>
-
-        <!-- median forecast -->
-        <polyline class="median" points="480,112 500,128 540,131 580,100 620,96 660,104 700,129"/>
-
-        <!-- now marker -->
-        <line class="nowline" x1="480" y1="20" x2="480" y2="220"/>
-        <circle class="dot" cx="480" cy="112" r="4"/>
-        <text class="nowlabel" x="486" y="32">now</text>
-      </svg>
-      <div class="chart-axis" style="padding: 0 9px">
-        <span>Jul</span><span>Sep</span><span>Nov</span><span>Jan</span><span>Mar</span><span>May</span><span style="color:var(--fin-ink)">Jul</span><span>Sep</span><span>Nov</span>
-      </div>
-      <div class="chart-legend">
-        <span class="key"><span class="swatch" style="border-top-color:var(--gray)"></span> Actual</span>
-        <span class="key" style="color:var(--fin-ink)"><span class="swatch swatch--dash"></span> Fitted trend</span>
-        <span class="key" style="color:var(--fin-accent)"><span class="swatch"></span> Forecast (P50)</span>
-        <span class="key"><span class="swatch swatch--band"></span> P10&ndash;P90</span>
-        <span class="key" style="color:var(--fc-plan)"><span class="swatch swatch--dash"></span> Plan</span>
-      </div>
+      <!-- monthly actuals (bars), deseasonalised trend, and a P10–P90 forecast
+           cone — all drawn by rare-charts. See script at the foot of the page. -->
+      <div id="fan-revenue" class="fan-chart" role="img" aria-label="Monthly revenue: 12 months of actuals, fitted trend, and a 6-month forecast cone"></div>
     </div>
 
     <!-- SEASONALITY + METHOD -->
@@ -249,5 +199,93 @@ layout: null
 
   </main>
 </div>
+
+<script src="https://cdn.jsdelivr.net/gh/raredigits/rare-charts@v0.9.6/rare-charts.min.js"></script>
+<script>
+(function () {
+  if (!window.RareCharts) return;
+  const d3 = RareCharts.d3;
+
+  // 12 months of monthly revenue actuals (€ M). Summer light, autumn peak —
+  // the same seasonal shape the index below describes. Last point (Jun '26)
+  // anchors the forecast paths.
+  const actuals = [
+    { date: '2025-07-01', value: 0.78 },
+    { date: '2025-08-01', value: 0.74 },
+    { date: '2025-09-01', value: 1.02 },
+    { date: '2025-10-01', value: 1.08 },
+    { date: '2025-11-01', value: 0.98 },
+    { date: '2025-12-01', value: 0.80 },
+    { date: '2026-01-01', value: 0.88 },
+    { date: '2026-02-01', value: 0.84 },
+    { date: '2026-03-01', value: 0.96 },
+    { date: '2026-04-01', value: 1.02 },
+    { date: '2026-05-01', value: 1.06 },
+    { date: '2026-06-01', value: 0.96 }, // last actual / anchor
+  ];
+  // Deseasonalised regression trend, drawn across the whole span.
+  const trend = [
+    { date: '2025-07-01', value: 0.87 },
+    { date: '2026-06-01', value: 0.93 },
+    { date: '2026-12-01', value: 0.96 },
+  ];
+  // Forecast paths, anchored at the last actual so the lines join cleanly.
+  const p50 = [
+    { date: '2026-06-01', value: 0.96 },
+    { date: '2026-07-01', value: 0.82 },
+    { date: '2026-08-01', value: 0.79 },
+    { date: '2026-09-01', value: 1.10 },
+    { date: '2026-10-01', value: 1.14 },
+    { date: '2026-11-01', value: 1.06 },
+    { date: '2026-12-01', value: 0.81 },
+  ];
+  const plan = [
+    { date: '2026-06-01', value: 0.96 },
+    { date: '2026-07-01', value: 0.88 },
+    { date: '2026-08-01', value: 0.86 },
+    { date: '2026-09-01', value: 1.11 },
+    { date: '2026-10-01', value: 1.10 },
+    { date: '2026-11-01', value: 1.02 },
+    { date: '2026-12-01', value: 0.84 },
+  ];
+  // P10–P90 cone: zero width at the anchor, widening to the horizon (Dec is
+  // the widest, on purpose). Matches the month-by-month table below.
+  const band = [
+    { date: '2026-06-01', lower: 0.96, upper: 0.96 },
+    { date: '2026-07-01', lower: 0.74, upper: 0.91 },
+    { date: '2026-08-01', lower: 0.68, upper: 0.90 },
+    { date: '2026-09-01', lower: 0.94, upper: 1.27 },
+    { date: '2026-10-01', lower: 0.93, upper: 1.36 },
+    { date: '2026-11-01', lower: 0.83, upper: 1.30 },
+    { date: '2026-12-01', lower: 0.58, upper: 1.05 },
+  ];
+
+  const ACCENT = getComputedStyle(document.body).getPropertyValue('--fin-accent').trim() || '#00b300';
+
+  new RareCharts.Line('#fan-revenue', {
+    height: 260,
+    margin: { top: 12, right: 52, bottom: 26, left: 12 },
+    legend: [
+      { label: 'Actual', color: '#888' },
+      { label: 'Fitted trend', color: '#191919', type: 'dashed' },
+      { label: 'Forecast (P50)', color: ACCENT, type: 'dashed' },
+      { label: 'P10–P90', color: ACCENT, type: 'band' },
+      { label: 'Plan', color: '#888', type: 'dashed' },
+    ],
+    curve: 'monotone',
+    endLabels: false,
+    yTickFormat: v => '€' + d3.format('.1f')(v) + 'M',
+    xTicks: 9,
+    xTickFormat: d => d3.timeFormat('%b')(d),
+    annotations: [{ date: '2026-06-01', label: 'now', color: '#888', strokeDash: '3,3' }],
+  }).setData([
+    { name: 'P10–P90',        type: 'band', color: ACCENT, fillOpacity: 0.16, values: band },
+    { name: 'Fitted trend',   color: '#191919', strokeWidth: 1.5, strokeDash: '4,4', values: trend },
+    { name: 'Plan',           color: '#888', strokeWidth: 1.5, strokeDash: '5,4', values: plan },
+    { name: 'Actual',         color: '#888', strokeWidth: 2.5, values: actuals },
+    { name: 'Forecast (P50)', color: ACCENT, strokeWidth: 2.5, strokeDash: '5,4', values: p50 },
+  ]);
+})();
+</script>
 </body>
 </html>

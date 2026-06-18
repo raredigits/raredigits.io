@@ -75,10 +75,10 @@ layout: null
         <h1>The next two quarters, today.</h1>
         <div class="sub">Friday &middot; 13 June 2026 &middot; forecast rebuilt nightly on closed-book actuals through 31 May.</div>
       </div>
-      <div class="segment" role="tablist" title="Scenario">
-        <button>Conservative</button>
-        <button class="active">Base</button>
-        <button>Stretch</button>
+      <div class="segment" role="tablist" title="Scenario" id="scn-segment">
+        <button data-scn="conservative">Conservative</button>
+        <button class="active" data-scn="base">Base</button>
+        <button data-scn="stretch">Stretch</button>
       </div>
     </div>
 
@@ -87,46 +87,17 @@ layout: null
       <div class="kpi kpi--hero">
         <div>
           <span class="kpi__label">Cash at quarter-end &middot; 30 Sep &middot; expected (P50)</span>
-          <div class="kpi__value" style="color:var(--fin-accent)">2.58<span class="unit">M &euro;</span></div>
+          <div class="kpi__value" style="color:var(--fin-accent)"><span id="hero-cash">2.58</span><span class="unit">M &euro;</span></div>
           <div class="kpi__foot" style="margin-top: 6px">
-            <span class="conf"><span>2.04M</span><span class="conf__sep">&ndash;</span><span>3.05M</span></span>
-            &nbsp;P10&ndash;P90 &middot; <span class="delta delta--pos">&#9650; 7%</span> vs plan &middot; base scenario
+            <span class="conf"><span id="hero-lo">2.04M</span><span class="conf__sep">&ndash;</span><span id="hero-hi">3.05M</span></span>
+            &nbsp;P10&ndash;P90 &middot; <span class="delta" id="hero-delta">&#9650; 7% vs plan</span> &middot; <span id="hero-scn">base scenario</span>
           </div>
         </div>
 
         <div class="hero-chart">
-          <svg class="fanchart" viewBox="0 0 720 230" height="200" preserveAspectRatio="none" role="img" aria-label="Projected cash balance with P10–P90 uncertainty cone">
-            <!-- faint baseline grid -->
-            <line class="grid" x1="0" y1="60"  x2="720" y2="60"/>
-            <line class="grid" x1="0" y1="118" x2="720" y2="118"/>
-            <line class="grid" x1="0" y1="176" x2="720" y2="176"/>
-
-            <!-- P10–P90 band (the cone, opens at "now") -->
-            <path class="band" d="M430,118 C485,108 545,92 605,76 C655,64 690,56 720,52 L720,168 C690,164 655,158 605,150 C545,140 485,128 430,118 Z"/>
-            <!-- P25–P75 inner band -->
-            <path class="band-inner" d="M430,118 C485,113 545,105 605,96 C655,89 690,85 720,82 L720,154 C690,151 655,147 605,140 C545,131 485,123 430,118 Z"/>
-
-            <!-- plan / target reference -->
-            <path class="plan" d="M430,116 C520,108 620,102 720,96"/>
-
-            <!-- actual history up to "now" -->
-            <path class="actual" d="M0,172 C30,150 55,178 90,156 C125,134 150,150 185,138 C220,126 250,142 285,124 C320,108 360,128 395,116 C410,113 420,118 430,118"/>
-            <!-- median forecast forward -->
-            <path class="median" d="M430,118 C480,112 540,104 600,96 C650,90 690,86 720,84"/>
-
-            <!-- "now" marker -->
-            <line class="nowline" x1="430" y1="14" x2="430" y2="210"/>
-            <circle class="dot" cx="430" cy="118" r="4.5"/>
-          </svg>
-          <div class="chart-axis">
-            <span>Sep</span><span>Nov</span><span>Jan</span><span>Mar</span><span>May</span><span style="color:var(--fin-ink)">Jun&middot;now</span><span>Jul</span><span>Sep</span>
-          </div>
-          <div class="chart-legend">
-            <span class="key" style="color:var(--fin-ink)"><span class="swatch"></span> Actual</span>
-            <span class="key" style="color:var(--fin-accent)"><span class="swatch"></span> Expected (P50)</span>
-            <span class="key"><span class="swatch swatch--band"></span> P10&ndash;P90</span>
-            <span class="key" style="color:var(--fc-plan)"><span class="swatch swatch--dash"></span> Plan</span>
-          </div>
+          <!-- live cash cone, drawn by rare-charts (band = P10–P90); redraws on
+               the scenario segment above. See script at the foot of the page. -->
+          <div id="fan-cockpit" class="fan-chart" role="img" aria-label="Projected cash balance with P10–P90 uncertainty cone"></div>
         </div>
       </div>
 
@@ -138,7 +109,7 @@ layout: null
         </a>
         <a class="kpi" href="/demo/forecast/scenarios/">
           <span class="kpi__label">Chance of hitting plan</span>
-          <span class="kpi__value">72<span class="unit">%</span></span>
+          <span class="kpi__value"><span id="hero-chance">72</span><span class="unit">%</span></span>
           <span class="kpi__foot">on revenue, by 30 Sep &middot; <span class="delta delta--neg">&#9660; 6pp</span> since May</span>
         </a>
         <a class="kpi" href="/demo/forecast/scenarios/">
@@ -158,7 +129,7 @@ layout: null
           <div class="jeeves__headline">The base case still clears plan &mdash; but the margin is now one stalled deal wide.</div>
           <p class="jeeves__body">Two-thirds of next quarter&rsquo;s revenue is already <strong>committed or recurring</strong>, so the floor is solid. The wobble is all in pipeline: the <strong>Cobalt</strong> licensing renewal (&euro;240K) has sat 9 days and it carries ~&euro;90K of the P50. Slip it past Sep and the &ldquo;chance of hitting plan&rdquo; drops from 72% to about 58% &mdash; I&rsquo;ve modelled both. Separately, <strong>collection lag</strong> crept from 41 to 48 days in May, which is what pulled the cash cone down a notch even though revenue held.</p>
           <div class="jeeves__actions">
-            <a class="chip chip--accent" href="/demo/forecast/scenarios/"><span class="material-symbols-outlined" style="font-size:18px">tune</span> Model the Cobalt slip</a>
+            <a class="chip chip--accent" id="chip-cobalt" href="#" role="button"><span class="material-symbols-outlined" style="font-size:18px">tune</span> <span id="chip-cobalt-label">Model the Cobalt slip</span></a>
             <a class="chip" href="/demo/forecast/revenue/"><span class="material-symbols-outlined" style="font-size:18px">show_chart</span> Why cash &ne; revenue</a>
             <a class="chip" href="#"><span class="material-symbols-outlined" style="font-size:18px">draft</span> Send to the board</a>
           </div>
@@ -246,5 +217,143 @@ layout: null
 
   </main>
 </div>
+
+<script src="https://cdn.jsdelivr.net/gh/raredigits/rare-charts@v0.9.6/rare-charts.min.js"></script>
+<script>
+(function () {
+  if (!window.RareCharts) return;
+  const d3 = RareCharts.d3;
+
+  // Synthetic cash-balance history, € millions. Last point (Jun '26) is "now"
+  // and anchors every forecast path so the lines join cleanly. Figures align
+  // with the Atlas dashboard ("cash you can spend" 2.41M).
+  const actuals = [
+    { date: '2025-09-01', value: 1.90 },
+    { date: '2025-10-01', value: 1.96 },
+    { date: '2025-11-01', value: 2.05 },
+    { date: '2025-12-01', value: 2.00 },
+    { date: '2026-01-01', value: 2.12 },
+    { date: '2026-02-01', value: 2.16 },
+    { date: '2026-03-01', value: 2.24 },
+    { date: '2026-04-01', value: 2.31 },
+    { date: '2026-05-01', value: 2.38 },
+    { date: '2026-06-01', value: 2.41 }, // now / anchor
+  ];
+  // Flat target line the cone is judged against (P50 base lands +7% above it).
+  const plan = [
+    { date: '2026-06-01', value: 2.41 },
+    { date: '2026-07-01', value: 2.41 },
+    { date: '2026-08-01', value: 2.41 },
+    { date: '2026-09-01', value: 2.41 },
+  ];
+
+  // Three board-level scenarios. Each = a P50 path from the anchor plus a
+  // P10–P90 band that fans out with the horizon. Headline figures match the
+  // scenario lab (base 2.58/72%, conservative 2.16/18%, stretch 2.90/94%).
+  const scenarios = {
+    conservative: {
+      label: 'conservative scenario', cash: '2.16', lo: '1.85M', hi: '2.50M',
+      delta: '▼ 10% vs plan', deltaPos: false, chance: '18',
+      p50: [[2.41],[2.34],[2.26],[2.16]],
+      band: [[2.41,2.41],[2.22,2.48],[2.02,2.42],[1.85,2.50]],
+    },
+    base: {
+      label: 'base scenario', cash: '2.58', lo: '2.04M', hi: '3.05M',
+      delta: '▲ 7% vs plan', deltaPos: true, chance: '72',
+      p50: [[2.41],[2.46],[2.52],[2.58]],
+      band: [[2.41,2.41],[2.30,2.62],[2.16,2.85],[2.04,3.05]],
+    },
+    stretch: {
+      label: 'stretch scenario', cash: '2.90', lo: '2.40M', hi: '3.40M',
+      delta: '▲ 20% vs plan', deltaPos: true, chance: '94',
+      p50: [[2.41],[2.55],[2.72],[2.90]],
+      band: [[2.41,2.41],[2.42,2.70],[2.40,3.05],[2.40,3.40]],
+    },
+    // base case with the €240K Cobalt renewal slipping past Sep — it carries
+    // ~€90K of the P50, so cash steps down and the chance of plan drops to 58%
+    // (exactly what the Jeeves note above promises).
+    'cobalt-slip': {
+      label: 'base · Cobalt slips to Q4', cash: '2.49', lo: '1.98M', hi: '2.82M',
+      delta: '▲ 3% vs plan', deltaPos: true, chance: '58',
+      p50: [[2.41],[2.44],[2.47],[2.49]],
+      band: [[2.41,2.41],[2.28,2.58],[2.12,2.74],[1.98,2.82]],
+    },
+  };
+  const fdates = ['2026-06-01','2026-07-01','2026-08-01','2026-09-01'];
+  const ACTUAL = 'var(--fin-ink)';
+  const ACCENT = getComputedStyle(document.body).getPropertyValue('--fin-accent').trim() || '#00b300';
+
+  const chart = new RareCharts.Line('#fan-cockpit', {
+    height: 210,
+    margin: { top: 12, right: 52, bottom: 24, left: 12 },
+    legend: [
+      { label: 'Actual', color: '#191919' },
+      { label: 'Expected (P50)', color: ACCENT, type: 'dashed' },
+      { label: 'P10–P90', color: ACCENT, type: 'band' },
+      { label: 'Plan', color: '#888', type: 'dashed' },
+    ],
+    curve: 'monotone',
+    endLabels: false,
+    yTickFormat: v => '€' + d3.format('.1f')(v) + 'M',
+    xTicks: 6,
+    xTickFormat: d => d3.timeFormat('%b')(d),
+    annotations: [{ date: '2026-06-01', label: 'now', color: '#888', strokeDash: '3,3' }],
+  });
+
+  function render(key) {
+    const s = scenarios[key];
+    const p50  = fdates.map((d, i) => ({ date: d, value: s.p50[i][0] }));
+    const band = fdates.map((d, i) => ({ date: d, lower: s.band[i][0], upper: s.band[i][1] }));
+    chart.setData([
+      { name: 'P10–P90', type: 'band', color: ACCENT, fillOpacity: 0.16, values: band },
+      { name: 'Plan', color: '#888', strokeWidth: 1.5, strokeDash: '5,4', values: plan },
+      { name: 'Actual', color: '#191919', strokeWidth: 2.5, values: actuals },
+      { name: 'Expected (P50)', color: ACCENT, strokeWidth: 2.5, strokeDash: '5,4', values: p50 },
+    ]);
+    // sync the hero readout with the chosen scenario
+    document.getElementById('hero-cash').textContent   = s.cash;
+    document.getElementById('hero-lo').textContent     = s.lo;
+    document.getElementById('hero-hi').textContent     = s.hi;
+    document.getElementById('hero-chance').textContent = s.chance;
+    document.getElementById('hero-scn').textContent    = s.label;
+    const del = document.getElementById('hero-delta');
+    del.textContent = s.delta;
+    del.classList.toggle('delta--pos', s.deltaPos);
+    del.classList.toggle('delta--neg', !s.deltaPos);
+  }
+
+  document.querySelectorAll('#scn-segment button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      cobaltModelled = false;
+      document.getElementById('chip-cobalt-label').textContent = 'Model the Cobalt slip';
+      document.getElementById('chip-cobalt').classList.add('chip--accent');
+      document.querySelectorAll('#scn-segment button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      render(btn.dataset.scn);
+    });
+  });
+
+  // Jeeves chip: model the Cobalt slip in place (toggle on/off), no navigation.
+  let cobaltModelled = false;
+  const chip = document.getElementById('chip-cobalt');
+  chip.addEventListener('click', (e) => {
+    e.preventDefault();
+    cobaltModelled = !cobaltModelled;
+    document.querySelectorAll('#scn-segment button').forEach(b => b.classList.remove('active'));
+    if (cobaltModelled) {
+      render('cobalt-slip');
+      document.getElementById('chip-cobalt-label').textContent = 'Cobalt slip modelled — reset';
+      chip.classList.remove('chip--accent');
+    } else {
+      document.querySelector('#scn-segment button[data-scn=base]').classList.add('active');
+      render('base');
+      document.getElementById('chip-cobalt-label').textContent = 'Model the Cobalt slip';
+      chip.classList.add('chip--accent');
+    }
+  });
+
+  render('base');
+})();
+</script>
 </body>
 </html>

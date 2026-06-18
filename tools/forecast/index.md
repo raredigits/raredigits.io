@@ -9,33 +9,8 @@ scripts: [charts]
 ---
 
 <style>
-/* TEMP — screenshot placeholders until the demo visuals are captured.
-   Remove this block (and swap .shot-ph blocks for <img>) when shots land. */
-.shot-ph {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-sm);
-    text-align: center;
-    min-height: 320px;
-    padding: var(--space-lg);
-    background:
-        repeating-linear-gradient(45deg, var(--gray-lightest), var(--gray-lightest) 12px, var(--bg-color-light) 12px, var(--bg-color-light) 24px);
-    border: 2px dashed var(--border-color);
-    border-radius: var(--space-sm);
-    color: var(--text-color-light);
-}
-.shot-ph .shot-ph__tag {
-    font-size: var(--font-size-xs);
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    border: 1px solid var(--border-color);
-    border-radius: var(--space-lg);
-    padding: 2px 10px;
-}
-.shot-ph .shot-ph__what { max-width: 38ch; line-height: 1.4em; }
-.shot-ph--tall { min-height: 460px; }
+/* framed demo screenshots (captured from the live /demo/ screens) */
+.shot { display: block; width: 100%; height: auto; border: 1px solid var(--border-color); border-radius: var(--space-sm); box-shadow: var(--shadow-sm); margin-top: var(--space-sm); }
 </style>
 
 <div class="lead">
@@ -97,30 +72,21 @@ Which is why forecasting profit as a single blob is a category error. That 
                 <h3>The forecast, up top.</h3>
                 <p>Quarter-end cash as an expected figure with its cone, the probability of hitting plan, and the part most tools quietly omit: the model's own accuracy over the last six months. The number and its credibility, on one screen.</p>
             </div>
-            <div class="shot-ph">
-                <span class="shot-ph__tag">Screenshot placeholder</span>
-                <p class="shot-ph__what"><strong>Forecast cockpit.</strong><br>Fan chart, scenario toggle, driver decomposition, and a backtest strip. <a href="/demo/forecast/cockpit/">Live →</a></p>
-            </div>
+            <a href="/demo/forecast/cockpit/"><img class="shot" src="/assets/img/demo/forecast-cockpit.jpg" alt="Forecast cockpit — fan chart, scenario toggle, driver decomposition and a backtest strip" loading="lazy"></a>
         </div>
         <div class="feature-row__item">
             <div>
                 <h3>Trend × seasonality, shown.</h3>
                 <p>Twenty-four months of actuals, a fitted regression trend, and the forecast cone in front of it, plus the seasonal index that explains why August is always the quiet month. Drill into any metric and see exactly what the projection is standing on, month by month.</p>
             </div>
-            <div class="shot-ph">
-                <span class="shot-ph__tag">Screenshot placeholder</span>
-                <p class="shot-ph__what"><strong>Metric deep-dive.</strong><br>Regression chart, seasonality bars, and a month-by-month table with P50, band, plan and variance. <a href="/demo/forecast/revenue/">Live →</a></p>
-            </div>
+            <a href="/demo/forecast/revenue/"><img class="shot" src="/assets/img/demo/forecast-revenue.jpg" alt="Metric deep-dive — regression chart, seasonality bars and a month-by-month table" loading="lazy"></a>
         </div>
         <div class="feature-row__item">
             <div>
                 <h3>Move a driver, watch it move.</h3>
                 <p>Win rate, average deal size, churn, collection lag, hiring: the handful of levers the number actually stands on. Drag one and quarter-end cash moves live. Save the three cases your board argues about. Then check the backtest to see how the model has actually performed.</p>
             </div>
-            <div class="shot-ph">
-                <span class="shot-ph__tag">Screenshot placeholder</span>
-                <p class="shot-ph__what"><strong>Scenario lab.</strong><br>Interactive driver sliders, base / conservative / stretch cases, and a six-month backtest. <a href="/demo/forecast/scenarios/">Live →</a></p>
-            </div>
+            <a href="/demo/forecast/scenarios/"><img class="shot" src="/assets/img/demo/forecast-scenarios.jpg" alt="Scenario lab — interactive driver sliders, base / conservative / stretch cases and a six-month backtest" loading="lazy"></a>
         </div>
     </div>
   </div>
