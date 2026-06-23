@@ -1,0 +1,15 @@
+{% include "special/demo/demo-app-head.html" %}
+
+<body class="demo">
+    {% include "special/demo/demo-app-header.html" %}
+    <main class="demo-app">
+        <div class="content grid-global">
+            {% include "special/demo/demo-app-sidebar.html" %}
+            <article>
+                {{ content }}
+            </article>
+        </div>
+    </main>
+</body>
+
+{% include "special/demo/demo-app-footer.html" %}

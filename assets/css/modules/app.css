@@ -1,0 +1,126 @@
+/* Demo-app shell module.
+   Model: components own their layout; consumers tune locally with utilities
+   (e.g. `footer-container padding-xs`); shared values come from tokens.
+   Primitives the library still lacks are shimmed at the bottom under their
+   future rare-styles names — see the PROPOSED block and LibraryUpdate.md. */
+
+.demo .notice-stripe {
+    background: var(--yellow);
+    width: 100%;
+    height: var(--space-lg);
+    padding: var(--space-xs) 0 var(--space-sm);
+    text-align: center;
+}
+
+header .header-logo {
+    background-image: none;
+}
+
+/* Header: logo keeps the library default (cols 1–2); toolbar fills the rest.
+   Trailing alignment uses the shimmed `.justify-end` utility (in the markup). */
+.demo .header-container {
+    align-items: center;
+}
+
+.app-toolbar {
+    grid-column: 3 / -1;
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.app-toolbar__action {
+    --action-size: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--action-size);
+    height: var(--action-size);
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--gray-mid-dark);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.15s, color 0.15s;
+
+    &:hover {
+        background: var(--gray-light);
+        color: var(--primary-color);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--primary-color);
+        outline-offset: 2px;
+    }
+}
+
+/* main is the containing block for the absolutely-positioned sidebar, so its
+   height: 100% resolves against main (not the viewport / the whole page).
+   margin-top clears the fixed header so content (and the sidebar) start below it. */
+.content {
+    position: relative;
+    margin-top: calc(var(--space-lg));
+    margin-bottom: var(--space-lg);
+}
+
+.app-sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 64px;
+    height: 100%;
+    background-color: var(--white);
+}
+
+/* Footer: three columns — contact / CTA / copyright.
+   The component owns the desktop layout and the mobile stack; the per-block
+   mobile text reset uses the shimmed `.mobile:left` utility (in the markup). */
+.footer-container {
+    align-items: start;
+}
+
+.footer-contact {
+    grid-column: 1 / span 4;
+}
+
+.footer-cta {
+    grid-column: 5 / span 4;
+    text-align: center;
+    color: var(--text-color-light);
+}
+
+.footer-copyright {
+    grid-column: 9 / -1;
+    text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-contact,
+    .footer-cta,
+    .footer-copyright {
+        grid-column: 1 / -1;
+    }
+}
+
+/* =========================================================================
+   PROPOSED rare-styles utilities (shim)
+   These belong in the library; staged here under their final names so the demo
+   can use them today. When they land in rare-styles, DELETE this block — the
+   markup keeps working. Each maps to an entry in LibraryUpdate.md.
+   ========================================================================= */
+
+/* LIB:justify-end — flex justify-content helpers. LibraryUpdate.md #1 */
+.justify-start { justify-content: flex-start; }
+.justify-center { justify-content: center; }
+.justify-end { justify-content: flex-end; }
+.justify-between { justify-content: space-between; } /* alias of .stretched */
+.justify-around { justify-content: space-around; }
+
+/* LIB:mobile-text-align — responsive text-align variants. LibraryUpdate.md #2 */
+@media screen and (max-width: 768px) {
+    .mobile\:left { text-align: left; }
+    .mobile\:center { text-align: center; }
+    .mobile\:right { text-align: right; }
+}

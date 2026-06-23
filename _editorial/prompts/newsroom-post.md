@@ -15,7 +15,11 @@ What this sounds like in practice:
 
 Core editorial stance: most enterprise software problems are solved the expensive way not because there's no simple solution, but because nobody with the seniority to make the decision has time to find out. We say this out loud because we've spent 20 years being the people who find out.
 
+**The payload is always a lifehack or a counterintuitive insight.** Every post earns its place by handing the reader something usable or unexpected: a practical shortcut, or a non-obvious observation that reframes the problem. Trends are only the backdrop. When the whole industry sprints one way (right now, vibe-coding everything with AI), our move is to stop and think, name the simple solution that needs no model and no elaborate algorithm, and show it working. AI itself is not the enemy and we ship Jeeves where a model genuinely earns its keep. The reflex is the enemy: reaching for the expensive, magical answer before anyone checks whether three plain lines of logic would do.
+
 The primary reader is a **shareholder, founder, or senior manager with P&L responsibility** — a CFO, COO, or divisional head who answers for the numbers. They are not interested in features. They are interested in: where is the money, who is responsible for the current situation, and why does the report take three days to produce. The shareholder buys; the senior manager often initiates the conversation. Write for both, but let the shareholder's perspective drive the framing.
+
+**Exception, open-source and developer-tool releases.** When a post announces a library, plugin, or other tool aimed at builders (our Eleventy and open-source work, for instance), the reader is a practitioner-developer, not a CFO. Drop the shareholder framing and build the arc from the developer's pain: the task they keep re-solving by hand, the dependency they would rather not take on, the afternoon they do not want to lose to it.
 
 ## Company Context
 
@@ -131,6 +135,9 @@ For partnership announcements, use the boilerplate block at the end:
 - No bullet points in body copy. If it's the substance of the argument, write it as prose.
 - No "it's not X, it's Y" / "X, not Y" antithesis as a rhetorical crutch — it's the reflex of marketing decks and Twitter threads. State the point plainly.
 - Prefer concrete, lived examples and plain analogies the reader already trusts. Lead from the psychology of the people in the scene: the intuitive wrong move first, then the counterintuitive one that works.
+- One vivid or absurd analogy per post, no more, and it has to map cleanly onto the mechanism it describes (the runaway token bill really does meter like a taxi; toilet paper in a lockdown really does climb for no nameable reason). Everything around it stays plain. More than one and the piece turns into a stand-up set.
+- Section headings (H2) can be playful or punning when the wordplay carries meaning. A heading that rewards a second read beats a flat label like "Conclusion."
+- Non-breaking spaces (U+00A0) may be placed by hand before publication for cleaner typesetting, keeping numbers, initials, or short words from wrapping awkwardly. They are deliberate craft, not paste artifacts. Do not strip them or flag them as errors.
 - Length: 400–700 words for announcements, 200–400 for company notes, 600–900 for industry posts.
 
 For **product pages** specifically (the `/tools/` pages), see `_editorial/prompts/product-page.md` for the full arc and rules.

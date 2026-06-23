@@ -2,28 +2,44 @@
 layout: post
 body_class: text-content
 title:  "Relevance Without the Model"
-tldr: "Deciding what's relevant to the current page is usually a job for shared tags and a sort order, not AI. Here's a small open-source plugin that proves it, and the start of something bigger."
+tldr: “Join the development of a relevant-content engine with venture potential, or just use it for free.”
 date:   2026-06-23T10:00:00+04:00
-img: "/assets/img/illustrations/rare-development.jpg"
-permalink: /pressroom/Relevance-Without-AI/
+img: "/assets/img/pressroom/2026/show-me-more.jpg"
+permalink: /pressroom/relevance-without-ai/
 category: Release
 labels: [design, kitchen]
 ---
 
-<section class="lead">The instinct now, when a page needs to suggest what to read next, is to reach for a model: feed every article to an embedding, store the vectors, ask the machine which ones feel similar. It works. It also bills monthly, and it turns an afternoon's work into a small infrastructure project that depends on someone else's uptime and someone else's pricing.</section>
+<section class="lead">Whatever you are doing on the internet, one number quietly decides whether it is working: how long a person stays. The blogger wants to be read to the end. The online store wants a bigger basket. The media site wants to serve one more banner before you leave. Different businesses, the same prayer, which is that you do not close the tab.</section>
 
-Most of the time you do not need any of it. A reader who just finished a piece tagged "cash flow" probably wants another piece tagged "cash flow," and when there are several, the most recent one is a fair guess. There is no intelligence in that. You count how many topics two posts share, and you sort by date. We have shipped enough sites to know it gets you most of the way on the first try, for nothing.
+There is one move that serves all three, and it is old enough to be boring. You offer the reader something else. Another piece on the topic they just finished, the adjacent headline, the “customers also bought” shelf. Keep someone one click deeper and you have earned your extra minute, your extra impression, your extra item in the cart. The idea is intuitive, and it has been paying rent for decades.
 
-The expensive answer wins by default anyway, usually for a dull reason: nobody with the authority to choose has the time to check whether the cheap one would have done the job.
+<div class="text-content-fullwidth-caption">
+  <img src="{{img}}" >
+</div>
 
-## So We Wrote the Cheap One Down
+The hard part was always the choosing. Which something else? The big players answer that with serious algorithms trained on their enormous datasets, and they are pretty good at it. The blogger and the webshop owner have neither the dataset nor the team, so the question lands on them with no obvious answer.
 
-It is a small plugin for [Eleventy](https://www.11ty.dev/), the generator this site runs on. An editor can pin the follow-ups by hand when they have an opinion. When they do not, it fills the gap by shared topics, freshest first. A post we would rather not resurface gets a single line in its front matter, `relation: off`, and it leaves the suggestions. No model, no vectors, no monthly bill.
+In the vibe-coding era the low-hanging fruit looks like *delegating the task to AI*. Hand the model the current page and your archive, let it multiply its matrices in the dark, and let it hand back *something relevant*. It will even write the code to automate this. You just pay for the tokens, and you pray the something it hands back actually exists on your site, and is not a beautifully titled post you never wrote. And there is the first problem, because the thing runs on a meter that behaves like toilet paper in a lockdown, a small fee on every move, climbing for reasons nobody can explain and never, ever stopping. Then come the duller risks. You now depend on someone else’s infrastructure and someone else’s pricing, and the morning the provider schedules maintenance, your related posts quietly go blank.
 
-```sh
-npm install @raredigits/11ty-rare-related-posts
-```
+There is an older rule underneath all of this. You do not hand the work that matters to a contractor who invents things with complete confidence. We have parted ways with people for less, and at least the people knew when they were guessing.
 
-<div class="highlight">Simple logic solves more than it gets credit for, mostly because nobody tries it before buying the complicated thing.</div>
+One of the quieter costs of vibe-coding is that you stop thinking about the problem. You hand the search for a solution to a machine that predicts the next word, and you ship whatever it predicts. So let us actually look at the problem. A reader who just read the post titled “11ty tips” and finished it probably wants another piece on 11ty, and very likely a few more tips. There is no intelligence in that, and you do not need AI to see it. What you need is to surface a few posts under the same tag, freshest first. We have shipped enough sites to know it gets you most of the way on the first try, for nothing.
 
-It is on npm now, MIT-licensed, with the source [on GitHub](https://github.com/raredigits/11ty/tree/main/11ty-rare-related-posts). Today it does one honest thing well. The question we find interesting is how far this plain approach stretches before it genuinely needs a model: weighting by recency, by author, by what a reader has already seen. We think there is a real product in there, and we would rather build it in the open. If you want to push it further with us, the repo is the place to start.
+An online store is the same shape: the catalogue already knows which items share a category, and “people also bought” is largely that join. Not rocket science.
+
+<div class="highlight">You know your own users and your own content better than a model trained on strangers ever will.</div>
+
+That edge is free, and it is already yours.
+
+## Get Relation to the Undervalued Relations
+
+Today we released it as a [free library](https://github.com/raredigits/11ty/tree/main/11ty-rare-related-posts) that collects the relevant posts inside any 11ty project. It is simple, works out of the box, and looks a little like magic.
+
+Current stage: an MVP, v0.1.0, open-source, free of charge, ready for implementation and testing. Issues, questions, and arguments belong in the repo.
+
+The main reason we are writing, though, is **to invite you in**. Today it does one honest thing well, and we want to learn how far the plain approach stretches before it genuinely needs a model: weighting by recency, by author, by what a reader has already seen. Try it, run it on your own project, break it, and tell us where it bends.
+
+We would rather build this in the open and grow it into a real commercial product together.
+
+The repo is the place to start.

@@ -24,8 +24,9 @@
 
   new RareCharts.DualAxes('#watchtower-flows-demo', {
     height: 360,
-    subtitle: 'Net HLX into exchange wallets (bars) against the HLX price (line)',
-    source: 'Synthetic demo data',
+    title: 'Flows Versus Price',
+    subtitle: 'Net HLX into exchange wallets against the HLX price, 3–18 June',
+    source: 'Source: Synthetic Data',
     legend: [
       { label: 'Net exchange inflow', color: INFLOW, type: 'bar' },
       { label: 'HLX price', color: ACCENT },
@@ -34,12 +35,17 @@
     crosshair: true,
     endLabels: false,
     y1Title: 'Price',
-    y2Title: 'Net inflow · K HLX',
+    // Left axis (y2 in DualAxes). Terse label — a longer one runs past the
+    // left margin and gets clipped.
+    y2Title: 'Inflows',
     y1Domain: [6.0, 6.85],
     y2Domain: [-500, 2700],
     y1TickFormat: v => '$' + d3.format('.2f')(v),
     y2TickFormat: v => Math.abs(v) < 1e-6 ? '0' : d3.format('+,')(v),
-    xTickFormat: d => d3.timeFormat('%d %b')(d),
+    // No xTickFormat: the adaptive default labels the month once and day
+    // numbers after it ("3 Jun · 5 · 7 · 9") instead of repeating "%d %b".
+    // Editorial caption lives in the component, not as stray markup below it.
+    note: 'The 2.41M-token deposit hits the exchange while the price is still at its high. The price worked out what it meant three days later. The decision was visible the whole time.',
     annotations: [
       { date: new Date('2026-06-11'), label: '2.41M HLX to a CEX wallet', color: '#8a93a3', strokeDash: '3,3' },
     ],

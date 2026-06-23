@@ -21,7 +21,7 @@ So&nbsp;here are some tools you might find useful. They're all on&nbsp;GitHub un
         <p><a href="https://raredigits.art">Rare Styles</a>: A&nbsp;style library for rapid development, for those moments when you need a&nbsp;button that looks like a&nbsp;button before your next funding round closes.</p>
     </div>
     <div class="col-span-1 card shadow-sm padding-lg">
-        <p><a href="">11ty Scripts Collection</a>: for simple websites, because sometimes you just need something that works without explaining to&nbsp;your CEO what &ldquo;static site generation&rdquo; means while they glance anxiously at&nbsp;their watch.</p>
+        <p><a href="https://github.com/raredigits/11ty">11ty Scripts Collection</a>: for simple websites, because sometimes you just need something that works without explaining to&nbsp;your CEO what &ldquo;static site generation&rdquo; means while they glance anxiously at&nbsp;their watch.</p>
     </div>
     <div class="col-span-1 card shadow-sm padding-lg">
         <p><a href="">Pontivox</a>: A&nbsp;free feedback server, since collecting user opinions should be&nbsp;easier than collecting on&nbsp;accounts receivable from that one client. You know the one.</p>

@@ -1,0 +1,21 @@
+<footer>
+  <div class="site-max-width padding-x-md padding-y-lg">
+    <div class="footer-container grid-global">
+      <div class="footer-contact">
+        <p>{{ site.description }}:<br>
+          <a class="no-decoration" href="tel:{{ site.phone }}">{{ site.phone }}</a><br>
+          <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </p>
+      </div>
+      <div class="footer-cta mobile:left">
+        <p>Want to see how this would work in your own business, and talk through what is possible and what it costs? Write or call us, and we will set up a meeting with the developers or one of our integrators.</p>
+      </div>
+      <div class="footer-copyright mobile:left">
+        <p>© 2023—{{ "" | currentYear }}  <a href="https://raredigits.io">{{ site.title }}</a><br>
+          Built on <a href="https://raredigits.art">Rare Styles</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% include "special/cookie-consent.html" %}

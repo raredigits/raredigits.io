@@ -68,21 +68,21 @@ Take a look. Your future self with higher margins will thank you.
         </div>
     </div>
     <div class="col-span-1 card shadow-sm column stretched center-x padding-lg">
+        <img src="/assets/img/common/vendors/11ty-logo.svg">
+        <p><a href="https://github.com/raredigits/11ty">11ty Tips&Tricks</a></p>
+        <span class="content-separator-lg"></span>
+        <div>
+            <span class="tag">#opensource</span>
+            <span class="tag">#11ty</span>
+        </div>
+    </div>
+    <div class="col-span-1 card shadow-sm column stretched center-x padding-lg">
         <img src="/assets/img/common/vendors/github-mark/github-mark.png">
         <p><a href="https://github.com/raredigits/rare-scripts/">Rare Scripts</a></p>
         <div class="content-separator-lg"></div>
         <div>
             <span class="tag">#opensource</span>
             <span class="tag">#javascript</span>
-        </div>
-    </div>
-    <div class="col-span-1 card shadow-sm column stretched center-x padding-lg">
-        <img src="/assets/img/common/vendors/github-mark/github-mark.png">
-        <p><a href="https://github.com/raredigits/">11ty Tips&Tricks</a></p>
-        <span class="content-separator-lg"></span>
-        <div>
-            <span class="tag">#opensource</span>
-            <span class="tag">#11ty</span>
         </div>
     </div>
 </div>

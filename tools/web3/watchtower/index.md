@@ -13,50 +13,49 @@ scripts: [charts]
 .shot { display: block; width: 100%; height: auto; border: 1px solid var(--border-color); border-radius: var(--space-sm); box-shadow: var(--shadow-sm); margin-top: var(--space-sm); }
 </style>
 
+<section class="lead">
+    Your desk watches the price. So does everyone else’s, which is the problem. You learn what a position did the way the whole market learns it, from the chart, after it has already done it. Yet three hours before the candle moved, a wallet dormant for two years walked two million tokens onto an exchange in full public view, timestamped, on the most transparent ledger in financial history. Smartest money in the world, reading the scoreboard.
+</section>
+
+In ordinary markets you do not get to watch the order flow. The big players pay handsomely to keep it that way, and you get the closing price and a press release. Crypto did something careless with that arrangement: it wrote every transfer to a public wall, permanently, with a timestamp, for anybody to read. The whale and the intern leave the same footprints in the same wet cement.
+
 <div class="full-width">
   <img src="/assets/img/pressroom/2025/watchtower.jpg" alt="Watchtower" />
 </div>
 
-<div class="lead">
-    <p>Your desk watches the price. So does everyone else's, which is the problem. You learn what a position did the way the whole market learns it, from the chart, after it has already done it. Yet three hours before the candle moved, a wallet dormant for two years walked two million tokens onto an exchange in full public view, timestamped, on the most transparent ledger in financial history. Smartest money in the world, reading the scoreboard.</p>
-</div>
-
-## The one market that lets you see the hand
-
-In ordinary markets you do not get to watch the order flow. The big players pay handsomely to keep it that way, and you get the closing price and a press release. Crypto did something careless with that arrangement: it wrote every transfer to a public wall, permanently, with a timestamp, for anybody to read. The whale and the intern leave the same footprints in the same wet cement.
-
-The people who move real size worked this out years ago. The OTC desks, the market makers, the analysts whose entire job is to be unsurprised, stopped reading sentiment threads and started reading wallets, because the ledger is the one room in finance where money cannot lie about where it is going. The small operator and the giant fund get exactly the same intelligence. Most of the small operators are still staring at the candle.
+The people who move real size worked this out years ago. The OTC desks, the market makers, the analysts whose entire job is to be unsurprised, stopped reading sentiment threads and started reading wallets, because the ledger is the one room in finance where money cannot lie about where it is going. The small operator and the giant fund get exactly the same intelligence. Most of the small operators are still staring at the candle.
 
 ## What the flows are actually saying
 
-The signal is not mystical. It is specific, and most of it comes down to which way the coins are walking.
+The signal is not mystical. It is specific, and most of it comes down to which way the coins are walking.
 
-Tokens moving toward an exchange are usually being lined up to sell. An exchange deposit address is a labelled wallet the exchange controls, and coins arriving there are coins getting dressed for the door. Watchtower knows those addresses by name, so a large transfer in is intent, not noise, and you see it the moment it confirms instead of the next morning on a forum. Coins walking the other way, into cold storage, are the opposite tell: somebody is settling in for a while.
+Tokens moving toward an exchange are usually being lined up to sell. An exchange deposit address is a labelled wallet the exchange controls, and coins arriving there are coins getting dressed for the door. Watchtower knows those addresses by name, so a large transfer in is intent, not noise, and you see it the moment it confirms instead of the next morning on a forum. Coins walking the other way, into cold storage, are the opposite tell: somebody is settling in for a while.
 
-Then there is the conviction of the people who already locked their coins up. The staking ratio is the share of supply that holders have bonded to the network to earn yield and help secure it; the unbonding queue is the line of people waiting to un-bond and leave. A ratio that climbs while the queue stays empty is a comfortable network. A queue that suddenly lengthens is the first scrape of chairs.
+Then there is the conviction of the people who already locked their coins up. The staking ratio is the share of supply that holders have bonded to the network to earn yield and help secure it; the unbonding queue is the line of people waiting to un-bond and leave.
 
-Underneath sits the plumbing, which works or quietly does not: how reliably blocks are produced, whether the validators are online, whether the chain just rewrote a slice of its own recent history. None of this is a black box. Watchtower parses the chain itself, EVM-compatible networks and Cosmos SDK chains, labels the wallets that matter, and watches the flows across the window you pick: a day, a week, a month.
+<div class="highlight">A ratio that climbs while the queue stays empty is a comfortable network. A queue that suddenly lengthens is the first scrape of chairs.</div>
+
+Underneath sits the plumbing, which works or quietly does not: how reliably blocks are produced, whether the validators are online, whether the chain just rewrote a slice of its own recent history. None of this is a black box. Watchtower parses the chain itself, EVM-compatible networks and Cosmos SDK chains, labels the wallets that matter, and watches the flows across the window you pick: a day, a week, a month.
 
 <div class="text-content-caption card-dashboard-bordered">
     <div id="watchtower-flows-demo"></div>
-    <cite>The 2.41M-token deposit hits the exchange while the price is still at its high. The price worked out what it meant three days later. The decision was visible the whole time.</cite>
 </div>
 
 ## Watch the money, not the price
 
-So here is the move, and it repeats well on your next call: watch the money, not the price. The price is the scoreboard, honest and lagging and emotional, because it is the sum of everyone reacting to things that already happened. The flows are the players walking onto the pitch before the whistle. By the time two million tokens have slid into an exchange wallet at three in the morning, the sell is decided, and the red candle the next afternoon is just the part everyone is allowed to see. Net flow, coins in minus coins out across the wallets that matter, is the closest thing this market has to a tell, and it sits in plain view the whole time.
+So here is the move, and it repeats well on your next call: watch the money, not the price. The price is the scoreboard, honest and lagging and emotional, because it is the sum of everyone reacting to things that already happened. The flows are the players walking onto the pitch before the whistle. By the time two million tokens have slid into an exchange wallet at three in the morning, the sell is decided, and the red candle the next afternoon is just the part everyone is allowed to see. Net flow, coins in minus coins out across the wallets that matter, is the closest thing this market has to a tell, and it sits in plain view the whole time.
 
-<div class="highlight">The price tells you what already happened. The wallets tell you what is about to.</div>
+The price tells you what already happened. The wallets tell you what is about to.
 
 ## The things you didn't buy it for
 
-You bought a pair of eyes. The free pleasures are mostly about sleeping better and winning arguments.
+You bought a pair of eyes. The free pleasures are mostly about sleeping better and winning arguments.
 
-The alert fires while you sleep. A dormant wallet wakes at three in the morning and empties into a known exchange address, and instead of finding out in a panicked group chat over breakfast, you wake to a single line that already said so. You get to decide before the rest of the market does, which is the only edge that has ever mattered.
+The alert fires while you sleep. A dormant wallet wakes at three in the morning and empties into a known exchange address, and instead of finding out in a panicked group chat over breakfast, you wake to a single line that already said so. You get to decide before the rest of the market does, which is the only edge that has ever mattered.
 
-The argument ends, too. Someone on the call is certain the whales are accumulating, someone else is certain the chain is creaking, both running on feeling. You put the dashboard on the screen, and the debate about moods becomes a short look at what the wallets and the validators actually did this week.
+The argument ends, too. Someone on the call is certain the whales are accumulating, someone else is certain the chain is creaking, both running on feeling. You put the dashboard on the screen, and the debate about moods becomes a short look at what the wallets and the validators actually did this week.
 
-If the chain is your own, the view turns inward. Uptime, missed blocks, a depth-two reorg that healed itself inside one block, a slashing event or the quiet relief of none: you hear it from a calm alert rather than from the first furious user in your Discord, who is, reliably, the worst monitoring system ever deployed.
+If the chain is your own, the view turns inward. Uptime, missed blocks, a depth-two reorg that healed itself inside one block, a slashing event or the quiet relief of none: you hear it from a calm alert rather than from the first furious user in your Discord, who is, reliably, the worst monitoring system ever deployed.
 
 <div class="wide-background margin-y-md">
   <div class="wide-background-text-content-wrapper gray-light-bg">
@@ -95,15 +94,13 @@ If the chain is your own, the view turns inward. Uptime, missed blocks, a depth-
 
 ## From the tower
 
-All of this is one idea wearing four screens. A tower earns its keep for one reason: from the top you see the weather crossing the water long before it reaches the harbour, while the people on the quay are still enjoying the sun. The chain has been broadcasting that weather the whole time, openly, to anyone who bothered to climb. Watchtower is the climb.
+All of this is one idea wearing four screens. A tower earns its keep for one reason: from the top you see the weather crossing the water long before it reaches the harbour, while the people on the quay are still enjoying the sun. The chain has been broadcasting that weather the whole time, openly, to anyone who bothered to climb. Watchtower is the climb.
 
-It reads EVM-compatible networks and Cosmos SDK chains today, most of the territory where digital money currently wanders, and it picks up new ground as the money finds it.
-
-## See it for yourself
-
-We built a working demo on a fictional network. No login, no sales call, nobody emailing you afterwards. Open it, push the window from a day to a month, click into a whale transfer, watch a validator drift into the amber. Then, if you want the same eyes on the chains you actually hold, that is a short conversation about your own stack.
+It reads EVM-compatible networks and Cosmos SDK chains today, most of the territory where digital money currently wanders, and it picks up new ground as the money finds it.
 
 <div class="caption">→ <a href="/demo/watchtower/overview/">Open the live Watchtower demo</a></div>
+
+We built a working demo on a fictional network. No login, no sales call, nobody emailing you afterwards. Open it, push the window from a day to a month, click into a whale transfer, watch a validator drift into the amber. Then, if you want the same eyes on the chains you actually hold, that is a short conversation about your own stack.
 
 {% include "special/bookDemo.html" %}
 
