@@ -1,6 +1,8 @@
 ---
-title:  "Meet Jeeves — Your New Digital Concierge"
+title: "Meet Jeeves — Your New Digital Concierge"
+tldr: "Rare Digits promises that Jeeves GPT will keep getting smarter as AI technology advances, which means your business intelligence is basically investing in its own education"
 date:   2025-05-20T10:00:00+04:00
+img: "/assets/img/pressroom/2025/jeeves-release.jpg"
 permalink: /pressroom/Meet-Jeeves/
 category: Release
 labels: [kitchen, automate]

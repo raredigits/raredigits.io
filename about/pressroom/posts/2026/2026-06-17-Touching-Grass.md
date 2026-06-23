@@ -16,4 +16,4 @@ We are, on paper, still working. Emails get read, support keeps running, and t
 
 What might happen is that you turn up at the Dubai office in early August, push open the door, and find it gently echoing. That is deliberate. The work moved out of the building for a few weeks; the chairs stayed behind.
 
-If you need us, write to [hi@raredigits.io](mailto: hi@raredigits.io) as usual. We will answer, possibly from a balcony, possibly slightly sandy. We are back at full strength on 25 August, marginally browner and no worse at finding where your money went.
+If you need us, write to [hi@raredigits.io](mailto:hi@raredigits.io) as usual. We will answer, possibly from a balcony, possibly slightly sandy. We are back at full strength on 25 August, marginally browner and no worse at finding where your money went.

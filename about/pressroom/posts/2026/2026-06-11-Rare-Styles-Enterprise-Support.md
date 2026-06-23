@@ -1,8 +1,10 @@
 ---
 layout: post
 body_class: text-content
-title:  "Rare Styles Now Has Someone to Call"
+title:  "Rare Styles Now Has Someone to Call"
+tldr: "Rare Styles has enterprise support: SLA, priority support, and a named party standing behind the implementation"
 date:   2026-06-11T10:00:00+04:00
+img: "/assets/img/illustrations/rare_support.jpg"
 permalink: /pressroom/Rare-Styles-Enterprise-Support/
 category: Release
 labels: [design, kitchen]

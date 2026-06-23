@@ -4,6 +4,7 @@ date:   2025-07-21T10:00:00+04:00
 permalink: /pressroom/Vacation-Notice/
 category: Internal Affairs
 labels: [kitchen]
+relation: off
 ---
 
 One weird thing about running a company is that everyone expects you to, you know, actually work. But here’s the thing: we’ve decided that August 2025 is going to be our collective “nope” month.

@@ -46,6 +46,34 @@ body.text-content article > h3 {
     max-width: 86%;
 }
 
+.text-content main {
+    padding-bottom: var(--space-lg);
+}
+
+.related {
+    margin-bottom: var(--space-xl);
+    display: block;
+    grid-row: 3;
+    grid-column: 4 / span 9;
+
+    @media (max-width: 768px) {
+        grid-row: 4;
+        grid-column: 1/-1;
+    }
+}
+
+.feature-row__item {
+    p {
+        margin: var(--space-sm) 0 0;
+        font-size: 0.9em;
+        line-height: 1.1;
+    }
+}
+
+.feature-row .feature-row__item {
+    flex: 0 0 clamp(220px,30vw,420px);
+}
+
 /* REMOVE AFTER UPDATE */
 
 .ru {
