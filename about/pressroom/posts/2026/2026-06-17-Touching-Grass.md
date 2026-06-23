@@ -1,7 +1,9 @@
 ---
 title:  "We're Off to Touch Some Grass"
+tldr: "From 15 July to 25 August 2026, most of Rare Digits will be away from the office"
 date:   2026-06-17T10:00:00+04:00
 permalink: /pressroom/Touching-Grass/
+cover: "/assets/img/pressroom/2025/touching-grass.jpg"
 category: Internal Affairs
 labels: [kitchen]
 ---

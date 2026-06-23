@@ -66,12 +66,28 @@ We sell accumulated expertise, not software. We've seen the mistakes (made some 
 ```yaml
 ---
 title:  "Post Title Here"
+tldr:   "One plain sentence summarising the post."
 date:   YYYY-MM-DDTHH:MM:SS+04:00
+img:    "/assets/img/pressroom/YYYY/slug.jpg"
 permalink: /pressroom/Slug-Here/
 category: Release | Internal Affairs | Industry | Partnership
 labels: [tag1, tag2]
 ---
 ```
+
+### Cover image and TL;DR — required
+
+Every post must ship with both `img` and `tldr`. They are not decoration: the
+related-posts module ([`@raredigits/11ty-rare-related-posts`](https://github.com/raredigits/11ty/tree/main/11ty-rare-related-posts))
+and the listing cards read them directly, so a post without them renders as a
+bare title wherever it gets recommended.
+
+- **`img`** — the cover image. Store it under `/assets/img/pressroom/<year>/`
+  (or reuse a relevant illustration from `/assets/img/illustrations/`). Landscape,
+  readable as a small thumbnail.
+- **`tldr`** — a single plain sentence in the same voice as the post. No markup,
+  no trailing period gymnastics, no "in this post we." It is what the reader sees
+  under the title before deciding to click.
 
 **Categories:**
 
