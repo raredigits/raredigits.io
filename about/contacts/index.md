@@ -13,7 +13,7 @@ Welcome to our virtual reception. We promise our response times are faster tha
 Our mothership is docked in Dubai. For official correspondence (love letters, wedding invitations, quantum physics debates), please use:
 
 <div class="caption">
-   Rare Digits Production DMCC<br>
+   Rare Digits Production FZCO<br>
    1710 Preatoni Tower,<br>
    Cluster L, Jumeirah Lakes Towers (JLT)<br>
    Dubai, UAE
