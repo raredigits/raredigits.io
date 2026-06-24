@@ -1,0 +1,24 @@
+# Spotlights Ltd — payments, normalised as a separate entity (one of the schema
+# contract's unifications). Each references an invoice. direction: in (AR) | out (AP).
+# AR settled to AED operating; AP settled from the matching FX account.
+
+payments:
+
+  # --- incoming (AR collections) ---
+  - { id: "pay-spl-001", invoice: "SPL-2024-018", direction: "in",  date: "2024-02-18", amount: 529200,  currency: "AED", bank: "spl-bank-aed-op", method: "bank transfer" }
+  - { id: "pay-spl-002", invoice: "SPL-2024-024", direction: "in",  date: "2024-03-10", amount: 420840,  currency: "AED", bank: "spl-bank-aed-op", method: "bank transfer" }
+  - { id: "pay-spl-003", invoice: "SPL-2024-031", direction: "in",  date: "2024-04-02", amount: 567000,  currency: "AED", bank: "spl-bank-aed-op", method: "intercompany settlement" }
+  - { id: "pay-spl-004", invoice: "SPL-2024-033", direction: "in",  date: "2024-05-06", amount: 1499400, currency: "AED", bank: "spl-bank-aed-op", method: "bank transfer" }
+  - { id: "pay-spl-005", invoice: "SPL-2024-041", direction: "in",  date: "2024-07-10", amount: 462000,  currency: "AED", bank: "spl-bank-aed-op", method: "bank transfer" }
+  - { id: "pay-spl-006", invoice: "SPL-2024-047", direction: "in",  date: "2024-08-05", amount: 294000,  currency: "AED", bank: "spl-bank-aed-op", method: "intercompany settlement" }
+  - { id: "pay-spl-007", invoice: "SPL-2024-052", direction: "in",  date: "2024-09-02", amount: 164640,  currency: "AED", bank: "spl-bank-aed-op", method: "bank transfer" }
+  - { id: "pay-spl-008", invoice: "SPL-2024-061", direction: "in",  date: "2024-10-01", amount: 640500,  currency: "AED", bank: "spl-bank-aed-op", method: "intercompany settlement" }
+  - { id: "pay-spl-009", invoice: "SPL-2024-064", direction: "in",  date: "2024-11-20", amount: 999600,  currency: "AED", bank: "spl-bank-aed-op", method: "bank transfer" }
+  - { id: "pay-spl-010", invoice: "SPL-2024-070", direction: "in",  date: "2025-01-22", amount: 735000,  currency: "AED", bank: "spl-bank-aed-op", method: "bank transfer" }
+  - { id: "pay-spl-011", invoice: "SPL-2025-091", direction: "in",  date: "2025-03-08", amount: 554400,  currency: "AED", bank: "spl-bank-aed-op", method: "bank transfer" }
+
+  # --- outgoing (AP settlements, in supplier currency) ---
+  - { id: "pay-spl-101", invoice: "AP-SPL-2024-ROB05", direction: "out", date: "2024-03-15", amount: 80000,  currency: "EUR", amountAED: 316000, bank: "spl-bank-eur", method: "bank transfer" }
+  - { id: "pay-spl-102", invoice: "AP-SPL-2024-LA07",  direction: "out", date: "2024-04-05", amount: 180000, currency: "EUR", amountAED: 711000, bank: "spl-bank-eur", method: "bank transfer" }
+  - { id: "pay-spl-103", invoice: "AP-SPL-2024-ABS11", direction: "out", date: "2024-09-20", amount: 200000, currency: "USD", amountAED: 734500, bank: "spl-bank-usd", method: "bank transfer" }
+  - { id: "pay-spl-104", invoice: "AP-SPL-2024-MA01",  direction: "out", date: "2024-10-20", amount: 58000,  currency: "EUR", amountAED: 229100, bank: "spl-bank-eur", method: "bank transfer" }

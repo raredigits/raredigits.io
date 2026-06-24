@@ -1,0 +1,80 @@
+# Jeeves GPT — contextual nudges for Spotlights Ltd. Butler-precise, brief, actionable.
+# severity: critical | warning | info | nice
+# stance: push-sales | push-production | cut-costs | tighten-ar | watch | hold | hire | freeze-hire | hedge | reassure
+# lenses: money | operations | strategy | cfo | sales | hr  (one nudge per management angle)
+
+profile:
+  name: "Jeeves"
+  product: "Jeeves GPT"
+  brand: "by Rare Digits"
+  signature: "— Jeeves"
+  avatar: "/assets/img/demo/corsair/jeeves.svg"
+  invocation: "Ask Jeeves"
+  tagline: "Butler-precision insights for executives who'd rather be at the regatta."
+
+todaySummary:
+  headline: "The backlog finally sailed in. The bill for rescuing it arrives next."
+  body: "March rebounded to AED 3.18M as the held container cleared and the Lantern Bay supply shipped — but that is recovered Q4 revenue, not new demand. Receivables sit at AED 2.76M with Protec's 1.0M only just billed, and an April supplier run of roughly AED 1.0M in USD and EUR is unhedged. One stock line is already oversold against a confirmed order."
+  stance: "watch"
+  severity: "warning"
+  refresh: "2025-03-28T08:00:00+04:00"
+
+topActions:
+  - "Place the ROE BP2 reorder today — MediaPro's order is uncovered"
+  - "Accelerate the Protec AED 1.0M collection before the April supplier run"
+  - "Decide whether to hedge the USD/EUR payments due 4–11 April"
+
+lenses:
+  - lens: "money"
+    label: "Money / line profitability"
+    severity: "info"
+    stance: "watch"
+    headline: "A rebound, not a recovery."
+    body: "March's AED 510K EBITDA swing is the delayed Q4 catch-up landing in one month — do not read it as run-rate. LED carries 42% of the book and the intercompany supply to Crisis Theater and Legacy is dependable base load. Margin is still bruised: expedited freight and FX dragged Nov–Jan into the red."
+    actions: ["Rebuild forward pipeline so April–May don't air-pocket once the backlog is consumed"]
+    refs: ["SPL-O-2411-078", "SPL-O-2503-098"]
+
+  - lens: "operations"
+    label: "Operations — current problems & risks"
+    severity: "critical"
+    stance: "push-production"
+    headline: "ROE BP2 is oversold against a signed order."
+    body: "64 cabinets on hand, 48 already reserved, none on order — and MediaPro's confirmed SPL-O-2412-085 needs 48. Reorder lead time is 90 days. The delayed Absen container has cleared, so warehouse attention should swing to restock before the next gap."
+    actions: ["Issue the ROE PO today", "Offer Absen PL2.5 as interim substitute to MediaPro"]
+    refs: ["prod-led-roe", "SPL-O-2412-085"]
+
+  - lens: "strategy"
+    label: "Strategy — forecast & options"
+    severity: "warning"
+    stance: "hedge"
+    headline: "The shock named your concentrations. Fix them while it stings."
+    body: "One freight lane, unhedged USD/EUR purchasing and lumpy big-ticket deals turned a regional disruption into two negative quarters. Options, in order of leverage: forward-buy the fast movers, hedge the recurring import run, and deepen the rental-house base for steadier, less lumpy flow."
+    actions: ["Stand up a rolling 90-day FX hedge on import payables", "Set reorder points on the top-5 SKUs"]
+    refs: ["cm-spl-ap-abs03", "cm-spl-ap-la02"]
+
+  - lens: "cfo"
+    label: "Financial position (CFO)"
+    severity: "warning"
+    stance: "tighten-ar"
+    headline: "Collections must lead the April payment run."
+    body: "AR is AED 2.76M with Protec's 1.0M (due 10 Apr) the swing item; against that, AED 1.0M of USD/EUR supplier payments fall due 4–11 Apr plus AED 375K of overdue freight and customs. The order of operations matters more than the totals — get cash in before it goes out."
+    actions: ["Chase Protec to pay by 8 Apr", "Stagger ABS03/LA02 settlement if collections slip"]
+    refs: ["SPL-2025-078", "AP-SPL-2025-GF09", "AP-SPL-2025-CU04"]
+
+  - lens: "sales"
+    label: "Sales"
+    severity: "warning"
+    stance: "push-sales"
+    headline: "The order book is a backlog, not a pipeline."
+    body: "March's volume is delayed Q4 deliveries clearing, not fresh demand — forward bookings thin out once it's shipped. The dependable buyers are the rental houses (Protec, Eclipse) and the intercompany lines; widen those into standing-stock accounts. Backstage is gone to credit watch, so replace that volume rather than chase it."
+    actions: ["Rebuild the Q2 pipeline now", "Convert repeat buyers into framework / standing-stock accounts"]
+    refs: ["cl-protec", "cl-eclipse"]
+
+  - lens: "hr"
+    label: "People"
+    severity: "info"
+    stance: "hold"
+    headline: "A lean team carried the crunch — leave it be."
+    body: "Thirteen FTE, with the accountant added last August; operations and logistics absorbed the freight chaos without breaking. No hire is warranted now. Protect Yara's ops bandwidth through the April restock rather than loading new headcount cost onto a recovering margin."
+    actions: []
+    refs: ["spl-ops-head", "spl-finance-2"]

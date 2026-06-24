@@ -60,7 +60,7 @@ vendors:
     type: "Insurance"
     paymentTerms: "Net 30"
     rating: "preferred"
-    note: "Currently in dispute over Ancient Moon 2024 weather claim"
+    note: "Currently in dispute over Ancient Moon 2023 weather claim"
 
   - id: "vend-arabian-fab"
     name: "Arabian Fabrication Works"

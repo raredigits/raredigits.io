@@ -1,0 +1,87 @@
+# Spotlights Ltd — entity profile. Distribution business under Ambitions Inc.
+# Mirrors the Crisis Theater company.yml shape so apps read entities uniformly.
+
+profile:
+  legalName: "Spotlights Equipment Trading LLC"
+  brandName: "Spotlights Ltd"
+  tagline: "The gear behind the spectacle."
+  type: "distribution"
+  fulfillmentLabel: "Shipments"
+  founded: "2016-09-12"
+  acquired: "2022-06-01"            # acquired by Ambitions Inc.
+  hq: "Warehouse 14, Dubai Investment Park 2, Dubai"
+  satellite: "Showroom Unit G-07, Dubai Design District (d3)"
+  trn: "100552310400003"
+  license: "DED-CN-0772140"
+
+fiscal:
+  yearEnd: "12-31"
+  reportingCurrency: "AED"
+  secondaryCurrency: "USD"          # imports settled in USD/EUR
+  fxPeg: 3.6725                     # AED per USD (USD-pegged)
+  fxEur: 3.95                       # AED per EUR (illustrative)
+  reportingPeriod:
+    from: "2024-01-01"
+    to: "2025-03-31"
+  vatRate: 0.05
+  corporateTaxRate: 0.09
+  corporateTaxFreeThreshold: 375000
+
+today: "2025-03-28"
+
+banks:
+  - id: "spl-bank-aed-op"
+    label: "ENBD — AED Operating"
+    iban: "AE91 0260 0011 5523 1040 001"
+    currency: "AED"
+    type: "operating"
+  - id: "spl-bank-usd"
+    label: "HSBC — USD Imports"
+    iban: "AE52 0200 0007 7214 0011 022"
+    currency: "USD"
+    type: "operating"
+    note: "Settlement for Absen / ROE LED purchases (USD)"
+  - id: "spl-bank-eur"
+    label: "Mashreq — EUR Imports"
+    iban: "AE33 0330 0000 7721 4055 110"
+    currency: "EUR"
+    type: "operating"
+    note: "European suppliers — Robe, L-Acoustics, MA Lighting, ChainMaster"
+  - id: "spl-bank-payroll"
+    label: "ENBD — WPS Payroll"
+    iban: "AE91 0260 0011 5523 1040 777"
+    currency: "AED"
+    type: "payroll"
+
+# Product lines — the equivalent of Crisis Theater's business "units".
+units:
+  - id: "led"
+    name: "LED Video"
+    icon: "grid_view"
+    description: "LED video walls and processing — the highest-ticket, highest-volume line"
+    revenueShareTarget: 0.42
+    color: "#0EA5E9"
+  - id: "lighting"
+    name: "Lighting"
+    icon: "lightbulb"
+    description: "Moving heads, fixtures, control — fastest-moving consumable line"
+    revenueShareTarget: 0.24
+    color: "#F59E0B"
+  - id: "audio"
+    name: "Audio / PA"
+    icon: "speaker"
+    description: "Line arrays, subs, amplification"
+    revenueShareTarget: 0.18
+    color: "#8B5CF6"
+  - id: "rigging"
+    name: "Rigging & Structures"
+    icon: "construction"
+    description: "Hoists, motors, truss — heavy, slow-moving, high-margin"
+    revenueShareTarget: 0.10
+    color: "#10B981"
+  - id: "control"
+    name: "Control & Media"
+    icon: "tune"
+    description: "Consoles and media servers — low volume, very high ticket"
+    revenueShareTarget: 0.06
+    color: "#EC4899"

@@ -1,0 +1,34 @@
+# Malermeister LLC — plan vs actual. Funnel: bookings (work booked) → completed (value
+# delivered) → collected (cash in). completed.actual ties to cashflow.yml revenue. The
+# EUR shock (Nov 2024 → Feb 2025) hit margin more than volume; March rebounds. AED.
+
+funnelStages:
+  - { id: "bookings",  label: "Bookings",  icon: "event_available", description: "Work booked in", color: "#8B5CF6" }
+  - { id: "completed", label: "Completed", icon: "task_alt",        description: "Value delivered (vehicles released)", color: "#10B981" }
+  - { id: "collected", label: "Collected", icon: "payments",        description: "Cash collected", color: "#F59E0B" }
+
+monthly:
+  - { month: "2024-01", plan: { bookings: 440000, completed: 440000, collected: 430000 }, actual: { bookings: 400000, completed: 380000, collected: 360000 } }
+  - { month: "2024-02", plan: { bookings: 440000, completed: 440000, collected: 430000 }, actual: { bookings: 390000, completed: 360000, collected: 345000 } }
+  - { month: "2024-03", plan: { bookings: 460000, completed: 460000, collected: 450000 }, actual: { bookings: 480000, completed: 470000, collected: 450000 } }
+  - { month: "2024-04", plan: { bookings: 480000, completed: 480000, collected: 470000 }, actual: { bookings: 520000, completed: 510000, collected: 490000 } }
+  - { month: "2024-05", plan: { bookings: 450000, completed: 450000, collected: 450000 }, actual: { bookings: 430000, completed: 440000, collected: 420000 } }
+  - { month: "2024-06", plan: { bookings: 430000, completed: 430000, collected: 430000 }, actual: { bookings: 400000, completed: 390000, collected: 375000 } }
+  - { month: "2024-07", plan: { bookings: 400000, completed: 400000, collected: 410000 }, actual: { bookings: 330000, completed: 320000, collected: 335000 }, note: "Summer trough." }
+  - { month: "2024-08", plan: { bookings: 400000, completed: 400000, collected: 400000 }, actual: { bookings: 310000, completed: 300000, collected: 330000 } }
+  - { month: "2024-09", plan: { bookings: 470000, completed: 470000, collected: 450000 }, actual: { bookings: 490000, completed: 480000, collected: 455000 } }
+  - { month: "2024-10", plan: { bookings: 490000, completed: 490000, collected: 480000 }, actual: { bookings: 520000, completed: 520000, collected: 500000 }, note: "Autumn peak (Cullinan + fleet)." }
+  - { month: "2024-11", plan: { bookings: 470000, completed: 470000, collected: 470000 }, actual: { bookings: 450000, completed: 460000, collected: 430000 }, note: "EUR materials begin to bite (margin, not volume)." }
+  - { month: "2024-12", plan: { bookings: 460000, completed: 460000, collected: 460000 }, actual: { bookings: 440000, completed: 430000, collected: 420000 } }
+  - { month: "2025-01", plan: { bookings: 450000, completed: 450000, collected: 450000 }, actual: { bookings: 410000, completed: 400000, collected: 395000 }, note: "Shock — dear EUR paint compresses margin to near-zero." }
+  - { month: "2025-02", plan: { bookings: 450000, completed: 450000, collected: 450000 }, actual: { bookings: 390000, completed: 380000, collected: 360000 }, note: "Shock trough." }
+  - { month: "2025-03", plan: { bookings: 480000, completed: 480000, collected: 470000 }, actual: { bookings: 520000, completed: 500000, collected: 480000 }, note: "Bounce — throughput and margin recover." }
+
+annual:
+  - year: 2024
+    plan:   { bookings: 5390000, completed: 5390000, collected: 5330000 }
+    actual: { bookings: 5160000, completed: 5080000, collected: 4905000 }
+  - year: 2025
+    label: "Q1 YTD"
+    plan:   { bookings: 1380000, completed: 1380000, collected: 1370000 }
+    actual: { bookings: 1320000, completed: 1280000, collected: 1235000 }

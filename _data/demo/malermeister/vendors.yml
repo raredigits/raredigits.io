@@ -1,0 +1,8 @@
+# Malermeister LLC — suppliers. Paint/materials are bought in EUR from German/EU brands
+# (the EUR cost line that spiked in the Nov 2024 → Feb 2025 shock). Plus local consumables.
+
+vendors:
+  - { id: "vend-mal-glasurit",  name: "Glasurit (BASF)",        type: "Automotive paint",      country: "Germany",     currency: "EUR", paymentTerms: "Net 30", rating: "preferred", note: "Primary paint system — premium German line. EUR pricing drove the shock-period margin squeeze." }
+  - { id: "vend-mal-standox",   name: "Standox (Axalta)",       type: "Automotive paint",      country: "Germany",     currency: "EUR", paymentTerms: "Net 30", rating: "preferred" }
+  - { id: "vend-mal-consum",    name: "Gulf Refinish Supplies", type: "Abrasives / consumables", country: "UAE",       currency: "AED", paymentTerms: "Net 30", rating: "approved" }
+  - { id: "vend-mal-equip",     name: "SprayTech Equipment",    type: "Booth / equipment service", country: "UAE",     currency: "AED", paymentTerms: "Net 30", rating: "approved", note: "Spray booth & compressor maintenance." }

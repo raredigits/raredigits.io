@@ -1,0 +1,222 @@
+# Malermeister LLC — auto body & paint shop (AED ops, EUR materials)
+# Monthly P&L & cashflow — 15 months, Jan 2024 → Mar 2025. All amounts in AED.
+# Currency: AED (paint/materials bought EUR). Same column contract as Crisis Theater for holding roll-up.
+# gp = revenue − cogs ; ebitda = gp − opex.
+
+monthly:
+
+  - month: "2024-01"
+    revenue: 380000
+    cogs: 175000
+    gp: 205000
+    opex: 180000
+    ebitda: 25000
+    cashIn: 399000
+    cashOut: 365000
+    cashEnd: 354000
+    arEnd: 76000
+    apEnd: 70000
+    dso: 6
+    headcount: 10
+
+  - month: "2024-02"
+    revenue: 360000
+    cogs: 168000
+    gp: 192000
+    opex: 180000
+    ebitda: 12000
+    cashIn: 364000
+    cashOut: 350800
+    cashEnd: 367200
+    arEnd: 72000
+    apEnd: 67200
+    dso: 6
+    headcount: 10
+
+  - month: "2024-03"
+    revenue: 470000
+    cogs: 215000
+    gp: 255000
+    opex: 182000
+    ebitda: 73000
+    cashIn: 448000
+    cashOut: 378200
+    cashEnd: 437000
+    arEnd: 94000
+    apEnd: 86000
+    dso: 6
+    headcount: 11
+
+  - month: "2024-04"
+    revenue: 510000
+    cogs: 232000
+    gp: 278000
+    opex: 182000
+    ebitda: 96000
+    cashIn: 502000
+    cashOut: 407200
+    cashEnd: 531800
+    arEnd: 102000
+    apEnd: 92800
+    dso: 6
+    headcount: 11
+
+  - month: "2024-05"
+    revenue: 440000
+    cogs: 205000
+    gp: 235000
+    opex: 184000
+    ebitda: 51000
+    cashIn: 454000
+    cashOut: 399800
+    cashEnd: 586000
+    arEnd: 88000
+    apEnd: 82000
+    dso: 6
+    headcount: 11
+
+  - month: "2024-06"
+    revenue: 390000
+    cogs: 184000
+    gp: 206000
+    opex: 184000
+    ebitda: 22000
+    cashIn: 400000
+    cashOut: 376400
+    cashEnd: 609600
+    arEnd: 78000
+    apEnd: 73600
+    dso: 6
+    headcount: 11
+
+  - month: "2024-07"
+    revenue: 320000
+    cogs: 156000
+    gp: 164000
+    opex: 184000
+    ebitda: -20000
+    cashIn: 334000
+    cashOut: 351200
+    cashEnd: 592400
+    arEnd: 64000
+    apEnd: 62400
+    dso: 6
+    headcount: 10
+    note: "Summer slow — painters on leave."
+
+  - month: "2024-08"
+    revenue: 300000
+    cogs: 150000
+    gp: 150000
+    opex: 184000
+    ebitda: -34000
+    cashIn: 304000
+    cashOut: 336400
+    cashEnd: 560000
+    arEnd: 60000
+    apEnd: 60000
+    dso: 6
+    headcount: 10
+
+  - month: "2024-09"
+    revenue: 480000
+    cogs: 220000
+    gp: 260000
+    opex: 186000
+    ebitda: 74000
+    cashIn: 444000
+    cashOut: 378000
+    cashEnd: 626000
+    arEnd: 96000
+    apEnd: 88000
+    dso: 6
+    headcount: 11
+
+  - month: "2024-10"
+    revenue: 520000
+    cogs: 238000
+    gp: 282000
+    opex: 186000
+    ebitda: 96000
+    cashIn: 512000
+    cashOut: 416800
+    cashEnd: 721200
+    arEnd: 104000
+    apEnd: 95200
+    dso: 6
+    headcount: 12
+    note: "Autumn peak — fleet repaint contract."
+
+  - month: "2024-11"
+    revenue: 460000
+    cogs: 224000
+    gp: 236000
+    opex: 192000
+    ebitda: 44000
+    cashIn: 472000
+    cashOut: 421600
+    cashEnd: 771600
+    arEnd: 92000
+    apEnd: 89600
+    dso: 6
+    headcount: 12
+    note: "Shock: EUR paint/material cost spike lifts COGS ratio."
+
+  - month: "2024-12"
+    revenue: 430000
+    cogs: 214000
+    gp: 216000
+    opex: 192000
+    ebitda: 24000
+    cashIn: 436000
+    cashOut: 410000
+    cashEnd: 797600
+    arEnd: 86000
+    apEnd: 85600
+    dso: 6
+    headcount: 12
+
+  - month: "2025-01"
+    revenue: 400000
+    cogs: 205000
+    gp: 195000
+    opex: 192000
+    ebitda: 3000
+    cashIn: 406000
+    cashOut: 400600
+    cashEnd: 803000
+    arEnd: 80000
+    apEnd: 82000
+    dso: 6
+    headcount: 12
+    note: "Shock trough — dear EUR materials pinch margin."
+
+  - month: "2025-02"
+    revenue: 380000
+    cogs: 192000
+    gp: 188000
+    opex: 190000
+    ebitda: -2000
+    cashIn: 384000
+    cashOut: 387200
+    cashEnd: 799800
+    arEnd: 76000
+    apEnd: 76800
+    dso: 6
+    headcount: 12
+
+  - month: "2025-03"
+    revenue: 500000
+    cogs: 230000
+    gp: 270000
+    opex: 188000
+    ebitda: 82000
+    cashIn: 476000
+    cashOut: 402800
+    cashEnd: 873000
+    arEnd: 100000
+    apEnd: 92000
+    dso: 6
+    headcount: 12
+    note: "Recovery — EUR eases, throughput back up."
+

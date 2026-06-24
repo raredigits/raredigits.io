@@ -1,0 +1,24 @@
+# Malermeister LLC — fulfillments (type: services → "Vehicles released").
+# Base shape: id, date, status, counterparty, source, value, currency.
+# Services-specific: vehicle, workorder, bay. status: completed (released to client).
+
+fulfillments:
+  - { id: "f-mal-038", date: "2025-03-26", status: "completed", counterparty: "cl-mal-platinum",  source: "WO-2025-038", value: 14000, currency: "AED", vehicle: "Bentley Continental GT", workorder: "WO-2025-038", bay: "booth-2" }
+  - { id: "f-mal-037", date: "2025-03-22", status: "completed", counterparty: "cl-mal-platinum",  source: "WO-2025-037", value: 18000, currency: "AED", vehicle: "3× trade-in prep", workorder: "WO-2025-037", bay: "prep-1" }
+  - { id: "f-mal-035", date: "2025-03-13", status: "completed", counterparty: "cl-mal-collector", source: "WO-2025-035", value: 5500,  currency: "AED", vehicle: "Mercedes-AMG G63", workorder: "WO-2025-035", bay: "detail-1" }
+  - { id: "f-mal-033", date: "2025-03-22", status: "completed", counterparty: "cl-mal-private",   source: "WO-2025-033", value: 1800,  currency: "AED", vehicle: "Range Rover Autobiography", workorder: "WO-2025-033", bay: "detail-1" }
+  - { id: "f-mal-031", date: "2025-03-11", status: "completed", counterparty: "cl-mal-prestige",  source: "WO-2025-031", value: 28000, currency: "AED", vehicle: "Prestige fleet — 8 cars", workorder: "WO-2025-031", bay: "prep-1" }
+  - { id: "f-mal-030", date: "2025-03-09", status: "completed", counterparty: "cl-mal-concours",  source: "WO-2025-030", value: 9500,  currency: "AED", vehicle: "Concours subcontract — 5 panels", workorder: "WO-2025-030", bay: "booth-2" }
+  - { id: "f-mal-s03", date: "2025-03-31", status: "completed", counterparty: "cl-mal-private",   source: "WO-2025-SMALL-03", value: 17700, currency: "AED", vehicle: "Retail batch — 46 small jobs", workorder: "WO-2025-SMALL-03", bay: "detail-1" }
+  - { id: "f-mal-040", date: "2025-03-27", status: "completed", counterparty: "cl-mal-private",   source: "WO-2025-040", value: 2400,  currency: "AED", vehicle: "Mercedes S-Class", workorder: "WO-2025-040", bay: "booth-2" }
+  - { id: "f-mal-039", date: "2025-03-26", status: "completed", counterparty: "cl-mal-platinum",  source: "WO-2025-039", value: 4200,  currency: "AED", vehicle: "9 touch-ups (lot prep)", workorder: "WO-2025-039", bay: "prep-1" }
+  - { id: "f-mal-028", date: "2025-02-21", status: "completed", counterparty: "cl-mal-collector", source: "WO-2025-028", value: 8500,  currency: "AED", vehicle: "Porsche 911 Turbo S", workorder: "WO-2025-028", bay: "booth-1" }
+  - { id: "f-mal-026", date: "2025-02-15", status: "completed", counterparty: "cl-mal-prestige",  source: "WO-2025-026", value: 21000, currency: "AED", vehicle: "Prestige fleet — 6 cars", workorder: "WO-2025-026", bay: "prep-1" }
+  - { id: "f-mal-022", date: "2025-02-12", status: "completed", counterparty: "cl-mal-collector", source: "WO-2025-022", value: 6500,  currency: "AED", vehicle: "Lamborghini Urus", workorder: "WO-2025-022", bay: "detail-1" }
+  - { id: "f-mal-019", date: "2025-01-27", status: "completed", counterparty: "cl-mal-exotic",    source: "WO-2025-019", value: 18000, currency: "AED", vehicle: "Exotic Drive fleet — 6 cars", workorder: "WO-2025-019", bay: "prep-1" }
+  - { id: "f-mal-241", date: "2024-12-20", status: "completed", counterparty: "cl-mal-collector", source: "WO-2024-241", value: 38000, currency: "AED", vehicle: "Rolls-Royce Cullinan", workorder: "WO-2024-241", bay: "booth-1" }
+  - { id: "f-mal-176", date: "2024-07-29", status: "completed", counterparty: "cl-mal-private",   source: "WO-2024-176", value: 3200,  currency: "AED", vehicle: "McLaren 720S", workorder: "WO-2024-176", bay: "detail-1" }
+  - { id: "f-mal-044", date: "2025-02-26", status: "completed", counterparty: "cl-mal-prestige",  source: "WO-2025-044", value: 28000, currency: "AED", vehicle: "Prestige fleet — 2× exotic", workorder: "WO-2025-044", bay: "booth-1" }
+  - { id: "f-mal-029", date: "2025-03-04", status: "completed", counterparty: "cl-mal-exotic",    source: "WO-2025-029", value: 16000, currency: "AED", vehicle: "Lamborghini Huracán", workorder: "WO-2025-029", bay: "booth-2" }
+  - { id: "f-mal-042", date: "2025-03-18", status: "completed", counterparty: "cl-mal-exotic",    source: "WO-2025-042", value: 9000,  currency: "AED", vehicle: "Ferrari 488 (fleet)", workorder: "WO-2025-042", bay: "booth-2" }
+  - { id: "f-mal-045", date: "2025-03-22", status: "completed", counterparty: "cl-mal-exotic",    source: "WO-2025-045", value: 16500, currency: "AED", vehicle: "Exotic fleet — 3× ceramic", workorder: "WO-2025-045", bay: "detail-1" }

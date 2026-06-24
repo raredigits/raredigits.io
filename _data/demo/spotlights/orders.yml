@@ -1,0 +1,245 @@
+# Spotlights Ltd — sales orders. Window Jan 2024 → Mar 2025.
+# status: quote | confirmed | in-transit | delivered | invoiced | closed | cancelled
+# lines reference products.yml ids; client references clients.yml ids.
+# subtotal/vat(5%)/total in AED. fulfillment → fulfillments.yml; invoice → invoices.yml.
+# Intercompany orders carry icRef → group/intercompany.yml (netted on consolidation).
+
+orders:
+
+  - id: "SPL-O-2401-018"
+    client: "cl-protec"
+    date: "2024-01-15"
+    status: "closed"
+    lines:
+      - { product: "prod-led-roe", qty: 40, unitPrice: 6000 }
+      - { product: "prod-light-robe", qty: 12, unitPrice: 22000 }
+    subtotal: 504000
+    vat: 25200
+    total: 529200
+    currency: "AED"
+    fulfillment: "f-spl-2401-018"
+    invoice: "SPL-2024-018"
+
+  - id: "SPL-O-2402-024"
+    client: "cl-eclipse"
+    date: "2024-02-10"
+    status: "closed"
+    lines:
+      - { product: "prod-light-martin", qty: 24, unitPrice: 9700 }
+      - { product: "prod-audio-ks28", qty: 8, unitPrice: 21000 }
+    subtotal: 400800
+    vat: 20040
+    total: 420840
+    currency: "AED"
+    fulfillment: "f-spl-2402-024"
+    invoice: "SPL-2024-024"
+
+  - id: "SPL-O-2403-031"
+    client: "cl-crisis-theater"
+    date: "2024-03-04"
+    status: "closed"
+    intercompany: true
+    icRef: "ic-2024-03-spl-ct"
+    lines:
+      - { product: "prod-led-absen", qty: 100, unitPrice: 4000 }
+      - { product: "prod-rig-cm1t", qty: 16, unitPrice: 8750 }
+    subtotal: 540000
+    vat: 27000
+    total: 567000
+    currency: "AED"
+    fulfillment: "f-spl-2403-031"
+    invoice: "SPL-2024-031"
+    note: "Lantern Bay 2024 — LED + rigging supply to sister company."
+
+  - id: "SPL-O-2403-033"
+    client: "cl-flash"
+    date: "2024-03-20"
+    status: "closed"
+    lines:
+      - { product: "prod-audio-k2", qty: 24, unitPrice: 49000 }
+      - { product: "prod-audio-ks28", qty: 12, unitPrice: 21000 }
+    subtotal: 1428000
+    vat: 71400
+    total: 1499400
+    currency: "AED"
+    fulfillment: "f-spl-2403-033"
+    invoice: "SPL-2024-033"
+    note: "Festival-season audio package — largest Q1 order."
+
+  - id: "SPL-O-2405-041"
+    client: "cl-dwtc"
+    date: "2024-05-12"
+    status: "closed"
+    lines:
+      - { product: "prod-light-robe", qty: 20, unitPrice: 22000 }
+    subtotal: 440000
+    vat: 22000
+    total: 462000
+    currency: "AED"
+    fulfillment: "f-spl-2405-041"
+    invoice: "SPL-2024-041"
+
+  - id: "SPL-O-2406-047"
+    client: "cl-legacy"
+    date: "2024-06-18"
+    status: "closed"
+    intercompany: true
+    icRef: "ic-2024-06-spl-leg"
+    lines:
+      - { product: "prod-led-absen", qty: 56, unitPrice: 5000 }
+    subtotal: 280000
+    vat: 14000
+    total: 294000
+    currency: "AED"
+    fulfillment: "f-spl-2406-047"
+    invoice: "SPL-2024-047"
+    note: "Lobby video wall + signage — permanent fit-out for a Legacy building."
+
+  - id: "SPL-O-2407-052"
+    client: "cl-backstage"
+    date: "2024-07-08"
+    status: "closed"
+    lines:
+      - { product: "prod-light-martin", qty: 16, unitPrice: 9800 }
+    subtotal: 156800
+    vat: 7840
+    total: 164640
+    currency: "AED"
+    fulfillment: "f-spl-2407-052"
+    invoice: "SPL-2024-052"
+    note: "Quiet summer month."
+
+  - id: "SPL-O-2409-061"
+    client: "cl-crisis-theater"
+    date: "2024-09-02"
+    status: "closed"
+    intercompany: true
+    icRef: "ic-2024-09-spl-ct"
+    lines:
+      - { product: "prod-led-absen", qty: 80, unitPrice: 4000 }
+      - { product: "prod-light-robe", qty: 10, unitPrice: 22000 }
+      - { product: "prod-rig-cm1t", qty: 8, unitPrice: 8750 }
+    subtotal: 610000
+    vat: 30500
+    total: 640500
+    currency: "AED"
+    fulfillment: "f-spl-2409-061"
+    invoice: "SPL-2024-061"
+    note: "Ancient Moon 2024 (Recovery Edition) AV package."
+
+  - id: "SPL-O-2409-064"
+    client: "cl-atlantis"
+    date: "2024-09-18"
+    status: "closed"
+    lines:
+      - { product: "prod-audio-k2", qty: 16, unitPrice: 49000 }
+      - { product: "prod-audio-ks28", qty: 8, unitPrice: 21000 }
+    subtotal: 952000
+    vat: 47600
+    total: 999600
+    currency: "AED"
+    fulfillment: "f-spl-2409-064"
+    invoice: "SPL-2024-064"
+    note: "Ballroom PA upgrade — Q4 ramp."
+
+  - id: "SPL-O-2410-070"
+    client: "cl-expo-city"
+    date: "2024-10-10"
+    status: "invoiced"
+    lines:
+      - { product: "prod-control-ma3", qty: 1, unitPrice: 290000 }
+      - { product: "prod-media-disguise", qty: 2, unitPrice: 205000 }
+    subtotal: 700000
+    vat: 35000
+    total: 735000
+    currency: "AED"
+    fulfillment: "f-spl-2410-070"
+    invoice: "SPL-2024-070"
+    note: "Control + media for a permanent venue install. Net 90 — slow collection."
+
+  - id: "SPL-O-2411-078"
+    client: "cl-protec"
+    date: "2024-11-14"
+    status: "delivered"
+    deliveredDate: "2025-03-10"
+    lines:
+      - { product: "prod-led-absen", qty: 240, unitPrice: 4000 }
+    subtotal: 960000
+    vat: 48000
+    total: 1008000
+    currency: "AED"
+    fulfillment: "f-spl-2503-078"
+    invoice: "SPL-2025-078"
+    note: "SHOCK: ordered for Dec handover; container held at origin in the Gulf freight disruption. ETA slipped from Dec to Mar 2025 — the single biggest slip driving the Q4 trough and the March bounce."
+
+  - id: "SPL-O-2412-085"
+    client: "cl-mediapro"
+    date: "2024-12-05"
+    status: "confirmed"
+    lines:
+      - { product: "prod-led-roe", qty: 48, unitPrice: 6100 }
+    subtotal: 292800
+    vat: 14640
+    total: 307440
+    currency: "AED"
+    note: "Backordered — awaiting ROE BP2 restock. Not yet shipped as of today."
+
+  - id: "SPL-O-2412-087"
+    client: "cl-backstage"
+    date: "2024-12-18"
+    status: "cancelled"
+    lines:
+      - { product: "prod-light-robe", qty: 12, unitPrice: 22000 }
+    subtotal: 264000
+    vat: 13200
+    total: 277200
+    currency: "AED"
+    note: "Client cancelled amid the Q4 cash squeeze — credit on watch."
+
+  - id: "SPL-O-2501-091"
+    client: "cl-flash"
+    date: "2025-01-20"
+    status: "invoiced"
+    lines:
+      - { product: "prod-light-robe", qty: 24, unitPrice: 22000 }
+    subtotal: 528000
+    vat: 26400
+    total: 554400
+    currency: "AED"
+    fulfillment: "f-spl-2501-091"
+    invoice: "SPL-2025-091"
+    note: "Filled from stock — kept January ticking while imports were stuck."
+
+  - id: "SPL-O-2503-098"
+    client: "cl-crisis-theater"
+    date: "2025-03-06"
+    status: "delivered"
+    deliveredDate: "2025-03-12"
+    intercompany: true
+    icRef: "ic-2025-03-spl-ct"
+    lines:
+      - { product: "prod-led-absen", qty: 120, unitPrice: 4000 }
+      - { product: "prod-light-martin", qty: 24, unitPrice: 10000 }
+    subtotal: 720000
+    vat: 36000
+    total: 756000
+    currency: "AED"
+    fulfillment: "f-spl-2503-098"
+    invoice: "SPL-2025-098"
+    note: "Lantern Bay 2025 — delayed LED freight finally cleared and delivered in March."
+
+  - id: "SPL-O-2503-101"
+    client: "cl-dwtc"
+    date: "2025-03-22"
+    status: "delivered"
+    deliveredDate: "2025-03-25"
+    lines:
+      - { product: "prod-audio-k2", qty: 16, unitPrice: 49000 }
+      - { product: "prod-audio-ks28", qty: 8, unitPrice: 21000 }
+    subtotal: 952000
+    vat: 47600
+    total: 999600
+    currency: "AED"
+    fulfillment: "f-spl-2503-101"
+    invoice: "SPL-2025-101"
+    note: "March bounce — backlog clearing lifts the month."

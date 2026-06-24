@@ -1,0 +1,46 @@
+# Malermeister LLC — alert rules + active alerts as of 2025-03-28.
+# severity: critical | high | medium | low | info
+# categories: margin | capacity | ar | fx | hr | ops
+
+rules:
+  - { id: "rule-eur-cost",     name: "EUR material cost above threshold", category: "fx",       enabled: true, severity: "medium", condition: "eur_material_cost_index > 1.1", notify: ["mal-owner", "mal-acct"] }
+  - { id: "rule-booth-block",  name: "Booth occupied by long job > 14 days", category: "capacity", enabled: true, severity: "medium", condition: "booth_days_committed > 14", notify: ["mal-owner", "mal-coord"] }
+  - { id: "rule-fleet-overdue",name: "Fleet/account invoice overdue", category: "ar",        enabled: true, severity: "medium", condition: "days_overdue > 15", notify: ["mal-acct", "mal-advisor"] }
+  - { id: "rule-painter-key",  name: "Key-person dependency (master painters)", category: "hr", enabled: true, severity: "medium", condition: "meister_share_of_output > 0.6", notify: ["mal-owner"] }
+
+active:
+  - id: "alert-mal-2025-007"
+    rule: "rule-eur-cost"
+    severity: "medium"
+    category: "margin"
+    title: "EUR paint cost compressed margin Jan–Feb"
+    detail: "Dear EUR materials pushed COGS up and EBITDA to near-zero in Jan (+3K) and Feb (−2K). March recovered (+82K). Forward-buy or price-lock Glasurit to stop the next swing."
+    ref: "vend-mal-glasurit"
+    raised: "2025-02-10"
+
+  - id: "alert-mal-2025-008"
+    rule: "rule-booth-block"
+    severity: "medium"
+    category: "capacity"
+    title: "Booth-1 committed to the Ferrari for ~3 weeks"
+    detail: "WO-2025-041 (full respray) monopolises booth-1 until mid-April, throttling throughput behind it. Route quick high-margin jobs to booth-2 / detail bay."
+    ref: "WO-2025-041"
+    raised: "2025-03-11"
+
+  - id: "alert-mal-2025-009"
+    rule: "rule-fleet-overdue"
+    severity: "medium"
+    category: "ar"
+    title: "Prestige fleet AED 51K overdue"
+    detail: "Two batches unpaid (MAL-2025-031 + MAL-2025-026 = AED 51,450). Prestige consistently pays ~20 days late. Consider a deposit or shorter terms."
+    ref: ["MAL-2025-031", "MAL-2025-026"]
+    raised: "2025-03-20"
+
+  - id: "alert-mal-2025-010"
+    rule: "rule-painter-key"
+    severity: "medium"
+    category: "hr"
+    title: "Output depends on two master painters"
+    detail: "Stefan and Markus produce the bulk of high-value work — the quality moat and the key-person risk. Build a finishing bench from the prep team before it becomes a constraint."
+    ref: ["mal-painter-1", "mal-painter-2"]
+    raised: "2025-03-01"

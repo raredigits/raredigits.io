@@ -1,0 +1,66 @@
+# Registry of operating businesses under Ambitions Inc.
+# Single source of truth for what's in the group. UIs iterate this to build the
+# entity switcher and the consolidated roll-up (read demo[<dataPath>]).
+#
+# NOTE: Corsair HQ is the holding-level viewer (whole group + drill), not tied to one entity.
+#       Atlas → spotlights, Forecast → group + per-entity, Columbus → crisis-theater.
+
+entities:
+
+  - id: "crisis-theater"
+    name: "The Crisis Theater"
+    type: "events"
+    description: "Experiential / event production — brand activations, festivals, private commissions"
+    status: "active"
+    acquired: "2018-03-14"        # founding asset
+    currency: "AED"
+    ownership: 1.0
+    fulfillmentLabel: "Completed works"
+    products: ["columbus", "forecast"]
+    color: "#8B5CF6"
+    dataPath: "crisis-theater"    # accessed as demo["crisis-theater"] (hyphenated key)
+    profitShape: "volatile, festival-seasonal, FY-profitable"
+
+  - id: "spotlights"
+    name: "Spotlights Ltd"
+    type: "distribution"
+    description: "B2B distributor of pro-AV, stage and LED equipment — narrow high-ticket catalogue"
+    status: "active"
+    acquired: "2022-06-01"
+    currency: "AED"               # operating; imports settled in USD
+    importCurrency: "USD"
+    ownership: 1.0
+    fulfillmentLabel: "Shipments"
+    products: ["atlas", "forecast"]
+    color: "#0EA5E9"
+    dataPath: "spotlights"
+    profitShape: "lumpy (big-ticket deals), FY-profitable"
+
+  - id: "legacy-development"
+    name: "Legacy Development"
+    type: "realestate"
+    description: "Owns and manages commercial real estate — recurring rent + capex projects"
+    status: "active"
+    acquired: "2021-01-01"
+    currency: "AED"
+    ownership: 1.0
+    fulfillmentLabel: "Handovers / closed tickets"
+    products: []                  # demo wiring is backlog
+    color: "#10B981"
+    dataPath: "legacy-development"
+    profitShape: "steady-profitable; sharp Feb-2025 dip (anchor-tenant default)"
+
+  - id: "malermeister"
+    name: "Malermeister LLC"
+    type: "services"
+    description: "Auto body shop — vehicle painting and refinishing"
+    status: "active"
+    acquired: "2023-07-01"
+    currency: "AED"               # operating; paint/materials bought in EUR, dividends paid in EUR
+    importCurrency: "EUR"
+    ownership: 1.0
+    fulfillmentLabel: "Vehicles released"
+    products: []                  # demo wiring is backlog
+    color: "#F59E0B"
+    dataPath: "malermeister"
+    profitShape: "small, seasonal-volatile, FY-profitable"

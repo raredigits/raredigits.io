@@ -1,0 +1,15 @@
+# Malermeister LLC — service price menu. Premium German-shop pricing. Wide spread:
+# headline full resprays AED 10–40K, but a high volume of AED 300–400 rim/touch-up jobs.
+# unit → company.yml service line. priceFrom/priceTo/typical in AED.
+
+services:
+  - { id: "svc-respray-full",   name: "Full respray (luxury/exotic)", unit: "respray",   priceFrom: 22000, priceTo: 40000, typical: 32000, uom: "vehicle", note: "Bare-to-clearcoat on supercars; 2–4 weeks in booth." }
+  - { id: "svc-respray-std",    name: "Full respray (standard premium)", unit: "respray", priceFrom: 10000, priceTo: 18000, typical: 14000, uom: "vehicle" }
+  - { id: "svc-multipanel",     name: "Multi-panel repaint",          unit: "respray",   priceFrom: 5000,  priceTo: 12000, typical: 7500,  uom: "job" }
+  - { id: "svc-panel-single",   name: "Single-panel respray",         unit: "panel",     priceFrom: 1200,  priceTo: 3500,  typical: 2200,  uom: "panel" }
+  - { id: "svc-touchup",        name: "Scratch / chip touch-up",      unit: "panel",     priceFrom: 300,   priceTo: 800,   typical: 450,   uom: "job", note: "High volume, walk-in." }
+  - { id: "svc-wheel-refinish", name: "Wheel refinish (diamond-cut)", unit: "wheels",    priceFrom: 350,   priceTo: 600,   typical: 450,   uom: "wheel" }
+  - { id: "svc-wheel-polish",   name: "Rim polish",                   unit: "wheels",    priceFrom: 300,   priceTo: 400,   typical: 350,   uom: "set", note: "The bread-and-butter small job — dozens a month." }
+  - { id: "svc-paint-correct",  name: "Paint correction / polishing", unit: "detailing", priceFrom: 800,   priceTo: 4000,  typical: 2200,  uom: "vehicle" }
+  - { id: "svc-ceramic",        name: "Ceramic coating",              unit: "detailing", priceFrom: 3000,  priceTo: 9000,  typical: 5500,  uom: "vehicle" }
+  - { id: "svc-fleet-prep",     name: "Fleet prep & repair (per car)", unit: "fleet",    priceFrom: 1500,  priceTo: 6000,  typical: 3500,  uom: "vehicle", note: "Rental-company batches at negotiated rates." }

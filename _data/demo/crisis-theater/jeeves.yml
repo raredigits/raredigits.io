@@ -13,13 +13,13 @@ profile:
   invocation: "Ask Jeeves"
   tagline: "Butler-precision insights for executives who'd rather be at the regatta."
 
-# Insights surfaced "today" (2026-03-28). Reference projects/invoices/alerts by id.
+# Insights surfaced "today" (2025-03-28). Reference projects/invoices/alerts by id.
 todaySummary:
   headline: "Two fires, one breeze, and a champagne dilemma."
-  body: "Aurora Gala is bleeding margin while Vision Realm refuses to sign the change order — that is your single largest live risk this quarter. Aldira is still ghosting AED 800K. Lantern Bay 2026 sold out and Q1 beat plan by 9.6%. The escrow account holds AED 5.6M earmarked for vendor settlement on April 15 — do not look at that number as cash."
+  body: "Aurora Gala is bleeding margin while Vision Realm refuses to sign the change order — that is your single largest live risk this quarter. Aldira is still ghosting AED 800K. Lantern Bay 2025 sold out and Q1 beat plan by 9.6%. The escrow account holds AED 5.6M earmarked for vendor settlement on April 15 — do not look at that number as cash."
   stance: "watch"
   severity: "warning"
-  refresh: "2026-03-28T08:00:00+04:00"
+  refresh: "2025-03-28T08:00:00+04:00"
 
 # Keyed insights — one per scope/page where Jeeves is invoked
 insights:
@@ -32,7 +32,7 @@ insights:
     stance: "watch"
     severity: "info"
     confidence: "high"
-    sources: ["cashflow.yml#cashSnapshot", "targets.yml#annual.2026"]
+    sources: ["cashflow.yml#cashSnapshot", "targets.yml#annual.2025"]
 
   - id: "j-dash-02"
     scope: "dashboard"
@@ -41,7 +41,7 @@ insights:
     stance: "cut-costs"
     severity: "critical"
     confidence: "high"
-    sources: ["projects.yml#p-2026-007", "invoices.yml#TCT-2026-038", "alerts.yml#alert-2026-001"]
+    sources: ["projects.yml#p-2025-007", "invoices.yml#TCT-2025-038", "alerts.yml#alert-2025-001"]
     suggestedActions:
       - "Halt fabrication & lighting POs (PROT, ECL) until written CO."
       - "Founder-MD call to KSA principal before EOD."
@@ -51,30 +51,30 @@ insights:
   - id: "j-prod-01"
     scope: "production"
     title: "Push production on Bluewaters AR before margin slips"
-    body: "Burn rate +12% vs plan, AR engine vendor stalling. Currently green-yellow. If software delay extends past 2026-04-10, you lose the buffer and we land in red. Either swap the AR vendor (I have three pre-vetted alternatives) or absorb a 2-week schedule slip and renegotiate the milestone with Meraas now while goodwill is intact."
+    body: "Burn rate +12% vs plan, AR engine vendor stalling. Currently green-yellow. If software delay extends past 2025-04-10, you lose the buffer and we land in red. Either swap the AR vendor (I have three pre-vetted alternatives) or absorb a 2-week schedule slip and renegotiate the milestone with Meraas now while goodwill is intact."
     stance: "push-production"
     severity: "warning"
     confidence: "medium"
-    sources: ["projects.yml#p-2026-006", "alerts.yml#alert-2026-005"]
+    sources: ["projects.yml#p-2025-006", "alerts.yml#alert-2025-005"]
 
   - id: "j-prod-02"
     scope: "production"
     title: "Installations unit is materially underperforming"
-    body: "2025 installations actual AED 2.55M vs plan AED 4M (-36%). 2026 YTD even worse. Either kill the unit, find a permanent partnership with one developer, or invest in a dedicated head. Right now Sheleesh is splitting attention and Umbrella demonstrates how that ends."
+    body: "2024 installations actual AED 2.55M vs plan AED 4M (-36%). 2025 YTD even worse. Either kill the unit, find a permanent partnership with one developer, or invest in a dedicated head. Right now Sheleesh is splitting attention and Umbrella demonstrates how that ends."
     stance: "watch"
     severity: "warning"
     confidence: "high"
-    sources: ["targets.yml#unitAnnual", "projects.yml#p-2024-012"]
+    sources: ["targets.yml#unitAnnual", "projects.yml#p-2023-012"]
 
   # --- Money page ---
   - id: "j-money-01"
     scope: "money"
     title: "Tighten AR collections — Aldira specifically"
-    body: "AED 800K, 36 days overdue, no contact since Feb 15. Send formal demand letter today (template T-3 in your library). Pause new business with Aldira pending settlement. If unresolved by 2026-04-15, instruct counsel to issue statutory demand. Aldira's group has UAE assets — recovery probability is high if you escalate; near-zero if you keep emailing the AP clerk."
+    body: "AED 800K, 36 days overdue, no contact since Feb 15. Send formal demand letter today (template T-3 in your library). Pause new business with Aldira pending settlement. If unresolved by 2025-04-15, instruct counsel to issue statutory demand. Aldira's group has UAE assets — recovery probability is high if you escalate; near-zero if you keep emailing the AP clerk."
     stance: "tighten-ar"
     severity: "critical"
     confidence: "high"
-    sources: ["invoices.yml#TCT-2025-156", "clients.yml#aldira", "alerts.yml#alert-2026-002"]
+    sources: ["invoices.yml#TCT-2024-156", "clients.yml#aldira", "alerts.yml#alert-2025-002"]
 
   - id: "j-money-02"
     scope: "money"
@@ -92,7 +92,7 @@ insights:
     stance: "hedge"
     severity: "info"
     confidence: "medium"
-    sources: ["invoices.yml", "alerts.yml#alert-2026-006"]
+    sources: ["invoices.yml", "alerts.yml#alert-2025-006"]
 
   - id: "j-money-04"
     scope: "money"
@@ -101,13 +101,13 @@ insights:
     stance: "watch"
     severity: "warning"
     confidence: "high"
-    sources: ["invoices.yml#LLD-2024-CLM", "alerts.yml#alert-2026-009"]
+    sources: ["invoices.yml#LLD-2023-CLM", "alerts.yml#alert-2025-009"]
 
   # --- Staff page ---
   - id: "j-staff-01"
     scope: "staff"
     title: "Headcount stable, utilisation likely below target"
-    body: "FTE 18 since Q3 2025. With Lantern Bay just delivered and only Aurora + a handful of installations active in April, productive utilisation will dip to ~62% in May. That is fine for one month; if it persists into June you should freeze the planned creative hire and lean harder on the freelance bench."
+    body: "FTE 18 since Q3 2024. With Lantern Bay just delivered and only Aurora + a handful of installations active in April, productive utilisation will dip to ~62% in May. That is fine for one month; if it persists into June you should freeze the planned creative hire and lean harder on the freelance bench."
     stance: "freeze-hire"
     severity: "info"
     confidence: "medium"
@@ -120,7 +120,7 @@ insights:
     stance: "watch"
     severity: "warning"
     confidence: "medium"
-    sources: ["staff.yml#head-prod", "projects.yml#p-2024-012", "invoices.yml#TCT-2026-329"]
+    sources: ["staff.yml#head-prod", "projects.yml#p-2023-012", "invoices.yml#TCT-2025-329"]
 
   # --- Finance page ---
   - id: "j-fin-01"
@@ -130,12 +130,12 @@ insights:
     stance: "watch"
     severity: "info"
     confidence: "high"
-    sources: ["targets.yml#annual.2026", "projects.yml#p-2026-007"]
+    sources: ["targets.yml#annual.2025", "projects.yml#p-2025-007"]
 
   - id: "j-fin-02"
     scope: "finance"
     title: "Festivals are the unfair advantage — invest accordingly"
-    body: "Festivals 2025 actual AED 11.78M vs plan AED 8.5M (+39%). Margin 35–40% on Lantern Bay, even after Ancient Moon's structural loss. This unit is your most defensible IP and your highest-margin revenue. Two thoughts: (a) consider a third festival IP for autumn 2026, (b) hire a deputy for Mathilde — single-key-person risk."
+    body: "Festivals 2024 actual AED 11.78M vs plan AED 8.5M (+39%). Margin 35–40% on Lantern Bay, even after Ancient Moon's structural loss. This unit is your most defensible IP and your highest-margin revenue. Two thoughts: (a) consider a third festival IP for autumn 2025, (b) hire a deputy for Mathilde — single-key-person risk."
     stance: "push-sales"
     severity: "info"
     confidence: "high"
@@ -144,7 +144,7 @@ insights:
   - id: "j-fin-03"
     scope: "finance"
     title: "OpEx ratio creeping — watch, don't cut yet"
-    body: "OpEx as % of revenue: 2024 30%, 2025 27%, 2026 YTD 23%. Trend is right. But absolute OpEx is up 51% over the period (AED 6.2M → 9.4M annualised) on the back of the Q2 2025 hiring. That is justified by the festival scaling. If festival revenue softens by 15%+, you need a contingency for trimming AED 80–100K/month."
+    body: "OpEx as % of revenue: 2023 30%, 2024 27%, 2025 YTD 23%. Trend is right. But absolute OpEx is up 51% over the period (AED 6.2M → 9.4M annualised) on the back of the Q2 2024 hiring. That is justified by the festival scaling. If festival revenue softens by 15%+, you need a contingency for trimming AED 80–100K/month."
     stance: "cut-costs"
     severity: "info"
     confidence: "medium"
@@ -154,7 +154,7 @@ insights:
   - id: "j-notif-01"
     scope: "notifications"
     title: "Triage suggestion — 11 active, 3 actually need you today"
-    body: "Of 11 active alerts: alert-2026-001 (Aurora overrun), alert-2026-002 (Aldira AED 800K), alert-2026-010 (permit expiry — Bvlgari Marina) need action by EOD. The remaining 8 are watch-list items. Don't let alert fatigue obscure that hierarchy."
+    body: "Of 11 active alerts: alert-2025-001 (Aurora overrun), alert-2025-002 (Aldira AED 800K), alert-2025-010 (permit expiry — Bvlgari Marina) need action by EOD. The remaining 8 are watch-list items. Don't let alert fatigue obscure that hierarchy."
     stance: "watch"
     severity: "info"
     confidence: "high"
@@ -195,7 +195,7 @@ topActions:
     linkInsight: "j-money-04"
   - id: "act-04"
     title: "Renew Bvlgari Marina noise permit"
-    horizon: "By 2026-04-04"
+    horizon: "By 2025-04-04"
     impact: "Family K. event de-risked"
     owner: "bookings"
     severity: "warning"
@@ -222,3 +222,59 @@ chatter:
     - "This needs a decision today."
     - "Not a drill."
     - "I'd reschedule lunch."
+
+# Five management lenses — one nudge per angle (money | operations | strategy | cfo | sales | hr).
+lenses:
+  - lens: "money"
+    label: "Money / line profitability"
+    severity: "info"
+    stance: "watch"
+    headline: "A record quarter that leans on two nights."
+    body: "Q1 beat plan by about 9.6% on the back of Lantern Bay's AED 5.8M March — magnificent, and concentrated. The year's margin rides on two or three events, and Aurora Gala is quietly bleeding it. Celebrate the festival; ring-fence the gala."
+    actions: ["Cap Aurora's overrun before it eats the Lantern Bay upside"]
+    refs: ["cashflow"]
+
+  - lens: "operations"
+    label: "Operations — current problems & risks"
+    severity: "warning"
+    stance: "push-production"
+    headline: "You're building Aurora against an unsigned change order."
+    body: "Vision Realm KSA still hasn't signed the variation, yet the scope is being delivered — the single largest live risk this quarter. Behind it, the bench frees up once Lantern Bay strikes, so production capacity is about to swing from stretched to slack."
+    actions: ["Stop further Aurora spend until the change order is signed", "Re-plan May crews around the post-festival dip"]
+    refs: ["cashflow"]
+
+  - lens: "strategy"
+    label: "Strategy — forecast & options"
+    severity: "info"
+    stance: "watch"
+    headline: "The festivals are the moat. The seasons are the enemy."
+    body: "Owned festival IP — Lantern Bay, Ancient Moon — is both the cash engine and the differentiator; the exposure is seasonality and event concentration. Options worth weighing: productise the repeatable festival format, license the IP to other markets, and fill the summer trough with brand activations."
+    actions: ["Scope a licensable festival playbook", "Build a summer brand-activation pipeline"]
+    refs: ["cashflow"]
+
+  - lens: "cfo"
+    label: "Financial position (CFO)"
+    severity: "warning"
+    stance: "tighten-ar"
+    headline: "AED 5.64M that isn't yours to spend — and AED 800K that should be."
+    body: "The escrow is earmarked for the 15 April festival vendor settlement; read it as restricted, not as cash. Unrestricted operating cash is a healthy AED 9.1M. DSO has fallen to 51 from a 78-day peak, but Aldira's AED 800K is 47 days overdue — your largest single collection risk."
+    actions: ["Escalate the Aldira collection this week", "Keep the escrow visually separated on the cash view"]
+    refs: ["TCT-2025-156", "cashflow"]
+
+  - lens: "sales"
+    label: "Sales"
+    severity: "info"
+    stance: "push-sales"
+    headline: "You sold out the festival. Now sell the summer."
+    body: "Bookings are festival-loaded, which leaves May–August thin. The pipeline that smooths the year is brand activations and private commissions, not another festival — and the owned IP is itself a sales asset through repeat sponsors and licensing. Sell into the trough while the Lantern Bay glow still opens doors."
+    actions: ["Build a May–August brand-activation pipeline", "Lock next year's Lantern Bay sponsor renewals now"]
+    refs: ["cashflow"]
+
+  - lens: "hr"
+    label: "People"
+    severity: "info"
+    stance: "freeze-hire"
+    headline: "Eighteen people, and May about to go quiet."
+    body: "With Lantern Bay delivered and only Aurora plus a handful of installations live, productive utilisation dips to roughly 62% in May. Freeze the planned creative hire for a month and lean on the freelance bench; revisit only if the slack persists into June."
+    actions: ["Hold the creative hire until June", "Shift May load to freelancers, not new FTE"]
+    refs: ["staff"]

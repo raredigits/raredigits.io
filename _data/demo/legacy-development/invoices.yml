@@ -1,0 +1,96 @@
+# Legacy Development — invoices. AR = rent + service charges; AP = contractors/FM/legal.
+# VAT 5% (commercial rent is standard-rated). Unpaid AR at today ≈ 222K (the two chronic
+# late tenants + a current), unpaid AP ≈ 192K. The anchor's arrears are written-off (not in AR).
+# Window focus: Q1 2025. status: sent | partial | paid | overdue | written-off.
+
+# === ACCOUNTS RECEIVABLE ===
+receivable:
+
+  # --- chronic late payers (the open AR balance) ---
+  - number: "LEG-2025-Q1-NOVEX"
+    type: "rent"
+    tenant: "ten-novex"
+    property: "LEG-OFF-01"
+    period: "2025 Q1 (Jan–Mar)"
+    issued: "2025-01-01"
+    due: "2025-01-15"
+    amount: 270000
+    vat: 13500
+    total: 283500
+    paid: 170100
+    status: "overdue"
+    note: "Chronic late payer #1 — paid ~60%, two months in arrears (AED 113,400 outstanding)."
+
+  - number: "LEG-2025-02-STARTUP"
+    type: "rent"
+    tenant: "ten-startup-hub"
+    property: "LEG-OFF-04"
+    period: "2025-02"
+    issued: "2025-02-01"
+    due: "2025-02-10"
+    amount: 70000
+    vat: 3500
+    total: 73500
+    paid: 0
+    status: "overdue"
+    note: "Chronic late payer #2 — February rent still unpaid at today."
+
+  - number: "LEG-2025-03-LUMA"
+    type: "rent"
+    tenant: "ten-cafe-luma"
+    property: "LEG-RET-01"
+    period: "2025-03"
+    issued: "2025-03-01"
+    due: "2025-03-10"
+    amount: 35000
+    vat: 1750
+    total: 36750
+    paid: 0
+    status: "sent"
+    note: "Partial March billing (balance of unit) — current, not yet due-stressed."
+
+  # --- anchor default: written off (excluded from open AR) ---
+  - number: "LEG-2024-12-CONTINENTAL"
+    type: "rent"
+    tenant: "ten-continental"
+    property: "LEG-WH-01"
+    period: "2024-12"
+    issued: "2024-12-01"
+    due: "2024-12-10"
+    amount: 450000
+    vat: 22500
+    total: 472500
+    paid: 0
+    status: "written-off"
+    note: "Anchor December rent — never paid. Written off Feb-2025 as part of the AED 980K impairment."
+
+  - number: "LEG-2025-01-CONTINENTAL"
+    type: "rent"
+    tenant: "ten-continental"
+    property: "LEG-WH-01"
+    period: "2025-01"
+    issued: "2025-01-01"
+    due: "2025-01-10"
+    amount: 450000
+    vat: 22500
+    total: 472500
+    paid: 0
+    status: "written-off"
+
+  # --- performing tenants (paid) ---
+  - { number: "LEG-2025-Q1-HELIOS",   type: "rent", tenant: "ten-helios",     property: "LEG-OFF-02", period: "2025 Q1", issued: "2025-01-01", due: "2025-01-15", amount: 390000, vat: 19500, total: 409500, paid: 409500, status: "paid", paidDate: "2025-01-12" }
+  - { number: "LEG-2025-Q1-CARRACK",  type: "rent", tenant: "ten-carrack",    property: "LEG-OFF-01", period: "2025 Q1", issued: "2025-01-01", due: "2025-01-15", amount: 255000, vat: 12750, total: 267750, paid: 267750, status: "paid", paidDate: "2025-01-14" }
+  - { number: "LEG-2025-Q1-BLUE",     type: "rent", tenant: "ten-blueharbor", property: "LEG-OFF-03", period: "2025 Q1", issued: "2025-01-01", due: "2025-01-15", amount: 315000, vat: 15750, total: 330750, paid: 330750, status: "paid", paidDate: "2025-01-10" }
+  - { number: "LEG-2025-Q1-GULF",     type: "rent", tenant: "ten-gulfparts",  property: "LEG-WH-02",  period: "2025 Q1", issued: "2025-01-01", due: "2025-01-15", amount: 150000, vat: 7500,  total: 157500, paid: 157500, status: "paid", paidDate: "2025-01-16" }
+  - { number: "LEG-2025-Q1-COLD",     type: "rent", tenant: "ten-coldchain",  property: "LEG-WH-03",  period: "2025 Q1", issued: "2025-01-01", due: "2025-01-15", amount: 120000, vat: 6000,  total: 126000, paid: 126000, status: "paid", paidDate: "2025-01-18" }
+  - { number: "LEG-2025-03-SURF",     type: "rent", tenant: "ten-surfco",     property: "LEG-RET-02", period: "2025-03", issued: "2025-03-01", due: "2025-03-10", amount: 75000,  vat: 3750,  total: 78750,  paid: 78750,  status: "paid", paidDate: "2025-03-06" }
+  - { number: "LEG-2025-03-BOUTIQUE", type: "rent", tenant: "ten-boutique",   property: "LEG-RET-01", period: "2025-03", issued: "2025-03-01", due: "2025-03-10", amount: 40000,  vat: 2000,  total: 42000,  paid: 42000,  status: "paid", paidDate: "2025-03-09" }
+
+# === ACCOUNTS PAYABLE ===
+payable:
+  - { number: "AP-LEG-2025-CSC11", vendor: "vend-leg-buildco", project: "p-leg-001", description: "Dubai South warehouse — progress claim 6", issued: "2025-03-05", due: "2025-04-04", amount: 114286, vat: 5714, total: 120000, paid: 0, status: "sent", note: "Funded from capex facility (LOAN-ACQ) on payment." }
+  - { number: "AP-LEG-2025-FM03",  vendor: "vend-leg-fm",      description: "Portfolio FM — March (cleaning/security/MEP rounds)", issued: "2025-03-01", due: "2025-03-31", amount: 42857, vat: 2143, total: 45000, paid: 0, status: "overdue" }
+  - { number: "AP-LEG-2025-LAW02", vendor: "vend-leg-legal",   description: "Continental Freight default — termination & recovery", issued: "2025-02-28", due: "2025-03-30", amount: 25714, vat: 1286, total: 27000, paid: 0, status: "overdue" }
+  - { number: "AP-LEG-2025-CBRE01",vendor: "vend-leg-valuer",  description: "WH-01 impairment valuation + annual review", issued: "2025-02-20", due: "2025-03-22", amount: 28571, vat: 1429, total: 30000, paid: 30000, status: "paid", paidDate: "2025-03-18" }
+  - { number: "AP-LEG-2024-CSC08", vendor: "vend-leg-buildco", project: "p-leg-003", description: "Boulevard floor refurb — final account", issued: "2024-08-22", due: "2024-09-21", amount: 800000, vat: 40000, total: 840000, paid: 840000, status: "paid", paidDate: "2024-09-19" }
+  - { number: "AP-LEG-2024-FIT04", vendor: "vend-leg-fitout",  project: "p-leg-004", description: "JBR facade + storefront upgrade", issued: "2024-11-16", due: "2024-12-16", amount: 385714, vat: 19286, total: 405000, paid: 405000, status: "paid", paidDate: "2024-12-12" }

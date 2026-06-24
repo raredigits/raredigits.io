@@ -1,0 +1,17 @@
+# Malermeister LLC — 12 staff. costCategory marks direct (painters/prep/labor → COGS)
+# vs overhead (owner/office → opex), matching how cashflow.yml splits cogs/opex.
+# Monthly payroll ≈ 158K AED (direct ~90K in cogs, overhead ~68K in opex).
+
+team:
+  - { id: "mal-owner",     name: "Klaus Wagner",     role: "Owner / Lackiermeister", department: "Leadership", joined: "2019-10-01", salaryMonthly: 35000, nationality: "German",     costCategory: "overhead" }
+  - { id: "mal-painter-1", name: "Stefan Bauer",     role: "Master Painter",         department: "Production", joined: "2019-11-01", salaryMonthly: 26000, nationality: "German",     costCategory: "direct" }
+  - { id: "mal-painter-2", name: "Markus Hoffmann",  role: "Master Painter",         department: "Production", joined: "2020-09-15", salaryMonthly: 26000, nationality: "German",     costCategory: "direct" }
+  - { id: "mal-acct",      name: "Priya Sharma",     role: "Accountant",             department: "Finance",    joined: "2021-03-01", salaryMonthly: 13000, nationality: "Indian",     costCategory: "overhead" }
+  - { id: "mal-prep",      name: "Rajesh Kumar",     role: "Paint Prep Technician",  department: "Production", joined: "2020-06-01", salaryMonthly: 12000, nationality: "Indian",     costCategory: "direct" }
+  - { id: "mal-coord",     name: "Dmitri Volkov",    role: "Workshop Coordinator",   department: "Operations", joined: "2021-10-01", salaryMonthly: 11000, nationality: "Russian",    costCategory: "overhead" }
+  - { id: "mal-advisor",   name: "Layla Mansour",    role: "Service Advisor",        department: "Front desk", joined: "2022-02-01", salaryMonthly: 9000,  nationality: "Lebanese",   costCategory: "overhead" }
+  - { id: "mal-detailer",  name: "Emmanuel Okafor",  role: "Detailer / Polishing",   department: "Production", joined: "2021-07-01", salaryMonthly: 8000,  nationality: "Nigerian",   costCategory: "direct" }
+  - { id: "mal-labor-1",   name: "Imran Hossain",    role: "Workshop Laborer",       department: "Production", joined: "2020-01-15", salaryMonthly: 4500,  nationality: "Bangladeshi", costCategory: "direct" }
+  - { id: "mal-labor-2",   name: "Sunil Perera",     role: "Workshop Laborer",       department: "Production", joined: "2021-05-01", salaryMonthly: 4500,  nationality: "Sri Lankan", costCategory: "direct" }
+  - { id: "mal-labor-3",   name: "Abdul Karim",      role: "Workshop Laborer",       department: "Production", joined: "2022-11-01", salaryMonthly: 4500,  nationality: "Pakistani",  costCategory: "direct" }
+  - { id: "mal-labor-4",   name: "Tariq Jamil",      role: "Workshop Laborer",       department: "Production", joined: "2024-10-01", salaryMonthly: 4500,  nationality: "Pakistani",  costCategory: "direct", note: "Hired in the autumn peak." }

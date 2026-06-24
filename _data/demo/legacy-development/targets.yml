@@ -1,0 +1,35 @@
+# Legacy Development — plan vs actual. Realestate funnel: leasing (lease value signed)
+# → billings (rent invoiced) → collections (rent collected). billings.actual ties to
+# cashflow.yml revenue. collections trail billings (two chronic late payers); Feb–Mar
+# crater as the anchor stops paying and is written off. AED.
+
+funnelStages:
+  - { id: "leasing",     label: "Leasing",     icon: "real_estate_agent", description: "New/renewed lease value signed (annualised)", color: "#8B5CF6" }
+  - { id: "billings",    label: "Billings",    icon: "receipt_long",      description: "Rent invoiced", color: "#3B82F6" }
+  - { id: "collections", label: "Collections", icon: "payments",          description: "Rent collected", color: "#F59E0B" }
+
+monthly:
+  - { month: "2024-01", plan: { leasing: 0,       billings: 1100000, collections: 1080000 }, actual: { leasing: 0,        billings: 1080000, collections: 1035000 } }
+  - { month: "2024-02", plan: { leasing: 0,       billings: 1100000, collections: 1080000 }, actual: { leasing: 1560000, billings: 1090000, collections: 1050000 } }
+  - { month: "2024-03", plan: { leasing: 0,       billings: 1110000, collections: 1090000 }, actual: { leasing: 0,        billings: 1100000, collections: 1075000 } }
+  - { month: "2024-04", plan: { leasing: 0,       billings: 1110000, collections: 1090000 }, actual: { leasing: 0,        billings: 1110000, collections: 1060000 } }
+  - { month: "2024-05", plan: { leasing: 0,       billings: 1120000, collections: 1100000 }, actual: { leasing: 0,        billings: 1120000, collections: 1085000 } }
+  - { month: "2024-06", plan: { leasing: 0,       billings: 1120000, collections: 1100000 }, actual: { leasing: 0,        billings: 1120000, collections: 1070000 } }
+  - { month: "2024-07", plan: { leasing: 0,       billings: 1130000, collections: 1110000 }, actual: { leasing: 0,        billings: 1130000, collections: 1095000 } }
+  - { month: "2024-08", plan: { leasing: 0,       billings: 1130000, collections: 1110000 }, actual: { leasing: 1260000, billings: 1130000, collections: 1090000 }, note: "Blue Harbor signed after the OFF-03 refurb." }
+  - { month: "2024-09", plan: { leasing: 0,       billings: 1150000, collections: 1130000 }, actual: { leasing: 0,        billings: 1150000, collections: 1100000 } }
+  - { month: "2024-10", plan: { leasing: 0,       billings: 1160000, collections: 1140000 }, actual: { leasing: 0,        billings: 1160000, collections: 1130000 } }
+  - { month: "2024-11", plan: { leasing: 0,       billings: 1170000, collections: 1150000 }, actual: { leasing: 900000,  billings: 1170000, collections: 1100000 }, note: "SurfCo renewed at higher rent post-upgrade." }
+  - { month: "2024-12", plan: { leasing: 0,       billings: 1180000, collections: 1160000 }, actual: { leasing: 0,        billings: 1180000, collections: 1120000 }, note: "Anchor misses December rent — first warning." }
+  - { month: "2025-01", plan: { leasing: 0,       billings: 1190000, collections: 1170000 }, actual: { leasing: 0,        billings: 1190000, collections: 1140000 }, note: "Anchor misses again; performing tenants pay Q1." }
+  - { month: "2025-02", plan: { leasing: 0,       billings: 1190000, collections: 1170000 }, actual: { leasing: 0,        billings: 560000,  collections: 690000 }, note: "SHOCK: anchor defaults & written off; billings reverse, collections collapse." }
+  - { month: "2025-03", plan: { leasing: 5400000, billings: 1190000, collections: 1170000 }, actual: { leasing: 0,        billings: 740000,  collections: 715000 }, note: "Anchor floor vacant; re-letting (p-leg-005) underway — leasing target is the WH-01 backfill." }
+
+annual:
+  - year: 2024
+    plan:   { leasing: 3000000, billings: 13600000, collections: 13380000 }
+    actual: { leasing: 3720000, billings: 13540000, collections: 13000000 }
+  - year: 2025
+    label: "Q1 YTD"
+    plan:   { leasing: 5400000, billings: 3570000, collections: 3510000 }
+    actual: { leasing: 0,       billings: 2490000, collections: 2545000 }

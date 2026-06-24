@@ -3,11 +3,11 @@ Umbrella Inc. — full case file modal.
 Triggered from: data-modal="modal-umbrella" anywhere in the demo.
 {% endcomment %}
 
-{% assign client = demo.corsair.clients.clients | where: "id", "umbrella" | first %}
-{% assign p1 = demo.corsair.projects.projects | where: "id", "p-2024-012" | first %}
-{% assign p2 = demo.corsair.projects.projects | where: "id", "p-2026-010" | first %}
-{% assign inv = demo.corsair.invoices.receivable | where: "number", "TCT-2026-329" | first %}
-{% assign owner = demo.corsair.staff.team | where: "id", "head-prod" | first %}
+{% assign client = demo["crisis-theater"].clients.clients | where: "id", "umbrella" | first %}
+{% assign p1 = demo["crisis-theater"].projects.projects | where: "id", "p-2023-012" | first %}
+{% assign p2 = demo["crisis-theater"].projects.projects | where: "id", "p-2025-010" | first %}
+{% assign inv = demo["crisis-theater"].invoices.receivable | where: "number", "TCT-2025-329" | first %}
+{% assign owner = demo["crisis-theater"].staff.team | where: "id", "head-prod" | first %}
 {% assign phase1Outstanding = p1.budget | minus: p1.actualRevenue %}
 
 <dialog id="modal-umbrella" class="corsair-modal">
@@ -50,11 +50,11 @@ Triggered from: data-modal="modal-umbrella" anywhere in the demo.
         <div class="case-cross-refs">
             <h5>What each system says about this client</h5>
             <ul>
-                <li><span class="system-badge hubspot">HubSpot</span> Contract signed 2024-10-22 · AED 480K · "Atrium special project, 1 phase + option"</li>
-                <li><span class="system-badge asana">Asana</span> Project p-2024-012 stalled at 78% · last activity 2026-02-04 · ticket QC-211 unresolved</li>
+                <li><span class="system-badge hubspot">HubSpot</span> Contract signed 2023-10-22 · AED 480K · "Atrium special project, 1 phase + option"</li>
+                <li><span class="system-badge asana">Asana</span> Project p-2023-012 stalled at 78% · last activity 2025-02-04 · ticket QC-211 unresolved</li>
                 <li><span class="system-badge zoho">Zoho Books</span> Phase 1 billed across 3 invoices · received AED 372K of AED 480K · final extras invoice {{ inv.number }} (AED 12K, "Special Services") still outstanding</li>
                 <li><span class="system-badge bayzat">Bayzat</span> {{ owner.name }} timesheet still allocating 24h/wk to umbrella-* tags</li>
-                <li><span class="system-badge bank">ENBD</span> Last receipt from Umbrella: 2026-02-12 (AED 180K partial)</li>
+                <li><span class="system-badge bank">ENBD</span> Last receipt from Umbrella: 2025-02-12 (AED 180K partial)</li>
             </ul>
         </div>
 
@@ -62,47 +62,47 @@ Triggered from: data-modal="modal-umbrella" anywhere in the demo.
         <h4 style="margin: var(--space-md) 0 var(--space-sm); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.05em; color: var(--tct-mute);">Timeline</h4>
         <div class="case-timeline">
             <div class="case-timeline-item good">
-                <div class="case-date">2024-10-22 · HubSpot</div>
+                <div class="case-date">2023-10-22 · HubSpot</div>
                 <div class="case-title">Contract signed — AED 480K</div>
                 <div class="case-detail">Sheleesh closes the deal personally. Net 30 terms. No retention clause negotiated.</div>
             </div>
             <div class="case-timeline-item">
-                <div class="case-date">2024-12-02 · Asana</div>
+                <div class="case-date">2023-12-02 · Asana</div>
                 <div class="case-title">Phase 1 kickoff</div>
                 <div class="case-detail">Atrium installation begins. Umbrella facilities team adds last-minute change requests not in scope.</div>
             </div>
             <div class="case-timeline-item warn">
-                <div class="case-date">2025-03-01 · Asana</div>
+                <div class="case-date">2024-03-01 · Asana</div>
                 <div class="case-title">Substantial completion · QC inspection raises 4 findings</div>
                 <div class="case-detail">Umbrella's QC inspector flags lighting calibration and finish quality. Sheleesh disputes findings as opinion-based, no remediation agreed.</div>
             </div>
             <div class="case-timeline-item warn">
-                <div class="case-date">2025-05-14 · Zoho</div>
+                <div class="case-date">2024-05-14 · Zoho</div>
                 <div class="case-title">Phase 1 invoiced in full · AED 480K</div>
                 <div class="case-detail">Three invoices over April–May for build, install, and special services. Net 30 across all three.</div>
             </div>
             <div class="case-timeline-item">
-                <div class="case-date">2025-08-30 · Bank</div>
+                <div class="case-date">2024-08-30 · Bank</div>
                 <div class="case-title">Partial payment received · AED 192K</div>
                 <div class="case-detail">"Provisional payment subject to QC remediation" per Umbrella memo. Covers main install invoices.</div>
             </div>
             <div class="case-timeline-item warn">
-                <div class="case-date">2026-02-12 · Bank</div>
+                <div class="case-date">2025-02-12 · Bank</div>
                 <div class="case-title">Second partial · AED 180K</div>
-                <div class="case-detail">Brings total to AED 372K. AED 108K still disputed — including the small TCT-2026-329 extras invoice (AED 12K, "Special Services").</div>
+                <div class="case-detail">Brings total to AED 372K. AED 108K still disputed — including the small TCT-2025-329 extras invoice (AED 12K, "Special Services").</div>
             </div>
             <div class="case-timeline-item bad">
-                <div class="case-date">2026-02-15 · Email log</div>
+                <div class="case-date">2025-02-15 · Email log</div>
                 <div class="case-title">Sheleesh's escalation email goes unanswered</div>
                 <div class="case-detail">Subject: "Final settlement — Atrium Phase 1." 9 follow-ups since, no response from Umbrella AP.</div>
             </div>
             <div class="case-timeline-item bad">
-                <div class="case-date">2026-03-15 · Asana</div>
+                <div class="case-date">2025-03-15 · Asana</div>
                 <div class="case-title">Phase 2 (AED 620K) frozen by CFO recommendation</div>
                 <div class="case-detail">Yousef Khoury blocks pre-fabrication PO until Phase 1 settled.</div>
             </div>
             <div class="case-timeline-item bad">
-                <div class="case-date">2026-03-28 · Today</div>
+                <div class="case-date">2025-03-28 · Today</div>
                 <div class="case-title">Jeeves flags as escalation candidate</div>
                 <div class="case-detail">Pattern: same head-of-prod owns deal, dispute, and silence. Recommend founder-MD intervention.</div>
             </div>

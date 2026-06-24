@@ -1,0 +1,134 @@
+# Spotlights Ltd — B2B accounts. Includes two intercompany accounts (Crisis Theater,
+# Legacy Development) flagged intercompany: true — netted on group consolidation.
+# accountManager references staff ids.
+
+clients:
+  - id: "cl-crisis-theater"
+    name: "The Crisis Theater"
+    type: "Event Producer"
+    segment: "B2B"
+    intercompany: true
+    relationshipSince: "2022"
+    accountManager: "spl-sales-head"
+    paymentTerms: "Net 30"
+    creditLimit: 1500000
+    status: "active"
+    note: "Sister company (Ambitions Inc.). Festival LED + lighting + rigging packages."
+
+  - id: "cl-legacy"
+    name: "Legacy Development"
+    type: "Developer / Facilities"
+    segment: "B2B"
+    intercompany: true
+    relationshipSince: "2022"
+    accountManager: "spl-sales-head"
+    paymentTerms: "Net 45"
+    creditLimit: 1000000
+    status: "active"
+    note: "Sister company. Permanent AV fit-out for managed commercial buildings."
+
+  - id: "cl-protec"
+    name: "Protec"
+    type: "Production / Rental House"
+    segment: "B2B"
+    relationshipSince: "2017"
+    accountManager: "spl-sales-1"
+    paymentTerms: "Net 30"
+    creditLimit: 2000000
+    status: "active"
+    note: "Anchor account — largest rental house in the region."
+
+  - id: "cl-flash"
+    name: "Flash Entertainment"
+    type: "Event Agency"
+    segment: "B2B"
+    relationshipSince: "2019"
+    accountManager: "spl-sales-1"
+    paymentTerms: "Net 45"
+    creditLimit: 1500000
+    status: "active"
+
+  - id: "cl-eclipse"
+    name: "Eclipse Staging Services"
+    type: "Rental House"
+    segment: "B2B"
+    relationshipSince: "2018"
+    accountManager: "spl-sales-2"
+    paymentTerms: "Net 30"
+    creditLimit: 900000
+    status: "active"
+
+  - id: "cl-atlantis"
+    name: "Atlantis The Palm"
+    type: "Hospitality"
+    segment: "B2B"
+    relationshipSince: "2020"
+    accountManager: "spl-sales-head"
+    paymentTerms: "Net 60"
+    creditLimit: 1200000
+    status: "active"
+    note: "In-house entertainment / ballroom AV upgrades."
+
+  - id: "cl-expo-city"
+    name: "Expo City Dubai"
+    type: "Venue / Government"
+    segment: "B2G"
+    relationshipSince: "2021"
+    accountManager: "spl-sales-head"
+    paymentTerms: "Net 90"
+    creditLimit: 3000000
+    status: "active"
+    note: "Slow payer (Net 90) — large tickets, government cadence."
+
+  - id: "cl-dwtc"
+    name: "Dubai World Trade Centre"
+    type: "Venue"
+    segment: "B2B"
+    relationshipSince: "2019"
+    accountManager: "spl-sales-1"
+    paymentTerms: "Net 60"
+    creditLimit: 1800000
+    status: "active"
+
+  - id: "cl-mediapro"
+    name: "MediaPro Integration"
+    type: "System Integrator"
+    segment: "B2B"
+    relationshipSince: "2021"
+    accountManager: "spl-sales-2"
+    paymentTerms: "Net 45"
+    creditLimit: 700000
+    status: "active"
+
+  - id: "cl-backstage"
+    name: "Backstage AV Rentals"
+    type: "Rental House"
+    segment: "B2B"
+    relationshipSince: "2023"
+    accountManager: "spl-sales-2"
+    paymentTerms: "Net 30"
+    creditLimit: 500000
+    status: "watch"
+    note: "Stretched on payments through the Q4 freight squeeze — credit on watch."
+
+  - id: "cl-neon-ksa"
+    name: "Neon Events KSA"
+    type: "Event Agency (export)"
+    segment: "B2B"
+    relationshipSince: "2022"
+    accountManager: "spl-sales-1"
+    paymentTerms: "Net 45"
+    creditLimit: 1100000
+    currency: "USD"
+    status: "active"
+    note: "KSA export — invoiced in USD, zero-rated VAT."
+
+  - id: "cl-jumeirah"
+    name: "Jumeirah Group"
+    type: "Hospitality"
+    segment: "B2B"
+    relationshipSince: "2020"
+    accountManager: "spl-sales-head"
+    paymentTerms: "Net 60"
+    creditLimit: 1000000
+    status: "active"

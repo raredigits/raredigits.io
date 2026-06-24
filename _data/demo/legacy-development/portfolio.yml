@@ -1,0 +1,138 @@
+# Legacy Development — property portfolio. 9 assets (4 office, 2 retail, 3 warehouse).
+# Full rent roll = AED 1,190,000/mo. WH-01 (the anchor, 450K/mo) is vacant after the
+# Continental Freight default — which is why Mar-2025 revenue dropped to 740K (1190 − 450).
+# marketValue AED; loan → debt.yml facility securing the asset.
+
+properties:
+
+  # ---- Offices ----
+  - id: "LEG-OFF-01"
+    name: "Boulevard Plaza — office floors 18-20"
+    unit: "office"
+    location: "Downtown Dubai"
+    areaSqft: 31000
+    monthlyRent: 175000
+    occupancy: 1.0
+    tenants: ["ten-novex", "ten-carrack"]
+    marketValue: 24000000
+    loan: "LOAN-OFF"
+    acquired: "2019-06-01"
+    status: "leased"
+
+  - id: "LEG-OFF-02"
+    name: "JLT — Cluster R office tower (mid floors)"
+    unit: "office"
+    location: "Jumeirah Lake Towers"
+    areaSqft: 22000
+    monthlyRent: 130000
+    occupancy: 1.0
+    tenants: ["ten-helios"]
+    marketValue: 18000000
+    loan: "LOAN-OFF"
+    acquired: "2020-02-15"
+    status: "leased"
+
+  - id: "LEG-OFF-03"
+    name: "Business Bay — Bay Square unit"
+    unit: "office"
+    location: "Business Bay"
+    areaSqft: 18000
+    monthlyRent: 105000
+    occupancy: 1.0
+    tenants: ["ten-blueharbor"]
+    marketValue: 15000000
+    loan: "LOAN-OFF"
+    acquired: "2021-09-10"
+    status: "leased"
+
+  - id: "LEG-OFF-04"
+    name: "DIFC — Gate Avenue small suites"
+    unit: "office"
+    location: "DIFC"
+    areaSqft: 9000
+    monthlyRent: 70000
+    occupancy: 1.0
+    tenants: ["ten-startup-hub"]
+    marketValue: 9000000
+    loan: "LOAN-OFF"
+    acquired: "2022-03-01"
+    status: "leased"
+    note: "Let to a co-working operator — chronic late payer."
+
+  # ---- Retail ----
+  - id: "LEG-RET-01"
+    name: "City Walk — retail unit B12"
+    unit: "retail"
+    location: "City Walk"
+    areaSqft: 4200
+    monthlyRent: 95000
+    occupancy: 1.0
+    tenants: ["ten-cafe-luma", "ten-boutique"]
+    marketValue: 14000000
+    loan: "LOAN-RET"
+    acquired: "2020-11-01"
+    status: "leased"
+
+  - id: "LEG-RET-02"
+    name: "JBR — The Walk beachfront unit"
+    unit: "retail"
+    location: "Jumeirah Beach Residence"
+    areaSqft: 3600
+    monthlyRent: 75000
+    occupancy: 1.0
+    tenants: ["ten-surfco"]
+    marketValue: 11000000
+    loan: "LOAN-RET"
+    acquired: "2021-05-20"
+    status: "leased"
+
+  # ---- Warehouses ----
+  - id: "LEG-WH-01"
+    name: "Dubai Investment Park — distribution facility"
+    unit: "warehouse"
+    location: "Dubai Investment Park 2"
+    areaSqft: 120000
+    monthlyRent: 450000
+    occupancy: 0.0
+    tenants: []
+    marketValue: 48000000
+    loan: "LOAN-WH01"
+    acquired: "2018-04-01"
+    status: "vacant"
+    note: "ANCHOR. Single-tenant let to Continental Freight DMCC (AED 450K/mo). Tenant collapsed in the Gulf freight disruption and defaulted Feb-2025; asset now vacant and impaired. Secures the largest loan (LOAN-WH01, 38M) — the core of the debt stress."
+
+  - id: "LEG-WH-02"
+    name: "Al Quoz — light-industrial warehouse"
+    unit: "warehouse"
+    location: "Al Quoz Industrial 3"
+    areaSqft: 18000
+    monthlyRent: 50000
+    occupancy: 1.0
+    tenants: ["ten-gulfparts"]
+    marketValue: 6000000
+    loan: "LOAN-ACQ"
+    acquired: "2022-08-01"
+    status: "leased"
+
+  - id: "LEG-WH-03"
+    name: "JAFZA — cold-chain warehouse"
+    unit: "warehouse"
+    location: "Jebel Ali Free Zone"
+    areaSqft: 15000
+    monthlyRent: 40000
+    occupancy: 1.0
+    tenants: ["ten-coldchain"]
+    marketValue: 5000000
+    loan: "LOAN-ACQ"
+    acquired: "2023-01-15"
+    status: "leased"
+
+# Roll-up
+summary:
+  count: 9
+  byType: { office: 4, retail: 2, warehouse: 3 }
+  fullRentRoll: 1190000          # AED/mo when fully let
+  currentRentRoll: 740000        # AED/mo after WH-01 vacancy
+  marketValueTotal: 150000000
+  occupiedValue: 102000000
+  vacantValue: 48000000

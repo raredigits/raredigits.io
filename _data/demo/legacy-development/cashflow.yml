@@ -1,0 +1,221 @@
+# Legacy Development — commercial real estate (rent + capex)
+# Monthly P&L & cashflow — 15 months, Jan 2024 → Mar 2025. All amounts in AED.
+# Currency: AED. Same column contract as Crisis Theater for holding roll-up.
+# gp = revenue − cogs ; ebitda = gp − opex.
+
+monthly:
+
+  - month: "2024-01"
+    revenue: 1080000
+    cogs: 360000
+    gp: 720000
+    opex: 300000
+    ebitda: 420000
+    cashIn: 1076000
+    cashOut: 730000
+    cashEnd: 2746000
+    arEnd: 324000
+    apEnd: 180000
+    dso: 9
+    headcount: 8
+    note: "Steady recurring rent; high-margin NOI."
+
+  - month: "2024-02"
+    revenue: 1090000
+    cogs: 360000
+    gp: 730000
+    opex: 300000
+    ebitda: 430000
+    cashIn: 1087000
+    cashOut: 660000
+    cashEnd: 3173000
+    arEnd: 327000
+    apEnd: 180000
+    dso: 9
+    headcount: 8
+
+  - month: "2024-03"
+    revenue: 1100000
+    cogs: 365000
+    gp: 735000
+    opex: 300000
+    ebitda: 435000
+    cashIn: 1097000
+    cashOut: 662500
+    cashEnd: 3607500
+    arEnd: 330000
+    apEnd: 182500
+    dso: 9
+    headcount: 8
+
+  - month: "2024-04"
+    revenue: 1110000
+    cogs: 365000
+    gp: 745000
+    opex: 305000
+    ebitda: 440000
+    cashIn: 1107000
+    cashOut: 670000
+    cashEnd: 4044500
+    arEnd: 333000
+    apEnd: 182500
+    dso: 9
+    headcount: 8
+
+  - month: "2024-05"
+    revenue: 1120000
+    cogs: 370000
+    gp: 750000
+    opex: 305000
+    ebitda: 445000
+    cashIn: 1117000
+    cashOut: 672500
+    cashEnd: 4489000
+    arEnd: 336000
+    apEnd: 185000
+    dso: 9
+    headcount: 8
+
+  - month: "2024-06"
+    revenue: 1120000
+    cogs: 370000
+    gp: 750000
+    opex: 305000
+    ebitda: 445000
+    cashIn: 1120000
+    cashOut: 675000
+    cashEnd: 4934000
+    arEnd: 336000
+    apEnd: 185000
+    dso: 9
+    headcount: 8
+
+  - month: "2024-07"
+    revenue: 1130000
+    cogs: 375000
+    gp: 755000
+    opex: 305000
+    ebitda: 450000
+    cashIn: 1127000
+    cashOut: 677500
+    cashEnd: 5383500
+    arEnd: 339000
+    apEnd: 187500
+    dso: 9
+    headcount: 8
+
+  - month: "2024-08"
+    revenue: 1130000
+    cogs: 375000
+    gp: 755000
+    opex: 305000
+    ebitda: 450000
+    cashIn: 1130000
+    cashOut: 680000
+    cashEnd: 5833500
+    arEnd: 339000
+    apEnd: 187500
+    dso: 9
+    headcount: 8
+
+  - month: "2024-09"
+    revenue: 1150000
+    cogs: 380000
+    gp: 770000
+    opex: 310000
+    ebitda: 460000
+    cashIn: 1144000
+    cashOut: 687500
+    cashEnd: 6290000
+    arEnd: 345000
+    apEnd: 190000
+    dso: 9
+    headcount: 9
+
+  - month: "2024-10"
+    revenue: 1160000
+    cogs: 380000
+    gp: 780000
+    opex: 310000
+    ebitda: 470000
+    cashIn: 1157000
+    cashOut: 690000
+    cashEnd: 6757000
+    arEnd: 348000
+    apEnd: 190000
+    dso: 9
+    headcount: 9
+
+  - month: "2024-11"
+    revenue: 1170000
+    cogs: 385000
+    gp: 785000
+    opex: 310000
+    ebitda: 475000
+    cashIn: 1167000
+    cashOut: 692500
+    cashEnd: 7231500
+    arEnd: 351000
+    apEnd: 192500
+    dso: 9
+    headcount: 9
+
+  - month: "2024-12"
+    revenue: 1180000
+    cogs: 385000
+    gp: 795000
+    opex: 315000
+    ebitda: 480000
+    cashIn: 1177000
+    cashOut: 700000
+    cashEnd: 7708500
+    arEnd: 354000
+    apEnd: 192500
+    dso: 9
+    headcount: 9
+    note: "Anchor tenant (Continental Freight DMCC) misses December rent — flagged, not yet provisioned."
+
+  - month: "2025-01"
+    revenue: 1190000
+    cogs: 390000
+    gp: 800000
+    opex: 315000
+    ebitda: 485000
+    cashIn: 1187000
+    cashOut: 702500
+    cashEnd: 8193000
+    arEnd: 357000
+    apEnd: 195000
+    dso: 9
+    headcount: 9
+
+  - month: "2025-02"
+    revenue: 560000
+    cogs: 395000
+    gp: 165000
+    opex: 1310000
+    ebitda: -1145000
+    cashIn: 749000
+    cashOut: 1702500
+    cashEnd: 7239500
+    arEnd: 168000
+    apEnd: 197500
+    dso: 9
+    headcount: 9
+    note: "SHOCK: anchor tenant defaults & vacates. Rent reversal + AED 980K bad-debt/impairment one-off. Sharp single-month dip."
+
+  - month: "2025-03"
+    revenue: 740000
+    cogs: 385000
+    gp: 355000
+    opex: 320000
+    ebitda: 35000
+    cashIn: 686000
+    cashOut: 710000
+    cashEnd: 7215500
+    arEnd: 222000
+    apEnd: 192500
+    dso: 9
+    headcount: 9
+    note: "Anchor floor still vacant — revenue below normal while re-letting; one-off cleared."
+

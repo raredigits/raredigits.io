@@ -1,0 +1,33 @@
+# Ambitions Inc. — holding profile. Consolidation layer over the operating businesses.
+# See _editorial/backlog/demo/ for the full plan.
+
+profile:
+  legalName: "Ambitions Inc."
+  brandName: "Ambitions"
+  tagline: "We own the volatility so the year doesn't."
+  type: "diversified-holding"
+  founded: "2018-03-14"        # inherited from first asset (The Crisis Theater)
+  hq: "Unit 1804, Index Tower, DIFC, Dubai"
+  domicile: "Dubai, UAE"
+
+fiscal:
+  yearEnd: "12-31"
+  reportingCurrency: "AED"
+  reportingPeriod:
+    from: "2023-01-01"
+    to: "2025-03-31"
+  # FX to reporting currency (AED) — SPOT snapshot. USD pegged; EUR floats.
+  # Full monthly series (for period translation + the EUR cost shock) → group/fx.yml.
+  fx:
+    AED: 1.0
+    USD: 3.6725
+    EUR: 3.95
+
+today: "2025-03-28"
+
+# Consolidation rules
+consolidation:
+  method: "full"                 # full consolidation, intercompany eliminated
+  eliminateIntercompany: true    # see group/intercompany.yml
+  fxBasis: "reportingCurrency"   # local-currency entity figures translated to AED
+  note: "Holding views sum entity monthly P&L by common columns; intercompany sales netted; non-AED translated at fx table above."

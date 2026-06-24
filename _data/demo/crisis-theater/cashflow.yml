@@ -1,4 +1,4 @@
-# Monthly cashflow & P&L roll-up — 27 months, Jan 2024 → Mar 2026.
+# Monthly cashflow & P&L roll-up — 27 months, Jan 2023 → Mar 2025.
 # All amounts in AED.
 # revenue   = recognised revenue (accrual basis)
 # cogs      = direct cost of project delivery (talent, crew, materials, venue, permits)
@@ -13,7 +13,7 @@
 
 monthly:
 
-  - month: "2024-01"
+  - month: "2023-01"
     revenue: 980000
     cogs: 680000
     gp: 300000
@@ -28,7 +28,7 @@ monthly:
     headcount: 11
     note: "Slow Jan — production phase only, festival not yet billed"
 
-  - month: "2024-02"
+  - month: "2023-02"
     revenue: 1410000
     cogs: 1010000
     gp: 400000
@@ -42,7 +42,7 @@ monthly:
     dso: 35
     headcount: 11
 
-  - month: "2024-03"
+  - month: "2023-03"
     revenue: 3450000
     cogs: 2380000
     gp: 1070000
@@ -55,9 +55,9 @@ monthly:
     apEnd: 980000
     dso: 32
     headcount: 11
-    note: "Lantern Bay 2024 — sell-out three nights, escrow swept"
+    note: "Lantern Bay 2023 — sell-out three nights, escrow swept"
 
-  - month: "2024-04"
+  - month: "2023-04"
     revenue: 2980000
     cogs: 2050000
     gp: 930000
@@ -71,7 +71,7 @@ monthly:
     dso: 33
     headcount: 12
 
-  - month: "2024-05"
+  - month: "2023-05"
     revenue: 1820000
     cogs: 1290000
     gp: 530000
@@ -85,7 +85,7 @@ monthly:
     dso: 36
     headcount: 12
 
-  - month: "2024-06"
+  - month: "2023-06"
     revenue: 1640000
     cogs: 1170000
     gp: 470000
@@ -99,7 +99,7 @@ monthly:
     dso: 38
     headcount: 12
 
-  - month: "2024-07"
+  - month: "2023-07"
     revenue: 980000
     cogs: 720000
     gp: 260000
@@ -114,7 +114,7 @@ monthly:
     headcount: 13
     note: "Summer dip; pre-production for Ancient Moon ramps up"
 
-  - month: "2024-08"
+  - month: "2023-08"
     revenue: 720000
     cogs: 580000
     gp: 140000
@@ -128,7 +128,7 @@ monthly:
     dso: 44
     headcount: 13
 
-  - month: "2024-09"
+  - month: "2023-09"
     revenue: 740000
     cogs: 1940000
     gp: -1200000
@@ -141,9 +141,9 @@ monthly:
     apEnd: 1280000
     dso: 47
     headcount: 13
-    note: "Ancient Moon Festival 2024 cancelled day-of — full COGS hit, partial ticket revenue, insurance recovery booked subsequent"
+    note: "Ancient Moon Festival 2023 cancelled day-of — full COGS hit, partial ticket revenue, insurance recovery booked subsequent"
 
-  - month: "2024-10"
+  - month: "2023-10"
     revenue: 1860000
     cogs: 1280000
     gp: 580000
@@ -158,7 +158,7 @@ monthly:
     headcount: 13
     note: "Royal Reception 100%-upfront cleared in cash; Lloyds partial payout AED 540K recognised"
 
-  - month: "2024-11"
+  - month: "2023-11"
     revenue: 1840000
     cogs: 1290000
     gp: 550000
@@ -172,7 +172,7 @@ monthly:
     dso: 42
     headcount: 13
 
-  - month: "2024-12"
+  - month: "2023-12"
     revenue: 2410000
     cogs: 1740000
     gp: 670000
@@ -187,11 +187,11 @@ monthly:
     headcount: 13
     note: "Solstice Souk close + EMAAR Beachfront final milestone"
 
-  # 2024 FULL-YEAR roll-up
+  # 2023 FULL-YEAR roll-up
   # revenue  20,830,000   cogs 16,130,000  gp 4,700,000  opex 6,240,000  ebitda -1,540,000
   # Net loss largely driven by Ancient Moon AED 1.2M GP loss.
 
-  - month: "2025-01"
+  - month: "2024-01"
     revenue: 2240000
     cogs: 1530000
     gp: 710000
@@ -205,7 +205,7 @@ monthly:
     dso: 38
     headcount: 14
 
-  - month: "2025-02"
+  - month: "2024-02"
     revenue: 2680000
     cogs: 1830000
     gp: 850000
@@ -219,7 +219,7 @@ monthly:
     dso: 39
     headcount: 14
 
-  - month: "2025-03"
+  - month: "2024-03"
     revenue: 5180000
     cogs: 3370000
     gp: 1810000
@@ -232,9 +232,9 @@ monthly:
     apEnd: 1110000
     dso: 41
     headcount: 14
-    note: "Lantern Bay 2025 — record month, AED 4.7M festival revenue. Family A. Trilogy adds AED 1.5M. Hiring brief approved."
+    note: "Lantern Bay 2024 — record month, AED 4.7M festival revenue. Family A. Trilogy adds AED 1.5M. Hiring brief approved."
 
-  - month: "2025-04"
+  - month: "2024-04"
     revenue: 2840000
     cogs: 1990000
     gp: 850000
@@ -249,7 +249,7 @@ monthly:
     headcount: 17
     note: "Hiring spree: +3 FTE start. Payroll jump"
 
-  - month: "2025-05"
+  - month: "2024-05"
     revenue: 2110000
     cogs: 1480000
     gp: 630000
@@ -263,7 +263,7 @@ monthly:
     dso: 49
     headcount: 17
 
-  - month: "2025-06"
+  - month: "2024-06"
     revenue: 2260000
     cogs: 1620000
     gp: 640000
@@ -277,7 +277,7 @@ monthly:
     dso: 56
     headcount: 17
 
-  - month: "2025-07"
+  - month: "2024-07"
     revenue: 1180000
     cogs: 850000
     gp: 330000
@@ -292,7 +292,7 @@ monthly:
     headcount: 18
     note: "Summer dip + scaled team = OpEx outpaces revenue. DSO ticks up further."
 
-  - month: "2025-08"
+  - month: "2024-08"
     revenue: 1340000
     cogs: 970000
     gp: 370000
@@ -307,7 +307,7 @@ monthly:
     headcount: 18
     note: "DSO at 71 days — first formal CFO red flag."
 
-  - month: "2025-09"
+  - month: "2024-09"
     revenue: 5510000
     cogs: 3680000
     gp: 1830000
@@ -320,9 +320,9 @@ monthly:
     apEnd: 1490000
     dso: 78
     headcount: 18
-    note: "Ancient Moon 2025 (Recovery Edition) + DAMAC Sky Tower + Family R. 60th. DSO peaks at 78."
+    note: "Ancient Moon 2024 (Recovery Edition) + DAMAC Sky Tower + Family R. 60th. DSO peaks at 78."
 
-  - month: "2025-10"
+  - month: "2024-10"
     revenue: 2640000
     cogs: 1810000
     gp: 830000
@@ -337,7 +337,7 @@ monthly:
     headcount: 18
     note: "Big collection month — Ancient Moon receivables clear"
 
-  - month: "2025-11"
+  - month: "2024-11"
     revenue: 2880000
     cogs: 2040000
     gp: 840000
@@ -351,7 +351,7 @@ monthly:
     dso: 67
     headcount: 18
 
-  - month: "2025-12"
+  - month: "2024-12"
     revenue: 4480000
     cogs: 3160000
     gp: 1320000
@@ -364,13 +364,13 @@ monthly:
     apEnd: 1340000
     dso: 64
     headcount: 18
-    note: "Solstice Souk 2025 + MAF Holiday + bonuses paid"
+    note: "Solstice Souk 2024 + MAF Holiday + bonuses paid"
 
-  # 2025 FULL-YEAR roll-up
-  # revenue 35,340,000  cogs 24,330,000  gp 11,010,000  opex 9,420,000  ebitda 1,590,000
+  # 2024 FULL-YEAR roll-up
+  # revenue 35,340,000  cogs 24,330,000  gp 11,010,000  opex 9,220,000  ebitda 1,790,000
   # Year of growth, but DSO and AR balloon — classic "profitable on paper, cashflow-stressed" story
 
-  - month: "2026-01"
+  - month: "2025-01"
     revenue: 2960000
     cogs: 2010000
     gp: 950000
@@ -385,7 +385,7 @@ monthly:
     headcount: 18
     note: "Royal Reception 100% upfront + Family K. deposit cleared. Strongest cash month in history."
 
-  - month: "2026-02"
+  - month: "2025-02"
     revenue: 2530000
     cogs: 1750000
     gp: 780000
@@ -399,7 +399,7 @@ monthly:
     dso: 58
     headcount: 18
 
-  - month: "2026-03"
+  - month: "2025-03"
     revenue: 6020000
     cogs: 4180000
     gp: 1840000
@@ -412,21 +412,22 @@ monthly:
     apEnd: 1188030
     dso: 51
     headcount: 18
-    note: "Lantern Bay 2026 — biggest event month ever (AED 5.8M). Aldira AED 800K still outstanding. Aurora Gala costs accelerating."
+    note: "Lantern Bay 2025 — biggest event month ever (AED 5.8M). Aldira AED 800K still outstanding. Aurora Gala costs accelerating."
 
-# 27-month roll-up (informational — handy for dashboard hero numbers)
+# 27-month roll-up (informational — handy for dashboard hero numbers).
+# Equals the sum of the monthly rows above (rendered as "27-month total" on /demo/corsair/finance/).
 totals:
-  revenue: 79530000
-  cogs: 54440000
-  gp: 25090000
-  opex: 21470000
-  ebitda: 3620000
-  netProfitBeforeTax: 3620000
-  effectiveTaxAccrued: 326000
+  revenue: 67680000
+  cogs: 48400000
+  gp: 19280000
+  opex: 18140000
+  ebitda: 1140000
+  netProfitBeforeTax: 1140000
+  effectiveTaxAccrued: 103000   # ≈9% of EBITDA (UAE corporate tax), same convention as before
 
-# Cash position breakdown at "today" 2026-03-28
+# Cash position breakdown at "today" 2025-03-28
 cashSnapshot:
-  asOf: "2026-03-28"
+  asOf: "2025-03-28"
   bankAedOperating: 7820000
   bankAedEscrow: 5640000
   bankUsdAedEquivalent: 1080000
@@ -434,4 +435,4 @@ cashSnapshot:
   total: 14740000
   unrestricted: 9100000
   restrictedEscrow: 5640000
-  note: "AED 5.64M is festival escrow — earmarked for Lantern Bay 2026 final vendor settlement (due 2026-04-15). Unrestricted operating cash AED 9.1M."
+  note: "AED 5.64M is festival escrow — earmarked for Lantern Bay 2025 final vendor settlement (due 2025-04-15). Unrestricted operating cash AED 9.1M."

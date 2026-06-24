@@ -1,0 +1,54 @@
+# Intercompany relationships and transactions. Netted on consolidation so the
+# group doesn't double-count revenue a business books selling to a sibling.
+# Spotlights is the hub: it supplies AV to Crisis Theater's events and fits out
+# Legacy's properties.
+
+relationships:
+  - from: "spotlights"
+    to: "crisis-theater"
+    nature: "equipment-supply"       # LED/lighting/audio sold or hired for events
+    eliminateOnConsolidation: true
+  - from: "spotlights"
+    to: "legacy-development"
+    nature: "fit-out-supply"         # AV fit-out for managed buildings
+    eliminateOnConsolidation: true
+  - from: "crisis-theater"
+    to: "legacy-development"
+    nature: "launch-events"          # opening events for Legacy properties
+    eliminateOnConsolidation: true
+
+# Material intercompany transactions (AED). These are included in each seller's
+# revenue and must be subtracted from consolidated group revenue.
+transactions:
+  - id: "ic-2024-03-spl-ct"
+    from: "spotlights"
+    to: "crisis-theater"
+    nature: "equipment-supply"
+    description: "LED + rigging supply for Lantern Bay 2024"
+    date: "2024-03-04"
+    amount: 540000
+    currency: "AED"
+  - id: "ic-2024-09-spl-ct"
+    from: "spotlights"
+    to: "crisis-theater"
+    nature: "equipment-supply"
+    description: "AV package for Ancient Moon 2024 (Recovery Edition)"
+    date: "2024-09-02"
+    amount: 610000
+    currency: "AED"
+  - id: "ic-2024-06-spl-leg"
+    from: "spotlights"
+    to: "legacy-development"
+    nature: "fit-out-supply"
+    description: "Lobby video wall + signage, Legacy commercial tower"
+    date: "2024-06-18"
+    amount: 280000
+    currency: "AED"
+  - id: "ic-2025-03-spl-ct"
+    from: "spotlights"
+    to: "crisis-theater"
+    nature: "equipment-supply"
+    description: "LED + lighting supply for Lantern Bay 2025 (delayed by Q4 freight disruption, delivered March)"
+    date: "2025-03-06"
+    amount: 720000
+    currency: "AED"

@@ -1,0 +1,36 @@
+# Legacy Development — asset value (monthly revaluation). The category that makes the
+# business worth holding: a thin operating margin (debt eats ~91% of EBITDA) is more than
+# compensated by steady capital appreciation. Non-cash, balance-sheet — does NOT flow into
+# cashflow.yml EBITDA or the holding EBITDA roll-up; it's the "total return" layer.
+# marketValue = portfolio fair value (AED). revalDelta = month-on-month revaluation.
+
+method: "monthly desktop revaluation + annual external (CBRE)"
+basis: "fair value (income + comparable)"
+valuer: "vend-leg-valuer"
+
+monthly:
+  - { month: "2024-01", marketValue: 147000000, revalDelta: 0,         revalPct: 0.000 }
+  - { month: "2024-02", marketValue: 148000000, revalDelta: 1000000,   revalPct: 0.0068 }
+  - { month: "2024-03", marketValue: 149000000, revalDelta: 1000000,   revalPct: 0.0068 }
+  - { month: "2024-04", marketValue: 150100000, revalDelta: 1100000,   revalPct: 0.0074 }
+  - { month: "2024-05", marketValue: 151200000, revalDelta: 1100000,   revalPct: 0.0073 }
+  - { month: "2024-06", marketValue: 152200000, revalDelta: 1000000,   revalPct: 0.0066 }
+  - { month: "2024-07", marketValue: 153300000, revalDelta: 1100000,   revalPct: 0.0072 }
+  - { month: "2024-08", marketValue: 154400000, revalDelta: 1100000,   revalPct: 0.0072 }
+  - { month: "2024-09", marketValue: 155500000, revalDelta: 1100000,   revalPct: 0.0071 }
+  - { month: "2024-10", marketValue: 156600000, revalDelta: 1100000,   revalPct: 0.0071 }
+  - { month: "2024-11", marketValue: 157800000, revalDelta: 1200000,   revalPct: 0.0077, note: "Dubai commercial values running hot into year-end." }
+  - { month: "2024-12", marketValue: 159000000, revalDelta: 1200000,   revalPct: 0.0076 }
+  - { month: "2025-01", marketValue: 159200000, revalDelta: 200000,    revalPct: 0.0013, note: "Growth decelerates — valuer turns cautious as the anchor misses rent." }
+  - { month: "2025-02", marketValue: 149700000, revalDelta: -9500000,  revalPct: -0.0597, note: "WH-01 impaired −AED 10.0M (anchor default, vacant) offset by +0.5M appreciation elsewhere = net −9.5M." }
+  - { month: "2025-03", marketValue: 150000000, revalDelta: 300000,    revalPct: 0.0020, note: "Appreciation resumes on occupied assets; WH-01 held flat pending re-let." }
+
+summary:
+  currentValue: 150000000              # matches portfolio.yml marketValueTotal
+  acquisitionCostBase: 128000000
+  unrealisedGain: 22000000
+  fy2024Appreciation: 12000000         # +8.2% across 2024
+  fy2024AppreciationPct: 0.082
+  wh01ImpairmentFeb2025: -10000000
+  netRevalPeriod: 3000000              # Jan-2024 → Mar-2025, after the impairment
+  note: "Operating profit after debt service is thin (~AED 0.5M/yr), but the portfolio appreciated ~AED 12M in 2024. Even after the −10M WH-01 impairment the asset base is net +3M over the period — capital growth, not yield, is the return here."

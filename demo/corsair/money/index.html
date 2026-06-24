@@ -5,10 +5,10 @@ offset: demo
 permalink: /demo/corsair/money/
 ---
 
-{% assign company = demo.corsair.company %}
-{% assign jeeves = demo.corsair.jeeves %}
-{% assign cashflow = demo.corsair.cashflow %}
-{% assign aging = demo.corsair.invoices.aging %}
+{% assign company = demo["crisis-theater"].company %}
+{% assign jeeves = demo["crisis-theater"].jeeves %}
+{% assign cashflow = demo["crisis-theater"].cashflow %}
+{% assign aging = demo["crisis-theater"].invoices.aging %}
 {% assign cashSnap = cashflow.cashSnapshot %}
 
 <header class="demo-hero">
@@ -76,7 +76,7 @@ permalink: /demo/corsair/money/
                 <td><span class="pill muted">Payroll</span></td>
                 <td>AED</td>
                 <td class="num"><strong>{{ cashSnap.bankPayroll | inThousands }}K</strong></td>
-                <td class="row-sub">WPS — next run 2026-04-01</td>
+                <td class="row-sub">WPS — next run 2025-04-01</td>
             </tr>
             <tr style="background: var(--tct-bg-soft); font-weight: bold;">
                 <td>Total</td>
@@ -139,9 +139,9 @@ permalink: /demo/corsair/money/
             </tr>
         </thead>
         <tbody>
-            {% for inv in demo.corsair.invoices.receivable %}
+            {% for inv in demo["crisis-theater"].invoices.receivable %}
                 {% if inv.status == "paid" %}{% continue %}{% endif %}
-                {% assign client = demo.corsair.clients.clients | where: "id", inv.client | first %}
+                {% assign client = demo["crisis-theater"].clients.clients | where: "id", inv.client | first %}
                 <tr>
                     <td>
                         <strong>{{ inv.number }}</strong>
@@ -167,7 +167,7 @@ permalink: /demo/corsair/money/
 </section>
 
 <!-- Featured invoice — #329 detail card (replicates screenshot) -->
-{% assign inv329 = demo.corsair.invoices.receivable | where: "number", "TCT-2026-329" | first %}
+{% assign inv329 = demo["crisis-theater"].invoices.receivable | where: "number", "TCT-2025-329" | first %}
 <div class="section-head">
     <h2>Invoice {{ inv329.number }} · Detail</h2>
     <span class="meta">Featured · long-running dispute</span>
@@ -245,10 +245,10 @@ permalink: /demo/corsair/money/
             </tr>
         </thead>
         <tbody>
-            {% for ap in demo.corsair.invoices.payable %}
+            {% for ap in demo["crisis-theater"].invoices.payable %}
                 {% if ap.status == "paid" %}{% continue %}{% endif %}
-                {% assign vendor = demo.corsair.vendors.vendors | where: "id", ap.vendor | first %}
-                {% assign proj = demo.corsair.projects.projects | where: "id", ap.project | first %}
+                {% assign vendor = demo["crisis-theater"].vendors.vendors | where: "id", ap.vendor | first %}
+                {% assign proj = demo["crisis-theater"].projects.projects | where: "id", ap.project | first %}
                 <tr>
                     <td><strong>{{ ap.number }}</strong><div class="row-sub">{{ ap.description | truncate: 60 }}</div></td>
                     <td>{{ vendor.name }}</td>
@@ -287,5 +287,5 @@ permalink: /demo/corsair/money/
             {% if m.month contains "-01" or m.month contains "-07" %}<div>{{ m.month | slice: 2, 5 | replace: "-", "/" }}</div>{% else %}<div></div>{% endif %}
         {% endfor %}
     </div>
-    <p class="muted" style="font-size: 0.8em; margin-top: var(--space-sm);">DSO peaked at 78 days in Sep 2025 (Ancient Moon Recovery + Family R + DAMAC Sky Tower receivables in flight). Now recovering — currently 51.</p>
+    <p class="muted" style="font-size: 0.8em; margin-top: var(--space-sm);">DSO peaked at 78 days in Sep 2024 (Ancient Moon Recovery + Family R + DAMAC Sky Tower receivables in flight). Now recovering — currently 51.</p>
 </section>

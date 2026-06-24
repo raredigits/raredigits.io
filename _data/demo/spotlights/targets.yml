@@ -1,0 +1,75 @@
+# Spotlights Ltd — plan vs actual by funnel stage. Distribution flavour of the
+# shared funnel: sales (orders booked) → deliveries (value shipped) → payments
+# (cash collected). deliveries.actual ties to cashflow.yml revenue.
+# All figures AED. The shock shows as: bookings hold, deliveries slip (can't ship),
+# collections lag — then a March catch-up.
+
+funnelStages:
+  - { id: "sales",      label: "Sales",      icon: "trending_up",  description: "Orders booked (contract value)", color: "#3B82F6" }
+  - { id: "deliveries", label: "Deliveries", icon: "local_shipping", description: "Value shipped & recognised", color: "#10B981" }
+  - { id: "payments",   label: "Payments",   icon: "payments",     description: "Cash collected", color: "#F59E0B" }
+
+monthly:
+  - month: "2024-01"
+    plan:   { sales: 1700000, deliveries: 1800000, payments: 1700000 }
+    actual: { sales: 1550000, deliveries: 1450000, payments: 1380000 }
+  - month: "2024-02"
+    plan:   { sales: 1800000, deliveries: 1900000, payments: 1750000 }
+    actual: { sales: 1900000, deliveries: 1820000, payments: 1620000 }
+  - month: "2024-03"
+    plan:   { sales: 2300000, deliveries: 2400000, payments: 2000000 }
+    actual: { sales: 2750000, deliveries: 2640000, payments: 2480000 }
+    note: "Festival-season peak."
+  - month: "2024-04"
+    plan:   { sales: 1900000, deliveries: 2000000, payments: 2100000 }
+    actual: { sales: 1850000, deliveries: 1980000, payments: 2260000 }
+  - month: "2024-05"
+    plan:   { sales: 1800000, deliveries: 1900000, payments: 1900000 }
+    actual: { sales: 1480000, deliveries: 1520000, payments: 1740000 }
+  - month: "2024-06"
+    plan:   { sales: 1700000, deliveries: 1800000, payments: 1800000 }
+    actual: { sales: 1320000, deliveries: 1280000, payments: 1450000 }
+  - month: "2024-07"
+    plan:   { sales: 1600000, deliveries: 1700000, payments: 1700000 }
+    actual: { sales: 1250000, deliveries: 1150000, payments: 1280000 }
+    note: "Summer trough."
+  - month: "2024-08"
+    plan:   { sales: 1700000, deliveries: 1800000, payments: 1650000 }
+    actual: { sales: 1820000, deliveries: 1640000, payments: 1380000 }
+  - month: "2024-09"
+    plan:   { sales: 2300000, deliveries: 2400000, payments: 2000000 }
+    actual: { sales: 3100000, deliveries: 2980000, payments: 2640000 }
+    note: "Q4 ramp — Ancient Moon + Atlantis."
+  - month: "2024-10"
+    plan:   { sales: 2000000, deliveries: 2100000, payments: 2200000 }
+    actual: { sales: 2380000, deliveries: 2460000, payments: 3050000 }
+    note: "Big collection month."
+  - month: "2024-11"
+    plan:   { sales: 1900000, deliveries: 2000000, payments: 2000000 }
+    actual: { sales: 1980000, deliveries: 1720000, payments: 1620000 }
+    note: "SHOCK onset — bookings hold, deliveries slip (freight)."
+  - month: "2024-12"
+    plan:   { sales: 1900000, deliveries: 2000000, payments: 2000000 }
+    actual: { sales: 1850000, deliveries: 1540000, payments: 1500000 }
+    note: "Containers stuck — deliveries slip further; collections drag."
+  - month: "2025-01"
+    plan:   { sales: 1900000, deliveries: 2000000, payments: 1900000 }
+    actual: { sales: 1620000, deliveries: 1420000, payments: 1740000 }
+  - month: "2025-02"
+    plan:   { sales: 1900000, deliveries: 2000000, payments: 1900000 }
+    actual: { sales: 1780000, deliveries: 1680000, payments: 1500000 }
+    note: "Shock trough."
+  - month: "2025-03"
+    plan:   { sales: 2300000, deliveries: 2400000, payments: 2100000 }
+    actual: { sales: 3050000, deliveries: 3180000, payments: 2900000 }
+    note: "Bounce — backlog clears, deliveries surge, collections recover."
+
+# Annual plan/actual roll-up (AED)
+annual:
+  - year: 2024
+    plan:   { sales: 23300000, deliveries: 24600000, payments: 23200000 }
+    actual: { sales: 23230000, deliveries: 22680000, payments: 23000000 }
+  - year: 2025
+    label: "Q1 YTD"
+    plan:   { sales: 6100000, deliveries: 6400000, payments: 5900000 }
+    actual: { sales: 6450000, deliveries: 6280000, payments: 6140000 }

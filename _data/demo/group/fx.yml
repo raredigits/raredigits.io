@@ -1,0 +1,39 @@
+# Ambitions Inc. — FX rates to the reporting currency (AED). Monthly series so the
+# consolidation translates each period at its rate, and so the EUR strengthening that
+# drove the Nov 2024 → Feb 2025 cost shock (Malermeister paint, Spotlights EU suppliers)
+# is explicit rather than hidden in a single static number.
+#
+# USD is pegged to AED (flat 3.6725). EUR floats (illustrative). Window 2024-01 → 2025-03
+# covers the only FX-exposed entities (Spotlights, Malermeister); Crisis Theater & Legacy
+# are AED-only. spot = the current rate (2025-03-28) and equals the last monthly row.
+
+base: "AED"
+
+spot:
+  asOf: "2025-03-28"
+  USD: 3.6725
+  EUR: 3.95
+
+monthly:
+  - { month: "2024-01", USD: 3.6725, EUR: 3.84 }
+  - { month: "2024-02", USD: 3.6725, EUR: 3.85 }
+  - { month: "2024-03", USD: 3.6725, EUR: 3.86 }
+  - { month: "2024-04", USD: 3.6725, EUR: 3.87 }
+  - { month: "2024-05", USD: 3.6725, EUR: 3.88 }
+  - { month: "2024-06", USD: 3.6725, EUR: 3.89 }
+  - { month: "2024-07", USD: 3.6725, EUR: 3.90 }
+  - { month: "2024-08", USD: 3.6725, EUR: 3.91 }
+  - { month: "2024-09", USD: 3.6725, EUR: 3.93 }
+  - { month: "2024-10", USD: 3.6725, EUR: 3.96 }
+  - { month: "2024-11", USD: 3.6725, EUR: 4.01 }   # shock onset — EUR strengthens, import costs rise
+  - { month: "2024-12", USD: 3.6725, EUR: 4.05 }   # shock
+  - { month: "2025-01", USD: 3.6725, EUR: 4.06 }   # peak — dearest paint/material month
+  - { month: "2025-02", USD: 3.6725, EUR: 4.00 }
+  - { month: "2025-03", USD: 3.6725, EUR: 3.95 }   # eased back = spot
+
+# Annual averages (handy for FY translation)
+annualAvg:
+  - { year: 2024, USD: 3.6725, EUR: 3.905 }
+  - { year: 2025, label: "Q1", USD: 3.6725, EUR: 4.003 }
+
+note: "EUR rose ~5.7% from 3.84 to a 4.06 peak across the disruption, then settled to 3.95 — the swing behind the EUR-cost squeeze in Malermeister and Spotlights. FX gain/loss = booked rate vs settlement/spot rate (computed by the metrics layer, not stored)."

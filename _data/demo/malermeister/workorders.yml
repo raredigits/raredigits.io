@@ -1,0 +1,319 @@
+# Malermeister LLC — work orders (заказ-наряды). The services-type operational record.
+# Wide spread: AED 38K supercar resprays down to AED 350 rim polishes, plus fleet batches.
+# status: booked | in-progress | ready | released | invoiced | closed
+# lines reference services.yml; client → clients.yml; bay/painter → workshop; invoice/fulfillment refs.
+#
+# VOLUME: real throughput lives in `volumeByMonth` below — ~16 tickets/month at peak,
+# dipping to 8 in the Jun–Sep low season; ~60% are small jobs (rim polish / touch-up),
+# ~40% large; of the large jobs ~20% are private collectors and ~80% rental fleets.
+# The `workorders` list below is a *detailed sample* of notable & recent tickets, not the
+# full set; monthly counts/value/mix are carried by volumeByMonth (value ≈ cashflow revenue).
+
+# Monthly throughput & mix (count = work-order tickets; a small-jobs ticket can bundle many).
+volumeByMonth:
+  - { month: "2024-01", count: 11, small: 7,  large: 4, largePrivate: 1, largeRental: 3, value: 380000 }
+  - { month: "2024-02", count: 11, small: 7,  large: 4, largePrivate: 1, largeRental: 3, value: 360000 }
+  - { month: "2024-03", count: 14, small: 8,  large: 6, largePrivate: 1, largeRental: 5, value: 470000 }
+  - { month: "2024-04", count: 16, small: 10, large: 6, largePrivate: 1, largeRental: 5, value: 510000 }
+  - { month: "2024-05", count: 13, small: 8,  large: 5, largePrivate: 1, largeRental: 4, value: 440000 }
+  - { month: "2024-06", count: 9,  small: 5,  large: 4, largePrivate: 1, largeRental: 3, value: 390000 }
+  - { month: "2024-07", count: 8,  small: 5,  large: 3, largePrivate: 1, largeRental: 2, value: 320000 }
+  - { month: "2024-08", count: 8,  small: 5,  large: 3, largePrivate: 1, largeRental: 2, value: 300000 }
+  - { month: "2024-09", count: 11, small: 7,  large: 4, largePrivate: 1, largeRental: 3, value: 480000 }
+  - { month: "2024-10", count: 16, small: 10, large: 6, largePrivate: 1, largeRental: 5, value: 520000 }
+  - { month: "2024-11", count: 15, small: 9,  large: 6, largePrivate: 1, largeRental: 5, value: 460000 }
+  - { month: "2024-12", count: 14, small: 8,  large: 6, largePrivate: 1, largeRental: 5, value: 430000 }
+  - { month: "2025-01", count: 12, small: 7,  large: 5, largePrivate: 1, largeRental: 4, value: 400000 }
+  - { month: "2025-02", count: 13, small: 8,  large: 5, largePrivate: 1, largeRental: 4, value: 380000 }
+  - { month: "2025-03", count: 16, small: 10, large: 6, largePrivate: 1, largeRental: 5, value: 500000 }
+summary:
+  totalTickets15mo: 187
+  avgPerMonth: 12.5
+  peak: 16
+  lowSeasonMonths: ["2024-06", "2024-07", "2024-08", "2024-09"]
+  smallShare: 0.61
+  largePrivateShare: 0.20      # of large jobs
+  largeRentalShare: 0.80
+
+workorders:
+
+  - id: "WO-2025-041"
+    vehicle: "Ferrari 488 GTB"
+    client: "cl-mal-collector"
+    lines: [{ service: "svc-respray-full", qty: 1, price: 36000 }]
+    subtotal: 36000
+    vat: 1800
+    total: 37800
+    date: "2025-03-10"
+    status: "in-progress"
+    bay: "booth-1"
+    painter: "mal-painter-1"
+    note: "Bare-to-clearcoat. Occupies booth-1 for ~3 weeks — the throughput bottleneck this month."
+
+  - id: "WO-2025-038"
+    vehicle: "Bentley Continental GT"
+    client: "cl-mal-platinum"
+    lines: [{ service: "svc-respray-std", qty: 1, price: 14000 }]
+    subtotal: 14000
+    vat: 700
+    total: 14700
+    date: "2025-03-12"
+    status: "released"
+    bay: "booth-2"
+    painter: "mal-painter-2"
+    fulfillment: "f-mal-038"
+    invoice: "MAL-2025-038"
+
+  - id: "WO-2025-037"
+    vehicle: "3× trade-in prep (Audi/BMW/Lexus)"
+    client: "cl-mal-platinum"
+    lines: [{ service: "svc-fleet-prep", qty: 3, price: 6000 }]
+    subtotal: 18000
+    vat: 900
+    total: 18900
+    date: "2025-03-15"
+    status: "released"
+    bay: "prep-1"
+    painter: "mal-prep"
+    fulfillment: "f-mal-037"
+    invoice: "MAL-2025-037"
+
+  - id: "WO-2025-035"
+    vehicle: "Mercedes-AMG G63"
+    client: "cl-mal-collector"
+    lines: [{ service: "svc-ceramic", qty: 1, price: 5500 }]
+    subtotal: 5500
+    vat: 275
+    total: 5775
+    date: "2025-03-08"
+    status: "released"
+    bay: "detail-1"
+    painter: "mal-detailer"
+    fulfillment: "f-mal-035"
+    invoice: "MAL-2025-035"
+
+  - id: "WO-2025-033"
+    vehicle: "Range Rover Autobiography"
+    client: "cl-mal-private"
+    lines: [{ service: "svc-wheel-refinish", qty: 4, price: 450 }]
+    subtotal: 1800
+    vat: 90
+    total: 1890
+    date: "2025-03-20"
+    status: "released"
+    bay: "detail-1"
+    painter: "mal-detailer"
+    fulfillment: "f-mal-033"
+    invoice: "MAL-2025-033"
+
+  - id: "WO-2025-031"
+    vehicle: "Prestige fleet — 8 cars"
+    client: "cl-mal-prestige"
+    lines: [{ service: "svc-fleet-prep", qty: 8, price: 3500 }]
+    subtotal: 28000
+    vat: 1400
+    total: 29400
+    date: "2025-03-05"
+    status: "invoiced"
+    bay: "prep-1"
+    painter: "mal-prep"
+    fulfillment: "f-mal-031"
+    invoice: "MAL-2025-031"
+    note: "Largest fleet account — pays ~20 days late."
+
+  - id: "WO-2025-030"
+    vehicle: "Concours subcontract — 5 panels"
+    client: "cl-mal-concours"
+    lines: [{ service: "svc-panel-single", qty: 5, price: 1900 }]
+    subtotal: 9500
+    vat: 475
+    total: 9975
+    date: "2025-03-03"
+    status: "invoiced"
+    bay: "booth-2"
+    painter: "mal-painter-2"
+    fulfillment: "f-mal-030"
+    invoice: "MAL-2025-030"
+
+  - id: "WO-2025-SMALL-03"
+    vehicle: "Retail batch — 30 rim polishes + 16 touch-ups"
+    client: "cl-mal-private"
+    lines: [{ service: "svc-wheel-polish", qty: 30, price: 350 }, { service: "svc-touchup", qty: 16, price: 450 }]
+    subtotal: 17700
+    vat: 885
+    total: 18585
+    date: "2025-03-31"
+    status: "closed"
+    bay: "detail-1"
+    fulfillment: "f-mal-s03"
+    note: "The AED 300–450 volume that keeps bays and cash ticking between resprays."
+
+  - id: "WO-2025-040"
+    vehicle: "Mercedes S-Class — single panel"
+    client: "cl-mal-private"
+    lines: [{ service: "svc-panel-single", qty: 1, price: 2400 }]
+    subtotal: 2400
+    vat: 120
+    total: 2520
+    date: "2025-03-22"
+    status: "released"
+    bay: "booth-2"
+    painter: "mal-painter-2"
+    fulfillment: "f-mal-040"
+    invoice: "MAL-2025-040"
+
+  - id: "WO-2025-039"
+    vehicle: "Platinum — 12 touch-ups (lot prep)"
+    client: "cl-mal-platinum"
+    lines: [{ service: "svc-touchup", qty: 12, price: 350 }]
+    subtotal: 4200
+    vat: 210
+    total: 4410
+    date: "2025-03-24"
+    status: "invoiced"
+    bay: "prep-1"
+    fulfillment: "f-mal-039"
+    invoice: "MAL-2025-039"
+
+  - id: "WO-2025-028"
+    vehicle: "Porsche 911 Turbo S"
+    client: "cl-mal-collector"
+    lines: [{ service: "svc-multipanel", qty: 1, price: 8500 }]
+    subtotal: 8500
+    vat: 425
+    total: 8925
+    date: "2025-02-14"
+    status: "closed"
+    bay: "booth-1"
+    painter: "mal-painter-1"
+    fulfillment: "f-mal-028"
+    invoice: "MAL-2025-028"
+
+  - id: "WO-2025-026"
+    vehicle: "Prestige fleet — 6 cars"
+    client: "cl-mal-prestige"
+    lines: [{ service: "svc-fleet-prep", qty: 6, price: 3500 }]
+    subtotal: 21000
+    vat: 1050
+    total: 22050
+    date: "2025-02-08"
+    status: "invoiced"
+    bay: "prep-1"
+    painter: "mal-prep"
+    fulfillment: "f-mal-026"
+    invoice: "MAL-2025-026"
+    note: "February batch still unpaid at today — chronic late payer."
+
+  - id: "WO-2025-022"
+    vehicle: "Lamborghini Urus"
+    client: "cl-mal-collector"
+    lines: [{ service: "svc-paint-correct", qty: 1, price: 3000 }, { service: "svc-ceramic", qty: 1, price: 3500 }]
+    subtotal: 6500
+    vat: 325
+    total: 6825
+    date: "2025-02-06"
+    status: "closed"
+    bay: "detail-1"
+    painter: "mal-detailer"
+    fulfillment: "f-mal-022"
+    invoice: "MAL-2025-022"
+
+  - id: "WO-2025-019"
+    vehicle: "Exotic Drive fleet — 6 cars"
+    client: "cl-mal-exotic"
+    lines: [{ service: "svc-fleet-prep", qty: 6, price: 3000 }]
+    subtotal: 18000
+    vat: 900
+    total: 18900
+    date: "2025-01-18"
+    status: "closed"
+    bay: "prep-1"
+    painter: "mal-prep"
+    fulfillment: "f-mal-019"
+    invoice: "MAL-2025-019"
+
+  - id: "WO-2024-241"
+    vehicle: "Rolls-Royce Cullinan"
+    client: "cl-mal-collector"
+    lines: [{ service: "svc-respray-full", qty: 1, price: 38000 }]
+    subtotal: 38000
+    vat: 1900
+    total: 39900
+    date: "2024-12-05"
+    status: "closed"
+    bay: "booth-1"
+    painter: "mal-painter-1"
+    fulfillment: "f-mal-241"
+    invoice: "MAL-2024-241"
+    note: "Marquee December job — the autumn-peak high point."
+
+  - id: "WO-2024-176"
+    vehicle: "McLaren 720S"
+    client: "cl-mal-private"
+    lines: [{ service: "svc-touchup", qty: 1, price: 600 }, { service: "svc-paint-correct", qty: 1, price: 2600 }]
+    subtotal: 3200
+    vat: 160
+    total: 3360
+    date: "2024-07-22"
+    status: "closed"
+    bay: "detail-1"
+    painter: "mal-detailer"
+    fulfillment: "f-mal-176"
+    invoice: "MAL-2024-176"
+
+  # --- rental fleet large jobs (rentals are ~80% of the large work) ---
+  - id: "WO-2025-044"
+    vehicle: "Prestige fleet — 2× exotic respray"
+    client: "cl-mal-prestige"
+    lines: [{ service: "svc-respray-std", qty: 2, price: 14000 }]
+    subtotal: 28000
+    vat: 1400
+    total: 29400
+    date: "2025-02-10"
+    status: "closed"
+    bay: "booth-1"
+    painter: "mal-painter-1"
+    fulfillment: "f-mal-044"
+    invoice: "MAL-2025-044"
+
+  - id: "WO-2025-029"
+    vehicle: "Lamborghini Huracán (Exotic fleet)"
+    client: "cl-mal-exotic"
+    lines: [{ service: "svc-respray-std", qty: 1, price: 16000 }]
+    subtotal: 16000
+    vat: 800
+    total: 16800
+    date: "2025-02-18"
+    status: "closed"
+    bay: "booth-2"
+    painter: "mal-painter-2"
+    fulfillment: "f-mal-029"
+    invoice: "MAL-2025-029"
+
+  - id: "WO-2025-042"
+    vehicle: "Ferrari 488 (Exotic fleet) — multi-panel"
+    client: "cl-mal-exotic"
+    lines: [{ service: "svc-multipanel", qty: 1, price: 9000 }]
+    subtotal: 9000
+    vat: 450
+    total: 9450
+    date: "2025-03-04"
+    status: "closed"
+    bay: "booth-2"
+    painter: "mal-painter-1"
+    fulfillment: "f-mal-042"
+    invoice: "MAL-2025-042"
+
+  - id: "WO-2025-045"
+    vehicle: "Exotic fleet — ceramic batch ×3"
+    client: "cl-mal-exotic"
+    lines: [{ service: "svc-ceramic", qty: 3, price: 5500 }]
+    subtotal: 16500
+    vat: 825
+    total: 17325
+    date: "2025-03-16"
+    status: "closed"
+    bay: "detail-1"
+    painter: "mal-detailer"
+    fulfillment: "f-mal-045"
+    invoice: "MAL-2025-045"

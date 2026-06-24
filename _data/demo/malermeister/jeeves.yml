@@ -1,0 +1,80 @@
+# Jeeves GPT — contextual nudges for Malermeister LLC.
+# severity: critical | warning | info | nice
+# stance: push-sales | push-production | cut-costs | tighten-ar | watch | hold | hire | freeze-hire | hedge | reassure
+# lenses: money | operations | strategy | cfo | sales | hr
+
+profile:
+  name: "Jeeves"
+  product: "Jeeves GPT"
+  brand: "by Rare Digits"
+  signature: "— Jeeves"
+  avatar: "/assets/img/demo/corsair/jeeves.svg"
+  invocation: "Ask Jeeves"
+  tagline: "Butler-precision insights for executives who'd rather be at the regatta."
+
+todaySummary:
+  headline: "The euro pinched the paint; March painted over it."
+  body: "EUR-priced materials squeezed margin to near-zero in January and February, then March rebounded to AED 82K EBITDA. The shop is cash-comfortable at AED 873K. Two constraints define the business: a spray booth that one supercar can monopolise for a month, and two German master painters who are both your quality and your single largest retention risk."
+  stance: "watch"
+  severity: "info"
+  refresh: "2025-03-28T08:00:00+04:00"
+
+topActions:
+  - "Forward-buy or price-lock Glasurit/Standox before the next EUR move"
+  - "Protect booth throughput — don't let one respray block ten quick wins"
+  - "Tighten Prestige fleet payment terms (paying ~20 days late)"
+
+lenses:
+  - lens: "money"
+    label: "Money / line profitability"
+    severity: "nice"
+    stance: "watch"
+    headline: "Premium pricing is holding; the small jobs keep the lights on."
+    body: "Headline resprays at AED 10–40K carry the value, but the steady stream of AED 300–450 rim-polish and touch-up work keeps the bays and the cash ticking between big projects. The only real dent was EUR materials in the shock window; March margin is back."
+    actions: ["Keep the small-job funnel full — it smooths the lumpy respray calendar"]
+    refs: ["svc-respray-full", "svc-wheel-polish"]
+
+  - lens: "operations"
+    label: "Operations — current problems & risks"
+    severity: "warning"
+    stance: "watch"
+    headline: "The booth is the bottleneck, not the order book."
+    body: "A bare-to-clearcoat supercar respray occupies a booth for 3–4 weeks and throttles everything behind it. Sequence one marquee job against a steady flow of quick, high-margin work, and keep an eye on EUR material reorder timing so a stockout doesn't idle a painter."
+    actions: ["Reserve one booth for fast-turn jobs during long resprays", "Set minimum paint stock levels per colour system"]
+    refs: ["svc-respray-full", "vend-mal-glasurit"]
+
+  - lens: "strategy"
+    label: "Strategy — forecast & options"
+    severity: "info"
+    stance: "hedge"
+    headline: "Sell time on the booth, and buy the euro forward."
+    body: "Two moves compound: lock EUR paint pricing (or forward-buy) to stop the next shock, and grow ceramic coating and paint correction — high margin, low booth time. Keep the mix tilted toward HNW work over lower-margin fleet volume; the fleets smooth the calendar but they don't pay like the collectors."
+    actions: ["Price-lock with Glasurit for 6–12 months", "Package ceramic + correction as an upsell on every respray"]
+    refs: ["svc-ceramic", "svc-paint-correct", "vend-mal-glasurit"]
+
+  - lens: "cfo"
+    label: "Financial position (CFO)"
+    severity: "info"
+    stance: "tighten-ar"
+    headline: "Small, solvent, and mildly euro-exposed."
+    body: "The smallest entity in the group is comfortably cash-positive at AED 873K. The one drag is Prestige Car Rental paying about 20 days late (AED ~100K outstanding). Watch the two EUR lines — paint purchasing and the EUR dividend — and time the buys around favourable rates."
+    actions: ["Move Prestige to shorter terms or a deposit", "Schedule EUR purchases on rate dips"]
+    refs: ["cl-mal-prestige", "vend-mal-glasurit"]
+
+  - lens: "sales"
+    label: "Sales"
+    severity: "info"
+    stance: "push-sales"
+    headline: "Your small jobs are top-of-funnel — and you under-sell them."
+    body: "The AED 300–450 rim and touch-up traffic brings the right cars through the door; each one is a quote for correction, ceramic, or a respray you're not always asking for. Keep the collector warm for the marquee work, and treat fleet as volume filler — the margin lives in HNW referrals, not in more rental cars."
+    actions: ["Attach a ceramic/correction quote to every small job", "Run a referral programme with the collector and dealer"]
+    refs: ["cl-mal-collector", "svc-ceramic"]
+
+  - lens: "hr"
+    label: "People"
+    severity: "warning"
+    stance: "hold"
+    headline: "Your two Meister are the moat. Guard them."
+    body: "Stefan and Markus are simultaneously the brand promise and the most expensive line on payroll — and losing either would hit quality before it hit cost. Build a bench: cross-train the prep and detailing staff toward finishing so the shop isn't one resignation away from a capability gap."
+    actions: ["Retention review for both master painters", "Start a structured apprenticeship from prep toward paint"]
+    refs: ["mal-painter-1", "mal-painter-2", "mal-prep"]

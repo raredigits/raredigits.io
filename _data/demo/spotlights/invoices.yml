@@ -1,0 +1,288 @@
+# Spotlights Ltd — invoice ledger. AR (issued to clients) + AP (received from suppliers).
+# AR amounts in AED, VAT 5%. AP imports in supplier currency + amountAED (reverse-charge VAT
+# at customs, not shown as a line). Unpaid AR/AP at today (2025-03-28) ≈ arEnd 2.70M / apEnd 1.40M
+# in cashflow.yml. status: sent | partial | paid | overdue | cancelled.
+
+# === ACCOUNTS RECEIVABLE ===
+receivable:
+
+  - number: "SPL-2024-018"
+    order: "SPL-O-2401-018"
+    client: "cl-protec"
+    description: "ROE BP2 ×40, Robe MegaPointe ×12"
+    issued: "2024-01-22"
+    due: "2024-02-21"
+    amount: 504000
+    vat: 25200
+    total: 529200
+    paid: 529200
+    status: "paid"
+    paidDate: "2024-02-18"
+
+  - number: "SPL-2024-024"
+    order: "SPL-O-2402-024"
+    client: "cl-eclipse"
+    description: "Martin Aura XB ×24, KS28 ×8"
+    issued: "2024-02-15"
+    due: "2024-03-16"
+    amount: 400800
+    vat: 20040
+    total: 420840
+    paid: 420840
+    status: "paid"
+    paidDate: "2024-03-10"
+
+  - number: "SPL-2024-031"
+    order: "SPL-O-2403-031"
+    client: "cl-crisis-theater"
+    description: "Lantern Bay 2024 — Absen PL2.5 ×100, ChainMaster 1T ×16 (intercompany)"
+    issued: "2024-03-08"
+    due: "2024-04-07"
+    amount: 540000
+    vat: 27000
+    total: 567000
+    paid: 567000
+    status: "paid"
+    paidDate: "2024-04-02"
+    intercompany: true
+
+  - number: "SPL-2024-033"
+    order: "SPL-O-2403-033"
+    client: "cl-flash"
+    description: "L-Acoustics K2 ×24, KS28 ×12"
+    issued: "2024-03-26"
+    due: "2024-05-10"
+    amount: 1428000
+    vat: 71400
+    total: 1499400
+    paid: 1499400
+    status: "paid"
+    paidDate: "2024-05-06"
+
+  - number: "SPL-2024-041"
+    order: "SPL-O-2405-041"
+    client: "cl-dwtc"
+    description: "Robe MegaPointe ×20"
+    issued: "2024-05-16"
+    due: "2024-07-15"
+    amount: 440000
+    vat: 22000
+    total: 462000
+    paid: 462000
+    status: "paid"
+    paidDate: "2024-07-10"
+
+  - number: "SPL-2024-047"
+    order: "SPL-O-2406-047"
+    client: "cl-legacy"
+    description: "Legacy lobby video wall — Absen PL2.5 ×56 (intercompany)"
+    issued: "2024-06-27"
+    due: "2024-08-11"
+    amount: 280000
+    vat: 14000
+    total: 294000
+    paid: 294000
+    status: "paid"
+    paidDate: "2024-08-05"
+    intercompany: true
+
+  - number: "SPL-2024-052"
+    order: "SPL-O-2407-052"
+    client: "cl-backstage"
+    description: "Martin Aura XB ×16"
+    issued: "2024-07-12"
+    due: "2024-08-11"
+    amount: 156800
+    vat: 7840
+    total: 164640
+    paid: 164640
+    status: "paid"
+    paidDate: "2024-09-02"
+    note: "Paid 22 days late — first sign of Backstage stretching."
+
+  - number: "SPL-2024-061"
+    order: "SPL-O-2409-061"
+    client: "cl-crisis-theater"
+    description: "Ancient Moon 2024 AV package (intercompany)"
+    issued: "2024-09-06"
+    due: "2024-10-06"
+    amount: 610000
+    vat: 30500
+    total: 640500
+    paid: 640500
+    status: "paid"
+    paidDate: "2024-10-01"
+    intercompany: true
+
+  - number: "SPL-2024-064"
+    order: "SPL-O-2409-064"
+    client: "cl-atlantis"
+    description: "Ballroom PA — K2 ×16, KS28 ×8"
+    issued: "2024-09-24"
+    due: "2024-11-23"
+    amount: 952000
+    vat: 47600
+    total: 999600
+    paid: 999600
+    status: "paid"
+    paidDate: "2024-11-20"
+
+  - number: "SPL-2024-070"
+    order: "SPL-O-2410-070"
+    client: "cl-expo-city"
+    description: "grandMA3 ×1, disguise gx 2c ×2 (venue install)"
+    issued: "2024-10-18"
+    due: "2025-01-16"
+    amount: 700000
+    vat: 35000
+    total: 735000
+    paid: 735000
+    status: "paid"
+    paidDate: "2025-01-22"
+    note: "Net 90 government cadence — cleared 6 days late in January."
+
+  - number: "SPL-2025-091"
+    order: "SPL-O-2501-091"
+    client: "cl-flash"
+    description: "Robe MegaPointe ×24 (ex-stock)"
+    issued: "2025-01-24"
+    due: "2025-03-10"
+    amount: 528000
+    vat: 26400
+    total: 554400
+    paid: 554400
+    status: "paid"
+    paidDate: "2025-03-08"
+
+  - number: "SPL-2025-078"
+    order: "SPL-O-2411-078"
+    client: "cl-protec"
+    description: "Absen PL2.5 ×240 — delayed Q4 freight, delivered & billed March"
+    issued: "2025-03-11"
+    due: "2025-04-10"
+    amount: 960000
+    vat: 48000
+    total: 1008000
+    paid: 0
+    status: "sent"
+
+  - number: "SPL-2025-098"
+    order: "SPL-O-2503-098"
+    client: "cl-crisis-theater"
+    description: "Lantern Bay 2025 — Absen PL2.5 ×120, Martin Aura ×24 (intercompany)"
+    issued: "2025-03-13"
+    due: "2025-04-12"
+    amount: 720000
+    vat: 36000
+    total: 756000
+    paid: 0
+    status: "sent"
+    intercompany: true
+
+  - number: "SPL-2025-101"
+    order: "SPL-O-2503-101"
+    client: "cl-dwtc"
+    description: "K2 ×16, KS28 ×8"
+    issued: "2025-03-26"
+    due: "2025-05-25"
+    amount: 952000
+    vat: 47600
+    total: 999600
+    paid: 0
+    status: "sent"
+
+# === ACCOUNTS PAYABLE (supplier invoices) ===
+payable:
+
+  - number: "AP-SPL-2024-ROB05"
+    vendor: "vend-robe"
+    description: "Robe MegaPointe restock ×24"
+    issued: "2024-02-20"
+    due: "2024-03-21"
+    currency: "EUR"
+    amount: 80000
+    amountAED: 316000
+    status: "paid"
+    paidDate: "2024-03-15"
+    paidBank: "spl-bank-eur"
+
+  - number: "AP-SPL-2024-LA07"
+    vendor: "vend-lacoustics"
+    description: "K2 + KS28 stock for festival season"
+    issued: "2024-03-10"
+    due: "2024-04-09"
+    currency: "EUR"
+    amount: 180000
+    amountAED: 711000
+    status: "paid"
+    paidDate: "2024-04-05"
+    paidBank: "spl-bank-eur"
+
+  - number: "AP-SPL-2024-ABS11"
+    vendor: "vend-absen"
+    description: "Absen PL2.5 stock (Ancient Moon + Q3 demand)"
+    issued: "2024-08-15"
+    due: "2024-09-29"
+    currency: "USD"
+    amount: 200000
+    amountAED: 734500
+    status: "paid"
+    paidDate: "2024-09-20"
+    paidBank: "spl-bank-usd"
+
+  - number: "AP-SPL-2024-MA01"
+    vendor: "vend-malighting"
+    description: "grandMA3 full-size ×1 (for Expo City install)"
+    issued: "2024-09-15"
+    due: "2024-10-15"
+    currency: "EUR"
+    amount: 58000
+    amountAED: 229100
+    status: "paid"
+    paidDate: "2024-10-20"
+    paidBank: "spl-bank-eur"
+
+  - number: "AP-SPL-2025-ABS03"
+    vendor: "vend-absen"
+    description: "Absen PL2.5 restock (post-backlog replenishment)"
+    issued: "2025-02-25"
+    due: "2025-04-11"
+    currency: "USD"
+    amount: 150000
+    amountAED: 550875
+    status: "sent"
+    paid: 0
+
+  - number: "AP-SPL-2025-LA02"
+    vendor: "vend-lacoustics"
+    description: "K2 restock for March deliveries"
+    issued: "2025-03-05"
+    due: "2025-04-04"
+    currency: "EUR"
+    amount: 120000
+    amountAED: 474000
+    status: "sent"
+    paid: 0
+
+  - number: "AP-SPL-2025-GF09"
+    vendor: "vend-gulf-freight"
+    description: "Expedited air/road surcharge — clearing the delayed Absen container"
+    issued: "2025-03-08"
+    due: "2025-03-23"
+    currency: "AED"
+    amount: 210000
+    amountAED: 210000
+    status: "overdue"
+    paid: 0
+    note: "SHOCK cost — expedited freight to rescue the slipped Protec order."
+
+  - number: "AP-SPL-2025-CU04"
+    vendor: "vend-jafza-customs"
+    description: "Extended dwell + clearance, Jebel Ali backlog"
+    issued: "2025-03-09"
+    due: "2025-03-24"
+    currency: "AED"
+    amount: 165000
+    amountAED: 165000
+    status: "overdue"
+    paid: 0

@@ -1,0 +1,80 @@
+# Jeeves GPT — contextual nudges for Legacy Development.
+# severity: critical | warning | info | nice
+# stance: push-sales | push-production | cut-costs | tighten-ar | watch | hold | hire | freeze-hire | hedge | reassure
+# lenses: money | operations | strategy | cfo | sales | hr
+
+profile:
+  name: "Jeeves"
+  product: "Jeeves GPT"
+  brand: "by Rare Digits"
+  signature: "— Jeeves"
+  avatar: "/assets/img/demo/corsair/jeeves.svg"
+  invocation: "Ask Jeeves"
+  tagline: "Butler-precision insights for executives who'd rather be at the regatta."
+
+todaySummary:
+  headline: "One tenant just put you a single bad month from a covenant breach."
+  body: "Continental Freight's default removed AED 450K of monthly rent — 38% of the roll — and forced an AED 980K write-off. Forward DSCR slips below the 1.05 floor on the loan secured against the very warehouse now standing empty. The good news sits on the balance sheet, not the P&L: the portfolio still appreciated some AED 12M last year."
+  stance: "push-sales"
+  severity: "critical"
+  refresh: "2025-03-28T08:00:00+04:00"
+
+topActions:
+  - "Open the lender conversation before the quarter closes — present the re-let plan as the cure"
+  - "Prioritise the WH-01 multi-let conversion to restore income"
+  - "Chase Novex (AED 113K) and StartupHub arrears"
+
+lenses:
+  - lens: "money"
+    label: "Money / line profitability"
+    severity: "warning"
+    stance: "watch"
+    headline: "You don't earn a yield here. You earn appreciation."
+    body: "After debt service eats roughly 91% of EBITDA, operating profit is only about AED 0.5M a year. The actual return is capital: the portfolio gained ~AED 12M in 2024. The anchor vacancy now bleeds both — lost rent and a AED 10M impairment on WH-01 — which is why this month stings on both statements."
+    actions: ["Track total return (NOI + revaluation), not just operating margin"]
+    refs: ["valuation", "LEG-WH-01"]
+
+  - lens: "operations"
+    label: "Operations — current problems & risks"
+    severity: "warning"
+    stance: "push-sales"
+    headline: "Re-letting WH-01 is the only task that matters this quarter."
+    body: "The 120k sqft box is being split into 3–4 units (p-leg-005) to let faster and cut single-tenant risk; spend so far is AED 240K of the 1.8M budget. The two in-build projects are on schedule and need only monitoring. Tenant repair tickets are minor and well in hand."
+    actions: ["Resource p-leg-005 ahead of everything else", "Pre-market the smaller WH-01 units now, before completion"]
+    refs: ["p-leg-005", "p-leg-001", "p-leg-002"]
+
+  - lens: "strategy"
+    label: "Strategy — forecast & options"
+    severity: "warning"
+    stance: "watch"
+    headline: "Concentration was the real risk. Spread it."
+    body: "A single tenant carrying 38% of the roll was always the exposure; the conversion to multi-let is the structural fix. Protect occupancy elsewhere — Atelier Noor expires this month and Carrack in August — and the two development projects bring fresh income from H2-2025. Restoring WH-01 income is what lifts DSCR back above covenant."
+    actions: ["Start Carrack and Atelier Noor renewals now", "Hold a leasing reserve for WH-01 incentives"]
+    refs: ["ten-carrack", "ten-boutique", "p-leg-001"]
+
+  - lens: "cfo"
+    label: "Financial position (CFO)"
+    severity: "critical"
+    stance: "hedge"
+    headline: "DSCR 1.10 was tight. Minus the anchor, you breach."
+    body: "LOAN-WH01 (AED 35M) is secured on the now-empty warehouse, and committed outflows over the next 30 days are about AED 1.07M against a current rent roll of only AED 740K. Get ahead of the lender with a documented cure plan — the re-let — rather than waiting for the covenant test. Meanwhile, collect the arrears: Novex AED 113K, StartupHub one month down."
+    actions: ["Lender call + cure plan this week", "Draw on tenant deposits where lease terms allow"]
+    refs: ["LOAN-WH01", "alert-leg-2025-009", "ten-novex"]
+
+  - lens: "sales"
+    label: "Sales"
+    severity: "warning"
+    stance: "push-sales"
+    headline: "Leasing is your sales engine — and it's down a floor."
+    body: "The book just lost 38% with WH-01, so the sales job is two-fold: fill the vacancy (the multi-let conversion lets you pre-market four smaller units now) and defend renewals — Atelier Noor expires this month, Carrack in August. A vacant box and an expiring lease are the same problem in different hats."
+    actions: ["Pre-market the WH-01 units before completion", "Open Carrack & Atelier renewals immediately"]
+    refs: ["LEG-WH-01", "ten-carrack", "ten-boutique"]
+
+  - lens: "hr"
+    label: "People"
+    severity: "info"
+    stance: "hire"
+    headline: "Your leasing manager is now the binding constraint."
+    body: "A team of six is right-sized for steady-state, but Noor must simultaneously backfill WH-01 and run the Carrack/Atelier renewals — that is more than one person's quarter. Temporary leasing support or a broker incentive for the WH-01 units would buy back the timeline that the DSCR needs."
+    actions: ["Engage a leasing broker on WH-01 with a success fee", "Consider a 6-month leasing contractor"]
+    refs: ["leg-leasing"]

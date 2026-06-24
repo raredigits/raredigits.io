@@ -1,0 +1,13 @@
+# Legacy Development — fulfillments (type: realestate → "Handovers / closed tickets").
+# Base shape: id, date, status, counterparty, source, value, currency.
+# Realestate-specific: unit (property), handoverType (renovation | ticket | new-build), ticketRef.
+# Completed renovation cases + closed paid tenant tickets. The two in-build projects are
+# NOT here yet (still under construction).
+
+fulfillments:
+  - { id: "f-leg-p003", date: "2024-08-20", status: "accepted",  counterparty: "ten-blueharbor", source: "p-leg-003",     value: 842000, currency: "AED", unit: "LEG-OFF-03", handoverType: "renovation" }
+  - { id: "f-leg-p004", date: "2024-11-15", status: "accepted",  counterparty: "ten-surfco",     source: "p-leg-004",     value: 405000, currency: "AED", unit: "LEG-RET-02", handoverType: "renovation" }
+  - { id: "f-leg-t018", date: "2025-02-27", status: "completed", counterparty: "ten-helios",     source: "tkt-2025-018",  value: 12000,  currency: "AED", unit: "LEG-OFF-02", handoverType: "ticket", ticketRef: "tkt-2025-018" }
+  - { id: "f-leg-t021", date: "2025-03-01", status: "completed", counterparty: "ten-cafe-luma",  source: "tkt-2025-021",  value: 4500,   currency: "AED", unit: "LEG-RET-01", handoverType: "ticket", ticketRef: "tkt-2025-021" }
+  - { id: "f-leg-t024", date: "2025-02-04", status: "completed", counterparty: "ten-gulfparts",  source: "tkt-2025-024",  value: 3200,   currency: "AED", unit: "LEG-WH-02",  handoverType: "ticket", ticketRef: "tkt-2025-024" }
+  - { id: "f-leg-t027", date: "2025-02-14", status: "completed", counterparty: "ten-coldchain",  source: "tkt-2025-027",  value: 2800,   currency: "AED", unit: "LEG-WH-03",  handoverType: "ticket", ticketRef: "tkt-2025-027" }

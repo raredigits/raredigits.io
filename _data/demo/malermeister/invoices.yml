@@ -1,0 +1,37 @@
+# Malermeister LLC — invoices. AR to account customers (fleet/dealer/concours; private
+# jobs are paid on collection). AP to EUR paint suppliers + local consumables. VAT 5%.
+# Unpaid AR at today ≈ 100K (Prestige fleet late + dealer current), unpaid AP ≈ 92K (EUR paint).
+# status: sent | overdue | paid.
+
+# === ACCOUNTS RECEIVABLE ===
+receivable:
+  # --- open (the AR balance) ---
+  - { number: "MAL-2025-031", workorder: "WO-2025-031", client: "cl-mal-prestige", description: "Prestige fleet prep — 8 cars (March)", issued: "2025-03-11", due: "2025-04-10", amount: 28000, vat: 1400, total: 29400, paid: 0, status: "overdue", note: "Chronic late payer — already past the informal 20-day mark." }
+  - { number: "MAL-2025-026", workorder: "WO-2025-026", client: "cl-mal-prestige", description: "Prestige fleet prep — 6 cars (February)", issued: "2025-02-15", due: "2025-03-17", amount: 21000, vat: 1050, total: 22050, paid: 0, status: "overdue" }
+  - { number: "MAL-2025-037", workorder: "WO-2025-037", client: "cl-mal-platinum", description: "Trade-in prep — 3 cars", issued: "2025-03-22", due: "2025-04-21", amount: 18000, vat: 900, total: 18900, paid: 0, status: "sent" }
+  - { number: "MAL-2025-038", workorder: "WO-2025-038", client: "cl-mal-platinum", description: "Bentley Continental — standard respray", issued: "2025-03-26", due: "2025-04-25", amount: 14000, vat: 700, total: 14700, paid: 0, status: "sent" }
+  - { number: "MAL-2025-030", workorder: "WO-2025-030", client: "cl-mal-concours", description: "Subcontract paint — 5 panels", issued: "2025-03-09", due: "2025-03-24", amount: 9500, vat: 475, total: 9975, paid: 0, status: "overdue" }
+  - { number: "MAL-2025-039", workorder: "WO-2025-039", client: "cl-mal-platinum", description: "Lot prep — 12 touch-ups", issued: "2025-03-26", due: "2025-04-25", amount: 4200, vat: 210, total: 4410, paid: 0, status: "sent" }
+
+  # --- paid (collector & private jobs settle on collection; fleet that cleared) ---
+  - { number: "MAL-2025-035", workorder: "WO-2025-035", client: "cl-mal-collector", description: "G63 ceramic coating", issued: "2025-03-13", due: "2025-03-13", amount: 5500, vat: 275, total: 5775, paid: 5775, status: "paid", paidDate: "2025-03-13" }
+  - { number: "MAL-2025-033", workorder: "WO-2025-033", client: "cl-mal-private", description: "Range Rover wheel refinish ×4", issued: "2025-03-22", due: "2025-03-22", amount: 1800, vat: 90, total: 1890, paid: 1890, status: "paid", paidDate: "2025-03-22" }
+  - { number: "MAL-2025-040", workorder: "WO-2025-040", client: "cl-mal-private", description: "Mercedes S-Class single panel", issued: "2025-03-27", due: "2025-03-27", amount: 2400, vat: 120, total: 2520, paid: 2520, status: "paid", paidDate: "2025-03-27" }
+  - { number: "MAL-2025-S03", workorder: "WO-2025-SMALL-03", client: "cl-mal-private", description: "Retail small-jobs batch (rim polish + touch-ups)", issued: "2025-03-31", due: "2025-03-31", amount: 17700, vat: 885, total: 18585, paid: 18585, status: "paid", paidDate: "2025-03-31" }
+  - { number: "MAL-2025-028", workorder: "WO-2025-028", client: "cl-mal-collector", description: "Porsche 911 multi-panel", issued: "2025-02-21", due: "2025-02-21", amount: 8500, vat: 425, total: 8925, paid: 8925, status: "paid", paidDate: "2025-02-21" }
+  - { number: "MAL-2025-022", workorder: "WO-2025-022", client: "cl-mal-collector", description: "Lamborghini Urus correction + ceramic", issued: "2025-02-12", due: "2025-02-12", amount: 6500, vat: 325, total: 6825, paid: 6825, status: "paid", paidDate: "2025-02-12" }
+  - { number: "MAL-2025-019", workorder: "WO-2025-019", client: "cl-mal-exotic", description: "Exotic Drive fleet — 6 cars", issued: "2025-01-27", due: "2025-02-26", amount: 18000, vat: 900, total: 18900, paid: 18900, status: "paid", paidDate: "2025-02-24" }
+  - { number: "MAL-2024-241", workorder: "WO-2024-241", client: "cl-mal-collector", description: "Rolls-Royce Cullinan full respray", issued: "2024-12-20", due: "2024-12-20", amount: 38000, vat: 1900, total: 39900, paid: 39900, status: "paid", paidDate: "2024-12-20" }
+  - { number: "MAL-2024-176", workorder: "WO-2024-176", client: "cl-mal-private", description: "McLaren 720S touch-up + paint correction", issued: "2024-07-29", due: "2024-07-29", amount: 3200, vat: 160, total: 3360, paid: 3360, status: "paid", paidDate: "2024-07-29" }
+  - { number: "MAL-2025-044", workorder: "WO-2025-044", client: "cl-mal-prestige", description: "Prestige fleet — 2× exotic respray", issued: "2025-02-26", due: "2025-03-28", amount: 28000, vat: 1400, total: 29400, paid: 29400, status: "paid", paidDate: "2025-03-24" }
+  - { number: "MAL-2025-029", workorder: "WO-2025-029", client: "cl-mal-exotic", description: "Lamborghini Huracán respray", issued: "2025-03-04", due: "2025-04-03", amount: 16000, vat: 800, total: 16800, paid: 16800, status: "paid", paidDate: "2025-03-20" }
+  - { number: "MAL-2025-042", workorder: "WO-2025-042", client: "cl-mal-exotic", description: "Ferrari 488 multi-panel (fleet)", issued: "2025-03-18", due: "2025-04-17", amount: 9000, vat: 450, total: 9450, paid: 9450, status: "paid", paidDate: "2025-03-26" }
+  - { number: "MAL-2025-045", workorder: "WO-2025-045", client: "cl-mal-exotic", description: "Exotic fleet — 3× ceramic coating", issued: "2025-03-22", due: "2025-04-21", amount: 16500, vat: 825, total: 17325, paid: 17325, status: "paid", paidDate: "2025-03-27" }
+
+# === ACCOUNTS PAYABLE ===
+payable:
+  - { number: "AP-MAL-2025-GLA03", vendor: "vend-mal-glasurit", description: "Glasurit paint system restock", issued: "2025-03-16", due: "2025-04-15", currency: "EUR", amount: 18000, amountAED: 71100, status: "sent", paid: 0, note: "EUR purchase — the cost line that spiked through the shock window." }
+  - { number: "AP-MAL-2025-CON02", vendor: "vend-mal-consum", description: "Abrasives & consumables", issued: "2025-03-20", due: "2025-04-05", currency: "AED", amount: 21000, amountAED: 21000, status: "sent", paid: 0 }
+  - { number: "AP-MAL-2025-STX01", vendor: "vend-mal-standox", description: "Standox topcoat + hardener", issued: "2025-02-05", due: "2025-03-07", currency: "EUR", amount: 12000, amountAED: 47400, status: "paid", paidDate: "2025-03-05", paidBank: "mal-bank-eur" }
+  - { number: "AP-MAL-2024-GLA08", vendor: "vend-mal-glasurit", description: "Glasurit restock (Q4)", issued: "2024-12-02", due: "2025-01-01", currency: "EUR", amount: 16000, amountAED: 63200, status: "paid", paidDate: "2024-12-28", paidBank: "mal-bank-eur" }
+  - { number: "AP-MAL-2025-EQP01", vendor: "vend-mal-equip", description: "Spray booth + compressor service", issued: "2025-02-10", due: "2025-03-12", currency: "AED", amount: 9500, amountAED: 9500, status: "paid", paidDate: "2025-03-08", paidBank: "mal-bank-aed-op" }

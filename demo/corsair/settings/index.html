@@ -5,10 +5,10 @@ offset: demo
 permalink: /demo/corsair/settings/
 ---
 
-{% assign company = demo.corsair.company %}
-{% assign jeeves = demo.corsair.jeeves %}
-{% assign alerts = demo.corsair.alerts %}
-{% assign targets = demo.corsair.targets %}
+{% assign company = demo["crisis-theater"].company %}
+{% assign jeeves = demo["crisis-theater"].jeeves %}
+{% assign alerts = demo["crisis-theater"].alerts %}
+{% assign targets = demo["crisis-theater"].targets %}
 
 <header class="demo-hero">
     <div>
@@ -152,12 +152,12 @@ permalink: /demo/corsair/settings/
             <tr><th>System</th><th>Purpose</th><th>Status</th><th>Last sync</th></tr>
         </thead>
         <tbody>
-            <tr><td><strong>Zoho Books</strong></td><td>Accounting · GL · VAT</td><td><span class="pill good">Live</span></td><td>2026-03-28 06:14</td></tr>
-            <tr><td><strong>Bayzat</strong></td><td>HRIS · payroll · WPS</td><td><span class="pill good">Live</span></td><td>2026-03-28 06:00</td></tr>
-            <tr><td><strong>HubSpot</strong></td><td>CRM · sales pipeline · accounts</td><td><span class="pill good">Live</span></td><td>2026-03-28 06:14</td></tr>
-            <tr><td><strong>Asana</strong></td><td>Project &amp; production tracking</td><td><span class="pill good">Live</span></td><td>2026-03-28 06:14</td></tr>
-            <tr><td><strong>Ticketstream MENA</strong></td><td>Festival ticketing &amp; escrow</td><td><span class="pill good">Live</span></td><td>2026-03-28 06:14</td></tr>
-            <tr><td><strong>ENBD / HSBC / Mashreq</strong></td><td>Bank feeds (read-only)</td><td><span class="pill good">Live</span></td><td>2026-03-28 06:00</td></tr>
+            <tr><td><strong>Zoho Books</strong></td><td>Accounting · GL · VAT</td><td><span class="pill good">Live</span></td><td>2025-03-28 06:14</td></tr>
+            <tr><td><strong>Bayzat</strong></td><td>HRIS · payroll · WPS</td><td><span class="pill good">Live</span></td><td>2025-03-28 06:00</td></tr>
+            <tr><td><strong>HubSpot</strong></td><td>CRM · sales pipeline · accounts</td><td><span class="pill good">Live</span></td><td>2025-03-28 06:14</td></tr>
+            <tr><td><strong>Asana</strong></td><td>Project &amp; production tracking</td><td><span class="pill good">Live</span></td><td>2025-03-28 06:14</td></tr>
+            <tr><td><strong>Ticketstream MENA</strong></td><td>Festival ticketing &amp; escrow</td><td><span class="pill good">Live</span></td><td>2025-03-28 06:14</td></tr>
+            <tr><td><strong>ENBD / HSBC / Mashreq</strong></td><td>Bank feeds (read-only)</td><td><span class="pill good">Live</span></td><td>2025-03-28 06:00</td></tr>
             <tr><td><strong>{{ jeeves.profile.product }}</strong></td><td>AI insights &amp; nudges</td><td><span class="pill good">Live</span></td><td>continuous</td></tr>
         </tbody>
     </table>

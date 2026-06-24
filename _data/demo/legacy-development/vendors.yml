@@ -1,0 +1,11 @@
+# Legacy Development — suppliers: contractors, FM, professional services.
+# Lenders are in debt.yml. Used by projects.yml (capex) and tickets.yml (repairs).
+
+vendors:
+  - { id: "vend-leg-buildco", name: "Cornerstone Contracting", type: "Main contractor", paymentTerms: "Net 30", rating: "preferred", note: "Building the Dubai South warehouse and the Arjan office refurb." }
+  - { id: "vend-leg-mep",     name: "Emirates MEP Services",   type: "MEP / HVAC",       paymentTerms: "Net 30", rating: "preferred" }
+  - { id: "vend-leg-fitout",  name: "FitOut Studio",           type: "Fit-out / renovation", paymentTerms: "Net 30", rating: "approved" }
+  - { id: "vend-leg-fm",      name: "ProFM Facilities Management", type: "FM / cleaning / security", paymentTerms: "Net 30", rating: "preferred", note: "Portfolio-wide FM contract — part of property opex (cogs)." }
+  - { id: "vend-leg-lift",    name: "Otis Elevator Service",   type: "Lift maintenance", paymentTerms: "Net 45", rating: "approved" }
+  - { id: "vend-leg-valuer",  name: "CBRE Valuation",          type: "Valuation / advisory", paymentTerms: "Net 30", rating: "approved", note: "Annual portfolio valuations + the WH-01 impairment assessment." }
+  - { id: "vend-leg-legal",   name: "Al Tamimi & Co",          type: "Legal",            paymentTerms: "Net 30", rating: "approved", note: "Lease drafting + the Continental Freight default/termination." }

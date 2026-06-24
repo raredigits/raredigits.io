@@ -1,0 +1,43 @@
+# Malermeister LLC — entity profile. German master painters in Dubai: very high quality,
+# premium pricing. Operates in AED; buys paint/materials in EUR and pays dividends in EUR
+# (the holding's multi-currency showcase). Smallest business in the group.
+
+profile:
+  legalName: "Malermeister Auto Refinishing LLC"
+  brandName: "Malermeister"
+  tagline: "Deutsche Lackiermeister. In Dubai. Kompromisslos."
+  type: "services"
+  fulfillmentLabel: "Vehicles released"
+  founded: "2019-10-01"
+  acquired: "2023-07-01"            # acquired by Ambitions Inc.
+  hq: "Unit 7, Al Quoz Industrial Area 4, Dubai"
+  trn: "100774099800003"
+  license: "DED-CN-0913277"
+
+fiscal:
+  yearEnd: "12-31"
+  reportingCurrency: "AED"
+  secondaryCurrency: "EUR"          # paint/materials imported, dividends paid in EUR
+  fxPeg: 3.6725                     # AED per USD
+  fxEur: 3.95                       # AED per EUR (illustrative)
+  reportingPeriod:
+    from: "2024-01-01"
+    to: "2025-03-31"
+  vatRate: 0.05
+  corporateTaxRate: 0.09
+  corporateTaxFreeThreshold: 375000
+
+today: "2025-03-28"
+
+banks:
+  - { id: "mal-bank-aed-op",  label: "ENBD — AED Operating",  iban: "AE73 0260 0077 4099 8000 001", currency: "AED", type: "operating" }
+  - { id: "mal-bank-eur",     label: "Mashreq — EUR (paint & dividends)", iban: "AE19 0330 0000 7740 9988 110", currency: "EUR", type: "operating", note: "Pays EU paint suppliers (Glasurit/Standox) and the EUR dividend to Ambitions Inc." }
+  - { id: "mal-bank-payroll", label: "ENBD — WPS Payroll",    iban: "AE73 0260 0077 4099 8000 777", currency: "AED", type: "payroll" }
+
+# Service lines — the "units" of a body shop.
+units:
+  - { id: "respray",   name: "Full & major respray",  icon: "format_paint",   description: "Full repaints and multi-panel work — the high-ticket line (AED 10–40K)", revenueShareTarget: 0.50, color: "#EF4444" }
+  - { id: "panel",     name: "Panel & minor paint",   icon: "brush",          description: "Single-panel, scratch & touch-up (AED 0.3–3.5K) — high volume", revenueShareTarget: 0.18, color: "#F59E0B" }
+  - { id: "detailing", name: "Detailing & coating",   icon: "auto_awesome",   description: "Paint correction, polishing, ceramic coating", revenueShareTarget: 0.16, color: "#8B5CF6" }
+  - { id: "wheels",    name: "Wheel refinishing",     icon: "trip_origin",    description: "Rim/diamond-cut refinishing and polishing (AED 0.3–2K) — steady small jobs", revenueShareTarget: 0.08, color: "#10B981" }
+  - { id: "fleet",     name: "Fleet contracts",       icon: "directions_car", description: "Rental-company fleet prep & repair — volume at negotiated rates", revenueShareTarget: 0.08, color: "#3B82F6" }

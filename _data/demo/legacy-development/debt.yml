@@ -1,0 +1,78 @@
+# Legacy Development — loan facilities. The large debt burden that defines this business.
+# EBITDA (cashflow.yml) is pre-interest; these payments sit below it and consume ~91% of it.
+# monthlyInterest/Principal in AED. DSCR = EBITDA / debt service.
+
+summary:
+  totalOutstanding: 65000000
+  annualInterest: 4449000
+  annualPrincipal: 451000
+  annualDebtService: 4900000
+  blendedRate: 0.0684
+  fy2024Dscr: 1.10                 # 5.40M EBITDA / 4.90M debt service — tight but serviceable
+  covenantDscrFloor: 1.05
+  status: "at-risk"                # WH-01 anchor default threatens forward DSCR until re-let
+
+facilities:
+
+  - id: "LOAN-WH01"
+    lender: "Emirates NBD"
+    type: "term mortgage"
+    securedOn: ["LEG-WH-01"]
+    original: 42000000
+    outstanding: 35000000
+    rate: 0.069
+    monthlyInterest: 201250
+    monthlyPrincipal: 27000
+    monthlyPayment: 228250
+    maturity: "2031-04-30"
+    account: "leg-bank-aed-debt"
+    covenantDscr: 1.05
+    status: "breach-risk"
+    note: "Secured on the anchor warehouse — now VACANT after Continental Freight defaulted. Asset-level income gone while the 35M mortgage runs on. This is the core of the debt stress."
+
+  - id: "LOAN-OFF"
+    lender: "Mashreq Bank"
+    type: "portfolio mortgage"
+    securedOn: ["LEG-OFF-01", "LEG-OFF-02", "LEG-OFF-03", "LEG-OFF-04"]
+    original: 25000000
+    outstanding: 19000000
+    rate: 0.065
+    monthlyInterest: 102917
+    monthlyPrincipal: 18000
+    monthlyPayment: 120917
+    maturity: "2030-02-28"
+    account: "leg-bank-aed-debt"
+    covenantDscr: 1.10
+    status: "performing"
+
+  - id: "LOAN-RET"
+    lender: "ADCB"
+    type: "term mortgage"
+    securedOn: ["LEG-RET-01", "LEG-RET-02"]
+    original: 8000000
+    outstanding: 6500000
+    rate: 0.071
+    monthlyInterest: 38458
+    monthlyPrincipal: 6000
+    monthlyPayment: 44458
+    maturity: "2029-11-30"
+    account: "leg-bank-aed-debt"
+    covenantDscr: 1.10
+    status: "performing"
+
+  - id: "LOAN-ACQ"
+    lender: "Mashreq Bank"
+    type: "construction / acquisition facility"
+    securedOn: ["LEG-WH-02", "LEG-WH-03"]
+    original: 12000000          # committed
+    outstanding: 4500000        # drawn
+    undrawn: 7500000            # committed to the two in-build projects
+    rate: 0.075
+    monthlyInterest: 28125
+    monthlyPrincipal: 0         # interest-only during construction
+    monthlyPayment: 28125
+    maturity: "2027-06-30"
+    account: "leg-bank-capex"
+    covenantDscr: 1.05
+    status: "performing"
+    note: "Revolving facility — funds Dubai South build and Arjan refurb (see projects.yml). Interest-only until practical completion."

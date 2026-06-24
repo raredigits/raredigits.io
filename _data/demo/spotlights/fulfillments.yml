@@ -1,0 +1,189 @@
+# Spotlights Ltd — fulfillments (type: distribution → "Shipments").
+# Base shape (shared across entities): id, date, status, counterparty, source, value, currency.
+# Distribution-specific: shipmentNo, carrier, items[], deliveryStatus, pod (proof of delivery).
+# status: planned | in-transit | completed   deliveryStatus: delivered | delayed-customs | partial | in-transit
+
+fulfillments:
+
+  - id: "f-spl-2401-018"
+    date: "2024-01-22"
+    status: "completed"
+    counterparty: "cl-protec"
+    source: "SPL-O-2401-018"
+    value: 504000
+    currency: "AED"
+    shipmentNo: "SHP-2024-0042"
+    carrier: "Gulf Freight Forwarders"
+    items: [{ product: "prod-led-roe", qty: 40 }, { product: "prod-light-robe", qty: 12 }]
+    deliveryStatus: "delivered"
+    pod: "POD-0042 · signed M. Rashid · 2024-01-22"
+
+  - id: "f-spl-2402-024"
+    date: "2024-02-15"
+    status: "completed"
+    counterparty: "cl-eclipse"
+    source: "SPL-O-2402-024"
+    value: 400800
+    currency: "AED"
+    shipmentNo: "SHP-2024-0067"
+    carrier: "Spotlights fleet"
+    items: [{ product: "prod-light-martin", qty: 24 }, { product: "prod-audio-ks28", qty: 8 }]
+    deliveryStatus: "delivered"
+    pod: "POD-0067 · signed Eclipse warehouse · 2024-02-15"
+
+  - id: "f-spl-2403-031"
+    date: "2024-03-08"
+    status: "completed"
+    counterparty: "cl-crisis-theater"
+    source: "SPL-O-2403-031"
+    value: 540000
+    currency: "AED"
+    shipmentNo: "SHP-2024-0091"
+    carrier: "Spotlights fleet"
+    items: [{ product: "prod-led-absen", qty: 100 }, { product: "prod-rig-cm1t", qty: 16 }]
+    deliveryStatus: "delivered"
+    pod: "POD-0091 · signed Crisis Theater (site, Lantern Bay) · 2024-03-08"
+
+  - id: "f-spl-2403-033"
+    date: "2024-03-26"
+    status: "completed"
+    counterparty: "cl-flash"
+    source: "SPL-O-2403-033"
+    value: 1428000
+    currency: "AED"
+    shipmentNo: "SHP-2024-0098"
+    carrier: "Gulf Freight Forwarders"
+    items: [{ product: "prod-audio-k2", qty: 24 }, { product: "prod-audio-ks28", qty: 12 }]
+    deliveryStatus: "delivered"
+    pod: "POD-0098 · signed Flash logistics · 2024-03-26"
+
+  - id: "f-spl-2405-041"
+    date: "2024-05-16"
+    status: "completed"
+    counterparty: "cl-dwtc"
+    source: "SPL-O-2405-041"
+    value: 440000
+    currency: "AED"
+    shipmentNo: "SHP-2024-0131"
+    carrier: "Spotlights fleet"
+    items: [{ product: "prod-light-robe", qty: 20 }]
+    deliveryStatus: "delivered"
+    pod: "POD-0131 · signed DWTC dock · 2024-05-16"
+
+  - id: "f-spl-2406-047"
+    date: "2024-06-27"
+    status: "completed"
+    counterparty: "cl-legacy"
+    source: "SPL-O-2406-047"
+    value: 280000
+    currency: "AED"
+    shipmentNo: "SHP-2024-0156"
+    carrier: "Spotlights fleet"
+    items: [{ product: "prod-led-absen", qty: 56 }]
+    deliveryStatus: "delivered"
+    pod: "POD-0156 · installed, signed Legacy FM · 2024-06-27"
+
+  - id: "f-spl-2407-052"
+    date: "2024-07-12"
+    status: "completed"
+    counterparty: "cl-backstage"
+    source: "SPL-O-2407-052"
+    value: 156800
+    currency: "AED"
+    shipmentNo: "SHP-2024-0178"
+    carrier: "Spotlights fleet"
+    items: [{ product: "prod-light-martin", qty: 16 }]
+    deliveryStatus: "delivered"
+    pod: "POD-0178 · signed Backstage · 2024-07-12"
+
+  - id: "f-spl-2409-061"
+    date: "2024-09-06"
+    status: "completed"
+    counterparty: "cl-crisis-theater"
+    source: "SPL-O-2409-061"
+    value: 610000
+    currency: "AED"
+    shipmentNo: "SHP-2024-0214"
+    carrier: "Spotlights fleet"
+    items: [{ product: "prod-led-absen", qty: 80 }, { product: "prod-light-robe", qty: 10 }, { product: "prod-rig-cm1t", qty: 8 }]
+    deliveryStatus: "delivered"
+    pod: "POD-0214 · signed Crisis Theater (site, Ancient Moon) · 2024-09-06"
+
+  - id: "f-spl-2409-064"
+    date: "2024-09-24"
+    status: "completed"
+    counterparty: "cl-atlantis"
+    source: "SPL-O-2409-064"
+    value: 952000
+    currency: "AED"
+    shipmentNo: "SHP-2024-0227"
+    carrier: "Gulf Freight Forwarders"
+    items: [{ product: "prod-audio-k2", qty: 16 }, { product: "prod-audio-ks28", qty: 8 }]
+    deliveryStatus: "delivered"
+    pod: "POD-0227 · signed Atlantis engineering · 2024-09-24"
+
+  - id: "f-spl-2410-070"
+    date: "2024-10-18"
+    status: "completed"
+    counterparty: "cl-expo-city"
+    source: "SPL-O-2410-070"
+    value: 700000
+    currency: "AED"
+    shipmentNo: "SHP-2024-0249"
+    carrier: "Spotlights fleet"
+    items: [{ product: "prod-control-ma3", qty: 1 }, { product: "prod-media-disguise", qty: 2 }]
+    deliveryStatus: "delivered"
+    pod: "POD-0249 · commissioned & signed Expo City AV · 2024-10-18"
+
+  - id: "f-spl-2503-078"
+    date: "2025-03-10"
+    status: "completed"
+    counterparty: "cl-protec"
+    source: "SPL-O-2411-078"
+    value: 960000
+    currency: "AED"
+    shipmentNo: "SHP-2025-0061"
+    carrier: "Gulf Freight Forwarders (sea → expedited road)"
+    items: [{ product: "prod-led-absen", qty: 240 }]
+    deliveryStatus: "delivered"
+    pod: "POD-0061 · signed Protec · 2025-03-10"
+    note: "SHOCK trail: ordered 2024-11-14, held delayed-customs at Jebel Ali Nov–Feb, finally cleared and delivered March."
+
+  - id: "f-spl-2501-091"
+    date: "2025-01-24"
+    status: "completed"
+    counterparty: "cl-flash"
+    source: "SPL-O-2501-091"
+    value: 528000
+    currency: "AED"
+    shipmentNo: "SHP-2025-0014"
+    carrier: "Spotlights fleet"
+    items: [{ product: "prod-light-robe", qty: 24 }]
+    deliveryStatus: "delivered"
+    pod: "POD-0014 · signed Flash logistics · 2025-01-24"
+
+  - id: "f-spl-2503-098"
+    date: "2025-03-12"
+    status: "completed"
+    counterparty: "cl-crisis-theater"
+    source: "SPL-O-2503-098"
+    value: 720000
+    currency: "AED"
+    shipmentNo: "SHP-2025-0064"
+    carrier: "Spotlights fleet"
+    items: [{ product: "prod-led-absen", qty: 120 }, { product: "prod-light-martin", qty: 24 }]
+    deliveryStatus: "delivered"
+    pod: "POD-0064 · signed Crisis Theater (site, Lantern Bay 2025) · 2025-03-12"
+
+  - id: "f-spl-2503-101"
+    date: "2025-03-25"
+    status: "completed"
+    counterparty: "cl-dwtc"
+    source: "SPL-O-2503-101"
+    value: 952000
+    currency: "AED"
+    shipmentNo: "SHP-2025-0072"
+    carrier: "Gulf Freight Forwarders"
+    items: [{ product: "prod-audio-k2", qty: 16 }, { product: "prod-audio-ks28", qty: 8 }]
+    deliveryStatus: "delivered"
+    pod: "POD-0072 · signed DWTC dock · 2025-03-25"

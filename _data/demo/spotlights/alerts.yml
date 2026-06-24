@@ -1,0 +1,65 @@
+# Spotlights Ltd — alert rules + active alerts as of 2025-03-28.
+# severity: critical | high | medium | low | info
+# categories: stock | ar | ap | fx | margin | shipment | ops
+
+rules:
+  - { id: "rule-stockout-reserved", name: "Available stock below reorder under confirmed orders", category: "stock", enabled: true, severity: "high", condition: "onHand - reserved < reorderPoint", notify: ["spl-ops-head", "spl-sales-head"] }
+  - { id: "rule-ap-overdue", name: "Supplier invoice overdue", category: "ap", enabled: true, severity: "medium", condition: "days_overdue > 0", notify: ["spl-finance", "spl-md"] }
+  - { id: "rule-fx-exposure", name: "Unhedged FX payables above threshold", category: "fx", enabled: true, severity: "medium", condition: "open_fx_payables_aed > 800000", notify: ["spl-finance", "spl-md"] }
+  - { id: "rule-margin-drop", name: "Monthly gross margin below 18%", category: "margin", enabled: true, severity: "high", condition: "monthly_gp_pct < 0.18", notify: ["spl-md", "spl-finance"] }
+  - { id: "rule-shipment-late", name: "Shipment past requested delivery", category: "shipment", enabled: true, severity: "high", condition: "deliveryStatus == delayed-customs", notify: ["spl-ops-head", "spl-sales-head"] }
+  - { id: "rule-credit-watch", name: "Client paying beyond terms", category: "ar", enabled: true, severity: "medium", condition: "avg_days_late > 20", notify: ["spl-finance", "spl-sales-head"] }
+
+active:
+  - id: "alert-2025-014"
+    rule: "rule-stockout-reserved"
+    severity: "critical"
+    category: "stock"
+    title: "ROE BP2 oversold against confirmed order"
+    detail: "On hand 64, reserved 48, none on order. Confirmed order SPL-O-2412-085 (MediaPro, 48 units) can't be fully covered. Reorder lead time 90 days."
+    ref: "prod-led-roe"
+    raised: "2025-03-24"
+
+  - id: "alert-2025-015"
+    rule: "rule-ap-overdue"
+    severity: "high"
+    category: "ap"
+    title: "Freight & customs invoices overdue"
+    detail: "Gulf Freight AED 210K (5d) + JAFZA Customs AED 165K (4d) past due — expedited costs from rescuing the delayed Absen container."
+    ref: ["AP-SPL-2025-GF09", "AP-SPL-2025-CU04"]
+    raised: "2025-03-25"
+
+  - id: "alert-2025-016"
+    rule: "rule-fx-exposure"
+    severity: "medium"
+    category: "fx"
+    title: "EUR/USD payables ~AED 1.02M due April"
+    detail: "Absen USD 150K + L-Acoustics EUR 120K (≈AED 1,024,875) settle in April. Unhedged — restock priced through the weak-AED-import window."
+    ref: ["AP-SPL-2025-ABS03", "AP-SPL-2025-LA02"]
+    raised: "2025-03-20"
+
+  - id: "alert-2025-017"
+    rule: "rule-margin-drop"
+    severity: "high"
+    category: "margin"
+    title: "Gross margin compressed Nov–Jan"
+    detail: "Expedited freight + FX dragged EBITDA negative Nov 2024 → Jan 2025 (−60K / −110K / −150K). March bounce restores it."
+    raised: "2025-02-28"
+
+  - id: "alert-2025-018"
+    rule: "rule-credit-watch"
+    severity: "medium"
+    category: "ar"
+    title: "Backstage AV on credit watch"
+    detail: "Paid SPL-2024-052 22 days late, then cancelled SPL-O-2412-087 in the Q4 squeeze. Hold new orders to prepayment."
+    ref: "cl-backstage"
+    raised: "2025-01-15"
+
+  - id: "alert-2025-019"
+    rule: "rule-shipment-late"
+    severity: "info"
+    category: "shipment"
+    title: "Resolved: Protec Absen container delivered"
+    detail: "SPL-O-2411-078 (240 panels) held delayed-customs Nov–Feb, cleared and delivered 2025-03-10. Billed SPL-2025-078."
+    ref: "f-spl-2503-078"
+    raised: "2025-03-10"

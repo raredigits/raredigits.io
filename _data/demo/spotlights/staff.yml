@@ -1,0 +1,108 @@
+# Spotlights Ltd — team with monthly salaries (AED). Headcount 12 → 13 (accountant
+# hired Aug 2024, matching cashflow.yml headcount step). Monthly payroll ≈ 236.5K AED.
+
+team:
+  - id: "spl-md"
+    name: "Karim Haddad"
+    role: "Managing Director"
+    department: "Leadership"
+    joined: "2016-09-12"
+    salaryMonthly: 38000
+    nationality: "Lebanese"
+
+  - id: "spl-sales-head"
+    name: "Priya Nair"
+    role: "Head of Sales"
+    department: "Sales"
+    joined: "2018-02-01"
+    salaryMonthly: 28000
+    nationality: "Indian"
+
+  - id: "spl-tech-head"
+    name: "Stefan Vogel"
+    role: "Technical Director (Solutions / Pre-sales)"
+    department: "Technical"
+    joined: "2017-06-15"
+    salaryMonthly: 26000
+    nationality: "German"
+
+  - id: "spl-ops-head"
+    name: "Yara Saleh"
+    role: "Operations & Logistics Manager"
+    department: "Operations"
+    joined: "2019-09-01"
+    salaryMonthly: 22000
+    nationality: "Jordanian"
+
+  - id: "spl-finance"
+    name: "Grace Lim"
+    role: "Finance Manager"
+    department: "Finance"
+    joined: "2020-01-12"
+    salaryMonthly: 20000
+    nationality: "Singaporean"
+
+  - id: "spl-sales-1"
+    name: "Omar Farouk"
+    role: "Sales Manager"
+    department: "Sales"
+    joined: "2019-03-04"
+    salaryMonthly: 18000
+    nationality: "Egyptian"
+
+  - id: "spl-tech-1"
+    name: "Rahul Menon"
+    role: "AV Systems Engineer"
+    department: "Technical"
+    joined: "2021-05-10"
+    salaryMonthly: 16000
+    nationality: "Indian"
+
+  - id: "spl-sales-2"
+    name: "Lina Tarek"
+    role: "Account Manager"
+    department: "Sales"
+    joined: "2022-08-22"
+    salaryMonthly: 15000
+    nationality: "Tunisian"
+
+  - id: "spl-support-1"
+    name: "Bilal Ahmed"
+    role: "Service / Support Technician"
+    department: "Technical"
+    joined: "2021-11-01"
+    salaryMonthly: 13000
+    nationality: "Pakistani"
+
+  - id: "spl-finance-2"
+    name: "Deepa Rao"
+    role: "Accountant"
+    department: "Finance"
+    joined: "2024-08-01"
+    salaryMonthly: 12000
+    nationality: "Indian"
+    note: "Hired Aug 2024 — headcount 12 → 13."
+
+  - id: "spl-warehouse-1"
+    name: "Joseph Mwangi"
+    role: "Warehouse Supervisor"
+    department: "Operations"
+    joined: "2018-10-01"
+    salaryMonthly: 11000
+    nationality: "Kenyan"
+
+  - id: "spl-admin"
+    name: "Sana Khan"
+    role: "Office Administrator"
+    department: "Operations"
+    joined: "2020-07-15"
+    salaryMonthly: 9000
+    nationality: "Pakistani"
+
+  - id: "spl-warehouse-2"
+    name: "Arman Ali"
+    role: "Warehouse / Logistics Assistant"
+    department: "Operations"
+    joined: "2022-02-01"
+    salaryMonthly: 8500
+    nationality: "Bangladeshi"

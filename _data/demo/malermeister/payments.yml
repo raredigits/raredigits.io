@@ -1,0 +1,18 @@
+# Malermeister LLC — payments. direction: in (job collections) | out (AP, EUR paint).
+# Private/collector jobs settle on collection; fleet/dealer on account.
+
+payments:
+  # --- incoming (collections) ---
+  - { id: "pay-mal-001", invoice: "MAL-2024-241", direction: "in", date: "2024-12-20", amount: 39900, currency: "AED", bank: "mal-bank-aed-op", method: "card" }
+  - { id: "pay-mal-002", invoice: "MAL-2025-019", direction: "in", date: "2025-02-24", amount: 18900, currency: "AED", bank: "mal-bank-aed-op", method: "bank transfer" }
+  - { id: "pay-mal-003", invoice: "MAL-2025-022", direction: "in", date: "2025-02-12", amount: 6825,  currency: "AED", bank: "mal-bank-aed-op", method: "card" }
+  - { id: "pay-mal-004", invoice: "MAL-2025-028", direction: "in", date: "2025-02-21", amount: 8925,  currency: "AED", bank: "mal-bank-aed-op", method: "card" }
+  - { id: "pay-mal-005", invoice: "MAL-2025-035", direction: "in", date: "2025-03-13", amount: 5775,  currency: "AED", bank: "mal-bank-aed-op", method: "card" }
+  - { id: "pay-mal-006", invoice: "MAL-2025-033", direction: "in", date: "2025-03-22", amount: 1890,  currency: "AED", bank: "mal-bank-aed-op", method: "card" }
+  - { id: "pay-mal-007", invoice: "MAL-2025-040", direction: "in", date: "2025-03-27", amount: 2520,  currency: "AED", bank: "mal-bank-aed-op", method: "card" }
+  - { id: "pay-mal-008", invoice: "MAL-2025-S03", direction: "in", date: "2025-03-31", amount: 18585, currency: "AED", bank: "mal-bank-aed-op", method: "card / cash" }
+
+  # --- outgoing (AP settlements; EUR paint from the EUR account) ---
+  - { id: "pay-mal-101", invoice: "AP-MAL-2024-GLA08", direction: "out", date: "2024-12-28", amount: 16000, currency: "EUR", amountAED: 63200, bank: "mal-bank-eur", method: "bank transfer" }
+  - { id: "pay-mal-102", invoice: "AP-MAL-2025-STX01", direction: "out", date: "2025-03-05", amount: 12000, currency: "EUR", amountAED: 47400, bank: "mal-bank-eur", method: "bank transfer" }
+  - { id: "pay-mal-103", invoice: "AP-MAL-2025-EQP01", direction: "out", date: "2025-03-08", amount: 9500,  currency: "AED", amountAED: 9500, bank: "mal-bank-aed-op", method: "bank transfer" }

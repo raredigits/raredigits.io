@@ -1,0 +1,67 @@
+# Malermeister LLC — clients. Two worlds: HNW private owners (high-ticket, pay on
+# collection) and rental fleets (volume, on account, slower payers). Plus a luxury
+# dealer and a B2B detailer that subcontracts paint.
+
+clients:
+  - id: "cl-mal-collector"
+    name: "R. Petrov — private collection"
+    type: "Private (HNW collector)"
+    segment: "B2C"
+    relationshipSince: "2020"
+    paymentTerms: "On collection"
+    paymentBehaviour: "good"
+    status: "active"
+    note: "Multiple supercars; the marquee resprays (Ferrari, Lamborghini)."
+
+  - id: "cl-mal-private"
+    name: "Private clients (retail / walk-in)"
+    type: "Private (retail)"
+    segment: "B2C"
+    relationshipSince: "2019"
+    paymentTerms: "On collection"
+    paymentBehaviour: "good"
+    status: "active"
+    note: "Aggregate account for the high volume of small jobs — rim polish, touch-ups, single panels."
+
+  - id: "cl-mal-prestige"
+    name: "Prestige Car Rental"
+    type: "Rental fleet"
+    segment: "B2B"
+    relationshipSince: "2021"
+    paymentTerms: "Net 30"
+    creditLimit: 250000
+    paymentBehaviour: "late"
+    status: "active"
+    note: "Largest fleet account; consistently pays ~20 days late."
+
+  - id: "cl-mal-exotic"
+    name: "Exotic Drive Rentals"
+    type: "Rental fleet (luxury)"
+    segment: "B2B"
+    relationshipSince: "2022"
+    paymentTerms: "Net 30"
+    creditLimit: 180000
+    paymentBehaviour: "good"
+    status: "active"
+
+  - id: "cl-mal-platinum"
+    name: "Platinum Motors"
+    type: "Pre-owned luxury dealer"
+    segment: "B2B"
+    relationshipSince: "2021"
+    paymentTerms: "Net 30"
+    creditLimit: 200000
+    paymentBehaviour: "good"
+    status: "active"
+    note: "Sends trade-ins for prep before resale."
+
+  - id: "cl-mal-concours"
+    name: "Concours Detailing Partners"
+    type: "B2B detailer (subcontract)"
+    segment: "B2B"
+    relationshipSince: "2023"
+    paymentTerms: "Net 15"
+    creditLimit: 80000
+    paymentBehaviour: "good"
+    status: "active"
+    note: "Outsources paintwork to us behind their detailing packages."

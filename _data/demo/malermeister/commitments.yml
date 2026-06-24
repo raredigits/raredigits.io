@@ -1,0 +1,21 @@
+# Malermeister LLC — upcoming committed payments (cross-entity KPI;
+# see _editorial/backlog/demo/kpi-ar-ap-commitments.md). The multi-currency note: paint is
+# bought in EUR and the dividend to Ambitions Inc. is paid in EUR.
+# type: payroll | rent | vat | tax | supplier | dividend | other.
+
+commitments:
+  - { id: "cm-mal-payroll", type: "payroll", label: "Monthly payroll (WPS)", cadence: "monthly", nextDue: "2025-04-05", amount: 158000, currency: "AED", account: "mal-bank-payroll", critical: true, note: "Includes the two German master painters — the expensive, load-bearing line." }
+  - { id: "cm-mal-rent",    type: "rent",    label: "Workshop rent — Al Quoz Unit 7", cadence: "monthly", nextDue: "2025-04-01", amount: 80000, currency: "AED", account: "mal-bank-aed-op", critical: true }
+  - { id: "cm-mal-vat",     type: "vat",     label: "VAT — Q1 2025 filing & payment", cadence: "quarterly", nextDue: "2025-04-28", amount: 35000, currency: "AED", account: "mal-bank-aed-op", critical: true }
+  - { id: "cm-mal-tax",     type: "tax",     label: "Corporate tax — FY2024 (9%)", cadence: "annual", nextDue: "2025-09-30", amount: 8000, currency: "AED", account: "mal-bank-aed-op" }
+
+  # --- EUR lines (the multi-currency showcase) ---
+  - { id: "cm-mal-paint",    type: "supplier", label: "Glasurit paint restock (EUR)", cadence: "one-off", nextDue: "2025-04-15", amount: 71100, currency: "AED", fxCurrency: "EUR", fxAmount: 18000, account: "mal-bank-eur", invoice: "AP-MAL-2025-GLA03", critical: true }
+  - { id: "cm-mal-dividend", type: "dividend", label: "Dividend to Ambitions Inc. (EUR)", cadence: "annual", nextDue: "2025-06-30", amount: 237000, currency: "AED", fxCurrency: "EUR", fxAmount: 60000, account: "mal-bank-eur", note: "FY2024 profit distribution — paid in EUR to the holding." }
+
+summary:
+  monthlyPayroll: 158000
+  monthlyFixed: 238000               # payroll + rent
+  eurExposureNext90d: 308100         # EUR paint + EUR dividend translated to AED
+  next30dCommitted: 344100           # payroll + rent + EUR paint + consumables
+  note: "Comfortable against AED 873K cash. The only FX-sensitive lines are EUR paint and the EUR dividend — time both around favourable rates."

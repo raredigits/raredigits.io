@@ -1,0 +1,74 @@
+# Legacy Development — capital projects. Two in-build (financed, awaiting completion)
+# + capex/renovation cases (several required investment to re-let). funding → debt.yml.
+# status: planned | in-progress | completed | on-hold
+
+projects:
+
+  # ---- Two in-build, financed, awaiting construction completion ----
+  - id: "p-leg-001"
+    name: "Dubai South — build-to-lease warehouse"
+    property: null                      # new asset, not yet in portfolio
+    type: "development"
+    status: "in-progress"
+    manager: "leg-fm"
+    budget: 14000000
+    spent: 8500000
+    funding: "LOAN-ACQ"
+    startDate: "2024-05-01"
+    expectedCompletion: "2025-09-30"
+    preLet: 0.4
+    note: "Financed via the Mashreq construction facility. 40% pre-let to a 3PL operator. On schedule, on budget."
+
+  - id: "p-leg-002"
+    name: "Arjan — office building refurb to Class-A"
+    property: null
+    type: "development"
+    status: "in-progress"
+    manager: "leg-fm"
+    budget: 6000000
+    spent: 3200000
+    funding: "LOAN-ACQ"
+    startDate: "2024-09-15"
+    expectedCompletion: "2025-11-30"
+    preLet: 0.0
+    note: "Repositioning a tired office block to Class-A for higher rents. Awaiting fit-out phase."
+
+  # ---- Capex / renovation cases (investment required to re-let) ----
+  - id: "p-leg-003"
+    name: "Boulevard floor refurbishment (re-let)"
+    property: "LEG-OFF-03"
+    type: "refurbishment"
+    status: "completed"
+    manager: "leg-fm"
+    budget: 850000
+    spent: 842000
+    funding: "leg-bank-capex"
+    startDate: "2024-05-10"
+    completionDate: "2024-08-20"
+    note: "Tenant churn forced a full refurb before re-letting to Blue Harbor Capital."
+
+  - id: "p-leg-004"
+    name: "JBR facade + storefront upgrade"
+    property: "LEG-RET-02"
+    type: "refurbishment"
+    status: "completed"
+    manager: "leg-fm"
+    budget: 420000
+    spent: 405000
+    funding: "leg-bank-capex"
+    startDate: "2024-09-20"
+    completionDate: "2024-11-15"
+    note: "Beachfront unit upgrade to retain SurfCo at a higher rent."
+
+  - id: "p-leg-005"
+    name: "DIP warehouse — multi-let conversion & re-letting"
+    property: "LEG-WH-01"
+    type: "fit-out"
+    status: "in-progress"
+    manager: "leg-leasing"
+    budget: 1800000
+    spent: 240000
+    funding: "leg-bank-capex"
+    startDate: "2025-03-05"
+    expectedCompletion: "2025-07-31"
+    note: "RECOVERY PROJECT. Splitting the vacated 120k sqft anchor box into 3–4 smaller units to re-let faster and reduce single-tenant concentration. Restoring this income is the path back above the DSCR covenant."

@@ -1,0 +1,12 @@
+# Legacy Development — tenant facility requests (small repairs/fixes).
+# status: open | in-progress | closed. A closed + paid ticket is a "fulfillment"
+# (see fulfillments.yml). property → portfolio, tenant → clients, vendor → vendors.
+
+tickets:
+  - { id: "tkt-2025-018", property: "LEG-OFF-02", tenant: "ten-helios",     title: "AC not cooling — replace compressor", category: "HVAC",     raised: "2025-02-20", status: "closed",      cost: 12000, vendor: "vend-leg-mep",   closedDate: "2025-02-27", paid: true }
+  - { id: "tkt-2025-021", property: "LEG-RET-01", tenant: "ten-cafe-luma",  title: "Grease trap / kitchen plumbing blockage", category: "Plumbing", raised: "2025-02-25", status: "closed",     cost: 4500,  vendor: "vend-leg-mep",   closedDate: "2025-03-01", paid: true }
+  - { id: "tkt-2025-024", property: "LEG-WH-02", tenant: "ten-gulfparts",   title: "Roller shutter motor failure",        category: "Mechanical", raised: "2025-01-30", status: "closed",     cost: 3200,  vendor: "vend-leg-fitout", closedDate: "2025-02-04", paid: true }
+  - { id: "tkt-2025-027", property: "LEG-WH-03", tenant: "ten-coldchain",   title: "Cold-room door seal replacement",     category: "Mechanical", raised: "2025-02-10", status: "closed",     cost: 2800,  vendor: "vend-leg-fitout", closedDate: "2025-02-14", paid: true }
+  - { id: "tkt-2025-031", property: "LEG-OFF-03", tenant: "ten-blueharbor", title: "Lift intermittent fault",             category: "Lift",     raised: "2025-03-12", status: "in-progress", cost: 8000,  vendor: "vend-leg-lift" }
+  - { id: "tkt-2025-033", property: "LEG-RET-02", tenant: "ten-surfco",     title: "Storefront glass crack — replace pane", category: "Glazing",  raised: "2025-03-18", status: "open",        cost: 6500,  vendor: "vend-leg-fitout" }
+  - { id: "tkt-2025-035", property: "LEG-OFF-04", tenant: "ten-startup-hub", title: "Repaint + meeting-room AC service",   category: "General",  raised: "2025-03-22", status: "open",        cost: 9000,  vendor: "vend-leg-fitout", note: "Tenant is a chronic late payer — confirm cost recovery before scheduling." }

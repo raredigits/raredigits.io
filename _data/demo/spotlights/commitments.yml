@@ -1,0 +1,23 @@
+# Spotlights Ltd — upcoming committed payments (cross-entity KPI;
+# see _editorial/backlog/demo/kpi-ar-ap-commitments.md). For an importer the live
+# pressure is the FX supplier run landing in April during the post-shock restock.
+# type: payroll | rent | vat | tax | supplier | other.
+
+commitments:
+  - { id: "cm-spl-payroll", type: "payroll", label: "Monthly payroll (WPS)", cadence: "monthly", nextDue: "2025-04-05", amount: 236500, currency: "AED", account: "spl-bank-payroll", critical: true }
+  - { id: "cm-spl-rent",    type: "rent",    label: "Warehouse (DIP) + d3 showroom", cadence: "monthly", nextDue: "2025-04-01", amount: 55000, currency: "AED", account: "spl-bank-aed-op", critical: true }
+  - { id: "cm-spl-vat",     type: "vat",     label: "VAT — Q1 2025 filing & payment", cadence: "quarterly", nextDue: "2025-04-28", amount: 140000, currency: "AED", account: "spl-bank-aed-op", critical: true }
+  - { id: "cm-spl-tax",     type: "tax",     label: "Corporate tax — FY2024 (9%)", cadence: "annual", nextDue: "2025-09-30", amount: 57000, currency: "AED", account: "spl-bank-aed-op" }
+
+  # --- upcoming FX supplier payments (the April crunch) ---
+  - { id: "cm-spl-ap-abs03", type: "supplier", label: "Absen PL2.5 restock (USD)", cadence: "one-off", nextDue: "2025-04-11", amount: 550875, currency: "AED", fxCurrency: "USD", fxAmount: 150000, account: "spl-bank-usd", invoice: "AP-SPL-2025-ABS03", critical: true }
+  - { id: "cm-spl-ap-la02",  type: "supplier", label: "L-Acoustics K2 restock (EUR)", cadence: "one-off", nextDue: "2025-04-04", amount: 474000, currency: "AED", fxCurrency: "EUR", fxAmount: 120000, account: "spl-bank-eur", invoice: "AP-SPL-2025-LA02", critical: true }
+  - { id: "cm-spl-ap-gf09",  type: "supplier", label: "Gulf Freight — expedited surcharge (overdue)", cadence: "one-off", nextDue: "2025-03-23", amount: 210000, currency: "AED", account: "spl-bank-aed-op", invoice: "AP-SPL-2025-GF09", critical: true }
+  - { id: "cm-spl-ap-cu04",  type: "supplier", label: "JAFZA Customs — clearance (overdue)", cadence: "one-off", nextDue: "2025-03-24", amount: 165000, currency: "AED", account: "spl-bank-aed-op", invoice: "AP-SPL-2025-CU04", critical: true }
+
+summary:
+  monthlyPayroll: 236500
+  monthlyFixed: 291500              # payroll + rent
+  fxExposureNext30d: 1024875        # USD + EUR supplier payments (unhedged)
+  next30dCommitted: 1691375         # payroll + rent + the four supplier payments
+  note: "April supplier run (≈AED 1.02M in USD/EUR) lands while the March bounce is still being collected — the tightest cash window of the recovery."

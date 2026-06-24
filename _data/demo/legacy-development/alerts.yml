@@ -1,0 +1,56 @@
+# Legacy Development — alert rules + active alerts as of 2025-03-28.
+# severity: critical | high | medium | low | info
+# categories: debt | occupancy | ar | capex | lease | compliance
+
+rules:
+  - { id: "rule-dscr-floor",   name: "DSCR below covenant floor",        category: "debt",      enabled: true, severity: "critical", condition: "rolling_dscr < covenantDscrFloor", notify: ["leg-md", "leg-finance"] }
+  - { id: "rule-vacancy",      name: "Asset vacant > 30 days",           category: "occupancy", enabled: true, severity: "high",     condition: "days_vacant > 30", notify: ["leg-md", "leg-leasing"] }
+  - { id: "rule-rent-overdue", name: "Tenant rent overdue",              category: "ar",        enabled: true, severity: "medium",   condition: "days_overdue > 15", notify: ["leg-finance", "leg-leasing"] }
+  - { id: "rule-lease-expiry", name: "Lease expiring within 90 days",    category: "lease",     enabled: true, severity: "medium",   condition: "days_to_expiry < 90", notify: ["leg-leasing"] }
+  - { id: "rule-capex-overrun",name: "Project spend over budget",        category: "capex",     enabled: true, severity: "high",     condition: "spent > budget", notify: ["leg-md", "leg-fm"] }
+
+active:
+  - id: "alert-leg-2025-009"
+    rule: "rule-dscr-floor"
+    severity: "critical"
+    category: "debt"
+    title: "DSCR breaches covenant floor after anchor default"
+    detail: "Losing WH-01's AED 450K/mo rent drops forward DSCR below the 1.05 floor (FY2024 was 1.10). LOAN-WH01 (35M) is secured on the now-empty asset. Lender notified; cure = re-let WH-01 (p-leg-005)."
+    ref: "LOAN-WH01"
+    raised: "2025-02-15"
+
+  - id: "alert-leg-2025-010"
+    rule: "rule-vacancy"
+    severity: "high"
+    category: "occupancy"
+    title: "Anchor warehouse WH-01 vacant (38% of rent roll)"
+    detail: "Continental Freight vacated Feb-2025. 120k sqft empty. Multi-let conversion underway to re-let faster and cut single-tenant concentration."
+    ref: "LEG-WH-01"
+    raised: "2025-02-12"
+
+  - id: "alert-leg-2025-011"
+    rule: "rule-rent-overdue"
+    severity: "medium"
+    category: "ar"
+    title: "Two tenants chronically in arrears"
+    detail: "Novex Trading (AED 113K, ~2 months) and StartupHub (Feb rent unpaid). Combined open AR ≈ AED 187K. Consider deposit drawdown / payment plans."
+    ref: ["ten-novex", "ten-startup-hub"]
+    raised: "2025-03-11"
+
+  - id: "alert-leg-2025-012"
+    rule: "rule-lease-expiry"
+    severity: "medium"
+    category: "lease"
+    title: "Leases expiring soon"
+    detail: "Atelier Noor (RET-01) expires this month; Carrack Law (OFF-01) expires Aug-2025. Start renewals to protect occupancy while WH-01 is being backfilled."
+    ref: ["ten-boutique", "ten-carrack"]
+    raised: "2025-03-01"
+
+  - id: "alert-leg-2025-013"
+    rule: "rule-dscr-floor"
+    severity: "info"
+    category: "compliance"
+    title: "Anchor impairment booked"
+    detail: "AED 980K written off in Feb-2025 (unpaid anchor rent + lease incentive). Reflected in the Feb EBITDA dip; AR cleaned of the defaulted balance."
+    ref: "ten-continental"
+    raised: "2025-02-28"

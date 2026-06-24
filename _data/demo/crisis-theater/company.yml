@@ -2,7 +2,9 @@ profile:
   legalName: "The Crisis Theater FZ-LLC"
   brandName: "The Crisis Theater"
   tagline: "Designed Disasters. Delivered Joy."
-  founded: "2019-03-14"
+  type: "events"
+  fulfillmentLabel: "Completed works"
+  founded: "2018-03-14"
   hq: "Unit 1804, Index Tower, DIFC, Dubai"
   satellite: "Studio B7, Alserkal Avenue, Al Quoz, Dubai"
   trn: "100487632100003"
@@ -15,13 +17,13 @@ fiscal:
   secondaryCurrency: "USD"
   fxPeg: 3.6725
   reportingPeriod:
-    from: "2024-01-01"
-    to: "2026-03-31"
+    from: "2023-01-01"
+    to: "2025-03-31"
   vatRate: 0.05
   corporateTaxRate: 0.09
   corporateTaxFreeThreshold: 375000
 
-today: "2026-03-28"
+today: "2025-03-28"
 
 banks:
   - id: "bank-aed-op"

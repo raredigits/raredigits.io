@@ -1,0 +1,26 @@
+# The Crisis Theater — upcoming committed payments (cross-entity KPI;
+# see _editorial/backlog/demo/kpi-ar-ap-commitments.md). The standout line is the
+# festival vendor settlement due 2025-04-15 — large, but ring-fenced in the escrow
+# account (AED 5.64M), so it must NOT be read against unrestricted cash.
+# type: payroll | rent | vat | tax | supplier | other.
+
+commitments:
+  - { id: "cm-ct-payroll", type: "payroll", label: "Monthly payroll (WPS)", cadence: "monthly", nextDue: "2025-04-05", amount: 542000, currency: "AED", account: "bank-payroll", critical: true }
+  - { id: "cm-ct-rent",    type: "rent",    label: "Index Tower HQ + Alserkal studio", cadence: "monthly", nextDue: "2025-04-01", amount: 180000, currency: "AED", account: "bank-aed-op", critical: true }
+
+  # --- the big one: festival vendor settlement, funded from ring-fenced escrow ---
+  - { id: "cm-ct-festival-escrow", type: "other", label: "Lantern Bay 2025 — final vendor settlement", cadence: "one-off", nextDue: "2025-04-15", amount: 5640000, currency: "AED", account: "bank-aed-escrow", restricted: true, critical: true, note: "Paid entirely from the festival escrow account — NOT operating cash. Do not net against unrestricted cash." }
+
+  # --- routine supplier run (open AP) ---
+  - { id: "cm-ct-vendor-run", type: "supplier", label: "Vendor run — open AP (crew, venue, materials)", cadence: "monthly", nextDue: "2025-04-10", amount: 1188000, currency: "AED", account: "bank-aed-op", note: "≈ current accounts-payable balance, clearing through April." }
+
+  # --- statutory ---
+  - { id: "cm-ct-vat", type: "vat", label: "VAT — Q1 2025 filing & payment", cadence: "quarterly", nextDue: "2025-04-28", amount: 260000, currency: "AED", account: "bank-aed-op", critical: true }
+  - { id: "cm-ct-tax", type: "tax", label: "Corporate tax — FY2024 (9%)", cadence: "annual", nextDue: "2025-09-30", amount: 120000, currency: "AED", account: "bank-aed-op" }
+
+summary:
+  monthlyPayroll: 542000
+  monthlyFixed: 722000               # payroll + rent
+  restrictedNext30d: 5640000        # festival escrow settlement (funded from escrow, ring-fenced)
+  unrestrictedNext30d: 1910000      # payroll + rent + vendor run (against AED 9.1M unrestricted cash)
+  note: "The 5.64M festival settlement looks alarming but is fully escrow-funded. Real call on operating cash next 30d ≈ AED 1.91M against 9.1M unrestricted — comfortable."

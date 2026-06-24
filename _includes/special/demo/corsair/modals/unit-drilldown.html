@@ -3,16 +3,16 @@ Generic unit drilldown — emits 4 dialogs (one per business unit).
 Triggered from: data-modal="modal-unit-<id>" on unit cards.
 {% endcomment %}
 
-{% assign company = demo.corsair.company %}
-{% assign yr2025 = demo.corsair.targets.unitAnnual | where: "year", 2025 | first %}
-{% assign yr2026 = demo.corsair.targets.unitAnnual | last %}
+{% assign company = demo["crisis-theater"].company %}
+{% assign yr2025 = demo["crisis-theater"].targets.unitAnnual | where: "year", 2024 | first %}
+{% assign yr2026 = demo["crisis-theater"].targets.unitAnnual | last %}
 
 {% for u in company.units %}
     {% assign u2025 = yr2025.units[u.id] %}
     {% assign u2026 = yr2026.units[u.id] %}
     {% assign pct2026 = u2026.revenueActualYTD | percentOf: u2026.revenuePlan %}
     {% assign pct2025 = u2025.revenueActual | percentOf: u2025.revenuePlan %}
-    {% assign uProjects = demo.corsair.projects.projects | where: "unit", u.id %}
+    {% assign uProjects = demo["crisis-theater"].projects.projects | where: "unit", u.id %}
     {% assign uClosed2025 = uProjects | where: "status", "closed" %}
 
     <dialog id="modal-unit-{{ u.id }}" class="corsair-modal">
@@ -35,12 +35,12 @@ Triggered from: data-modal="modal-unit-<id>" on unit cards.
             <!-- KPI tiles for this unit -->
             <section class="kpi-strip" style="grid-template-columns: repeat(4, 1fr);">
                 <div class="kpi-tile">
-                    <div class="kpi-label">2026 YTD revenue</div>
+                    <div class="kpi-label">2025 YTD revenue</div>
                     <div class="kpi-value">{{ u2026.revenueActualYTD | inThousands }}K</div>
                     <div class="kpi-foot">vs plan {{ u2026.revenuePlan | inThousands }}K · {{ pct2026 }}%</div>
                 </div>
                 <div class="kpi-tile">
-                    <div class="kpi-label">2025 closed</div>
+                    <div class="kpi-label">2024 closed</div>
                     <div class="kpi-value">{{ u2025.revenueActual | inThousands }}K</div>
                     <div class="kpi-foot">vs plan {{ u2025.revenuePlan | inThousands }}K · {{ pct2025 }}%</div>
                 </div>
@@ -119,13 +119,13 @@ Triggered from: data-modal="modal-unit-<id>" on unit cards.
                 <span class="label">Jeeves</span>
                 <span class="body">
                     {% if u.id == "festivals" %}
-                        Highest-margin unit, +39% over plan in 2025. Single-key-person risk: Mathilde owns Ancient Moon AND Lantern Bay end-to-end. If she leaves, two festivals lose institutional knowledge overnight. Hire a deputy this quarter.
+                        Highest-margin unit, +39% over plan in 2024. Single-key-person risk: Mathilde owns Ancient Moon AND Lantern Bay end-to-end. If she leaves, two festivals lose institutional knowledge overnight. Hire a deputy this quarter.
                     {% elsif u.id == "private" %}
                         Steadily lucrative, low-noise. Royal and HNW deals have 100%-upfront or aggressive milestone terms — they don't show up in DSO. Continue to over-invest here; it funds the festival risk.
                     {% elsif u.id == "installations" %}
-                        Materially underperforming since 2024. Either kill it, find a permanent developer partnership, or invest in a dedicated unit head. Sheleesh is splitting attention and Umbrella is the visible cost of that.
+                        Materially underperforming since 2023. Either kill it, find a permanent developer partnership, or invest in a dedicated unit head. Sheleesh is splitting attention and Umbrella is the visible cost of that.
                     {% else %}
-                        Brand experiences are the bread-and-butter — predictable, on-margin, and where most clients enter the funnel. Aurora Gala 2026 is the only live concern — see Production for the live overrun.
+                        Brand experiences are the bread-and-butter — predictable, on-margin, and where most clients enter the funnel. Aurora Gala 2025 is the only live concern — see Production for the live overrun.
                     {% endif %}
                 </span>
             </div>

@@ -5,11 +5,11 @@ offset: demo
 permalink: /demo/corsair/staff/
 ---
 
-{% assign company = demo.corsair.company %}
-{% assign jeeves = demo.corsair.jeeves %}
-{% assign team = demo.corsair.staff.team %}
-{% assign freelancers = demo.corsair.vendors.freelancers %}
-{% assign keyPersons = demo.corsair.corsairKeyPersons.keyPersonnel %}
+{% assign company = demo["crisis-theater"].company %}
+{% assign jeeves = demo["crisis-theater"].jeeves %}
+{% assign team = demo["crisis-theater"].staff.team %}
+{% assign freelancers = demo["crisis-theater"].vendors.freelancers %}
+{% assign keyPersons = demo["crisis-theater"].keyPersons.keyPersonnel %}
 
 {% assign payroll = 0 %}
 {% for p in team %}{% assign payroll = payroll | plus: p.salaryMonthly %}{% endfor %}
@@ -41,7 +41,7 @@ permalink: /demo/corsair/staff/
     <div class="kpi-tile">
         <div class="kpi-label">Headcount</div>
         <div class="kpi-value">{{ team | size }}</div>
-        <div class="kpi-foot">FTE · stable since Q3 2025</div>
+        <div class="kpi-foot">FTE · stable since Q3 2024</div>
     </div>
     <div class="kpi-tile">
         <div class="kpi-label">Monthly payroll</div>
@@ -51,7 +51,7 @@ permalink: /demo/corsair/staff/
     <div class="kpi-tile kpi-good">
         <div class="kpi-label">Revenue / FTE (annual)</div>
         <div class="kpi-value">1.96M</div>
-        <div class="kpi-foot">2025 actual · industry benchmark 1.4M</div>
+        <div class="kpi-foot">2024 actual · industry benchmark 1.4M</div>
     </div>
     <div class="kpi-tile">
         <div class="kpi-label">Freelance bench</div>
@@ -67,8 +67,8 @@ permalink: /demo/corsair/staff/
 </div>
 <section>
     {% assign hcMax = 18 %}
-    <div style="display: grid; grid-template-columns: repeat({{ demo.corsair.staff.headcountByMonth | size }}, 1fr); gap: var(--space-sm); align-items: end; height: 100px;">
-        {% for h in demo.corsair.staff.headcountByMonth %}
+    <div style="display: grid; grid-template-columns: repeat({{ demo["crisis-theater"].staff.headcountByMonth | size }}, 1fr); gap: var(--space-sm); align-items: end; height: 100px;">
+        {% for h in demo["crisis-theater"].staff.headcountByMonth %}
             {% assign hh = h.fte | percentOf: hcMax %}
             <div style="text-align: center;">
                 <div style="height: {{ hh }}%; min-height: 8px; background: var(--tct-jeeves); border-radius: 2px 2px 0 0;" title="{{ h.month }}: {{ h.fte }} FTE{% if h.note %} · {{ h.note }}{% endif %}"></div>
@@ -77,7 +77,7 @@ permalink: /demo/corsair/staff/
             </div>
         {% endfor %}
     </div>
-    <p class="muted" style="font-size: 0.8em; margin-top: var(--space-md);">Hiring spree in Q2 2025 (+3 FTE) was funded by Lantern Bay 2025 outperformance. Frozen since.</p>
+    <p class="muted" style="font-size: 0.8em; margin-top: var(--space-md);">Hiring spree in Q2 2024 (+3 FTE) was funded by Lantern Bay 2024 outperformance. Frozen since.</p>
 </section>
 
 <!-- Department breakdown -->
@@ -98,7 +98,7 @@ permalink: /demo/corsair/staff/
             </tr>
         </thead>
         <tbody>
-            {% for dept in demo.corsair.staff.departments %}
+            {% for dept in demo["crisis-theater"].staff.departments %}
                 {% assign deptTeam = team | where: "department", dept.id %}
                 {% assign deptCost = 0 %}
                 {% for p in deptTeam %}{% assign deptCost = deptCost | plus: p.salaryMonthly %}{% endfor %}

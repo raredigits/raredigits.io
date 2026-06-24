@@ -1,0 +1,10 @@
+# Legacy Development — small team. Monthly payroll ≈ 150K AED (part of cashflow opex;
+# debt service is separate, below EBITDA).
+
+team:
+  - { id: "leg-md",      name: "Faisal Al-Rashid", role: "Managing Director / Asset Manager", department: "Leadership", joined: "2014-05-20", salaryMonthly: 45000, nationality: "Emirati" }
+  - { id: "leg-finance", name: "Anita Desai",       role: "Finance Manager",                  department: "Finance",    joined: "2018-03-01", salaryMonthly: 28000, nationality: "Indian" }
+  - { id: "leg-fm",      name: "Tomás Rivera",      role: "Property & Facilities Manager",     department: "Operations", joined: "2019-07-15", salaryMonthly: 25000, nationality: "Filipino" }
+  - { id: "leg-leasing", name: "Noor Haddad",       role: "Leasing Manager",                  department: "Leasing",    joined: "2021-02-01", salaryMonthly: 22000, nationality: "Jordanian" }
+  - { id: "leg-acct",    name: "Kevin Otieno",      role: "Accountant",                       department: "Finance",    joined: "2022-06-10", salaryMonthly: 16000, nationality: "Kenyan" }
+  - { id: "leg-coord",   name: "Ramesh Pillai",     role: "Facilities Coordinator",           department: "Operations", joined: "2023-01-09", salaryMonthly: 14000, nationality: "Indian" }

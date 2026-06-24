@@ -6,6 +6,9 @@ node_modules/
 _site/
 .cache/
 
+# Scratch (one-off generators, build checks) — data is the source of truth, not these
+_temp/
+
 # Jekyll baseline + 11ty scratch builds (temporary, deleted after migration)
 _site_jekyll/
 _site_11ty/

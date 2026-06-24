@@ -1,0 +1,53 @@
+# Legacy Development — entity profile. Commercial real estate (buy, hold, lease).
+# Highly leveraged: EBITDA (cashflow.yml) is PRE-interest; the large debt service sits
+# below EBITDA (see debt.yml / commitments.yml). Steadily profitable but thin after debt.
+
+profile:
+  legalName: "Legacy Development Holdings LLC"
+  brandName: "Legacy Development"
+  tagline: "We buy the building. We keep the building."
+  type: "realestate"
+  fulfillmentLabel: "Handovers / closed tickets"
+  founded: "2014-05-20"
+  acquired: "2021-01-01"            # acquired by Ambitions Inc.
+  hq: "Office 2210, Boulevard Plaza Tower 1, Downtown Dubai"
+  trn: "100663211900003"
+  license: "DED-CN-0481903"
+
+fiscal:
+  yearEnd: "12-31"
+  reportingCurrency: "AED"
+  fxPeg: 3.6725
+  reportingPeriod:
+    from: "2024-01-01"
+    to: "2025-03-31"
+  vatRate: 0.05                     # commercial rent is VAT-standard-rated in the UAE
+  corporateTaxRate: 0.09
+  corporateTaxFreeThreshold: 375000
+
+today: "2025-03-28"
+
+# Leverage snapshot at today (detail in debt.yml). DSCR is the binding metric, not LTV.
+# EBITDA in cashflow.yml is PRE-interest; debt service (~91% of EBITDA) sits below it.
+leverage:
+  portfolioMarketValue: 150000000
+  totalDebtOutstanding: 65000000
+  ltv: 0.43
+  annualInterest: 4449000
+  annualDebtService: 4900000        # interest + scheduled principal
+  ebitdaFY2024: 5400000
+  dscr: 1.10                        # FY2024 EBITDA / annual debt service — historically tight
+  covenantDscrFloor: 1.05
+  dscrForwardAtRisk: true           # WH-01 default removed 450K/mo rent — forward DSCR breaches floor until re-let
+
+banks:
+  - { id: "leg-bank-aed-op",    label: "ENBD — Rent Operating",   iban: "AE61 0260 0066 3211 9000 001", currency: "AED", type: "operating" }
+  - { id: "leg-bank-aed-debt",  label: "ENBD — Debt Service",     iban: "AE61 0260 0066 3211 9000 002", currency: "AED", type: "debt-service", note: "Sweeps to lenders monthly — ring-fenced for mortgage payments" }
+  - { id: "leg-bank-capex",     label: "Mashreq — Project Drawdown", iban: "AE40 0330 0000 6321 1944 110", currency: "AED", type: "capex", note: "Construction facility drawdowns for the two in-build projects" }
+  - { id: "leg-bank-payroll",   label: "ENBD — WPS Payroll",      iban: "AE61 0260 0066 3211 9000 777", currency: "AED", type: "payroll" }
+
+# Asset classes — the realestate equivalent of business "units".
+units:
+  - { id: "office",    name: "Offices",    icon: "corporate_fare", description: "4 office assets — Downtown, JLT, Business Bay, DIFC suites", revenueShareTarget: 0.40, color: "#3B82F6" }
+  - { id: "warehouse", name: "Warehouses", icon: "warehouse",      description: "3 logistics assets — incl. the large single-tenant DIP facility", revenueShareTarget: 0.45, color: "#10B981" }
+  - { id: "retail",    name: "Retail",     icon: "storefront",     description: "2 retail units — City Walk, JBR beachfront", revenueShareTarget: 0.15, color: "#F59E0B" }

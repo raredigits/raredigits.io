@@ -1,0 +1,27 @@
+# Legacy Development — upcoming committed payments (the new cross-entity KPI;
+# see _editorial/backlog/demo/kpi-ar-ap-commitments.md). For a leveraged property
+# co the dominant line is debt service — ~421K/mo, ~91% of EBITDA.
+# type: payroll | rent | vat | tax | loan | capex | other.
+
+commitments:
+  # --- debt service (the burden) ---
+  - { id: "cm-leg-loan-wh01", type: "loan", label: "Mortgage — DIP anchor warehouse (ENBD)", cadence: "monthly", nextDue: "2025-04-01", amount: 228250, currency: "AED", account: "leg-bank-aed-debt", loan: "LOAN-WH01", critical: true, note: "Largest payment, on a now-income-less asset — the core stress." }
+  - { id: "cm-leg-loan-off",  type: "loan", label: "Mortgage — office portfolio (Mashreq)",  cadence: "monthly", nextDue: "2025-04-01", amount: 120917, currency: "AED", account: "leg-bank-aed-debt", loan: "LOAN-OFF",  critical: true }
+  - { id: "cm-leg-loan-ret",  type: "loan", label: "Mortgage — retail (ADCB)",               cadence: "monthly", nextDue: "2025-04-01", amount: 44458,  currency: "AED", account: "leg-bank-aed-debt", loan: "LOAN-RET",  critical: true }
+  - { id: "cm-leg-loan-acq",  type: "loan", label: "Construction facility interest (Mashreq)", cadence: "monthly", nextDue: "2025-04-01", amount: 28125, currency: "AED", account: "leg-bank-capex", loan: "LOAN-ACQ", critical: true }
+
+  # --- payroll & statutory ---
+  - { id: "cm-leg-payroll", type: "payroll", label: "Monthly payroll (WPS)", cadence: "monthly", nextDue: "2025-04-05", amount: 150000, currency: "AED", account: "leg-bank-payroll", critical: true }
+  - { id: "cm-leg-vat",     type: "vat",     label: "VAT — Q1 2025 filing & payment", cadence: "quarterly", nextDue: "2025-04-28", amount: 118000, currency: "AED", account: "leg-bank-aed-op", critical: true }
+  - { id: "cm-leg-tax",     type: "tax",     label: "Corporate tax — FY2024 (9%)", cadence: "annual", nextDue: "2025-09-30", amount: 86000, currency: "AED", account: "leg-bank-aed-op" }
+
+  # --- capex draws (funded, committed) ---
+  - { id: "cm-leg-capex-001", type: "capex", label: "Dubai South warehouse — contractor progress claims", cadence: "monthly", nextDue: "2025-04-04", amount: 120000, currency: "AED", account: "leg-bank-capex", project: "p-leg-001" }
+  - { id: "cm-leg-capex-005", type: "capex", label: "WH-01 multi-let conversion (re-letting recovery)",   cadence: "monthly", nextDue: "2025-04-10", amount: 260000, currency: "AED", account: "leg-bank-capex", project: "p-leg-005" }
+
+# Roll-up (AED)
+summary:
+  monthlyDebtService: 421750
+  monthlyPayroll: 150000
+  next30dCommitted: 1071750     # debt service + payroll + capex draws due within 30 days
+  note: "Committed outflows next 30d ≈ AED 1.07M against ~740K current monthly rent — the post-default squeeze. Re-letting WH-01 is what closes the gap."

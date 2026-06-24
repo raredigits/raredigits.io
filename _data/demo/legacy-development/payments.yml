@@ -1,0 +1,24 @@
+# Legacy Development — payments. direction: in (rent collected) | out (AP + debt service).
+# Debt-service payments reference a loan (debt.yml) rather than an invoice.
+
+payments:
+  # --- incoming (rent collections) ---
+  - { id: "pay-leg-001", invoice: "LEG-2025-Q1-HELIOS",   direction: "in", date: "2025-01-12", amount: 409500, currency: "AED", bank: "leg-bank-aed-op", method: "bank transfer" }
+  - { id: "pay-leg-002", invoice: "LEG-2025-Q1-CARRACK",  direction: "in", date: "2025-01-14", amount: 267750, currency: "AED", bank: "leg-bank-aed-op", method: "bank transfer" }
+  - { id: "pay-leg-003", invoice: "LEG-2025-Q1-BLUE",     direction: "in", date: "2025-01-10", amount: 330750, currency: "AED", bank: "leg-bank-aed-op", method: "bank transfer" }
+  - { id: "pay-leg-004", invoice: "LEG-2025-Q1-GULF",     direction: "in", date: "2025-01-16", amount: 157500, currency: "AED", bank: "leg-bank-aed-op", method: "bank transfer" }
+  - { id: "pay-leg-005", invoice: "LEG-2025-Q1-COLD",     direction: "in", date: "2025-01-18", amount: 126000, currency: "AED", bank: "leg-bank-aed-op", method: "bank transfer" }
+  - { id: "pay-leg-006", invoice: "LEG-2025-03-SURF",     direction: "in", date: "2025-03-06", amount: 78750,  currency: "AED", bank: "leg-bank-aed-op", method: "bank transfer" }
+  - { id: "pay-leg-007", invoice: "LEG-2025-03-BOUTIQUE", direction: "in", date: "2025-03-09", amount: 42000,  currency: "AED", bank: "leg-bank-aed-op", method: "bank transfer" }
+  - { id: "pay-leg-008", invoice: "LEG-2025-Q1-NOVEX",    direction: "in", date: "2025-01-20", amount: 170100, currency: "AED", bank: "leg-bank-aed-op", method: "bank transfer", note: "Partial — chronic late payer." }
+
+  # --- outgoing (AP settlements) ---
+  - { id: "pay-leg-101", invoice: "AP-LEG-2025-CBRE01", direction: "out", date: "2025-03-18", amount: 30000,  currency: "AED", bank: "leg-bank-aed-op", method: "bank transfer" }
+  - { id: "pay-leg-102", invoice: "AP-LEG-2024-CSC08",  direction: "out", date: "2024-09-19", amount: 840000, currency: "AED", bank: "leg-bank-capex",  method: "bank transfer" }
+  - { id: "pay-leg-103", invoice: "AP-LEG-2024-FIT04",  direction: "out", date: "2024-12-12", amount: 405000, currency: "AED", bank: "leg-bank-capex",  method: "bank transfer" }
+
+  # --- outgoing (debt service — monthly sweep, March) ---
+  - { id: "pay-leg-d01", loan: "LOAN-WH01", direction: "out", date: "2025-03-01", amount: 228250, currency: "AED", bank: "leg-bank-aed-debt", method: "standing order", note: "Mortgage on the now-vacant anchor — running on with no tenant income." }
+  - { id: "pay-leg-d02", loan: "LOAN-OFF",  direction: "out", date: "2025-03-01", amount: 120917, currency: "AED", bank: "leg-bank-aed-debt", method: "standing order" }
+  - { id: "pay-leg-d03", loan: "LOAN-RET",  direction: "out", date: "2025-03-01", amount: 44458,  currency: "AED", bank: "leg-bank-aed-debt", method: "standing order" }
+  - { id: "pay-leg-d04", loan: "LOAN-ACQ",  direction: "out", date: "2025-03-01", amount: 28125,  currency: "AED", bank: "leg-bank-capex",    method: "standing order" }

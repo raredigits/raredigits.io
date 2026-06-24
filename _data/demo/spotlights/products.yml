@@ -1,0 +1,141 @@
+# Spotlights Ltd — catalogue. Narrow, high-ticket pro-AV assortment.
+# costCurrency/unitCost = supplier price in import currency (USD or EUR).
+# landedCostAED = unitCost × FX + freight + 5% duty (what it costs us on the shelf, AED).
+# listPriceAED  = sell price (AED). marginPct = (list − landed) / list.
+# stock: onHand (in warehouse), reserved (committed to confirmed orders), onOrder
+#        (placed on supplier, in transit), leadTimeDays, reorderPoint.
+
+products:
+
+  - id: "prod-led-absen"
+    name: "Absen PL2.5 Pro LED Panel"
+    brand: "Absen"
+    unit: "led"
+    sku: "ABS-PL25-PRO"
+    uom: "cabinet (0.5×0.5m)"
+    costCurrency: "USD"
+    unitCost: 720
+    landedCostAED: 3050
+    listPriceAED: 4100
+    marginPct: 0.26
+    stock: { onHand: 180, reserved: 96, onOrder: 240, leadTimeDays: 75, reorderPoint: 120 }
+    note: "Workhorse rental-spec panel. 240 cabinets stuck in transit since Dec — Q4 freight disruption."
+
+  - id: "prod-led-roe"
+    name: "ROE Black Pearl BP2 LED Cabinet"
+    brand: "ROE Visual"
+    unit: "led"
+    sku: "ROE-BP2"
+    uom: "cabinet (0.5×0.5m)"
+    costCurrency: "USD"
+    unitCost: 1150
+    landedCostAED: 4750
+    listPriceAED: 6200
+    marginPct: 0.23
+    stock: { onHand: 64, reserved: 48, onOrder: 0, leadTimeDays: 90, reorderPoint: 40 }
+    note: "Premium broadcast-grade. Thin cover under reserved — reorder due."
+
+  - id: "prod-led-proc"
+    name: "Brompton Tessera SX40 Processor"
+    brand: "Brompton Technology"
+    unit: "led"
+    sku: "BRM-SX40"
+    uom: "unit"
+    costCurrency: "USD"
+    unitCost: 9800
+    landedCostAED: 38500
+    listPriceAED: 49000
+    marginPct: 0.21
+    stock: { onHand: 6, reserved: 3, onOrder: 4, leadTimeDays: 60, reorderPoint: 4 }
+
+  - id: "prod-light-robe"
+    name: "Robe MegaPointe Moving Head"
+    brand: "Robe"
+    unit: "lighting"
+    sku: "ROB-MEGAP"
+    uom: "fixture"
+    costCurrency: "EUR"
+    unitCost: 4200
+    landedCostAED: 17500
+    listPriceAED: 22500
+    marginPct: 0.22
+    stock: { onHand: 48, reserved: 24, onOrder: 36, leadTimeDays: 45, reorderPoint: 30 }
+
+  - id: "prod-light-martin"
+    name: "Martin MAC Aura XB"
+    brand: "Martin / Harman"
+    unit: "lighting"
+    sku: "MAR-AURAXB"
+    uom: "fixture"
+    costCurrency: "EUR"
+    unitCost: 1850
+    landedCostAED: 7800
+    listPriceAED: 9900
+    marginPct: 0.21
+    stock: { onHand: 72, reserved: 20, onOrder: 0, leadTimeDays: 40, reorderPoint: 40 }
+
+  - id: "prod-audio-k2"
+    name: "L-Acoustics K2 Line Array Element"
+    brand: "L-Acoustics"
+    unit: "audio"
+    sku: "LA-K2"
+    uom: "element"
+    costCurrency: "EUR"
+    unitCost: 9500
+    landedCostAED: 39500
+    listPriceAED: 49500
+    marginPct: 0.20
+    stock: { onHand: 24, reserved: 12, onOrder: 12, leadTimeDays: 50, reorderPoint: 16 }
+
+  - id: "prod-audio-ks28"
+    name: "L-Acoustics KS28 Subwoofer"
+    brand: "L-Acoustics"
+    unit: "audio"
+    sku: "LA-KS28"
+    uom: "unit"
+    costCurrency: "EUR"
+    unitCost: 4100
+    landedCostAED: 17200
+    listPriceAED: 21500
+    marginPct: 0.20
+    stock: { onHand: 32, reserved: 8, onOrder: 0, leadTimeDays: 50, reorderPoint: 16 }
+
+  - id: "prod-rig-cm1t"
+    name: "ChainMaster BGV-D8 1T Hoist"
+    brand: "ChainMaster"
+    unit: "rigging"
+    sku: "CM-BGVD8-1T"
+    uom: "hoist"
+    costCurrency: "EUR"
+    unitCost: 1450
+    landedCostAED: 6300
+    listPriceAED: 8600
+    marginPct: 0.27
+    stock: { onHand: 90, reserved: 30, onOrder: 0, leadTimeDays: 35, reorderPoint: 40 }
+    note: "Highest-margin line. Heavy, slow-moving, stocked deep."
+
+  - id: "prod-control-ma3"
+    name: "grandMA3 full-size console"
+    brand: "MA Lighting"
+    unit: "control"
+    sku: "MA-GMA3-FS"
+    uom: "console"
+    costCurrency: "EUR"
+    unitCost: 58000
+    landedCostAED: 238000
+    listPriceAED: 295000
+    marginPct: 0.19
+    stock: { onHand: 2, reserved: 1, onOrder: 1, leadTimeDays: 70, reorderPoint: 1 }
+
+  - id: "prod-media-disguise"
+    name: "disguise gx 2c media server"
+    brand: "disguise"
+    unit: "control"
+    sku: "DIS-GX2C"
+    uom: "server"
+    costCurrency: "USD"
+    unitCost: 42000
+    landedCostAED: 162000
+    listPriceAED: 205000
+    marginPct: 0.21
+    stock: { onHand: 3, reserved: 2, onOrder: 2, leadTimeDays: 65, reorderPoint: 2 }

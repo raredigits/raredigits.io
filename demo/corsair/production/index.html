@@ -5,15 +5,15 @@ offset: demo
 permalink: /demo/corsair/production/
 ---
 
-{% assign company = demo.corsair.company %}
-{% assign jeeves = demo.corsair.jeeves %}
-{% assign projects = demo.corsair.projects.projects %}
-{% assign kpis = demo.corsair.projects.kpis %}
+{% assign company = demo["crisis-theater"].company %}
+{% assign jeeves = demo["crisis-theater"].jeeves %}
+{% assign projects = demo["crisis-theater"].projects.projects %}
+{% assign kpis = demo["crisis-theater"].projects.kpis %}
 
 <header class="demo-hero">
     <div>
         <h1>Production</h1>
-        <p class="muted">Project portfolio · Jan 2024 — Mar 2026</p>
+        <p class="muted">Project portfolio · Jan 2023 — Mar 2025</p>
     </div>
     <div class="as-of">{{ projects | size }} projects on file</div>
 </header>
@@ -50,7 +50,7 @@ permalink: /demo/corsair/production/
     <div class="kpi-tile kpi-warn">
         <div class="kpi-label">Cancelled (lifetime)</div>
         <div class="kpi-value">{{ kpis.cancelled }}</div>
-        <div class="kpi-foot">Ancient Moon 2024 — weather</div>
+        <div class="kpi-foot">Ancient Moon 2023 — weather</div>
     </div>
 </section>
 
@@ -70,7 +70,7 @@ permalink: /demo/corsair/production/
         <div>Status</div>
     </div>
     {% for p in actives %}
-        {% assign client = demo.corsair.clients.clients | where: "id", p.client | first %}
+        {% assign client = demo["crisis-theater"].clients.clients | where: "id", p.client | first %}
         {% assign burnPct = p.actualCost | percentOf: p.budget %}
         <div class="project-row">
             <div class="health-bar {{ p.health }}"></div>
@@ -107,7 +107,7 @@ permalink: /demo/corsair/production/
 <section class="row-list">
     {% assign delivered = projects | where: "status", "delivered" %}
     {% for p in delivered %}
-        {% assign client = demo.corsair.clients.clients | where: "id", p.client | first %}
+        {% assign client = demo["crisis-theater"].clients.clients | where: "id", p.client | first %}
         {% assign gp = p.actualRevenue | minus: p.actualCost %}
         {% assign gpPct = gp | percentOf: p.actualRevenue %}
         <div class="project-row">
@@ -154,7 +154,7 @@ permalink: /demo/corsair/production/
     {% assign disputed = projects | where: "status", "disputed" %}
     {% assign cancelled = projects | where: "status", "cancelled" %}
     {% for p in disputed %}
-        {% assign client = demo.corsair.clients.clients | where: "id", p.client | first %}
+        {% assign client = demo["crisis-theater"].clients.clients | where: "id", p.client | first %}
         <div class="project-row">
             <div class="health-bar red"></div>
             <div>
@@ -207,7 +207,7 @@ permalink: /demo/corsair/production/
 
 <!-- Closed projects, by unit & year -->
 <div class="section-head">
-    <h2>Closed Projects · 2024–2026</h2>
+    <h2>Closed Projects · 2023–2025</h2>
     <span class="meta">Profitability by unit</span>
 </div>
 <section>
@@ -227,7 +227,7 @@ permalink: /demo/corsair/production/
         <tbody>
             {% assign closed = projects | where: "status", "closed" | sort: "eventDate" | reverse %}
             {% for p in closed %}
-                {% assign client = demo.corsair.clients.clients | where: "id", p.client | first %}
+                {% assign client = demo["crisis-theater"].clients.clients | where: "id", p.client | first %}
                 {% assign gp = p.grossProfit %}
                 {% assign gpPct = gp | percentOf: p.actualRevenue %}
                 {% assign cls = "" %}

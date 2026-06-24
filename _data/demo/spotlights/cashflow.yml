@@ -1,0 +1,224 @@
+# Spotlights Ltd — pro-AV / stage / LED distribution
+# Monthly P&L & cashflow — 15 months, Jan 2024 → Mar 2025. All amounts in AED.
+# Currency: AED (imports settled USD). Same column contract as Crisis Theater for holding roll-up.
+# gp = revenue − cogs ; ebitda = gp − opex.
+
+monthly:
+
+  - month: "2024-01"
+    revenue: 1450000
+    cogs: 1120000
+    gp: 330000
+    opex: 300000
+    ebitda: 30000
+    cashIn: 1447500
+    cashOut: 1598000
+    cashEnd: 1649500
+    arEnd: 1232500
+    apEnd: 672000
+    dso: 26
+    headcount: 12
+
+  - month: "2024-02"
+    revenue: 1820000
+    cogs: 1400000
+    gp: 420000
+    opex: 300000
+    ebitda: 120000
+    cashIn: 1505500
+    cashOut: 1532000
+    cashEnd: 1623000
+    arEnd: 1547000
+    apEnd: 840000
+    dso: 26
+    headcount: 12
+
+  - month: "2024-03"
+    revenue: 2640000
+    cogs: 1980000
+    gp: 660000
+    opex: 310000
+    ebitda: 350000
+    cashIn: 1943000
+    cashOut: 1942000
+    cashEnd: 1624000
+    arEnd: 2244000
+    apEnd: 1188000
+    dso: 26
+    headcount: 12
+    note: "Festival-season demand; LED+rigging supplied to Crisis Theater (Lantern Bay)."
+
+  - month: "2024-04"
+    revenue: 1980000
+    cogs: 1520000
+    gp: 460000
+    opex: 310000
+    ebitda: 150000
+    cashIn: 2541000
+    cashOut: 2106000
+    cashEnd: 2059000
+    arEnd: 1683000
+    apEnd: 912000
+    dso: 26
+    headcount: 12
+
+  - month: "2024-05"
+    revenue: 1520000
+    cogs: 1180000
+    gp: 340000
+    opex: 320000
+    ebitda: 20000
+    cashIn: 1911000
+    cashOut: 1704000
+    cashEnd: 2266000
+    arEnd: 1292000
+    apEnd: 708000
+    dso: 26
+    headcount: 12
+
+  - month: "2024-06"
+    revenue: 1280000
+    cogs: 1010000
+    gp: 270000
+    opex: 320000
+    ebitda: -50000
+    cashIn: 1484000
+    cashOut: 1432000
+    cashEnd: 2318000
+    arEnd: 1088000
+    apEnd: 606000
+    dso: 26
+    headcount: 12
+
+  - month: "2024-07"
+    revenue: 1150000
+    cogs: 910000
+    gp: 240000
+    opex: 320000
+    ebitda: -80000
+    cashIn: 1260500
+    cashOut: 1290000
+    cashEnd: 2288500
+    arEnd: 977500
+    apEnd: 546000
+    dso: 26
+    headcount: 12
+    note: "Summer trough — installs paused."
+
+  - month: "2024-08"
+    revenue: 1640000
+    cogs: 1250000
+    gp: 390000
+    opex: 320000
+    ebitda: 70000
+    cashIn: 1223500
+    cashOut: 1366000
+    cashEnd: 2146000
+    arEnd: 1394000
+    apEnd: 750000
+    dso: 26
+    headcount: 13
+
+  - month: "2024-09"
+    revenue: 2980000
+    cogs: 2230000
+    gp: 750000
+    opex: 330000
+    ebitda: 420000
+    cashIn: 1841000
+    cashOut: 1972000
+    cashEnd: 2015000
+    arEnd: 2533000
+    apEnd: 1338000
+    dso: 26
+    headcount: 13
+    note: "Q4 ramp — large hotel AV order books."
+
+  - month: "2024-10"
+    revenue: 2460000
+    cogs: 1860000
+    gp: 600000
+    opex: 330000
+    ebitda: 270000
+    cashIn: 2902000
+    cashOut: 2412000
+    cashEnd: 2505000
+    arEnd: 2091000
+    apEnd: 1116000
+    dso: 26
+    headcount: 13
+
+  - month: "2024-11"
+    revenue: 1720000
+    cogs: 1420000
+    gp: 300000
+    opex: 360000
+    ebitda: -60000
+    cashIn: 2349000
+    cashOut: 2044000
+    cashEnd: 2810000
+    arEnd: 1462000
+    apEnd: 852000
+    dso: 26
+    headcount: 13
+    note: "Shock onset: Gulf freight/customs disruption — freight spikes, margins compress, deliveries start slipping."
+
+  - month: "2024-12"
+    revenue: 1540000
+    cogs: 1290000
+    gp: 250000
+    opex: 360000
+    ebitda: -110000
+    cashIn: 1693000
+    cashOut: 1728000
+    cashEnd: 2775000
+    arEnd: 1309000
+    apEnd: 774000
+    dso: 26
+    headcount: 13
+    note: "Shipments stuck at customs — revenue slips into 2025, expedited-freight opex."
+
+  - month: "2025-01"
+    revenue: 1420000
+    cogs: 1210000
+    gp: 210000
+    opex: 360000
+    ebitda: -150000
+    cashIn: 1522000
+    cashOut: 1618000
+    cashEnd: 2679000
+    arEnd: 1207000
+    apEnd: 726000
+    dso: 26
+    headcount: 13
+    note: "Shock trough — backlog + FX on USD imports drag EBITDA negative."
+
+  - month: "2025-02"
+    revenue: 1680000
+    cogs: 1350000
+    gp: 330000
+    opex: 350000
+    ebitda: -20000
+    cashIn: 1459000
+    cashOut: 1616000
+    cashEnd: 2522000
+    arEnd: 1428000
+    apEnd: 810000
+    dso: 26
+    headcount: 13
+
+  - month: "2025-03"
+    revenue: 3180000
+    cogs: 2330000
+    gp: 850000
+    opex: 340000
+    ebitda: 510000
+    cashIn: 1905000
+    cashOut: 2082000
+    cashEnd: 2345000
+    arEnd: 2703000
+    apEnd: 1398000
+    dso: 26
+    headcount: 13
+    note: "Bounce: backlog clears, delayed Q4 deliveries recognised + Lantern Bay 2025 supply."
+

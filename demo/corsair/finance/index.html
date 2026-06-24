@@ -5,10 +5,10 @@ offset: demo
 permalink: /demo/corsair/finance/
 ---
 
-{% assign company = demo.corsair.company %}
-{% assign jeeves = demo.corsair.jeeves %}
-{% assign cashflow = demo.corsair.cashflow %}
-{% assign targets = demo.corsair.targets %}
+{% assign company = demo["crisis-theater"].company %}
+{% assign jeeves = demo["crisis-theater"].jeeves %}
+{% assign cashflow = demo["crisis-theater"].cashflow %}
+{% assign targets = demo["crisis-theater"].targets %}
 {% assign annual = targets.annual %}
 {% assign currMonth = targets.monthly | last %}
 {% assign currCf = cashflow.monthly | last %}
