@@ -33,18 +33,36 @@ Templates read it as `demo["crisis-theater"]` (hyphenated key, Liquid bracket ac
 ## Per-entity contract
 
 Common: `company, clients, vendors, staff, invoices, payments, commitments, cashflow,
-targets, alerts, fulfillments, jeeves`. Type-specific: `products/orders` (distribution);
-`projects/portfolio/debt/tickets/valuation` (real estate); `services/workorders` (services).
+targets, alerts, fulfillments, forecast, jeeves`. Type-specific: `products/orders/deals`
+(distribution); `projects/portfolio/debt/tickets/valuation` (real estate);
+`services/workorders` (services); `thread/reciprocity/referrals` (Columbus CRM layer —
+Crisis Theater only, per the wire-up decision: Columbus looks at CT).
+
+Product-coverage files (added 2026-07): `spotlights/deals.yml` (Atlas pipeline kanban),
+`crisis-theater/{thread,reciprocity,referrals}.yml` (Columbus Thread / Reciprocity Ledger /
+Warm Leads), `<entity>/forecast.yml` × 4 (Forecast app: P10/P50/P90 cone Apr–Dec 2025,
+scenario drivers, 6-month backtest).
 
 ## Invariants (must stay true)
 
-- Each entity's unpaid AR/AP at "today" ≈ its `cashflow` `arEnd`/`apEnd`.
-- Order / work-order `subtotal` = Σ lines; `vat` = 5%; `total` = subtotal + vat.
+Machine-checked: `npm run demo:verify` (`scripts/verify-demo-data.cjs`) — run it after any
+edit; it must exit with 0 failures.
+
+- Each entity's unpaid AR/AP at "today" = its `cashflow` `arEnd`/`apEnd` **exactly**.
+  Policy: `disputed` items are exposure, not balance (excluded); the insurance
+  `incoming-counterclaim` in CT's payable ledger is a contingent receivable (excluded from AP);
+  open FX items translate at `group/fx` spot.
+- Order / work-order `subtotal` = Σ lines; `vat` = 5% (0 = zero-rated/exempt, keep the note);
+  `total` = subtotal + vat. Invoice `paid` = Σ its `payments` records.
 - Intercompany order amounts = the matching `group/intercompany` transactions.
 - `cashflow.ebitda` is **pre-interest**; debt service sits below it (see Legacy `debt.yml`).
 - Asset revaluation (`legacy-development/valuation.yml`) is non-cash — NOT in EBITDA/consolidation.
-- All cross-references resolve (clients/products/staff/invoices/loans/...).
-- Timeline is anchored to 2025 — do not reintroduce 2026 fiction (footer copyright `{{ currentYear }}` is real and stays).
+- All cross-references resolve (clients/products/staff/invoices/loans/deals/contacts/...).
+- `forecast.yml`: p10 ≤ p50 ≤ p90 per month; `backtest.months[].actual` mirrors `cashflow`
+  revenue exactly; `errorPct` and `summaryMapePct` recompute from the rows.
+- `reciprocity` balance = Σ received − Σ given weights; deal stages ∈ `stageDefaults`.
+- Timeline is anchored to 2025 — do not reintroduce 2026 fiction (footer copyright `{{ currentYear }}` is real
+  and stays). Contractual forward dates (leaseEnd, loan maturity, re-let scenarios) may extend past "today".
 
 ## Holding EBITDA (sanity check)
 
@@ -61,7 +79,12 @@ money / operations / strategy / cfo / sales / hr. Tone of voice, scope of advice
 
 ## Status & next step
 
-All four entities are built and integrity-checked; Jeeves nudges and `commitments` (AR/AP +
-upcoming payments KPI) are in. **Next:** the calculated holding **Consolidation API** (sum
-entity cashflows, eliminate intercompany, FX-translate) + wiring the product demos to the
-dataset — see `../../_editorial/backlog/demo/wire-up-and-consolidation.md`.
+All four entities are built and integrity-checked (`npm run demo:verify` — 0 failures).
+Jeeves nudges, `commitments`, and the product-coverage layer (Atlas `deals`, Columbus
+`thread/reciprocity/referrals`, Forecast `forecast` × 4) are in — the dataset now carries
+everything the tools docs promise for Atlas / Columbus / Forecast / Corsair.
+**Next:** wiring the product demos to the dataset + the holding consolidation views.
+Start from `../../_editorial/backlog/demo/wiring-handbook.md` — screen→data map, acceptance
+numbers, known hardcode drifts. Reference consolidation: `npm run demo:consolidate`
+(`scripts/consolidate-demo-data.cjs` — sums cashflows, eliminates intercompany, nets open
+IC balances). Watchtower and Fanfare are intentionally out of scope for this dataset.

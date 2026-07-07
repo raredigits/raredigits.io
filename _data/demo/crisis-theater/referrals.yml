@@ -1,0 +1,110 @@
+# The Crisis Theater — warm leads & testimonials (powers Columbus "Warm Leads").
+# The introduction tree: which existing relationship can open which door, with a fit
+# score (0–100), the ask checklist, and testimonials attached to the pitch.
+# from → clients.yml; via → thread.yml contacts; status: identified | asked | introduced | converted | parked.
+
+warmLeads:
+
+  - id: "wl-chalhoub-lvmh-event"
+    prospect: { org: "Chalhoub House", contact: "Maya Rizk", role: "Head of Client Experience" }
+    targetClient: "chalhoub"          # dormant account — reactivation, not cold
+    from: "redbull-mena"
+    via: "kp-redbull-max"
+    fitScore: 82
+    status: "asked"
+    hypothesis: "Private client dinners for their maisons — recurring, high-margin, discreet. Royal Reception muscle transfers directly."
+    ask:
+      - { step: "Confirm Max is comfortable making the intro", done: true, date: "2025-03-15" }
+      - { step: "One-pager tailored to maison private events", done: true, date: "2025-03-20" }
+      - { step: "Max sends the intro note", done: false, due: "2025-04-02" }
+      - { step: "First meeting within 2 weeks of intro", done: false }
+    testimonials: ["testi-redbull", "testi-royal-anon"]
+
+  - id: "wl-adnoc-expansion"
+    prospect: { org: "ADNOC", contact: "Sara Al Hosani", role: "Corporate Events Lead" }
+    targetClient: "adnoc"
+    from: "dtcm"
+    via: "kp-dtcm-khalid"
+    fitScore: 74
+    status: "converted"
+    hypothesis: "Annual innovation summit → full corporate events calendar (4–6 events/yr)."
+    ask:
+      - { step: "Khalid vouches to the events committee", done: true, date: "2025-02-12" }
+      - { step: "Deliver Innovation Summit 2025 flawlessly", done: true, date: "2025-02-19" }
+      - { step: "Propose annual calendar retainer", done: false, due: "2025-05-15", note: "After their Net-90 payment lands (Apr 29) — not before." }
+    testimonials: ["testi-dtcm"]
+    note: "Converted for the summit; the retainer is the real prize. Do not pitch while AED 1.1M is unpaid — see TCT-2025-014."
+
+  - id: "wl-qatar-royal-network"
+    prospect: { org: "Qatari private offices (2nd circle)", contact: "(via Doha majordomo)", role: "" }
+    from: "royal-q"
+    via: "kp-royalg-majlis"
+    fitScore: 68
+    status: "identified"
+    hypothesis: "Doha Heritage Reception opened the Qatari royal circuit. One more flawless delivery earns the next introduction — these doors only open from inside."
+    ask:
+      - { step: "Deliver Doha Heritage Reception milestone 2 (May)", done: false, due: "2025-05-20" }
+      - { step: "Wait to be asked. Do not pitch.", done: false }
+    testimonials: []
+    note: "Protocol identical to royal-g: no email, no decks, no logos."
+
+  - id: "wl-maf-mall-activations"
+    prospect: { org: "Majid Al Futtaim", contact: "Omar Beydoun", role: "Director, Mall Experiences" }
+    targetClient: "majid-al-futtaim"   # existing but single-event account
+    from: "meraas"
+    via: "kp-meraas-lena"
+    fitScore: 71
+    status: "parked"
+    hypothesis: "Mall of the Emirates seasonal takeovers. Real budget, but their in-house agency defends the turf."
+    ask:
+      - { step: "Lena intro after AR Walk milestone 3 ships", done: false, due: "2025-05-01" }
+    testimonials: ["testi-meraas"]
+    note: "Parked until milestone 3 delivers — the reciprocity ledger with Meraas must be in credit first."
+
+  - id: "wl-spotlights-meraas-led"
+    prospect: { org: "Meraas Entertainment", contact: "Lena Haddad", role: "Head of Placemaking" }
+    from: "meraas"
+    via: "kp-meraas-lena"
+    fitScore: 88
+    status: "introduced"
+    handedTo: "spotlights"             # group cross-sell — tracked in spotlights/deals.yml
+    handedToDeal: "deal-2503-021"
+    hypothesis: "Permanent LED at two boardwalk venues — hardware scope, Spotlights' lane. The group keeps the revenue either way."
+    ask:
+      - { step: "Warm handover call (Lena + Priya + us)", done: true, date: "2025-03-27" }
+      - { step: "Spotlights site survey", done: false, due: "2025-04-04" }
+    testimonials: ["testi-meraas"]
+
+testimonials:
+  - id: "testi-redbull"
+    client: "redbull-mena"
+    person: "kp-redbull-max"
+    quote: "Best brand-lift score we recorded in MENA last year. They engineer attention like other people engineer stages."
+    date: "2025-03-15"
+    format: "video"
+    approvedFor: ["pitch-decks", "warm-intros"]
+
+  - id: "testi-dtcm"
+    client: "dtcm"
+    person: "kp-dtcm-khalid"
+    quote: "They delivered a city-scale program in six weeks when our vendor collapsed. Since then, first call every time."
+    date: "2024-12-18"
+    format: "written"
+    approvedFor: ["warm-intros", "tenders"]
+
+  - id: "testi-meraas"
+    client: "meraas"
+    person: "kp-meraas-lena"
+    quote: "Dwell time on the boardwalk is up 40% where the AR layer runs. That is placemaking, not decoration."
+    date: "2025-03-01"
+    format: "written"
+    approvedFor: ["pitch-decks", "warm-intros"]
+
+  - id: "testi-royal-anon"
+    client: "royal-g"
+    person: null
+    quote: "(Reference available by telephone, on request, name withheld.)"
+    date: "2025-02-01"
+    format: "verbal-reference"
+    approvedFor: ["private-client-intros"]
+    note: "Never printed. The offer of the phone call is the testimonial."

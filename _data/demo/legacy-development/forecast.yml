@@ -1,0 +1,51 @@
+# Legacy Development — revenue forecast (powers the Forecast app).
+# Monthly P10/P50/P90 for Apr–Dec 2025, frozen at "today" 2025-03-28. History → cashflow.yml;
+# backtest.actual mirrors cashflow revenue exactly. plan = FY2025 internal plan
+# (targets.yml monthly ends Q1-2025). Amounts in AED. errorPct = (p50 − actual)/actual × 100.
+#
+# The honest demo: the Feb-2025 anchor-tenant default was a structural break no seasonal
+# model sees coming — the backtest shows the miss instead of hiding it. Everything after
+# Feb is scenario-driven by one question: when does the anchor warehouse re-let, and at what rate?
+
+asOf: "2025-03-28"
+metric: "revenue"
+currency: "AED"
+horizon: "2025-04 → 2025-12"
+model:
+  method: "contracted rent-roll + re-letting assumptions (not statistical — leases are contracts)"
+  trainedOn: "2024-01 → 2025-03 (15 months)"
+  seasonality: "None material — rent is flat by design. Variance comes from occupancy events."
+  notes: "p50 assumes the anchor warehouse re-lets from Sep 2025 at −15% on the defaulted rate. p10 = vacant through Dec. p90 = re-let Jul at −8%."
+
+monthly:
+  - { month: "2025-04", p10: 730000, p50: 750000, p90:  770000, plan: 760000 }
+  - { month: "2025-05", p10: 735000, p50: 760000, p90:  790000, plan: 770000 }
+  - { month: "2025-06", p10: 735000, p50: 760000, p90:  800000, plan: 770000 }
+  - { month: "2025-07", p10: 740000, p50: 770000, p90:  980000, plan: 780000, note: "p90: early re-let scenario starts here" }
+  - { month: "2025-08", p10: 740000, p50: 770000, p90: 1000000, plan: 780000 }
+  - { month: "2025-09", p10: 745000, p50: 950000, p90: 1030000, plan: 960000, note: "p50: anchor re-let (−15% on defaulted rate) + fit-out rent-free burn-off" }
+  - { month: "2025-10", p10: 745000, p50: 1050000, p90: 1060000, plan: 1060000 }
+  - { month: "2025-11", p10: 750000, p50: 1080000, p90: 1090000, plan: 1090000 }
+  - { month: "2025-12", p10: 750000, p50: 1090000, p90: 1100000, plan: 1100000 }
+
+backtest:
+  months:
+    - { month: "2024-10", forecastP50: 1165000, actual: 1160000, errorPct: 0.4 }
+    - { month: "2024-11", forecastP50: 1175000, actual: 1170000, errorPct: 0.4 }
+    - { month: "2024-12", forecastP50: 1185000, actual: 1180000, errorPct: 0.4 }
+    - { month: "2025-01", forecastP50: 1195000, actual: 1190000, errorPct: 0.4 }
+    - { month: "2025-02", forecastP50: 1200000, actual:  560000, errorPct: 114.3, note: "Anchor default. No rent-roll model forecasts a tenant collapse — this is what alerts are for, not forecasts." }
+    - { month: "2025-03", forecastP50: 1190000, actual:  740000, errorPct: 60.8, note: "Model still carried the anchor; re-based from April." }
+  summaryMapePct: 29.5
+  summaryNote: "MAPE is 0.4% in steady state and meaningless across a structural break — shown unfiltered on purpose."
+
+scenarios:
+  drivers:
+    - { id: "anchorReletMonth", label: "Anchor re-let month",       unit: "month", base: "2025-09", conservative: "2026-01", stretch: "2025-07" }
+    - { id: "reletRateDelta",   label: "Re-let rate vs old lease",  unit: "pct",   base: -15, conservative: -25, stretch: -8 }
+    - { id: "occupancyExit",    label: "Portfolio occupancy (Dec)", unit: "pct",   base: 91, conservative: 84, stretch: 95 }
+    - { id: "arrearsPct",       label: "Tenant arrears rate",       unit: "pct",   base: 3.5, conservative: 6.0, stretch: 2.0, note: "Two chronic late payers drive the base" }
+  cases:
+    - { id: "base",         label: "Base",         revenueFY2025: 10470000, note: "Q1 actual 2.49M + Apr–Dec p50 7.98M. The anchor hole costs ~3.2M vs FY2024." }
+    - { id: "conservative", label: "Conservative", revenueFY2025: 9200000,  note: "Warehouse dark through Dec; arrears widen. Debt service still covered — DSCR tightens toward covenant (see debt.yml)." }
+    - { id: "stretch",      label: "Stretch",      revenueFY2025: 11200000, note: "Jul re-let at −8%; both chronic late payers regularise." }

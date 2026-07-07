@@ -132,3 +132,38 @@ clients:
     paymentTerms: "Net 60"
     creditLimit: 1000000
     status: "active"
+
+  # --- prospects (pipeline only — no trading history yet; see deals.yml) ---
+  - id: "cl-meraas-ent"
+    name: "Meraas Entertainment"
+    type: "Destination Developer"
+    segment: "B2B"
+    relationshipSince: null
+    accountManager: "spl-sales-head"
+    paymentTerms: null
+    creditLimit: null
+    status: "prospect"
+    note: "Inbound via Crisis Theater's Bluewaters AR Walk — wants permanent LED for two boardwalk venues."
+
+  - id: "cl-vox-cinemas"
+    name: "VOX Cinemas (Majid Al Futtaim)"
+    type: "Cinema Chain"
+    segment: "B2B"
+    relationshipSince: null
+    accountManager: "spl-sales-1"
+    paymentTerms: null
+    creditLimit: null
+    status: "prospect"
+    note: "Lobby LED refresh RFP across 4 flagship sites. Procurement-led — long cycle, price pressure."
+
+  - id: "cl-redsea-global"
+    name: "Red Sea Global (KSA)"
+    type: "Giga-project Contractor (export)"
+    segment: "B2B"
+    relationshipSince: null
+    accountManager: "spl-sales-1"
+    paymentTerms: null
+    creditLimit: null
+    currency: "USD"
+    status: "prospect"
+    note: "Intro via Neon Events KSA. USD export, zero-rated VAT. Compliance onboarding required before first PO."

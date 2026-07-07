@@ -1,0 +1,47 @@
+# The Crisis Theater — revenue forecast (powers the Forecast app).
+# Monthly P10/P50/P90 for Apr–Dec 2025, frozen as of the books close ("today" 2025-03-28).
+# actuals live in cashflow.yml (the app draws history from there); backtest.actual mirrors
+# cashflow revenue exactly. plan = FY2025 internal plan (targets.yml monthly ends Q1-2025).
+# Amounts in AED. errorPct = (forecastP50 − actual) / actual × 100.
+
+asOf: "2025-03-28"
+metric: "revenue"
+currency: "AED"
+horizon: "2025-04 → 2025-12"
+model:
+  method: "seasonal-trend + weighted event pipeline"
+  trainedOn: "2023-01 → 2025-03 (27 months)"
+  seasonality: "Peaks: Sep (Ancient Moon), Dec (Solstice Souk), Mar (Lantern Bay). Trough: Jul–Aug."
+  notes: "Band widens with horizon: ±7% next month → ±30% at month 9. Dec carries Solstice Souk renewal risk (Aldira dispute — see p10)."
+
+monthly:
+  - { month: "2025-04", p10: 2420000, p50: 2600000, p90: 2780000, plan: 2700000 }
+  - { month: "2025-05", p10: 3870000, p50: 4300000, p90: 4730000, plan: 4200000, note: "Aurora Gala — dispute may shrink scope (p10)" }
+  - { month: "2025-06", p10: 2020000, p50: 2300000, p90: 2900000, plan: 2300000, note: "p90 includes possible Eid reception (royal-g, unconfirmed)" }
+  - { month: "2025-07", p10: 1100000, p50: 1300000, p90: 1520000, plan: 1400000 }
+  - { month: "2025-08", p10: 1230000, p50: 1500000, p90: 1790000, plan: 1500000 }
+  - { month: "2025-09", p10: 4700000, p50: 5800000, p90: 6900000, plan: 5900000, note: "Ancient Moon 2025 — weather-insured this year" }
+  - { month: "2025-10", p10: 2260000, p50: 2900000, p90: 3570000, plan: 3000000 }
+  - { month: "2025-11", p10: 2330000, p50: 3100000, p90: 3910000, plan: 3200000 }
+  - { month: "2025-12", p10: 3360000, p50: 4800000, p90: 6240000, plan: 5000000, note: "Solstice Souk 2025 hinges on title sponsor — Aldira unresolved" }
+
+backtest:  # model p50 frozen at month start vs cashflow actual — last 6 months
+  months:
+    - { month: "2024-10", forecastP50: 2750000, actual: 2640000, errorPct: 4.2 }
+    - { month: "2024-11", forecastP50: 2700000, actual: 2880000, errorPct: -6.3 }
+    - { month: "2024-12", forecastP50: 4100000, actual: 4480000, errorPct: -8.5 }
+    - { month: "2025-01", forecastP50: 3100000, actual: 2960000, errorPct: 4.7 }
+    - { month: "2025-02", forecastP50: 2650000, actual: 2530000, errorPct: 4.7 }
+    - { month: "2025-03", forecastP50: 5600000, actual: 6020000, errorPct: -7.0 }
+  summaryMapePct: 5.9
+
+scenarios:
+  drivers:
+    - { id: "briefWinRate",      label: "Brief win rate",            unit: "ratio", base: 0.42, conservative: 0.34, stretch: 0.50 }
+    - { id: "avgProjectValue",   label: "Avg project value",         unit: "AED",   base: 1900000, conservative: 1600000, stretch: 2200000 }
+    - { id: "sponsorRenewal",    label: "Sponsor renewal rate",      unit: "ratio", base: 0.75, conservative: 0.55, stretch: 0.85, note: "Conservative = Aldira lost + one follower" }
+    - { id: "collectionLagDays", label: "Collection lag (DSO)",      unit: "days",  base: 51,   conservative: 62,   stretch: 45 }
+  cases:
+    - { id: "base",         label: "Base",         revenueFY2025: 40100000, note: "Q1 actual 11.51M + Apr–Dec p50 28.6M. All flagship events run; Aldira replaced or settled by Q4." }
+    - { id: "conservative", label: "Conservative", revenueFY2025: 36200000, note: "Solstice Souk downsized without title sponsor; no Eid reception; Aurora scope shrinks." }
+    - { id: "stretch",      label: "Stretch",      revenueFY2025: 43500000, note: "Eid reception lands; EMAAR Dubai Islands teaser in Nov; Solstice bigger with new sponsor." }

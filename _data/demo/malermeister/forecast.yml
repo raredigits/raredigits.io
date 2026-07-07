@@ -1,0 +1,46 @@
+# Malermeister LLC — revenue forecast (powers the Forecast app).
+# Monthly P10/P50/P90 for Apr–Dec 2025, frozen at "today" 2025-03-28. History → cashflow.yml;
+# backtest.actual mirrors cashflow revenue exactly. plan = FY2025 internal plan
+# (targets.yml monthly ends Q1-2025). Amounts in AED. errorPct = (p50 − actual)/actual × 100.
+
+asOf: "2025-03-28"
+metric: "revenue"
+currency: "AED"
+horizon: "2025-04 → 2025-12"
+model:
+  method: "throughput model — tickets/month × mix (workorders.yml volumeByMonth)"
+  trainedOn: "2024-01 → 2025-03 (15 months)"
+  seasonality: "Jun–Sep trough (summer exodus, fleets defer cosmetic work); Oct and Mar–Apr peaks."
+  notes: "Revenue risk is volume, not price (menu is fixed — services.yml). Margin risk is EUR paint cost — that lives in the scenario drivers, not the revenue cone."
+
+monthly:
+  - { month: "2025-04", p10: 455000, p50: 490000, p90: 525000, plan: 500000 }
+  - { month: "2025-05", p10: 410000, p50: 450000, p90: 495000, plan: 460000 }
+  - { month: "2025-06", p10: 340000, p50: 380000, p90: 425000, plan: 390000 }
+  - { month: "2025-07", p10: 285000, p50: 330000, p90: 380000, plan: 340000 }
+  - { month: "2025-08", p10: 270000, p50: 320000, p90: 375000, plan: 330000 }
+  - { month: "2025-09", p10: 395000, p50: 470000, p90: 550000, plan: 480000 }
+  - { month: "2025-10", p10: 435000, p50: 530000, p90: 625000, plan: 540000 }
+  - { month: "2025-11", p10: 375000, p50: 470000, p90: 565000, plan: 480000 }
+  - { month: "2025-12", p10: 340000, p50: 440000, p90: 540000, plan: 450000 }
+
+backtest:
+  months:
+    - { month: "2024-10", forecastP50: 505000, actual: 520000, errorPct: -2.9 }
+    - { month: "2024-11", forecastP50: 480000, actual: 460000, errorPct: 4.3 }
+    - { month: "2024-12", forecastP50: 450000, actual: 430000, errorPct: 4.7 }
+    - { month: "2025-01", forecastP50: 390000, actual: 400000, errorPct: -2.5 }
+    - { month: "2025-02", forecastP50: 400000, actual: 380000, errorPct: 5.3 }
+    - { month: "2025-03", forecastP50: 460000, actual: 500000, errorPct: -8.0, note: "Prestige fleet batch landed two weeks early" }
+  summaryMapePct: 4.6
+
+scenarios:
+  drivers:
+    - { id: "ticketsPerMonth",  label: "Work-order tickets / month", unit: "count", base: 13, conservative: 10, stretch: 16 }
+    - { id: "avgLargeTicket",   label: "Avg large-job value",        unit: "AED",   base: 24000, conservative: 20000, stretch: 28000 }
+    - { id: "fleetShare",       label: "Rental-fleet share of large jobs", unit: "ratio", base: 0.80, conservative: 0.88, stretch: 0.70, note: "Lower = more private collectors = richer mix" }
+    - { id: "eurRate",          label: "EUR/AED (paint imports)",    unit: "rate",  base: 3.95, conservative: 4.10, stretch: 3.85, note: "Margin driver — does not move revenue" }
+  cases:
+    - { id: "base",         label: "Base",         revenueFY2025: 5160000, note: "Q1 actual 1.28M + Apr–Dec p50 3.88M. Flat vs FY2024 completed 5.08M." }
+    - { id: "conservative", label: "Conservative", revenueFY2025: 4700000, note: "Deeper summer trough; one fleet contract churns." }
+    - { id: "stretch",      label: "Stretch",      revenueFY2025: 5650000, note: "Second dealer account signs; collector referrals compound." }

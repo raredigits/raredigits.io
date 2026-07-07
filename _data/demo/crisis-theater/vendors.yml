@@ -98,6 +98,14 @@ vendors:
     paymentTerms: "T+5 net of 6.5% fee"
     rating: "preferred"
 
+  - id: "vend-spotlights"
+    name: "Spotlights Ltd"
+    type: "AV / LED supply (intercompany)"
+    paymentTerms: "Net 30"
+    rating: "preferred"
+    intercompany: true
+    note: "Sister company in the Ambitions holding — balances and revenue eliminated on consolidation (group/intercompany.yml)."
+
 freelancers:
   - id: "fl-rashid"
     name: "Rashid Al-Maktoum (no relation)"

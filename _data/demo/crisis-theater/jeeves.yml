@@ -79,7 +79,7 @@ insights:
   - id: "j-money-02"
     scope: "money"
     title: "DSO recovering — keep the discipline"
-    body: "DSO down from 78 (Sep '25) to 51 (Mar '26). That is excellent work. The trend is real, not seasonal. The two clients dragging it up are now Aldira (above) and Umbrella (Invoice #329, AED 6K — symbolic, not financial). Resolve both and you land at industry-leading 42–45 days."
+    body: "DSO down from 78 (Sep '24) to 51 (Mar '25). That is excellent work. The trend is real, not seasonal. The two clients dragging it up are now Aldira (above) and Umbrella (Invoice #329, AED 6K — symbolic, not financial). Resolve both and you land at industry-leading 42–45 days."
     stance: "reassure"
     severity: "nice"
     confidence: "high"
@@ -257,9 +257,9 @@ lenses:
     severity: "warning"
     stance: "tighten-ar"
     headline: "AED 5.64M that isn't yours to spend — and AED 800K that should be."
-    body: "The escrow is earmarked for the 15 April festival vendor settlement; read it as restricted, not as cash. Unrestricted operating cash is a healthy AED 9.1M. DSO has fallen to 51 from a 78-day peak, but Aldira's AED 800K is 47 days overdue — your largest single collection risk."
+    body: "The escrow is earmarked for the 15 April festival vendor settlement; read it as restricted, not as cash. Unrestricted operating cash is a healthy AED 9.1M. DSO has fallen to 51 from a 78-day peak, but Aldira's AED 800K is 36 days overdue — your largest single collection risk."
     actions: ["Escalate the Aldira collection this week", "Keep the escrow visually separated on the cash view"]
-    refs: ["TCT-2025-156", "cashflow"]
+    refs: ["TCT-2024-156", "cashflow"]
 
   - lens: "sales"
     label: "Sales"

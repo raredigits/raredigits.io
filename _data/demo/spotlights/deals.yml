@@ -1,0 +1,227 @@
+# Spotlights Ltd — sales pipeline (powers the Atlas ERP kanban).
+# stage: new | qualified | proposal | negotiation | won | lost — matches the five kanban
+# columns (won/lost leave the board). probability is the stage default unless a deal
+# carries better information. Weighted pipeline = Σ value × probability over open stages —
+# the UI computes it, nothing here stores it.
+# client → clients.yml (incl. status: prospect); owner → staff.yml; products → products.yml.
+# value is net of VAT, in AED unless currency overrides. Fiction "today" = 2025-03-28.
+
+stageDefaults:
+  - { stage: "new",         label: "New",           probability: 0.10 }
+  - { stage: "qualified",   label: "Qualified",     probability: 0.25 }
+  - { stage: "proposal",    label: "Proposal sent", probability: 0.50 }
+  - { stage: "negotiation", label: "Negotiation",   probability: 0.70 }
+  - { stage: "won",         label: "Won",           probability: 1.0 }
+  - { stage: "lost",        label: "Lost",          probability: 0.0 }
+
+deals:
+
+  # ---------- new ----------
+  - id: "deal-2503-021"
+    title: "Meraas — Bluewaters boardwalk permanent LED (2 venues)"
+    client: "cl-meraas-ent"
+    stage: "new"
+    value: 1650000
+    probability: 0.10
+    owner: "spl-sales-head"
+    created: "2025-03-18"
+    expectedClose: "2025-09-30"
+    source: "referral"
+    products: ["prod-led-absen", "prod-media-disguise"]
+    nextStep: "Site survey both venues w/c Mar 31; Stefan to scope weatherised cabinets."
+    note: "Came in via Crisis Theater's AR Walk build. Permanent install — new segment for us."
+
+  - id: "deal-2503-022"
+    title: "Jumeirah — Burj Al Arab ballroom AV refresh"
+    client: "cl-jumeirah"
+    stage: "new"
+    value: 480000
+    probability: 0.10
+    owner: "spl-sales-head"
+    created: "2025-03-24"
+    expectedClose: "2025-07-31"
+    source: "existing-account"
+    products: ["prod-light-martin", "prod-audio-k2"]
+    nextStep: "Walkthrough with hotel engineering Apr 3."
+
+  - id: "deal-2503-023"
+    title: "MediaPro — OB van monitor wall upgrade"
+    client: "cl-mediapro"
+    stage: "new"
+    value: 210000
+    probability: 0.10
+    owner: "spl-sales-2"
+    created: "2025-03-26"
+    expectedClose: "2025-06-30"
+    source: "inbound"
+    products: ["prod-led-proc"]
+    nextStep: "Send spec sheet + reference visit to DWTC install."
+
+  # ---------- qualified ----------
+  - id: "deal-2502-017"
+    title: "VOX Cinemas — lobby LED refresh, 4 flagship sites"
+    client: "cl-vox-cinemas"
+    stage: "qualified"
+    value: 1240000
+    probability: 0.25
+    owner: "spl-sales-1"
+    created: "2025-02-11"
+    expectedClose: "2025-08-31"
+    source: "rfp"
+    products: ["prod-led-absen"]
+    nextStep: "RFP response due Apr 11. Pricing committee — margin floor 22%."
+    note: "Procurement-led. Two EU competitors shortlisted; freight lead times are our weak flank."
+
+  - id: "deal-2502-018"
+    title: "Expo City — legacy pavilion projection-to-LED conversion"
+    client: "cl-expo-city"
+    stage: "qualified"
+    value: 890000
+    probability: 0.25
+    owner: "spl-md"
+    created: "2025-02-20"
+    expectedClose: "2025-10-31"
+    source: "existing-account"
+    products: ["prod-led-roe", "prod-control-ma3"]
+    nextStep: "Await budget approval cycle (B2G — moves quarterly). Karim owns the relationship."
+
+  - id: "deal-2503-019"
+    title: "Neon KSA — Riyadh Season rental stock package"
+    client: "cl-neon-ksa"
+    stage: "qualified"
+    value: 700000
+    currency: "USD"
+    probability: 0.25
+    owner: "spl-sales-1"
+    created: "2025-03-05"
+    expectedClose: "2025-08-15"
+    source: "existing-account"
+    products: ["prod-led-roe", "prod-light-robe", "prod-rig-cm1t"]
+    nextStep: "Omar in Riyadh Apr 7–9; confirm scope split vs their own procurement."
+    note: "USD export, zero-rated VAT. Big but seasonal — hinges on their Riyadh Season award."
+
+  # ---------- proposal ----------
+  - id: "deal-2501-011"
+    title: "DWTC — Hall 8 house rig expansion (follow-on)"
+    client: "cl-dwtc"
+    stage: "proposal"
+    value: 620000
+    probability: 0.50
+    owner: "spl-sales-head"
+    created: "2025-01-15"
+    expectedClose: "2025-05-30"
+    source: "existing-account"
+    products: ["prod-light-robe", "prod-audio-ks28"]
+    nextStep: "Proposal sent Mar 20 after Hall 7 delivery (SPL-O-2503-101). Follow up Apr 1."
+    note: "Direct follow-on from the delivered Hall 7 job — reference install is next door."
+
+  - id: "deal-2501-012"
+    title: "Atlantis — Awakening show lighting overlay"
+    client: "cl-atlantis"
+    stage: "proposal"
+    value: 540000
+    probability: 0.50
+    owner: "spl-sales-2"
+    created: "2025-01-28"
+    expectedClose: "2025-06-15"
+    source: "existing-account"
+    products: ["prod-light-martin", "prod-control-ma3"]
+    nextStep: "Value-engineering round — they asked for −15%; counter with phased delivery."
+
+  - id: "deal-2502-014"
+    title: "Red Sea Global — marina welcome centre media wall"
+    client: "cl-redsea-global"
+    stage: "proposal"
+    value: 480000
+    currency: "USD"
+    probability: 0.40
+    owner: "spl-sales-1"
+    created: "2025-02-06"
+    expectedClose: "2025-07-31"
+    source: "referral"
+    products: ["prod-led-absen", "prod-media-disguise"]
+    nextStep: "Vendor compliance onboarding in their portal — blocking; Grace on documents."
+    note: "Probability held below stage default until onboarding clears. Intro via Neon KSA."
+
+  - id: "deal-2502-015"
+    title: "Protec — KS28 fleet top-up"
+    client: "cl-protec"
+    stage: "proposal"
+    value: 336000
+    probability: 0.50
+    owner: "spl-sales-2"
+    created: "2025-02-24"
+    expectedClose: "2025-05-15"
+    source: "existing-account"
+    products: ["prod-audio-ks28"]
+    nextStep: "They want Q2 delivery — confirm L-Acoustics allocation before committing dates."
+
+  # ---------- negotiation ----------
+  - id: "deal-2412-008"
+    title: "Crisis Theater — Aurora Gala LED dome supply"
+    client: "cl-crisis-theater"
+    stage: "negotiation"
+    value: 850000
+    probability: 0.70
+    owner: "spl-sales-head"
+    created: "2024-12-10"
+    expectedClose: "2025-04-30"
+    source: "intercompany"
+    intercompany: true
+    products: ["prod-led-roe", "prod-rig-cm1t"]
+    nextStep: "Held pending CT's change-order dispute with Vision Realm — scope may shrink."
+    note: "Intercompany — will carry icRef and be eliminated on consolidation if it books."
+
+  - id: "deal-2501-010"
+    title: "Flash Entertainment — festival season rental frame"
+    client: "cl-flash"
+    stage: "negotiation"
+    value: 760000
+    probability: 0.70
+    owner: "spl-sales-1"
+    created: "2025-01-08"
+    expectedClose: "2025-04-15"
+    source: "existing-account"
+    products: ["prod-led-roe", "prod-light-robe", "prod-audio-k2"]
+    nextStep: "Commercials agreed; legal on liability cap. Target signature w/c Apr 7."
+    note: "The 240 ROE cabinets stuck in transit since Dec are earmarked here — ETA risk flagged to client."
+
+  # ---------- closed (leave the board; kept for velocity/win-rate stats) ----------
+  - id: "deal-2502-016"
+    title: "DWTC — Hall 7 house rig"
+    client: "cl-dwtc"
+    stage: "won"
+    value: 952000
+    probability: 1.0
+    owner: "spl-sales-head"
+    created: "2025-02-03"
+    closed: "2025-03-06"
+    order: "SPL-O-2503-101"
+    source: "existing-account"
+    note: "Won against EU distributor on lead time. Booked as SPL-O-2503-101, delivered Mar 22."
+
+  - id: "deal-2501-009"
+    title: "Backstage AV — LED sub-rental package"
+    client: "cl-backstage"
+    stage: "lost"
+    value: 264000
+    probability: 0.0
+    owner: "spl-sales-2"
+    created: "2025-01-12"
+    closed: "2025-02-27"
+    source: "existing-account"
+    lostReason: "credit"
+    note: "Declined — account on credit watch after the Q4 freight squeeze; offered cash-with-order, they passed."
+
+  - id: "deal-2412-007"
+    title: "Expo City — winter activation LED floor"
+    client: "cl-expo-city"
+    stage: "lost"
+    value: 410000
+    probability: 0.0
+    owner: "spl-md"
+    created: "2024-12-02"
+    closed: "2025-01-20"
+    source: "rfp"
+    lostReason: "price"
+    note: "Lost on price to a Shenzhen direct-import bid. Fed the 'stock depth vs price' debate at the Feb strategy offsite."

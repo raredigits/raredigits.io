@@ -78,6 +78,7 @@ transactions:
 | `targets.yml` | план/факт по воронке sales→production→deliveries→payments | ⬩ есть |
 | `alerts.yml` | правила + активные алерты | ⬩ есть |
 | `jeeves.yml` | AI-подсказки (опц., где есть Jeeves) | ⬩ есть |
+| `forecast.yml` | помесячный прогноз P10/P50/P90 (Apr–Dec 2025) + драйверы сценариев + 6-мес backtest (actual = cashflow). Питает Forecast | ⬩ есть у всех четырёх (2026-07) |
 
 Тип-специфичные файлы:
 
@@ -86,11 +87,22 @@ transactions:
 | `projects.yml` | events, realestate | проекты/объекты (есть у Crisis Theater) |
 | `products.yml` | distribution | каталог (узкий, дорогой ассортимент) |
 | `orders.yml` | distribution | заказы / PO |
+| `deals.yml` | distribution (Spotlights) | пайплайн продаж для канбана Atlas: stageDefaults (new 0.10 → negotiation 0.70), сделки с client/owner/products/probability; won → ссылка на order (2026-07) |
 | `portfolio.yml` | realestate | объекты недвижимости (rent, occupancy, marketValue, loan) |
 | `debt.yml` | realestate (где крупный долг) | кредитные facilities (lender, outstanding, rate, debt service, DSCR, covenant) |
 | `tickets.yml` | realestate, services | заявки на починку/ремонт (→ fulfillment при закрытии) |
 | `valuation.yml` | realestate | помесячная переоценка активов (asset value); non-cash, не в EBITDA — слой total return |
 | `workorders.yml` | services (Malermeister) | заказ-наряды |
+
+CRM-слой Columbus (только Crisis Theater — решение 3 в [[wire-up-and-consolidation]]):
+
+| Файл | Назначение |
+|---|---|
+| `thread.yml` | контакты у клиентов + треды отношений: фазы (`phaseModel`), записи, «мелочи», обещания (kept/broken), quiet-detection (`quietAfterDays` vs `lastTouch`) |
+| `reciprocity.yml` | реестр взаимности: entries given/received с весами 1–3, `balance = Σ received − Σ given`, статус overdrawn |
+| `referrals.yml` | тёплые лиды: from/via по существующим отношениям, fitScore, чек-лист ask, тестимониалы; cross-sell в группу через `handedToDeal` |
+
+Инварианты проверяются скриптом: `npm run demo:verify` (`scripts/verify-demo-data.cjs`).
 
 ---
 

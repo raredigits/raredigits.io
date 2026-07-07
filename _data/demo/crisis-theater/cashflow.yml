@@ -409,10 +409,10 @@ monthly:
     cashOut: 3580000
     cashEnd: 14740000
     arEnd: 3273540
-    apEnd: 1188030
+    apEnd: 1944030
     dso: 51
     headcount: 18
-    note: "Lantern Bay 2025 — biggest event month ever (AED 5.8M). Aldira AED 800K still outstanding. Aurora Gala costs accelerating."
+    note: "Lantern Bay 2025 — biggest event month ever (AED 5.8M). Aldira AED 800K still outstanding. Aurora Gala costs accelerating. AP includes the AED 756K intercompany LED supply from Spotlights (due Apr 12)."
 
 # 27-month roll-up (informational — handy for dashboard hero numbers).
 # Equals the sum of the monthly rows above (rendered as "27-month total" on /demo/corsair/finance/).

@@ -213,8 +213,8 @@ receivable:
     issued: "2024-12-22"
     due: "2025-02-20"
     amount: 760000
-    vat: 40000
-    total: 800000
+    vat: 38000
+    total: 798000
     paid: 0
     status: "overdue"
     overdueDays: 36
@@ -398,16 +398,16 @@ receivable:
 
   - number: "TCT-2025-053"
     project: "p-2025-004"
-    client: null
+    client: "almas-bank"
     description: "Lantern Bay 2025 — Almas Bank sponsorship"
     issued: "2025-01-25"
     due: "2025-03-26"
     amount: 620000
     vat: 31000
     total: 651000
-    paid: 0
-    status: "sent"
-    note: "Due in 2 days — Almas Bank reliable"
+    paid: 380200
+    status: "partial"
+    note: "First contract tranche (AED 380,200) received on the due date — Almas Bank reliable. Balance AED 270,800 releases on the post-festival activation report (April)."
 
   # ---------- The infamous Invoice #329 ----------
 
@@ -570,6 +570,20 @@ payable:
     status: "paid"
     paidDate: "2025-03-02"
 
+  - number: "SPL-2025-098"
+    vendor: "vend-spotlights"
+    project: "p-2025-004"
+    description: "Lantern Bay 2025 — Absen PL2.5 ×120, Martin Aura ×24 (intercompany)"
+    received: "2025-03-14"
+    due: "2025-04-12"
+    amount: 720000
+    vat: 36000
+    total: 756000
+    paid: 0
+    status: "sent"
+    intercompany: true
+    note: "Mirror of Spotlights AR SPL-2025-098 (ic-2025-03-spl-ct). Netted against it on consolidation."
+
   - number: "TIK-2025-0007"
     vendor: "vend-ticketstream"
     project: "p-2025-004"
@@ -579,9 +593,9 @@ payable:
     amount: 209300
     vat: 10465
     total: 219765
-    paid: 0
-    status: "sent"
-    note: "Auto-deducted from escrow on 2025-03-27 settlement run"
+    paid: 102735
+    status: "partial"
+    note: "First escrow settlement run 2025-03-27 auto-deducted AED 102,735 (fees on gross settled to date); balance AED 117,030 clears with the April 15 final settlement."
 
 aging:
   asOf: "2025-03-28"

@@ -1,0 +1,162 @@
+# The Crisis Theater — relationship threads (powers Columbus CRM "The Thread").
+# One thread per key relationship: the long history in one place — phases, entries,
+# captured small things, promises, and what the relationship has produced.
+# client → clients.yml; refs → invoices/projects. quiet detection: quietAfterDays is the
+# relationship's normal cadence; lastTouch beyond it raises a quiet alert (Aldira is the
+# live example). Fiction "today" = 2025-03-28.
+
+phaseModel: ["met", "first-deal", "trust", "expansion", "advocate"]
+
+contacts:
+  - { id: "kp-emaar-farah",   client: "emaar",      name: "Farah Al Suwaidi", role: "VP Brand Experience",        orbit: "champion",       since: "2019-11" }
+  - { id: "kp-emaar-vikram",  client: "emaar",      name: "Vikram Shetty",    role: "Procurement Director",       orbit: "gatekeeper",     since: "2021-03" }
+  - { id: "kp-aldira-samir",  client: "aldira",     name: "Samir Kassab",     role: "CMO",                        orbit: "economic-buyer", since: "2023-05" }
+  - { id: "kp-aldira-rita",   client: "aldira",     name: "Rita Aoun",        role: "AP Supervisor",              orbit: "gatekeeper",     since: "2024-11" }
+  - { id: "kp-dtcm-khalid",   client: "dtcm",       name: "Khalid Al Marri",  role: "Director, City Events",      orbit: "sponsor",        since: "2020-02" }
+  - { id: "kp-royalg-majlis", client: "royal-g",    name: "(Majlis office — name withheld)", role: "Private Secretary", orbit: "gatekeeper", since: "2022-09", note: "All contact in person or by phone. No email trail permitted — log summaries only." }
+  - { id: "kp-ksa-tariq",     client: "ksa-vision", name: "Tariq Al Otaibi",  role: "Entertainment Director",     orbit: "economic-buyer", since: "2024-09" }
+  - { id: "kp-meraas-lena",   client: "meraas",     name: "Lena Haddad",      role: "Head of Placemaking",        orbit: "champion",       since: "2023-01" }
+  - { id: "kp-redbull-max",   client: "redbull-mena", name: "Max Brenner",    role: "Regional Marketing Manager", orbit: "champion",       since: "2019-04" }
+  - { id: "kp-adnoc-sara",    client: "adnoc",      name: "Sara Al Hosani",   role: "Corporate Events Lead",      orbit: "sponsor",        since: "2023-02" }
+
+threads:
+
+  # ---------- Aldira Group — the quiet-detection showcase ----------
+  - client: "aldira"
+    primaryContact: "kp-aldira-samir"
+    phase: "trust"
+    health: "at-risk"
+    lastTouch: "2025-02-15"
+    quietAfterDays: 10
+    quietAlert: true
+    entries:
+      - { date: "2023-05-18", type: "meeting",  title: "First meeting — Solstice Souk sponsorship pitch", body: "Samir wants a flagship winter property. Budget owner is him directly; board sign-off above AED 1M.", tags: ["sponsorship"] }
+      - { date: "2023-12-02", type: "milestone", title: "Solstice Souk 2023 — title sponsor", body: "First deal closed. Activation delivered clean; Samir presented results to their board himself.", tags: ["won"] }
+      - { date: "2024-06-11", type: "meeting",  title: "Renewal over lunch — La Petite Maison", body: "Renewed title sponsorship for 2024 on a handshake. Samir asked for earlier creative previews this year.", tags: ["renewal"] }
+      - { date: "2024-12-20", type: "event",    title: "Solstice Souk 2024 closed — record footfall", body: "48K visitors over the weekend, +22% vs 2023. Samir on stage for the closing. Final tranche invoiced (TCT-2024-156).", refs: ["TCT-2024-156", "p-2024-013"], tags: ["delivery"] }
+      - { date: "2025-01-28", type: "call",     title: "Payment chase — routed to AP", body: "Samir warm but vague; passed us to Rita Aoun in AP. 'Processing, two weeks.'", tags: ["ar"] }
+      - { date: "2025-02-15", type: "email",    title: "Last contact — Rita confirms 'in the queue'", body: "Nothing since. Samir not answering; Rita's mailbox auto-replies.", tags: ["ar"] }
+      - { date: "2025-02-25", type: "silence-alert", title: "Thread gone quiet — 10-day cadence breached", body: "Normal cadence with Aldira is under 10 days. Escalated to founder-md; demand letter drafted.", refs: ["alert-2025-002"], tags: ["quiet"] }
+    smallThings:
+      - "Samir's daughter plays competitive padel — he skips Thursday evening calls."
+      - "Hates being CC'd with his own AP team — route payment talk separately."
+      - "Board meets last Sunday of the month; approvals land the week after."
+    promises:
+      - { who: "them", what: "Settle final tranche AED 798K (TCT-2024-156)", due: "2025-02-20", status: "broken", ref: "TCT-2024-156" }
+      - { who: "us",   what: "2025 renewal proposal with earlier creative previews", due: "2025-04-30", status: "open", note: "On hold pending settlement — do not send while AR is open." }
+    produced:
+      revenueAED: 3050000
+      projects: ["p-2024-013"]
+      introductions: []
+
+  # ---------- EMAAR — anchor account, expansion phase ----------
+  - client: "emaar"
+    primaryContact: "kp-emaar-farah"
+    phase: "expansion"
+    health: "strong"
+    lastTouch: "2025-03-21"
+    quietAfterDays: 14
+    entries:
+      - { date: "2019-11-05", type: "meeting",  title: "First brief — Downtown NYE segment", body: "Small scope, brutal timeline. Delivered. Farah remembers this as 'the night you said yes when everyone else said no'.", tags: ["origin"] }
+      - { date: "2022-03-14", type: "milestone", title: "Multi-year MSA signed", body: "Three-year master services agreement; we become preferred experiential vendor.", tags: ["msa"] }
+      - { date: "2025-01-12", type: "meeting",  title: "Riviera Phase 6 launch — scope workshop", body: "Farah wants 'quiet luxury, no fireworks'. Vikram flagged procurement will hold 10% retention per milestone.", refs: ["TCT-2025-041"], tags: ["project"] }
+      - { date: "2025-02-22", type: "milestone", title: "Riviera Phase 6 — Milestone 1 invoiced", body: "AED 371.7K (30%). Vikram confirmed payment run of April 10.", refs: ["TCT-2025-041"], tags: ["ar"] }
+      - { date: "2025-03-21", type: "meeting",  title: "Creative review — phase 2 concepts", body: "Two of three concepts approved on the spot. Farah asked us to hold March 2026 for a 'bigger conversation' — Dubai Islands.", tags: ["expansion"] }
+    smallThings:
+      - "Farah drinks matcha, not coffee — the boardroom order matters."
+      - "Vikram approves nothing without a line-item breakdown; send it before he asks."
+      - "EMAAR retention: 10% per milestone, released 60 days post-handover."
+    promises:
+      - { who: "us",   what: "Phase 2 revised third concept", due: "2025-04-04", status: "open" }
+      - { who: "them", what: "Milestone 1 payment (April 10 run)", due: "2025-04-10", status: "open", ref: "TCT-2025-041" }
+    produced:
+      revenueAED: 9400000
+      projects: ["p-2025-008"]
+      introductions: ["meraas"]
+
+  # ---------- Dubai Tourism (DET) — political weight, slow pay, opens doors ----------
+  - client: "dtcm"
+    primaryContact: "kp-dtcm-khalid"
+    phase: "advocate"
+    health: "strong"
+    lastTouch: "2025-03-25"
+    quietAfterDays: 21
+    entries:
+      - { date: "2020-02-10", type: "meeting",  title: "First city-event tender briefing", body: "Khalid inherited us from a failed vendor mid-season. We shipped in 6 weeks; he never forgot.", tags: ["origin"] }
+      - { date: "2024-11-30", type: "milestone", title: "Lantern Bay 2024 — city partnership", body: "DET co-branding + permits fast-tracked. In exchange: two pro-bono school workshops (delivered Jan).", refs: ["p-2025-004"], tags: ["partnership"] }
+      - { date: "2025-03-25", type: "call",     title: "Ramadan calendar 2026 — early heads-up", body: "Khalid flagged the 2026 Ramadan city program tender lands in June. 'Be ready. You did not hear this from me.'", tags: ["pipeline"] }
+    smallThings:
+      - "Khalid never emails opinions — call him; paper is for decisions already made."
+      - "DET pays Net 60+, always eventually — do not chase before day 45."
+    promises:
+      - { who: "us", what: "Lantern Bay 2025 impact report for DET board", due: "2025-04-20", status: "open" }
+    produced:
+      revenueAED: 2900000
+      projects: ["p-2025-004"]
+      introductions: ["adnoc", "royal-q"]
+
+  # ---------- Office of Sheikh G. — verbal-only protocol ----------
+  - client: "royal-g"
+    primaryContact: "kp-royalg-majlis"
+    phase: "trust"
+    health: "strong"
+    lastTouch: "2025-03-12"
+    quietAfterDays: 45
+    protocol: "No email. No decks. Briefs delivered verbally at the majlis; confirmations by phone. Log summaries only, no attachments."
+    entries:
+      - { date: "2023-09-20", type: "meeting",  title: "Introduction via Etihad Wings board member", body: "First majlis visit. Brief: 'a reception people will speak of quietly for years'. No budget discussed — ever.", tags: ["origin"] }
+      - { date: "2025-01-05", type: "milestone", title: "Royal Reception 2025 delivered — settled next day", body: "Full settlement AED 1.45M within 24 hours, as always. No invoice chase in the history of this relationship.", refs: ["TCT-2025-008"], tags: ["delivery"] }
+      - { date: "2025-03-12", type: "meeting",  title: "Majlis visit — Eid al-Adha reception intent", body: "Verbal intent for a June reception. Scope 'like January, but for 300'. Await call after Ramadan.", tags: ["pipeline"] }
+    smallThings:
+      - "Payment always lands the day after the event — never invoice early, never remind."
+      - "The private secretary decides who enters the room; the relationship IS the gatekeeper."
+    promises:
+      - { who: "us", what: "Hold June 5–7 production capacity for possible Eid reception", due: "2025-06-01", status: "open" }
+    produced:
+      revenueAED: 3350000
+      projects: ["p-2023-010", "p-2025-002"]
+      introductions: ["royal-q"]
+
+  # ---------- Vision Realm (KSA) — dispute live, handle with care ----------
+  - client: "ksa-vision"
+    primaryContact: "kp-ksa-tariq"
+    phase: "first-deal"
+    health: "at-risk"
+    lastTouch: "2025-03-19"
+    quietAfterDays: 7
+    entries:
+      - { date: "2024-09-15", type: "meeting",  title: "Aurora Gala 2025 — first brief in Riyadh", body: "Tariq ambitious, budget real, timeline aggressive. USD contract, zero-rated export.", refs: ["p-2025-007"], tags: ["origin"] }
+      - { date: "2025-02-20", type: "meeting",  title: "LED dome scope expansion agreed — verbally", body: "Tariq approved the dome expansion in the production meeting. Change order sent Feb 26; he now says 'verbal scope only'.", refs: ["TCT-2025-038"], tags: ["dispute"] }
+      - { date: "2025-03-19", type: "call",     title: "Dispute call — positions hardening", body: "Tariq offers 50% of the change order 'as goodwill'. Legal advises we hold; AED 404K exposure. Relationship recoverable if the gala lands well.", refs: ["TCT-2025-038"], tags: ["dispute"] }
+    smallThings:
+      - "Every scope agreement must be countersigned within 48h — no exceptions, ever again."
+      - "Tariq responds fastest on WhatsApp voice notes, 8–10pm KSA."
+    promises:
+      - { who: "them", what: "Change order #1 countersignature (USD 110K)", due: "2025-03-05", status: "broken", ref: "TCT-2025-038" }
+      - { who: "us",   what: "Deliver Aurora Gala regardless of dispute — reputation first", due: "2025-05-17", status: "open", ref: "p-2025-007" }
+    produced:
+      revenueAED: 918000
+      projects: ["p-2025-007"]
+      introductions: []
+
+  # ---------- Meraas — grew from EMAAR intro; now feeds the group ----------
+  - client: "meraas"
+    primaryContact: "kp-meraas-lena"
+    phase: "expansion"
+    health: "strong"
+    lastTouch: "2025-03-27"
+    quietAfterDays: 14
+    entries:
+      - { date: "2023-01-19", type: "meeting",  title: "Introduced by Farah (EMAAR) at Art Dubai", body: "Lena runs placemaking across Bluewaters and City Walk. Wants 'permanent experiential, not events'.", tags: ["origin", "intro"] }
+      - { date: "2025-02-08", type: "milestone", title: "Bluewaters AR Walk — Milestone 2 delivered", body: "Second tranche invoiced (AED 724.5K). Lena walked her CEO through the AR layer — 'this is the future of the boardwalk'.", refs: ["TCT-2025-031"], tags: ["delivery"] }
+      - { date: "2025-03-27", type: "meeting",  title: "Permanent LED conversation → referred to Spotlights", body: "Lena wants permanent LED at two venues. Hardware-first scope — handed warm to Spotlights (Priya) with Lena's blessing. Group cross-sell logged.", refs: ["deal-2503-021"], tags: ["referral", "intercompany"] }
+    smallThings:
+      - "Lena's KPI is dwell time, not footfall — frame every proposal around minutes, not visitors."
+      - "Meraas legal takes 3 weeks minimum on any new MSA clause; pad timelines."
+    promises:
+      - { who: "us",   what: "AR Walk milestone 3 content drop", due: "2025-04-25", status: "open", ref: "p-2025-006" }
+      - { who: "them", what: "Milestone 2 payment (AED 724.5K)", due: "2025-03-29", status: "open", ref: "TCT-2025-031" }
+    produced:
+      revenueAED: 2170000
+      projects: ["p-2025-006"]
+      introductions: ["spotlights:cl-meraas-ent"]

@@ -1,0 +1,46 @@
+# Spotlights Ltd — revenue forecast (powers the Forecast app).
+# Monthly P10/P50/P90 for Apr–Dec 2025, frozen at "today" 2025-03-28. History → cashflow.yml;
+# backtest.actual mirrors cashflow revenue exactly. plan = FY2025 internal plan
+# (targets.yml monthly ends Q1-2025). Amounts in AED. errorPct = (p50 − actual)/actual × 100.
+
+asOf: "2025-03-28"
+metric: "revenue"
+currency: "AED"
+horizon: "2025-04 → 2025-12"
+model:
+  method: "trend + probability-weighted deals pipeline (deals.yml)"
+  trainedOn: "2024-01 → 2025-03 (15 months)"
+  seasonality: "Sep–Oct peak (event season stock-up); Jun–Jul trough. Distribution lumpy — single orders move a month ±30%."
+  notes: "Freight lead time is the swing factor: the 240 ROE cabinets in transit gate the Flash frame deal (p10 vs p50 on Apr–May)."
+
+monthly:
+  - { month: "2025-04", p10: 1620000, p50: 1900000, p90: 2280000, plan: 1950000, note: "Flash frame signature expected — stock ETA risk in p10" }
+  - { month: "2025-05", p10: 1720000, p50: 2100000, p90: 2560000, plan: 2100000, note: "DWTC Hall 8 follow-on lands here at p50" }
+  - { month: "2025-06", p10: 1170000, p50: 1500000, p90: 1880000, plan: 1550000 }
+  - { month: "2025-07", p10:  980000, p50: 1300000, p90: 1680000, plan: 1300000 }
+  - { month: "2025-08", p10: 1300000, p50: 1800000, p90: 2410000, plan: 1800000, note: "Neon KSA Riyadh Season package if awarded (qualified)" }
+  - { month: "2025-09", p10: 2260000, p50: 3100000, p90: 4030000, plan: 3100000 }
+  - { month: "2025-10", p10: 1820000, p50: 2600000, p90: 3480000, plan: 2650000 }
+  - { month: "2025-11", p10: 1290000, p50: 1900000, p90: 2620000, plan: 1950000 }
+  - { month: "2025-12", p10: 1120000, p50: 1700000, p90: 2400000, plan: 1750000, note: "VOX lobby refresh at p90 if RFP won (decision Aug)" }
+
+backtest:
+  months:
+    - { month: "2024-10", forecastP50: 2300000, actual: 2460000, errorPct: -6.5 }
+    - { month: "2024-11", forecastP50: 1850000, actual: 1720000, errorPct: 7.6 }
+    - { month: "2024-12", forecastP50: 1650000, actual: 1540000, errorPct: 7.1 }
+    - { month: "2025-01", forecastP50: 1500000, actual: 1420000, errorPct: 5.6 }
+    - { month: "2025-02", forecastP50: 1600000, actual: 1680000, errorPct: -4.8 }
+    - { month: "2025-03", forecastP50: 2850000, actual: 3180000, errorPct: -10.4, note: "DWTC Hall 7 pulled forward — pipeline said May" }
+  summaryMapePct: 7.0
+
+scenarios:
+  drivers:
+    - { id: "dealWinRate",        label: "Deal win rate",          unit: "ratio", base: 0.34, conservative: 0.26, stretch: 0.42 }
+    - { id: "avgDealValue",       label: "Avg deal value",         unit: "AED",   base: 620000, conservative: 520000, stretch: 760000 }
+    - { id: "freightLeadTimeDays",label: "Freight lead time",      unit: "days",  base: 75,   conservative: 100,  stretch: 55, note: "Q4-2024 squeeze peaked at ~110 days" }
+    - { id: "collectionLagDays",  label: "Collection lag (DSO)",   unit: "days",  base: 26,   conservative: 34,   stretch: 22 }
+  cases:
+    - { id: "base",         label: "Base",         revenueFY2025: 24200000, note: "Q1 actual 6.28M + Apr–Dec p50 17.9M. Modest growth over FY2024 sales 23.2M." }
+    - { id: "conservative", label: "Conservative", revenueFY2025: 21800000, note: "Freight stays slow; VOX lost on price; Riyadh Season not awarded." }
+    - { id: "stretch",      label: "Stretch",      revenueFY2025: 27500000, note: "Riyadh Season + VOX won; Meraas permanent-LED referral books in Q4." }

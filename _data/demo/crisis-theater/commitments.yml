@@ -12,7 +12,8 @@ commitments:
   - { id: "cm-ct-festival-escrow", type: "other", label: "Lantern Bay 2025 — final vendor settlement", cadence: "one-off", nextDue: "2025-04-15", amount: 5640000, currency: "AED", account: "bank-aed-escrow", restricted: true, critical: true, note: "Paid entirely from the festival escrow account — NOT operating cash. Do not net against unrestricted cash." }
 
   # --- routine supplier run (open AP) ---
-  - { id: "cm-ct-vendor-run", type: "supplier", label: "Vendor run — open AP (crew, venue, materials)", cadence: "monthly", nextDue: "2025-04-10", amount: 1188000, currency: "AED", account: "bank-aed-op", note: "≈ current accounts-payable balance, clearing through April." }
+  - { id: "cm-ct-vendor-run", type: "supplier", label: "Vendor run — open external AP (crew, venue, materials)", cadence: "monthly", nextDue: "2025-04-10", amount: 1188000, currency: "AED", account: "bank-aed-op", note: "≈ current external accounts-payable balance, clearing through April." }
+  - { id: "cm-ct-ic-spotlights", type: "supplier", label: "Spotlights — Lantern Bay LED supply (intercompany)", cadence: "one-off", nextDue: "2025-04-12", amount: 756000, currency: "AED", account: "bank-aed-op", intercompany: true, note: "Sister-company invoice SPL-2025-098 — real cash out for this entity, eliminated at group level." }
 
   # --- statutory ---
   - { id: "cm-ct-vat", type: "vat", label: "VAT — Q1 2025 filing & payment", cadence: "quarterly", nextDue: "2025-04-28", amount: 260000, currency: "AED", account: "bank-aed-op", critical: true }
@@ -22,5 +23,5 @@ summary:
   monthlyPayroll: 542000
   monthlyFixed: 722000               # payroll + rent
   restrictedNext30d: 5640000        # festival escrow settlement (funded from escrow, ring-fenced)
-  unrestrictedNext30d: 1910000      # payroll + rent + vendor run (against AED 9.1M unrestricted cash)
-  note: "The 5.64M festival settlement looks alarming but is fully escrow-funded. Real call on operating cash next 30d ≈ AED 1.91M against 9.1M unrestricted — comfortable."
+  unrestrictedNext30d: 2666000      # payroll + rent + vendor run + intercompany LED supply (against AED 9.1M unrestricted cash)
+  note: "The 5.64M festival settlement looks alarming but is fully escrow-funded. Real call on operating cash next 30d ≈ AED 2.67M (incl. 756K to sister company Spotlights) against 9.1M unrestricted — comfortable."

@@ -26,10 +26,11 @@ payments:
   - { id: "pay-ct-ar-019", invoice: "TCT-2025-008", direction: "in", date: "2025-01-05", amount: 1450000, currency: "AED", bank: "bank-aed-op", method: "bank transfer" }
   - { id: "pay-ct-ar-020", invoice: "TCT-2025-019", direction: "in", date: "2025-03-19", amount: 99750, currency: "AED", bank: "bank-aed-op", method: "bank transfer" }
   - { id: "pay-ct-ar-021", invoice: "TCT-2025-027", direction: "in", date: "2025-01-22", amount: 1512000, currency: "AED", bank: "bank-aed-op", method: "bank transfer" }
-  - { id: "pay-ct-ar-022", invoice: "TCT-2025-034", direction: "in", date: "2025-03-11", amount: 250000, currency: "AED", bank: "bank-aed-op", method: "bank transfer" }
-  - { id: "pay-ct-ar-023", invoice: "TCT-2025-044", direction: "in", date: "2025-02-15", amount: 210000, currency: "AED", bank: "bank-aed-op", method: "bank transfer" }
+  - { id: "pay-ct-ar-022", invoice: "TCT-2025-034", direction: "in", date: "2025-03-11", amount: 250000, currency: "USD", bank: "bank-usd", method: "bank transfer" }
+  - { id: "pay-ct-ar-023", invoice: "TCT-2025-044", direction: "in", date: "2025-02-15", amount: 210000, currency: "USD", bank: "bank-usd", method: "bank transfer" }
   - { id: "pay-ct-ar-024", invoice: "TCT-2025-049", direction: "in", date: "2025-02-19", amount: 924000, currency: "AED", bank: "bank-aed-op", method: "bank transfer" }
   - { id: "pay-ct-ar-025", invoice: "TCT-2025-329", direction: "in", date: "2024-03-01", amount: 6000, currency: "AED", bank: "bank-aed-op", method: "bank transfer" }
+  - { id: "pay-ct-ar-026", invoice: "TCT-2025-053", direction: "in", date: "2025-03-26", amount: 380200, currency: "AED", bank: "bank-aed-op", method: "bank transfer", note: "Almas Bank sponsorship — first contract tranche; balance on activation report" }
 
   # --- outgoing (AP settlements) ---
   - { id: "pay-ct-ap-001", invoice: "PROT-2023-0091", direction: "out", date: "2023-04-20", amount: 399000, currency: "AED", bank: "bank-aed-op", method: "bank transfer" }
@@ -38,3 +39,4 @@ payments:
   - { id: "pay-ct-ap-004", invoice: "NIM-2024-0088", direction: "out", date: "2024-09-18", amount: 777000, currency: "AED", bank: "bank-aed-op", method: "bank transfer" }
   - { id: "pay-ct-ap-005", invoice: "DRN-2025-0014", direction: "out", date: "2025-02-05", amount: 504000, currency: "AED", bank: "bank-aed-op", method: "bank transfer" }
   - { id: "pay-ct-ap-006", invoice: "PRM-2025-0019", direction: "out", date: "2025-03-02", amount: 88200, currency: "AED", bank: "bank-aed-op", method: "bank transfer" }
+  - { id: "pay-ct-ap-007", invoice: "TIK-2025-0007", direction: "out", date: "2025-03-27", amount: 102735, currency: "AED", bank: "bank-aed-escrow", method: "escrow settlement run", note: "Ticketing fees auto-deducted on first settlement run; balance clears April 15" }

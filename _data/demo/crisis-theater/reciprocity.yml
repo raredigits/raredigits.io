@@ -1,0 +1,66 @@
+# The Crisis Theater — reciprocity ledger (powers Columbus "Reciprocity Ledger").
+# A running account per relationship: what they have done for you (received) vs what you
+# have given back (given). weight 1–3 (small favour → career-sized). balance = Σ received
+# weights − Σ given weights; positive = you owe them, negative = they owe you goodwill;
+# |balance| ≥ 3 with status overdrawn renders red. client → clients.yml; people → thread.yml contacts.
+
+ledger:
+
+  - client: "dtcm"
+    status: "overdrawn"          # we keep withdrawing — political capital is not infinite
+    balance: 4
+    entries:
+      - { date: "2024-11-10", direction: "received", weight: 2, what: "Lantern Bay permits fast-tracked (3 weeks → 4 days)", by: "kp-dtcm-khalid" }
+      - { date: "2024-12-05", direction: "received", weight: 1, what: "DET co-branding on city channels — media value ~AED 400K" }
+      - { date: "2025-01-18", direction: "given",    weight: 1, what: "Two pro-bono school workshops (promised for the permits)" }
+      - { date: "2025-02-12", direction: "received", weight: 1, what: "Khalid vouched for us to ADNOC events committee", by: "kp-dtcm-khalid" }
+      - { date: "2025-03-25", direction: "received", weight: 1, what: "Early heads-up on 2026 Ramadan program tender (June)", by: "kp-dtcm-khalid" }
+    nextMove: "Deliver the Lantern Bay impact report before asking for anything else. Then offer DET first refusal on the drone-show format for National Day."
+
+  - client: "emaar"
+    status: "balanced"
+    balance: 0
+    entries:
+      - { date: "2022-03-14", direction: "received", weight: 3, what: "Multi-year MSA — the account that made the company bankable", by: "kp-emaar-farah" }
+      - { date: "2023-01-19", direction: "received", weight: 2, what: "Farah introduced us to Meraas at Art Dubai", by: "kp-emaar-farah" }
+      - { date: "2023-06-30", direction: "given",    weight: 2, what: "Rescued Downtown summer activation in 11 days after vendor collapse — at cost" }
+      - { date: "2024-09-02", direction: "given",    weight: 2, what: "Farah's team credited in our Campaign ME award entry — she presented it internally" }
+      - { date: "2025-03-21", direction: "received", weight: 1, what: "March 2026 'bigger conversation' reserved for us before any tender", by: "kp-emaar-farah" }
+      - { date: "2025-03-27", direction: "given",    weight: 2, what: "Referred Meraas permanent-LED scope onward with full handover notes (kept EMAAR's exclusivity zones clean)" }
+    nextMove: "Nothing owed. Keep the cadence."
+
+  - client: "royal-g"
+    status: "owed-by-us"
+    balance: 2
+    entries:
+      - { date: "2023-09-20", direction: "received", weight: 3, what: "Entry to the majlis at all — introduction vouched by an Etihad Wings board member" }
+      - { date: "2024-08-15", direction: "received", weight: 2, what: "Quiet referral to the Qatari royal office (became Doha Heritage Reception)", ref: "royal-q" }
+      - { date: "2025-01-05", direction: "given",    weight: 3, what: "Royal Reception 2025 — flawless, discreet, no photos leaked. The only currency this relationship accepts." }
+    nextMove: "This ledger settles in discretion, not favours. Hold June capacity without being asked."
+
+  - client: "redbull-mena"
+    status: "balanced"
+    balance: -1
+    entries:
+      - { date: "2024-03-04", direction: "given",    weight: 2, what: "Title placement engineering at Lantern Bay 2024 — their best MENA brand-lift score of the year", by: "kp-redbull-max" }
+      - { date: "2024-11-22", direction: "received", weight: 1, what: "Max lent us their athlete roster for the opening stunt at cost" }
+      - { date: "2025-02-10", direction: "given",    weight: 1, what: "First look at Lantern Bay 2025 headline slots before the sponsorship deck went wide" }
+      - { date: "2025-03-15", direction: "received", weight: 1, what: "Max testimonial on camera for our warm-leads kit", ref: "testi-redbull" }
+    nextMove: "Slightly in credit. Safe to ask Max for the Chalhoub introduction (see referrals)."
+
+  - client: "aldira"
+    status: "frozen"
+    balance: -2
+    entries:
+      - { date: "2024-12-20", direction: "given",    weight: 2, what: "Record Solstice Souk — Samir took the board credit", by: "kp-aldira-samir" }
+      - { date: "2025-02-20", direction: "received", weight: 0, what: "AED 798K final tranche — broken promise, not a favour", ref: "TCT-2024-156" }
+    nextMove: "No withdrawals, no deposits while AR is open. Reciprocity resumes after settlement — if it does."
+
+  - client: "meraas"
+    status: "owed-by-us"
+    balance: 1
+    entries:
+      - { date: "2025-02-08", direction: "received", weight: 1, what: "Lena walked her CEO through the AR Walk — unprompted internal selling", by: "kp-meraas-lena" }
+      - { date: "2025-03-27", direction: "received", weight: 1, what: "Blessed the warm handover of the permanent-LED scope to Spotlights", by: "kp-meraas-lena" }
+      - { date: "2025-03-27", direction: "given",    weight: 1, what: "Committed milestone-3 content drop a week early (Apr 25) for her dwell-time board review" }
+    nextMove: "Ship milestone 3 early as promised. Then Lena is the right ask for a City Walk pilot intro."

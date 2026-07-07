@@ -8,7 +8,9 @@
     "start": "eleventy --serve --port=8080",
     "build": "eleventy",
     "clean": "rm -rf _site",
-    "debug": "DEBUG=Eleventy* eleventy"
+    "debug": "DEBUG=Eleventy* eleventy",
+    "demo:verify": "node scripts/verify-demo-data.cjs",
+    "demo:consolidate": "node scripts/consolidate-demo-data.cjs"
   },
   "license": "UNLICENSED",
   "devDependencies": {

@@ -28,6 +28,8 @@ transactions:
     date: "2024-03-04"
     amount: 540000
     currency: "AED"
+    invoice: "SPL-2024-031"
+    settlement: "settled"
   - id: "ic-2024-09-spl-ct"
     from: "spotlights"
     to: "crisis-theater"
@@ -36,6 +38,8 @@ transactions:
     date: "2024-09-02"
     amount: 610000
     currency: "AED"
+    invoice: "SPL-2024-061"
+    settlement: "settled"
   - id: "ic-2024-06-spl-leg"
     from: "spotlights"
     to: "legacy-development"
@@ -44,6 +48,8 @@ transactions:
     date: "2024-06-18"
     amount: 280000
     currency: "AED"
+    invoice: "SPL-2024-047"
+    settlement: "settled"
   - id: "ic-2025-03-spl-ct"
     from: "spotlights"
     to: "crisis-theater"
@@ -52,3 +58,5 @@ transactions:
     date: "2025-03-06"
     amount: 720000
     currency: "AED"
+    invoice: "SPL-2025-098"
+    settlement: "open"
