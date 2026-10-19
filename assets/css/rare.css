@@ -20,6 +20,7 @@
     --bg-color: var(--white);
     --secondary-color: var(--gray-light);
     --header-bg: rgba(255, 255, 255, 0.9);
+    --header-logo: url('/assets/img/logo/logo.svg') no-repeat;
 
     --font-size: 18px;
 

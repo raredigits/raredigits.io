@@ -1,0 +1,151 @@
+/* Site-owned header/hamburger layer. Selectors are prefixed with .rd so this
+   file keeps winning over rare-styles v0.7.0, whose rules are gated as
+   .rd <selector> — equal specificity, and this file loads later. */
+
+.rd header {
+    background: var(--header-bg);
+    height: var(--header-height);
+    padding: 0 var(--space-md);
+    position: fixed;
+    width: 100%;
+    z-index: 1003;
+}
+
+.rd .header-logo-wrapper {
+    min-width: var(--logo-width);
+    height: 100%;
+    /* keep the logo above the open .nav-global panel (z-index 1000) */
+    position: relative;
+    z-index: 1001;
+}
+
+.rd header a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.rd .header-logo {
+    height: 100%;
+    background: var(--header-logo);
+    min-width: 100px;
+    width: var(--logo-width);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+
+.rd .header-logo img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.rd nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.rd .nav-global {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: calc(var(--space-md) * -1);
+}
+
+.rd .nav-global ul {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.rd .nav-global li {
+    height: 100%;
+}
+
+.rd .nav-global ul a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: var(--primary-color);
+    text-decoration: none;
+    border: none;
+    padding: 0 var(--space-md);
+}
+
+.rd .nav-global ul a:hover {
+    color: var(--nav-link-hover);
+}
+
+/* The hamburger is visible at every width, like the library's own header
+   pattern; display comes from the library's .header-icons button rule. */
+.rd .hamburger {
+    background: none;
+    color: var(--primary-color);
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+    padding: 0;
+    z-index: 1001;
+}
+
+.rd .hamburger .icon-close {
+    display: none;
+}
+
+.rd .hamburger.active .icon-menu {
+    display: none;
+}
+
+.rd .hamburger.active .icon-close {
+    display: inline;
+}
+
+/* Tablet: the nav column is narrower (library clips .nav-global with
+   overflow: hidden at 769-1023px), so drop the link padding to fit */
+@media (min-width: 769px) and (max-width: 1023px) {
+    .rd .nav-global ul a {
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .rd .nav-global {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 90%;
+        margin-left: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: var(--font-size-lg);
+        background: var(--bg-color);
+        padding: calc(var(--header-height) + 2 * var(--space-md)) var(--space-md) var(--space-lg);
+        transition: top 0.3s ease-in-out;
+        box-shadow: var(--shadow-lg);
+        border-radius: 0 0 20px 20px;
+        z-index: 1000;
+    }
+
+    .rd .nav-global.active {
+        top: 0;
+    }
+
+    .rd .nav-global ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .rd .nav-global li {
+        width: 100%;
+        text-align: left;
+        height: auto;
+    }
+}

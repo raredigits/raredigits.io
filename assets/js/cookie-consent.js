@@ -32,14 +32,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const acceptBtn = document.getElementById("cookie-notice-accept");
     if (!cookieNotice || !acceptBtn) return;
 
+    // Hide via the library's .rd-is-hidden class: rare-styles v0.7.0 keeps a
+    // body::after spacer reserved while a .cookie-notice is present and not
+    // .rd-is-hidden, so an inline display:none would leave a gap at the
+    // bottom of every page.
     if (readCookie("cookie-notice-dismissed") === "true") {
-      cookieNotice.style.display = "none";
+      cookieNotice.classList.add("rd-is-hidden");
     } else {
-      cookieNotice.style.display = "block";
+      cookieNotice.classList.remove("rd-is-hidden");
     }
 
     acceptBtn.addEventListener("click", function () {
       createCookie("cookie-notice-dismissed", "true", 31);
-      cookieNotice.style.display = "none";
+      cookieNotice.classList.add("rd-is-hidden");
     });
 });

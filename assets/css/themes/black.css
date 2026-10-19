@@ -1,12 +1,13 @@
 body.theme-black {
     --primary-color: var(--white);
     --bg-color: var(--black);
+    --header-bg: var(--black);
 
     .header-logo {
         background-image: url('/assets/img/logo/logo_black.svg');
     }
 
-    header .material-icons,
+    header [class*="rd-icon-"],
     nav a:hover  {
         color: var(--white);
     }
