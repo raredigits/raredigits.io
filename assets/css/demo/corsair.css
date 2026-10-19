@@ -49,7 +49,7 @@ nav a:hover {
     background: var(--pen);
 }
 
-nav .material-symbols-outlined {
+nav [class*="rd-icon-"] {
     font-size: 2em;
     vertical-align: middle;
 }
@@ -148,7 +148,7 @@ tr th:last-child {
     padding-bottom: var(--space-md);
 }
 
-.tip .material-symbols-outlined {
+.tip [class*="rd-icon-"] {
     font-size: 1.3em;
     position: relative;
     top: var(--space-xs);
@@ -743,7 +743,7 @@ tr th:last-child {
     background: var(--tct-jeeves);
     color: #fff;
 }
-.today-card .today-action .material-symbols-outlined {
+.today-card .today-action [class*="rd-icon-"] {
     font-size: 1.1em;
 }
 
@@ -800,7 +800,7 @@ dialog.corsair-modal .dialog-close:hover {
     background: var(--tct-border);
     color: var(--tct-bad);
 }
-dialog.corsair-modal .dialog-close .material-symbols-outlined {
+dialog.corsair-modal .dialog-close [class*="rd-icon-"] {
     font-size: 1.4rem;
 }
 dialog.corsair-modal .dialog-body {
@@ -840,7 +840,7 @@ dialog.corsair-modal .dialog-footer {
     align-items: center;
     gap: 2px;
 }
-.click-hint .material-symbols-outlined { font-size: 0.9rem; }
+.click-hint [class*="rd-icon-"] { font-size: 0.9rem; }
 
 /* ============================================================
    Reconciliation table — show the seams between systems

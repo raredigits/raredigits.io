@@ -17,7 +17,7 @@ layout: null
 <link rel="stylesheet" href="/assets/css/modules/odoo-fintech.css">
 <link rel="stylesheet" href="/assets/css/modules/forecast.css">
 <style>
-  .material-symbols-outlined { vertical-align: middle; }
+  .rd-icon { vertical-align: middle; }
   .crumb { color: var(--fin-ink-soft); font-size: var(--font-size-sm); }
   .crumb a { color: var(--fin-ink-soft); }
   .lab-title { font-size: clamp(1.6rem, 3.5vw, 2.3rem); }
@@ -48,19 +48,19 @@ layout: null
     <div class="erp-topbar__brand"><span class="erp-topbar__dot"></span> Meridian</div>
     <div class="erp-topbar__spacer"></div>
     <label class="erp-topbar__search">
-      <span class="material-symbols-outlined" style="font-size:20px">search</span>
+      <span class="rd-icon-search" style="font-size:20px"></span>
       <input type="text" placeholder="What if&hellip;?">
     </label>
-    <span class="material-symbols-outlined" style="color:var(--fin-ink-soft)">notifications</span>
+    <span class="rd-icon-notifications" style="color:var(--fin-ink-soft)"></span>
     <div class="avatar" title="Founder / MD">SO</div>
   </header>
 
   <nav class="erp-sidebar">
-    <a class="erp-sidebar__item" title="Forecast cockpit" href="/demo/forecast/cockpit/"><span class="material-symbols-outlined">query_stats</span></a>
-    <a class="erp-sidebar__item" title="Metric deep-dive" href="/demo/forecast/revenue/"><span class="material-symbols-outlined">show_chart</span></a>
-    <a class="erp-sidebar__item active" title="Scenario lab"><span class="material-symbols-outlined">tune</span></a>
-    <a class="erp-sidebar__item" title="Cash"><span class="material-symbols-outlined">account_balance</span></a>
-    <a class="erp-sidebar__item" title="Reporting"><span class="material-symbols-outlined">bar_chart</span></a>
+    <a class="erp-sidebar__item" title="Forecast cockpit" href="/demo/forecast/cockpit/"><span class="rd-icon-query_stats"></span></a>
+    <a class="erp-sidebar__item" title="Metric deep-dive" href="/demo/forecast/revenue/"><span class="rd-icon-show_chart"></span></a>
+    <a class="erp-sidebar__item active" title="Scenario lab"><span class="rd-icon-tune"></span></a>
+    <a class="erp-sidebar__item" title="Cash"><span class="rd-icon-account_balance"></span></a>
+    <a class="erp-sidebar__item" title="Reporting"><span class="rd-icon-bar_chart"></span></a>
   </nav>
 
   <main class="erp-main">
@@ -73,7 +73,7 @@ layout: null
     <div class="lab-grid" style="margin-top: var(--space-lg)">
 
       <div class="card-soft">
-        <div class="card-head"><h3>Drivers</h3><a class="chip" id="resetBtn"><span class="material-symbols-outlined" style="font-size:18px">restart_alt</span> Reset to base</a></div>
+        <div class="card-head"><h3>Drivers</h3><a class="chip" id="resetBtn"><span class="rd-icon-restart_alt" style="font-size:18px"></span> Reset to base</a></div>
 
         <div class="lever">
           <div class="lever__label">Pipeline win rate <span class="sub">last 90 days: 38%</span></div>
@@ -117,7 +117,7 @@ layout: null
         <div class="otrack-ends"><span>1.4M</span><span>3.6M</span></div>
 
         <div class="flex items-center gap-sm" style="margin-top: var(--space-lg); padding-top: var(--space-md); border-top:1px solid var(--fin-line)">
-          <span class="material-symbols-outlined" style="color:var(--fin-accent)">target</span>
+          <span class="rd-icon-target" style="color:var(--fin-accent)"></span>
           <div style="flex:1"><div>Chance of hitting plan</div><div class="txn__sub">plan target &middot; &euro;2.42M by 30 Sep</div></div>
           <span class="num" id="outProb" style="font-size: var(--font-size-xl)">72%</span>
         </div>
@@ -133,7 +133,7 @@ layout: null
     <div class="scenario-grid" id="scenarioGrid">
 
       <div class="scenario scenario--down" data-preset="conservative">
-        <div class="scenario__name"><span class="material-symbols-outlined" style="color:var(--orange); font-size:20px">trending_down</span> Conservative</div>
+        <div class="scenario__name"><span class="rd-icon-trending_down" style="color:var(--orange); font-size:20px"></span> Conservative</div>
         <div class="scenario__value">2.16<span class="unit">M &euro;</span></div>
         <div class="scenario__prob">18% chance of hitting plan</div>
         <ul class="scenario__assumptions">
@@ -146,7 +146,7 @@ layout: null
       </div>
 
       <div class="scenario scenario--base is-active" data-preset="base">
-        <div class="scenario__name"><span class="material-symbols-outlined" style="color:var(--fin-accent); font-size:20px">check_circle</span> Base</div>
+        <div class="scenario__name"><span class="rd-icon-check_circle" style="color:var(--fin-accent); font-size:20px"></span> Base</div>
         <div class="scenario__value" style="color:var(--fin-accent)">2.58<span class="unit">M &euro;</span></div>
         <div class="scenario__prob">72% chance of hitting plan</div>
         <ul class="scenario__assumptions">
@@ -159,7 +159,7 @@ layout: null
       </div>
 
       <div class="scenario scenario--up" data-preset="stretch">
-        <div class="scenario__name"><span class="material-symbols-outlined" style="color:var(--blue); font-size:20px">rocket_launch</span> Stretch</div>
+        <div class="scenario__name"><span class="rd-icon-rocket_launch" style="color:var(--blue); font-size:20px"></span> Stretch</div>
         <div class="scenario__value">2.90<span class="unit">M &euro;</span></div>
         <div class="scenario__prob">94% chance of hitting plan</div>
         <ul class="scenario__assumptions">

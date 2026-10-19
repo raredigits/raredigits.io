@@ -28,12 +28,12 @@ items:
 featured:
   - title: "Corsair HQ"
     url: "/tools/corsair/"
-    icon: '<span class="material-icons">star</span>'
+    icon: '<span class="rd-icon-star"></span>'
     
   - title: "Watchtower"
     url: "/tools/web3/watchtower/"
-    icon: '<span class="material-icons">new_releases</span>'
+    icon: '<span class="rd-icon-new_releases"></span>'
 
   - title: "Rare Styles"
     url: "/tools/open-source/styles/"
-    icon: '<span class="material-icons">format_paint</span>'
+    icon: '<span class="rd-icon-format_paint"></span>'

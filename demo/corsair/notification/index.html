@@ -83,7 +83,7 @@ permalink: /demo/corsair/notifications/
         <span class="muted">View it as a single case file with timeline + suggested actions.</span>
     </div>
     <button class="btn-corsair primary" data-modal="modal-umbrella">
-        <span class="material-symbols-outlined">folder_open</span>
+        <span class="rd-icon-folder_open"></span>
         Open Umbrella case file
     </button>
 </div>
@@ -99,12 +99,9 @@ permalink: /demo/corsair/notifications/
         {% assign matched = alerts.active | where: "severity", sev %}
         {% for a in matched %}
             <div class="alert-card sev-{{ sev }}">
-                <span class="material-symbols-outlined alert-icon">
-                    {% if sev == "critical" %}error
-                    {% elsif sev == "high" %}warning
-                    {% elsif sev == "medium" %}error_outline
-                    {% else %}info{% endif %}
-                </span>
+                {% assign sevIcon = "info" %}
+                {% if sev == "critical" %}{% assign sevIcon = "error" %}{% elsif sev == "high" %}{% assign sevIcon = "warning" %}{% elsif sev == "medium" %}{% assign sevIcon = "error_outline" %}{% endif %}
+                <span class="rd-icon-{{ sevIcon }} alert-icon"></span>
                 <div>
                     <h4>{{ a.title }}
                         <span class="pill {% if sev == 'critical' or sev == 'high' %}bad{% elsif sev == 'medium' %}warn{% else %}info{% endif %}">{{ sev }}</span>
@@ -136,12 +133,12 @@ permalink: /demo/corsair/notifications/
         </thead>
         <tbody>
             <tr>
-                <td><span class="material-symbols-outlined" style="vertical-align:middle">mail</span> <strong>Email</strong></td>
+                <td><span class="rd-icon-mail" style="vertical-align:middle"></span> <strong>Email</strong></td>
                 <td><span class="pill good">On</span></td>
                 <td class="row-sub">{{ alerts.notificationChannels.email.digestFrequency }}</td>
             </tr>
             <tr>
-                <td><span class="material-symbols-outlined" style="vertical-align:middle">forum</span> <strong>Slack</strong></td>
+                <td><span class="rd-icon-forum" style="vertical-align:middle"></span> <strong>Slack</strong></td>
                 <td><span class="pill good">On</span></td>
                 <td class="row-sub">
                     Workspace: {{ alerts.notificationChannels.slack.workspace }} ·
@@ -150,24 +147,24 @@ permalink: /demo/corsair/notifications/
                 </td>
             </tr>
             <tr>
-                <td><span class="material-symbols-outlined" style="vertical-align:middle">sms</span> <strong>SMS</strong></td>
+                <td><span class="rd-icon-sms" style="vertical-align:middle"></span> <strong>SMS</strong></td>
                 <td><span class="pill good">On</span></td>
                 <td class="row-sub">Threshold: {{ alerts.notificationChannels.sms.severityThreshold }} · to: {{ alerts.notificationChannels.sms.recipients | join: ", " }}</td>
             </tr>
             <tr>
-                <td><span class="material-symbols-outlined" style="vertical-align:middle">dashboard</span> <strong>Dashboard</strong></td>
+                <td><span class="rd-icon-dashboard" style="vertical-align:middle"></span> <strong>Dashboard</strong></td>
                 <td><span class="pill good">On</span></td>
                 <td class="row-sub">Badge from: {{ alerts.notificationChannels.dashboard.badgeOn | join: ", " }}</td>
             </tr>
             <tr>
-                <td><span class="material-symbols-outlined" style="vertical-align:middle">bedtime</span> <strong>Quiet hours</strong></td>
+                <td><span class="rd-icon-bedtime" style="vertical-align:middle"></span> <strong>Quiet hours</strong></td>
                 <td><span class="pill good">On</span></td>
                 <td class="row-sub">{{ alerts.quietHours.start }}–{{ alerts.quietHours.end }} {{ alerts.quietHours.timezone }} · exceptions: {{ alerts.quietHours.exceptions | join: ", " }}</td>
             </tr>
         </tbody>
     </table>
     <div class="tip">
-        <span class="material-symbols-outlined" style="color: var(--tct-mute)">tune</span>
+        <span class="rd-icon-tune" style="color: var(--tct-mute)"></span>
         Configure rules &amp; channels in <a href="/demo/corsair/settings/">Settings</a>
     </div>
 </section>

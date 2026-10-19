@@ -62,9 +62,7 @@ permalink: /demo/corsair/settings/
     {% for r in alerts.rules %}
         <div class="rule-row">
             <div>
-                <span class="material-symbols-outlined" style="color: {% if r.enabled %}var(--tct-good){% else %}var(--tct-mute){% endif %}; font-size: 1.2em;">
-                    {% if r.enabled %}toggle_on{% else %}toggle_off{% endif %}
-                </span>
+                <span class="rd-icon-{% if r.enabled %}toggle_on{% else %}toggle_off{% endif %}" style="color: {% if r.enabled %}var(--tct-good){% else %}var(--tct-mute){% endif %}; font-size: 1.2em;"></span>
             </div>
             <div>
                 <div class="rule-name">{{ r.name }}</div>
@@ -162,7 +160,7 @@ permalink: /demo/corsair/settings/
         </tbody>
     </table>
     <div class="tip">
-        <span class="material-symbols-outlined" style="color: var(--tct-mute)">hub</span>
+        <span class="rd-icon-hub" style="color: var(--tct-mute)"></span>
         Source-system credentials managed in your team's password vault, not here.
     </div>
 </section>

@@ -16,7 +16,7 @@ layout: null
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/raredigits/rare-styles@v0.7.0/rare.min.css">
 <link rel="stylesheet" href="/assets/css/modules/odoo-fintech.css">
 <style>
-  .material-symbols-outlined { vertical-align: middle; }
+  .rd-icon { vertical-align: middle; }
   .card-meta { display:flex; align-items:center; justify-content:space-between; }
   .card-title { font-size: var(--font-size-md); }
   .card-cust { font-size: var(--font-size-xs); color: var(--fin-ink-soft); }
@@ -35,20 +35,20 @@ layout: null
     <div class="erp-topbar__brand"><span class="erp-topbar__dot"></span> Meridian</div>
     <div class="erp-topbar__spacer"></div>
     <label class="erp-topbar__search">
-      <span class="material-symbols-outlined" style="font-size:20px">search</span>
+      <span class="rd-icon-search" style="font-size:20px"></span>
       <input type="text" placeholder="Search deals, customers…">
     </label>
-    <span class="material-symbols-outlined" style="color:var(--fin-ink-soft)">notifications</span>
+    <span class="rd-icon-notifications" style="color:var(--fin-ink-soft)"></span>
     <div class="avatar">SO</div>
   </header>
 
   <nav class="erp-sidebar">
-    <a class="erp-sidebar__item" title="Dashboard" href="/demo/atlas/dashboard/"><span class="material-symbols-outlined">dashboard</span></a>
-    <a class="erp-sidebar__item" title="Invoicing" href="/demo/atlas/invoice/"><span class="material-symbols-outlined">receipt_long</span></a>
-    <a class="erp-sidebar__item active" title="Sales"><span class="material-symbols-outlined">trending_up</span></a>
-    <a class="erp-sidebar__item" title="Bank"><span class="material-symbols-outlined">account_balance</span></a>
-    <a class="erp-sidebar__item" title="Contacts"><span class="material-symbols-outlined">group</span></a>
-    <a class="erp-sidebar__item" title="Reporting"><span class="material-symbols-outlined">bar_chart</span></a>
+    <a class="erp-sidebar__item" title="Dashboard" href="/demo/atlas/dashboard/"><span class="rd-icon-dashboard"></span></a>
+    <a class="erp-sidebar__item" title="Invoicing" href="/demo/atlas/invoice/"><span class="rd-icon-receipt_long"></span></a>
+    <a class="erp-sidebar__item active" title="Sales"><span class="rd-icon-trending_up"></span></a>
+    <a class="erp-sidebar__item" title="Bank"><span class="rd-icon-account_balance"></span></a>
+    <a class="erp-sidebar__item" title="Contacts"><span class="rd-icon-group"></span></a>
+    <a class="erp-sidebar__item" title="Reporting"><span class="rd-icon-bar_chart"></span></a>
   </nav>
 
   <main class="erp-main">
@@ -202,7 +202,7 @@ layout: null
         <span class="pill pill--info pill--no-dot" id="dm-pill"></span>
         <h3 class="modal__title" id="dm-title" style="margin-top: var(--space-sm)"></h3>
       </div>
-      <button class="modal__close" id="dm-close" aria-label="Close"><span class="material-symbols-outlined" style="font-size:20px">close</span></button>
+      <button class="modal__close" id="dm-close" aria-label="Close"><span class="rd-icon-close" style="font-size:20px"></span></button>
     </div>
     <div class="modal__meta" id="dm-meta"></div>
     <p class="modal__desc" id="dm-desc"></p>
@@ -210,10 +210,10 @@ layout: null
       <div class="modal__label">Linked deal</div>
       <div class="flex items-center gap-sm" style="justify-content: space-between">
         <div class="flex items-center gap-sm">
-          <span class="material-symbols-outlined" style="color:var(--fin-ink-soft)">handshake</span>
+          <span class="rd-icon-handshake" style="color:var(--fin-ink-soft)"></span>
           <span id="dm-project"></span>
         </div>
-        <a class="link-disabled" aria-disabled="true" title="Not available in this demo">Open deal <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span></a>
+        <a class="link-disabled" aria-disabled="true" title="Not available in this demo">Open deal <span class="rd-icon-arrow_forward" style="font-size:18px"></span></a>
       </div>
       <div class="link-note">Deal workspace isn't part of this demo.</div>
     </div>

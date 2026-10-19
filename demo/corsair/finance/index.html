@@ -220,7 +220,7 @@ permalink: /demo/corsair/finance/
 <section>
     {% for ins in finInsights %}
     <div class="alert-card sev-{% if ins.severity == 'critical' %}critical{% elsif ins.severity == 'warning' %}medium{% else %}info{% endif %}">
-        <span class="material-symbols-outlined alert-icon">smart_toy</span>
+        <span class="rd-icon-smart_toy alert-icon"></span>
         <div>
             <h4>{{ ins.title }} <span class="pill {% if ins.severity == 'critical' %}bad{% elsif ins.severity == 'warning' %}warn{% else %}info{% endif %}">{{ ins.severity }}</span></h4>
             <p>{{ ins.body }}</p>

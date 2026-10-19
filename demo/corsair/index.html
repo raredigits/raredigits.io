@@ -49,7 +49,7 @@ permalink: /demo/corsair/
         <div class="today-num-foot">critical + high · {{ jeeves.topActions | size }} actions queued</div>
     </div>
     <a class="today-action" data-modal="modal-digest">
-        <span class="material-symbols-outlined">drafts</span>
+        <span class="rd-icon-drafts"></span>
         Preview Monday digest
     </a>
 </section>
@@ -73,19 +73,19 @@ permalink: /demo/corsair/
         <div class="kpi-label">Cash on hand</div>
         <div class="kpi-value">{{ cashSnap.total | inMillionsOneDecimal }}M <span class="muted" style="font-size: 0.7em">AED</span></div>
         <div class="kpi-foot">{{ cashSnap.unrestricted | inMillionsOneDecimal }}M unrestricted · {{ cashSnap.restrictedEscrow | inMillions }}M escrow</div>
-        <div class="click-hint"><span class="material-symbols-outlined">arrow_forward</span> Open Money</div>
+        <div class="click-hint"><span class="rd-icon-arrow_forward"></span> Open Money</div>
     </a>
     <a href="/demo/corsair/finance/" class="kpi-tile kpi-good clickable" style="text-decoration: none; color: inherit;">
         <div class="kpi-label">Revenue Q1 2025</div>
         <div class="kpi-value">{{ yr.revenueActualYTD | inMillionsOneDecimal }}M</div>
         <div class="kpi-foot">Plan {{ yr.revenueQ1Plan | inMillionsOneDecimal }}M · <strong class="green">{{ q1Pct }}% of plan</strong></div>
-        <div class="click-hint"><span class="material-symbols-outlined">arrow_forward</span> Open Finance</div>
+        <div class="click-hint"><span class="rd-icon-arrow_forward"></span> Open Finance</div>
     </a>
     <a href="/demo/corsair/production/" class="kpi-tile clickable" style="text-decoration: none; color: inherit;">
         <div class="kpi-label">Active projects</div>
         <div class="kpi-value">{{ demo["crisis-theater"].projects.kpis.activeProjects }}</div>
         <div class="kpi-foot">{{ demo["crisis-theater"].projects.kpis.delivered_unbilled }} delivered · awaiting close</div>
-        <div class="click-hint"><span class="material-symbols-outlined">arrow_forward</span> Open Production</div>
+        <div class="click-hint"><span class="rd-icon-arrow_forward"></span> Open Production</div>
     </a>
     <a href="/demo/corsair/notifications/" class="kpi-tile kpi-bad clickable" style="text-decoration: none; color: inherit;">
         <div class="kpi-label">Active alerts</div>
@@ -95,7 +95,7 @@ permalink: /demo/corsair/
             {{ demo["crisis-theater"].alerts.summary.bySeverity.high }} high ·
             {{ demo["crisis-theater"].alerts.summary.bySeverity.medium }} med
         </div>
-        <div class="click-hint"><span class="material-symbols-outlined">arrow_forward</span> Open Notifications</div>
+        <div class="click-hint"><span class="rd-icon-arrow_forward"></span> Open Notifications</div>
     </a>
 </section>
 
@@ -146,11 +146,11 @@ permalink: /demo/corsair/
         {% assign capped = pct %}
         {% if capped > 100 %}{% assign capped = 100 %}{% endif %}
         <div class="unit-card clickable" style="--unit-color: {{ u.color }}" data-modal="modal-unit-{{ u.id }}">
-            <h4><span class="material-symbols-outlined" style="vertical-align: middle; font-size: 1em">{{ u.icon }}</span> {{ u.name }}</h4>
+            <h4><span class="rd-icon-{{ u.icon }}" style="vertical-align: middle; font-size: 1em"></span> {{ u.name }}</h4>
             <div class="unit-actual">{{ uData.revenueActualYTD | inMillionsOneDecimal }}M <span class="muted" style="font-size: 0.65em">AED</span></div>
             <div class="unit-vs-plan">vs plan {{ uData.revenuePlan | inMillionsOneDecimal }}M · {{ pct }}%</div>
             <div class="progress"><div class="progress-fill {{ cls }}" style="width: {{ capped }}%"></div></div>
-            <div class="click-hint"><span class="material-symbols-outlined">read_more</span> Drill in</div>
+            <div class="click-hint"><span class="rd-icon-read_more"></span> Drill in</div>
         </div>
     {% endfor %}
 </section>
@@ -165,7 +165,7 @@ permalink: /demo/corsair/
     {% assign highs = demo["crisis-theater"].alerts.active | where: "severity", "high" %}
     {% for a in criticals %}
         <div class="alert-card sev-critical">
-            <span class="material-symbols-outlined alert-icon">error</span>
+            <span class="rd-icon-error alert-icon"></span>
             <div>
                 <h4>{{ a.title }} <span class="pill bad">Critical</span></h4>
                 <p>{{ a.body }}</p>
@@ -176,7 +176,7 @@ permalink: /demo/corsair/
     {% endfor %}
     {% for a in highs limit: 2 %}
         <div class="alert-card sev-high">
-            <span class="material-symbols-outlined alert-icon">warning</span>
+            <span class="rd-icon-warning alert-icon"></span>
             <div>
                 <h4>{{ a.title }} <span class="pill bad">High</span></h4>
                 <p>{{ a.body }}</p>
@@ -331,7 +331,7 @@ permalink: /demo/corsair/
 <section>
     {% for action in jeeves.topActions %}
         <div class="alert-card sev-{{ action.severity | replace: 'critical', 'critical' | replace: 'warning', 'medium' | replace: 'info', 'low' }}">
-            <span class="material-symbols-outlined alert-icon">arrow_forward</span>
+            <span class="rd-icon-arrow_forward alert-icon"></span>
             <div>
                 <h4>{{ action.title }}
                     {% if action.severity == "critical" %}<span class="pill bad">Critical</span>
@@ -349,6 +349,6 @@ permalink: /demo/corsair/
 <div class="air-md"></div>
 
 <div class="tip">
-    <span class="material-symbols-outlined" style="color: var(--tct-jeeves)">smart_toy</span>
+    <span class="rd-icon-smart_toy" style="color: var(--tct-jeeves)"></span>
     Insights powered by <strong>Jeeves GPT</strong> · trained on your last 27 months
 </div>

@@ -220,7 +220,7 @@ button:hover, .button:hover {
     padding-top: var(--space-lg);
 }
 
-.sidebar .material-icons {
+.sidebar [class*="rd-icon-"] {
     font-size: 1.2em;
     position: relative;
     top: -1px;

@@ -22,13 +22,13 @@ Triggered from: data-modal="modal-unit-<id>" on unit cards.
                 <div class="dialog-sub">{{ u.description }}</div>
             </div>
             <button class="dialog-close" data-close-modal aria-label="Close">
-                <span class="material-symbols-outlined">close</span>
+                <span class="rd-icon-close"></span>
             </button>
         </div>
         <div class="dialog-body">
 
             <div class="unit-drilldown-head" style="--unit-color: {{ u.color }}">
-                <h2><span class="material-symbols-outlined" style="vertical-align: middle">{{ u.icon }}</span> {{ u.name }}</h2>
+                <h2><span class="rd-icon-{{ u.icon }}" style="vertical-align: middle"></span> {{ u.name }}</h2>
                 <div class="unit-tag">Target share of revenue: {{ u.revenueShareTarget | times: 100 }}% · color {{ u.color }}</div>
             </div>
 

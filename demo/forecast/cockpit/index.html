@@ -18,7 +18,7 @@ layout: null
 <link rel="stylesheet" href="/assets/css/modules/forecast.css">
 <style>
   /* page-local polish; lives here so the mockup is easy to tweak in isolation */
-  .material-symbols-outlined { vertical-align: middle; }
+  .rd-icon { vertical-align: middle; }
   .greeting h1 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); }
   .greeting .sub { color: var(--fin-ink-soft); margin-top: 4px; }
 
@@ -40,7 +40,7 @@ layout: null
 
   .card-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-md); }
   .card-head h3 { font-size: var(--font-size-md); }
-  .card-head .material-symbols-outlined { color: var(--fin-ink-soft); font-size: 20px; }
+  .card-head .rd-icon { color: var(--fin-ink-soft); font-size: 20px; }
 </style>
 </head>
 <body class="fin">
@@ -51,20 +51,20 @@ layout: null
     <div class="erp-topbar__brand"><span class="erp-topbar__dot"></span> Meridian</div>
     <div class="erp-topbar__spacer"></div>
     <label class="erp-topbar__search">
-      <span class="material-symbols-outlined" style="font-size:20px">search</span>
+      <span class="rd-icon-search" style="font-size:20px"></span>
       <input type="text" placeholder="Ask anything — &ldquo;cash at year end?&rdquo;">
     </label>
-    <span class="material-symbols-outlined" style="color:var(--fin-ink-soft)">notifications</span>
+    <span class="rd-icon-notifications" style="color:var(--fin-ink-soft)"></span>
     <div class="avatar" title="Founder / MD">SO</div>
   </header>
 
   <!-- app launcher rail -->
   <nav class="erp-sidebar">
-    <a class="erp-sidebar__item active" title="Forecast cockpit"><span class="material-symbols-outlined">query_stats</span></a>
-    <a class="erp-sidebar__item" title="Metric deep-dive" href="/demo/forecast/revenue/"><span class="material-symbols-outlined">show_chart</span></a>
-    <a class="erp-sidebar__item" title="Scenario lab" href="/demo/forecast/scenarios/"><span class="material-symbols-outlined">tune</span></a>
-    <a class="erp-sidebar__item" title="Cash"><span class="material-symbols-outlined">account_balance</span></a>
-    <a class="erp-sidebar__item" title="Reporting"><span class="material-symbols-outlined">bar_chart</span></a>
+    <a class="erp-sidebar__item active" title="Forecast cockpit"><span class="rd-icon-query_stats"></span></a>
+    <a class="erp-sidebar__item" title="Metric deep-dive" href="/demo/forecast/revenue/"><span class="rd-icon-show_chart"></span></a>
+    <a class="erp-sidebar__item" title="Scenario lab" href="/demo/forecast/scenarios/"><span class="rd-icon-tune"></span></a>
+    <a class="erp-sidebar__item" title="Cash"><span class="rd-icon-account_balance"></span></a>
+    <a class="erp-sidebar__item" title="Reporting"><span class="rd-icon-bar_chart"></span></a>
   </nav>
 
   <!-- main -->
@@ -129,9 +129,9 @@ layout: null
           <div class="jeeves__headline">The base case still clears plan &mdash; but the margin is now one stalled deal wide.</div>
           <p class="jeeves__body">Two-thirds of next quarter&rsquo;s revenue is already <strong>committed or recurring</strong>, so the floor is solid. The wobble is all in pipeline: the <strong>Cobalt</strong> licensing renewal (&euro;240K) has sat 9 days and it carries ~&euro;90K of the P50. Slip it past Sep and the &ldquo;chance of hitting plan&rdquo; drops from 72% to about 58% &mdash; I&rsquo;ve modelled both. Separately, <strong>collection lag</strong> crept from 41 to 48 days in May, which is what pulled the cash cone down a notch even though revenue held.</p>
           <div class="jeeves__actions">
-            <a class="chip chip--accent" id="chip-cobalt" href="#" role="button"><span class="material-symbols-outlined" style="font-size:18px">tune</span> <span id="chip-cobalt-label">Model the Cobalt slip</span></a>
-            <a class="chip" href="/demo/forecast/revenue/"><span class="material-symbols-outlined" style="font-size:18px">show_chart</span> Why cash &ne; revenue</a>
-            <a class="chip" href="#"><span class="material-symbols-outlined" style="font-size:18px">draft</span> Send to the board</a>
+            <a class="chip chip--accent" id="chip-cobalt" href="#" role="button"><span class="rd-icon-tune" style="font-size:18px"></span> <span id="chip-cobalt-label">Model the Cobalt slip</span></a>
+            <a class="chip" href="/demo/forecast/revenue/"><span class="rd-icon-show_chart" style="font-size:18px"></span> Why cash &ne; revenue</a>
+            <a class="chip" href="#"><span class="rd-icon-draft" style="font-size:18px"></span> Send to the board</a>
           </div>
         </div>
       </div>
@@ -144,7 +144,7 @@ layout: null
         <div class="section-head" style="margin-top:0"><h2>What builds the number</h2><span class="meta">revenue &middot; next 90 days &middot; P50</span></div>
         <div class="card-soft">
           <div class="flex items-baseline" style="justify-content: space-between; margin-bottom: var(--space-md)">
-            <span class="tag-method"><span class="material-symbols-outlined" style="font-size:15px">function</span> decomposition</span>
+            <span class="tag-method"><span class="rd-icon-function" style="font-size:15px"></span> decomposition</span>
             <span class="num" style="font-size: var(--font-size-xl)">2.71M &euro;</span>
           </div>
 
@@ -175,22 +175,22 @@ layout: null
         <div class="card-soft">
           <div style="display:flex; flex-direction:column; gap: var(--space-md)">
             <div class="flex items-center gap-sm">
-              <span class="material-symbols-outlined" style="color:var(--orange)">trending_down</span>
+              <span class="rd-icon-trending_down" style="color:var(--orange)"></span>
               <div style="flex:1"><div>Licensing pacing below trend</div><div class="txn__sub">78% of run-rate at mid-month &middot; &minus;&euro;42K vs model</div></div>
               <span class="pill pill--warn pill--no-dot">Drift</span>
             </div>
             <div class="flex items-center gap-sm">
-              <span class="material-symbols-outlined" style="color:var(--orange)">schedule</span>
+              <span class="rd-icon-schedule" style="color:var(--orange)"></span>
               <div style="flex:1"><div>Collection lag widening</div><div class="txn__sub">41 &rarr; 48 days &middot; pulls the cash cone, not revenue</div></div>
               <span class="pill pill--warn pill--no-dot">Watch</span>
             </div>
             <div class="flex items-center gap-sm">
-              <span class="material-symbols-outlined" style="color:var(--blue)">event_repeat</span>
+              <span class="rd-icon-event_repeat" style="color:var(--blue)"></span>
               <div style="flex:1"><div>Halcyon retainer up for renewal</div><div class="txn__sub">&euro;120K/yr &middot; 88% modelled renewal probability</div></div>
               <span class="pill pill--info pill--no-dot">Renewal</span>
             </div>
             <div class="flex items-center gap-sm">
-              <span class="material-symbols-outlined" style="color:var(--blue)">event_repeat</span>
+              <span class="rd-icon-event_repeat" style="color:var(--blue)"></span>
               <div style="flex:1"><div>Northwind retainer up for renewal</div><div class="txn__sub">&euro;25K/mo &middot; 94% modelled renewal probability</div></div>
               <span class="pill pill--info pill--no-dot">Renewal</span>
             </div>

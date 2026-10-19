@@ -16,7 +16,7 @@ layout: null
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/raredigits/rare-styles@v0.7.0/rare.min.css">
 <link rel="stylesheet" href="/assets/css/modules/odoo-fintech.css">
 <style>
-  .material-symbols-outlined { vertical-align: middle; }
+  .rd-icon { vertical-align: middle; }
   .doc-grid { display: grid; grid-template-columns: 1fr 340px; gap: var(--space-lg); align-items: start; }
   @media (max-width: 980px) { .doc-grid { grid-template-columns: 1fr; } }
 
@@ -58,20 +58,20 @@ layout: null
     <div class="erp-topbar__brand"><span class="erp-topbar__dot"></span> Meridian</div>
     <div class="erp-topbar__spacer"></div>
     <label class="erp-topbar__search">
-      <span class="material-symbols-outlined" style="font-size:20px">search</span>
+      <span class="rd-icon-search" style="font-size:20px"></span>
       <input type="text" placeholder="Search invoices, customers…">
     </label>
-    <span class="material-symbols-outlined" style="color:var(--fin-ink-soft)">notifications</span>
+    <span class="rd-icon-notifications" style="color:var(--fin-ink-soft)"></span>
     <div class="avatar">SO</div>
   </header>
 
   <nav class="erp-sidebar">
-    <a class="erp-sidebar__item" title="Dashboard" href="/demo/atlas/dashboard/"><span class="material-symbols-outlined">dashboard</span></a>
-    <a class="erp-sidebar__item active" title="Invoicing"><span class="material-symbols-outlined">receipt_long</span></a>
-    <a class="erp-sidebar__item" title="Sales" href="/demo/atlas/pipeline/"><span class="material-symbols-outlined">trending_up</span></a>
-    <a class="erp-sidebar__item" title="Bank"><span class="material-symbols-outlined">account_balance</span></a>
-    <a class="erp-sidebar__item" title="Contacts"><span class="material-symbols-outlined">group</span></a>
-    <a class="erp-sidebar__item" title="Reporting"><span class="material-symbols-outlined">bar_chart</span></a>
+    <a class="erp-sidebar__item" title="Dashboard" href="/demo/atlas/dashboard/"><span class="rd-icon-dashboard"></span></a>
+    <a class="erp-sidebar__item active" title="Invoicing"><span class="rd-icon-receipt_long"></span></a>
+    <a class="erp-sidebar__item" title="Sales" href="/demo/atlas/pipeline/"><span class="rd-icon-trending_up"></span></a>
+    <a class="erp-sidebar__item" title="Bank"><span class="rd-icon-account_balance"></span></a>
+    <a class="erp-sidebar__item" title="Contacts"><span class="rd-icon-group"></span></a>
+    <a class="erp-sidebar__item" title="Reporting"><span class="rd-icon-bar_chart"></span></a>
   </nav>
 
   <main class="erp-main">
@@ -80,7 +80,7 @@ layout: null
     <div class="flex items-center" style="justify-content: space-between; flex-wrap: wrap; gap: var(--space-md); margin-bottom: var(--space-lg)">
       <div class="inv-meta"><a href="/demo/atlas/invoice/" style="color:inherit; text-decoration:none">Invoicing</a> · Customer invoices · <strong>INV-2074</strong></div>
       <div class="stepper">
-        <span class="stepper__step stepper__step--done"><span class="stepper__dot"><span class="material-symbols-outlined" style="font-size:14px">check</span></span> Draft</span>
+        <span class="stepper__step stepper__step--done"><span class="stepper__dot"><span class="rd-icon-check" style="font-size:14px"></span></span> Draft</span>
         <span class="stepper__bar stepper__bar--done"></span>
         <span class="stepper__step stepper__step--current"><span class="stepper__dot">2</span> Sent</span>
         <span class="stepper__bar"></span>
@@ -149,18 +149,18 @@ layout: null
           <div class="pay-amount">69,300<span style="font-size:.4em; color:var(--fin-ink-soft)"> €</span></div>
           <div class="inv-meta" style="margin-bottom: var(--space-md)">Due in 4 days · 17 Jun 2026</div>
 
-          <button class="pay-btn"><span class="material-symbols-outlined">bolt</span> Pay now</button>
+          <button class="pay-btn"><span class="rd-icon-bolt"></span> Pay now</button>
           <div class="pay-sub">Instant SEPA · settles same day</div>
 
           <div class="method sel">
-            <span class="material-symbols-outlined" style="color:var(--fin-ink-soft)">account_balance</span>
+            <span class="rd-icon-account_balance" style="color:var(--fin-ink-soft)"></span>
             <div style="flex:1"><div>Bank transfer</div><div class="inv-meta">ENBD ··· 4471</div></div>
-            <span class="material-symbols-outlined" style="color:var(--fin-accent)">radio_button_checked</span>
+            <span class="rd-icon-radio_button_checked" style="color:var(--fin-accent)"></span>
           </div>
           <div class="method">
-            <span class="material-symbols-outlined" style="color:var(--fin-ink-soft)">credit_card</span>
+            <span class="rd-icon-credit_card" style="color:var(--fin-ink-soft)"></span>
             <div style="flex:1"><div>Card</div><div class="inv-meta">Visa, Mastercard · +2.9%</div></div>
-            <span class="material-symbols-outlined" style="color:var(--gray)">radio_button_unchecked</span>
+            <span class="rd-icon-radio_button_unchecked" style="color:var(--gray)"></span>
           </div>
         </div>
 
@@ -168,15 +168,15 @@ layout: null
           <div class="kpi__label" style="margin-bottom: var(--space-sm)">Timeline</div>
           <div class="txn-list">
             <div class="txn" style="grid-template-columns:auto 1fr">
-              <div class="txn__icon" style="background:var(--brand-color-light); color:var(--green)"><span class="material-symbols-outlined">visibility</span></div>
+              <div class="txn__icon" style="background:var(--brand-color-light); color:var(--green)"><span class="rd-icon-visibility"></span></div>
               <div><div class="txn__title">Viewed by customer</div><div class="txn__sub">today · 09:02</div></div>
             </div>
             <div class="txn" style="grid-template-columns:auto 1fr">
-              <div class="txn__icon"><span class="material-symbols-outlined">send</span></div>
+              <div class="txn__icon"><span class="rd-icon-send"></span></div>
               <div><div class="txn__title">Sent to ap@halcyon</div><div class="txn__sub">02 Jun · 14:10</div></div>
             </div>
             <div class="txn" style="grid-template-columns:auto 1fr">
-              <div class="txn__icon"><span class="material-symbols-outlined">edit_document</span></div>
+              <div class="txn__icon"><span class="rd-icon-edit_document"></span></div>
               <div><div class="txn__title">Created by Sofia</div><div class="txn__sub">02 Jun · 13:55</div></div>
             </div>
           </div>
@@ -200,7 +200,7 @@ layout: null
         <span class="pill pill--mute pill--no-dot" id="im-pill">Invoice line</span>
         <h3 class="modal__title" id="im-title" style="margin-top: var(--space-sm)"></h3>
       </div>
-      <button class="modal__close" id="im-close" aria-label="Close"><span class="material-symbols-outlined" style="font-size:20px">close</span></button>
+      <button class="modal__close" id="im-close" aria-label="Close"><span class="rd-icon-close" style="font-size:20px"></span></button>
     </div>
     <div class="modal__meta" id="im-meta"></div>
     <p class="modal__desc" id="im-desc"></p>
@@ -208,10 +208,10 @@ layout: null
       <div class="modal__label">Catalogue item</div>
       <div class="flex items-center gap-sm" style="justify-content: space-between">
         <div class="flex items-center gap-sm">
-          <span class="material-symbols-outlined" style="color:var(--fin-ink-soft)">inventory_2</span>
+          <span class="rd-icon-inventory_2" style="color:var(--fin-ink-soft)"></span>
           <span id="im-project"></span>
         </div>
-        <a class="link-disabled" aria-disabled="true" title="Not available in this demo">Open item <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span></a>
+        <a class="link-disabled" aria-disabled="true" title="Not available in this demo">Open item <span class="rd-icon-arrow_forward" style="font-size:18px"></span></a>
       </div>
       <div class="link-note">Product catalogue isn't part of this demo.</div>
     </div>

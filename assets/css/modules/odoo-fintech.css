@@ -78,7 +78,7 @@
     margin: 0;
 }
 /* never let uppercase mangle Material Symbols ligatures */
-.fin .material-symbols-outlined { text-transform: none; letter-spacing: normal; }
+.fin [class*="rd-icon-"] { text-transform: none; letter-spacing: normal; }
 
 /* ---- 1. app chrome ----------------------------------------------------- */
 
@@ -159,7 +159,7 @@
 }
 .erp-sidebar__item:hover { background: var(--fin-canvas); color: var(--fin-ink); }
 .erp-sidebar__item.active { background: var(--fin-ink); color: var(--fin-surface); }
-.erp-sidebar__item .material-symbols-outlined { font-size: 26px; }
+.erp-sidebar__item [class*="rd-icon-"] { font-size: 26px; }
 
 .erp-main { padding: var(--space-lg) var(--space-xl); max-width: 1400px; }
 
@@ -278,7 +278,7 @@ a.kpi:hover { transform: translateY(-3px); box-shadow: var(--fin-shadow); }
     display: grid; place-items: center;
     background: var(--gray-light); color: var(--fin-ink-soft);
 }
-.txn__icon .material-symbols-outlined { font-size: 20px; }
+.txn__icon [class*="rd-icon-"] { font-size: 20px; }
 .txn__title { font-weight: var(--font-weight-normal); }
 .txn__sub { font-size: var(--font-size-xs); color: var(--fin-ink-soft); }
 .txn__amount {

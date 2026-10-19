@@ -8,7 +8,7 @@
         {% for item in demo["crisis-theater"].nav.items %}
           <li {% if page.url == item.url %} class="nav-global-current"{% endif %}>
             <a href="{{ item.url }}" title="{{ item.title }}">
-              <span class="material-symbols-outlined">{{ item.icon }}</span>
+              <span class="rd-icon-{{ item.icon }}"></span>
             </a>
           </li>
         {% endfor %}

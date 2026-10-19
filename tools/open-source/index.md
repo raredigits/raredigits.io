@@ -9,7 +9,7 @@ permalink: /tools/open-source/
 <img src="/assets/img/common/vendors/github-mark/github-mark.svg">
 </div>
 
-Visit Rare [GitHub Page](https://github.com/raredigits) <span class="material-icons">arrow_outward</span>
+Visit Rare [GitHub Page](https://github.com/raredigits) <span class="rd-icon-arrow_outward"></span>
 
 One thing about software development is&nbsp;that it&nbsp;involves writing a&nbsp;lot of&nbsp;code. Another thing about writing a&nbsp;lot of&nbsp;code is&nbsp;that you probably shouldn't write all of&nbsp;it&nbsp;from scratch every time. That would be&nbsp;like reinventing double-entry bookkeeping for each new business venture&nbsp;&mdash; technically possible, sure, but there's a&nbsp;reason accountants don't start by&nbsp;debating the metaphysical nature of&nbsp;debits and credits with each new client.
 

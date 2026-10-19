@@ -17,7 +17,7 @@ layout: null
 <link rel="stylesheet" href="/assets/css/modules/odoo-fintech.css">
 <style>
   /* page-local polish; lives here so the mockup is easy to tweak in isolation */
-  .material-symbols-outlined { vertical-align: middle; }
+  .rd-icon { vertical-align: middle; }
   .greeting h1 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); }
   .greeting .sub { color: var(--fin-ink-soft); margin-top: 4px; }
 
@@ -49,7 +49,7 @@ layout: null
 
   .card-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-md); }
   .card-head h3 { font-size: var(--font-size-md); }
-  .card-head .material-symbols-outlined { color: var(--fin-ink-soft); font-size: 20px; }
+  .card-head .rd-icon { color: var(--fin-ink-soft); font-size: 20px; }
 
   /* ---- interactive "Ask Jeeves" panel under the topbar search ---------- */
   .ask { position: relative; }
@@ -69,7 +69,7 @@ layout: null
     font-size: var(--font-size-sm); color: var(--fin-ink);
   }
   .ask-suggest:hover { background: var(--gray-lightest); }
-  .ask-suggest .material-symbols-outlined { color: var(--fin-ink-soft); font-size: 18px; }
+  .ask-suggest .rd-icon { color: var(--fin-ink-soft); font-size: 18px; }
   .ask-answer { display: none; gap: var(--space-sm); padding: var(--space-md); }
   .ask-answer.open { display: flex; }
   .ask-answer__q { font-weight: var(--font-weight-bold); margin-bottom: 4px; }
@@ -77,7 +77,7 @@ layout: null
   .ask-back { margin-top: var(--space-sm); font-size: var(--font-size-xs); color: var(--fin-accent); cursor: pointer; background: none; border: 0; padding: 0; font-family: var(--primary-font); }
 
   /* ---- before / after: the same data as stock Odoo ships it ------------ */
-  .view-toggle .material-symbols-outlined { font-size: 16px; }
+  .view-toggle .rd-icon { font-size: 16px; }
   .raw-banner { display: none; align-items: center; gap: var(--space-sm); margin-top: var(--space-md); padding: var(--space-sm) var(--space-md); background: #efe8ed; border: 1px solid #d8c9d3; border-radius: 3px; font-size: var(--font-size-sm); color: #5c3d54; }
   .raw-banner button { background: none; border: 0; color: #714B67; font-weight: 600; cursor: pointer; font-family: var(--primary-font); padding: 0; }
   body.odoo-raw .raw-banner { display: flex; }
@@ -114,16 +114,16 @@ layout: null
     <div class="erp-topbar__spacer"></div>
     <div class="ask">
       <label class="erp-topbar__search">
-        <span class="material-symbols-outlined" style="font-size:20px">search</span>
+        <span class="rd-icon-search" style="font-size:20px"></span>
         <input type="text" id="ask-input" autocomplete="off" placeholder="Ask anything — “overdue over 30 days?”">
       </label>
       <div class="ask-panel" id="ask-panel">
         <div class="ask-panel__suggestions" id="ask-suggestions">
           <div class="ask-panel__hint">Ask Jeeves — answered from Meridian’s numbers</div>
-          <button class="ask-suggest" data-q="0"><span class="material-symbols-outlined">error</span> What’s overdue more than 30 days?</button>
-          <button class="ask-suggest" data-q="1"><span class="material-symbols-outlined">group_add</span> Can we afford the Q3 post-production hires?</button>
-          <button class="ask-suggest" data-q="2"><span class="material-symbols-outlined">flag</span> How is June tracking against plan?</button>
-          <button class="ask-suggest" data-q="3"><span class="material-symbols-outlined">payments</span> Where did cash move this month?</button>
+          <button class="ask-suggest" data-q="0"><span class="rd-icon-error"></span> What’s overdue more than 30 days?</button>
+          <button class="ask-suggest" data-q="1"><span class="rd-icon-group_add"></span> Can we afford the Q3 post-production hires?</button>
+          <button class="ask-suggest" data-q="2"><span class="rd-icon-flag"></span> How is June tracking against plan?</button>
+          <button class="ask-suggest" data-q="3"><span class="rd-icon-payments"></span> Where did cash move this month?</button>
         </div>
         <div class="ask-answer" id="ask-answer">
           <div class="jeeves__avatar">J</div>
@@ -135,18 +135,18 @@ layout: null
         </div>
       </div>
     </div>
-    <span class="material-symbols-outlined" style="color:var(--fin-ink-soft)">notifications</span>
+    <span class="rd-icon-notifications" style="color:var(--fin-ink-soft)"></span>
     <div class="avatar" title="Founder / MD">SO</div>
   </header>
 
   <!-- app launcher rail -->
   <nav class="erp-sidebar">
-    <a class="erp-sidebar__item active" title="Dashboard"><span class="material-symbols-outlined">dashboard</span></a>
-    <a class="erp-sidebar__item" title="Invoicing" href="/demo/atlas/invoice/"><span class="material-symbols-outlined">receipt_long</span></a>
-    <a class="erp-sidebar__item" title="Sales" href="/demo/atlas/pipeline/"><span class="material-symbols-outlined">trending_up</span></a>
-    <a class="erp-sidebar__item" title="Bank"><span class="material-symbols-outlined">account_balance</span></a>
-    <a class="erp-sidebar__item" title="Contacts"><span class="material-symbols-outlined">group</span></a>
-    <a class="erp-sidebar__item" title="Reporting"><span class="material-symbols-outlined">bar_chart</span></a>
+    <a class="erp-sidebar__item active" title="Dashboard"><span class="rd-icon-dashboard"></span></a>
+    <a class="erp-sidebar__item" title="Invoicing" href="/demo/atlas/invoice/"><span class="rd-icon-receipt_long"></span></a>
+    <a class="erp-sidebar__item" title="Sales" href="/demo/atlas/pipeline/"><span class="rd-icon-trending_up"></span></a>
+    <a class="erp-sidebar__item" title="Bank"><span class="rd-icon-account_balance"></span></a>
+    <a class="erp-sidebar__item" title="Contacts"><span class="rd-icon-group"></span></a>
+    <a class="erp-sidebar__item" title="Reporting"><span class="rd-icon-bar_chart"></span></a>
   </nav>
 
   <!-- main -->
@@ -159,7 +159,7 @@ layout: null
       </div>
       <div class="flex items-center gap-sm" style="flex-wrap: wrap">
         <div class="segment view-toggle" id="view-toggle" title="Same data, two presentations">
-          <button class="active" data-view="atlas"><span class="material-symbols-outlined">auto_awesome</span> Atlas</button>
+          <button class="active" data-view="atlas"><span class="rd-icon-auto_awesome"></span> Atlas</button>
           <button data-view="odoo">Raw Odoo</button>
         </div>
         <div class="segment" role="tablist">
@@ -173,7 +173,7 @@ layout: null
 
     <!-- shown only in Raw-Odoo mode: explains the before/after -->
     <div class="raw-banner" id="raw-banner">
-      <span class="material-symbols-outlined">info</span>
+      <span class="rd-icon-info"></span>
       <span>Same Meridian data, exactly as stock Odoo presents it — dense, generic labels, no morning brief.</span>
       <button id="raw-back">Back to Atlas →</button>
     </div>
@@ -234,9 +234,9 @@ layout: null
           <div class="jeeves__headline">Two of your post-production team are out — and the Aster edit is due today.</div>
           <p class="jeeves__body">Moving the Aster v3 cut to <strong>Amara</strong> keeps the delivery on date; she frees up after 13:00. Separately, the <strong>Cobalt</strong> 3-year licensing proposal (€240K) has sat 9 days — you have leverage while their renewal window is open, so I drafted a follow-up for you to send.</p>
           <div class="jeeves__actions">
-            <a class="chip chip--accent" href="#"><span class="material-symbols-outlined" style="font-size:18px">swap_horiz</span> Reassign Aster edit</a>
-            <a class="chip" href="#"><span class="material-symbols-outlined" style="font-size:18px">draft</span> Open Cobalt follow-up</a>
-            <a class="chip" href="#"><span class="material-symbols-outlined" style="font-size:18px">insights</span> Why cash moved</a>
+            <a class="chip chip--accent" href="#"><span class="rd-icon-swap_horiz" style="font-size:18px"></span> Reassign Aster edit</a>
+            <a class="chip" href="#"><span class="rd-icon-draft" style="font-size:18px"></span> Open Cobalt follow-up</a>
+            <a class="chip" href="#"><span class="rd-icon-insights" style="font-size:18px"></span> Why cash moved</a>
           </div>
         </div>
       </div>
@@ -246,7 +246,7 @@ layout: null
     <div class="section-head"><h2>Today</h2><span class="meta">Friday · 13 June</span></div>
     <div class="today-cols">
       <div class="card-soft">
-        <div class="card-head"><h3>Sales</h3><span class="material-symbols-outlined">trending_up</span></div>
+        <div class="card-head"><h3>Sales</h3><span class="rd-icon-trending_up"></span></div>
         <div class="tasklist">
           <div class="task"
                data-title="Halcyon — retainer renewal call"
@@ -254,7 +254,7 @@ layout: null
                data-status="Call" data-pill="pill--info"
                data-desc="Confirm the 12-month content retainer at €120K. Diego joins to walk through scope — the goal is a verbal yes before quarter close."
                data-project="Halcyon — Retainer 2026">
-            <span class="task__check"><span class="material-symbols-outlined" style="font-size:13px">check</span></span>
+            <span class="task__check"><span class="rd-icon-check" style="font-size:13px"></span></span>
             <div class="task__title">Halcyon — retainer renewal call<span class="sub"><span class="t">14:00</span> · €120K · with Diego</span></div>
             <span class="pill pill--info pill--no-dot">Call</span>
           </div>
@@ -264,7 +264,7 @@ layout: null
                data-status="Send today" data-pill="pill--warn"
                data-desc="Jeeves drafted the follow-up. Cobalt's renewal window is open — send before they re-anchor on last year's price."
                data-project="Cobalt — Licensing 3yr">
-            <span class="task__check"><span class="material-symbols-outlined" style="font-size:13px">check</span></span>
+            <span class="task__check"><span class="rd-icon-check" style="font-size:13px"></span></span>
             <div class="task__title">Send Cobalt 3-year licensing proposal<span class="sub">€240K · stale 9 days</span></div>
             <span class="pill pill--warn pill--no-dot">Send today</span>
           </div>
@@ -274,7 +274,7 @@ layout: null
                data-status="Follow-up" data-pill="pill--mute"
                data-desc="Bundle the overdue INV-2061 chase into the deal conversation — the same contact owns both, so one call covers it."
                data-project="Larkspur — Brand film + retainer">
-            <span class="task__check"><span class="material-symbols-outlined" style="font-size:13px">check</span></span>
+            <span class="task__check"><span class="rd-icon-check" style="font-size:13px"></span></span>
             <div class="task__title">Follow up Larkspur<span class="sub">open deal €88K · invoice overdue</span></div>
             <span class="pill pill--mute pill--no-dot">Follow-up</span>
           </div>
@@ -284,7 +284,7 @@ layout: null
                data-status="Done" data-pill="pill--pos"
                data-desc="Quote for the spring campaign sent this morning. Awaiting client sign-off before it moves into production."
                data-project="Aster — Spring campaign">
-            <span class="task__check done"><span class="material-symbols-outlined" style="font-size:13px">check</span></span>
+            <span class="task__check done"><span class="rd-icon-check" style="font-size:13px"></span></span>
             <div class="task__title">Aster — spring campaign quote sent<span class="sub"><span class="t">09:20</span> · €88K</span></div>
             <span class="pill pill--pos pill--no-dot">Done</span>
           </div>
@@ -292,7 +292,7 @@ layout: null
       </div>
 
       <div class="card-soft">
-        <div class="card-head"><h3>Production</h3><span class="material-symbols-outlined">movie</span></div>
+        <div class="card-head"><h3>Production</h3><span class="rd-icon-movie"></span></div>
         <div class="tasklist">
           <div class="task"
                data-title="Northwind brand film — shoot day 2 of 2"
@@ -300,7 +300,7 @@ layout: null
                data-status="On set" data-pill="pill--info"
                data-desc="Final shoot day for the brand film. Wrap expected by 18:00; rushes go to post tomorrow morning."
                data-project="Northwind — Brand film">
-            <span class="task__check"><span class="material-symbols-outlined" style="font-size:13px">check</span></span>
+            <span class="task__check"><span class="rd-icon-check" style="font-size:13px"></span></span>
             <div class="task__title">Northwind brand film — shoot day 2 of 2<span class="sub">on location · Vera producing</span></div>
             <span class="pill pill--info pill--no-dot">On set</span>
           </div>
@@ -310,7 +310,7 @@ layout: null
                data-status="Due · at risk" data-pill="pill--neg"
                data-desc="v3 cut is due to the client today. Tomas is out sick — Jeeves suggests reassigning to Amara, who frees up after 13:00."
                data-project="Aster — Spring campaign">
-            <span class="task__check"><span class="material-symbols-outlined" style="font-size:13px">check</span></span>
+            <span class="task__check"><span class="rd-icon-check" style="font-size:13px"></span></span>
             <div class="task__title">Aster — edit v3 delivery<span class="sub">editor out sick · needs reassign</span></div>
             <span class="pill pill--neg pill--no-dot">Due · at risk</span>
           </div>
@@ -320,7 +320,7 @@ layout: null
                data-status="Review" data-pill="pill--mute"
                data-desc="Internal review of the phase 1 rebrand cut before it goes to the client. Sofia and Vera to sign off."
                data-project="Vesper — Rebrand phase 1">
-            <span class="task__check"><span class="material-symbols-outlined" style="font-size:13px">check</span></span>
+            <span class="task__check"><span class="rd-icon-check" style="font-size:13px"></span></span>
             <div class="task__title">Vesper rebrand — internal review<span class="sub"><span class="t">16:00</span> · phase 1 cut</span></div>
             <span class="pill pill--mute pill--no-dot">Review</span>
           </div>
@@ -330,7 +330,7 @@ layout: null
                data-status="Done" data-pill="pill--pos"
                data-desc="All 12 animated sequences delivered and acknowledged by the client this morning."
                data-project="Halcyon — Motion pack">
-            <span class="task__check done"><span class="material-symbols-outlined" style="font-size:13px">check</span></span>
+            <span class="task__check done"><span class="rd-icon-check" style="font-size:13px"></span></span>
             <div class="task__title">Halcyon — motion pack delivered<span class="sub"><span class="t">08:40</span> · 12 sequences</span></div>
             <span class="pill pill--pos pill--no-dot">Done</span>
           </div>
@@ -346,17 +346,17 @@ layout: null
         <div class="card-head"><h3>Needs you</h3><span class="pill pill--neg pill--no-dot">3</span></div>
         <div style="display:flex; flex-direction:column; gap: var(--space-md)">
           <div class="flex items-center gap-sm">
-            <span class="material-symbols-outlined" style="color:var(--red)">error</span>
+            <span class="rd-icon-error" style="color:var(--red)"></span>
             <div style="flex:1"><div>Invoice INV-2061 overdue 34 days</div><div class="txn__sub">Larkspur Group · €86K</div></div>
             <span class="pill pill--neg pill--no-dot">Chase</span>
           </div>
           <div class="flex items-center gap-sm">
-            <span class="material-symbols-outlined" style="color:var(--orange)">warning</span>
+            <span class="rd-icon-warning" style="color:var(--orange)"></span>
             <div style="flex:1"><div>Aster delivery at risk</div><div class="txn__sub">editor out sick</div></div>
             <span class="pill pill--warn pill--no-dot">Reassign</span>
           </div>
           <div class="flex items-center gap-sm">
-            <span class="material-symbols-outlined" style="color:var(--orange)">trending_down</span>
+            <span class="rd-icon-trending_down" style="color:var(--orange)"></span>
             <div style="flex:1"><div>Licensing pacing below plan</div><div class="txn__sub">78% at mid-month</div></div>
             <span class="pill pill--warn pill--no-dot">Review</span>
           </div>
@@ -364,25 +364,25 @@ layout: null
       </div>
 
       <div class="card-soft">
-        <div class="card-head"><h3>Upcoming &amp; due</h3><span class="material-symbols-outlined">event</span></div>
+        <div class="card-head"><h3>Upcoming &amp; due</h3><span class="rd-icon-event"></span></div>
         <div class="txn-list">
           <div class="txn">
-            <div class="txn__icon" style="background:color-mix(in srgb, var(--red) 12%, white); color:var(--red)"><span class="material-symbols-outlined">priority_high</span></div>
+            <div class="txn__icon" style="background:color-mix(in srgb, var(--red) 12%, white); color:var(--red)"><span class="rd-icon-priority_high"></span></div>
             <div><div class="txn__title">Vendor payment run</div><div class="txn__sub">today · awaiting your approval</div></div>
             <div class="txn__amount">€142K</div>
           </div>
           <div class="txn">
-            <div class="txn__icon"><span class="material-symbols-outlined">payments</span></div>
+            <div class="txn__icon"><span class="rd-icon-payments"></span></div>
             <div><div class="txn__title">Payroll · June</div><div class="txn__sub">in 12 days · 25 Jun</div></div>
             <div class="txn__amount">€188K</div>
           </div>
           <div class="txn">
-            <div class="txn__icon"><span class="material-symbols-outlined">receipt</span></div>
+            <div class="txn__icon"><span class="rd-icon-receipt"></span></div>
             <div><div class="txn__title">VAT filing · Q2</div><div class="txn__sub">in 15 days · 28 Jun</div></div>
             <div class="txn__amount" style="color:var(--fin-ink-soft)">—</div>
           </div>
           <div class="txn">
-            <div class="txn__icon"><span class="material-symbols-outlined">home_work</span></div>
+            <div class="txn__icon"><span class="rd-icon-home_work"></span></div>
             <div><div class="txn__title">Studio lease renewal</div><div class="txn__sub">in 17 days · 30 Jun</div></div>
             <div class="txn__amount">€26K<span style="color:var(--fin-ink-soft); font-size:.8em">/mo</span></div>
           </div>
@@ -443,27 +443,27 @@ layout: null
         <div class="card-soft" style="padding: var(--space-sm) var(--space-lg)">
           <div class="txn-list">
             <div class="txn">
-              <div class="txn__icon"><span class="material-symbols-outlined">south_west</span></div>
+              <div class="txn__icon"><span class="rd-icon-south_west"></span></div>
               <div><div class="txn__title">Halcyon Studios</div><div class="txn__sub">Invoice paid · today</div></div>
               <div class="txn__amount txn__amount--pos">+ 64,000</div>
             </div>
             <div class="txn">
-              <div class="txn__icon"><span class="material-symbols-outlined">north_east</span></div>
+              <div class="txn__icon"><span class="rd-icon-north_east"></span></div>
               <div><div class="txn__title">AWS · infrastructure</div><div class="txn__sub">Card · yesterday</div></div>
               <div class="txn__amount txn__amount--neg">− 7,420</div>
             </div>
             <div class="txn">
-              <div class="txn__icon"><span class="material-symbols-outlined">south_west</span></div>
+              <div class="txn__icon"><span class="rd-icon-south_west"></span></div>
               <div><div class="txn__title">Northwind Retainer</div><div class="txn__sub">Transfer · 11 Jun</div></div>
               <div class="txn__amount txn__amount--pos">+ 25,000</div>
             </div>
             <div class="txn">
-              <div class="txn__icon"><span class="material-symbols-outlined">north_east</span></div>
+              <div class="txn__icon"><span class="rd-icon-north_east"></span></div>
               <div><div class="txn__title">Payroll · advance</div><div class="txn__sub">WPS · 10 Jun</div></div>
               <div class="txn__amount txn__amount--neg">− 22,300</div>
             </div>
             <div class="txn">
-              <div class="txn__icon"><span class="material-symbols-outlined">south_west</span></div>
+              <div class="txn__icon"><span class="rd-icon-south_west"></span></div>
               <div><div class="txn__title">Meridian Licensing</div><div class="txn__sub">Stripe · 09 Jun</div></div>
               <div class="txn__amount txn__amount--pos">+ 12,800</div>
             </div>
@@ -496,7 +496,7 @@ layout: null
         <span class="pill pill--mute pill--no-dot" id="tm-pill"></span>
         <h3 class="modal__title" id="tm-title" style="margin-top: var(--space-sm)"></h3>
       </div>
-      <button class="modal__close" id="tm-close" aria-label="Close"><span class="material-symbols-outlined" style="font-size:20px">close</span></button>
+      <button class="modal__close" id="tm-close" aria-label="Close"><span class="rd-icon-close" style="font-size:20px"></span></button>
     </div>
     <div class="modal__meta" id="tm-meta"></div>
     <p class="modal__desc" id="tm-desc"></p>
@@ -504,10 +504,10 @@ layout: null
       <div class="modal__label">Linked project</div>
       <div class="flex items-center gap-sm" style="justify-content: space-between">
         <div class="flex items-center gap-sm">
-          <span class="material-symbols-outlined" style="color:var(--fin-ink-soft)">folder</span>
+          <span class="rd-icon-folder" style="color:var(--fin-ink-soft)"></span>
           <span id="tm-project"></span>
         </div>
-        <a class="link-disabled" aria-disabled="true" title="Not available in this demo">Open project <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span></a>
+        <a class="link-disabled" aria-disabled="true" title="Not available in this demo">Open project <span class="rd-icon-arrow_forward" style="font-size:18px"></span></a>
       </div>
       <div class="link-note">Project workspace isn't part of this demo.</div>
     </div>

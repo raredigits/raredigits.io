@@ -16,7 +16,7 @@ layout: null
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/raredigits/rare-styles@v0.7.0/rare.min.css">
 <link rel="stylesheet" href="/assets/css/modules/odoo-fintech.css">
 <style>
-  .material-symbols-outlined { vertical-align: middle; }
+  .rd-icon { vertical-align: middle; }
 
   .rel-head { display:flex; align-items:flex-start; gap: var(--space-md); flex-wrap:wrap; justify-content:space-between; }
   .rel-id { display:flex; align-items:center; gap: var(--space-md); }
@@ -41,7 +41,7 @@ layout: null
   .thread { position:relative; margin-left: 10px; padding-left: var(--space-lg); border-left: 2px solid var(--fin-line); }
   .entry { position:relative; padding: var(--space-sm) 0 var(--space-lg); }
   .entry__icon { position:absolute; left: calc(-1 * var(--space-lg) - 12px); top: 2px; width:24px; height:24px; border-radius:50%; background: var(--fin-surface); box-shadow: var(--fin-shadow-sm); display:flex; align-items:center; justify-content:center; color: var(--fin-ink-soft); }
-  .entry__icon .material-symbols-outlined { font-size:15px; }
+  .entry__icon .rd-icon { font-size:15px; }
   .entry__date { font-size: var(--font-size-xs); color: var(--fin-ink-soft); text-transform:uppercase; letter-spacing:.05em; }
   .entry__title { font-weight: var(--font-weight-bold); margin: 2px 0; }
   .entry__body { font-size: var(--font-size-sm); line-height:1.5; color: var(--fin-ink); }
@@ -56,7 +56,7 @@ layout: null
   .facts { list-style:none; }
   .facts li { display:flex; gap: var(--space-sm); padding: var(--space-xs) 0; border-bottom:1px solid var(--fin-line); font-size: var(--font-size-sm); }
   .facts li:last-child { border-bottom:0; }
-  .facts .material-symbols-outlined { font-size:18px; color: var(--fin-ink-soft); }
+  .facts .rd-icon { font-size:18px; color: var(--fin-ink-soft); }
   .facts .k { color: var(--fin-ink-soft); }
 
   .alert-card { border-left:3px solid var(--orange); }
@@ -70,19 +70,19 @@ layout: null
     <div class="erp-topbar__brand"><span class="erp-topbar__dot"></span> Meridian</div>
     <div class="erp-topbar__spacer"></div>
     <label class="erp-topbar__search">
-      <span class="material-symbols-outlined" style="font-size:20px">search</span>
+      <span class="rd-icon-search" style="font-size:20px"></span>
       <input type="text" placeholder="Search people, companies, promises…">
     </label>
-    <span class="material-symbols-outlined" style="color:var(--fin-ink-soft)">notifications</span>
+    <span class="rd-icon-notifications" style="color:var(--fin-ink-soft)"></span>
     <div class="avatar">NK</div>
   </header>
 
   <nav class="erp-sidebar">
-    <a class="erp-sidebar__item" title="Clients" href="/demo/columbus/clients/"><span class="material-symbols-outlined">groups</span></a>
-    <a class="erp-sidebar__item active" title="Thread"><span class="material-symbols-outlined">forum</span></a>
-    <a class="erp-sidebar__item" title="Warm leads" href="/demo/columbus/warm-leads/"><span class="material-symbols-outlined">account_tree</span></a>
-    <a class="erp-sidebar__item" title="Ledger" href="/demo/columbus/ledger/"><span class="material-symbols-outlined">balance</span></a>
-    <a class="erp-sidebar__item" title="Reporting"><span class="material-symbols-outlined">bar_chart</span></a>
+    <a class="erp-sidebar__item" title="Clients" href="/demo/columbus/clients/"><span class="rd-icon-groups"></span></a>
+    <a class="erp-sidebar__item active" title="Thread"><span class="rd-icon-forum"></span></a>
+    <a class="erp-sidebar__item" title="Warm leads" href="/demo/columbus/warm-leads/"><span class="rd-icon-account_tree"></span></a>
+    <a class="erp-sidebar__item" title="Ledger" href="/demo/columbus/ledger/"><span class="rd-icon-balance"></span></a>
+    <a class="erp-sidebar__item" title="Reporting"><span class="rd-icon-bar_chart"></span></a>
   </nav>
 
   <main class="erp-main">
@@ -128,7 +128,7 @@ layout: null
         <div class="thread">
 
           <div class="entry">
-            <span class="entry__icon"><span class="material-symbols-outlined">waving_hand</span></span>
+            <span class="entry__icon"><span class="rd-icon-waving_hand"></span></span>
             <div class="entry__date">14 Feb 2023 · introduction</div>
             <div class="entry__title">Introduced by Halcyon's Priya at the JLT founders dinner</div>
             <div class="entry__body">Priya sat us next to each other on purpose. Nadia had just raised a seed round and hated her packaging. Did not pitch. Talked about her dog instead.</div>
@@ -136,14 +136,14 @@ layout: null
           </div>
 
           <div class="entry">
-            <span class="entry__icon"><span class="material-symbols-outlined">lightbulb</span></span>
+            <span class="entry__icon"><span class="rd-icon-lightbulb"></span></span>
             <div class="entry__date">Mar 2023 · a hint</div>
             <div class="entry__title">"We might need help before the spring launch"</div>
             <div class="entry__body">Dropped over WhatsApp at 11pm. Did not chase. Sent her the Northwind rebrand case study two days later with no ask attached.</div>
           </div>
 
           <div class="entry">
-            <span class="entry__icon"><span class="material-symbols-outlined">music_note</span></span>
+            <span class="entry__icon"><span class="rd-icon-music_note"></span></span>
             <div class="entry__date">Apr–May 2023 · the dance</div>
             <div class="entry__title">Three coffees, one ghosted week, one revived thread</div>
             <div class="entry__body">She went quiet for nine days after the budget came up. Columbus flagged it. Re-opened with the recital photo, not a follow-up email. Worked.</div>
@@ -151,7 +151,7 @@ layout: null
           </div>
 
           <div class="entry entry--accent">
-            <span class="entry__icon"><span class="material-symbols-outlined">handshake</span></span>
+            <span class="entry__icon"><span class="rd-icon-handshake"></span></span>
             <div class="entry__date">2 Jun 2023 · the money talk</div>
             <div class="entry__title">Signed: Spring campaign · €88K</div>
             <div class="entry__body">Frank conversation about money, finally. She pays on time, always, but needs the invoice split across two quarters. Noted forever.</div>
@@ -159,7 +159,7 @@ layout: null
           </div>
 
           <div class="entry">
-            <span class="entry__icon"><span class="material-symbols-outlined">favorite</span></span>
+            <span class="entry__icon"><span class="rd-icon-favorite"></span></span>
             <div class="entry__date">Nov 2023 · the relationship begins</div>
             <div class="entry__title">She referred us to Vesper Hotels, unprompted</div>
             <div class="entry__body">This is the part the funnel never sees. A closed deal turned into a friend who now sends us people. Vesper became a €82K rebrand.</div>
@@ -167,14 +167,14 @@ layout: null
           </div>
 
           <div class="entry">
-            <span class="entry__icon"><span class="material-symbols-outlined">record_voice_over</span></span>
+            <span class="entry__icon"><span class="rd-icon-record_voice_over"></span></span>
             <div class="entry__date">May 2025 · testimonial</div>
             <div class="entry__title">Gave us a glowing line, on the record</div>
             <div class="entry__body">"Meridian is the only agency that has ever made me look smarter than I am." Cleared for use in warm intros. Attached to 3 live leads.</div>
           </div>
 
           <div class="entry">
-            <span class="entry__icon" style="background:var(--orange);color:var(--fin-surface)"><span class="material-symbols-outlined">schedule</span></span>
+            <span class="entry__icon" style="background:var(--orange);color:var(--fin-surface)"><span class="rd-icon-schedule"></span></span>
             <div class="entry__date">today · needs you</div>
             <div class="entry__title">Quiet 34 days · recital season is back</div>
             <div class="entry__body">Last real contact was the Q1 renewal. Maya's ballet recital is around now (see facts). A no-ask message lands better than a check-in.</div>
@@ -190,11 +190,11 @@ layout: null
         <div class="card-soft" style="margin-bottom: var(--space-lg)">
           <div class="section-head" style="margin-bottom: var(--space-sm)"><h2 style="font-size:var(--font-size-md)">The small things</h2></div>
           <ul class="facts">
-            <li><span class="material-symbols-outlined">family_restroom</span><span><span class="k">Daughter</span> Maya, 7 — ballet, recitals each June</span></li>
-            <li><span class="material-symbols-outlined">restaurant</span><span><span class="k">Allergy</span> shellfish — never book seafood</span></li>
-            <li><span class="material-symbols-outlined">chat</span><span><span class="k">Prefers</span> WhatsApp, evenings — hates 9am calls</span></li>
-            <li><span class="material-symbols-outlined">pets</span><span><span class="k">Dog</span> Biscuit — origin of the brief joke</span></li>
-            <li><span class="material-symbols-outlined">payments</span><span><span class="k">Pays</span> on time, needs invoices split 2 quarters</span></li>
+            <li><span class="rd-icon-family_restroom"></span><span><span class="k">Daughter</span> Maya, 7 — ballet, recitals each June</span></li>
+            <li><span class="rd-icon-restaurant"></span><span><span class="k">Allergy</span> shellfish — never book seafood</span></li>
+            <li><span class="rd-icon-chat"></span><span><span class="k">Prefers</span> WhatsApp, evenings — hates 9am calls</span></li>
+            <li><span class="rd-icon-pets"></span><span><span class="k">Dog</span> Biscuit — origin of the brief joke</span></li>
+            <li><span class="rd-icon-payments"></span><span><span class="k">Pays</span> on time, needs invoices split 2 quarters</span></li>
           </ul>
         </div>
 
@@ -210,7 +210,7 @@ layout: null
               <span class="task__title">Send Maya's recital a good-luck card<span class="sub">no ask attached · <span class="t due">this week</span></span></span>
             </div>
             <div class="task done">
-              <span class="task__check done"><span class="material-symbols-outlined" style="font-size:14px">check</span></span>
+              <span class="task__check done"><span class="rd-icon-check" style="font-size:14px"></span></span>
               <span class="task__title">Split Q1 invoice across two quarters<span class="sub">honoured · <span class="t due">done</span></span></span>
             </div>
           </div>

@@ -16,7 +16,7 @@ layout: null
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/raredigits/rare-styles@v0.7.0/rare.min.css">
 <link rel="stylesheet" href="/assets/css/modules/odoo-fintech.css">
 <style>
-  .material-symbols-outlined { vertical-align: middle; }
+  .rd-icon { vertical-align: middle; }
 
   .wl-cols { display:grid; grid-template-columns: 1.5fr 1fr; gap: var(--space-lg); margin-top: var(--space-lg); align-items:start; }
   @media (max-width: 900px) { .wl-cols { grid-template-columns: 1fr; } }
@@ -45,7 +45,7 @@ layout: null
   .ck li { display:flex; align-items:flex-start; gap: var(--space-sm); padding: var(--space-xs) 0; font-size: var(--font-size-sm); }
   .ck .box { flex:none; width:18px; height:18px; border-radius:5px; border:2px solid var(--fin-line); margin-top:1px; display:flex; align-items:center; justify-content:center; }
   .ck .box.on { background: var(--fin-accent); border-color: var(--fin-accent); color: var(--fin-surface); }
-  .ck .box .material-symbols-outlined { font-size:13px; }
+  .ck .box .rd-icon { font-size:13px; }
   .ck li.on { color: var(--fin-ink-soft); }
 </style>
 </head>
@@ -56,19 +56,19 @@ layout: null
     <div class="erp-topbar__brand"><span class="erp-topbar__dot"></span> Meridian</div>
     <div class="erp-topbar__spacer"></div>
     <label class="erp-topbar__search">
-      <span class="material-symbols-outlined" style="font-size:20px">search</span>
+      <span class="rd-icon-search" style="font-size:20px"></span>
       <input type="text" placeholder="Search people, companies, promises…">
     </label>
-    <span class="material-symbols-outlined" style="color:var(--fin-ink-soft)">notifications</span>
+    <span class="rd-icon-notifications" style="color:var(--fin-ink-soft)"></span>
     <div class="avatar">NK</div>
   </header>
 
   <nav class="erp-sidebar">
-    <a class="erp-sidebar__item" title="Clients" href="/demo/columbus/clients/"><span class="material-symbols-outlined">groups</span></a>
-    <a class="erp-sidebar__item" title="Thread" href="/demo/columbus/thread/"><span class="material-symbols-outlined">forum</span></a>
-    <a class="erp-sidebar__item active" title="Warm leads"><span class="material-symbols-outlined">account_tree</span></a>
-    <a class="erp-sidebar__item" title="Ledger" href="/demo/columbus/ledger/"><span class="material-symbols-outlined">balance</span></a>
-    <a class="erp-sidebar__item" title="Reporting"><span class="material-symbols-outlined">bar_chart</span></a>
+    <a class="erp-sidebar__item" title="Clients" href="/demo/columbus/clients/"><span class="rd-icon-groups"></span></a>
+    <a class="erp-sidebar__item" title="Thread" href="/demo/columbus/thread/"><span class="rd-icon-forum"></span></a>
+    <a class="erp-sidebar__item active" title="Warm leads"><span class="rd-icon-account_tree"></span></a>
+    <a class="erp-sidebar__item" title="Ledger" href="/demo/columbus/ledger/"><span class="rd-icon-balance"></span></a>
+    <a class="erp-sidebar__item" title="Reporting"><span class="rd-icon-bar_chart"></span></a>
   </nav>
 
   <main class="erp-main">
@@ -167,8 +167,8 @@ layout: null
 
           <div class="modal__label">The ask, step by step</div>
           <ul class="ck">
-            <li class="on"><span class="box on"><span class="material-symbols-outlined">check</span></span> Confirm the connector is genuinely happy right now</li>
-            <li class="on"><span class="box on"><span class="material-symbols-outlined">check</span></span> Draft a one-line intro the connector can forward as-is</li>
+            <li class="on"><span class="box on"><span class="rd-icon-check"></span></span> Confirm the connector is genuinely happy right now</li>
+            <li class="on"><span class="box on"><span class="rd-icon-check"></span></span> Draft a one-line intro the connector can forward as-is</li>
             <li><span class="box"></span> <span>Ask <strong id="p-conn">Nadia</strong> for a double opt-in, not a cold CC</span></li>
             <li><span class="box"></span> Lead with their problem, attach the testimonial, no deck</li>
             <li><span class="box"></span> Log the favour owed back to the connector</li>
