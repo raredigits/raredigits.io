@@ -78,7 +78,9 @@
 }
 
 .rd .nav-global ul a:hover {
-    color: var(--nav-link-hover);
+    /* --primary-color: black from the library tokens, white under theme-black */
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
 }
 
 /* The hamburger is visible at every width, like the library's own header
@@ -106,9 +108,11 @@
     display: inline;
 }
 
-/* Tablet: the nav column is narrower (library clips .nav-global with
-   overflow: hidden at 769-1023px), so drop the link padding to fit */
-@media (min-width: 769px) and (max-width: 1023px) {
+/* Tablet and narrow desktop: the nav column is tight (the library clips
+   .nav-global with overflow: hidden at 769-1023px, and right after 1024px
+   padded links would still run under .header-icons), so drop the link
+   padding to fit; the ul gap keeps the items apart */
+@media (min-width: 769px) and (max-width: 1100px) {
     .rd .nav-global ul a {
         padding: 0;
     }
