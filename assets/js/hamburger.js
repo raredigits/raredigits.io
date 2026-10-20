@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.querySelector('.hamburger');
   const navGlobal = document.querySelector('.nav-global');
+  if (!hamburger || !navGlobal) return;
 
   // Toggle the hamburger menu on click
   hamburger.addEventListener('click', () => {
