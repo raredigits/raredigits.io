@@ -152,4 +152,10 @@
         text-align: left;
         height: auto;
     }
+
+    /* Links are height: auto here, so the hover border would add 2px and
+       shift the items below; reserve the space with a transparent border */
+    .rd .nav-global ul a {
+        border-bottom: 2px solid transparent;
+    }
 }
