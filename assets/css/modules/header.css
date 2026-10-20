@@ -100,11 +100,11 @@
     display: none;
 }
 
-.rd .hamburger.active .icon-menu {
+.rd .hamburger.rd-is-active .icon-menu {
     display: none;
 }
 
-.rd .hamburger.active .icon-close {
+.rd .hamburger.rd-is-active .icon-close {
     display: inline;
 }
 
@@ -137,7 +137,7 @@
         z-index: 1000;
     }
 
-    .rd .nav-global.active {
+    .rd .nav-global.rd-is-active {
         top: 0;
     }
 

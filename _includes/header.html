@@ -3,7 +3,7 @@
     <div class="header-logo-wrapper">
         <a class="no-decoration" href="/"><div class="header-logo"></div></a>
     </div>
-    <nav class="nav-global flex stretched">
+    <nav id="nav-global" class="nav-global rd-js-hamburger-nav flex stretched">
       <ul>
         {% for item in site.navigation %}
         <li>
@@ -16,7 +16,7 @@
       </ul>
     </nav>
     <div class="header-icons">
-      <button class="hamburger no-decoration" aria-label="Toggle navigation">
+      <button class="hamburger rd-js-hamburger no-decoration" aria-label="Toggle navigation">
           <span class="rd-icon-menu icon-menu"></span>
           <span class="rd-icon-close icon-close"></span>
       </button>
