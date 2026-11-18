@@ -31,4 +31,4 @@ Call it self-interest pointed in a useful direction. An outage costs us the
 
 So when something does go wrong, and one day it will, you will not be posting a ticket into the void and waiting. You will be talking to someone who can end the problem, that same evening, at no charge. That is the whole of our support, and most of the reason we work so hard to make you never need it.
 
-<div class="caption">→ <a href="/about/contacts/">Talk to someone who can actually fix it</a></div>
+<div class="page-cta"><a class="button button-primary button-lg" href="/about/contacts/">Talk to someone who can actually fix it</a></div>

@@ -33,4 +33,4 @@ We build it on top of the pieces that already work, out in the open, so yo
 
 So bring us the thing you are sure you need built. We will tell you, plainly, how much of it already exists, how little actually has to be made from scratch, and what it will cost you to keep it alive once it does. Sometimes the answer really is a proper build. More often it is a great deal less than you were braced for. Either way, you will know exactly what you are adopting before you bring it home.
 
-<div class="caption">→ <a href="/about/contacts/">Find out whether you even need us to build it</a></div>
+<div class="page-cta"><a class="button button-primary button-lg" href="/about/contacts/">Find out whether you even need us to build it</a></div>

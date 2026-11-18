@@ -35,4 +35,4 @@ We find the few numbers that decide whether you make money, and we make them i
 
 If you are tired of people who make the ordinary sound mysterious and the obvious sound expensive, we should talk. No workshop. No speech about how special you are. Just an honest look at where the money comes in, where it goes, and which number we hang on the wall first.
 
-<div class="caption">→ <a href="/about/contacts/">Start the conversation</a></div>
+<div class="page-cta"><a class="button button-primary button-lg" href="/about/contacts/">Start the conversation</a></div>

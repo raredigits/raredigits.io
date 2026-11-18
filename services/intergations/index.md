@@ -33,4 +33,4 @@ The technical connection was never the hard part. We can wire up almost anythi
 
 So bring us your mess, in whatever shape it is in, and bring us the person who knows where the money comes in and where it goes. We will worry about the pipes. You will start getting clean water out of a system you already own.
 
-<div class="caption margin-t-md">→ <a href="/about/contacts/">Tell us what you’re trying to find out</a></div>
+<div class="page-cta"><a class="button button-primary button-lg" href="/about/contacts/">Tell us what you’re trying to find out</a></div>

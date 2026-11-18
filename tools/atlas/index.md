@@ -83,7 +83,7 @@ The best thing about Atlas is the one feature the famous vendors can't sell you 
 
 It sounds too good to be true, and we understand the reflex. So don't believe us. Book a demo, bring your CTO, and see the whole thing for yourselves. Or skip the calendar for now and click through the screens as they stand: no login, no sales call, just the dashboard, an invoice and the pipeline, ready to hold up against your own fifty-tab monster.
 
-<div class="caption">→ <a href="/demo/atlas/dashboard/">Open the live Atlas demo</a></div>
+<div class="page-cta"><a class="button button-primary button-lg" href="/demo/atlas/dashboard/">Open the live Atlas demo</a></div>
 
 It's the same Odoo a hundred thousand businesses already run, with the question the owner actually asks put at the top of the screen and a bill that counts only the seats you fill. Once you can picture it on your own systems, the rest is a fifteen-minute conversation.
 

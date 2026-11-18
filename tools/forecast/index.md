@@ -120,7 +120,7 @@ There is a quieter dividend, too. For the first time the manager knows exactly
 
 We built a working demo on synthetic data. No login, no sales call, nobody emailing you afterwards. Click between the cockpit, a metric deep-dive and the scenario lab, and drag the sliders until something breaks.
 
-<div class="caption">→ <a href="/demo/forecast/cockpit/">Open the live Forecast demo</a></div>
+<div class="page-cta"><a class="button button-primary button-lg" href="/demo/forecast/cockpit/">Open the live Forecast demo</a></div>
 
 These are the numbers your systems already hold. We just ran them forward, left the uncertainty where you can see it, and showed the working out, so the figure in the next board deck is one you can actually defend when someone asks, as someone always does, where it came from.
 

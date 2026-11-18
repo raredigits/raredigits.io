@@ -29,4 +29,4 @@ None of this means we have forgotten the locks. We still bolt the doors: the 
 
 So before you buy another wall, it is worth asking which disaster you are actually buying it against. Tell us how your business would really break on its worst realistic day, and we will make sure your data is standing, yours, and within reach when that day comes.
 
-<div class="caption margin-t-md">→ <a href="/about/contacts/">Find out what would actually take you down</a></div>
+<div class="page-cta"><a class="button button-primary button-lg" href="/about/contacts/">Find out what would actually take you down</a></div>

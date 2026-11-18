@@ -35,4 +35,4 @@ We cared about this enough to write it down and give it away. [Rare Styles](
 
 A gauge in a cockpit is not art. You trust it because it is right and because you can read it at a glance, in the dark, while something is on fire. That is the standard we hold a business screen to, and it is the only one we lose sleep over.
 
-<div class="caption margin-t-md">→ <a href="/about/contacts/">Put this kind of clarity on your own numbers</a></div>
+<div class="page-cta"><a class="button button-primary button-lg" href="/about/contacts/">Put this kind of clarity on your own numbers</a></div>
