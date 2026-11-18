@@ -37,7 +37,7 @@ Then there is the conviction of the people who already locked their coins up.
 
 Underneath sits the plumbing, which works or quietly does not: how reliably blocks are produced, whether the validators are online, whether the chain just rewrote a slice of its own recent history. None of this is a black box. Watchtower parses the chain itself, EVM-compatible networks and Cosmos SDK chains, labels the wallets that matter, and watches the flows across the window you pick: a day, a week, a month.
 
-<div class="text-content-caption card-dashboard-bordered">
+<div class="text-content-caption panel panel--bordered">
     <div id="watchtower-flows-demo"></div>
 </div>
 

@@ -10,10 +10,10 @@ permalink: /services/consulting/
 
 Four months later, a deck arrives. It is a beautiful deck. Slide 34 suggests you watch your margins and shorten your sales cycle. You knew that on the morning of the kickoff. You could have written slide 34 yourself, and for the price, you more or less did.
 
-<div class="text-content-caption">
-  <img src="/assets/img/illustrations/rare-consulting.jpg" />
-  <cite>Rare Consulting Session</cite>
-</div>
+<figure class="text-content-caption">
+  <img src="/assets/img/illustrations/rare-consulting.jpg">
+  <figcaption>Rare Consulting Session</figcaption>
+</figure>
 
 We have been doing this for twenty years, which means we have sat through a great many versions of that workshop. So here is the thing nobody says out loud at the kickoff. A doctor who has seen ten thousand patients stops being startled by a sore throat. We stopped being startled a long time ago.
 

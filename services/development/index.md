@@ -12,10 +12,10 @@ By now you have probably sat through the ritual. The sprints, the stand-ups, th
 
 Here is the part nobody selling you a build says out loud. Software behaves less like a desk you buy once and own, and more like a dog you adopt and feed. Everything someone builds for you has to be looked after for the rest of its life. It needs feeding when the law changes, when your bank redesigns its forms, when the one person who understood it leaves for a competitor in, roughly, month four. The build was the cheap part. The feeding is the bill that never stops coming.
 
-<div class="text-content-caption">
-  <img src="/assets/img/illustrations/rare-development.jpg" />
-  <cite>Mostly We Recommend Against It</cite>
-</div>
+<figure class="text-content-caption">
+  <img src="/assets/img/illustrations/rare-development.jpg">
+  <figcaption>Mostly We Recommend Against It</figcaption>
+</figure>
 
 ## The First Thing We Do Is Talk You Out Of It
 

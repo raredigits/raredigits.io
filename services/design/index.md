@@ -12,10 +12,10 @@ Design is nice. Pretty things are nice. Dark mode is gentle on the eyes at m
 
 A business screen is closer to a fuel gauge than a painting. You do not admire a fuel gauge. You trust it, or you don’t.
 
-<div class="text-content-caption">
-  <img src="/assets/img/illustrations/rare-design.jpg" />
-  <cite>Rare Design Review</cite>
-</div>
+<figure class="text-content-caption">
+  <img src="/assets/img/illustrations/rare-design.jpg">
+  <figcaption>Rare Design Review</figcaption>
+</figure>
 
 ## The Real Design Happens in the Query
 

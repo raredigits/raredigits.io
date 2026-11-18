@@ -50,7 +50,7 @@ So here is the closest thing to a magic pill this page will offer. Stop hand
 
 P50 is the middle: the figure you beat half the time and miss half the time, the honest version of the single number you were going to quote anyway. P10 and P90 are the edges of plausible. The real result lands between them about eight quarters in ten, and wanders outside only when the quarter is genuinely cursed or genuinely blessed. The gap between them is the **band**, and this is the part worth tattooing somewhere: the width is the message. A skinny band means the future is basically pinned down, go sign the lease. A fat one means the future has opinions, so keep some powder dry. The band isn’t us hedging. The band is the information.
 
-<div class="text-content-caption card-dashboard-bordered">
+<div class="text-content-caption panel panel--bordered">
     <div id="line-chart-demo-forecast"></div>
 </div>
 

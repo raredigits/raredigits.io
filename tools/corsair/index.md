@@ -15,10 +15,10 @@ permalink: /tools/corsair/
     <p><strong>The reality:</strong> it's managing seventeen browser tabs while reconciling data that fundamentally disagrees with itself.</p>
 </div>
 
-<div class="text-content-caption">
+<figure class="text-content-caption">
   <img src="/assets/img/illustrations/products/corsair/sap.jpg">
-  <cite>Lovely "friendly" and "modern" business application interface</cite>
-</div>
+  <figcaption>Lovely "friendly" and "modern" business application interface</figcaption>
+</figure>
 
 **Current Workflow:** Your ERP system offers a labyrinth of menus containing theoretically useful information, much like how an ancient library contained knowledge—somewhere in there, possibly. Your departmental reports each use creative accounting that would make tax havens nervous, with costs mysteriously migrating between departments like birds seeking warmer climates. Your CRM tracks customer metrics using definitions unrelated to any other system. And your accounting software stubbornly insists on reflecting actual financial reality, making it the least popular system in your technology stack.
 

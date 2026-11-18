@@ -43,6 +43,27 @@ body.text-content article > h3 {
     margin-left: calc(var(--space-lg) * -1);
 }
 
+/* The line under the construction notice. Since rare-styles v0.7.2 a bare
+   <cite> is inline text; this keeps the look it had: its own line, at the
+   right, small and light. */
+.text-content-fullwidth-caption > cite {
+    display: block;
+    width: 100%;
+    margin: var(--space-sm) 0;
+    text-align: right;
+    color: var(--text-color-dark);
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size-sm);
+    line-height: 1.3em;
+}
+
+/* REMOVE WITH rare-charts v0.9.8_7: the charts here (v0.9.6, v0.9.7) set their
+   source line in a bare <cite>, which rare-styles v0.7.2 no longer makes a
+   block. From v0.9.8_6 the chart styles its own source line. */
+.rc-chart-source {
+    display: block;
+}
+
 .caption p {
     max-width: 86%;
 }
@@ -110,10 +131,6 @@ form input {
     padding: var(--space-xs) var(--space-sm);
 }
 
-form button {
-    border-color: var(--border-color);
-}
-
 .form-error {
     color: var(--red);
     padding: var(--space-md) 0;
@@ -154,4 +171,11 @@ form button {
     .wide-background-wrapper {
         padding-left: var(--space-md);
     }
+}
+
+/* The sidebar row on a phone (section, meta, tags) scrolls sideways inside
+   itself. Its wrapper is a flex item: without this it grows to its content and
+   pushes the page wider instead — by 13px once the v0.7.2 tags got roomier. */
+.sidebar-wrapper {
+    min-width: 0;
 }

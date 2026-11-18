@@ -12,10 +12,10 @@ What clients would rather talk about is integration. Does it connect to Sales
 
 Think of it as plumbing. The integration is the pipe. What you actually wanted was the water. You can spend the whole meeting comparing fittings, copper against PVC, and never once ask whether anything clean comes out the far end.
 
-<div class="text-content-caption">
-  <img src="/assets/img/illustrations/rare-integration.jpg" />
-  <cite>Source Data We’re Happy to Deal With</cite>
-</div>
+<figure class="text-content-caption">
+  <img src="/assets/img/illustrations/rare-integration.jpg">
+  <figcaption>Source Data We’re Happy to Deal With</figcaption>
+</figure>
 
 ## Start With the Water, Not the Pipe
 

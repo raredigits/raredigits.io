@@ -12,10 +12,10 @@ None of this is an accident. Most support is built to keep you away from th
 
 There is really only one number that tells you how good support is going to be, and it is the count of people standing between you and whoever can actually fix your problem. The industry spends fortunes making that number bigger. We have spent twenty years making it zero.
 
-<div class="text-content-caption">
-  <img src="/assets/img/illustrations/rare_support.jpg" />
-  <cite>The Entire Support Department</cite>
-</div>
+<figure class="text-content-caption">
+  <img src="/assets/img/illustrations/rare_support.jpg">
+  <figcaption>The Entire Support Department</figcaption>
+</figure>
 
 ## You Reach the People Who Built It
 

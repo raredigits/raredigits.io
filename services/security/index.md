@@ -12,10 +12,10 @@ The trouble is that, for most businesses, the hoodie never turns up. The disas
 
 A lock, it turns out, works in both directions. It keeps strangers out of your business, and on a bad day it shuts you out of it too. Most of what gets sold as security is a thicker door. Almost nobody asks the more useful question, which is whether you can get in when you actually need to.
 
-<div class="text-content-caption">
-  <img src="/assets/img/illustrations/rare_security.jpg" />
-  <cite>Worrying About the Right Things</cite>
-</div>
+<figure class="text-content-caption">
+  <img src="/assets/img/illustrations/rare_security.jpg">
+  <figcaption>Worrying About the Right Things</figcaption>
+</figure>
 
 ## We Start With What Would Actually Hurt
 
