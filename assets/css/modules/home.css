@@ -138,9 +138,13 @@ footer {
 .newsletter-bar {
     width: 86%;
     background: var(--black);
-    color: var(--gray-trans);
+    color: var(--white);
     padding: var(--space-md) var(--space-lg) var(--space-lg);
     text-align: left;
+
+    h3 {
+        color: var(--white);
+    }
 
     p {
         font-size: 0.9em;
@@ -153,24 +157,33 @@ footer {
 
 .newsletter-bar form {
     input[type="email"] {
-        background: var(--bg-color);
+        background: var(--black);
+        color: var(--white);
+        caret-color: var(--white);
         margin: 0;
         width: 16rem;
         min-width: 24vw;
         border-color: var(--gray-trans);
+
+        &::placeholder {
+            color: var(--gray-trans);
+        }
+
+        &:focus {
+            border-color: var(--white);
+        }
     }
 
     button {
         background-color: var(--black);
-        color: var(--gray-trans);
-        border: 1px solid var(--gray-trans);
+        color: var(--white);
+        border: 1px solid var(--white);
         margin-top: 0;
 
         &:hover {
-            background-color: var(--black);
-            color: var(--white);
+            background-color: var(--white);
+            color: var(--black);
             border-color: var(--white);
         }
     }
 }
-
