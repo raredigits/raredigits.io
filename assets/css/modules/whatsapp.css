@@ -35,7 +35,10 @@
 .main-home {
     --wa-size:  60px;            /* matches rare-styles .wa-button */
     --wa-float: var(--space-xl); /* gap above the viewport bottom while scrolling */
-    --wa-right: var(--space-lg); /* gap from the right edge */
+    /* gap from the right edge: lines the button up with the right edge of the
+       header content (the hamburger), so on a wide screen it stays by the
+       content instead of the window edge */
+    --wa-right: calc(var(--space-md) + max(0px, (100% - 2 * var(--space-md) - var(--site-max-width)) / 2));
     --wa-stop:  84px; /* parks the button on the strip, clear of the form */
 }
 
@@ -60,7 +63,6 @@
 
 @media (max-width: 768px) {
     .main-home {
-        --wa-right: var(--space-md);
         /* keep clear of the home indicator on notched phones */
         --wa-float: calc(var(--space-md) + env(safe-area-inset-bottom, 0px));
     }
