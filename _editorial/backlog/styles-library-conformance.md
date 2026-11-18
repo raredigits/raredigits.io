@@ -4,7 +4,7 @@
 
 Вывод: `forecast.css` и `odoo-fintech.css` держат правильную дисциплину токенов и структуру файла, но **(1) переизобретают готовые компоненты библиотеки и (2) написаны не в той идиоме именования.** Ниже что заменить.
 
-Контекст по библиотеке: 1342 класса; идиома — **kebab-case compound** (`.table-numeric`, `.card-dashboard-bordered`, `.grid-cols-3`), BEM `__`/`--` только у ~17 классов (`.card-grid__item`). То есть тяжёлый BEM-диалект модулей (`.scenario__value`, `.kpi__label`) — НЕ стиль библиотеки.
+Контекст по библиотеке: 1342 класса; идиома — **kebab-case compound** (`.table-numeric`, `.card-inverted`, `.grid-cols-3`), BEM `__`/`--` только у ~17 классов (`.card-grid__item`). То есть тяжёлый BEM-диалект модулей (`.scenario__value`, `.kpi__label`) — НЕ стиль библиотеки.
 
 ---
 
@@ -24,7 +24,7 @@
 
 ### Карточки `.scenario`
 - Руками: `.scenario`, `.scenario--base/--down/--up`, `.scenario__name/__value/__prob/__assumptions`.
-- В библиотеке есть: `.card`, `.card-header`, `.card-hover`, `.card-grid`, `.card-grid--cols-3`.
+- В библиотеке есть: `.card`, `.card-hover`, `.card-grid`, `.card-grid--cols-3` (`.card-header` убран в v0.7.2: шапка карточки — блок с `.border-bottom`).
 - → Строить на `.card` + `.card-grid--cols-3`; собственным оставить акцентную полосу-цвет сценария и список допущений.
 
 ### Fan chart — сырой инлайн-SVG ✅ СДЕЛАНО 18.06.2026

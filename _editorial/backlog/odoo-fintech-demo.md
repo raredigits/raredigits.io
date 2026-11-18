@@ -44,7 +44,7 @@
 Библиотека уже подключена на сайте:
 
 ```
-https://cdn.jsdelivr.net/gh/raredigits/rare-styles@v0.6.15/rare.min.css
+https://cdn.jsdelivr.net/gh/raredigits/rare-styles@v0.7.2/rare.min.css
 ```
 
 ### Токены, которые задают «лицо»
@@ -58,7 +58,7 @@ https://cdn.jsdelivr.net/gh/raredigits/rare-styles@v0.6.15/rare.min.css
 
 ### Полезные классы, которые уже есть
 
-`card`, `card-dashboard-bordered`, `card-hover`, `card-inverted`, `card-grid` (+`--cols-2/3/4`), `grid-cols-N`, `col-span-N`, `table-numeric/striped/bordered/small`, `tag`, `callout`, `button`, `lead`, цветовые `*-bg`/`*-link`, шкалы `air-*`/`gap-*`/`margin-*`.
+`card`, `panel panel--bordered` (вместо убранного в v0.7.2 `card-dashboard-bordered`), `card-hover`, `card-inverted`, `card-grid` (+`--cols-2/3/4`), `grid-cols-N`, `col-span-N`, `table-numeric/striped/bordered/small`, `tag`, `callout`, `button`, `lead`, цветовые `*-bg`/`*-link`, шкалы `air-*`/`gap-*`/`margin-*`.
 
 ### Философия подачи (наша)
 
