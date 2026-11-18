@@ -32,8 +32,15 @@ body.theme-black {
         --button-text: var(--black);
     }
 
+    /* No fill, as in the library header: the theme's button rule above would
+       make it white, and the old black fill (with the library's 32px radius)
+       drew a pill over the menu that scrolls under it on a phone. */
     .hamburger {
-        background: var(--black);
+        background: none;
         color: var(--white);
+
+        &:hover {
+            background: none;
+        }
     }
 }
