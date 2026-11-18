@@ -58,7 +58,7 @@ title: Data In, Meaning Out
         <hr class="brand-color margin-x-auto width-50">
     </div>
     <div class="margin-x-auto">
-        <a class="button subheader block text-wrap" href="/tools/corsair/">
+        <a class="button button-lg subheader block text-wrap" href="/tools/corsair/">
             Finally, Even One Eye Is Enough for a 360-Degree View
         </a>
     </div>
@@ -93,8 +93,9 @@ title: Data In, Meaning Out
         20 years satisfying enterprise’s every need
     </p>
     <div class="grid grid-cols-4 mobile:grid-cols-1 gap-md padding-y-lg">
-        <div class="left white-bg black padding-x-md padding-t-md padding-b-lg rounded-md">
-            <h3 class="center-x">Consulting</h3>
+        <div class="card black left padding-x-md padding-t-md padding-b-lg">
+            <h5 class="center-x">Consulting</h5>
+            <hr class="divider-md"></hr>
             <ul>
                 <li>Value Highlighting;</li>
                 <li>Profit Search;</li>
@@ -103,8 +104,9 @@ title: Data In, Meaning Out
                 <li>Enterprise Insights.</li>
             </ul>
         </div>
-        <div class="left white-bg black padding-x-md padding-t-md padding-b-lg rounded-md">
-            <h3 class="center-x">Development</h3>
+        <div class="card black left padding-x-md padding-t-md padding-b-lg">
+            <h5 class="center-x">Development</h5>
+            <hr class="divider-md"></hr>
             <ul>
                 <li>Diverse Systems Integrations;</li>
                 <li>Websites & Applications;</li>
@@ -112,8 +114,9 @@ title: Data In, Meaning Out
                 <li>Custom Software.</li> 
             </ul>
         </div>
-        <div class="left white-bg black padding-x-md padding-t-md padding-b-lg rounded-md">
-            <h3 class="center-x">Design</h3>
+        <div class="card black left padding-x-md padding-t-md padding-b-lg">
+            <h5 class="center-x">Design</h5>
+            <hr class="divider-md"></hr>
             <ul>
                 <li>Omni-Channel Value Delivering;</li>
                 <li>Dashboards;</li>
@@ -122,8 +125,9 @@ title: Data In, Meaning Out
                 <li>Decisions Provision.</li>
             </ul>
         </div>
-        <div class="left white-bg black padding-x-md padding-t-md padding-b-lg rounded-md">
-            <h3 class="center-x">Support</h3>
+        <div class="card black left padding-x-md padding-t-md padding-b-lg">
+            <h5 class="center-x">Support</h5>
+            <hr class="divider-md"></hr>
             <ul>
                 <li>Third-Party Apps Customization;</li>
                 <li>Get Help with Custom Software;</li>
@@ -313,16 +317,24 @@ title: Data In, Meaning Out
 
     <div class="width-60 mobile:width-100 margin-x-auto">
         <h3>Book a Demo:</h3>
-        <form id="my-form" action="https://formspree.io/f/xoqodadn" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="company">Company:</label>
-            <input type="text" id="company" name="company" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="contact">Contact Number:</label>
-            <input type="tel" id="contact" name="contact" required>
-            <button id="my-form-button" class="full-width">Request a Demonstration</button>
+        <form id="my-form" class="left" action="https://formspree.io/f/xoqodadn" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+            <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" autocomplete="organization" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact number</label>
+                <input type="tel" id="contact" name="contact" autocomplete="tel" required>
+            </div>
+            <button id="my-form-button" class="button-primary button-block margin-t-md" type="submit">Request a Demonstration</button>
             <h3 id="my-form-status"></h3>
         </form>
         <h3>Meet The Team</h3>

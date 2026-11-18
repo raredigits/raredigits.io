@@ -60,17 +60,25 @@ Same software, same implementation quality — just with someone who knows which
 
 Not a fan of geographical constraints? Our demo booking form transcends space and time. Well, mostly time zones.
 
-<div class="text-content-caption padding-t-md padding-x-lg gray-light-bg">
-   <form class="column text-content-width" id="my-form" action="https://formspree.io/f/xoqodadn" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      <label for="company">Company:</label>
-      <input type="text" id="company" name="company" required>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      <label for="contact">Contact Number:</label>
-      <input type="tel" id="contact" name="contact" required>
-      <button id="my-form-button" class="margin-t-md">Request a Demonstration</button>
+<div class="text-content-caption padding-t-md padding-b-sm padding-x-lg rounded-sm gray-lightest-bg">
+   <form class="text-content-width" id="my-form" action="https://formspree.io/f/xoqodadn" method="POST">
+      <div class="form-group">
+         <label for="name">Name</label>
+         <input type="text" id="name" name="name" autocomplete="name" required>
+      </div>
+      <div class="form-group">
+         <label for="company">Company</label>
+         <input type="text" id="company" name="company" autocomplete="organization" required>
+      </div>
+      <div class="form-group">
+         <label for="email">Email</label>
+         <input type="email" id="email" name="email" autocomplete="email" required>
+      </div>
+      <div class="form-group">
+         <label for="contact">Contact number</label>
+         <input type="tel" id="contact" name="contact" autocomplete="tel" required>
+      </div>
+      <button id="my-form-button" class="button-primary margin-t-md" type="submit">Request a Demonstration</button>
       <h3 id="my-form-status"></h3>
    </form>
 </div>
