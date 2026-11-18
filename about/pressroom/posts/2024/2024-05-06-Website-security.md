@@ -17,10 +17,10 @@ But that would be marketing dishonesty, and we prefer a different approach: the 
 
 Here's the reality most security companies don't want you to know: unless you're running a major financial institution, government agency, or storing particularly juicy data, hackers probably aren't specifically targeting you.
 
-<div class="full-width">
-  <img src="{{ cover }}" />
-</div>
-<cite>Working day of your digital security officer</cite>
+<figure class="full-width">
+  <img src="{{ cover }}">
+  <figcaption>Working day of your digital security officer</figcaption>
+</figure>
 
 Most website owners face the digital equivalent of opportunistic pickpockets—automated bots scanning for common vulnerabilities—not Ocean's Eleven-style master criminals planning elaborate heists against your specific site.
 

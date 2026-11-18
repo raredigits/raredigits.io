@@ -21,6 +21,6 @@ This is, as far as we can tell, an unusual position for sales software to take. 
 
 There is more to it than the ledger, the long thread of the relationship, the small things worth remembering, the tree of warm introductions each client can open for you, and the easiest way to see how it fits together is to open it. We built a working demo on a fictional studio's book of clients, no login and no sales call, where you can watch a relationship tip from black into red and an introduction stay locked until the balance is settled.
 
-<div class="caption">→ <a href="/demo/columbus/ledger/">Open the live Columbus demo</a></div>
+<div class="page-cta"><a class="button button-primary button-lg" href="/demo/columbus/ledger/">Open the live Columbus demo</a></div>
 
 The whole product, the pricing and the rest, lives on the [Columbus page](/tools/columbus/). The principle underneath it, for anyone who skipped last week, is [here](/pressroom/The-Deal-Is-Made-Between-the-Lines/).

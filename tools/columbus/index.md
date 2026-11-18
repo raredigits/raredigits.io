@@ -92,7 +92,7 @@ The explorer got gold for glass beads, the most lopsided trade anyone remembers,
 
 We built a working demo on a fictional studio’s book of clients. No login, no sales call. Click through the thread, the ledger and the warm-leads tree, and watch a relationship tip from black into red.
 
-<div class="caption">→ <a href="/demo/columbus/clients/">Open the live Columbus demo</a></div>
+<div class="page-cta"><a class="button button-primary button-lg" href="/demo/columbus/clients/">Open the live Columbus demo</a></div>
 
 {% include "special/bookDemo.html" %}
 

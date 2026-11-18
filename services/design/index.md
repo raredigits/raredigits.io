@@ -12,10 +12,10 @@ Design is nice. Pretty things are nice. Dark mode is gentle on the eyes at m
 
 A business screen is closer to a fuel gauge than a painting. You do not admire a fuel gauge. You trust it, or you don’t.
 
-<div class="text-content-caption">
-  <img src="/assets/img/illustrations/rare-design.jpg" />
-  <cite>Rare Design Review</cite>
-</div>
+<figure class="text-content-caption">
+  <img src="/assets/img/illustrations/rare-design.jpg">
+  <figcaption>Rare Design Review</figcaption>
+</figure>
 
 ## The Real Design Happens in the Query
 
@@ -35,4 +35,4 @@ We cared about this enough to write it down and give it away. [Rare Styles](
 
 A gauge in a cockpit is not art. You trust it because it is right and because you can read it at a glance, in the dark, while something is on fire. That is the standard we hold a business screen to, and it is the only one we lose sleep over.
 
-<div class="caption margin-t-md">→ <a href="/about/contacts/">Put this kind of clarity on your own numbers</a></div>
+<div class="page-cta"><a class="button button-primary button-lg" href="/about/contacts/">Put this kind of clarity on your own numbers</a></div>

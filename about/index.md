@@ -12,10 +12,10 @@ Rare Digits is a software company that fixes precisely that. Since 2009 we ha
 
 What we sell is not really the code; it is years of pattern recognition about where money hides in a company, most of it earned long before 2009, and the software is simply how we hand it over.
 
-<div class="text-content-caption">
+<figure class="text-content-caption">
   <img src="/assets/img/illustrations/rare_about.jpg">
-  <cite>(How to merge sixteen tabs into one viewport, and nobody missed them?)</cite>
-</div>
+  <figcaption>(How to merge sixteen tabs into one viewport, and nobody missed them?)</figcaption>
+</figure>
 
 We started with webshops and the kind of family business where the founder signs the cheques and the entire back office is one heroic bookkeeper. We now do the same work for holding structures sprawling across a dozen legal entities and just as many systems, none of which are on speaking terms.
 

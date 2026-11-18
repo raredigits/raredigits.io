@@ -1,29 +1,35 @@
 body.theme-black {
     --primary-color: var(--white);
     --bg-color: var(--black);
-    --header-bg: var(--black);
 
     .header-logo {
         background-image: url('/assets/img/logo/logo_black.svg');
     }
 
-    header [class*="rd-icon-"],
-    nav a:hover  {
+    /* Footer menus only: the site header uses the library's own nav look. */
+    footer nav a:hover {
         color: var(--white);
-    }
-
-    nav a:hover {
         border-bottom: 2px solid var(--white);
     }
 
-    button,
-    .button {
+    /* Every button but the library's colour variants, which keep their own
+       colours; a size class (.button-lg, .button-block) changes nothing here.
+       :where() keeps the rule as light as it was, so .hamburger below still
+       wins. */
+    button:where(:not(.button-primary, .button-ghost, .button-danger, .button-link)),
+    .button:where(:not(.button-primary, .button-ghost, .button-danger, .button-link)) {
         background: var(--white);
         color: var(--black);
         &:hover {
             background: var(--black);
             color: var(--white);
         }
+    }
+
+    /* The library sets the primary button's label in --primary-color, which
+       this theme turns white: keep it black on the green fill. */
+    .button-primary {
+        --button-text: var(--black);
     }
 
     .hamburger {

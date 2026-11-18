@@ -34,10 +34,6 @@ body {
     z-index: 1;
 }
 
-.nav-global {
-    padding-left: var(--space-fr);
-}
-
 section {
     opacity: 0.9;
     text-align: center;
@@ -95,37 +91,10 @@ section {
     background-position: center;
 }
 
-form {
-    display: flex;
-    flex-flow: column;
-}
-
-form label {
-    display: block;
-}
-
-form input[type="text"], 
-form input[type="email"], 
-form input[type="tel"] {
-    padding: 10px;
-    width: 100%;
-    border-radius: 15px;
-    margin-bottom: 7px;
-    font-size: 17px;
-}
-
-#my-form-button {
-    background-color: var(--black);
-    color: var(--gray-trans);
-    border: 1px solid var(--gray-trans);
-    margin-top: 10px;
-    font-size: 1.2em;
-
-    &:hover {
-        background-color: var(--black);
-        color: var(--white);
-        border-color: var(--white);
-    }
+/* Tags on the black sections: the frame takes the tag's own colour, so it is
+   as quiet as the text (the default frame is made for a light page). */
+.black-bg .tag {
+    border-color: currentcolor;
 }
 
 footer {
@@ -183,11 +152,6 @@ footer {
 }
 
 .newsletter-bar form {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: var(--space-sm);
-
     input[type="email"] {
         background: var(--bg-color);
         margin: 0;
@@ -210,8 +174,3 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
-    .newsletter-bar form {
-        flex-direction: column;
-    }
-}

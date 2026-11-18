@@ -1,9 +1,13 @@
 <header class="padding-x-md">
   <div class="header-container grid-global">
     <div class="header-logo-wrapper">
+      {% if page.url == "/" %}
+        <div class="header-logo"></div>
+      {% else %}
         <a class="no-decoration" href="/"><div class="header-logo"></div></a>
+      {% endif %}
     </div>
-    <nav id="nav-global" class="nav-global rd-js-hamburger-nav flex stretched">
+    <nav class="nav-global flex stretched">
       <ul>
         {% for item in site.navigation %}
         <li>
@@ -16,10 +20,11 @@
       </ul>
     </nav>
     <div class="header-icons">
-      <button class="hamburger rd-js-hamburger no-decoration" aria-label="Toggle navigation">
-          <span class="rd-icon-menu icon-menu"></span>
-          <span class="rd-icon-close icon-close"></span>
+      <button class="hamburger no-decoration rd-js-hamburger" aria-label="Toggle navigation">
+          <span class="hamburger__icon-menu"></span>
+          <span class="hamburger__icon-close"></span>
       </button>
     </div>
   </div>
 </header>
+{% include "hamburger.html" %}

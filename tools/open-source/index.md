@@ -21,6 +21,9 @@ So&nbsp;here are some tools you might find useful. They're all on&nbsp;GitHub un
         <p><a href="https://raredigits.art">Rare Styles</a>: A&nbsp;style library for rapid development, for those moments when you need a&nbsp;button that looks like a&nbsp;button before your next funding round closes.</p>
     </div>
     <div class="col-span-1 card shadow-sm padding-lg">
+        <p><a href="https://github.com/raredigits/rare-charts">Rare Charts</a>: Business charts built on&nbsp;D3&nbsp;&mdash; lines, bars, donuts and maps, all set up&nbsp;the same way&nbsp;&mdash; for when the board wants to&nbsp;see where revenue turned, not read three paragraphs about&nbsp;it.</p>
+    </div>
+    <div class="col-span-1 card shadow-sm padding-lg">
         <p><a href="https://github.com/raredigits/11ty">11ty Scripts Collection</a>: for simple websites, because sometimes you just need something that works without explaining to&nbsp;your CEO what &ldquo;static site generation&rdquo; means while they glance anxiously at&nbsp;their watch.</p>
     </div>
     <div class="col-span-1 card shadow-sm padding-lg">

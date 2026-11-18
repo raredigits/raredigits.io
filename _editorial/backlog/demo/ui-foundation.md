@@ -9,7 +9,7 @@
 Все экраны проектируем на наших же внешних библиотеках (org `raredigits`), подключаемых с CDN с **зафиксированными** версиями:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/raredigits/rare-styles@v0.6.15/rare.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/raredigits/rare-styles@v0.7.2/rare.min.css">
 <script src="https://cdn.jsdelivr.net/gh/raredigits/rare-charts@v0.9.7/rare-charts.min.js" defer></script>
 ```
 

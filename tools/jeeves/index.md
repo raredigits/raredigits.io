@@ -12,10 +12,10 @@ C-level executives waste 40% of their time hunting for information that already
 
 We built Jeeves GPT because waiting for answers is expensive, and complicated interfaces are insulting to intelligent people.
 
-<div class="full-width">
-  <img src="/assets/img/pressroom/2025/jeeves-release.jpg" />
-  <cite>24/7 On-Demand Concierge Service</cite>
-</div>
+<figure class="full-width">
+  <img src="/assets/img/pressroom/2025/jeeves-release.jpg">
+  <figcaption>24/7 On-Demand Concierge Service</figcaption>
+</figure>
 
 This isn’t another chatbot throwing generic responses at your questions. Jeeves GPT connects directly to your ERP system and transforms years of business data into conversational intelligence. Ask it anything about your company’s performance, and get the kind of nuanced, contextual answers that would normally require a team of analysts and three days of prep time.
 

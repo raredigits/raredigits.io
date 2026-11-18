@@ -12,10 +12,10 @@ The trouble is that, for most businesses, the hoodie never turns up. The disas
 
 A lock, it turns out, works in both directions. It keeps strangers out of your business, and on a bad day it shuts you out of it too. Most of what gets sold as security is a thicker door. Almost nobody asks the more useful question, which is whether you can get in when you actually need to.
 
-<div class="text-content-caption">
-  <img src="/assets/img/illustrations/rare_security.jpg" />
-  <cite>Worrying About the Right Things</cite>
-</div>
+<figure class="text-content-caption">
+  <img src="/assets/img/illustrations/rare_security.jpg">
+  <figcaption>Worrying About the Right Things</figcaption>
+</figure>
 
 ## We Start With What Would Actually Hurt
 
@@ -29,4 +29,4 @@ None of this means we have forgotten the locks. We still bolt the doors: the 
 
 So before you buy another wall, it is worth asking which disaster you are actually buying it against. Tell us how your business would really break on its worst realistic day, and we will make sure your data is standing, yours, and within reach when that day comes.
 
-<div class="caption margin-t-md">→ <a href="/about/contacts/">Find out what would actually take you down</a></div>
+<div class="page-cta"><a class="button button-primary button-lg" href="/about/contacts/">Find out what would actually take you down</a></div>

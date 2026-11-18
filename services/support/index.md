@@ -12,10 +12,10 @@ None of this is an accident. Most support is built to keep you away from th
 
 There is really only one number that tells you how good support is going to be, and it is the count of people standing between you and whoever can actually fix your problem. The industry spends fortunes making that number bigger. We have spent twenty years making it zero.
 
-<div class="text-content-caption">
-  <img src="/assets/img/illustrations/rare_support.jpg" />
-  <cite>The Entire Support Department</cite>
-</div>
+<figure class="text-content-caption">
+  <img src="/assets/img/illustrations/rare_support.jpg">
+  <figcaption>The Entire Support Department</figcaption>
+</figure>
 
 ## You Reach the People Who Built It
 
@@ -31,4 +31,4 @@ Call it self-interest pointed in a useful direction. An outage costs us the
 
 So when something does go wrong, and one day it will, you will not be posting a ticket into the void and waiting. You will be talking to someone who can end the problem, that same evening, at no charge. That is the whole of our support, and most of the reason we work so hard to make you never need it.
 
-<div class="caption">→ <a href="/about/contacts/">Talk to someone who can actually fix it</a></div>
+<div class="page-cta"><a class="button button-primary button-lg" href="/about/contacts/">Talk to someone who can actually fix it</a></div>

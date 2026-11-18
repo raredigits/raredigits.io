@@ -100,7 +100,7 @@ permalink: /demo/corsair/notifications/
         {% for a in matched %}
             <div class="alert-card sev-{{ sev }}">
                 {% assign sevIcon = "info" %}
-                {% if sev == "critical" %}{% assign sevIcon = "error" %}{% elsif sev == "high" %}{% assign sevIcon = "warning" %}{% elsif sev == "medium" %}{% assign sevIcon = "error_outline" %}{% endif %}
+                {% if sev == "critical" %}{% assign sevIcon = "error" %}{% elsif sev == "high" %}{% assign sevIcon = "warning" %}{% elsif sev == "medium" %}{% assign sevIcon = "error" %}{% endif %}
                 <span class="rd-icon-{{ sevIcon }} alert-icon"></span>
                 <div>
                     <h4>{{ a.title }}

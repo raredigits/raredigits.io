@@ -4,7 +4,7 @@
 
 ## The Rule
 
-We style with **Rare Styles**, our own library, developed and documented at [raredigits.art](https://raredigits.art). The site loads it from a pinned CDN build (`rare-styles@v0.6.15/rare.min.css`, see `_includes/head.html`), alongside the charting library `rare-charts@v0.9.6`. When you build a page, you reach for the classes and tokens that already exist in those libraries. You do not invent new class names to solve something the library already does.
+We style with **Rare Styles**, our own library, developed and documented at [raredigits.art](https://raredigits.art). The site loads it from a pinned CDN build (`rare-styles@v0.7.2/rare.min.css`, see `_includes/head.html`), alongside the charting library `rare-charts@v0.9.7`. When you build a page, you reach for the classes and tokens that already exist in those libraries. You do not invent new class names to solve something the library already does.
 
 This is the whole point of having a library: the site is the library's own showcase. A page that quietly defines its own one-off classes makes the library a liar.
 
@@ -27,7 +27,8 @@ A working inventory, not exhaustive. Both libraries are already loaded site-wide
 
 **Components.**
 - *Tables:* `.table-numeric/-small/-striped/-bordered/-comparison/-section/-scroll/-horizontal-borders/-terminal`.
-- *Cards:* `.card`, `.card-header/-caption/-hover/-inverted/-dashboard-bordered`, `.card-grid` + `.card-grid--cols-2/3/4`, `.card-grid__item`.
+- *Cards:* `.card`, `.card-caption/-hover/-inverted`, `.card-grid` + `.card-grid--cols-2/3/4`, `.card-grid__item`. A card has no parts of its own: its header is a block with `.border-bottom`.
+- *Panels (data, charts, KPI):* `.panel`, `.panel--bordered/--flush`, `.panel__header/__body/__footer`, `.panel-grid`, `.panel__row` + `.panel__row-item`, `.stat`. `.card-header` and `.card-dashboard-bordered` are gone since v0.7.2: use `.border-bottom` and `.panel.panel--bordered`.
 - *Lists & rows:* `.list-*`, `.list-columns-*`, `.catalog-list` (`__item/__title/__meta`), `.feed-list`, `.feature-row` (`__item`), `.dl-grid`.
 - *Text & figures:* `.highlight` (the callout we end posts on), `.callout`, `.quote` / `.blockquote`, `.remark` / `.remarked`, `.tag`, `.caption` / `.full-width-caption` / `.figure`, `.footnote`, and a rich margin-note system `.sidenote*` (`-bulb/-memory/-bookmark/-link/-attach`).
 - *Chrome & UX:* `.button` + `.button-wrapper`, `.searchbar` (+ Pagefind UI), `.collapsible-*`, `.cookie-notice`, `.construction-notice` (the "page not finished yet" stripe), and the library SVG icon set as one class per glyph, `.rd-icon-<name>` (e.g. `<span class="rd-icon-download"></span>`, thin cut `.rd-icon-<name>-thin`; since rare-styles v0.6.18 icons are not a font — never use `.material-symbols-outlined` or ligature text).
@@ -48,7 +49,7 @@ A caution about the existing modules. `assets/css/modules/odoo-fintech.css` and 
 
 New classes still have to belong. Match the library's actual idiom, which you can read straight off raredigits.art and the published CSS:
 
-- **Kebab-case compound is the house style:** `.table-numeric`, `.card-dashboard-bordered`, `.grid-cols-3`, `.sidenote-bulb`. A component plus a variant, joined by a hyphen. Only a handful of structured components in the library use BEM `__`/`--` (e.g. `.card-grid__item`), so reach for BEM only when you're extending one of those, not by default.
+- **Kebab-case compound is the house style:** `.table-numeric`, `.card-inverted`, `.grid-cols-3`, `.sidenote-bulb`. A component plus a variant, joined by a hyphen. Only a handful of structured components in the library use BEM `__`/`--` (e.g. `.card-grid__item`, the `.panel__*` family), so reach for BEM only when you're extending one of those, not by default.
 - **No bare generic names.** A class like `.band`, `.dot`, `.grid`, `.r`, or `.v` either collides with a library class or tells the reader nothing. Scope it to its component (`.fanchart-band`, not `.fanchart .band`).
 - **A reader who knows the library should be able to guess what your class does from its name, and should never be able to tell it was added later.**
 

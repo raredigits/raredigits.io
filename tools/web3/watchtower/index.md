@@ -37,7 +37,7 @@ Then there is the conviction of the people who already locked their coins up.
 
 Underneath sits the plumbing, which works or quietly does not: how reliably blocks are produced, whether the validators are online, whether the chain just rewrote a slice of its own recent history. None of this is a black box. Watchtower parses the chain itself, EVM-compatible networks and Cosmos SDK chains, labels the wallets that matter, and watches the flows across the window you pick: a day, a week, a month.
 
-<div class="text-content-caption card-dashboard-bordered">
+<div class="text-content-caption panel panel--bordered">
     <div id="watchtower-flows-demo"></div>
 </div>
 
@@ -98,7 +98,7 @@ All of this is one idea wearing four screens. A tower earns its keep for one 
 
 It reads EVM-compatible networks and Cosmos SDK chains today, most of the territory where digital money currently wanders, and it picks up new ground as the money finds it.
 
-<div class="caption">→ <a href="/demo/watchtower/overview/">Open the live Watchtower demo</a></div>
+<div class="page-cta"><a class="button button-primary button-lg" href="/demo/watchtower/overview/">Open the live Watchtower demo</a></div>
 
 We built a working demo on a fictional network. No login, no sales call, nobody emailing you afterwards. Open it, push the window from a day to a month, click into a whale transfer, watch a validator drift into the amber. Then, if you want the same eyes on the chains you actually hold, that is a short conversation about your own stack.
 

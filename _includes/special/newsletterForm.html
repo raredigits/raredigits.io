@@ -1,0 +1,15 @@
+{%- comment -%}
+  Brevo subscription form. Posts to the Brevo-hosted form endpoint (no API key
+  on the client); /assets/js/newsletter.js submits it in place via fetch.
+  Without JS it falls back to a normal POST and Brevo's own result page.
+{%- endcomment -%}
+<div class="newsletter-form">
+    <form action="{{ site.newsletter.action }}" method="POST" data-newsletter>
+        <input type="email" name="EMAIL" placeholder="you@company.com" autocomplete="email" aria-label="Email address" required>
+        <input type="text" name="email_address_check" value="" class="newsletter-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="locale" value="en">
+        <button type="submit">Subscribe</button>
+    </form>
+    <p class="newsletter-status" role="status" aria-live="polite" hidden></p>
+</div>
+<script src="/assets/js/newsletter.js" defer></script>

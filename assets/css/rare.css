@@ -15,18 +15,13 @@
 }
 
 :root {
-    --primary-font: 'Titillium Web', sans-serif;
+    /* TRY-OUT: body text on the library font (Fira Sans), our Restora on
+       h1–h4 only. To go back: restore --primary-font: 'Titillium Web' and
+       drop --heading-font. */
+    --heading-font: 'Restora', serif;
     --secondary-font: 'Literata', serif;
     --bg-color: var(--white);
     --secondary-color: var(--gray-light);
-    --header-bg: rgba(255, 255, 255, 0.9);
-    --header-logo: url('/assets/img/logo/logo.svg') no-repeat;
-
-    --font-size: 18px;
-
-    @media (max-width: 768px) {
-            --font-size: 16px;
-        }
 }
 
 /* REMOVE AFTER UPDATE */
@@ -43,16 +38,32 @@ body.text-content article > h3 {
     margin-left: calc(var(--space-lg) * -1);
 }
 
+/* The line under the construction notice. Since rare-styles v0.7.2 a bare
+   <cite> is inline text; this keeps the look it had: its own line, at the
+   right, small and light. */
+.text-content-fullwidth-caption > cite {
+    display: block;
+    width: 100%;
+    margin: var(--space-sm) 0;
+    text-align: right;
+    color: var(--text-color-dark);
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size-sm);
+    line-height: 1.3em;
+}
+
+/* REMOVE WITH rare-charts v0.9.8_7: the charts here (v0.9.6, v0.9.7) set their
+   source line in a bare <cite>, which rare-styles v0.7.2 no longer makes a
+   block. From v0.9.8_6 the chart styles its own source line. */
+.rc-chart-source {
+    display: block;
+}
+
 .caption p {
     max-width: 86%;
 }
 
-.text-content main {
-    padding-bottom: var(--space-lg);
-}
-
 .related {
-    margin-bottom: var(--space-xl);
     display: block;
     grid-row: 3;
     grid-column: 4 / span 9;
@@ -81,8 +92,16 @@ body.text-content article > h3 {
     --primary-font: 'PT Sans', sans-serif;
 
     .en {
-        --primary-font: 'Titillium Web', sans-serif;
+        --primary-font: 'Fira Sans', sans-serif;
     }
+}
+
+/* A page's call to action: one primary button, centred on the text column,
+   with room above and below. */
+.page-cta {
+    max-width: var(--text-content-width);
+    text-align: center;
+    padding: var(--space-lg) 0;
 }
 
 .highlight {
@@ -97,21 +116,6 @@ body.text-content article > h3 {
 
 .emoji {
     font-family: serif;
-}
-
-form label {
-    padding-top: var(--space-sm);
-    font-size: var(--font-size-sm);
-}
-
-form input {
-    border-radius: var(--space-sm);
-    border-color: var(--border-color-light);
-    padding: var(--space-xs) var(--space-sm);
-}
-
-form button {
-    border-color: var(--border-color);
 }
 
 .form-error {
@@ -154,4 +158,29 @@ form button {
     .wide-background-wrapper {
         padding-left: var(--space-md);
     }
+}
+
+/* Sidebar items with an icon (FEATURED). The library hangs the icon 20px into
+   the left margin, but .sidebar scrolls (overflow-y: auto), which also clips
+   sideways: the icons were never visible, and with 16px text the first letter
+   got cut too. Keep the icon in the line instead, as the library does on a
+   phone. */
+.sidebar-icon {
+    left: 0;
+}
+
+/* The sidebar row on a phone (section, meta, tags) scrolls sideways inside
+   itself. Its wrapper is a flex item: without this it grows to its content and
+   pushes the page wider instead — by 13px once the v0.7.2 tags got roomier. */
+.sidebar-wrapper {
+    min-width: 0;
+}
+
+/* The fill under a link on hover. The library pins it to the top of the text
+   box and makes it 1.3em tall, which fits its own font. Titillium's box is
+   1.5em: the fill sat high, against the line above, and stopped short of the
+   bottom. Here it rises from the bottom and stops just over the letters. */
+a:hover {
+    background-position: 0 100%;
+    background-size: 100% 1.2em;
 }

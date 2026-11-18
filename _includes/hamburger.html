@@ -1,0 +1,14 @@
+{%- comment -%}
+  The library's hamburger panel (.nav-hamburger), as on raredigits.art.
+  For now it carries the same sections as the footer menus.
+{%- endcomment -%}
+<div id="nav-hamburger" class="nav-hamburger rd-js-hamburger-nav">
+    <div class="padding-md">
+        <div class="site-width-wrapper grid-global font-size-sm">
+            {% include "menu/footer-about.html" %}
+            {% include "menu/footer-solutions.html" %}
+            {% include "menu/footer-services.html" %}
+            {% include "menu/footer-legal.html" %}
+        </div>
+    </div>
+</div>
