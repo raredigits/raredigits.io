@@ -1,0 +1,46 @@
+/* NEWSLETTER FORM (Brevo) — shared by the home strip and /subscribe/ */
+
+.newsletter-form form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: var(--space-sm);
+    align-items: stretch;
+}
+
+.newsletter-form input[type="email"] {
+    margin: 0;
+    width: 20rem;
+    max-width: 100%;
+}
+
+.newsletter-form button {
+    margin-top: 0;
+}
+
+.newsletter-form .newsletter-hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.newsletter-status {
+    margin-top: var(--space-sm);
+    font-size: 0.9em;
+}
+
+.newsletter-status[data-state="error"] {
+    color: var(--brand-color, currentColor);
+}
+
+@media (max-width: 768px) {
+    .newsletter-form form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input[type="email"] {
+        width: 100%;
+    }
+}

@@ -27,6 +27,9 @@
     <link rel="stylesheet" href="/assets/css/modules/whatsapp.css">
     <link rel="stylesheet" href="/assets/css/modules/home.css">
     {% endif %}
+    {% if body_class contains "main" or body_class contains "newsletter" %}
+    <link rel="stylesheet" href="/assets/css/modules/newsletter.css">
+    {% endif %}
     {% if scripts contains "charts" %}
     <script src="https://cdn.jsdelivr.net/gh/raredigits/rare-charts@v0.9.7/rare-charts.min.js" defer></script>
     {% endif %}

@@ -183,11 +183,6 @@ footer {
 }
 
 .newsletter-bar form {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: var(--space-sm);
-
     input[type="email"] {
         background: var(--bg-color);
         margin: 0;
@@ -210,8 +205,3 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
-    .newsletter-bar form {
-        flex-direction: column;
-    }
-}
